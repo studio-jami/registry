@@ -1,0 +1,26 @@
+---
+title: "Memory"
+sidebarTitle: "Memory"
+description: "Project memory, task memory, artifact memory, citations, redaction, retention, and the memoryRecord contract."
+url: "harness/memory/overview"
+---
+
+Memory is part of the owned core. The default memory port covers project, task, and artifact memory backed by local in-process and memory-backed stores.
+
+## Memory shapes
+
+- **Project memory** — long-lived facts and references for a project.
+- **Task memory** — per-run working memory.
+- **Artifact memory** — references to durable artifacts produced by past runs.
+- **Citations** — source attribution attached to retrieved content.
+
+## Invariants
+
+- Every memory write produces a `memoryRecord` and an audit event.
+- Retention windows are policy-controlled.
+- Redaction policy is applied at write time, not at read time.
+- Replacement memory adapters must preserve the citation and redaction invariants.
+
+## Unsupported
+
+- Hosted/vector retrieval is not implemented. The BYO memory/context/search port keeps it replaceable, but no current adapter ships a hosted store.

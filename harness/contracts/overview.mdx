@@ -1,0 +1,48 @@
+---
+title: "Contracts Overview"
+sidebarTitle: "Overview"
+description: "Versioned JSON Schemas and OpenAPI components that anchor every Harness surface: runs, tools, artifacts, policy, memory, traces, evidence, and UI payloads."
+url: "harness/contracts/overview"
+---
+
+The `@jami-studio/harness-contracts` package is the spine of the entire Harness. Every other package consumes these schemas, and every generated docs surface points back at them.
+
+## Schema map
+
+| Schema | Purpose |
+| --- | --- |
+| `actionRef` | Stable reference to an executed action. |
+| `approvalRequest` | Approval request envelope for policy-gated actions. |
+| `artifactRecord` | Durable artifact metadata. |
+| `artifactView` | UI-safe artifact projection. |
+| `auditEvent` | Immutable audit trail entry. |
+| `capabilityManifest` | Module/adapter capability declaration. |
+| `contextPack` | Assembled, redacted context for a turn. |
+| `evidencePacket` | Closeout bundle for a run. |
+| `memoryRecord` | Memory write/read envelope. |
+| `metricRecord` | Local redacted usage metric. |
+| `policyDecision` | Outcome of a policy seam evaluation. |
+| `primitiveManifest` | Composable primitive registry entry. |
+| `runEvent` | Run lifecycle event. |
+| `secretRef` | Indirect reference to a secret resolver. |
+| `suiteRef` | Reference to a Studio UI suite. |
+| `themeRef` | Reference to a Studio UI theme. |
+| `threatModelFixtureCatalog` | Threat-model fixture index. |
+| `toolExecution` | Typed tool call record. |
+| `traceEvent` | OpenTelemetry-compatible trace event. |
+| `uiPayload` | UI-safe rendering payload. |
+
+All schemas are anchored at `https://jami.studio/schemas/harness/<name>.schema.json`.
+
+## OpenAPI components
+
+The Harness contracts package also emits matching OpenAPI components: `ActionRef`, `ApprovalRequest`, `ArtifactRecord`, `ArtifactView`, `AuditEvent`, `CapabilityManifest`, `ContextPack`, `EvidencePacket`, `MemoryRecord`, `MetricRecord`, `PolicyDecision`, `PrimitiveManifest`, `RunEvent`, `SecretRef`, `SuiteRef`, `ThemeRef`, `ThreatModelFixtureCatalog`, `ToolExecution`, `TraceEvent`, `UiPayload`.
+
+## Verification
+
+```bash
+pnpm contracts:generate:check
+pnpm contracts:validate
+```
+
+These commands fail closed on drift between source schemas, generated outputs, and compatibility fixtures.

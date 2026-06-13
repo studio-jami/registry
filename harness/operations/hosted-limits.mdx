@@ -1,0 +1,44 @@
+---
+title: "Hosted Runtime Limits"
+sidebarTitle: "Hosted Limits"
+description: "Exact unsupported hosted surfaces and the intervention ledger required before any hosted Harness claim."
+url: "harness/operations/hosted-limits"
+---
+
+The Harness intentionally separates static hosted status/control routes (live) from hosted runtime (not implemented). This page is the canonical limits inventory.
+
+## What's live
+
+- Static status/control JSON routes at `https://registry.jami.studio/harness/`, smoked on 2026-06-13. See [Hosted routes](/harness/release/hosted-routes).
+- Public npm release of `@jami-studio/*@0.1.0` with inspection patches at `0.1.1`.
+- GitHub Release `v0.1.0` artifact attestation that verifies with `gh attestation verify`.
+
+## What's not implemented
+
+| Surface | Status |
+| --- | --- |
+| Hosted provider runtime | Unsupported |
+| Hosted durable store (Neon-backed) | Unsupported |
+| OTLP hosted observability export | Unsupported |
+| Hosted workbench / control plane | Unsupported |
+| Hosted Mintlify build/publish lane | Unsupported |
+| Hosted public docs target (Mintlify/Vercel/Cloudflare) | Unselected |
+| Remote MCP transports (stdio / Streamable HTTP) | Unsupported |
+| OpenAPI/shell/browser/code/provider-as-tool/A2A tool executors | Fail-closed dry-run only |
+
+Do not soften any of these surfaces in marketing language. Name them as unavailable.
+
+## Intervention ledger
+
+These are real account or product actions:
+
+1. Confirm npm organization access for `@jami-studio` and provenance/OIDC setup for any new patch release.
+2. Confirm GitHub release, tag, Actions, and artifact attestation permissions for any new release artifact.
+3. Select and authorize a public docs target before Mintlify, Vercel, or Cloudflare claims.
+4. Rerun hosted status/control smoke after any registry route bundle change before refreshing live route claims.
+5. Provision Neon project, branch, role, migration path, and secret storage before hosted store claims.
+6. Provision hosted provider credentials and OTLP endpoint/header secret storage before hosted provider or hosted observability claims.
+7. Approve package publication scope, package names, contents policy, and versioning.
+8. Refresh repo-local source-lock evidence for release tools and hosted services used by the release.
+
+Nothing on this ledger can be patched around. If it is needed, pause the stream, record the intervention, alert the human, and continue after it is resolved.

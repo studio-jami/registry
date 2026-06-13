@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Jami Studio Registry",
+  "name": "Jami Studio",
   "theme": "almond",
   "colors": {
     "primary": "#9f411e",
@@ -10,29 +10,114 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Docs",
+        "tab": "Jami Harness",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "Jami Harness",
-            "pages": [
               "harness/overview",
               "harness/quickstart",
+              "harness/architecture.mdx",
               "harness/packages"
             ]
           },
           {
-            "group": "Registry",
+            "group": "Concepts",
             "pages": [
-              "registry/overview",
-              "registry/installing-items",
-              "registry/suites"
+              "harness/concepts/owned-core.mdx",
+              "harness/concepts/primitive-registry.mdx",
+              "harness/concepts/principled-edge.mdx"
+            ]
+          },
+          {
+            "group": "Runtime",
+            "pages": [
+              "harness/runtime/lifecycle.mdx",
+              "harness/runtime/checkpoints-resumability.mdx",
+              "harness/runtime/retries-cancellation.mdx"
+            ]
+          },
+          {
+            "group": "Contracts",
+            "pages": [
+              "harness/contracts/overview.mdx",
+              "harness/contracts/evidence-packets.mdx",
+              "harness/contracts/capability-manifests.mdx"
+            ]
+          },
+          {
+            "group": "Policy & Identity",
+            "pages": [
+              "harness/policy/model.mdx",
+              "harness/policy/approvals.mdx",
+              "harness/policy/identity.mdx"
+            ]
+          },
+          {
+            "group": "Tools",
+            "pages": [
+              "harness/tools/gateway.mdx",
+              "harness/tools/function-tools.mdx",
+              "harness/tools/mcp.mdx",
+              "harness/tools/adapters.mdx"
+            ]
+          },
+          {
+            "group": "Memory & Context",
+            "pages": [
+              "harness/memory/overview.mdx",
+              "harness/memory/context.mdx"
+            ]
+          },
+          {
+            "group": "Artifacts & Evidence",
+            "pages": [
+              "harness/artifacts/overview.mdx",
+              "harness/artifacts/evidence.mdx"
+            ]
+          },
+          {
+            "group": "Observability",
+            "pages": [
+              "harness/observability/overview.mdx",
+              "harness/observability/audit.mdx",
+              "harness/observability/evals.mdx"
+            ]
+          },
+          {
+            "group": "CLI & SDK",
+            "pages": [
+              "harness/cli-sdk/cli.mdx",
+              "harness/cli-sdk/sdk.mdx"
+            ]
+          },
+          {
+            "group": "Local Verification",
+            "pages": [
+              "harness/local-verification/workflow.mdx",
+              "harness/local-verification/ladder.mdx",
+              "harness/local-verification/changelog.mdx"
+            ]
+          },
+          {
+            "group": "Release & Hosted",
+            "pages": [
+              "harness/release/readiness.mdx",
+              "harness/release/sbom.mdx",
+              "harness/release/hosted-routes.mdx",
+              "harness/operations/hosted-limits.mdx",
+              "harness/release/source-locks.mdx"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Studio UI",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "studio-ui/overview.mdx"
             ]
           },
           {
@@ -47,19 +132,39 @@
             ]
           },
           {
+            "group": "Theming",
+            "pages": [
+              "theming/tokens",
+              "theming/brand-options"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Registry",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Registry",
+            "pages": [
+              "registry/overview",
+              "registry/installing-items",
+              "registry/suites"
+            ]
+          },
+          {
             "group": "Suites",
             "pages": [
               "suites/solo",
               "suites/business-ops",
               "suites/research-writing",
               "suites/mixed-media"
-            ]
-          },
-          {
-            "group": "Theming",
-            "pages": [
-              "theming/tokens",
-              "theming/brand-options"
             ]
           },
           {

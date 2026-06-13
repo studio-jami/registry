@@ -1,0 +1,26 @@
+---
+title: "Evals & Regression Smoke"
+sidebarTitle: "Evals"
+description: "Deterministic local eval scenarios for tool safety, docs generation, memory recall, and recovery."
+url: "harness/observability/evals"
+---
+
+Harness ships a local deterministic eval harness that does not depend on a hosted eval backend.
+
+## Current scenarios
+
+- Tool safety — verifies the gateway fails closed on negative tool fixtures.
+- Docs generation — verifies generated docs surfaces stay deterministic.
+- Memory recall — verifies citations, redaction, and retention.
+- Recovery — verifies retry, cancellation, and resumption fixtures.
+
+## Command
+
+```bash
+pnpm eval:smoke
+```
+
+## Unsupported
+
+- External eval backends are not configured.
+- Hosted-provider billing and total compute cost are not claimed.

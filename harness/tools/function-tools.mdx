@@ -1,0 +1,23 @@
+---
+title: "Function Tools"
+sidebarTitle: "Function Tools"
+description: "In-process function tools: registration, typed inputs/outputs, policy gating, and audit records."
+url: "harness/tools/function-tools"
+---
+
+Function tools are the supported in-process tool surface. They run inside the harness process, gated by the policy seam.
+
+## Registration shape
+
+A function tool declares:
+
+- a tool name (1–128 ASCII characters; letters, digits, underscore, hyphen, dot)
+- an input JSON Schema (JSON Schema 2020-12 dialect is the default)
+- an output JSON Schema
+- a policy scope and risk label
+- an audit envelope name
+- a redaction policy for inputs and outputs
+
+## Execution
+
+Function tool calls produce typed `toolExecution`, `traceEvent`, `auditEvent`, `artifactRecord`, and `evidencePacket` records. Failures are themselves audit events.

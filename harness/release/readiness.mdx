@@ -1,0 +1,59 @@
+---
+title: "Release Readiness"
+sidebarTitle: "Readiness"
+description: "Active release, supply-chain, hosted-readiness, and public-claims gate for Jami Harness."
+url: "harness/release/readiness"
+---
+
+This is the release, supply-chain, hosted-readiness, and public-claims gate for Jami Harness. It records what can be claimed from current evidence and what must stay blocked until the repo has real command evidence or a human account intervention.
+
+No command in this repo deploys public docs, calls a hosted provider, writes a hosted store, or exports to a hosted OTLP sink. The public npm/GitHub release lane has been executed for `0.1.0`; the current provider path remains a first-party local deterministic adapter only.
+
+## Current release posture
+
+- `pnpm verify` is the root local gate: docs, contract generation drift, docs generation drift, contract validation, package tests, CLI tests, SDK tests, the local evidence smoke, and both non-publishing release audit commands.
+- `pnpm release:readiness` and `pnpm release:dry-run` are audit commands. They do not publish. They report package, SBOM, provenance, attestation, claims, and account-action state.
+- `pnpm sbom:generate` and `pnpm sbom:check` emit and verify a local CycloneDX `1.7` workspace package-manifest inventory at `docs/generated/sbom.cdx.json`. See [SBOM](/harness/release/sbom).
+- `pnpm release:capabilities` and `pnpm release:capabilities:check` emit and verify `docs/generated/release-capability-manifest.json`.
+- `pnpm hosted:routes`, `pnpm hosted:routes:check`, and `pnpm hosted:smoke` emit, verify, and smoke the static status/control route bundle for `https://registry.jami.studio/harness/`. See [Hosted routes](/harness/release/hosted-routes).
+- Publishable package manifests are public-package ready. Public npm release executed for `@jami-studio/*@0.1.0` through the trusted GitHub Actions lane. A `0.1.1` patch is prepared for `@jami-studio/harness-core`, `@jami-studio/harness-sdk`, and `@jami-studio/harness-cli`. The root, docs, and workbench packages remain intentionally private.
+
+## Unavailable commands
+
+| Surface | Current state | Required before claim |
+| --- | --- | --- |
+| npm publish/provenance patch release | `0.1.0` complete; source tree prepares `0.1.1` for changed core/SDK/CLI. | Run package dry-run/smoke, publish patch with provenance, then rerun clean public install/import smoke. |
+| GitHub release attestation | `v0.1.0` attestation verifies; any new release artifact needs new verification. | Create the release artifact through the accepted workflow and verify with `gh attestation verify`. |
+| Mintlify validation/build/publish | Mintlify-ready `docs.json` and MDX drafts are generated locally; Mintlify CLI/package not installed or source-locked. | Source-lock the Mintlify CLI/package, install it intentionally, run `mint validate` or the accepted local build check. |
+| Vercel/Cloudflare deploy dry run | Harness status/control target is `registry.jami.studio/harness/`; other hosted targets remain unselected. | Publish the accepted static bundle and record deploy evidence for changed static routes. |
+| Neon hosted store smoke | No Neon project, branch, role, migration, or connection secret configured. | Provision Neon, store connection material, run migrations, smoke persisted run/checkpoint/artifact/trace state. |
+| OTLP hosted observability export smoke | No OTLP endpoint, collector, or secret header storage configured. | Provision the OTLP endpoint and secret header resolver, smoke trace and metric export with redacted evidence. |
+
+## Public claims matrix (excerpt)
+
+| Claim | Status |
+| --- | --- |
+| Harness contracts, fixtures, generated references, and validation exist. | Supported |
+| Local SDK composes runtime, policy, artifacts, observability, and memory defaults. | Supported |
+| CLI supports local init, run, inspect, map, and verify. | Supported |
+| Tool gateway foundation: function tools \+ trusted MCP fixtures, typed records, fail-closed unsupported adapters. | Supported for current fixtures |
+| Local deterministic provider workflow runs through the SDK, gateway, policy, traces, artifacts, checkpoints, memory/context, and evidence. | Supported for current fixtures |
+| Local latency, token-estimate, external-billable-cost, and tool-call metrics plus deterministic regression eval smokes. | Supported for current local fixtures |
+| Policy, runtime, memory, artifacts, observability fail closed on current negative fixtures. | Supported for current fixtures |
+| Local docs generation produces quickstart, user manual, API reference, system map, changelog draft, evidence index, and Mintlify-ready draft. | Supported |
+| Hosted status/control static JSON routes at `registry.jami.studio/harness/`. | Supported |
+| Hosted provider runtime, executable full MCP/OpenAPI/shell/browser/code/provider-as-tool/A2A adapters, hosted workbench, hosted stores, Mintlify build/publish, or public docs hosting. | **Unsupported** |
+| Release artifacts are signed, attested, externally published, or publish-ready. | Supported for `v0.1.0`; patch releases need fresh evidence |
+
+## Human interventions
+
+These are real account or product actions and must be recorded as interventions, not stubbed:
+
+- Confirm npm organization access for `@jami-studio` and provenance/OIDC setup for any new patch release.
+- Confirm GitHub release, tag, Actions, and artifact attestation permissions for any new release artifact.
+- Select and authorize a public docs target before Mintlify, Vercel, or Cloudflare claims.
+- Rerun hosted status/control smoke after any registry route bundle change.
+- Provision Neon project, branch, role, migration path, and secret storage before hosted store claims.
+- Provision hosted provider credentials and OTLP endpoint/header secret storage before hosted provider or hosted observability claims.
+- Approve package publication scope, names, contents policy, and versioning.
+- Refresh repo-local source-lock evidence for release tools and hosted services used by the release.

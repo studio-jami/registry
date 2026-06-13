@@ -1,0 +1,26 @@
+---
+title: "Artifacts"
+sidebarTitle: "Artifacts"
+description: "Durable outputs Harness produces: file changes, commits, reports, docs, screenshots, eval outputs, release packets, and provenance metadata."
+url: "harness/artifacts/overview"
+---
+
+Artifacts are the durable outputs of agent work. The `@jami-studio/harness-artifacts` package owns the artifact record, the UI-safe artifact view, source bindings, and verification metadata.
+
+## Artifact classes
+
+- file changes and commits
+- reports and docs
+- screenshots
+- eval outputs
+- release packets
+- provenance metadata
+
+## Records vs views
+
+- `artifactRecord` is the durable record, including source bindings and provenance.
+- `artifactView` is the UI-safe projection rendered by Studio UI without leaking secrets or unredacted content.
+
+## Promotion
+
+Artifact promotion (e.g., turning a working copy into a release packet) flows through the policy seam and emits audit events. Promotion is never a side effect of UI rendering.

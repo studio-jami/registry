@@ -1,0 +1,28 @@
+---
+title: "Checkpoints & Resumability"
+sidebarTitle: "Checkpoints"
+description: "How runs are checkpointed, persisted, and resumed across local and (future) hosted stores."
+url: "harness/runtime/checkpoints-resumability"
+---
+
+Checkpoints make runs durable and resumable. The runtime takes coordinator-driven checkpoints at boundaries that matter: tool execution, approval, artifact promotion, memory write, and verification.
+
+## Store ports
+
+The checkpoint store is a replaceable port:
+
+| Adapter | Status | Notes |
+| --- | --- | --- |
+| In-memory | Supported | Default for tests and ephemeral runs. |
+| Filesystem | Supported | Default for local development via `@jami-studio/harness-store-local`. |
+| Neon-backed hosted store | Unsupported | Requires provisioned Neon project, branch, role, migrations, and connection secret. |
+
+## Resumability invariants
+
+- Every checkpoint references the schemas the runtime used when it was taken.
+- Resumption must replay the run from the latest accepted checkpoint without re-executing already-evidenced tool calls.
+- Cancellation, retry, and recovery decisions are themselves audit events.
+
+## Hosted limits
+
+Hosted durable stores are not implemented. See [Hosted runtime limits](/harness/operations/hosted-limits) for the exact intervention ledger before any hosted store claim.

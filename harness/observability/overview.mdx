@@ -1,0 +1,28 @@
+---
+title: "Observability"
+sidebarTitle: "Overview"
+description: "Traces, audit events, metrics, evals, and replay evidence. Local sinks today; OTLP hosted export remains unimplemented."
+url: "harness/observability/overview"
+---
+
+The `@jami-studio/harness-observability` package owns the trace, audit, metric, eval, and replay event contracts. Today, all sinks are local; hosted OTLP export is not implemented.
+
+## Current local implementation
+
+- Local latency, token-estimate, external-billable-cost, and tool-call metric records with redacted dimensions.
+- Deterministic regression eval smokes via `pnpm eval:smoke`, covering tool safety, docs generation, memory recall, and recovery.
+- `pnpm observability:test` verifies the current fixtures.
+
+## OpenTelemetry compatibility
+
+The `traceEvent` contract is OpenTelemetry-compatible. A replacement sink can export to an OTLP endpoint, but the current default writes locally only.
+
+## Hosted OTLP — unsupported
+
+OTLP hosted observability export is not implemented:
+
+- No OTLP endpoint, collector, or secret header storage is configured.
+- Required source-lock evidence already names the OpenTelemetry OTLP exporter and environment-variable spec.
+- Empty endpoint variables are treated as unset and fail closed.
+
+See [Hosted runtime limits](/harness/operations/hosted-limits) for the intervention ledger.

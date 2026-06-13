@@ -1,0 +1,40 @@
+---
+title: "Composable Primitive Registry"
+sidebarTitle: "Primitive Registry"
+description: "The harness-owned catalog of run, tool, policy, artifact, memory, and docs primitives, and the manifest contracts they declare."
+url: "harness/concepts/primitive-registry"
+---
+
+The **composable primitive registry** is the harness-owned catalog of run primitives, tool primitives, policy primitives, artifact primitives, memory primitives, and docs primitives.
+
+## Primitive shape
+
+Each primitive in the registry declares:
+
+- id and version
+- owner package
+- input and output schema
+- policy requirements
+- audit event shape
+- trace span shape
+- docs generation metadata
+- verification requirements
+- adapter compatibility
+
+## Source schemas
+
+The initial machine-readable vocabulary lives in:
+
+- `packages/contracts/schemas/primitive-manifest.schema.json` — declares primitive identity, schema, policy, audit, trace, docs, and verification metadata.
+- `packages/contracts/schemas/capability-manifest.schema.json` — used by capability modules and adapters to declare supported features, unsupported states, required scopes, failure modes, and replacement compatibility.
+
+These manifests keep optional modules replaceable while preserving policy, audit, artifact, evidence, redaction, and checkpoint invariants.
+
+## Why a primitive registry
+
+A primitive registry lets the Harness:
+
+- expose a single typed inventory of what the runtime can do;
+- validate adapter replacements against the same shape;
+- generate docs, CLI inspection output, and capability manifests from one source of truth;
+- enforce that every primitive carries policy, audit, and trace metadata before it can run.

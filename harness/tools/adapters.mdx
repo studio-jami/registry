@@ -1,0 +1,26 @@
+---
+title: "Tool Adapters"
+sidebarTitle: "Adapters"
+description: "Current adapter classes, supported fixtures, and the fail-closed dry-run evidence for unsupported protocols."
+url: "harness/tools/adapters"
+---
+
+Harness tool adapters declare their support state through capability manifests. The CLI and SDK report each adapter's supported, partial, or fail-closed status without executing unsupported adapters.
+
+## Current adapter states
+
+| Adapter class | Status | Notes |
+| --- | --- | --- |
+| Function tools (in-process) | Supported | Default and recommended for local workflows. |
+| Trusted MCP fixtures | Supported | Spec `2025-11-25`, in-process only. |
+| Remote MCP (stdio / Streamable HTTP) | Fail-closed | No transport implementation. |
+| OpenAPI tools | Fail-closed dry run only | No live executor. |
+| Shell tools | Fail-closed dry run only | Sandbox lifecycle not implemented. |
+| Browser tools | Fail-closed dry run only | No browser driver. |
+| Code-execution tools | Fail-closed dry run only | No sandbox runtime. |
+| Provider-as-tool | Fail-closed dry run only | Requires hosted providers. |
+| A2A tools | Fail-closed dry run only | No A2A transport. |
+
+## Why fail-closed dry runs
+
+The gateway still produces a typed audit and evidence record when an unsupported adapter is referenced. That keeps downstream evidence honest about what was attempted and why it did not execute.

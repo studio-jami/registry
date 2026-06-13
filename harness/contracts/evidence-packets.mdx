@@ -1,0 +1,33 @@
+---
+title: "Evidence Packets"
+sidebarTitle: "Evidence Packets"
+description: "The contract-validated bundle Harness emits at run closeout. Source inputs, generator version, command result, freshness class, and output paths."
+url: "harness/contracts/evidence-packets"
+---
+
+An **evidence packet** is the closeout bundle Harness emits for a run. It is what downstream systems trust when they make claims about what the agent did.
+
+## Required fields
+
+A generated surface is not accepted unless its evidence packet records:
+
+- source inputs
+- generator version
+- verification state
+- source commit reference
+- freshness class
+- command result
+- generated output paths
+
+## Where evidence packets are used
+
+- Release-readiness audits (`pnpm release:readiness`, `pnpm release:dry-run`).
+- Local SBOM dry-runs (`pnpm sbom:generate`, `pnpm sbom:check`).
+- Release capability manifest checks (`pnpm release:capabilities:check`).
+- Hosted route bundle drift checks (`pnpm hosted:routes:check`).
+- Docs source manifest (`docs/generated/docs-source-manifest.json`).
+- Install readiness (`docs/generated/install-readiness-manifest.json`).
+
+## Why evidence-first
+
+Claims without evidence are aspirational. Harness treats evidence packets as the gate between what code can verify and what humans are allowed to publish about the system.

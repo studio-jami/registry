@@ -1,0 +1,30 @@
+---
+title: "SBOM Posture"
+sidebarTitle: "SBOM"
+description: "Local CycloneDX 1.7 workspace package-manifest inventory; not a publish tarball SBOM or attestation."
+url: "harness/release/sbom"
+---
+
+Harness uses CycloneDX JSON `1.7` as its local SBOM format. Source verified on 2026-06-09 against the CycloneDX specification overview and TC54 references.
+
+## What's implemented
+
+- `pnpm sbom:generate` writes `docs/generated/sbom.cdx.json`.
+- `pnpm sbom:check` fails when the checked SBOM drifts from workspace package manifests, package metadata, workspace dependency edges, or the symbolic `git:HEAD` provenance marker.
+- `pnpm verify` runs the SBOM drift check before package tests and release audit commands.
+- `pnpm release:readiness` and `pnpm release:dry-run` report the generated SBOM artifact as supported local dry-run evidence.
+
+## What's not claimed
+
+- This is **not** `npm publish --dry-run --provenance`.
+- This is **not** a GitHub artifact attestation.
+- This is **not** a signed release archive.
+- This is **not** a full transitive dependency SBOM for a built npm tarball.
+- This does **not** remove `private: true` from any package or make any package publish-ready.
+
+## Refresh triggers
+
+- Any switch from the local generator to `npm sbom`, CycloneDX tooling, Syft, SPDX, or another SBOM implementation.
+- Any new CycloneDX version newer than `1.7`.
+- Any package contents dry-run, tarball build, provenance, or attestation implementation.
+- Any release package that includes files beyond the current workspace package manifests.

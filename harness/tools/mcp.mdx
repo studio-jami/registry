@@ -1,0 +1,48 @@
+---
+title: "Model Context Protocol (MCP)"
+sidebarTitle: "MCP"
+description: "Trusted in-process MCP fixtures, spec version 2025-11-25, and the exact unsupported transports and authorization surfaces."
+url: "harness/tools/mcp"
+---
+
+The `@jami-studio/harness-tools` package locks `MCP_PROTOCOL_VERSION` to `2025-11-25`. The adapter supports only trusted in-process fixture discovery/call mapping for `initialize`, `tools/list`, and `tools/call`.
+
+## Source lock
+
+The locked source pages for this pass (verified 2026-06-09):
+
+- `https://modelcontextprotocol.io/specification/2025-11-25`
+- `https://modelcontextprotocol.io/specification/2025-11-25/basic/transports`
+- `https://modelcontextprotocol.io/specification/2025-11-25/server/tools`
+- `https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization`
+- `https://modelcontextprotocol.io/specification/2025-11-25/changelog`
+
+## Validation
+
+MCP tool metadata is validated before registration and fails closed for:
+
+- unsupported protocol versions
+- invalid tool names
+- non-object input schemas
+- policy-bypass or secret-exfiltration language in tool descriptions
+
+MCP tool calls execute through the existing policy-gated tool envelope and produce typed tool execution, audit, trace, artifact, and evidence records.
+
+## Streamable HTTP guard
+
+Streamable HTTP guard validation is represented for invalid `Origin`, visible-ASCII `MCP-Session-Id`, `MCP-Protocol-Version`, and public localhost binding. Full Streamable HTTP transport is not implemented — see below.
+
+## Unsupported / not claimed
+
+- Remote OAuth, OpenID Connect discovery, Client ID Metadata Documents, dynamic client registration, PKCE, and access-token audience validation are not implemented.
+- Stdio subprocess transport is not implemented.
+- Streamable HTTP client/server transport, SSE polling, session lifecycle, DELETE session termination, resumability, and redelivery are not implemented.
+- MCP resources, prompts, roots, sampling, elicitation, tasks, and tool-call support inside sampling are not implemented.
+- This is not full MCP SDK parity.
+
+## Refresh triggers
+
+- Any MCP implementation beyond trusted in-process tool fixtures.
+- Any remote stdio or Streamable HTTP transport implementation.
+- Any OAuth or authorization implementation.
+- Any official MCP spec version newer than `2025-11-25`.

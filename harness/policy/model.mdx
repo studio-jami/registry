@@ -1,0 +1,29 @@
+---
+title: "Policy Model"
+sidebarTitle: "Policy Model"
+description: "Default-deny policy seam, scopes, risk labels, execution limits, and the policyDecision contract."
+url: "harness/policy/model"
+---
+
+The policy seam is part of the owned core. Every tool call, artifact promotion, memory write, and approval flows through it, and every decision becomes a `policyDecision` audit record.
+
+## Default-deny seam
+
+The default policy engine is default-deny. Replacement engines must:
+
+- preserve the `policyDecision` contract;
+- still emit audit events for denials and approvals;
+- still respect scopes, risk labels, and execution limits declared in capability manifests.
+
+## What policy controls
+
+- tool registry visibility and invocation
+- approval modes and approver scope
+- memory write/read scopes and retention windows
+- artifact promotion gates
+- sandbox filesystem and network policy
+- secret resolution boundaries (`secretRef`)
+
+## Failing closed
+
+Current foundation fixtures cover fail-closed policy/runtime/evidence cases. See `pnpm policy:test` for the current gates.

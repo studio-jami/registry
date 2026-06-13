@@ -1,0 +1,31 @@
+---
+title: "Capability Manifests"
+sidebarTitle: "Capability Manifests"
+description: "How modules and adapters declare supported features, unsupported states, required scopes, failure modes, and replacement compatibility."
+url: "harness/contracts/capability-manifests"
+---
+
+Capability modules and adapters use `packages/contracts/schemas/capability-manifest.schema.json` to declare:
+
+- supported features
+- unsupported states
+- required scopes
+- failure modes
+- replacement compatibility
+
+These manifests keep optional modules replaceable while preserving policy, audit, artifact, evidence, redaction, and checkpoint invariants.
+
+## Why manifests matter
+
+A capability manifest is the contract that lets a replacement module say “I can stand in for the default” without weakening the trust surface. Without a manifest, Harness cannot verify that a replacement preserves the invariants the owned core requires.
+
+## Inspection
+
+The CLI and SDK expose adapter manifests and source-lock states:
+
+```bash
+jami inspect --json
+jami map --json
+```
+
+For the current public packages, the inspection patch lane (`0.1.1`) corrects the reported manifests for `@jami-studio/harness-cli`, `@jami-studio/harness-core`, and `@jami-studio/harness-sdk`.

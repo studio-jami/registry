@@ -1,0 +1,29 @@
+---
+title: "Source-Lock Evidence"
+sidebarTitle: "Source Locks"
+description: "Repo-local source-lock records for drift-prone protocols, hosted services, and release tooling."
+url: "harness/release/source-locks"
+---
+
+When harness code depends on a drift-prone protocol, package, hosted service, registry format, guidance document, or release tool, it adds **source-lock evidence** for the exact surface used.
+
+Each source-lock record captures:
+
+- official URL
+- version or spec id
+- license / NOTICE / provenance status
+- hash or tarball integrity (when applicable)
+- command evidence
+- unresolved risks
+- next refresh trigger
+
+## Current source locks
+
+| Lock | Surface | Spec / version |
+| --- | --- | --- |
+| MCP source lock | `@jami-studio/harness-tools` MCP fixture path | MCP spec `2025-11-25` |
+| SBOM source lock | Local CycloneDX generator | CycloneDX `1.7` |
+| Release capability source lock | `release:capabilities` manifest | npm provenance, GitHub attestations, Mintlify CLI, Cloudflare Pages, Neon, OpenTelemetry |
+| Hosted route source lock | `hosted:routes` static bundle | Cloudflare Pages Direct Upload \+ custom headers |
+
+Source-lock records are the gate that keeps Harness from drifting silently away from an upstream surface.
