@@ -1,0 +1,28 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Jami Registry",
+  "colors": {
+    "primary": "#111827",
+    "light": "#f8fafc",
+    "dark": "#0f172a"
+  },
+  "navigation": [
+    {
+      "group": "Start",
+      "pages": [
+        "docs/index",
+        "docs/registry",
+        "docs/packages",
+        "docs/release"
+      ]
+    },
+    {
+      "group": "Packages",
+      "pages": [
+        "docs/studio-ui",
+        "docs/harness"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+name: Release registry bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, for example v0.0.0"
+        required: true
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-registry.mjs
+      - name: Pack registry bundle
+        run: |
+          tar -czf jami-registry-${{ inputs.version }}.tgz public docs README.md docs.json
+          shasum -a 256 jami-registry-${{ inputs.version }}.tgz > jami-registry-${{ inputs.version }}.tgz.sha256
+      - name: Attest registry bundle
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: jami-registry-${{ inputs.version }}.tgz
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ inputs.version }}" \
+            --title "Jami Registry ${{ inputs.version }}" \
+            --notes "Static Jami Registry bundle for ${{ inputs.version }}." \
+            "jami-registry-${{ inputs.version }}.tgz" \
+            "jami-registry-${{ inputs.version }}.tgz.sha256"

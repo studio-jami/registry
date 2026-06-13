@@ -1,0 +1,93 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/suite-page-implementation.generated.json",
+  "schemaVersion": "2026-06-09.suite-shell",
+  "lane": "business-ops",
+  "implementationStatus": "mounted-react-suite-page",
+  "source": "registry/suites/business-ops/suite-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "page": {
+    "id": "page.business-ops.staff",
+    "title": "Staff and training",
+    "description": "Staff records, training status, and forms with invalid and empty states.",
+    "components": [
+      "data-list",
+      "text-field",
+      "panel"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/business-ops/staff",
+      "page": "page.business-ops.staff",
+      "title": "Staff and training",
+      "blocks": [
+        "block.business-ops.staff-table",
+        "block.business-ops.training-form"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.business-ops.staff-table",
+      "title": "Staff records",
+      "component": "data-list",
+      "implementationFile": "studio-ui/suites/business-ops/blocks/business-ops-staff-table-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "long-content"
+      ]
+    },
+    {
+      "id": "block.business-ops.training-form",
+      "title": "Training form",
+      "component": "text-field",
+      "implementationFile": "studio-ui/suites/business-ops/blocks/business-ops-training-form-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "invalid"
+      ]
+    }
+  ],
+  "components": [
+    "data-list",
+    "panel",
+    "text-field"
+  ],
+  "evidence": {
+    "renderedBlockCount": 2,
+    "responsiveLayout": "single-column-safe mounted React composition",
+    "a11yStructure": "page routes compose labelled resident React block implementations",
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-suite-routes",
+    "source": "packages/ui/src/suites.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React suite components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/business-ops/business-ops-staff.html"
+  },
+  "provenance": {
+    "source": "registry/suites/business-ops/suite-shell.json",
+    "copiedSource": false
+  }
+}

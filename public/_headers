@@ -1,0 +1,15 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cross-Origin-Resource-Policy: cross-origin
+
+/registry.json
+  Cache-Control: public, max-age=300
+  Content-Type: application/json; charset=utf-8
+
+/items/*
+  Cache-Control: public, max-age=300
+  Content-Type: application/json; charset=utf-8
+
+/suites/*
+  Cache-Control: public, max-age=300
