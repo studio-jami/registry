@@ -14,7 +14,8 @@
         "docs/index",
         "docs/registry",
         "docs/packages",
-        "docs/release"
+        "docs/release",
+        "docs/hosting"
       ]
     },
     {

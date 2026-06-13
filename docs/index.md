@@ -7,6 +7,6 @@ Use this site for installable UI registry items, package readiness, release evid
 ## Public Surfaces
 
 - Registry bundle: `https://registry.jami.studio/registry.json`
-- Docs: `https://registry.jami.studio/docs`
+- Docs: `https://registry.jami.studio/docs` after the Mintlify subpath proxy is deployed
 - Studio UI source: `studio-jami/studio-ui`
 - Harness source: `studio-jami/jami-harness`
