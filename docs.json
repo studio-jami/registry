@@ -84,13 +84,21 @@
   "contextual": {
     "options": [
       "copy",
-      "assistant",
-      "download-spec"
+      "view",
+      "download-pdf",
+      "download-spec",
+      "chatgpt",
+      "claude",
+      "grok",
+      "perplexity",
+      "aistudio",
+      "cursor",
+      "vscode"
     ],
     "display": "toc"
   },
   "markdown": {
-    "schema": false
+    "schema": true
   },
   "seo": {
     "indexing": "navigable"
@@ -105,5 +113,8 @@
   },
   "appearance": {
     "strict": false
+  },
+  "interaction": {
+    "drilldown": true
   }
 }
