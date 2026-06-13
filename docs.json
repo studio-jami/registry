@@ -39,6 +39,14 @@
             ]
           },
           {
+            "group": "Jami Harness",
+            "pages": [
+              "harness/overview",
+              "harness/quickstart",
+              "harness/packages"
+            ]
+          },
+          {
             "group": "Suites",
             "pages": [
               "suites/solo",

@@ -16,7 +16,7 @@ Internal orchestration logs, planning notes, and worker checkouts live outside t
 
 - `public/` - static registry bundle served by Cloudflare Pages.
 - `public/index.html` and `public/suites/*` - generated workbench and suite preview routes.
-- `*.mdx`, `components/`, `registry/`, `suites/`, `theming/`, and `operations/` - user-facing docs for Mintlify.
+- `*.mdx`, `components/`, `harness/`, `registry/`, `suites/`, `theming/`, and `operations/` - user-facing docs for Mintlify.
 - `scripts/` - lightweight validation for the public bundle.
 - `.github/workflows/` - validation and release automation.
 

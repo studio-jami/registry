@@ -5,6 +5,7 @@ import { createHash } from "node:crypto";
 const root = process.cwd();
 const publicDir = join(root, "public");
 const registryPath = join(publicDir, "registry.json");
+const docsConfigPath = join(root, "docs.json");
 
 function fail(message) {
   console.error(`registry check failed: ${message}`);
@@ -95,4 +96,19 @@ for (const relPath of [
   "suites/research-writing/index.html",
 ]) {
   scanStaticHtml(relPath);
+}
+
+if (!existsSync(docsConfigPath)) {
+  fail("missing docs.json");
+} else {
+  const docsConfig = readJson(docsConfigPath);
+  const pages = [];
+  for (const tab of docsConfig.navigation?.tabs ?? []) {
+    for (const group of tab.groups ?? []) {
+      for (const page of group.pages ?? []) pages.push(page);
+    }
+  }
+  for (const page of pages) {
+    if (!existsSync(join(root, `${page}.mdx`))) fail(`docs.json references missing page ${page}.mdx`);
+  }
 }

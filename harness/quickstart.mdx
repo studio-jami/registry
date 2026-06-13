@@ -1,0 +1,79 @@
+---
+title: 'Get Started with Jami Harness'
+sidebarTitle: 'Quickstart'
+description: 'Install the Harness CLI and core packages, then run a local evidence-oriented smoke without a hosted runtime dependency.'
+---
+
+Jami Harness packages are published under the `@jami-studio` npm namespace. Start with the CLI when you want local inspection, package discovery, or evidence-oriented workflows.
+
+## Prerequisites
+
+- Node.js 24 or later for the Harness source repo and local verification scripts.
+- A package manager that can install scoped npm packages.
+- No hosted provider, store, or OTLP endpoint is required for local package inspection.
+
+<Note>
+  Hosted provider runtime, durable store, workbench/control, and OTLP sink routes
+  are separate operational lanes. Do not treat a local install as proof that a
+  hosted Harness runtime has been configured.
+</Note>
+
+## Install the CLI
+
+<CodeGroup>
+
+```bash npm
+npm install @jami-studio/harness-cli
+```
+
+```bash pnpm
+pnpm add @jami-studio/harness-cli
+```
+
+```bash yarn
+yarn add @jami-studio/harness-cli
+```
+
+</CodeGroup>
+
+For source-repo work, clone the Harness repository and run the local gates from the repo root:
+
+```bash
+git clone https://github.com/studio-jami/jami-harness.git
+cd jami-harness
+pnpm install
+pnpm docs:check
+```
+
+## Choose packages by surface
+
+Most applications start from one of these entry points:
+
+| Need | Package |
+|---|---|
+| CLI workflows | `@jami-studio/harness-cli` |
+| Application integration | `@jami-studio/harness-sdk` |
+| Runtime composition | `@jami-studio/harness-core` and `@jami-studio/harness-runtime` |
+| Contracts and schemas | `@jami-studio/harness-contracts` |
+| Local development defaults | `@jami-studio/harness-store-local`, `@jami-studio/harness-memory`, `@jami-studio/harness-provider-local` |
+
+## Verify the package lane
+
+Use npm metadata to confirm the package is public:
+
+```bash
+npm view @jami-studio/harness-cli version
+npm view @jami-studio/harness-core version
+npm view @jami-studio/harness-sdk version
+```
+
+The public release evidence page tracks package versions, GitHub Releases, and artifact attestation notes.
+
+<CardGroup cols={2}>
+  <Card title="Package map" icon="boxes" href="/harness/packages">
+    Review all public Harness packages and their responsibilities.
+  </Card>
+  <Card title="Release evidence" icon="shield-check" href="/operations/release">
+    Check current release, provenance, and attestation evidence.
+  </Card>
+</CardGroup>

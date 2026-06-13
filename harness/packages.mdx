@@ -1,0 +1,60 @@
+---
+title: 'Jami Harness Package Map'
+sidebarTitle: 'Packages'
+description: 'Map each public Jami Harness package to the runtime, policy, memory, artifact, observability, CLI, and SDK surfaces it owns.'
+---
+
+Harness packages are intentionally split by contract and capability boundary. Teams can use the batteries-included surfaces while still replacing storage, provider, memory, policy, and observability modules behind stable ports.
+
+## Public packages
+
+| Package | Role |
+|---|---|
+| `@jami-studio/harness-cli` | Command-line workflows for local inspection, generated outputs, and developer operations |
+| `@jami-studio/harness-sdk` | Application-facing integration helpers over Harness contracts and runtime surfaces |
+| `@jami-studio/harness-core` | Composition layer for core grammar, run state, and shared invariants |
+| `@jami-studio/harness-contracts` | Versioned schemas and contract records for runs, tools, artifacts, memory, policy, traces, and release packets |
+| `@jami-studio/harness-runtime` | Execution lifecycle, state machine, checkpoints, retries, cancellation, and resumability |
+| `@jami-studio/harness-policy` | Actor model, scopes, consent, approvals, denials, and policy evaluation boundary |
+| `@jami-studio/harness-tools` | Tool wrapper, typed calls, tool registry metadata, audit handling, and replay-aware invocation |
+| `@jami-studio/harness-artifacts` | Evidence packets, generated reports, artifact views, source bindings, and verification metadata |
+| `@jami-studio/harness-memory` | Default memory and context behavior behind replaceable memory/context ports |
+| `@jami-studio/harness-observability` | Trace, audit, metric, eval, and replay event contracts |
+| `@jami-studio/harness-provider-local` | Local/default provider adapter for development and smoke workflows |
+| `@jami-studio/harness-store-local` | Local/default durable store adapter for development and smoke workflows |
+
+## Package boundary rules
+
+- Core packages define Harness grammar and lifecycle.
+- Capability packages own behavior behind explicit ports.
+- Adapter packages translate local or vendor behavior into Harness contracts.
+- UI packages display Harness state but do not execute actions or policy decisions.
+
+<Warning>
+  Do not move policy execution, tool invocation, memory writes, or trace ownership
+  into registry items or Studio UI components. Those surfaces can display
+  Harness refs, but the Harness remains the execution owner.
+</Warning>
+
+## Version notes
+
+The first public package lane was published at `0.1.0`. The inspection patch lane also published `@jami-studio/harness-cli`, `@jami-studio/harness-core`, and `@jami-studio/harness-sdk` at `0.1.1`.
+
+Use npm metadata as the current source for exact latest versions:
+
+```bash
+npm view @jami-studio/harness-cli version
+npm view @jami-studio/harness-core version
+npm view @jami-studio/harness-sdk version
+```
+
+## Related surfaces
+
+<CardGroup cols={2}>
+  <Card title="Harness overview" icon="route" href="/harness/overview">
+    Understand the contract-first architecture and sibling boundary with Studio UI.
+  </Card>
+  <Card title="Agent Panel" icon="robot" href="/components/agent-panel">
+    See how UI components display Harness-owned action refs and artifact refs.
+  </Card>
+</CardGroup>
