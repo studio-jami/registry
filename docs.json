@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Jami Studio",
-  "theme": "linden",
+  "theme": "willow",
   "colors": {
     "primary": "#9f411e",
     "light": "#FFF9F5",
