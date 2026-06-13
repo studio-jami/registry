@@ -18,7 +18,7 @@
   Cache-Control: public, max-age=300
   Content-Type: text/html; charset=utf-8
 
-/docs/*.html
+/preview-docs/*.html
   Cache-Control: public, max-age=300
   Content-Type: text/html; charset=utf-8
 

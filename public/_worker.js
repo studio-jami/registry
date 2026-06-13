@@ -34,8 +34,8 @@ export default {
 };
 
 function docsFallbackPath(pathname) {
-  if (pathname === "/docs/workbench") return "/docs/workbench.html";
-  if (pathname === "/docs/suites") return "/docs/suites.html";
+  if (pathname === "/docs/workbench") return "/preview-docs/workbench.html";
+  if (pathname === "/docs/suites") return "/preview-docs/suites.html";
   return null;
 }
 

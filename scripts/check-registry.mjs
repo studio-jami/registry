@@ -87,8 +87,8 @@ if (workbenchManifestText) {
 
 for (const relPath of [
   "index.html",
-  "docs/workbench.html",
-  "docs/suites.html",
+  "preview-docs/workbench.html",
+  "preview-docs/suites.html",
   "suites/solo/index.html",
   "suites/business-ops/index.html",
   "suites/mixed-media/index.html",
