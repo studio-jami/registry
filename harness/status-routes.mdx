@@ -1,0 +1,100 @@
+---
+title: 'Harness status routes'
+sidebarTitle: 'Status routes'
+description: 'Read the public Jami Harness status, health, and readiness JSON routes hosted under registry.jami.studio/harness.'
+---
+
+The Jami Registry hosts a small set of static JSON routes that describe the Harness runtime posture. Use them to check what is published, what is still preview-only, and what human work must happen before a surface can be claimed live.
+
+Every route is generated from the Harness source repo and shipped as a static file under `registry.jami.studio/harness/`. They are safe to fetch from automation, dashboards, or smoke tests.
+
+<Note>
+  These routes report **preview readiness**, not live uptime. A `200` response
+  means the route bundle was generated and published; it does not by itself
+  mean a hosted runtime is claimable. Check the `status`, `claimable`, and
+  `failClosed` fields before treating a surface as live.
+</Note>
+
+## Available routes
+
+| Route | Purpose |
+|---|---|
+| [`/harness/status.json`](https://registry.jami.studio/harness/status.json) | Top-level Harness status, evidence, and readiness per surface. |
+| [`/harness/healthz.json`](https://registry.jami.studio/harness/healthz.json) | Static health signal for the generated route bundle. |
+| [`/harness/release-readiness.json`](https://registry.jami.studio/harness/release-readiness.json) | Per-capability release readiness pulled from the release capability manifest. |
+| [`/harness/provider-store-observability.json`](https://registry.jami.studio/harness/provider-store-observability.json) | Posture for hosted provider, store, and OTLP observability lanes. |
+| [`/harness/`](https://registry.jami.studio/harness/) | Local Harness workbench HTML for browsing the same data interactively. |
+
+## When to use them
+
+- **Smoke tests.** Fetch `status.json` and `healthz.json` after a deploy to confirm the static bundle landed and parses.
+- **Release gates.** Read `release-readiness.json` to see which capabilities are `claimable`, which are `selected_pending_deploy`, and which are still `fail_closed`.
+- **Hosted runtime planning.** Use `provider-store-observability.json` to see which provider, store, and OTLP lanes still need credentials, secrets, or endpoints provisioned.
+- **Dashboards.** Surface `safeClaim`, `readiness`, and `humanInterventions` so reviewers see the same evidence the Harness emits.
+
+Do not use these routes as a substitute for a hosted uptime check. They describe what is published, not whether a downstream runtime is responding.
+
+## Response shape
+
+Every route follows the `2026-06-12.hosted-route` schema and shares the same top-level fields:
+
+```json
+{
+  "schemaVersion": "2026-06-12.hosted-route",
+  "routeId": "status",
+  "path": "/status.json",
+  "sourceRepo": "jami-harness",
+  "sourceCommit": "git:HEAD",
+  "status": "supported_preview_static_fail_closed",
+  "claimable": false,
+  "failClosed": true,
+  "safeClaim": "A static harness status route is generated for preview serving…",
+  "evidence": { },
+  "readiness": [
+    {
+      "surface": "public_cloudflare_pages_deploy",
+      "status": "selected_pending_deploy",
+      "reason": "The accepted target is the existing registry Cloudflare Pages project under /harness/."
+    }
+  ],
+  "requiredBeforePublicClaim": [ ],
+  "humanInterventions": [ ]
+}
+```
+
+Key fields:
+
+- `status` — machine-readable posture for the route. `supported_preview_static_fail_closed` means the static bundle is published but the live claim is gated.
+- `claimable` — `true` only when every readiness surface has passed.
+- `failClosed` — when `true`, consumers must treat the surface as not-live until smoke evidence is recorded.
+- `safeClaim` — a single sentence you can quote verbatim in status pages or release notes.
+- `readiness` — per-surface breakdown (for example, `local_static_route_generation`, `public_cloudflare_pages_deploy`, `hosted_smoke`).
+- `requiredBeforePublicClaim` and `humanInterventions` — concrete steps left before the surface can be marked live.
+
+## Fetching from a client
+
+```bash
+curl -s https://registry.jami.studio/harness/status.json | jq '{status, claimable, failClosed, safeClaim}'
+```
+
+```ts
+const res = await fetch("https://registry.jami.studio/harness/status.json");
+const status = await res.json();
+
+if (!status.claimable || status.failClosed) {
+  console.warn(status.safeClaim);
+}
+```
+
+The routes are static JSON with permissive cache headers, so you can call them from a worker, a CI job, or a browser without authentication.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Hosting and routing" icon="globe" href="/operations/hosting">
+    See how `registry.jami.studio/harness/*` is served from Cloudflare Pages.
+  </Card>
+  <Card title="Harness overview" icon="book" href="/harness/overview">
+    Understand what the Harness owns and how it meets Studio UI.
+  </Card>
+</CardGroup>

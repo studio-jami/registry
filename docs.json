@@ -43,7 +43,8 @@
             "pages": [
               "harness/overview",
               "harness/quickstart",
-              "harness/packages"
+              "harness/packages",
+              "harness/status-routes"
             ]
           },
           {
