@@ -197,8 +197,14 @@
     "timestamp": true
   },
   "styling": {
-    "codeblocks": "system",
-    "eyebrows": "breadcrumbs"
+    "codeblocks": {
+      "theme": {
+        "light": "rose-pine",
+        "dark": "rose-pine-moon"
+      }
+    },
+    "eyebrows": "section",
+    "latex": false
   },
   "contextual": {
     "options": [
@@ -237,15 +243,20 @@
     "drilldown": true
   },
   "api": {
-    "params": {
-      "expanded": "closed"
-    },
     "playground": {
       "display": "interactive"
     },
     "examples": {
       "prefill": true,
       "autogenerate": true
+    }
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "errors": {
+    "404": {
+      "redirect": true
     }
   }
 }
