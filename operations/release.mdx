@@ -5,9 +5,19 @@ The current public release posture separates three kinds of evidence:
 - Static registry hosting evidence from Cloudflare Pages.
 - Public npm package provenance from GitHub Actions publishes.
 - Clean external npm install/import smoke evidence.
-- GitHub CI/package attestations where workflows generate attestable artifacts.
+- GitHub Release artifact attestations where release workflows generate attestable bundles.
 
-Do not describe CI/package attestations as GitHub Release artifact attestations. A GitHub Release must exist before release artifact attestation claims are made.
+Current `v0.1.0` GitHub Releases:
+
+- Registry: `https://github.com/studio-jami/registry/releases/tag/v0.1.0`
+- Studio UI: `https://github.com/studio-jami/studio-ui/releases/tag/v0.1.0`
+- Jami Harness: `https://github.com/studio-jami/jami-harness/releases/tag/v0.1.0`
+
+Studio UI and Jami Harness release artifact attestations verify with `gh attestation verify`.
+The registry release attestation bundle exists and contains the expected SLSA subject and
+digest metadata, but local `gh attestation verify` still fails for that single artifact
+with a Sigstore public-good verifier initialization error. Keep that caveat in public
+claim reviews until the verifier succeeds.
 
 Public packages currently resolve at `0.1.0`:
 
