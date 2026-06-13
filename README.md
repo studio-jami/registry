@@ -27,10 +27,9 @@ Recommended public routes:
 
 Marketing remains at `https://jami.studio`.
 
-`/docs` is served by Mintlify through a Cloudflare subpath proxy. The static
-registry bundle remains on Cloudflare Pages. Until the proxy is deployed,
-`https://registry.jami.studio/docs` can return 404 while the registry JSON routes
-continue to work.
+`/docs` is served by Mintlify through the Cloudflare Pages advanced-mode Worker
+in `public/_worker.js`. The static registry bundle remains on Cloudflare Pages
+and falls through through `env.ASSETS`.
 
 ## Validate
 

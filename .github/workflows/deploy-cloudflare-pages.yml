@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - public/**
+      - docs/**
+      - docs.json
       - .github/workflows/deploy-cloudflare-pages.yml
   workflow_dispatch:
 

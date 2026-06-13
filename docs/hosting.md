@@ -11,7 +11,7 @@ Marketing stays at `jami.studio`.
 
 - Static registry hosting is live at `https://registry.jami.studio/registry.json`.
 - The npm packages are published at `0.1.0`.
-- `https://registry.jami.studio/docs` requires the Mintlify subpath proxy. It will return 404 until that proxy is deployed.
+- `https://registry.jami.studio/docs` is served by the Pages advanced-mode worker in `public/_worker.js`.
 
 ## Mintlify Source
 
@@ -30,34 +30,38 @@ The docs source files are:
 
 ## Cloudflare Subpath Proxy
 
-After Mintlify finishes provisioning, route `registry.jami.studio/docs*` through a Cloudflare Worker or equivalent edge proxy to the final Mintlify origin.
+Route `registry.jami.studio/docs*` through the Pages advanced-mode Worker in `public/_worker.js`.
 
-Use the real Mintlify hostname from the project settings. The placeholder below assumes `jami.mintlify.dev`:
+Use the real Mintlify hostname from the project settings. The current origin is `jami.mintlify.dev`:
 
 ```js
-addEventListener("fetch", (event) => {
-  event.respondWith(handleRequest(event.request));
-});
+const DOCS_ORIGIN = "jami.mintlify.dev";
+const PUBLIC_HOST = "registry.jami.studio";
 
-async function handleRequest(request) {
-  const url = new URL(request.url);
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
-  if (url.pathname.startsWith("/docs")) {
-    const docsOrigin = "jami.mintlify.dev";
-    const publicHost = "registry.jami.studio";
-    const upstream = new URL(request.url);
-    upstream.hostname = docsOrigin;
+    if (url.pathname === "/docs") {
+      url.pathname = "/docs/";
+      return Response.redirect(url.toString(), 308);
+    }
 
-    const proxyRequest = new Request(upstream, request);
-    proxyRequest.headers.set("Host", docsOrigin);
-    proxyRequest.headers.set("X-Forwarded-Host", publicHost);
-    proxyRequest.headers.set("X-Forwarded-Proto", "https");
+    if (url.pathname.startsWith("/docs/")) {
+      const upstream = new URL(url);
+      upstream.hostname = DOCS_ORIGIN;
 
-    return fetch(proxyRequest);
-  }
+      const proxyRequest = new Request(upstream, request);
+      proxyRequest.headers.set("Host", DOCS_ORIGIN);
+      proxyRequest.headers.set("X-Forwarded-Host", PUBLIC_HOST);
+      proxyRequest.headers.set("X-Forwarded-Proto", "https");
 
-  return fetch(request);
-}
+      return fetch(proxyRequest);
+    }
+
+    return env.ASSETS.fetch(request);
+  },
+};
 ```
 
 Smoke after deployment:
