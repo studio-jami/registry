@@ -87,7 +87,7 @@
       "assistant",
       "download-spec"
     ],
-    "display": "header"
+    "display": "toc"
   },
   "markdown": {
     "schema": false
