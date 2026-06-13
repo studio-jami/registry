@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Jami Studio",
-  "theme": "sequoia",
+  "theme": "luma",
   "colors": {
     "primary": "#9f411e",
     "light": "#FFF9F5",
@@ -189,9 +189,6 @@
         "label": "Get Started"
       }
     ]
-  },
-  "background": {
-    "decoration": "gradient"
   },
   "metadata": {
     "timestamp": true
