@@ -86,8 +86,22 @@ if (workbenchManifestText) {
   if (manifest.backendRegistrationClaimed !== false) fail("hosted route manifest must not claim backend registration");
 }
 
+for (const [relPath, routeId] of [
+  ["harness/status.json", "status"],
+  ["harness/release-readiness.json", "release-readiness"],
+  ["harness/provider-store-observability.json", "provider-store-observability"],
+  ["harness/healthz.json", "healthz"],
+]) {
+  const text = assertFile(relPath);
+  if (!text) continue;
+  const route = JSON.parse(text);
+  if (route.routeId !== routeId) fail(`public/${relPath}: expected routeId ${routeId}`);
+  if (route.sourceRepo !== "jami-harness") fail(`public/${relPath}: expected jami-harness sourceRepo`);
+}
+
 for (const relPath of [
   "index.html",
+  "harness/index.html",
   "preview-docs/workbench.html",
   "preview-docs/suites.html",
   "suites/solo/index.html",
