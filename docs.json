@@ -69,6 +69,38 @@
     "primary": {
       "type": "github",
       "href": "https://github.com/studio-jami/registry"
+    },
+    "links": []
+  },
+  "background": {
+    "decoration": "grid"
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "styling": {
+    "codeblocks": "system"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "assistant",
+      "download-spec"
+    ],
+    "display": "header"
+  },
+  "markdown": {
+    "schema": false
+  },
+  "seo": {
+    "indexing": "navigable"
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/studio-jami",
+      "linkedin": "https://www.linkedin.com/in/jami-studio",
+      "website": "https://www.jami.studio/",
+      "x": "https://x.com/studio_jami"
     }
   }
 }
