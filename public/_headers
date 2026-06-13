@@ -13,3 +13,19 @@
 
 /suites/*
   Cache-Control: public, max-age=300
+
+/*.html
+  Cache-Control: public, max-age=300
+  Content-Type: text/html; charset=utf-8
+
+/docs/*.html
+  Cache-Control: public, max-age=300
+  Content-Type: text/html; charset=utf-8
+
+/hosted-route-manifest.json
+  Cache-Control: public, max-age=300
+  Content-Type: application/json; charset=utf-8
+
+/build-manifest.json
+  Cache-Control: public, max-age=300
+  Content-Type: application/json; charset=utf-8

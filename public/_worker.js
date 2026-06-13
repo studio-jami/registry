@@ -6,12 +6,30 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/docs" || url.pathname.startsWith("/docs/")) {
-      return proxyDocs(request, url);
+      const docsResponse = await proxyDocs(request, url);
+      if (docsResponse.status !== 404) return docsResponse;
+
+      const fallbackPath = docsFallbackPath(url.pathname);
+      if (fallbackPath) {
+        const fallbackUrl = new URL(request.url);
+        fallbackUrl.pathname = fallbackPath;
+        fallbackUrl.search = "";
+        const fallbackRequest = new Request(fallbackUrl, request);
+        return env.ASSETS.fetch(fallbackRequest);
+      }
+
+      return docsResponse;
     }
 
     return env.ASSETS.fetch(request);
   },
 };
+
+function docsFallbackPath(pathname) {
+  if (pathname === "/docs/workbench") return "/docs/workbench.html";
+  if (pathname === "/docs/suites") return "/docs/suites.html";
+  return null;
+}
 
 function proxyDocs(request, incomingUrl) {
   const upstreamUrl = new URL(incomingUrl);

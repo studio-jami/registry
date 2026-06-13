@@ -14,10 +14,15 @@ Current `v0.1.0` GitHub Releases:
 - Jami Harness: `https://github.com/studio-jami/jami-harness/releases/tag/v0.1.0`
 
 Studio UI and Jami Harness release artifact attestations verify with `gh attestation verify`.
-The registry release attestation bundle exists and contains the expected SLSA subject and
-digest metadata, but local `gh attestation verify` still fails for that single artifact
-with a Sigstore public-good verifier initialization error. Keep that caveat in public
-claim reviews until the verifier succeeds.
+The registry release artifact also verifies when the signer identity and OIDC issuer
+are pinned to the release workflow:
+
+```bash
+gh attestation verify jami-registry-v0.1.0.tgz \
+  --repo studio-jami/registry \
+  --cert-identity https://github.com/studio-jami/registry/.github/workflows/release.yml@refs/heads/main \
+  --cert-oidc-issuer https://token.actions.githubusercontent.com
+```
 
 Public packages currently resolve at `0.1.0`:
 
@@ -38,3 +43,9 @@ Public packages currently resolve at `0.1.0`:
 - `@jami-studio/harness-sdk`
 - `@jami-studio/harness-store-local`
 - `@jami-studio/harness-tools`
+
+Harness inspection patch packages also resolve at `0.1.1`:
+
+- `@jami-studio/harness-cli`
+- `@jami-studio/harness-core`
+- `@jami-studio/harness-sdk`

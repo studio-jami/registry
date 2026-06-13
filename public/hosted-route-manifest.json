@@ -1,0 +1,178 @@
+{
+  "$schema": "https://jami.studio/schemas/studio-ui/hosted-route-readiness.generated.json",
+  "generatedBy": "apps/workbench/build.mjs",
+  "status": "public-registry-docs-workbench-suites-live",
+  "publicRegistryClaimed": true,
+  "publicDocsClaimed": true,
+  "publicWorkbenchClaimed": true,
+  "publicSuiteRoutesClaimed": true,
+  "hostedPersistenceClaimed": false,
+  "backendRegistrationClaimed": false,
+  "targetHost": "registry.jami.studio",
+  "sourceLocks": [
+    {
+      "id": "cloudflare-pages-direct-upload",
+      "title": "Cloudflare Pages Direct Upload",
+      "url": "https://developers.cloudflare.com/pages/get-started/direct-upload/",
+      "checkedOn": "2026-06-12"
+    },
+    {
+      "id": "cloudflare-pages-headers",
+      "title": "Cloudflare Pages custom headers",
+      "url": "https://developers.cloudflare.com/pages/configuration/headers/",
+      "checkedOn": "2026-06-12"
+    },
+    {
+      "id": "cloudflare-pages-serving",
+      "title": "Cloudflare Pages serving static assets",
+      "url": "https://developers.cloudflare.com/pages/configuration/serving-pages/",
+      "checkedOn": "2026-06-12"
+    },
+    {
+      "id": "cloudflare-pages-custom-domains",
+      "title": "Cloudflare Pages custom domains",
+      "url": "https://developers.cloudflare.com/pages/configuration/custom-domains/",
+      "checkedOn": "2026-06-13"
+    }
+  ],
+  "routes": [
+    {
+      "id": "registry-index",
+      "kind": "registry",
+      "targetUrl": "https://registry.jami.studio/registry.json",
+      "localArtifact": "registry.json",
+      "deployed": true
+    },
+    {
+      "id": "docs-registry",
+      "kind": "docs",
+      "targetUrl": "https://registry.jami.studio/docs/registry",
+      "localArtifact": "docs/registry.html",
+      "deployed": true
+    },
+    {
+      "id": "docs-workbench",
+      "kind": "docs",
+      "targetUrl": "https://registry.jami.studio/docs/workbench",
+      "localArtifact": "docs/workbench.html",
+      "deployed": true
+    },
+    {
+      "id": "workbench-showcase",
+      "kind": "workbench-showcase",
+      "targetUrl": "https://registry.jami.studio/",
+      "localArtifact": "index.html",
+      "deployed": true,
+      "hostedPersistence": false,
+      "backendRegistration": false
+    },
+    {
+      "id": "solo-suite-app",
+      "kind": "suite-app",
+      "targetUrl": "https://registry.jami.studio/suites/solo/",
+      "localArtifact": "suites/solo/index.html",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "solo-solo-today",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/solo/solo-today.html",
+      "localArtifact": "suites/solo/solo-today.html",
+      "sourceRoute": "/solo/today",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "solo-solo-docs",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/solo/solo-docs.html",
+      "localArtifact": "suites/solo/solo-docs.html",
+      "sourceRoute": "/solo/docs",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "business-ops-suite-app",
+      "kind": "suite-app",
+      "targetUrl": "https://registry.jami.studio/suites/business-ops/",
+      "localArtifact": "suites/business-ops/index.html",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "business-ops-business-ops-dashboard",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/business-ops/business-ops-dashboard.html",
+      "localArtifact": "suites/business-ops/business-ops-dashboard.html",
+      "sourceRoute": "/business-ops/dashboard",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "business-ops-business-ops-staff",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/business-ops/business-ops-staff.html",
+      "localArtifact": "suites/business-ops/business-ops-staff.html",
+      "sourceRoute": "/business-ops/staff",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mixed-media-suite-app",
+      "kind": "suite-app",
+      "targetUrl": "https://registry.jami.studio/suites/mixed-media/",
+      "localArtifact": "suites/mixed-media/index.html",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mixed-media-mixed-media-library",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/mixed-media/mixed-media-library.html",
+      "localArtifact": "suites/mixed-media/mixed-media-library.html",
+      "sourceRoute": "/mixed-media/library",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mixed-media-mixed-media-pipeline",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/mixed-media/mixed-media-pipeline.html",
+      "localArtifact": "suites/mixed-media/mixed-media-pipeline.html",
+      "sourceRoute": "/mixed-media/pipeline",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "research-writing-suite-app",
+      "kind": "suite-app",
+      "targetUrl": "https://registry.jami.studio/suites/research-writing/",
+      "localArtifact": "suites/research-writing/index.html",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "research-writing-research-writing-sources",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/research-writing/research-writing-sources.html",
+      "localArtifact": "suites/research-writing/research-writing-sources.html",
+      "sourceRoute": "/research-writing/sources",
+      "deployed": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "research-writing-research-writing-brief",
+      "kind": "suite-page",
+      "targetUrl": "https://registry.jami.studio/suites/research-writing/research-writing-brief.html",
+      "localArtifact": "suites/research-writing/research-writing-brief.html",
+      "sourceRoute": "/research-writing/brief",
+      "deployed": true,
+      "hostedRuntime": false
+    }
+  ],
+  "missingHumanActions": [
+    "Define revisioned-item URL policy for long-lived registry artifacts.",
+    "Implement hosted persistence and backend package registration before claiming save/register across sessions."
+  ]
+}

@@ -2,7 +2,7 @@
 
 Jami Registry uses one public hostname with two backing services:
 
-- `registry.jami.studio/registry.json`, `/items/*`, and `/suites/*` are static files served by Cloudflare Pages.
+- `registry.jami.studio/registry.json`, `/items/*`, `/suites/*`, and the generated workbench/suite preview routes are static files served by Cloudflare Pages.
 - `registry.jami.studio/docs/*` is the user-facing docs route and should proxy to Mintlify.
 
 Marketing stays at `jami.studio`.
@@ -12,6 +12,8 @@ Marketing stays at `jami.studio`.
 - Static registry hosting is live at `https://registry.jami.studio/registry.json`.
 - The npm packages are published at `0.1.0`.
 - `https://registry.jami.studio/docs` is served by the Pages advanced-mode worker in `public/_worker.js`.
+- `https://registry.jami.studio/` serves the generated Studio UI workbench preview.
+- `https://registry.jami.studio/suites/solo/`, `/suites/business-ops/`, `/suites/mixed-media/`, and `/suites/research-writing/` serve generated suite previews.
 
 ## Mintlify Source
 
@@ -31,6 +33,9 @@ The docs source files are:
 ## Cloudflare Subpath Proxy
 
 Route `registry.jami.studio/docs*` through the Pages advanced-mode Worker in `public/_worker.js`.
+The worker keeps Mintlify as the primary docs origin and falls back to local
+generated preview docs for `/docs/workbench` and `/docs/suites` if Mintlify
+returns 404.
 
 Use the real Mintlify hostname from the project settings. The current origin is `jami.mintlify.dev`:
 
@@ -63,6 +68,9 @@ Smoke after deployment:
 
 ```bash
 curl -I https://registry.jami.studio/docs
+curl -I https://registry.jami.studio/docs/workbench
 curl -I https://registry.jami.studio/registry.json
 curl -I https://registry.jami.studio/items/button.registry-item.json
+curl -I https://registry.jami.studio/
+curl -I https://registry.jami.studio/suites/solo/
 ```

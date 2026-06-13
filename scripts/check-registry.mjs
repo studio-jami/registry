@@ -1,4 +1,4 @@
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 
@@ -17,6 +17,23 @@ function readJson(path) {
 
 function sha256(value) {
   return `sha256:${createHash("sha256").update(value).digest("hex")}`;
+}
+
+function assertFile(relPath) {
+  const path = join(publicDir, relPath);
+  if (!existsSync(path) || !statSync(path).isFile()) {
+    fail(`missing public/${relPath}`);
+    return null;
+  }
+  return readFileSync(path, "utf8");
+}
+
+function scanStaticHtml(relPath) {
+  const text = assertFile(relPath);
+  if (!text) return;
+  if (!/<html\b/i.test(text)) fail(`public/${relPath}: missing html document`);
+  if (/<[^>]+\son[a-z]+\s*=/i.test(text)) fail(`public/${relPath}: inline event handler found`);
+  if (/(href|src)\s*=\s*["']?\s*javascript:/i.test(text)) fail(`public/${relPath}: javascript URL found`);
 }
 
 if (!existsSync(registryPath)) {
@@ -54,4 +71,28 @@ if (!existsSync(registryPath)) {
   console.log(
     `registry check passed: ${items.length} item(s), ${itemFiles.length} item file(s), ${suiteFiles.length} suite manifest(s)`
   );
+}
+
+const workbenchManifestText = assertFile("hosted-route-manifest.json");
+if (workbenchManifestText) {
+  const manifest = JSON.parse(workbenchManifestText);
+  if (manifest.targetHost !== "registry.jami.studio") fail("hosted route manifest target host drifted");
+  if (manifest.publicRegistryClaimed !== true) fail("hosted route manifest must claim registry route");
+  if (manifest.publicDocsClaimed !== true) fail("hosted route manifest must claim docs route");
+  if (manifest.publicWorkbenchClaimed !== true) fail("hosted route manifest must claim workbench route");
+  if (manifest.publicSuiteRoutesClaimed !== true) fail("hosted route manifest must claim suite routes");
+  if (manifest.hostedPersistenceClaimed !== false) fail("hosted route manifest must not claim persistence");
+  if (manifest.backendRegistrationClaimed !== false) fail("hosted route manifest must not claim backend registration");
+}
+
+for (const relPath of [
+  "index.html",
+  "docs/workbench.html",
+  "docs/suites.html",
+  "suites/solo/index.html",
+  "suites/business-ops/index.html",
+  "suites/mixed-media/index.html",
+  "suites/research-writing/index.html",
+]) {
+  scanStaticHtml(relPath);
 }
