@@ -1,0 +1,159 @@
+---
+title: 'Mixed Media Suite: Asset Library and Pipeline Management'
+sidebarTitle: 'Mixed Media'
+description: 'Install the Mixed Media suite for a media-production shell with an asset library, generation pipelines, review queue, and display-only agent status — all in one command.'
+---
+
+The Mixed Media suite is a production shell for teams managing generated and edited media assets, multi-step generation pipelines, review queues, and publishing readiness. It targets the `mixed-media` lane and ships a `media-production` layout with four navigation items: Library, Pipeline, Review, and Publishing. A single install command resolves 13 registry items — theme tokens, primitive components including the dedicated `media-grid`, the app shell, two pages, and four blocks — giving you a structured starting point for any AI-powered media workflow.
+
+## Install
+
+Run the following command to pull the entire Mixed Media suite install graph into your project:
+
+<CodeGroup>
+```bash npm
+npx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+```
+
+```bash pnpm
+pnpm dlx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+```
+
+```bash yarn
+yarn dlx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+```
+</CodeGroup>
+
+<Note>
+  The install graph resolves all 13 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+</Note>
+
+## What's Included
+
+The `mixed-media-suite` registry item installs the following items in dependency order:
+
+<Steps>
+  <Step title="Design foundation">
+    `jami-theme` — CSS variables, Tailwind tokens, and TypeScript types for the Jami design system.
+  </Step>
+  <Step title="Primitive components">
+    `button`, `panel`, `data-list`, `agent-panel`, `media-grid` — the five reusable UI building blocks consumed by Mixed Media pages and blocks. Note that `media-grid` is unique to this suite and is not included in the other suite install graphs.
+  </Step>
+  <Step title="App shell">
+    `mixed-media-app` — the `media-production` layout shell that mounts the navigation and route outlet.
+  </Step>
+  <Step title="Pages">
+    `mixed-media-library-page`, `mixed-media-pipeline-page` — the two active route pages shipped with this suite version.
+  </Step>
+  <Step title="Blocks">
+    `mixed-media-assets-block`, `mixed-media-metadata-block`, `mixed-media-pipeline-block`, `mixed-media-review-agent-block` — the four discrete content blocks that compose each page.
+  </Step>
+</Steps>
+
+## App Shell
+
+The Mixed Media app shell uses the `media-production` layout. This layout is optimised for visual-asset workflows, with a navigation bar and a main content area designed to accommodate grid-based media displays alongside status panels and pipeline queues.
+
+| Property | Value |
+|---|---|
+| Shell ID | `app.mixed-media.shell` |
+| Layout | `media-production` |
+| Lane | `mixed-media` |
+| Package name | `@jami-studio/mixed-media-suite` |
+
+### Navigation
+
+```
+Library     →  /mixed-media/library
+Pipeline    →  /mixed-media/pipeline
+Review      →  /mixed-media/review
+Publishing  →  /mixed-media/publishing
+```
+
+<Tip>
+  Review and Publishing are navigation items in the shell manifest. Their full page and block implementations are part of the planned surfaces roadmap — see below.
+</Tip>
+
+### Routes
+
+| Path | Page ID | Title |
+|---|---|---|
+| `/mixed-media/library` | `page.mixed-media.library` | Asset library |
+| `/mixed-media/pipeline` | `page.mixed-media.pipeline` | Generation pipeline |
+
+## Pages and Blocks
+
+### Asset library — `/mixed-media/library`
+
+Media-grid library with asset metadata, long captions, and empty collection states. This page uses `media-grid`, `data-list`, `panel`, and `button`.
+
+<CardGroup cols={2}>
+  <Card title="Assets" icon="images">
+    `block.mixed-media.assets` — powered by `media-grid`. Exercises both `empty` and `long-content` states: an empty collection keeps a visible grid state rather than disappearing, while generated asset filenames and prompt excerpts wrap inside the media shell.
+  </Card>
+  <Card title="Asset metadata" icon="tag">
+    `block.mixed-media.metadata` — powered by `data-list`. Exercises the `long-content` state so long asset filenames, prompt excerpts, and publishing notes wrap correctly inside the metadata list.
+  </Card>
+</CardGroup>
+
+### Generation pipeline — `/mixed-media/pipeline`
+
+Pipeline status, review queue, publishing readiness, and display-only agent state. This page uses `data-list`, `agent-panel`, `media-grid`, and `panel`.
+
+<CardGroup cols={2}>
+  <Card title="Pipeline runs" icon="diagram-project">
+    `block.mixed-media.pipeline` — powered by `data-list`. Exercises the `error` state: pipeline errors render as status panels without invoking provider or harness actions.
+  </Card>
+  <Card title="Review agent" icon="robot">
+    `block.mixed-media.review-agent` — powered by `agent-panel`. Display-only review agent; exercises the `error` state without invoking any executable actions.
+  </Card>
+</CardGroup>
+
+## State Fixtures
+
+Each block ships with named state fixtures you can reference in tests and Storybook stories:
+
+| Fixture | Description |
+|---|---|
+| `longContent` | Generated asset filenames, prompt excerpts, and publishing notes wrap inside the media shell. |
+| `empty` | An empty asset collection keeps a visible media-grid state. |
+| `error` | Pipeline errors render as status panels without invoking provider or harness actions. |
+
+## Planned Surfaces
+
+The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+
+<CardGroup cols={4}>
+  <Card title="Assets" icon="images" />
+  <Card title="Generation" icon="wand-magic-sparkles" />
+  <Card title="Editing" icon="pen-ruler" />
+  <Card title="Pipelines" icon="diagram-project" />
+  <Card title="Review" icon="magnifying-glass-chart" />
+  <Card title="Publishing" icon="paper-plane" />
+  <Card title="Library" icon="photo-film" />
+</CardGroup>
+
+## Compatibility
+
+| Requirement | Value |
+|---|---|
+| React | `>=19` |
+| shadcn | `4.x` (source-lock required before generated output) |
+| Tailwind | `4.x` (source-lock required before generated output) |
+| License | MIT |
+
+## Related Components
+
+The Mixed Media suite is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+
+<CardGroup cols={3}>
+  <Card title="Media Grid" icon="images" href="/components/media-grid">
+    Grid-based asset display with empty, long-content, and selection states.
+  </Card>
+  <Card title="Agent Panel" icon="robot" href="/components/agent-panel">
+    Display-only AI agent status with error and loading states.
+  </Card>
+  <Card title="Data List" icon="list" href="/components/data-list">
+    Flexible list component with empty, error, and long-content states.
+  </Card>
+</CardGroup>

@@ -6,7 +6,12 @@ on:
       - main
     paths:
       - public/**
-      - docs/**
+      - components/**
+      - operations/**
+      - registry/**
+      - suites/**
+      - theming/**
+      - "*.mdx"
       - docs.json
       - .github/workflows/deploy-cloudflare-pages.yml
   workflow_dispatch:

@@ -23,7 +23,7 @@ jobs:
       - run: node scripts/check-registry.mjs
       - name: Pack registry bundle
         run: |
-          tar -czf jami-registry-${{ inputs.version }}.tgz public docs README.md docs.json
+          tar -czf jami-registry-${{ inputs.version }}.tgz public components registry suites theming operations introduction.mdx quickstart.mdx docs.json README.md
           shasum -a 256 jami-registry-${{ inputs.version }}.tgz > jami-registry-${{ inputs.version }}.tgz.sha256
       - name: Attest registry bundle
         uses: actions/attest-build-provenance@v4

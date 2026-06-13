@@ -1,0 +1,194 @@
+---
+title: 'MediaGrid: Responsive Gallery for Media and Artifacts'
+sidebarTitle: 'Media Grid'
+description: 'A tokenized, accessible media and artifact gallery with built-in loading, empty, and error states — installable from the Jami Studio registry.'
+---
+
+`MediaGrid` is the Jami Studio registry component for displaying collections of media items and artifacts in a fluid, responsive grid. It handles the full state surface — loading, empty, and error — without requiring you to wire up your own conditional rendering. The grid adapts automatically to available width using a CSS `auto-fit` column rule, and every item carries correct ARIA list semantics out of the box.
+
+## Installation
+
+Install `MediaGrid` from the Jami Studio registry using `shadcn`:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/media-grid.registry-item.json
+```
+
+This installs the component vocabulary, styles, and React wrapper into your project under `components/ui/`.
+
+<Note>
+  `MediaGrid` requires React ≥ 19 and is compatible with shadcn-style installs. It has no Tailwind package dependency — styling is driven entirely by Jami token CSS variables.
+</Note>
+
+## Props
+
+<ParamField path="title" type="string">
+  Optional visible heading rendered inside the grid region. Also used as the accessible `aria-label` when `ariaLabel` is not provided.
+</ParamField>
+
+<ParamField path="ariaLabel" type="string">
+  Explicit ARIA label for the grid's `role="region"` wrapper. Overrides `title` for assistive technology when both are provided.
+</ParamField>
+
+<ParamField path="items" type="object[]">
+  Array of item objects to display in the grid. See [Item object shape](#item-object-shape) for field details. Defaults to an empty array.
+</ParamField>
+
+<ParamField path="selectedItemId" type="string">
+  The `id` (or `artifactId`) of the currently selected item. The matching list item receives `aria-current="true"`.
+</ParamField>
+
+<ParamField path="loading" type="boolean">
+  When `true`, suppresses the item list and renders a `role="status"` status message: `"Loading media."`. Sets `aria-busy="true"` on the container.
+</ParamField>
+
+<ParamField path="empty" type="boolean">
+  When `true`, suppresses the item list and renders a `role="status"` message: `"No media items."`.
+</ParamField>
+
+<ParamField path="error" type="string">
+  When provided, suppresses the item list and renders the string as a `role="alert"` error message. Takes precedence over `loading` and `empty`.
+</ParamField>
+
+## Item object shape
+
+Each object in the `items` array is resolved with the following fallback chain:
+
+| Field | Purpose |
+|---|---|
+| `id` or `artifactId` | Identifier used for selection matching and `data-media-id`. Resolution order: `id` → `artifactId` → auto-generated index key. |
+| `title`, `label`, or `alt` | Display text for the item. Resolution order: `title` → `label` → `alt` → the resolved `id`. |
+
+You can mix shapes in the same array — the renderer always falls back gracefully.
+
+```js
+// id + title
+{ id: "media-001", title: "Summer Campaign Hero" }
+
+// artifactId + label
+{ artifactId: "artv_abc123", label: "Q3 Review Slide" }
+
+// id + alt (image-style shape)
+{ id: "img-002", alt: "Product photograph, white background" }
+```
+
+## Usage examples
+
+<CodeGroup>
+
+```jsx Basic grid
+import { JamiMediaGrid } from "@/components/ui/jami-radix-react-wrappers.mjs";
+
+export function AssetLibrary({ assets }) {
+  return (
+    <JamiMediaGrid
+      title="Asset Library"
+      items={assets}
+    />
+  );
+}
+```
+
+```jsx Selected item
+import { JamiMediaGrid } from "@/components/ui/jami-radix-react-wrappers.mjs";
+
+export function AssetLibrary({ assets, activeId }) {
+  return (
+    <JamiMediaGrid
+      title="Asset Library"
+      ariaLabel="Asset library — select an item to preview"
+      items={assets}
+      selectedItemId={activeId}
+    />
+  );
+}
+```
+
+</CodeGroup>
+
+### State variants
+
+<Tabs>
+  <Tab title="Loading state">
+    ```jsx
+    <JamiMediaGrid
+      title="Asset Library"
+      items={[]}
+      loading={true}
+    />
+    ```
+    Renders a `role="status"` paragraph: **"Loading media."** The container also carries `aria-busy="true"`.
+  </Tab>
+  <Tab title="Empty state">
+    ```jsx
+    <JamiMediaGrid
+      title="Asset Library"
+      items={[]}
+      empty={true}
+    />
+    ```
+    Renders a `role="status"` paragraph: **"No media items."**
+  </Tab>
+  <Tab title="Error state">
+    ```jsx
+    <JamiMediaGrid
+      title="Asset Library"
+      items={[]}
+      error="Could not load assets. Please try again."
+    />
+    ```
+    Renders the `error` string inside a `role="alert"` paragraph. Error takes precedence over `loading` and `empty`.
+  </Tab>
+</Tabs>
+
+## React wrapper: `JamiMediaGrid`
+
+The `JamiMediaGrid` React component is exported from `jami-radix-react-wrappers.mjs` and accepts the full prop set described above. It is a `React.forwardRef` component, so you can attach a ref to the root `<section>` element.
+
+```jsx
+import { JamiMediaGrid } from "@/components/ui/jami-radix-react-wrappers.mjs";
+
+<JamiMediaGrid
+  ref={gridRef}
+  title="Generated Assets"
+  ariaLabel="Generated asset gallery"
+  items={[
+    { id: "gen-001", title: "Hero image v1" },
+    { id: "gen-002", title: "Hero image v2" },
+    { artifactId: "artv_gen003", label: "Alternate crop" },
+  ]}
+  selectedItemId="gen-001"
+/>
+```
+
+## Grid layout
+
+`MediaGrid` uses a CSS `auto-fit` column layout that fills all available horizontal space:
+
+```css
+.jami-media-grid {
+  display: grid;
+  gap: var(--jami-spacing-control);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+```
+
+Columns are at least `10rem` wide and grow to fill the container — no breakpoint configuration required. Override the column rule by targeting `.jami-media-grid` in your own stylesheet.
+
+<Tip>
+  The grid inherits its background, foreground, radius, and spacing from Jami design tokens (`semantic.light/dark.background`, `semantic.light/dark.foreground`, `spacing.control`, `radius.control`). Transition timing is controlled by `motion.fast`. Focus outlines use `componentState.focusRing`.
+</Tip>
+
+## Accessibility
+
+| Attribute | Value |
+|---|---|
+| Root element | `<section role="region">` |
+| Label source | `ariaLabel` → `title` → `"Media"` |
+| Item list | `<ul class="jami-media-grid-list">` |
+| Item role | `<li role="listitem">` (implicit) |
+| Selected item | `aria-current="true"` |
+| Loading | `aria-busy="true"` on root; `role="status"` on message |
+| Error | `role="alert"` on message paragraph |
+
+The component supports the full Jami state matrix including `focus-visible`, `keyboard`, `contrast`, `reduced-motion`, and `responsive` states.

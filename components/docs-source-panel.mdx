@@ -1,0 +1,205 @@
+---
+title: 'DocsSourcePanel: Citation and Source Reference Panel'
+sidebarTitle: 'Docs Source Panel'
+description: 'A tokenized complementary panel for document sources, citations, and references — with built-in redaction, empty, and selected-source states.'
+---
+
+`DocsSourcePanel` is the Jami Studio registry component for displaying document sources, citations, and reference materials alongside your content. It renders as an HTML `<aside>` with `role="complementary"`, making it semantically appropriate as a supporting panel next to a primary content region. The component handles redaction-aware states out of the box — when source details must be hidden, a single `redacted` flag replaces the source list with a policy-compliant status message. Active sources are highlighted using `aria-current` for full keyboard and assistive-technology support.
+
+## Installation
+
+Install `DocsSourcePanel` from the Jami Studio registry using `shadcn`:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/docs-source-panel.registry-item.json
+```
+
+This installs the component vocabulary, styles, and React wrapper into your project under `components/ui/`.
+
+<Note>
+  `DocsSourcePanel` requires React ≥ 19 and is compatible with shadcn-style installs. It has no Tailwind package dependency — styling is driven entirely by Jami token CSS variables.
+</Note>
+
+## Props
+
+<ParamField path="title" type="string">
+  Optional visible heading rendered at the top of the panel. Also used as the `aria-label` for the `<aside>` when `ariaLabel` is not provided.
+</ParamField>
+
+<ParamField path="ariaLabel" type="string">
+  Explicit ARIA label for the `<aside role="complementary">` wrapper. Overrides `title` for assistive technology when both are provided.
+</ParamField>
+
+<ParamField path="sources" type="object[]">
+  Array of source objects to display. See [Source object shape](#source-object-shape) for field details. Defaults to an empty array.
+</ParamField>
+
+<ParamField path="selectedSourceId" type="string">
+  The `id` (or `sourceId`) of the currently active source. The matching list item receives `aria-current="true"`.
+</ParamField>
+
+<ParamField path="redacted" type="boolean">
+  When `true`, hides the source list entirely and renders a `role="status"` message: `"Source details are redacted."`. Use this when source metadata must not be exposed to the current viewer.
+</ParamField>
+
+<ParamField path="empty" type="boolean">
+  When `true`, suppresses the source list and renders a `role="status"` message: `"No sources attached."` Also triggers when `sources` is an empty array.
+</ParamField>
+
+## Source object shape
+
+Each object in the `sources` array is resolved with the following fallback chain:
+
+| Field | Purpose |
+|---|---|
+| `id` or `sourceId` | Identifier used for selection matching and `data-source-id`. Resolution order: `id` → `sourceId` → auto-generated index key. |
+| `title` or `label` | Display text for the source row. Resolution order: `title` → `label` → the resolved `id`. |
+
+```js
+// id + title
+{ id: "src-001", title: "IPCC Sixth Assessment Report" }
+
+// sourceId + label
+{ sourceId: "src_rw_abc123", label: "Internal style guide, v3" }
+
+// Both fields present — id and title take precedence
+{ id: "src-002", sourceId: "src_alt", title: "WHO Technical Brief", label: "WHO doc" }
+```
+
+## Redaction mode
+
+When `redacted` is `true`, the component enters redaction mode: the source list is hidden and the panel displays `"Source details are redacted."` as a `role="status"` announcement. The root `<aside>` also receives `data-redacted="true"` so you can apply additional CSS styling for redacted contexts.
+
+```jsx
+<JamiDocsSourcePanel
+  title="References"
+  redacted={true}
+/>
+```
+
+<Note>
+  Redaction does not affect the `title` or `ariaLabel` — the panel heading and landmark label remain visible to identify the panel's purpose even when content is hidden.
+</Note>
+
+## Selected source highlighting
+
+Pass the `id` or `sourceId` of the active source to `selectedSourceId`. The component compares it against each resolved source identifier and adds `aria-current="true"` to the matching `<li>`:
+
+```jsx
+<JamiDocsSourcePanel
+  title="Sources"
+  sources={sources}
+  selectedSourceId="src-001"
+/>
+```
+
+This is the correct pattern for indicating which source a Jami agent or the user is currently viewing — screen readers announce the active item without requiring additional hidden text.
+
+## Usage examples
+
+<CodeGroup>
+
+```jsx Basic panel
+import { JamiDocsSourcePanel } from "@/components/ui/jami-radix-react-wrappers.mjs";
+
+export function SourceSidebar({ sources }) {
+  return (
+    <JamiDocsSourcePanel
+      title="Sources"
+      sources={sources}
+    />
+  );
+}
+```
+
+```jsx Selected source
+import { JamiDocsSourcePanel } from "@/components/ui/jami-radix-react-wrappers.mjs";
+
+export function SourceSidebar({ sources, activeSourceId }) {
+  return (
+    <JamiDocsSourcePanel
+      title="Sources"
+      ariaLabel="Document sources — currently viewing one source"
+      sources={sources}
+      selectedSourceId={activeSourceId}
+    />
+  );
+}
+```
+
+</CodeGroup>
+
+### State variants
+
+<Tabs>
+  <Tab title="Redacted">
+    ```jsx
+    <JamiDocsSourcePanel
+      title="References"
+      sources={sources}
+      redacted={true}
+    />
+    ```
+    Renders a `role="status"` paragraph: **"Source details are redacted."** The source list is hidden. `data-redacted="true"` is set on the `<aside>`.
+  </Tab>
+  <Tab title="Empty">
+    ```jsx
+    <JamiDocsSourcePanel
+      title="References"
+      sources={[]}
+      empty={true}
+    />
+    ```
+    Renders a `role="status"` paragraph: **"No sources attached."** Also triggered automatically when `sources` is an empty array even without `empty={true}`.
+  </Tab>
+  <Tab title="Long content">
+    ```jsx
+    <JamiDocsSourcePanel
+      title="References"
+      sources={[
+        { id: "src-001", title: "A very long source title that wraps gracefully inside the panel surface" },
+      ]}
+    />
+    ```
+    Long source titles use `overflow-wrap: anywhere` from the shared panel style — no truncation occurs by default.
+  </Tab>
+</Tabs>
+
+## React wrapper: `JamiDocsSourcePanel`
+
+The `JamiDocsSourcePanel` React component is exported from `jami-radix-react-wrappers.mjs` and accepts the full prop set described above. It is a `React.forwardRef` component, so you can attach a ref to the root `<aside>` element.
+
+```jsx
+import { JamiDocsSourcePanel } from "@/components/ui/jami-radix-react-wrappers.mjs";
+
+<JamiDocsSourcePanel
+  ref={panelRef}
+  title="Research Sources"
+  ariaLabel="Research source panel"
+  sources={[
+    { id: "src-001", title: "IPCC Sixth Assessment Report" },
+    { sourceId: "src_internal_001", label: "Internal briefing note" },
+    { id: "src-003", title: "WHO Technical Brief on Climate Health" },
+  ]}
+  selectedSourceId="src-001"
+/>
+```
+
+<Tip>
+  Place `DocsSourcePanel` inside an `<aside>` landmark region or let the component create that landmark for you — the root element is already `<aside role="complementary">`, satisfying WCAG landmark requirements without additional wrapping.
+</Tip>
+
+## Accessibility
+
+| Attribute | Value |
+|---|---|
+| Root element | `<aside role="complementary">` |
+| Label source | `ariaLabel` → `title` → `"Sources"` |
+| Source list | `<ul class="jami-source-list">` |
+| Active source | `aria-current="true"` on matching `<li>` |
+| Redacted state | `data-redacted="true"` on root; `role="status"` on message |
+| Empty state | `role="status"` on message paragraph |
+
+The component supports the full Jami state matrix including `focus-visible`, `keyboard`, `contrast`, `reduced-motion`, and `responsive` states.
+
+Token requirements: `semantic.light/dark.background`, `semantic.light/dark.foreground`, `componentState.focusRing`, `spacing.control`, `radius.control`.

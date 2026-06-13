@@ -1,0 +1,158 @@
+---
+title: 'Business Ops Suite: Staff, Scheduling, and Dashboards'
+sidebarTitle: 'Business Ops'
+description: 'Install the Business Ops suite to get a dense operations shell for staff records, schedule exceptions, training forms, compliance signals, and KPI dashboards.'
+---
+
+The Business Ops suite is a dense operations shell designed for teams managing staff, shift schedules, training workflows, compliance tracking, and day-to-day operational metrics. It targets the `business-ops` lane and ships an `ops-dashboard` layout with four navigation items: Dashboard, Staff, Scheduling, and Compliance. A single install command resolves 14 registry items — theme tokens, primitive components, the app shell, two pages, and five operational blocks — giving you a fully structured base to extend with your own data sources and business logic.
+
+## Install
+
+Run the following command to pull the entire Business Ops suite install graph into your project:
+
+<CodeGroup>
+```bash npm
+npx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+```
+
+```bash pnpm
+pnpm dlx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+```
+
+```bash yarn
+yarn dlx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+```
+</CodeGroup>
+
+<Note>
+  The install graph resolves all 14 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+</Note>
+
+## What's Included
+
+The `business-ops-suite` registry item installs the following items in dependency order:
+
+<Steps>
+  <Step title="Design foundation">
+    `jami-theme` — CSS variables, Tailwind tokens, and TypeScript types for the Jami design system.
+  </Step>
+  <Step title="Primitive components">
+    `button`, `panel`, `text-field`, `data-list`, `agent-panel` — the five reusable UI building blocks consumed by Business Ops pages and blocks.
+  </Step>
+  <Step title="App shell">
+    `business-ops-app` — the `ops-dashboard` layout shell that mounts the navigation and route outlet.
+  </Step>
+  <Step title="Pages">
+    `business-ops-dashboard-page`, `business-ops-staff-page` — the two active route pages shipped with this suite version.
+  </Step>
+  <Step title="Blocks">
+    `business-ops-kpis-block`, `business-ops-exceptions-block`, `business-ops-agent-review-block`, `business-ops-staff-table-block`, `business-ops-training-form-block` — the five discrete content blocks that compose each page.
+  </Step>
+</Steps>
+
+## App Shell
+
+The Business Ops app shell uses the `ops-dashboard` layout. This layout is optimised for information-dense operational views with a persistent navigation bar and a primary content area suited to multi-panel dashboards.
+
+| Property | Value |
+|---|---|
+| Shell ID | `app.business-ops.shell` |
+| Layout | `ops-dashboard` |
+| Lane | `business-ops` |
+| Package name | `@jami-studio/business-ops-suite` |
+
+### Navigation
+
+```
+Dashboard   →  /business-ops/dashboard
+Staff       →  /business-ops/staff
+Scheduling  →  /business-ops/scheduling
+Compliance  →  /business-ops/compliance
+```
+
+<Tip>
+  Scheduling and Compliance are navigation items in the shell manifest. Their full page and block implementations are part of the planned surfaces roadmap — see below.
+</Tip>
+
+### Routes
+
+| Path | Page ID | Title |
+|---|---|---|
+| `/business-ops/dashboard` | `page.business-ops.dashboard` | Operations dashboard |
+| `/business-ops/staff` | `page.business-ops.staff` | Staff and training |
+
+## Pages and Blocks
+
+### Operations dashboard — `/business-ops/dashboard`
+
+Staffing, schedule exceptions, compliance signals, and display-only review actions. This page uses `data-list`, `agent-panel`, `button`, and `panel`.
+
+<CardGroup cols={3}>
+  <Card title="Operational KPIs" icon="chart-bar">
+    `block.business-ops.kpis` — powered by `data-list`. Exercises the `long-content` state: a compliance exception with a long policy name wraps cleanly inside row cells and cards.
+  </Card>
+  <Card title="Schedule exceptions" icon="triangle-exclamation">
+    `block.business-ops.exceptions` — powered by `data-list`. Exercises both `empty` and `error` states: no open exceptions are announced as an empty operational state; errors surface without retrying harness actions.
+  </Card>
+  <Card title="Review queue" icon="robot">
+    `block.business-ops.agent-review` — powered by `agent-panel`. Display-only review queue; exercises the `error` state without invoking any executable actions.
+  </Card>
+</CardGroup>
+
+### Staff and training — `/business-ops/staff`
+
+Staff records, training status, and forms with invalid and empty states. This page uses `data-list`, `text-field`, and `panel`.
+
+<CardGroup cols={2}>
+  <Card title="Staff records" icon="users">
+    `block.business-ops.staff-table` — powered by `data-list`. Exercises the `long-content` state so long staff names, role titles, and policy references wrap correctly inside table rows.
+  </Card>
+  <Card title="Training form" icon="graduation-cap">
+    `block.business-ops.training-form` — powered by `text-field`. Exercises the `invalid` state so inline validation feedback is visible in development.
+  </Card>
+</CardGroup>
+
+## State Fixtures
+
+Each block ships with named state fixtures you can reference in tests and Storybook stories:
+
+| Fixture | Description |
+|---|---|
+| `longContent` | A compliance exception with a long policy name wraps inside row cells and cards. |
+| `empty` | No open schedule exceptions are announced as an empty operational state. |
+| `error` | A review queue error is shown without retrying or executing harness actions. |
+
+## Planned Surfaces
+
+The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+
+<CardGroup cols={3}>
+  <Card title="Staff" icon="users" />
+  <Card title="Scheduling" icon="calendar-check" />
+  <Card title="Forms" icon="file-lines" />
+  <Card title="Training" icon="graduation-cap" />
+  <Card title="Compliance" icon="shield-check" />
+  <Card title="Operations Dashboard" icon="chart-line" />
+</CardGroup>
+
+## Compatibility
+
+| Requirement | Value |
+|---|---|
+| React | `>=19` |
+| shadcn | `4.x` (source-lock required before generated output) |
+| Tailwind | `4.x` (source-lock required before generated output) |
+| License | MIT |
+
+## Related Components
+
+The Business Ops suite is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+
+<CardGroup cols={2}>
+  <Card title="Agent Panel" icon="robot" href="/components/agent-panel">
+    Display-only AI agent status with error and loading states.
+  </Card>
+  <Card title="Data List" icon="list" href="/components/data-list">
+    Flexible list component with empty, error, and long-content states.
+  </Card>
+</CardGroup>

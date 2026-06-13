@@ -1,0 +1,145 @@
+---
+title: 'Installing Jami Registry Items with shadcn CLI'
+sidebarTitle: 'Installing Items'
+description: 'Use npx shadcn add with a direct registry URL to install any of the 45 Jami Studio items into your project. Files land in components/ui/ automatically.'
+---
+
+Every item in the Jami Studio Registry is installable with the standard `shadcn` CLI using a direct URL. You do not need a Jami-specific CLI tool, a separate configuration file, or a special plugin. If you can run `npx shadcn add`, you can install any registry item.
+
+<Note>
+  Jami Studio items require **React ≥19** and are tested against **shadcn 4.x**. Make sure your project meets these requirements before installing. The items use token CSS variables and do not depend on Tailwind or a shadcn theme being present — though the `jami-theme` item provides the full token set if you want it.
+</Note>
+
+## Item URL pattern
+
+Individual items are served at:
+
+```
+https://registry.jami.studio/items/{name}.registry-item.json
+```
+
+Replace `{name}` with the item's slug from the registry. For example, the `button` item is at:
+
+```
+https://registry.jami.studio/items/button.registry-item.json
+```
+
+## Installing a single item
+
+Pass the full item URL directly to `npx shadcn add`:
+
+<CodeGroup>
+```bash button
+npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+```
+
+```bash panel
+npx shadcn add https://registry.jami.studio/items/panel.registry-item.json
+```
+
+```bash data-list
+npx shadcn add https://registry.jami.studio/items/data-list.registry-item.json
+```
+</CodeGroup>
+
+The CLI reads the item JSON, resolves any `registryDependencies`, and writes all files to your project.
+
+## Files that get created
+
+When you install an item the CLI writes each entry in the item's `files` array to the declared `target` path. For most UI primitives and components, four files land under `components/ui/`:
+
+| File | Purpose |
+|---|---|
+| `components/ui/jami-vocabulary.mjs` | Component vocabulary — prop schemas, token requirements, and state definitions for all resident components |
+| `components/ui/jami-ui.css` | Tokenized CSS classes for every primitive (`.jami-button`, `.jami-panel`, `.jami-field`, etc.) with dark-mode and reduced-motion support |
+| `components/ui/jami-primitive-descriptors.mjs` | Framework-neutral descriptor objects used by the renderer |
+| `components/ui/jami-primitive-components.mjs` | Framework-neutral component factory — renders to a plain element-tree spec |
+| `components/ui/jami-radix-react-wrappers.mjs` | React forwardRef wrappers (JamiButton, JamiPanel, etc.) built on Radix primitives |
+
+<Tip>
+  Because every item embeds the full vocabulary and shared files, you will see these same files appear whether you install `button`, `data-list`, or any other primitive. The CLI deduplicates them — installing multiple items does not produce duplicate copies.
+</Tip>
+
+The `jami-ui.css` file is the main stylesheet for all Jami components. Import it once at the root of your application:
+
+```tsx
+// app/layout.tsx or your root component
+import 'components/ui/jami-ui.css'
+```
+
+Theme items such as `jami-theme` additionally install:
+
+| File | Purpose |
+|---|---|
+| `studio-ui/jami.css` | CSS custom properties for the factory token set |
+| `studio-ui/jami.tailwind.css` | Tailwind `@theme` block mapping token names to CSS vars |
+| `studio-ui/jami-tokens.ts` | TypeScript token name constants and CSS variable map |
+| `studio-ui/jami.shadcn.json` | shadcn `cssVars` mapping for light and dark modes |
+
+## Registry dependencies
+
+Many items declare `registryDependencies` — other items that must be present for the item to work. The CLI resolves this graph automatically: when you install `data-list`, it pulls in any declared dependencies so you never have to trace the graph by hand.
+
+For example, the `business-ops-dashboard-page` item lists these `registryDependencies`:
+
+```json
+"registryDependencies": [
+  "business-ops-kpis-block",
+  "business-ops-exceptions-block",
+  "business-ops-agent-review-block",
+  "data-list",
+  "agent-panel",
+  "button",
+  "panel"
+]
+```
+
+Installing the page item installs all seven dependencies first, in dependency order.
+
+## Concrete examples
+
+### Install the Button primitive
+
+```bash
+npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+```
+
+This creates `components/ui/jami-vocabulary.mjs`, `components/ui/jami-ui.css`, and the related `.mjs` files. The Button component supports `variant` (`primary`, `secondary`, `ghost`, `danger`), `size` (`compact`, `regular`), `disabled`, `loading`, and an `actionRef` slot for Jami Harness display-only action references.
+
+### Install the Data List component
+
+```bash
+npx shadcn add https://registry.jami.studio/items/data-list.registry-item.json
+```
+
+Data List is a responsive `table`/`list` display for dense records. It supports `columns`, `rows`, `empty`, `loading`, and `error` props with full ARIA labelling.
+
+### Install the Agent Panel component
+
+```bash
+npx shadcn add https://registry.jami.studio/items/agent-panel.registry-item.json
+```
+
+Agent Panel is a display-only status panel for Jami resident agents. It surfaces `status` (`idle`, `running`, `needs_attention`, `denied`, `error`), `actionRefs`, and `artifactViewRefs`. Action execution stays in Jami Harness — the component only displays state.
+
+### Install the factory theme
+
+```bash
+npx shadcn add https://registry.jami.studio/items/jami-theme.registry-item.json
+```
+
+This writes the full Jami factory token set as CSS variables, a Tailwind `@theme` block, TypeScript constants, and a shadcn `cssVars` descriptor. Install this first if you want the warm Jami colour palette (`--jami-semantic-light-accent: #C14D84`, teal focus ring, etc.).
+
+## Suite items
+
+Suite items use the same install pattern. Installing a suite entry-point (such as `solo-suite`) triggers the full install graph in one command:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+See [Suites](/registry/suites) for the complete breakdown of what each suite includes.
+
+## Verifying what was installed
+
+After installing, check `components/ui/` for the vocabulary and component files, and `studio-ui/` for any theme or suite files. The registry item JSON includes a `hash` field per file — you can compare these to the written files to verify integrity.

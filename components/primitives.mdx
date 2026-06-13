@@ -1,0 +1,274 @@
+---
+title: 'Install and Use Jami Primitive UI Components'
+sidebarTitle: 'Primitives'
+description: 'Step-by-step guide to installing Jami UI primitives via shadcn, using the framework-neutral factory, and dropping in pre-built React/Radix wrappers.'
+---
+
+Jami UI primitives ship as registry-addressable source files you install directly into your project with the shadcn CLI. Once installed, you choose between two usage paths: the **framework-neutral factory** (`renderPrimitiveSpec`) that works with any `createElement`-compatible renderer, or the **pre-built React/Radix wrappers** that add `forwardRef` support, Radix label association, and the `asChild` slot pattern. Both paths share the same prop schemas, token requirements, and accessibility guarantees defined in `jami-vocabulary.mjs`.
+
+---
+
+## Before you start
+
+<Note>
+  The React wrapper layer (`jami-radix-react-wrappers.mjs`) requires **React ≥ 19**. The framework-neutral factory has no React dependency. Both layers install the same CSS file (`jami-ui.css`) and vocabulary source (`jami-vocabulary.mjs`).
+</Note>
+
+---
+
+## Install a primitive
+
+Each primitive has its own registry item URL. Install them one at a time or run multiple commands in sequence.
+
+<Steps>
+  <Step title="Install the Button primitive">
+    ```bash
+    npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+    ```
+    This copies `jami-vocabulary.mjs`, `jami-ui.css`, `jami-primitive-descriptors.mjs`, `jami-primitive-components.mjs`, and `jami-radix-react-wrappers.mjs` into `components/ui/`.
+  </Step>
+  <Step title="Install additional primitives">
+    Each primitive resolves the same shared files and skips any that already exist, so order does not matter.
+
+    ```bash
+    npx shadcn add https://registry.jami.studio/items/panel.registry-item.json
+    npx shadcn add https://registry.jami.studio/items/text-field.registry-item.json
+    ```
+  </Step>
+  <Step title="Import the stylesheet">
+    Add `jami-ui.css` to your app's root entry point once:
+
+    ```js
+    import './components/ui/jami-ui.css';
+    ```
+
+    The CSS reads design-token custom properties from your token layer (e.g. `--jami-semantic-light-accent`, `--jami-componentState-focusRing`). Provide those variables at the `:root` or `.jami-ui` scope.
+  </Step>
+</Steps>
+
+---
+
+## Choosing your usage path
+
+<Tabs>
+  <Tab title="Framework-neutral factory">
+    Use `renderPrimitiveSpec` when you are not in a React project, when you are server-rendering HTML from a plain Node.js script, or when you want a plain element-descriptor object you can serialise and inspect.
+
+    ### `renderPrimitiveSpec(name, props)`
+
+    Returns a result object with three fields:
+
+    | Field | Type | Description |
+    |---|---|---|
+    | `state` | `"renderable" \| "invalid" \| "unsupported"` | Whether the component can be rendered |
+    | `reasons` | `string[]` | Human-readable validation issues (empty when `state === "renderable"`) |
+    | `node` | `{ type, props, children }` | Plain element descriptor ready for your renderer |
+
+    ```js
+    import { renderPrimitiveSpec } from './components/ui/jami-primitive-components.mjs';
+
+    const result = renderPrimitiveSpec('button', { label: 'Save', variant: 'primary' });
+    // result.state === 'renderable'
+    // result.reasons  === []
+    // result.node     === { type: 'button', props: { type: 'button', className: 'jami-button',
+    //                        'data-variant': 'primary', 'data-size': 'regular' }, children: ['Save'] }
+    ```
+
+    When you pass an invalid prop, `renderPrimitiveSpec` still returns a `node` (a safe fallback panel), but `state` is `"invalid"` and `reasons` lists every issue:
+
+    ```js
+    const bad = renderPrimitiveSpec('button', { variant: 'rainbow' });
+    // bad.state   === 'invalid'
+    // bad.reasons === ['prop variant must be one of primary, secondary, ghost, danger']
+    ```
+  </Tab>
+  <Tab title="React wrappers via factory">
+    Use `createJamiPrimitiveComponents(createElement)` to get React components generated from the same factory. Pass React's `createElement` (or any compatible function) and destructure the named components you need.
+
+    ```jsx
+    import { createJamiPrimitiveComponents } from './components/ui/jami-primitive-components.mjs';
+    import { createElement } from 'react';
+
+    const { Button, Panel, TextField, DataList, AgentPanel, DocsSourcePanel, MediaGrid } =
+      createJamiPrimitiveComponents(createElement);
+
+    function MyForm() {
+      return (
+        <Panel title="New task" tone="accent">
+          <TextField label="Task name" placeholder="Enter a task…" helperText="Required" />
+          <Button label="Create" variant="primary" />
+        </Panel>
+      );
+    }
+    ```
+
+    Each returned component (`Button`, `Panel`, etc.) calls `renderPrimitiveSpec` internally and forwards the descriptor through your `createElement` function — no additional wiring needed.
+  </Tab>
+  <Tab title="Pre-built Radix wrappers">
+    Use the pre-built wrappers when you want `forwardRef` refs, the Radix `asChild` slot pattern on `JamiButton`, or Radix's `@radix-ui/react-label` association on `JamiTextField`.
+
+    ```jsx
+    import {
+      JamiButton,
+      JamiPanel,
+      JamiTextField,
+      JamiDataList,
+      JamiAgentPanel,
+      JamiDocsSourcePanel,
+      JamiMediaGrid,
+    } from './components/ui/jami-radix-react-wrappers.mjs';
+
+    function ReviewCard() {
+      return (
+        <JamiPanel title="Q3 Audit" tone="neutral">
+          <JamiTextField
+            label="Reviewer notes"
+            placeholder="Add notes…"
+            helperText="Visible to compliance team"
+          />
+          <JamiButton label="Submit" variant="primary" actionRef="act_submit_audit" />
+        </JamiPanel>
+      );
+    }
+    ```
+
+    `JamiButton` also accepts `asChild` to merge its props onto a child element (e.g. a router `<Link>`):
+
+    ```jsx
+    <JamiButton asChild variant="ghost">
+      <a href="/dashboard">Go to dashboard</a>
+    </JamiButton>
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Prop validation
+
+Call `validateComponentProps(name, props)` directly before rendering to get the full list of issues without triggering the factory fallback node. This is useful in test suites, CI checks, or harness payload validation steps.
+
+```js
+import { validateComponentProps } from './components/ui/jami-vocabulary.mjs';
+
+const issues = validateComponentProps('text-field', { placeholder: 'Enter name' });
+// issues === ['missing required prop label']
+
+const clean = validateComponentProps('button', { label: 'Save', variant: 'primary', disabled: false });
+// clean === []
+```
+
+`validateComponentProps` enforces:
+
+- **Required props** — `text-field` requires `label`; all other primitives have no required props.
+- **Enum values** — `variant` on `button` must be `primary | secondary | ghost | danger`; `tone` on `panel` must be `neutral | accent | danger`.
+- **Pattern matching** — `actionRef` on `button` must match `^act_[a-z0-9][a-z0-9_-]*$`.
+- **No extra props** — every schema sets `additionalProperties: false`; unknown keys are reported as issues.
+
+<Note>
+  `validateComponentProps` strips the `children` key before checking so you can safely pass a full React props object including `children` without triggering an "unsupported prop" error.
+</Note>
+
+---
+
+## All seven components at a glance
+
+| Component | Registry item URL path | Package name | Kind |
+|---|---|---|---|
+| `button` | `/items/button.registry-item.json` | `@jami-studio/button` | primitive |
+| `panel` | `/items/panel.registry-item.json` | `@jami-studio/panel` | primitive |
+| `text-field` | `/items/text-field.registry-item.json` | `@jami-studio/text-field` | primitive |
+| `data-list` | `/items/data-list.registry-item.json` | `@jami-studio/data-list` | component |
+| `agent-panel` | `/items/agent-panel.registry-item.json` | `@jami-studio/agent-panel` | component |
+| `docs-source-panel` | `/items/docs-source-panel.registry-item.json` | `@jami-studio/docs-source-panel` | component |
+| `media-grid` | `/items/media-grid.registry-item.json` | `@jami-studio/media-grid` | component |
+
+---
+
+## Prop reference
+
+### Button
+
+<ParamField body="label" type="string">
+  Visible button label. Used as the accessible name when `ariaLabel` is not provided.
+</ParamField>
+
+<ParamField body="ariaLabel" type="string">
+  Overrides the accessible name. Applied as `aria-label` only when `label` and `children` are both absent.
+</ParamField>
+
+<ParamField body="variant" type='"primary" | "secondary" | "ghost" | "danger"' default='"primary"'>
+  Visual intent. Invalid values silently fall back to `"primary"`.
+</ParamField>
+
+<ParamField body="size" type='"compact" | "regular"' default='"regular"'>
+  Height and padding scale. Invalid values silently fall back to `"regular"`.
+</ParamField>
+
+<ParamField body="disabled" type="boolean" default="false">
+  Disables interaction and applies `opacity: 0.58` via `.jami-button[disabled]`.
+</ParamField>
+
+<ParamField body="loading" type="boolean" default="false">
+  Sets `disabled` and `aria-busy="true"` simultaneously.
+</ParamField>
+
+<ParamField body="actionRef" type="string">
+  Must match `^act_[a-z0-9][a-z0-9_-]*$`. Stored as a `data-action-ref` attribute; action execution remains in Jami Harness.
+</ParamField>
+
+---
+
+### Panel
+
+<ParamField body="title" type="string">
+  Rendered as an `<h3>` and used as the `aria-label` for the `role="region"` wrapper.
+</ParamField>
+
+<ParamField body="ariaLabel" type="string">
+  Overrides `title` as the accessible region label.
+</ParamField>
+
+<ParamField body="tone" type='"neutral" | "accent" | "danger"' default='"neutral"'>
+  Sets `data-tone` on the wrapper for CSS token targeting.
+</ParamField>
+
+<ParamField body="empty" type="boolean" default="false">
+  Replaces children with a `role="status"` paragraph reading "No content yet."
+</ParamField>
+
+<ParamField body="error" type="string">
+  When set, replaces children with a `role="alert"` paragraph containing the error message.
+</ParamField>
+
+---
+
+### Text Field
+
+<ParamField body="label" type="string" required>
+  Visible label text. Required by the prop schema. Used to generate a scoped `id` for the input and to associate the label element.
+</ParamField>
+
+<ParamField body="value" type="string">
+  Sets the input's `defaultValue` (uncontrolled).
+</ParamField>
+
+<ParamField body="placeholder" type="string">
+  Placeholder text forwarded directly to the `<input>`.
+</ParamField>
+
+<ParamField body="disabled" type="boolean" default="false">
+  Disables the input and applies `cursor: not-allowed`.
+</ParamField>
+
+<ParamField body="invalid" type="boolean" default="false">
+  Sets `aria-invalid="true"` on the input and applies accent border color via `jami-ui.css`.
+</ParamField>
+
+<ParamField body="errorText" type="string">
+  Rendered as a `role="alert"` `<span>` associated via `aria-describedby`. Takes precedence over `helperText`.
+</ParamField>
+
+<ParamField body="helperText" type="string">
+  Rendered as a plain `<span>` associated via `aria-describedby` when `errorText` is absent.
+</ParamField>

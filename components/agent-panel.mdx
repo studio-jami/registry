@@ -1,0 +1,168 @@
+---
+title: 'AgentPanel: Display AI Agent Status in Your UI'
+sidebarTitle: 'Agent Panel'
+description: 'Surface live AI agent status, pending approvals, denied actions, and errors in your Jami Studio UI—fully display-only, with execution owned by Jami Harness.'
+---
+
+`AgentPanel` is a **display-only** status surface that lets your UI reflect what a Jami agent is currently doing—whether it is idle, actively running, awaiting user approval, blocked by a policy denial, or in an error state. The component never executes actions itself; all action invocation and policy enforcement stays inside the Jami Harness. Your UI receives ref strings pointing to the actions and artifact views the Harness manages, and `AgentPanel` renders them as labelled, inert list items so your application always has a clear, accessible representation of agent state without taking on harness runtime responsibilities.
+
+## Installation
+
+Install `AgentPanel` through the Jami Studio registry using the shadcn CLI:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/agent-panel.registry-item.json
+```
+
+This command adds the component vocabulary, tokenized styles, and the Radix-backed React wrapper to your project. No shadcn package dependency is introduced—the installer copies authored source directly.
+
+<Note>
+  `AgentPanel` requires the `jami-theme` token CSS variables to be present in your project. Install the theme first with `npx shadcn add https://registry.jami.studio/items/jami-theme.registry-item.json` if you have not already done so.
+</Note>
+
+## Props
+
+<ParamField body="title" type="string">
+  Human-readable panel heading displayed inside the component and used as the `aria-label` for the root `<section>` element when provided. Takes precedence over `agentName` for labelling purposes.
+</ParamField>
+
+<ParamField body="agentName" type="string">
+  Identifier or display name of the agent whose status the panel reflects. Used as the accessible label when `title` is not provided.
+</ParamField>
+
+<ParamField body="status" type="'idle' | 'running' | 'needs_attention' | 'denied' | 'error'">
+  The current operational state of the agent. Controls the `data-status` attribute on the root element and the human-readable status text rendered in the panel body. Defaults to `'idle'` if an unrecognised value is supplied.
+</ParamField>
+
+<ParamField body="actionRefs" type="string[]">
+  An array of action reference strings assigned by the Jami Harness. Each string must match the pattern `^act_[a-z0-9][a-z0-9_-]*$`. The component renders these as an inert labelled list—it does not attach click handlers or invoke any action. The Harness reads these refs to know which actions are associated with the current agent state.
+</ParamField>
+
+<ParamField body="artifactViewRefs" type="string[]">
+  An array of artifact view reference strings assigned by the Jami Harness. Each string must match the pattern `^artv_[a-z0-9][a-z0-9_-]*$`. Rendered as an inert labelled list in the same way as `actionRefs`. The Harness uses these refs to resolve which artifact views are available for the current agent run.
+</ParamField>
+
+## Status values
+
+Each `status` value maps to a specific agent lifecycle state:
+
+| Value | Meaning |
+|---|---|
+| `idle` | The agent is not currently running and has no pending work. |
+| `running` | The agent is actively executing a task. |
+| `needs_attention` | The agent has paused and is waiting for a user decision or approval before continuing. |
+| `denied` | A policy enforced by the Jami Harness blocked the agent from taking a requested action. |
+| `error` | The agent encountered an unrecoverable error during execution. |
+
+<Tip>
+  Use `needs_attention` rather than `running` when your agent reaches an approval gate. This gives screen reader users and sighted users alike a clear signal that human input is required.
+</Tip>
+
+## Action and artifact view references
+
+`actionRefs` and `artifactViewRefs` are **ref strings, not callbacks**. They are opaque identifiers that the Jami Harness assigns to particular actions and artifact views in its runtime. Your UI passes them through as data; the Harness reads the `data-action-ref` and `data-artifact-view-ref` DOM attributes to match refs to executable slots.
+
+This design keeps the rendering boundary clear: `AgentPanel` is install-time app code that displays state. The Harness runtime owns execution, policy evaluation, memory writes, and capability truth. You should never attach `onClick` or similar handlers to the ref list items.
+
+Ref strings must follow these patterns:
+
+- `actionRefs` items: `^act_[a-z0-9][a-z0-9_-]*$` (e.g. `act_review_approval`, `act_submit-draft`)
+- `artifactViewRefs` items: `^artv_[a-z0-9][a-z0-9_-]*$` (e.g. `artv_run_trace`, `artv_output-preview`)
+
+## Code examples
+
+<Tabs>
+  <Tab title="Framework-neutral (renderPrimitiveSpec)">
+    Use `renderPrimitiveSpec` from `jami-primitive-components.mjs` when you need a framework-neutral spec node rather than a React element:
+
+    ```js
+    import { renderPrimitiveSpec } from './components/ui/jami-primitive-components.mjs';
+
+    const result = renderPrimitiveSpec('agent-panel', {
+      title: 'Document review agent',
+      agentName: 'review-agent',
+      status: 'needs_attention',
+      actionRefs: ['act_approve_document', 'act_reject-document'],
+      artifactViewRefs: ['artv_review_trace'],
+    });
+
+    if (result.state === 'renderable') {
+      // Mount result.node into your framework renderer
+      console.log(result.node);
+    }
+    ```
+
+    `renderPrimitiveSpec` returns an object with:
+    - `state`: `'renderable'` | `'invalid'` | `'unsupported'`
+    - `reasons`: an array of validation issue strings when `state` is `'invalid'`
+    - `node`: a framework-neutral element descriptor you pass to your renderer
+  </Tab>
+  <Tab title="React (JamiAgentPanel)">
+    Import `JamiAgentPanel` from the Radix React wrappers file installed by the registry:
+
+    ```jsx
+    import { JamiAgentPanel } from './components/ui/jami-radix-react-wrappers.mjs';
+
+    export function AgentStatusBlock() {
+      return (
+        <JamiAgentPanel
+          title="Document review agent"
+          agentName="review-agent"
+          status="needs_attention"
+          actionRefs={['act_approve_document', 'act_reject-document']}
+          artifactViewRefs={['artv_review_trace']}
+        />
+      );
+    }
+    ```
+
+    Showing an idle agent with no pending refs:
+
+    ```jsx
+    <JamiAgentPanel
+      title="Pipeline monitor"
+      status="idle"
+    />
+    ```
+
+    Showing an error state:
+
+    ```jsx
+    <JamiAgentPanel
+      title="Data extraction agent"
+      status="error"
+      actionRefs={['act_retry_extraction']}
+      artifactViewRefs={['artv_error_trace']}
+    />
+    ```
+  </Tab>
+</Tabs>
+
+## Token requirements
+
+`AgentPanel` reads the following design tokens from the installed Jami theme CSS variables. Ensure `jami-theme` is installed before using this component.
+
+| Token | CSS variable |
+|---|---|
+| `semantic.light.background` | `--jami-semantic-light-background` |
+| `semantic.light.foreground` | `--jami-semantic-light-foreground` |
+| `semantic.light.accent` | `--jami-semantic-light-accent` |
+| `componentState.focusRing` | `--jami-componentState-focusRing` |
+| `spacing.control` | `--jami-spacing-control` |
+| `radius.control` | `--jami-radius-control` |
+
+The component CSS class is `.jami-agent-panel`.
+
+## Accessibility
+
+`AgentPanel` is built with the following ARIA pattern:
+
+- The root `<section>` element carries `role="status"` and `aria-live="polite"`. This means screen readers announce changes to agent status automatically without interrupting the user's current focus.
+- The accessible label is sourced from `title` first, then `agentName`, and finally falls back to `"Agent status"`.
+- Action references are rendered inside a `<ul>` with `aria-label="Action references"`. Each `<li>` item carries a `data-action-ref` attribute.
+- Artifact view references are rendered inside a `<ul>` with `aria-label="Artifact view references"`. Each `<li>` item carries a `data-artifact-view-ref` attribute.
+- Focus-visible styles use a 2px solid outline sourced from `componentState.focusRing`, offset by 2px.
+
+<Note>
+  Because `aria-live="polite"` is always set, you should avoid placing `AgentPanel` inside another live region. Nesting live regions can produce unpredictable announcement behaviour across assistive technology implementations.
+</Note>

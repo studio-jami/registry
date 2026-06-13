@@ -1,0 +1,163 @@
+---
+title: 'Solo Suite: Personal Operations Shell for Workspaces'
+sidebarTitle: 'Solo'
+description: 'Install the Solo suite to get a compact personal operations shell with calendar, tasks, docs, forms, CRM, content, admin, and agent status in one command.'
+---
+
+The Solo suite is a compact personal operations shell built for individual contributors who need calendar awareness, task queuing, document access, lightweight forms, and display-only AI agent status — all inside a single coherent workspace. It targets the `solo` lane and ships a `workspace-with-rail` layout with four top-level navigation items. One install command drops 15 registry items into your project, from the base `jami-theme` tokens through every page, block, and primitive component the shell requires.
+
+## Install
+
+Run the following command to pull the entire Solo suite install graph into your project:
+
+<CodeGroup>
+```bash npm
+npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+```bash pnpm
+pnpm dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+```bash yarn
+yarn dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+</CodeGroup>
+
+<Note>
+  The install graph resolves all 15 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+</Note>
+
+## What's Included
+
+The `solo-suite` registry item installs the following items in dependency order:
+
+<Steps>
+  <Step title="Design foundation">
+    `jami-theme` — CSS variables, Tailwind tokens, and TypeScript types for the Jami design system.
+  </Step>
+  <Step title="Primitive components">
+    `button`, `panel`, `text-field`, `data-list`, `agent-panel`, `docs-source-panel` — the six reusable UI building blocks consumed by Solo pages and blocks.
+  </Step>
+  <Step title="App shell">
+    `solo-app` — the `workspace-with-rail` layout shell that mounts the navigation rail and route outlet.
+  </Step>
+  <Step title="Pages">
+    `solo-today-page`, `solo-docs-page` — the two active route pages shipped with this suite version.
+  </Step>
+  <Step title="Blocks">
+    `solo-agenda-block`, `solo-task-queue-block`, `solo-agent-status-block`, `solo-docs-sources-block`, `solo-forms-block` — the five discrete content blocks that compose each page.
+  </Step>
+</Steps>
+
+## App Shell
+
+The Solo app shell uses the `workspace-with-rail` layout. A persistent side rail holds the primary navigation; the main content area renders the active route page.
+
+| Property | Value |
+|---|---|
+| Shell ID | `app.solo.shell` |
+| Layout | `workspace-with-rail` |
+| Lane | `solo` |
+| Package name | `@jami-studio/solo-suite` |
+
+### Navigation
+
+```
+Today   →  /solo/today
+Tasks   →  /solo/tasks
+Docs    →  /solo/docs
+Admin   →  /solo/admin
+```
+
+<Tip>
+  Tasks and Admin are navigation items in the shell manifest. Their full page and block implementations are part of the planned surfaces roadmap — see below.
+</Tip>
+
+### Routes
+
+| Path | Page ID | Title |
+|---|---|---|
+| `/solo/today` | `page.solo.today` | Today command center |
+| `/solo/docs` | `page.solo.docs` | Docs and sources |
+
+## Pages and Blocks
+
+### Today command center — `/solo/today`
+
+Calendar, task queue, and non-executable agent status for a solo operator. This page uses `data-list`, `agent-panel`, `button`, and `panel`.
+
+<CardGroup cols={3}>
+  <Card title="Agenda" icon="calendar">
+    `block.solo.agenda` — powered by `data-list`. Exercises the `long-content` state so calendar notes and event titles wrap cleanly inside list rows.
+  </Card>
+  <Card title="Task queue" icon="list-check">
+    `block.solo.task-queue` — powered by `data-list`. Exercises the `empty` state: when no tasks are due, the list announces an empty status instead of hiding the section.
+  </Card>
+  <Card title="Agent status" icon="robot">
+    `block.solo.agent-status` — powered by `agent-panel`. Display-only; exercises the `error` state with no executable action wiring.
+  </Card>
+</CardGroup>
+
+### Docs and sources — `/solo/docs`
+
+Documents, citations, lightweight forms, and long reference notes. This page uses `docs-source-panel`, `text-field`, `data-list`, and `panel`.
+
+<CardGroup cols={2}>
+  <Card title="Docs sources" icon="book-open">
+    `block.solo.docs-sources` — powered by `docs-source-panel`. Exercises the `long-content` state: long source titles wrap inside the panel without horizontal overflow.
+  </Card>
+  <Card title="Quick form" icon="pen-to-square">
+    `block.solo.forms` — powered by `text-field`. Exercises the `invalid` state so inline validation feedback is visible in development.
+  </Card>
+</CardGroup>
+
+## State Fixtures
+
+Each block ships with named state fixtures you can reference in tests and Storybook stories:
+
+| Fixture | Description |
+|---|---|
+| `longContent` | A long source title, task description, or calendar note wraps inside the shell without horizontal overflow. |
+| `empty` | No tasks are due; the data-list announces an empty status instead of hiding the section. |
+| `error` | Agent status is displayed as an error panel with no executable action wiring. |
+
+## Planned Surfaces
+
+The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+
+<CardGroup cols={4}>
+  <Card title="Calendar" icon="calendar-days" />
+  <Card title="Forms" icon="file-lines" />
+  <Card title="Docs" icon="book" />
+  <Card title="Agent" icon="robot" />
+  <Card title="Tasks" icon="square-check" />
+  <Card title="CRM" icon="address-book" />
+  <Card title="Content" icon="pen-nib" />
+  <Card title="Admin" icon="gear" />
+</CardGroup>
+
+## Compatibility
+
+| Requirement | Value |
+|---|---|
+| React | `>=19` |
+| shadcn | `4.x` (source-lock required before generated output) |
+| Tailwind | `4.x` (source-lock required before generated output) |
+| License | MIT |
+
+## Related Components
+
+The Solo suite is built entirely from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+
+<CardGroup cols={3}>
+  <Card title="Agent Panel" icon="robot" href="/components/agent-panel">
+    Display-only AI agent status with error and loading states.
+  </Card>
+  <Card title="Data List" icon="list" href="/components/data-list">
+    Flexible list component with empty, error, and long-content states.
+  </Card>
+  <Card title="Docs Source Panel" icon="book-open" href="/components/docs-source-panel">
+    Source display panel for documents, citations, and references.
+  </Card>
+</CardGroup>

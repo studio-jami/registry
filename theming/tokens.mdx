@@ -1,0 +1,184 @@
+---
+title: 'Jami Design Tokens: CSS Variables, Tailwind, and TypeScript'
+sidebarTitle: 'Tokens'
+description: 'Install the Jami Factory Theme to get CSS variables, a Tailwind theme layer, TypeScript token types, and a shadcn cssVars map — all generated from a single DTCG token source.'
+---
+
+The Jami design token system is a single source of truth for every color, spacing, radius, motion, and layout value used across Jami Studio UI. When you install the `jami-theme` registry item, four ready-to-use output files land in your project: a plain CSS variables sheet, a Tailwind `@theme` layer, a TypeScript module with full type coverage, and a shadcn-compatible cssVars JSON file. Every file is generated from the same DTCG token source, so the values are always in sync.
+
+## Install the Jami Factory Theme
+
+Run the `shadcn` CLI to pull the theme item from the Jami registry:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/jami-theme.registry-item.json
+```
+
+The CLI writes four files into your project under `studio-ui/`:
+
+| Output file | Install target | What it contains |
+|---|---|---|
+| `jami.css` | `studio-ui/jami.css` | `:root` CSS custom properties for all design tokens |
+| `jami.tailwind.css` | `studio-ui/jami.tailwind.css` | Tailwind `@theme` block that forwards every CSS variable |
+| `jami-tokens.ts` | `studio-ui/jami-tokens.ts` | `tokenNames`, `tokenCssVariables`, and `JamiTokenName` TypeScript exports |
+| `jami.shadcn.json` | `studio-ui/jami.shadcn.json` | shadcn `cssVars` map for `light` and `dark` modes |
+
+## Design Token Reference
+
+All tokens are defined under the `--jami-*` namespace. The table below lists every CSS variable name and its default value as shipped by the Jami Factory Theme.
+
+| CSS variable | Default value | Token name |
+|---|---|---|
+| `--jami-color-brand-accent` | `#C14D84` | `color.brand.accent` |
+| `--jami-color-brand-teal` | `#237C7A` | `color.brand.teal` |
+| `--jami-color-neutral-warm0` | `#FFF9F5` | `color.neutral.warm0` |
+| `--jami-color-neutral-warm950` | `#20171B` | `color.neutral.warm950` |
+| `--jami-semantic-light-background` | `#FFF9F5` | `semantic.light.background` |
+| `--jami-semantic-light-foreground` | `#20171B` | `semantic.light.foreground` |
+| `--jami-semantic-light-accent` | `#C14D84` | `semantic.light.accent` |
+| `--jami-semantic-dark-background` | `#20171B` | `semantic.dark.background` |
+| `--jami-semantic-dark-foreground` | `#FFF9F5` | `semantic.dark.foreground` |
+| `--jami-semantic-dark-accent` | `#C14D84` | `semantic.dark.accent` |
+| `--jami-spacing-control` | `8px` | `spacing.control` |
+| `--jami-radius-control` | `8px` | `radius.control` |
+| `--jami-motion-fast` | `120ms` | `motion.fast` |
+| `--jami-density-comfortable` | `1` | `density.comfortable` |
+| `--jami-shell-dockWidth` | `320px` | `shell.dockWidth` |
+| `--jami-componentState-focusRing` | `#237C7A` | `componentState.focusRing` |
+| `--jami-typography-body` | Inter 16px / 400 / 24px | `typography.body` |
+| `--jami-shadow-overlay` | rgba(32,23,27,.18) 0 12 32 | `shadow.overlay` |
+
+## Applying the CSS
+
+Import `jami.css` in your application entry point so the CSS custom properties are available globally, then add the `jami-ui` class to your top-level app wrapper element:
+
+<CodeGroup>
+
+```ts main.ts
+// Entry point — import before any component styles
+import 'studio-ui/jami.css';
+```
+
+```tsx App.tsx
+export default function App() {
+  return (
+    <div className="jami-ui">
+      {/* All Jami token CSS variables are now in scope */}
+    </div>
+  );
+}
+```
+
+</CodeGroup>
+
+<Note>
+  The `jami-ui` wrapper class is required for scoped token overrides and brand options to take effect. Without it, any CSS variable overrides you apply may not cascade correctly into nested components.
+</Note>
+
+## Tailwind Integration
+
+`jami.tailwind.css` exposes every design token inside a Tailwind `@theme` block. Import it alongside your Tailwind base import so the token values are available as Tailwind theme variables:
+
+```css globals.css
+@import 'tailwindcss';
+@import 'studio-ui/jami.tailwind.css';
+```
+
+The `@theme` block forwards each `--jami-*` variable by reference, so changing a token value in `jami.css` (or overriding it via a brand option) automatically propagates into your Tailwind utilities without any extra configuration.
+
+## TypeScript Usage
+
+`jami-tokens.ts` exports three things: the `tokenNames` tuple (a `const` array of every token name string), the `tokenCssVariables` record (a map from token name to its `var(--jami-*)` expression), and the `JamiTokenName` union type. Use them to write token-safe code without hardcoding CSS variable strings:
+
+```ts
+import {
+  tokenNames,
+  tokenCssVariables,
+  type JamiTokenName,
+} from 'studio-ui/jami-tokens';
+
+// Resolve a CSS variable expression by token name
+const accentVar = tokenCssVariables['semantic.light.accent'];
+// → "var(--jami-semantic-light-accent)"
+
+// Type-safe token name parameter
+function applyToken(name: JamiTokenName) {
+  return tokenCssVariables[name];
+}
+
+// Iterate all token names (e.g. for a design audit)
+for (const name of tokenNames) {
+  console.log(name, tokenCssVariables[name]);
+}
+```
+
+<Tip>
+  The `tokenSchemaVersion` export (e.g. `"2026-06-09.token-foundation"`) lets you guard against token schema mismatches at runtime if you are consuming tokens from multiple packages.
+</Tip>
+
+## shadcn cssVars Integration
+
+`jami.shadcn.json` contains a `cssVars` object with `light` and `dark` sub-objects that map shadcn slot names to Jami token `var()` expressions. Reference this file in your shadcn configuration to keep shadcn component theming aligned with Jami tokens:
+
+```json studio-ui/jami.shadcn.json
+{
+  "$schema": "https://jami.studio/schemas/tokens/shadcn-css-vars.generated.json",
+  "schemaVersion": "2026-06-09.token-foundation",
+  "cssVars": {
+    "light": {
+      "background": "var(--jami-semantic-light-background)",
+      "foreground": "var(--jami-semantic-light-foreground)",
+      "accent": "var(--jami-semantic-light-accent)",
+      "ring": "var(--jami-componentState-focusRing)"
+    },
+    "dark": {
+      "background": "var(--jami-semantic-dark-background)",
+      "foreground": "var(--jami-semantic-dark-foreground)",
+      "accent": "var(--jami-semantic-dark-accent)",
+      "ring": "var(--jami-componentState-focusRing)"
+    }
+  }
+}
+```
+
+Pass the `cssVars` object into your `components.json` shadcn configuration to have shadcn resolve color slots through Jami tokens rather than its own defaults.
+
+<Note>
+  shadcn 4.x source-lock is required before the generated output is valid. Check your `components.json` to confirm you are on the shadcn 4.x source before wiring up `jami.shadcn.json`.
+</Note>
+
+## Dark Mode Support
+
+The Jami token system ships both light and dark semantic values in the same `:root` block. The `--jami-semantic-dark-*` variables hold the dark-mode counterparts for background, foreground, and accent. Use a CSS media query (or a `.dark` class strategy) to swap them in at the appropriate breakpoint:
+
+<CodeGroup>
+
+```css Media query strategy
+@media (prefers-color-scheme: dark) {
+  .jami-ui {
+    --jami-semantic-light-background: var(--jami-semantic-dark-background);
+    --jami-semantic-light-foreground: var(--jami-semantic-dark-foreground);
+    --jami-semantic-light-accent:     var(--jami-semantic-dark-accent);
+  }
+}
+```
+
+```css Class-based strategy
+.jami-ui.dark {
+  --jami-semantic-light-background: var(--jami-semantic-dark-background);
+  --jami-semantic-light-foreground: var(--jami-semantic-dark-foreground);
+  --jami-semantic-light-accent:     var(--jami-semantic-dark-accent);
+}
+```
+
+</CodeGroup>
+
+The dark-mode defaults are:
+
+| Token | Dark value |
+|---|---|
+| `--jami-semantic-dark-background` | `#20171B` |
+| `--jami-semantic-dark-foreground` | `#FFF9F5` |
+| `--jami-semantic-dark-accent` | `#C14D84` |
+
+The `--jami-componentState-focusRing` value (`#237C7A`) is shared across both modes by default. If you apply a brand option, that brand's `focusRing` delta overrides this variable for both light and dark contexts simultaneously.

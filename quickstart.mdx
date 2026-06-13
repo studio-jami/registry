@@ -1,0 +1,181 @@
+---
+title: 'Get Started with Jami Studio Registry'
+sidebarTitle: 'Quickstart'
+description: 'Install your first Jami Studio UI component into any shadcn-compatible project in under a minute using the shadcn CLI.'
+---
+
+Jami Studio Registry is a public shadcn-compatible UI component registry hosted at [registry.jami.studio](https://registry.jami.studio). This page walks you through everything you need to pull your first component — or a complete suite — into your project using the `shadcn` CLI.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- A Node.js project (v18 or later recommended)
+- The `shadcn` CLI available — either installed globally or invoked with `npx`
+
+<Note>
+  Jami Studio registry items ship their own tokenized CSS and component files.
+  They do **not** require a Tailwind or shadcn package dependency in your
+  project — the `shadcn` CLI is used purely as the install mechanism.
+</Note>
+
+## Install your first item
+
+<Steps>
+
+  <Step title="Browse the available items">
+    The full registry manifest is publicly available as a JSON file. Open it in
+    your browser or fetch it in your terminal to see every available item, its
+    type, and its description.
+
+    ```bash
+    # Registry bundle — lists every item
+    https://registry.jami.studio/registry.json
+    ```
+
+    Each entry in the `items` array includes a `name`, `type`, `title`,
+    `description`, and any `dependencies` or `registryDependencies` it pulls in.
+  </Step>
+
+  <Step title="Install a single component">
+    Pass the item's direct URL to `npx shadcn add`. The CLI resolves all
+    declared dependencies automatically.
+
+    <CodeGroup>
+
+    ```bash npm
+    npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+    ```
+
+    ```bash yarn
+    yarn dlx shadcn add https://registry.jami.studio/items/button.registry-item.json
+    ```
+
+    ```bash pnpm
+    pnpm dlx shadcn add https://registry.jami.studio/items/button.registry-item.json
+    ```
+
+    </CodeGroup>
+
+    The CLI will copy the component source and its companion style file into
+    your project's `components/ui/` directory. Confirm the prompt to proceed.
+  </Step>
+
+  <Step title="Verify the installed files">
+    After a successful install you should see new files in your project,
+    including:
+
+    ```
+    components/ui/jami-vocabulary.mjs
+    components/ui/jami-ui.css
+    components/ui/jami-primitive-components.mjs
+    components/ui/jami-radix-react-wrappers.mjs
+    ```
+
+    Import the `jami-ui.css` stylesheet once at your application root so the
+    token CSS variables are available globally:
+
+    ```ts
+    // e.g. app/layout.tsx or pages/_app.tsx
+    import '@/components/ui/jami-ui.css'
+    ```
+  </Step>
+
+</Steps>
+
+## Explore all available items
+
+Every item in the registry is individually addressable at:
+
+```
+https://registry.jami.studio/items/{name}.registry-item.json
+```
+
+Fetch the full index to discover every component, primitive, theme, block, page, suite, and brand option currently in the registry:
+
+```bash
+curl https://registry.jami.studio/registry.json
+```
+
+<Note>
+  The registry is served as static JSON from Cloudflare Pages. No authentication
+  or API key is required.
+</Note>
+
+Notable items available today:
+
+| Name | Type | Description |
+|---|---|---|
+| `button` | `registry:ui` | Tokenized action-surface primitive |
+| `panel` | `registry:ui` | Card/dock surface primitive |
+| `text-field` | `registry:ui` | Labelled input with validation states |
+| `data-list` | `registry:component` | Responsive table/list for dense records |
+| `agent-panel` | `registry:component` | Display-only agent status panel |
+| `docs-source-panel` | `registry:component` | Citation and source reference panel |
+| `media-grid` | `registry:component` | Responsive media and artifact gallery |
+| `jami-theme` | `registry:theme` | Warm Jami factory token CSS variables |
+| `solo-suite` | `registry:suite` | Full solo/general-workflow suite |
+
+## Install a full suite
+
+Suites are curated install-graph descriptors that pull in every component, block, page, and theme needed for a complete application shell in a single command.
+
+<CodeGroup>
+
+```bash npm
+npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+```bash yarn
+yarn dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+```bash pnpm
+pnpm dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+</CodeGroup>
+
+The **Solo Suite** installs the full Solo / General Workflow shell — including the Jami factory theme, all primitive components (`button`, `panel`, `text-field`, `data-list`, `agent-panel`, `docs-source-panel`), and pre-composed page and block descriptors for a today command center, docs-and-sources view, and more.
+
+<Note>
+  Suites resolve their entire dependency graph automatically. You do not need to
+  install individual components separately before running a suite install.
+</Note>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Registry overview"
+    icon="grid-2"
+    href="/registry/overview"
+  >
+    Learn how the registry protocol works, what item types are available, and how
+    the bundle is structured.
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/components/overview"
+  >
+    Browse every available primitive and component with prop schemas,
+    token requirements, and accessibility notes.
+  </Card>
+  <Card
+    title="Solo Suite"
+    icon="user"
+    href="/suites/solo"
+  >
+    Explore the Solo / General Workflow suite — pages, blocks, navigation,
+    and state fixture coverage in detail.
+  </Card>
+  <Card
+    title="Registry bundle"
+    icon="brackets-curly"
+    href="https://registry.jami.studio/registry.json"
+  >
+    Inspect the live registry manifest directly to see all current items,
+    versions, and compatibility metadata.
+  </Card>
+</CardGroup>

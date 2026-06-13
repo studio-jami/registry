@@ -1,29 +1,74 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Jami Registry",
+  "name": "Jami Studio Registry",
+  "theme": "willow",
   "colors": {
-    "primary": "#111827",
-    "light": "#f8fafc",
-    "dark": "#0f172a"
+    "primary": "#C14D84",
+    "light": "#FFF9F5",
+    "dark": "#20171B"
   },
-  "navigation": [
-    {
-      "group": "Start",
-      "pages": [
-        "docs/index",
-        "docs/registry",
-        "docs/packages",
-        "docs/release",
-        "docs/hosting"
-      ]
-    },
-    {
-      "group": "Packages",
-      "pages": [
-        "docs/studio-ui",
-        "docs/harness"
-      ]
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Registry",
+            "pages": [
+              "registry/overview",
+              "registry/installing-items",
+              "registry/suites"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "components/overview",
+              "components/primitives",
+              "components/agent-panel",
+              "components/data-list",
+              "components/media-grid",
+              "components/docs-source-panel"
+            ]
+          },
+          {
+            "group": "Suites",
+            "pages": [
+              "suites/solo",
+              "suites/business-ops",
+              "suites/research-writing",
+              "suites/mixed-media"
+            ]
+          },
+          {
+            "group": "Theming",
+            "pages": [
+              "theming/tokens",
+              "theming/brand-options"
+            ]
+          },
+          {
+            "group": "Operations",
+            "pages": [
+              "operations/hosting",
+              "operations/release"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/studio-jami/registry"
     }
-  ]
+  }
 }

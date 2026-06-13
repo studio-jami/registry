@@ -1,0 +1,289 @@
+---
+title: 'Install Complete Application Suites from Jami Registry'
+sidebarTitle: 'Suites'
+description: 'Install a full application shell — theme, primitives, pages, blocks, and app implementation — in one command using a Jami suite registry item.'
+---
+
+A **suite** is a bundled, opinionated application shell for a specific workflow lane. Installing one suite entry-point item triggers a complete install graph that includes the factory theme, all required UI primitives and components, every page and block descriptor for the lane, and the app shell implementation evidence. You get a working multi-route application scaffold without manually assembling individual items.
+
+The registry ships four suites, each targeting a distinct type of application:
+
+<CardGroup cols={2}>
+  <Card title="solo" icon="user">
+    Personal operations — calendar, tasks, docs, forms, CRM, and display-only agent status
+  </Card>
+  <Card title="business-ops" icon="chart-bar">
+    Dense operations shell — staff, scheduling, forms, training, compliance, and operations dashboard
+  </Card>
+  <Card title="research-writing" icon="book-open">
+    Research and writing workbench — sources, citations, notes, briefs, outlines, and knowledge workflows
+  </Card>
+  <Card title="mixed-media" icon="photo-film">
+    Media production shell — assets, generation, editing, pipelines, review, and publishing
+  </Card>
+</CardGroup>
+
+## Suite structure
+
+Each suite is a `registry:suite` item. Its `registryDependencies` field defines the complete install graph — the CLI walks this graph and installs every item in the correct order.
+
+A suite manifest (`*.suite.json`) describes:
+
+```json
+{
+  "name": "@jami-studio/solo-suite",
+  "lane": "solo",
+  "items": ["jami-theme", "button", "panel", "text-field", "data-list", "agent-panel", "docs-source-panel",
+            "solo-app", "solo-today-page", "solo-docs-page",
+            "solo-agenda-block", "solo-task-queue-block", "solo-agent-status-block",
+            "solo-docs-sources-block", "solo-forms-block"],
+  "installGraph": {
+    "root": "solo-suite",
+    "dependencies": [ ... ]
+  },
+  "plannedSurfaces": ["calendar", "forms", "docs", "agent", "tasks", "crm", "content", "admin"],
+  "shell": { ... },
+  "implementation": { ... }
+}
+```
+
+| Field | What it tells you |
+|---|---|
+| `items` | Ordered list of every item the suite installs |
+| `installGraph` | Dependency graph rooted at the suite entry-point |
+| `plannedSurfaces` | Application surfaces planned for the lane (not all are implemented yet) |
+| `shell` | Navigation routes, page definitions, block definitions, and component parts |
+| `implementation` | Implementation evidence — mounted React app, page, and block JSON file paths |
+
+## The four suites
+
+<Tabs>
+  <Tab title="solo">
+
+### Solo Suite
+
+A compact personal-operations shell for calendar, tasks, docs, forms, CRM, content, admin, and display-only agent status.
+
+**Install command**
+
+```bash
+npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+```
+
+**What gets installed**
+
+| Type | Items |
+|---|---|
+| Theme | `jami-theme` |
+| Primitives | `button`, `panel`, `text-field` |
+| Components | `agent-panel`, `docs-source-panel`, `data-list` |
+| App | `solo-app` |
+| Pages | `solo-today-page`, `solo-docs-page` |
+| Blocks | `solo-agenda-block`, `solo-task-queue-block`, `solo-agent-status-block`, `solo-docs-sources-block`, `solo-forms-block` |
+
+**Routes**
+
+| Path | Page | Blocks |
+|---|---|---|
+| `/solo/today` | Today command center | Agenda, Task queue, Agent status |
+| `/solo/docs` | Docs and sources | Docs sources, Quick form |
+
+**Navigation**
+
+Today · Tasks · Docs · Admin
+
+**Planned surfaces**
+
+`calendar`, `forms`, `docs`, `agent`, `tasks`, `crm`, `content`, `admin`
+
+  </Tab>
+  <Tab title="business-ops">
+
+### Business Ops Suite
+
+A dense operational shell for staff records, scheduling, forms, training, compliance, and an operations dashboard with display-only review actions.
+
+**Install command**
+
+```bash
+npx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+```
+
+**What gets installed**
+
+| Type | Items |
+|---|---|
+| Theme | `jami-theme` |
+| Primitives | `button`, `panel`, `text-field` |
+| Components | `agent-panel`, `data-list` |
+| App | `business-ops-app` |
+| Pages | `business-ops-dashboard-page`, `business-ops-staff-page` |
+| Blocks | `business-ops-kpis-block`, `business-ops-exceptions-block`, `business-ops-agent-review-block`, `business-ops-staff-table-block`, `business-ops-training-form-block` |
+
+**Routes**
+
+| Path | Page | Blocks |
+|---|---|---|
+| `/business-ops/dashboard` | Operations dashboard | Operational KPIs, Schedule exceptions, Review queue |
+| `/business-ops/staff` | Staff and training | Staff records, Training form |
+
+**Navigation**
+
+Dashboard · Staff · Scheduling · Compliance
+
+**Planned surfaces**
+
+`staff`, `scheduling`, `forms`, `training`, `compliance`, `operations-dashboard`
+
+  </Tab>
+  <Tab title="research-writing">
+
+### Research Writing Suite
+
+A research and writing workbench for sources, notes, citations, briefs, documents, outlines, and knowledge workflows with redaction-aware source panels.
+
+**Install command**
+
+```bash
+npx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+```
+
+**What gets installed**
+
+| Type | Items |
+|---|---|
+| Theme | `jami-theme` |
+| Primitives | `button`, `panel`, `text-field` |
+| Components | `agent-panel`, `data-list`, `docs-source-panel` |
+| App | `research-writing-app` |
+| Pages | `research-writing-sources-page`, `research-writing-brief-page` |
+| Blocks | `research-writing-sources-block`, `research-writing-citations-block`, `research-writing-outline-block`, `research-writing-agent-review-block` |
+
+**Routes**
+
+| Path | Page | Blocks |
+|---|---|---|
+| `/research-writing/sources` | Sources and citations | Sources, Citations |
+| `/research-writing/brief` | Brief drafting | Outline, Writing review |
+
+**Navigation**
+
+Sources · Notes · Brief · Outline
+
+**Planned surfaces**
+
+`sources`, `notes`, `citations`, `briefs`, `documents`, `outlines`, `knowledge`
+
+  </Tab>
+  <Tab title="mixed-media">
+
+### Mixed Media Suite
+
+A production shell for assets, generation, editing, pipelines, review, publishing, and media libraries with responsive media grids and pipeline status tables.
+
+**Install command**
+
+```bash
+npx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+```
+
+**What gets installed**
+
+| Type | Items |
+|---|---|
+| Theme | `jami-theme` |
+| Primitives | `button`, `panel` |
+| Components | `agent-panel`, `data-list`, `media-grid` |
+| App | `mixed-media-app` |
+| Pages | `mixed-media-library-page`, `mixed-media-pipeline-page` |
+| Blocks | `mixed-media-assets-block`, `mixed-media-metadata-block`, `mixed-media-pipeline-block`, `mixed-media-review-agent-block` |
+
+**Routes**
+
+| Path | Page | Blocks |
+|---|---|---|
+| `/mixed-media/library` | Asset library | Assets, Asset metadata |
+| `/mixed-media/pipeline` | Generation pipeline | Pipeline runs, Review agent |
+
+**Navigation**
+
+Library · Pipeline · Review · Publishing
+
+**Planned surfaces**
+
+`assets`, `generation`, `editing`, `pipelines`, `review`, `publishing`, `library`
+
+  </Tab>
+</Tabs>
+
+## The install graph
+
+When you install a suite, the shadcn CLI resolves `registryDependencies` recursively. The graph is rooted at the suite item and expands depth-first. Consider the `solo-suite` install order:
+
+<Steps>
+  <Step title="Theme layer">
+    `jami-theme` — CSS variables, Tailwind `@theme`, TypeScript token constants, and shadcn cssVars are written to `studio-ui/`.
+  </Step>
+  <Step title="Primitive layer">
+    `button`, `panel`, `text-field` — vocabulary, styles, descriptor, component factory, and Radix React wrappers are written to `components/ui/`.
+  </Step>
+  <Step title="Component layer">
+    `agent-panel`, `docs-source-panel`, `data-list` — additional component factory entries for the composed resident components.
+  </Step>
+  <Step title="Block layer">
+    Each block item (e.g. `solo-agenda-block`) writes a pair of JSON files to `studio-ui/suites/solo/blocks/` — a block descriptor and a block implementation descriptor with rendered state evidence.
+  </Step>
+  <Step title="Page layer">
+    Each page item (e.g. `solo-today-page`) writes a page descriptor and a page implementation descriptor to `studio-ui/suites/solo/pages/`.
+  </Step>
+  <Step title="App layer">
+    `solo-app` writes an app implementation descriptor to `studio-ui/suites/solo/` containing the full route map, navigation, and evidence summary.
+  </Step>
+  <Step title="Suite manifest">
+    `solo-suite` writes the final suite manifest to `studio-ui/suites/solo.suite.json`, which records the complete item list, install graph, planned surfaces, and shell definition.
+  </Step>
+</Steps>
+
+## Suite file layout
+
+After a successful suite install you will find the following directory structure:
+
+```
+components/
+  ui/
+    jami-vocabulary.mjs
+    jami-ui.css
+    jami-primitive-descriptors.mjs
+    jami-primitive-components.mjs
+    jami-radix-react-wrappers.mjs
+
+studio-ui/
+  jami.css
+  jami.tailwind.css
+  jami-tokens.ts
+  jami.shadcn.json
+  suites/
+    solo.suite.json          ← suite manifest
+    solo/
+      solo-app.implementation.json
+      pages/
+        solo-today-page.page.json
+        solo-today-page.page.implementation.json
+        solo-docs-page.page.json
+        solo-docs-page.page.implementation.json
+      blocks/
+        solo-agenda-block.block.json
+        solo-agenda-block.block.implementation.json
+        ...
+```
+
+Each `*.implementation.json` file contains rendered state evidence — pre-computed component output for the block's or page's key states (ready, empty, error, long-content, invalid). This evidence is used by the Jami workbench for contract verification and does not affect runtime behaviour.
+
+<Tip>
+  Suite items are display-only by design. Action execution, harness runtime, and capability truth all stay in Jami Harness. The installed components show status and surface action references but do not execute actions directly.
+</Tip>
+
+## Next steps
+
+- [Installing Items](/registry/installing-items) — install individual primitives and components outside of a suite
+- [Registry Overview](/registry/overview) — browse the full item catalog by type

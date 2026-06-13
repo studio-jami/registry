@@ -1,0 +1,212 @@
+---
+title: 'DataList: Responsive Table and List for Operational Records'
+sidebarTitle: 'Data List'
+description: 'Render dense tabular records in your Jami Studio UI with automatic empty, loading, and error state handling—no extra conditional logic required in your app code.'
+---
+
+`DataList` is a responsive table and list component designed for dense operational records in Jami Studio suites. When you provide both `columns` and `rows`, the component renders a properly structured `<table>` with scoped column headers; when no rows are available—or when `empty`, `loading`, or `error` props are set—it automatically presents the appropriate status message using the correct ARIA role (`status` for informational states, `alert` for errors). You get consistent empty, loading, and error state behaviour across every suite without writing conditional rendering logic in your own app code.
+
+## Installation
+
+Install `DataList` through the Jami Studio registry using the shadcn CLI:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/data-list.registry-item.json
+```
+
+The installer adds the component vocabulary, tokenized styles, and the Radix-backed React wrapper. No shadcn package dependency is introduced.
+
+<Note>
+  `DataList` requires the `jami-theme` token CSS variables. Install the theme first with `npx shadcn add https://registry.jami.studio/items/jami-theme.registry-item.json` if you have not already done so.
+</Note>
+
+## Props
+
+<ParamField body="title" type="string">
+  Human-readable heading for the data list, rendered as an `<h3>` inside the component and used as the `aria-label` for the root `<section>` when `ariaLabel` is not provided.
+</ParamField>
+
+<ParamField body="ariaLabel" type="string">
+  Overrides `title` as the accessible label for the root `<section>` element. Use this when you want a different label for screen readers than the visible heading.
+</ParamField>
+
+<ParamField body="columns" type="Array<string | { key: string; label: string }>">
+  Defines the columns to render. Each entry can be a plain string (used as both the data key and the column header label) or an object with a `key` property (used to read data from each row object) and a `label` property (used as the visible column header). See [Column format](#column-format) below.
+</ParamField>
+
+<ParamField body="rows" type="object[]">
+  An array of plain objects. Each object's properties are read using the column keys defined in `columns`. Missing values render as an empty string. The component only renders the `<table>` element when both `columns` and `rows` are non-empty arrays.
+</ParamField>
+
+<ParamField body="empty" type="boolean">
+  When `true`, suppresses the table and shows a `<p role="status">` element with the message "No records to display." Use this to explicitly signal an empty state even when `rows` is non-empty (for example when a filter has been applied and you want to override the default empty detection).
+</ParamField>
+
+<ParamField body="loading" type="boolean">
+  When `true`, suppresses the table and shows a `<p role="status">` element with the message "Loading records." and sets `aria-busy="true"` on the root element. This state takes priority over `empty`.
+</ParamField>
+
+<ParamField body="error" type="string">
+  When provided, suppresses the table and shows the error string inside a `<p role="alert">` element. The `alert` role causes screen readers to announce the error immediately. This state takes priority over both `loading` and `empty`.
+</ParamField>
+
+## Column format
+
+You can define columns using plain strings or `{ key, label }` objects—or mix both styles in the same `columns` array.
+
+<CodeGroup>
+  ```js Plain strings
+  // The string is used as both the row data key and the column header label.
+  const columns = ['name', 'status', 'created'];
+  ```
+
+  ```js Object notation
+  // key: the property name read from each row object
+  // label: the visible column header text
+  const columns = [
+    { key: 'agentId', label: 'Agent' },
+    { key: 'runState', label: 'State' },
+    { key: 'ts', label: 'Timestamp' },
+  ];
+  ```
+
+  ```js Mixed
+  const columns = [
+    'name',
+    { key: 'runState', label: 'State' },
+  ];
+  ```
+</CodeGroup>
+
+<Tip>
+  Prefer the `{ key, label }` form when your data keys are camelCase or abbreviated and your column headers need to be human-readable. The plain string form is convenient for prototyping or when your property names are already display-friendly.
+</Tip>
+
+## Code examples
+
+<Tabs>
+  <Tab title="Basic table render">
+    ```jsx
+    import { JamiDataList } from './components/ui/jami-radix-react-wrappers.mjs';
+
+    const columns = [
+      { key: 'agent', label: 'Agent' },
+      { key: 'state', label: 'State' },
+      { key: 'updated', label: 'Last updated' },
+    ];
+
+    const rows = [
+      { agent: 'review-agent', state: 'running', updated: '2026-06-09 14:02' },
+      { agent: 'extract-agent', state: 'idle', updated: '2026-06-09 13:55' },
+    ];
+
+    export function AgentRunTable() {
+      return (
+        <JamiDataList
+          title="Active agents"
+          columns={columns}
+          rows={rows}
+        />
+      );
+    }
+    ```
+  </Tab>
+  <Tab title="Empty state">
+    ```jsx
+    // Explicitly flag empty when a filter produces zero results
+    <JamiDataList
+      title="Active agents"
+      ariaLabel="Active agents — filtered results"
+      columns={columns}
+      rows={[]}
+      empty={true}
+    />
+
+    // The component also detects empty automatically when rows is an empty array
+    // and neither loading nor error is set.
+    <JamiDataList
+      title="Active agents"
+      columns={columns}
+      rows={[]}
+    />
+    ```
+  </Tab>
+  <Tab title="Loading state">
+    ```jsx
+    <JamiDataList
+      title="Active agents"
+      columns={columns}
+      rows={[]}
+      loading={true}
+    />
+    // Renders: <p role="status">Loading records.</p>
+    // Root element also receives aria-busy="true"
+    ```
+  </Tab>
+  <Tab title="Error state">
+    ```jsx
+    <JamiDataList
+      title="Pipeline runs"
+      columns={columns}
+      rows={[]}
+      error="Failed to load pipeline records. The data service returned a 503."
+    />
+    // Renders: <p role="alert">Failed to load pipeline records…</p>
+    // Screen readers announce this immediately without waiting for focus.
+    ```
+  </Tab>
+</Tabs>
+
+### Framework-neutral usage
+
+Use `renderPrimitiveSpec` from `jami-primitive-components.mjs` when you need a framework-neutral spec node:
+
+```js
+import { renderPrimitiveSpec } from './components/ui/jami-primitive-components.mjs';
+
+const result = renderPrimitiveSpec('data-list', {
+  title: 'Schedule exceptions',
+  columns: [
+    { key: 'item', label: 'Item' },
+    { key: 'state', label: 'State' },
+  ],
+  rows: [
+    { item: 'Late shift handover', state: 'open' },
+  ],
+  empty: false,
+});
+
+if (result.state === 'renderable') {
+  // Mount result.node into your framework renderer
+}
+```
+
+## Token requirements
+
+`DataList` reads the following design tokens from the installed Jami theme CSS variables:
+
+| Token | CSS variable |
+|---|---|
+| `semantic.light.background` | `--jami-semantic-light-background` |
+| `semantic.light.foreground` | `--jami-semantic-light-foreground` |
+| `semantic.dark.background` | `--jami-semantic-dark-background` |
+| `semantic.dark.foreground` | `--jami-semantic-dark-foreground` |
+| `componentState.focusRing` | `--jami-componentState-focusRing` |
+| `spacing.control` | `--jami-spacing-control` |
+| `radius.control` | `--jami-radius-control` |
+
+The component CSS class is `.jami-data-list`. Dark mode is applied automatically via `@media (prefers-color-scheme: dark)` using the dark semantic token pair.
+
+## Accessibility
+
+`DataList` uses the following ARIA pattern:
+
+- The root element is a `<section>` with `role="region"` and an `aria-label` derived from `ariaLabel`, then `title`, then the fallback string `"Data list"`.
+- When `loading` is `true`, `aria-busy="true"` is set on the root element so assistive technology knows the content is pending.
+- Empty and loading states render a `<p role="status">`, which is a polite live region—assistive technology will announce it without interrupting current focus.
+- Error states render a `<p role="alert">`, which is an assertive live region—assistive technology announces it immediately.
+- The inner `<table>` uses `<th scope="col">` for every column header, providing correct semantic structure for screen reader table navigation.
+
+<Note>
+  `DataList` suppresses the `<table>` element entirely when `rows` is empty or when `loading`, `empty`, or `error` is active. This prevents screen readers from announcing an empty table structure, which can be confusing. The status or alert paragraph takes over as the sole content in those states.
+</Note>

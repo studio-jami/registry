@@ -1,0 +1,75 @@
+---
+title: 'Jami UI Components: Accessible, Token-Driven Primitives'
+sidebarTitle: 'Overview'
+description: 'A catalogue of every component in the Jami Studio registry — each with a built-in prop schema, design-token contract, and accessibility spec.'
+---
+
+The Jami Studio component registry ships **seven token-driven UI primitives** that your application can install individually or as a group. Every component in the registry carries three first-class guarantees: a versioned prop schema that validates inputs at call-time, a declared set of design-token requirements that the CSS layer reads from `jami-ui.css`, and a complete accessibility specification wired directly into the rendered markup (roles, `aria-*` attributes, live regions, and focus rings). You do not need Tailwind, a CSS-in-JS runtime, or any shadcn package as a runtime dependency — the registry uses the shadcn-compatible install format purely to copy source into your project.
+
+---
+
+## Two rendering layers
+
+Jami UI components are available through two complementary layers that you can mix freely:
+
+<CardGroup cols={2}>
+  <Card title="Framework-neutral factory" icon="code">
+    `renderPrimitiveSpec(name, props)` and `createJamiPrimitiveComponents(createElement)` live in `jami-primitive-components.mjs`. They produce plain element descriptor objects — no React import required. Pass any `createElement`-compatible function from React, Preact, Solid, or your own renderer.
+  </Card>
+  <Card title="React / Radix wrappers" icon="react">
+    Pre-built `forwardRef` components (`JamiButton`, `JamiPanel`, `JamiTextField`, `JamiDataList`, `JamiAgentPanel`, `JamiDocsSourcePanel`, `JamiMediaGrid`) live in `jami-radix-react-wrappers.mjs`. They require **React ≥ 19** and add Radix UI primitives for accessible label association and the `asChild` slot pattern.
+  </Card>
+</CardGroup>
+
+---
+
+## The component vocabulary
+
+The registry's source of truth is `jami-vocabulary.mjs` (installed to `components/ui/jami-vocabulary.mjs`). It exports a frozen `componentVocabulary` array where every entry defines:
+
+- **`propSchema`** — a JSON-Schema–style object with `properties`, `required`, and `additionalProperties: false`. The `validateComponentProps(name, props)` helper returns an array of human-readable issue strings before any rendering happens.
+- **`tokens`** — the exact CSS custom-property namespaces the component reads from `jami-ui.css` (e.g. `semantic.light.accent`, `componentState.focusRing`).
+- **`aria`** — the ARIA role, label source precedence, and any live-region or state attribute the component sets automatically.
+- **`states`** — every interactive and content state the component is authored to handle (keyboard, focus-visible, disabled, loading, invalid, empty, error, and more).
+
+<Note>
+  All prop schemas use `additionalProperties: false`. Passing an undeclared prop returns a validation issue rather than silently forwarding unknown attributes to the DOM.
+</Note>
+
+---
+
+## All seven components
+
+<CardGroup cols={2}>
+  <Card title="Primitives" icon="puzzle-piece" href="/components/primitives">
+    Button, Panel, and TextField — the foundational action and layout surfaces with tokenized styling and full state coverage.
+  </Card>
+  <Card title="Data List" icon="table" href="/components/data-list">
+    Responsive table/list for dense operational records. Accepts `columns` and `rows` arrays with automatic header scoping and status/alert live regions for empty and error states.
+  </Card>
+  <Card title="Agent Panel" icon="robot" href="/components/agent-panel">
+    Display-only agent status panel with `idle`, `running`, `needs_attention`, `denied`, and `error` states. Action execution stays in Jami Harness.
+  </Card>
+  <Card title="Docs Source Panel" icon="book-open" href="/components/docs-source-panel">
+    Source, citation, and document-reference panel with redaction-aware states. Uses `role="complementary"` to surface redaction status to assistive technology.
+  </Card>
+  <Card title="Media Grid" icon="photo" href="/components/media-grid">
+    Responsive artifact gallery with `auto-fit` CSS grid layout. Supports `loading`, `empty`, and `error` sentinel states and marks the active item with `aria-current`.
+  </Card>
+</CardGroup>
+
+---
+
+## React ≥ 19 requirement
+
+The pre-built Radix wrappers in `jami-radix-react-wrappers.mjs` rely on `React.forwardRef` and `React.isValidElement` from React 19. If you are using the framework-neutral `renderPrimitiveSpec` factory directly, there is no React dependency at all.
+
+<Note>
+  The `compatibility.react` field on every registry item is `">=19"`. Older React versions are not tested and are not supported for the Radix wrapper layer.
+</Note>
+
+---
+
+## Next steps
+
+- **[Primitives](/components/primitives)** — install commands, framework-neutral usage, React wrapper usage, and prop-validation examples for all seven components.

@@ -1,0 +1,159 @@
+---
+title: 'Research Writing Suite: Docs, Citations, and Sources'
+sidebarTitle: 'Research Writing'
+description: 'Install the Research Writing suite for a document-workbench shell covering sources, citations, outline drafting, and display-only writing-agent review in one command.'
+---
+
+The Research Writing suite is a focused knowledge-work shell for researchers, analysts, and writers who need to manage sources, build citation lists, draft outlines, and track writing-agent review status in a single coherent interface. It targets the `research-writing` lane and ships a `document-workbench` layout with four navigation items: Sources, Notes, Brief, and Outline. One install command resolves 14 registry items — theme tokens, primitives, the app shell, two pages, and four blocks — giving you a fully structured base for document-driven workflows.
+
+## Install
+
+Run the following command to pull the entire Research Writing suite install graph into your project:
+
+<CodeGroup>
+```bash npm
+npx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+```
+
+```bash pnpm
+pnpm dlx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+```
+
+```bash yarn
+yarn dlx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+```
+</CodeGroup>
+
+<Note>
+  The install graph resolves all 14 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+</Note>
+
+## What's Included
+
+The `research-writing-suite` registry item installs the following items in dependency order:
+
+<Steps>
+  <Step title="Design foundation">
+    `jami-theme` — CSS variables, Tailwind tokens, and TypeScript types for the Jami design system.
+  </Step>
+  <Step title="Primitive components">
+    `button`, `panel`, `text-field`, `data-list`, `agent-panel`, `docs-source-panel` — the six reusable UI building blocks consumed by Research Writing pages and blocks.
+  </Step>
+  <Step title="App shell">
+    `research-writing-app` — the `document-workbench` layout shell that mounts the navigation and route outlet.
+  </Step>
+  <Step title="Pages">
+    `research-writing-sources-page`, `research-writing-brief-page` — the two active route pages shipped with this suite version.
+  </Step>
+  <Step title="Blocks">
+    `research-writing-sources-block`, `research-writing-citations-block`, `research-writing-outline-block`, `research-writing-agent-review-block` — the four discrete content blocks that compose each page.
+  </Step>
+</Steps>
+
+## App Shell
+
+The Research Writing app shell uses the `document-workbench` layout. This layout is optimised for reading and editing flows, with persistent navigation and a content area suited to long-form documents and reference panels displayed side by side.
+
+| Property | Value |
+|---|---|
+| Shell ID | `app.research-writing.shell` |
+| Layout | `document-workbench` |
+| Lane | `research-writing` |
+| Package name | `@jami-studio/research-writing-suite` |
+
+### Navigation
+
+```
+Sources  →  /research-writing/sources
+Notes    →  /research-writing/notes
+Brief    →  /research-writing/brief
+Outline  →  /research-writing/outline
+```
+
+<Tip>
+  Notes and Outline are navigation items in the shell manifest. Their full page and block implementations are part of the planned surfaces roadmap — see below.
+</Tip>
+
+### Routes
+
+| Path | Page ID | Title |
+|---|---|---|
+| `/research-writing/sources` | `page.research-writing.sources` | Sources and citations |
+| `/research-writing/brief` | `page.research-writing.brief` | Brief drafting |
+
+## Pages and Blocks
+
+### Sources and citations — `/research-writing/sources`
+
+Source display, citation lists, redaction-aware references, and long document titles. This page uses `docs-source-panel`, `data-list`, and `panel`.
+
+<CardGroup cols={2}>
+  <Card title="Sources" icon="book-open">
+    `block.research-writing.sources` — powered by `docs-source-panel`. Exercises the `long-content` state: long source names, citation strings, and document titles wrap inside the writing shell without overflow.
+  </Card>
+  <Card title="Citations" icon="quote-right">
+    `block.research-writing.citations` — powered by `data-list`. Exercises the `empty` state: when no citations are selected, the list displays an explicit empty table/list state rather than collapsing.
+  </Card>
+</CardGroup>
+
+### Brief drafting — `/research-writing/brief`
+
+Outline, notes, document state, and display-only writing-agent review. This page uses `docs-source-panel`, `text-field`, `agent-panel`, and `button`.
+
+<CardGroup cols={2}>
+  <Card title="Outline" icon="list-ol">
+    `block.research-writing.outline` — powered by `text-field`. Exercises the `invalid` state so inline validation feedback is visible during development and testing.
+  </Card>
+  <Card title="Writing review" icon="robot">
+    `block.research-writing.agent-review` — powered by `agent-panel`. Display-only writing-agent review; exercises the `error` state without executing any actions.
+  </Card>
+</CardGroup>
+
+## State Fixtures
+
+Each block ships with named state fixtures you can reference in tests and Storybook stories:
+
+| Fixture | Description |
+|---|---|
+| `longContent` | Long source names, citation strings, and outline sections wrap inside the writing shell. |
+| `empty` | No citations selected is displayed as an empty table/list state. |
+| `error` | Review-agent errors are presented as inert status without executing actions. |
+
+## Planned Surfaces
+
+The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+
+<CardGroup cols={4}>
+  <Card title="Sources" icon="database" />
+  <Card title="Notes" icon="note-sticky" />
+  <Card title="Citations" icon="quote-right" />
+  <Card title="Briefs" icon="file-lines" />
+  <Card title="Documents" icon="file-word" />
+  <Card title="Outlines" icon="list-tree" />
+  <Card title="Knowledge" icon="brain" />
+</CardGroup>
+
+## Compatibility
+
+| Requirement | Value |
+|---|---|
+| React | `>=19` |
+| shadcn | `4.x` (source-lock required before generated output) |
+| Tailwind | `4.x` (source-lock required before generated output) |
+| License | MIT |
+
+## Related Components
+
+The Research Writing suite is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+
+<CardGroup cols={3}>
+  <Card title="Docs Source Panel" icon="book-open" href="/components/docs-source-panel">
+    Source display panel for documents, citations, and redaction-aware references.
+  </Card>
+  <Card title="Agent Panel" icon="robot" href="/components/agent-panel">
+    Display-only AI agent status with error and loading states.
+  </Card>
+  <Card title="Data List" icon="list" href="/components/data-list">
+    Flexible list component with empty, error, and long-content states.
+  </Card>
+</CardGroup>

@@ -1,0 +1,165 @@
+---
+title: 'Customize Jami UI with Selectable Brand Options'
+sidebarTitle: 'Brand Options'
+description: 'Explore three selectable token delta sets — Command Grid, Editorial Studio, and Studio Console — that let you steer Jami UI toward different suite personalities.'
+---
+
+Brand options are selectable token delta sets that let you shift Jami UI's personality without replacing the full Jami Factory Theme. Each option defines a small set of overrides — accent color, focus ring, control radius, spacing, and dock width — that you apply on top of the baseline token values. They are design directions to explore, not final brand canon: installing a brand option gives you the token override values; you decide what to do with them.
+
+<Note>
+  All three brand options carry `"status": "selectable-option"` and `"canonicalBrand": false` in their descriptors. They are exploratory starting points for suite customisation, not shipped product identities.
+</Note>
+
+## Available Brand Options
+
+<CardGroup cols={3}>
+  <Card title="Command Grid" icon="grid-2">
+    Blue command accents, tighter radius, and narrower dock. Best for mixed-media and business operations suites.
+  </Card>
+  <Card title="Editorial Studio" icon="pen-nib">
+    Plum accent, softer spacing, and wider reading panels. Best for research-writing and documentation suites.
+  </Card>
+  <Card title="Studio Console" icon="terminal">
+    Teal command affordances and warm-magenta focus ring. Best for default kit previews and operator-heavy workbench sessions.
+  </Card>
+</CardGroup>
+
+---
+
+## Command Grid
+
+**Command Grid** sharpens the suite shell with a steel-blue accent, tighter corner radius, and a narrower dock. It is optimised for mixed-media and business operations workbenches where dense tabular content and strong registry-install affordances take priority.
+
+```bash
+npx shadcn add https://registry.jami.studio/items/command-grid-brand.registry-item.json
+```
+
+This writes `studio-ui/branding/command-grid.brand-option.json` into your project. The file contains the following `tokenDeltas`:
+
+| Token | Delta value |
+|---|---|
+| `semantic.light.accent` | `#315C8E` |
+| `semantic.dark.accent` | `#9BB7E3` |
+| `componentState.focusRing` | `#A64B72` |
+| `radius.control` | `4px` |
+| `spacing.control` | `7px` |
+| `shell.dockWidth` | `280px` |
+
+**Best for:** mixed-media suite, business operations suite, registry item choice and install inspection.
+
+---
+
+## Editorial Studio
+
+**Editorial Studio** slows the pace with a rich plum accent, generous spacing, and a wider dock for comfortable source review. It suits research-writing workflows and documentation suite previews where reading comfort and citation scanning matter more than density.
+
+```bash
+npx shadcn add https://registry.jami.studio/items/editorial-studio-brand.registry-item.json
+```
+
+This writes `studio-ui/branding/editorial-studio.brand-option.json`. The file contains the following `tokenDeltas`:
+
+| Token | Delta value |
+|---|---|
+| `semantic.light.accent` | `#6F3D5F` |
+| `semantic.dark.accent` | `#D8A5C8` |
+| `componentState.focusRing` | `#237C7A` |
+| `radius.control` | `8px` |
+| `spacing.control` | `10px` |
+| `shell.dockWidth` | `340px` |
+
+**Best for:** research-writing suite, docs and source panels, brand book and documentation previews.
+
+---
+
+## Studio Console
+
+**Studio Console** returns to the roots of the Jami Factory baseline with teal command affordances and warm-magenta focus ring, tuned for compact operational workbenches. It works well as the default kit install preview and for CLI and registry package card contexts.
+
+```bash
+npx shadcn add https://registry.jami.studio/items/studio-console-brand.registry-item.json
+```
+
+This writes `studio-ui/branding/studio-console.brand-option.json`. The file contains the following `tokenDeltas`:
+
+| Token | Delta value |
+|---|---|
+| `semantic.light.accent` | `#2F6F73` |
+| `semantic.dark.accent` | `#76C6BE` |
+| `componentState.focusRing` | `#C14D84` |
+| `radius.control` | `6px` |
+| `spacing.control` | `8px` |
+| `shell.dockWidth` | `300px` |
+
+**Best for:** default kit install preview, CLI and registry package cards, operator-heavy workbench sessions.
+
+---
+
+## Applying a Brand Option
+
+A brand option descriptor is not an installed package — it is a JSON file that tells you which CSS variables to override. Once you have the `.brand-option.json` file in your project, read the `tokenDeltas` object and apply each delta as a CSS variable override on your `.jami-ui` wrapper in your own stylesheet.
+
+<Tabs>
+  <Tab title="Command Grid">
+    ```css
+    /* Apply Command Grid token deltas */
+    .jami-ui {
+      --jami-semantic-light-accent:    #315C8E;
+      --jami-semantic-dark-accent:     #9BB7E3;
+      --jami-componentState-focusRing: #A64B72;
+      --jami-radius-control:           4px;
+      --jami-spacing-control:          7px;
+      --jami-shell-dockWidth:          280px;
+    }
+    ```
+  </Tab>
+  <Tab title="Editorial Studio">
+    ```css
+    /* Apply Editorial Studio token deltas */
+    .jami-ui {
+      --jami-semantic-light-accent:    #6F3D5F;
+      --jami-semantic-dark-accent:     #D8A5C8;
+      --jami-componentState-focusRing: #237C7A;
+      --jami-radius-control:           8px;
+      --jami-spacing-control:          10px;
+      --jami-shell-dockWidth:          340px;
+    }
+    ```
+  </Tab>
+  <Tab title="Studio Console">
+    ```css
+    /* Apply Studio Console token deltas */
+    .jami-ui {
+      --jami-semantic-light-accent:    #2F6F73;
+      --jami-semantic-dark-accent:     #76C6BE;
+      --jami-componentState-focusRing: #C14D84;
+      --jami-radius-control:           6px;
+      --jami-spacing-control:          8px;
+      --jami-shell-dockWidth:          300px;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+Place these overrides in a stylesheet that loads after `jami.css`. Because all Jami components read from CSS custom properties on the `.jami-ui` scope, the overrides cascade automatically — no component-level changes are needed.
+
+<Tip>
+  You can mix and match individual token deltas from different options. For example, you might take the `radius.control: 4px` from Command Grid while keeping Editorial Studio's `spacing.control: 10px`. Treat the brand option JSON files as a menu of values, not an all-or-nothing switch.
+</Tip>
+
+## Token Delta Comparison
+
+The table below shows all six overrideable tokens side by side across the three options, with the Jami Factory Theme default for reference:
+
+| Token (CSS variable) | Factory default | Command Grid | Editorial Studio | Studio Console |
+|---|---|---|---|---|
+| `--jami-semantic-light-accent` | `#C14D84` | `#315C8E` | `#6F3D5F` | `#2F6F73` |
+| `--jami-semantic-dark-accent` | `#C14D84` | `#9BB7E3` | `#D8A5C8` | `#76C6BE` |
+| `--jami-componentState-focusRing` | `#237C7A` | `#A64B72` | `#237C7A` | `#C14D84` |
+| `--jami-radius-control` | `8px` | `4px` | `8px` | `6px` |
+| `--jami-spacing-control` | `8px` | `7px` | `10px` | `8px` |
+| `--jami-shell-dockWidth` | `320px` | `280px` | `340px` | `300px` |
+
+<Note>
+  Brand options only define deltas for `semantic.light.accent`, `semantic.dark.accent`, `componentState.focusRing`, `radius.control`, `spacing.control`, and `shell.dockWidth`. All other Jami Factory Theme tokens — including the full neutral palette, typography, shadow, motion, and density values — remain at their factory defaults unless you override them separately.
+</Note>
