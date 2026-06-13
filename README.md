@@ -32,10 +32,10 @@ Recommended public routes:
 Marketing remains at `https://jami.studio`.
 
 `/docs` is served by Mintlify through the Cloudflare Pages advanced-mode Worker
-in `public/_worker.js`. If Mintlify has not yet published the generated preview
-docs for `/docs/workbench` or `/docs/suites`, the worker falls back to the local
-static preview docs in `public/docs/*.html`. The static registry, workbench, and
-suite routes remain on Cloudflare Pages and fall through through `env.ASSETS`.
+in `public/_worker.js`. The generated preview docs at `/docs/workbench` and
+`/docs/suites` are served locally from `public/docs/*.html`; the rest of
+`/docs/*` proxies to Mintlify. The static registry, workbench, and suite routes
+remain on Cloudflare Pages and fall through through `env.ASSETS`.
 
 ## Validate
 
