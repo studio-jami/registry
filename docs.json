@@ -3,7 +3,7 @@
   "name": "Jami Studio Registry",
   "theme": "almond",
   "colors": {
-    "primary": "#84381c",
+    "primary": "#9f411e",
     "light": "#FFF9F5",
     "dark": "#0f0b0d"
   },
@@ -86,7 +86,7 @@
     ]
   },
   "background": {
-    "decoration": "grid"
+    "decoration": "gradient"
   },
   "metadata": {
     "timestamp": true
