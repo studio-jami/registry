@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Jami Studio Registry",
-  "theme": "linden",
+  "theme": "aspen",
   "colors": {
     "primary": "#C14D84",
     "light": "#FFF9F5",
@@ -17,6 +17,14 @@
             "pages": [
               "introduction",
               "quickstart"
+            ]
+          },
+          {
+            "group": "Jami Harness",
+            "pages": [
+              "harness/overview",
+              "harness/quickstart",
+              "harness/packages"
             ]
           },
           {
@@ -36,14 +44,6 @@
               "components/data-list",
               "components/media-grid",
               "components/docs-source-panel"
-            ]
-          },
-          {
-            "group": "Jami Harness",
-            "pages": [
-              "harness/overview",
-              "harness/quickstart",
-              "harness/packages"
             ]
           },
           {
