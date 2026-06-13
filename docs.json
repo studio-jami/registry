@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#C14D84",
     "light": "#FFF9F5",
-    "dark": "#20171B"
+    "dark": "#0f0b0d"
   },
   "navigation": {
     "tabs": [
@@ -78,7 +78,12 @@
       "type": "github",
       "href": "https://github.com/studio-jami/registry"
     },
-    "links": []
+    "links": [
+      {
+        "href": "https://www.jami.studio/",
+        "label": "Get Started"
+      }
+    ]
   },
   "background": {
     "decoration": "grid"
@@ -87,7 +92,8 @@
     "timestamp": true
   },
   "styling": {
-    "codeblocks": "system"
+    "codeblocks": "system",
+    "eyebrows": "breadcrumbs"
   },
   "contextual": {
     "options": [
@@ -103,13 +109,13 @@
       "cursor",
       "vscode"
     ],
-    "display": "toc"
+    "display": "header"
   },
   "markdown": {
     "schema": true
   },
   "seo": {
-    "indexing": "navigable"
+    "indexing": "all"
   },
   "footer": {
     "socials": {
@@ -124,5 +130,17 @@
   },
   "interaction": {
     "drilldown": true
+  },
+  "api": {
+    "params": {
+      "expanded": "closed"
+    },
+    "playground": {
+      "display": "interactive"
+    },
+    "examples": {
+      "prefill": true,
+      "autogenerate": true
+    }
   }
 }
