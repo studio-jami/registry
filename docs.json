@@ -102,5 +102,8 @@
       "website": "https://www.jami.studio/",
       "x": "https://x.com/studio_jami"
     }
+  },
+  "appearance": {
+    "strict": false
   }
 }
