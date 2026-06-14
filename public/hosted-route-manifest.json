@@ -1,11 +1,11 @@
 {
   "$schema": "https://jami.studio/schemas/studio-ui/hosted-route-readiness.generated.json",
   "generatedBy": "apps/workbench/build.mjs",
-  "status": "public-registry-docs-workbench-suites-live",
+  "status": "public-registry-docs-workbench-workspaces-live",
   "publicRegistryClaimed": true,
   "publicDocsClaimed": true,
   "publicWorkbenchClaimed": true,
-  "publicSuiteRoutesClaimed": true,
+  "publicWorkspaceRoutesClaimed": true,
   "hostedPersistenceClaimed": false,
   "backendRegistrationClaimed": false,
   "workbenchBackend": {
@@ -73,8 +73,8 @@
       "backendRegistration": false
     },
     {
-      "id": "solo-suite-app",
-      "kind": "suite-app",
+      "id": "solo-workspace-app",
+      "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/solo/",
       "localArtifact": "suites/solo/index.html",
       "deployed": true,
@@ -82,7 +82,7 @@
     },
     {
       "id": "solo-solo-today",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/solo/solo-today.html",
       "localArtifact": "suites/solo/solo-today.html",
       "sourceRoute": "/solo/today",
@@ -91,7 +91,7 @@
     },
     {
       "id": "solo-solo-docs",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/solo/solo-docs.html",
       "localArtifact": "suites/solo/solo-docs.html",
       "sourceRoute": "/solo/docs",
@@ -99,8 +99,8 @@
       "hostedRuntime": false
     },
     {
-      "id": "business-ops-suite-app",
-      "kind": "suite-app",
+      "id": "business-ops-workspace-app",
+      "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/business-ops/",
       "localArtifact": "suites/business-ops/index.html",
       "deployed": true,
@@ -108,7 +108,7 @@
     },
     {
       "id": "business-ops-business-ops-dashboard",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/business-ops/business-ops-dashboard.html",
       "localArtifact": "suites/business-ops/business-ops-dashboard.html",
       "sourceRoute": "/business-ops/dashboard",
@@ -117,7 +117,7 @@
     },
     {
       "id": "business-ops-business-ops-staff",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/business-ops/business-ops-staff.html",
       "localArtifact": "suites/business-ops/business-ops-staff.html",
       "sourceRoute": "/business-ops/staff",
@@ -125,8 +125,8 @@
       "hostedRuntime": false
     },
     {
-      "id": "mixed-media-suite-app",
-      "kind": "suite-app",
+      "id": "mixed-media-workspace-app",
+      "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/mixed-media/",
       "localArtifact": "suites/mixed-media/index.html",
       "deployed": true,
@@ -134,7 +134,7 @@
     },
     {
       "id": "mixed-media-mixed-media-library",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/mixed-media/mixed-media-library.html",
       "localArtifact": "suites/mixed-media/mixed-media-library.html",
       "sourceRoute": "/mixed-media/library",
@@ -143,7 +143,7 @@
     },
     {
       "id": "mixed-media-mixed-media-pipeline",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/mixed-media/mixed-media-pipeline.html",
       "localArtifact": "suites/mixed-media/mixed-media-pipeline.html",
       "sourceRoute": "/mixed-media/pipeline",
@@ -151,8 +151,8 @@
       "hostedRuntime": false
     },
     {
-      "id": "research-writing-suite-app",
-      "kind": "suite-app",
+      "id": "research-writing-workspace-app",
+      "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/research-writing/",
       "localArtifact": "suites/research-writing/index.html",
       "deployed": true,
@@ -160,7 +160,7 @@
     },
     {
       "id": "research-writing-research-writing-sources",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/research-writing/research-writing-sources.html",
       "localArtifact": "suites/research-writing/research-writing-sources.html",
       "sourceRoute": "/research-writing/sources",
@@ -169,7 +169,7 @@
     },
     {
       "id": "research-writing-research-writing-brief",
-      "kind": "suite-page",
+      "kind": "workspace-page",
       "targetUrl": "https://registry.jami.studio/suites/research-writing/research-writing-brief.html",
       "localArtifact": "suites/research-writing/research-writing-brief.html",
       "sourceRoute": "/research-writing/brief",
