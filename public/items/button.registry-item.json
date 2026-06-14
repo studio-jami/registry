@@ -48,12 +48,12 @@
   ],
   "meta": {
     "packageName": "@jami-studio/button",
-    "suite": "solo",
+    "workspace": "solo",
     "lifecycle": {
       "id": "primitive.button",
       "version": "0.0.0-contract.20260609",
       "schemaVersion": "2026-06-09.registry-foundation",
-      "sourceHash": "sha256:1db5f34441ae7c5763bd7f5c4e002a0ef530af0a95f82800b17b23100766461d",
+      "sourceHash": "sha256:510194156269f0173c2cc16618700a54f83840d2956a7b2c79a9e804281b18e2",
       "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
     },
     "tokenRequirements": [

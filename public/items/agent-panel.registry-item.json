@@ -49,12 +49,12 @@
   ],
   "meta": {
     "packageName": "@jami-studio/agent-panel",
-    "suite": "solo",
+    "workspace": "solo",
     "lifecycle": {
       "id": "component.agent-panel",
       "version": "0.0.0-contract.20260609",
       "schemaVersion": "2026-06-09.registry-foundation",
-      "sourceHash": "sha256:af55ed9c37aee3cb57d759a5ac7fe2e7daac9db85451d626a715f61cf59eb636",
+      "sourceHash": "sha256:c8d68b0a7fd6799d530e55be7fecd518f5ed94c6a2479b32347ace84e198b2a0",
       "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
     },
     "tokenRequirements": [

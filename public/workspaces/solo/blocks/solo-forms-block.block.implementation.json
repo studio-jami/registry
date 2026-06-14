@@ -1,0 +1,177 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-09.workspace-shell",
+  "workspace": "solo",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/solo/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.solo.forms",
+    "title": "Quick form",
+    "component": "text-field",
+    "stateExamples": [
+      "invalid"
+    ]
+  },
+  "component": "text-field",
+  "renderedStates": {
+    "ready": {
+      "props": {
+        "label": "Quick form",
+        "value": "",
+        "placeholder": "No tasks are due; the data-list announces an empty status instead of hiding the section.",
+        "invalid": false,
+        "helperText": "A long source title, task description, or calendar note wraps inside the shell without horizontal overflow."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-quick-form"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Quick form"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-quick-form",
+              "name": "jami-field-quick-form",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No tasks are due; the data-list announces an empty status instead of hiding the section.",
+              "aria-describedby": "jami-field-quick-form-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-quick-form-help"
+            },
+            "children": [
+              "A long source title, task description, or calendar note wraps inside the shell without horizontal overflow."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    },
+    "invalid": {
+      "props": {
+        "label": "Quick form",
+        "value": "",
+        "placeholder": "No tasks are due; the data-list announces an empty status instead of hiding the section.",
+        "invalid": true,
+        "errorText": "Agent status is displayed as an error panel with no executable action wiring."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-quick-form"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Quick form"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-quick-form",
+              "name": "jami-field-quick-form",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No tasks are due; the data-list announces an empty status instead of hiding the section.",
+              "aria-invalid": "true",
+              "aria-describedby": "jami-field-quick-form-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-quick-form-help",
+              "role": "alert"
+            },
+            "children": [
+              "Agent status is displayed as an error panel with no executable action wiring."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "invalid"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-field",
+      "jami-field-label"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": false,
+    "emptyStateSafe": false,
+    "errorStateSafe": false,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/solo/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/solo/workspace-shell.json",
+    "copiedSource": false
+  }
+}

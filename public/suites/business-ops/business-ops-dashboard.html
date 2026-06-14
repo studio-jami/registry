@@ -393,7 +393,7 @@ section.ju-section { margin: 36px 0; }
 
 .ju-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); min-width: 0; }
 
-.ju-card, .ju-fixture, .ju-panel, .ju-suite {
+.ju-card, .ju-fixture, .ju-panel, .ju-workspace {
   background: var(--ju-surface);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -462,33 +462,33 @@ section.ju-section { margin: 36px 0; }
   padding: 2px 4px;
 }
 
-.ju-suite[data-suite] { border-left: 4px solid var(--ju-accent); }
-.ju-suite-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; justify-content: flex-start; min-width: 0; }
-.ju-suite-head h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 1.1rem; }
-.jami-suite-app, .jami-suite-page, .jami-suite-block {
+.ju-workspace[data-workspace] { border-left: 4px solid var(--ju-accent); }
+.ju-workspace-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; justify-content: flex-start; min-width: 0; }
+.ju-workspace-head h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 1.1rem; }
+.jami-workspace-app, .jami-workspace-page, .jami-workspace-block {
   min-width: 0;
 }
-.jami-suite-app {
+.jami-workspace-app {
   display: grid;
   gap: 18px;
 }
-.jami-suite-app-header, .jami-suite-page-header {
+.jami-workspace-app-header, .jami-workspace-page-header {
   border-bottom: 1px solid var(--ju-border);
   display: grid;
   gap: 4px;
   padding-bottom: 12px;
 }
-.jami-suite-eyebrow {
+.jami-workspace-eyebrow {
   color: var(--ju-muted);
   font-size: 0.72rem;
   font-weight: 800;
   margin: 0;
   text-transform: uppercase;
 }
-.jami-suite-app h1, .jami-suite-page h2 {
+.jami-workspace-app h1, .jami-workspace-page h2 {
   margin: 0;
 }
-.jami-suite-route-nav ul {
+.jami-workspace-route-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -496,7 +496,7 @@ section.ju-section { margin: 36px 0; }
   margin: 8px 0 0;
   padding: 0;
 }
-.jami-suite-route-nav a {
+.jami-workspace-route-nav a {
   background: var(--ju-surface);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -505,16 +505,16 @@ section.ju-section { margin: 36px 0; }
   padding: 6px 10px;
   text-decoration: none;
 }
-.jami-suite-pages {
+.jami-workspace-pages {
   display: grid;
   gap: 20px;
 }
-.jami-suite-block-grid {
+.jami-workspace-block-grid {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
-.jami-suite-block {
+.jami-workspace-block {
   background: var(--ju-bg);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -522,19 +522,19 @@ section.ju-section { margin: 36px 0; }
   gap: 10px;
   padding: 12px;
 }
-.jami-suite-block-label {
+.jami-workspace-block-label {
   color: var(--ju-muted);
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
-.jami-suite-state {
+.jami-workspace-state {
   border-top: 1px solid var(--ju-border);
   display: grid;
   gap: 8px;
   padding-top: 10px;
 }
-.jami-suite-state > span {
+.jami-workspace-state > span {
   color: var(--ju-muted);
   font-size: 0.74rem;
   font-weight: 700;
@@ -649,7 +649,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   .ju-shell { padding: 12px; }
   .ju-grid { grid-template-columns: minmax(0, 1fr); }
   .ju-kv { grid-template-columns: 1fr; }
-  .ju-card, .ju-fixture, .ju-panel, .ju-suite { padding: 12px; }
+  .ju-card, .ju-fixture, .ju-panel, .ju-workspace { padding: 12px; }
   .ju-badge, .ju-chip, .ju-flag { max-width: 100%; white-space: normal; }
   nav.ju-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   nav.ju-nav a { display: block; max-width: 100%; text-align: center; white-space: normal; width: 100%; }
@@ -662,14 +662,14 @@ footer.ju-footer code { overflow-wrap: anywhere; }
 <a class="ju-skip" href="#ju-main">Skip to content</a>
 <div class="ju-shell">
 <main id="ju-main">
-<section class="jami-suite-page" data-suite-lane="business-ops" data-suite-route="/business-ops/dashboard" data-react-suite-mount-version="2026-06-12.mounted-react-suite-routes" aria-labelledby="business-ops-business-ops-dashboard-title"><header class="jami-suite-page-header"><p class="jami-suite-eyebrow">business-ops</p><h2 id="business-ops-business-ops-dashboard-title">Operations dashboard</h2><p>Staffing, schedule exceptions, compliance signals, and display-only review actions.</p></header><div class="jami-suite-block-grid"><article class="jami-suite-block" data-suite-block="block.business-ops.kpis"><div class="jami-suite-block-label">Operational KPIs</div><section class="jami-data-list" role="region" aria-label="Operational KPIs"><h3 class="jami-data-list-title">Operational KPIs</h3><table class="jami-data-list-table"><thead><tr><th scope="col">Item</th><th scope="col">State</th></tr></thead><tbody><tr><td>Operational KPIs record</td><td>ready</td></tr></tbody></table></section><div class="jami-suite-state" data-suite-state="long-content"><span>long-content</span><section class="jami-data-list" role="region" aria-label="Operational KPIs"><h3 class="jami-data-list-title">Operational KPIs</h3><table class="jami-data-list-table"><thead><tr><th scope="col">Item</th><th scope="col">State</th></tr></thead><tbody><tr><td>A compliance exception with a long policy name wraps inside row cells and cards.</td><td>long-content</td></tr></tbody></table></section></div></article><article class="jami-suite-block" data-suite-block="block.business-ops.exceptions"><div class="jami-suite-block-label">Schedule exceptions</div><section class="jami-data-list" role="region" aria-label="Schedule exceptions"><h3 class="jami-data-list-title">Schedule exceptions</h3><table class="jami-data-list-table"><thead><tr><th scope="col">Item</th><th scope="col">State</th></tr></thead><tbody><tr><td>Schedule exceptions record</td><td>ready</td></tr></tbody></table></section><div class="jami-suite-state" data-suite-state="empty"><span>empty</span><section class="jami-data-list" role="region" aria-label="Schedule exceptions"><h3 class="jami-data-list-title">Schedule exceptions</h3><p role="status">No records to display.</p></section></div><div class="jami-suite-state" data-suite-state="error"><span>error</span><section class="jami-data-list" role="region" aria-label="Schedule exceptions"><h3 class="jami-data-list-title">Schedule exceptions</h3><p role="alert">A review queue error is shown without retrying or executing harness actions.</p></section></div></article><article class="jami-suite-block" data-suite-block="block.business-ops.agent-review"><div class="jami-suite-block-label">Review queue</div><section class="jami-agent-panel" role="status" aria-live="polite" aria-label="Review queue" data-status="running"><h3>Review queue</h3><p>running</p><ul class="jami-action-ref-list" aria-label="Action references"><li data-action-ref="act_business_ops_block_business_ops_agent_review_review">act_business_ops_block_business_ops_agent_review_review</li></ul><ul class="jami-artifact-ref-list" aria-label="Artifact view references"><li data-artifact-view-ref="artv_business_ops_block_business_ops_agent_review_trace">artv_business_ops_block_business_ops_agent_review_trace</li></ul></section><div class="jami-suite-state" data-suite-state="error"><span>error</span><section class="jami-agent-panel" role="status" aria-live="polite" aria-label="Review queue" data-status="error"><h3>Review queue</h3><p>error</p><ul class="jami-action-ref-list" aria-label="Action references"><li data-action-ref="act_business_ops_block_business_ops_agent_review_review">act_business_ops_block_business_ops_agent_review_review</li></ul><ul class="jami-artifact-ref-list" aria-label="Artifact view references"><li data-artifact-view-ref="artv_business_ops_block_business_ops_agent_review_trace">artv_business_ops_block_business_ops_agent_review_trace</li></ul></section></div></article></div></section>
+<section class="jami-workspace-page" data-workspace="business-ops" data-workspace-route="/business-ops/dashboard" data-react-workspace-mount-version="2026-06-12.mounted-react-workspace-routes" aria-labelledby="business-ops-business-ops-dashboard-title"><header class="jami-workspace-page-header"><p class="jami-workspace-eyebrow">business-ops</p><h2 id="business-ops-business-ops-dashboard-title">Operations dashboard</h2><p>Staffing, schedule exceptions, compliance signals, and display-only review actions.</p></header><div class="jami-workspace-block-grid"><article class="jami-workspace-block" data-workspace-block="block.business-ops.kpis"><div class="jami-workspace-block-label">Operational KPIs</div><section class="jami-data-list" role="region" aria-label="Operational KPIs"><h3 class="jami-data-list-title">Operational KPIs</h3><table class="jami-data-list-table"><thead><tr><th scope="col">Item</th><th scope="col">State</th></tr></thead><tbody><tr><td>Operational KPIs record</td><td>ready</td></tr></tbody></table></section><div class="jami-workspace-state" data-workspace-state="long-content"><span>long-content</span><section class="jami-data-list" role="region" aria-label="Operational KPIs"><h3 class="jami-data-list-title">Operational KPIs</h3><table class="jami-data-list-table"><thead><tr><th scope="col">Item</th><th scope="col">State</th></tr></thead><tbody><tr><td>A compliance exception with a long policy name wraps inside row cells and cards.</td><td>long-content</td></tr></tbody></table></section></div></article><article class="jami-workspace-block" data-workspace-block="block.business-ops.exceptions"><div class="jami-workspace-block-label">Schedule exceptions</div><section class="jami-data-list" role="region" aria-label="Schedule exceptions"><h3 class="jami-data-list-title">Schedule exceptions</h3><table class="jami-data-list-table"><thead><tr><th scope="col">Item</th><th scope="col">State</th></tr></thead><tbody><tr><td>Schedule exceptions record</td><td>ready</td></tr></tbody></table></section><div class="jami-workspace-state" data-workspace-state="empty"><span>empty</span><section class="jami-data-list" role="region" aria-label="Schedule exceptions"><h3 class="jami-data-list-title">Schedule exceptions</h3><p role="status">No records to display.</p></section></div><div class="jami-workspace-state" data-workspace-state="error"><span>error</span><section class="jami-data-list" role="region" aria-label="Schedule exceptions"><h3 class="jami-data-list-title">Schedule exceptions</h3><p role="alert">A review queue error is shown without retrying or executing harness actions.</p></section></div></article><article class="jami-workspace-block" data-workspace-block="block.business-ops.agent-review"><div class="jami-workspace-block-label">Review queue</div><section class="jami-agent-panel" role="status" aria-live="polite" aria-label="Review queue" data-status="running"><h3>Review queue</h3><p>running</p><ul class="jami-action-ref-list" aria-label="Action references"><li data-action-ref="act_business_ops_block_business_ops_agent_review_review">act_business_ops_block_business_ops_agent_review_review</li></ul><ul class="jami-artifact-ref-list" aria-label="Artifact view references"><li data-artifact-view-ref="artv_business_ops_block_business_ops_agent_review_trace">artv_business_ops_block_business_ops_agent_review_trace</li></ul></section><div class="jami-workspace-state" data-workspace-state="error"><span>error</span><section class="jami-agent-panel" role="status" aria-live="polite" aria-label="Review queue" data-status="error"><h3>Review queue</h3><p>error</p><ul class="jami-action-ref-list" aria-label="Action references"><li data-action-ref="act_business_ops_block_business_ops_agent_review_review">act_business_ops_block_business_ops_agent_review_review</li></ul><ul class="jami-artifact-ref-list" aria-label="Artifact view references"><li data-artifact-view-ref="artv_business_ops_block_business_ops_agent_review_trace">artv_business_ops_block_business_ops_agent_review_trace</li></ul></section></div></article></div></section>
 <section class="ju-section">
   <h2>Route Evidence</h2>
   <dl class="ju-kv-grid ju-card">
-    <div class="ju-kv"><dt>suite</dt><dd><code>business-ops</code></dd></div>
+    <div class="ju-kv"><dt>workspace</dt><dd><code>business-ops</code></dd></div>
     <div class="ju-kv"><dt>route</dt><dd><code>/business-ops/dashboard</code></dd></div>
-    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/suites.mjs</code></dd></div>
-    <div class="ju-kv"><dt>mount version</dt><dd><code>2026-06-12.mounted-react-suite-routes</code></dd></div>
+    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/workspaces.mjs</code></dd></div>
+    <div class="ju-kv"><dt>mount version</dt><dd><code>2026-06-12.mounted-react-workspace-routes</code></dd></div>
     <div class="ju-kv"><dt>hosted runtime</dt><dd><code>false</code></dd></div>
     <div class="ju-kv"><dt>harness execution</dt><dd><code>false</code></dd></div>
   </dl>

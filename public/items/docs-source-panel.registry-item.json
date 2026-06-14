@@ -48,12 +48,12 @@
   ],
   "meta": {
     "packageName": "@jami-studio/docs-source-panel",
-    "suite": "research-writing",
+    "workspace": "research-writing",
     "lifecycle": {
       "id": "component.docs-source-panel",
       "version": "0.0.0-contract.20260609",
       "schemaVersion": "2026-06-09.registry-foundation",
-      "sourceHash": "sha256:e18f5796e7bd70eef554db1ae63683fd9c04a515dd33a248402dbe64c52c474b",
+      "sourceHash": "sha256:2d5ce5b0b6c28d692b54f571a431d136150a92983ce8d10f80b15bc754aef9b9",
       "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
     },
     "tokenRequirements": [

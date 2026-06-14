@@ -1,0 +1,36 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-09.workspace-shell",
+  "workspace": "business-ops",
+  "block": {
+    "id": "block.business-ops.exceptions",
+    "title": "Schedule exceptions",
+    "component": "data-list",
+    "stateExamples": [
+      "empty",
+      "error"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/business-ops/dashboard",
+      "page": "page.business-ops.dashboard",
+      "title": "Operations dashboard"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.business-ops.dashboard",
+      "title": "Operations dashboard"
+    }
+  ],
+  "component": "data-list",
+  "stateFixtures": {
+    "empty": "No open schedule exceptions are announced as an empty operational state.",
+    "error": "A review queue error is shown without retrying or executing harness actions."
+  },
+  "provenance": {
+    "source": "registry/workspaces/business-ops/workspace-shell.json",
+    "copiedSource": false
+  }
+}

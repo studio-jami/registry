@@ -48,12 +48,12 @@
   ],
   "meta": {
     "packageName": "@jami-studio/text-field",
-    "suite": "solo",
+    "workspace": "solo",
     "lifecycle": {
       "id": "primitive.text-field",
       "version": "0.0.0-contract.20260609",
       "schemaVersion": "2026-06-09.registry-foundation",
-      "sourceHash": "sha256:13e28790f229c9189fde55b8f310a7575edcf2e2b0dd36294890ffcd6cb24f2b",
+      "sourceHash": "sha256:d495b0c12f7836d8121f3743ad83da99ad84e4f80e8f9ab9406f9e321cbca1be",
       "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
     },
     "tokenRequirements": [

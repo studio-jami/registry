@@ -1,0 +1,95 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page-implementation.generated.json",
+  "schemaVersion": "2026-06-09.workspace-shell",
+  "workspace": "solo",
+  "implementationStatus": "mounted-react-workspace-page",
+  "source": "registry/workspaces/solo/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "page": {
+    "id": "page.solo.docs",
+    "title": "Docs and sources",
+    "description": "Documents, citations, lightweight forms, and long reference notes.",
+    "components": [
+      "docs-source-panel",
+      "text-field",
+      "data-list",
+      "panel"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/solo/docs",
+      "page": "page.solo.docs",
+      "title": "Docs and sources",
+      "blocks": [
+        "block.solo.docs-sources",
+        "block.solo.forms"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.solo.docs-sources",
+      "title": "Docs sources",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/solo/blocks/solo-docs-sources-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "long-content"
+      ]
+    },
+    {
+      "id": "block.solo.forms",
+      "title": "Quick form",
+      "component": "text-field",
+      "implementationFile": "studio-ui/workspaces/solo/blocks/solo-forms-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "invalid"
+      ]
+    }
+  ],
+  "components": [
+    "data-list",
+    "docs-source-panel",
+    "panel",
+    "text-field"
+  ],
+  "evidence": {
+    "renderedBlockCount": 2,
+    "responsiveLayout": "single-column-safe mounted React composition",
+    "a11yStructure": "page routes compose labelled resident React block implementations",
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/solo/solo-docs.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/solo/workspace-shell.json",
+    "copiedSource": false
+  }
+}
