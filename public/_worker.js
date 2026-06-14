@@ -57,9 +57,10 @@ export default {
 };
 
 function docsFallbackPath(pathname) {
-  if (pathname === "/docs/registry") return "/preview-docs/registry.html";
-  if (pathname === "/docs/workbench") return "/preview-docs/workbench.html";
-  if (pathname === "/docs/suites") return "/preview-docs/suites.html";
+  const normalizedPath = pathname.replace(/\/+$/, "");
+  if (normalizedPath === "/docs/registry") return "/preview-docs/registry.html";
+  if (normalizedPath === "/docs/workbench") return "/preview-docs/workbench.html";
+  if (normalizedPath === "/docs/suites") return "/preview-docs/suites.html";
   return null;
 }
 
