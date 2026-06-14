@@ -333,5 +333,10 @@
     "ga4": {
       "measurementId": "G-R39QQTKF5F"
     }
+  },
+  "api": {
+    "examples": {
+      "defaults": "all"
+    }
   }
 }
