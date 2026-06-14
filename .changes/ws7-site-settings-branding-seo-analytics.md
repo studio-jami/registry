@@ -8,8 +8,9 @@ light/dark `logo` + the favicon set from `jami-favicon.zip`), SEO/Open Graph def
 (`description` + `seo.metatags`, keeping `seo.indexing: all`), and AIEO (authored static
 `public/llms.txt` + `public/llms-full.txt`, served at the apex). Wire the free-tier
 analytics stack: PostHog `registry-docs` via `integrations.posthog`
-(`sessionRecording: false`; replay + autocapture off, error tracking on), GA4 docs stream
-`G-R39QQTKF5F` via `integrations.ga4`, and the Cloudflare Web Analytics beacon injected into
+(`sessionRecording: false`; replay + autocapture off, error tracking on; hosted PostHog uses
+Mintlify's default proxy), GA4 docs stream `G-R39QQTKF5F` via `integrations.ga4`, and the
+Cloudflare Web Analytics beacon injected into
 the proxied docs `<head>` from the Cloudflare Pages advanced-mode Worker
 (`public/_worker.js`) since Mintlify exposes no custom-head-script field. Publishable client
 IDs (`phc_`/`G-`/beacon) are placed directly in `docs.json`/the worker (no env-interpolation

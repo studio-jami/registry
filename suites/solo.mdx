@@ -1,36 +1,36 @@
 ---
-title: 'Solo Suite: Personal Operations Shell for Workspaces'
+title: 'Solo Workspace: Personal Operations Shell'
 sidebarTitle: 'Solo'
-description: 'Install the Solo suite to get a compact personal operations shell with calendar, tasks, docs, forms, CRM, content, admin, and agent status in one command.'
+description: 'Install the Solo workspace to get a compact personal operations shell with calendar, tasks, docs, forms, CRM, content, admin, and agent status in one command.'
 ---
 
-The Solo suite is a compact personal operations shell built for individual contributors who need calendar awareness, task queuing, document access, lightweight forms, and display-only AI agent status — all inside a single coherent workspace. It targets the `solo` lane and ships a `workspace-with-rail` layout with four top-level navigation items. One install command drops 15 registry items into your project, from the base `jami-theme` tokens through every page, block, and primitive component the shell requires.
+The Solo workspace is a compact personal operations shell built for individual contributors who need calendar awareness, task queuing, document access, lightweight forms, and display-only AI agent status — all inside a single coherent workspace. It uses the `solo` workspace key and ships a `workspace-with-rail` layout with four top-level navigation items. One install command drops 15 registry items into your project, from the base `jami-theme` tokens through every page, block, and primitive component the shell requires.
 
 ## Install
 
-Run the following command to pull the entire Solo suite install graph into your project:
+Run the following command to pull the entire Solo workspace install graph into your project:
 
 <CodeGroup>
 ```bash npm
-npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
 ```bash pnpm
-pnpm dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+pnpm dlx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
 ```bash yarn
-yarn dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+yarn dlx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 </CodeGroup>
 
 <Note>
-  The install graph resolves all 15 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+  The install graph resolves all 15 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the workspace.
 </Note>
 
 ## What's Included
 
-The `solo-suite` registry item installs the following items in dependency order:
+The `solo-workspace` registry item installs the following items in dependency order:
 
 <Steps>
   <Step title="Design foundation">
@@ -43,7 +43,7 @@ The `solo-suite` registry item installs the following items in dependency order:
     `solo-app` — the `workspace-with-rail` layout shell that mounts the navigation rail and route outlet.
   </Step>
   <Step title="Pages">
-    `solo-today-page`, `solo-docs-page` — the two active route pages shipped with this suite version.
+    `solo-today-page`, `solo-docs-page` — the two active route pages shipped with this workspace version.
   </Step>
   <Step title="Blocks">
     `solo-agenda-block`, `solo-task-queue-block`, `solo-agent-status-block`, `solo-docs-sources-block`, `solo-forms-block` — the five discrete content blocks that compose each page.
@@ -58,8 +58,8 @@ The Solo app shell uses the `workspace-with-rail` layout. A persistent side rail
 |---|---|
 | Shell ID | `app.solo.shell` |
 | Layout | `workspace-with-rail` |
-| Lane | `solo` |
-| Package name | `@jami-studio/solo-suite` |
+| Workspace key | `solo` |
+| Package name | `@jami-studio/solo-workspace` |
 
 ### Navigation
 
@@ -124,7 +124,7 @@ Each block ships with named state fixtures you can reference in tests and Storyb
 
 ## Planned Surfaces
 
-The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+The following surfaces are defined in the workspace manifest and will be added in future releases. Installing the workspace now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
 
 <CardGroup cols={4}>
   <Card title="Calendar" icon="calendar-days" />
@@ -148,7 +148,7 @@ The following surfaces are defined in the suite manifest and will be added in fu
 
 ## Related Components
 
-The Solo suite is built entirely from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+The Solo workspace is built entirely from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
 
 <CardGroup cols={3}>
   <Card title="Agent Panel" icon="robot" href="/components/agent-panel">

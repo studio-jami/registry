@@ -237,7 +237,6 @@
   "integrations": {
     "posthog": {
       "apiKey": "phc_yXSPdUZwernahGPDF58U7MpFA4XBekzimoQU2fUBrn8E",
-      "apiHost": "https://us.i.posthog.com",
       "sessionRecording": false
     },
     "ga4": {

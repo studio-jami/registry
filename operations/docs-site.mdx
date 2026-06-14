@@ -70,7 +70,7 @@ Free-tier / credit-funded only. Posture per the analytics architecture decision:
 
 | Provider | Mechanism | ID / value | Notes |
 | --- | --- | --- | --- |
-| PostHog (`registry-docs` project) | `docs.json` `integrations.posthog` | `apiKey` `phc_…`, `apiHost` `https://us.posthog.com` | `sessionRecording: false` (replay off). Autocapture is off at the **project** level (no Mintlify toggle exists); exception tracking on. |
+| PostHog (`registry-docs` project) | `docs.json` `integrations.posthog` | `apiKey` `phc_…`; `apiHost` omitted so Mintlify uses its hosted PostHog proxy | `sessionRecording: false` (replay off). Autocapture is off at the **project** level (no Mintlify toggle exists); exception tracking on. |
 | Google Analytics 4 (docs stream) | `docs.json` `integrations.ga4` | `measurementId` `G-R39QQTKF5F` | Acquisition / SEO via Search Console linkage. |
 | Cloudflare Web Analytics | `public/_worker.js` (beacon injected into `<head>` via `HTMLRewriter`) | beacon token `83a3145e5d2a495491f28c50698fe5b1` | Cookieless, free, server-side baseline for `registry.jami.studio`. Mintlify has no custom-head-script field, so the beacon is injected at the Cloudflare Pages serving layer. |
 | Amplitude | disabled | — | Reserved for later product/hub funnels. |
@@ -82,7 +82,8 @@ Free-tier / credit-funded only. Posture per the analytics architecture decision:
 - **PostHog project `registry-docs` (id 469734):** session replay OFF and DOM autocapture OFF
   at the project level, exception tracking ON — provisioned and read-back-verified in WS9.
 - **Mintlify SDK level:** `sessionRecording: false` is set explicitly in `integrations.posthog`
-  as defense-in-depth (Mintlify enables session recording by default otherwise). Mintlify
+  as defense-in-depth (Mintlify enables session recording by default otherwise). `apiHost` is
+  omitted for hosted PostHog so Mintlify uses its `https://ph.mintlify.com` proxy. Mintlify
   exposes no autocapture flag, so autocapture suppression relies on the project-level setting.
 
 ### Key handling
