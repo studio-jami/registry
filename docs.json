@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Jami Studio Registry",
-  "theme": "almond",
+  "theme": "sequoia",
   "description": "Jami Studio Registry — installable shadcn UI components, design tokens, and complete application Workspaces (Solo, Business, Mixed Media, Research & Writing), plus the Jami Harness agent runtime. Build AI-powered workspace apps from a public registry.",
   "colors": {
     "primary": "#84381c",
@@ -267,9 +267,6 @@
         "label": "Get Started"
       }
     ]
-  },
-  "background": {
-    "decoration": "grid"
   },
   "metadata": {
     "timestamp": true
