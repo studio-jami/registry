@@ -393,7 +393,7 @@ section.ju-section { margin: 36px 0; }
 
 .ju-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); min-width: 0; }
 
-.ju-card, .ju-fixture, .ju-panel, .ju-suite {
+.ju-card, .ju-fixture, .ju-panel, .ju-workspace {
   background: var(--ju-surface);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -462,33 +462,33 @@ section.ju-section { margin: 36px 0; }
   padding: 2px 4px;
 }
 
-.ju-suite[data-suite] { border-left: 4px solid var(--ju-accent); }
-.ju-suite-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; justify-content: flex-start; min-width: 0; }
-.ju-suite-head h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 1.1rem; }
-.jami-suite-app, .jami-suite-page, .jami-suite-block {
+.ju-workspace[data-workspace] { border-left: 4px solid var(--ju-accent); }
+.ju-workspace-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; justify-content: flex-start; min-width: 0; }
+.ju-workspace-head h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 1.1rem; }
+.jami-workspace-app, .jami-workspace-page, .jami-workspace-block {
   min-width: 0;
 }
-.jami-suite-app {
+.jami-workspace-app {
   display: grid;
   gap: 18px;
 }
-.jami-suite-app-header, .jami-suite-page-header {
+.jami-workspace-app-header, .jami-workspace-page-header {
   border-bottom: 1px solid var(--ju-border);
   display: grid;
   gap: 4px;
   padding-bottom: 12px;
 }
-.jami-suite-eyebrow {
+.jami-workspace-eyebrow {
   color: var(--ju-muted);
   font-size: 0.72rem;
   font-weight: 800;
   margin: 0;
   text-transform: uppercase;
 }
-.jami-suite-app h1, .jami-suite-page h2 {
+.jami-workspace-app h1, .jami-workspace-page h2 {
   margin: 0;
 }
-.jami-suite-route-nav ul {
+.jami-workspace-route-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -496,7 +496,7 @@ section.ju-section { margin: 36px 0; }
   margin: 8px 0 0;
   padding: 0;
 }
-.jami-suite-route-nav a {
+.jami-workspace-route-nav a {
   background: var(--ju-surface);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -505,16 +505,16 @@ section.ju-section { margin: 36px 0; }
   padding: 6px 10px;
   text-decoration: none;
 }
-.jami-suite-pages {
+.jami-workspace-pages {
   display: grid;
   gap: 20px;
 }
-.jami-suite-block-grid {
+.jami-workspace-block-grid {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
-.jami-suite-block {
+.jami-workspace-block {
   background: var(--ju-bg);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -522,19 +522,19 @@ section.ju-section { margin: 36px 0; }
   gap: 10px;
   padding: 12px;
 }
-.jami-suite-block-label {
+.jami-workspace-block-label {
   color: var(--ju-muted);
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
-.jami-suite-state {
+.jami-workspace-state {
   border-top: 1px solid var(--ju-border);
   display: grid;
   gap: 8px;
   padding-top: 10px;
 }
-.jami-suite-state > span {
+.jami-workspace-state > span {
   color: var(--ju-muted);
   font-size: 0.74rem;
   font-weight: 700;
@@ -649,7 +649,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   .ju-shell { padding: 12px; }
   .ju-grid { grid-template-columns: minmax(0, 1fr); }
   .ju-kv { grid-template-columns: 1fr; }
-  .ju-card, .ju-fixture, .ju-panel, .ju-suite { padding: 12px; }
+  .ju-card, .ju-fixture, .ju-panel, .ju-workspace { padding: 12px; }
   .ju-badge, .ju-chip, .ju-flag { max-width: 100%; white-space: normal; }
   nav.ju-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   nav.ju-nav a { display: block; max-width: 100%; text-align: center; white-space: normal; width: 100%; }
@@ -664,7 +664,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
 
 <header class="ju-header">
   <h1>Studio UI Workbench Showcase</h1>
-  <p>A browser-renderable surface over the accepted Stream 5 seams: the generated Jami factory theme, the generated registry and suite descriptors, the resident renderer, and the workbench presentation seam. Policy, tool execution, memory, and provenance stay owned by Jami Harness; this surface only displays and configures.</p>
+  <p>A browser-renderable surface over the accepted Stream 5 seams: the generated Jami factory theme, the generated registry and workspace descriptors, the resident renderer, and the workbench presentation seam. Policy, tool execution, memory, and provenance stay owned by Jami Harness; this surface only displays and configures.</p>
   <div class="ju-toolbar" role="group" aria-label="Theme">
     <span class="ju-toolbar-label" id="ju-theme-label">Theme</span>
     <button type="button" class="ju-theme-btn" data-theme-value="factory" aria-pressed="false">Factory (warm)</button><button type="button" class="ju-theme-btn" data-theme-value="light" aria-pressed="true">Light</button><button type="button" class="ju-theme-btn" data-theme-value="dark" aria-pressed="false">Dark</button>
@@ -673,7 +673,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
 
 <nav class="ju-nav" aria-label="Sections">
   <ul>
-    <li><a href="#suite-solo">Solo / general workflow</a></li><li><a href="#suite-business-ops">Business operations</a></li><li><a href="#suite-mixed-media">Mixed media</a></li><li><a href="#suite-research-writing">Research / writing</a></li>
+    <li><a href="#workspace-solo">Solo</a></li><li><a href="#workspace-business-ops">Business</a></li><li><a href="#workspace-mixed-media">Mixed Media</a></li><li><a href="#workspace-research-writing">Research &amp; Writing</a></li>
     <li><a href="#brand-options">Default kit options</a></li>
     <li><a href="#vocabulary">Vocabulary schema</a></li>
     <li><a href="#radix-wrappers">Radix wrappers</a></li>
@@ -684,21 +684,21 @@ footer.ju-footer code { overflow-wrap: anywhere; }
 </nav>
 <main id="ju-main">
 
-<section class="ju-section" aria-labelledby="ju-suites-h">
-  <h2 id="ju-suites-h">Suite lanes</h2>
-  <p class="ju-lead">Each lane renders from generated suite manifests, mounted React route artifacts, and primitive-factory state evidence: app-shell navigation, route maps, page/block/component parts, install graph metadata, and long-content/empty/error states. These are local server-rendered React implementations, not a claim of hosted runtime.</p>
+<section class="ju-section" aria-labelledby="ju-workspaces-h">
+  <h2 id="ju-workspaces-h">Workspaces</h2>
+  <p class="ju-lead">Each workspace renders from generated workspace manifests, mounted React route artifacts, and primitive-factory state evidence: app-shell navigation, route maps, page/block/component parts, install graph metadata, and long-content/empty/error states. These are local server-rendered React implementations, not a claim of hosted runtime.</p>
   <div class="ju-grid">
     
-<article class="ju-suite" id="suite-solo" data-suite="solo">
-  <div class="ju-suite-head">
-    <h3>Solo / general workflow <span class="ju-muted">(solo)</span></h3>
+<article class="ju-workspace" id="workspace-solo" data-workspace="solo">
+  <div class="ju-workspace-head">
+    <h3>Solo <span class="ju-muted">(solo)</span></h3>
     <span class="ju-badge" data-status="ready">generated shell route</span>
   </div>
-  <p class="ju-muted">Solo / general-workflow suite foundation: install-graph descriptor for the calendar, forms, docs, agent, tasks, and simple CRM/content/admin lane.</p>
+  <p class="ju-muted">Solo / general-workflow workspace foundation: install-graph descriptor for the calendar, forms, docs, agent, tasks, and simple CRM/content/admin workspace.</p>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/solo-suite</code></dd></div>
+    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/solo-workspace</code></dd></div>
     <div class="ju-kv"><dt>schema version</dt><dd><code>2026-06-09.registry-foundation</code></dd></div>
-    <div class="ju-kv"><dt>install graph</dt><dd><code>solo-suite</code> -> jami-theme, button, panel, text-field, data-list, agent-panel, docs-source-panel, solo-app, solo-today-page, solo-docs-page, solo-agenda-block, solo-task-queue-block, solo-agent-status-block, solo-docs-sources-block, solo-forms-block</dd></div>
+    <div class="ju-kv"><dt>install graph</dt><dd><code>solo-workspace</code> -> jami-theme, button, panel, text-field, data-list, agent-panel, docs-source-panel, solo-app, solo-today-page, solo-docs-page, solo-agenda-block, solo-task-queue-block, solo-agent-status-block, solo-docs-sources-block, solo-forms-block</dd></div>
   </dl>
   <h4>Installed registry items</h4>
   <ul class="ju-kv-list"><li class="ju-member-row"><code>jami-theme</code><span class="ju-member-meta">registry:theme · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>button</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>panel</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>text-field</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>data-list</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>agent-panel</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>docs-source-panel</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-app</code><span class="ju-member-meta">registry:app · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-today-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-docs-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-agenda-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-task-queue-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-agent-status-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-docs-sources-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>solo-forms-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li></ul>
@@ -744,46 +744,46 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   
   <h4>Primitive-factory implementation evidence</h4>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/suites/solo/solo-app.implementation.json</code></dd></div>
-    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-suite-app</span></dd></div>
+    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/workspaces/solo/solo-app.implementation.json</code></dd></div>
+    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-workspace-app</span></dd></div>
     <div class="ju-kv"><dt>primitive factory</dt><dd><code>2026-06-09.framework-neutral-component-factory</code></dd></div>
     <div class="ju-kv"><dt>runtime boundary</dt><dd>React runtime: <code>true</code> · hosted: <code>false</code> · harness execution: <code>false</code></dd></div>
     <div class="ju-kv"><dt>rendered parts</dt><dd>2 pages · 5 blocks</dd></div>
   </dl>
   <ul class="ju-block-list"><li>
         <div class="ju-block-title"><strong>Agenda</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/solo/blocks/solo-agenda-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/solo/blocks/solo-agenda-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Task queue</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/solo/blocks/solo-task-queue-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/solo/blocks/solo-task-queue-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">empty</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Agent status</strong><span class="ju-chip">agent-panel</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/solo/blocks/solo-agent-status-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/solo/blocks/solo-agent-status-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">error</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Docs sources</strong><span class="ju-chip">docs-source-panel</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/solo/blocks/solo-docs-sources-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/solo/blocks/solo-docs-sources-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Quick form</strong><span class="ju-chip">text-field</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/solo/blocks/solo-forms-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/solo/blocks/solo-forms-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">invalid</span></div>
       </li></ul>
   <h4>Surface vocabulary <span class="ju-muted">(described in generated shell; mounted React route artifacts emitted locally)</span></h4>
   <div class="ju-chips"><span class="ju-pending">calendar</span> <span class="ju-pending">forms</span> <span class="ju-pending">docs</span> <span class="ju-pending">agent</span> <span class="ju-pending">tasks</span> <span class="ju-pending">crm</span> <span class="ju-pending">content</span> <span class="ju-pending">admin</span></div>
 </article>
-<article class="ju-suite" id="suite-business-ops" data-suite="business-ops">
-  <div class="ju-suite-head">
-    <h3>Business operations <span class="ju-muted">(business-ops)</span></h3>
+<article class="ju-workspace" id="workspace-business-ops" data-workspace="business-ops">
+  <div class="ju-workspace-head">
+    <h3>Business <span class="ju-muted">(business-ops)</span></h3>
     <span class="ju-badge" data-status="ready">generated shell route</span>
   </div>
-  <p class="ju-muted">Business-operations suite foundation: install-graph descriptor for the staff, scheduling, forms, training, compliance, and operational-dashboard lane.</p>
+  <p class="ju-muted">Business operations workspace foundation: install-graph descriptor for the staff, scheduling, forms, training, compliance, and operational-dashboard workspace.</p>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/business-ops-suite</code></dd></div>
+    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/business-ops-workspace</code></dd></div>
     <div class="ju-kv"><dt>schema version</dt><dd><code>2026-06-09.registry-foundation</code></dd></div>
-    <div class="ju-kv"><dt>install graph</dt><dd><code>business-ops-suite</code> -> jami-theme, button, panel, text-field, data-list, agent-panel, business-ops-app, business-ops-dashboard-page, business-ops-staff-page, business-ops-kpis-block, business-ops-exceptions-block, business-ops-agent-review-block, business-ops-staff-table-block, business-ops-training-form-block</dd></div>
+    <div class="ju-kv"><dt>install graph</dt><dd><code>business-ops-workspace</code> -> jami-theme, button, panel, text-field, data-list, agent-panel, business-ops-app, business-ops-dashboard-page, business-ops-staff-page, business-ops-kpis-block, business-ops-exceptions-block, business-ops-agent-review-block, business-ops-staff-table-block, business-ops-training-form-block</dd></div>
   </dl>
   <h4>Installed registry items</h4>
   <ul class="ju-kv-list"><li class="ju-member-row"><code>jami-theme</code><span class="ju-member-meta">registry:theme · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>button</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>panel</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>text-field</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>data-list</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>agent-panel</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-app</code><span class="ju-member-meta">registry:app · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-dashboard-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-staff-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-kpis-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-exceptions-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-agent-review-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-staff-table-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>business-ops-training-form-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li></ul>
@@ -829,46 +829,46 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   
   <h4>Primitive-factory implementation evidence</h4>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/suites/business-ops/business-ops-app.implementation.json</code></dd></div>
-    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-suite-app</span></dd></div>
+    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/workspaces/business-ops/business-ops-app.implementation.json</code></dd></div>
+    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-workspace-app</span></dd></div>
     <div class="ju-kv"><dt>primitive factory</dt><dd><code>2026-06-09.framework-neutral-component-factory</code></dd></div>
     <div class="ju-kv"><dt>runtime boundary</dt><dd>React runtime: <code>true</code> · hosted: <code>false</code> · harness execution: <code>false</code></dd></div>
     <div class="ju-kv"><dt>rendered parts</dt><dd>2 pages · 5 blocks</dd></div>
   </dl>
   <ul class="ju-block-list"><li>
         <div class="ju-block-title"><strong>Operational KPIs</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/business-ops/blocks/business-ops-kpis-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/business-ops/blocks/business-ops-kpis-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Schedule exceptions</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/business-ops/blocks/business-ops-exceptions-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/business-ops/blocks/business-ops-exceptions-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">empty</span><span class="ju-flag" data-status="ready">error</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Review queue</strong><span class="ju-chip">agent-panel</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/business-ops/blocks/business-ops-agent-review-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/business-ops/blocks/business-ops-agent-review-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">error</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Staff records</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/business-ops/blocks/business-ops-staff-table-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/business-ops/blocks/business-ops-staff-table-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Training form</strong><span class="ju-chip">text-field</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/business-ops/blocks/business-ops-training-form-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/business-ops/blocks/business-ops-training-form-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">invalid</span></div>
       </li></ul>
   <h4>Surface vocabulary <span class="ju-muted">(described in generated shell; mounted React route artifacts emitted locally)</span></h4>
   <div class="ju-chips"><span class="ju-pending">staff</span> <span class="ju-pending">scheduling</span> <span class="ju-pending">forms</span> <span class="ju-pending">training</span> <span class="ju-pending">compliance</span> <span class="ju-pending">operations-dashboard</span></div>
 </article>
-<article class="ju-suite" id="suite-mixed-media" data-suite="mixed-media">
-  <div class="ju-suite-head">
-    <h3>Mixed media <span class="ju-muted">(mixed-media)</span></h3>
+<article class="ju-workspace" id="workspace-mixed-media" data-workspace="mixed-media">
+  <div class="ju-workspace-head">
+    <h3>Mixed Media <span class="ju-muted">(mixed-media)</span></h3>
     <span class="ju-badge" data-status="ready">generated shell route</span>
   </div>
-  <p class="ju-muted">Mixed-media suite foundation: install-graph descriptor for the assets, generation, editing, pipelines, review, publishing, and media-library lane.</p>
+  <p class="ju-muted">Mixed media workspace foundation: install-graph descriptor for the assets, generation, editing, pipelines, review, publishing, and media-library workspace.</p>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/mixed-media-suite</code></dd></div>
+    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/mixed-media-workspace</code></dd></div>
     <div class="ju-kv"><dt>schema version</dt><dd><code>2026-06-09.registry-foundation</code></dd></div>
-    <div class="ju-kv"><dt>install graph</dt><dd><code>mixed-media-suite</code> -> jami-theme, button, panel, data-list, agent-panel, media-grid, mixed-media-app, mixed-media-library-page, mixed-media-pipeline-page, mixed-media-assets-block, mixed-media-metadata-block, mixed-media-pipeline-block, mixed-media-review-agent-block</dd></div>
+    <div class="ju-kv"><dt>install graph</dt><dd><code>mixed-media-workspace</code> -> jami-theme, button, panel, data-list, agent-panel, media-grid, mixed-media-app, mixed-media-library-page, mixed-media-pipeline-page, mixed-media-assets-block, mixed-media-metadata-block, mixed-media-pipeline-block, mixed-media-review-agent-block</dd></div>
   </dl>
   <h4>Installed registry items</h4>
   <ul class="ju-kv-list"><li class="ju-member-row"><code>jami-theme</code><span class="ju-member-meta">registry:theme · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>button</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>panel</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>data-list</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>agent-panel</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>media-grid</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-app</code><span class="ju-member-meta">registry:app · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-library-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-pipeline-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-assets-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-metadata-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-pipeline-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>mixed-media-review-agent-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li></ul>
@@ -911,42 +911,42 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   
   <h4>Primitive-factory implementation evidence</h4>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/suites/mixed-media/mixed-media-app.implementation.json</code></dd></div>
-    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-suite-app</span></dd></div>
+    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/workspaces/mixed-media/mixed-media-app.implementation.json</code></dd></div>
+    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-workspace-app</span></dd></div>
     <div class="ju-kv"><dt>primitive factory</dt><dd><code>2026-06-09.framework-neutral-component-factory</code></dd></div>
     <div class="ju-kv"><dt>runtime boundary</dt><dd>React runtime: <code>true</code> · hosted: <code>false</code> · harness execution: <code>false</code></dd></div>
     <div class="ju-kv"><dt>rendered parts</dt><dd>2 pages · 4 blocks</dd></div>
   </dl>
   <ul class="ju-block-list"><li>
         <div class="ju-block-title"><strong>Assets</strong><span class="ju-chip">media-grid</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/mixed-media/blocks/mixed-media-assets-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/mixed-media/blocks/mixed-media-assets-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">empty</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Asset metadata</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/mixed-media/blocks/mixed-media-metadata-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/mixed-media/blocks/mixed-media-metadata-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Pipeline runs</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/mixed-media/blocks/mixed-media-pipeline-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/mixed-media/blocks/mixed-media-pipeline-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">error</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Review agent</strong><span class="ju-chip">agent-panel</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/mixed-media/blocks/mixed-media-review-agent-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/mixed-media/blocks/mixed-media-review-agent-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">error</span></div>
       </li></ul>
   <h4>Surface vocabulary <span class="ju-muted">(described in generated shell; mounted React route artifacts emitted locally)</span></h4>
   <div class="ju-chips"><span class="ju-pending">assets</span> <span class="ju-pending">generation</span> <span class="ju-pending">editing</span> <span class="ju-pending">pipelines</span> <span class="ju-pending">review</span> <span class="ju-pending">publishing</span> <span class="ju-pending">library</span></div>
 </article>
-<article class="ju-suite" id="suite-research-writing" data-suite="research-writing">
-  <div class="ju-suite-head">
-    <h3>Research / writing <span class="ju-muted">(research-writing)</span></h3>
+<article class="ju-workspace" id="workspace-research-writing" data-workspace="research-writing">
+  <div class="ju-workspace-head">
+    <h3>Research &amp; Writing <span class="ju-muted">(research-writing)</span></h3>
     <span class="ju-badge" data-status="ready">generated shell route</span>
   </div>
-  <p class="ju-muted">Research / writing suite foundation: install-graph descriptor for the sources, notes, citations, briefs, documents, outlines, and knowledge-work lane.</p>
+  <p class="ju-muted">Research &amp; writing workspace foundation: install-graph descriptor for the sources, notes, citations, briefs, documents, outlines, and knowledge-work workspace.</p>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/research-writing-suite</code></dd></div>
+    <div class="ju-kv"><dt>manifest</dt><dd><code>@jami-studio/research-writing-workspace</code></dd></div>
     <div class="ju-kv"><dt>schema version</dt><dd><code>2026-06-09.registry-foundation</code></dd></div>
-    <div class="ju-kv"><dt>install graph</dt><dd><code>research-writing-suite</code> -> jami-theme, button, panel, text-field, data-list, agent-panel, docs-source-panel, research-writing-app, research-writing-sources-page, research-writing-brief-page, research-writing-sources-block, research-writing-citations-block, research-writing-outline-block, research-writing-agent-review-block</dd></div>
+    <div class="ju-kv"><dt>install graph</dt><dd><code>research-writing-workspace</code> -> jami-theme, button, panel, text-field, data-list, agent-panel, docs-source-panel, research-writing-app, research-writing-sources-page, research-writing-brief-page, research-writing-sources-block, research-writing-citations-block, research-writing-outline-block, research-writing-agent-review-block</dd></div>
   </dl>
   <h4>Installed registry items</h4>
   <ul class="ju-kv-list"><li class="ju-member-row"><code>jami-theme</code><span class="ju-member-meta">registry:theme · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>button</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>panel</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>text-field</code><span class="ju-member-meta">registry:ui · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>data-list</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>agent-panel</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>docs-source-panel</code><span class="ju-member-meta">registry:component · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-app</code><span class="ju-member-meta">registry:app · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-sources-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-brief-page</code><span class="ju-member-meta">registry:page · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-sources-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-citations-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-outline-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li><li class="ju-member-row"><code>research-writing-agent-review-block</code><span class="ju-member-meta">registry:block · v0.0.0-contract.20260609</span><span class="ju-badge" data-status="ready">installable</span></li></ul>
@@ -989,27 +989,27 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   
   <h4>Primitive-factory implementation evidence</h4>
   <dl class="ju-kv-grid">
-    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/suites/research-writing/research-writing-app.implementation.json</code></dd></div>
-    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-suite-app</span></dd></div>
+    <div class="ju-kv"><dt>app implementation</dt><dd><code>studio-ui/workspaces/research-writing/research-writing-app.implementation.json</code></dd></div>
+    <div class="ju-kv"><dt>status</dt><dd><span class="ju-badge" data-status="ready">mounted-react-workspace-app</span></dd></div>
     <div class="ju-kv"><dt>primitive factory</dt><dd><code>2026-06-09.framework-neutral-component-factory</code></dd></div>
     <div class="ju-kv"><dt>runtime boundary</dt><dd>React runtime: <code>true</code> · hosted: <code>false</code> · harness execution: <code>false</code></dd></div>
     <div class="ju-kv"><dt>rendered parts</dt><dd>2 pages · 4 blocks</dd></div>
   </dl>
   <ul class="ju-block-list"><li>
         <div class="ju-block-title"><strong>Sources</strong><span class="ju-chip">docs-source-panel</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/research-writing/blocks/research-writing-sources-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/research-writing/blocks/research-writing-sources-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">long-content</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Citations</strong><span class="ju-chip">data-list</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/research-writing/blocks/research-writing-citations-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/research-writing/blocks/research-writing-citations-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">empty</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Outline</strong><span class="ju-chip">text-field</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/research-writing/blocks/research-writing-outline-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/research-writing/blocks/research-writing-outline-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">invalid</span></div>
       </li><li>
         <div class="ju-block-title"><strong>Writing review</strong><span class="ju-chip">agent-panel</span></div>
-        <div class="ju-muted"><code>studio-ui/suites/research-writing/blocks/research-writing-agent-review-block.block.implementation.json</code></div>
+        <div class="ju-muted"><code>studio-ui/workspaces/research-writing/blocks/research-writing-agent-review-block.block.implementation.json</code></div>
         <div class="ju-chips"><span class="ju-flag" data-status="ready">ready</span><span class="ju-flag" data-status="ready">error</span></div>
       </li></ul>
   <h4>Surface vocabulary <span class="ju-muted">(described in generated shell; mounted React route artifacts emitted locally)</span></h4>
@@ -1018,19 +1018,19 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   </div>
 </section>
 
-<section class="ju-section" id="mounted-suites" aria-labelledby="ju-mounted-suites-h">
-  <h2 id="ju-mounted-suites-h">Mounted React suite routes</h2>
-  <p class="ju-lead">Server-rendered React app/page/block routes from <code>packages/ui/src/suites.mjs</code>. These local preview artifacts use the resident wrappers and generated suite manifests; hosted suite routes, hosted runtime state, persistence, backend registration, and harness execution are not claimed.</p>
+<section class="ju-section" id="mounted-workspaces" aria-labelledby="ju-mounted-workspaces-h">
+  <h2 id="ju-mounted-workspaces-h">Mounted React workspace routes</h2>
+  <p class="ju-lead">Server-rendered React app/page/block routes from <code>packages/ui/src/workspaces.mjs</code>. These local preview artifacts use the resident wrappers and generated workspace manifests; hosted workspace routes, hosted runtime state, persistence, backend registration, and harness execution are not claimed.</p>
   <div class="ju-grid">
 <article class="ju-card">
   <header class="ju-card-head">
     <h4>solo</h4>
     <span class="ju-badge" data-status="ready">mounted React route</span>
-    <span class="ju-chip">2026-06-12.mounted-react-suite-routes</span>
+    <span class="ju-chip">2026-06-12.mounted-react-workspace-routes</span>
   </header>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>app route</dt><dd><a href="suites/solo/index.html"><code>suites/solo/index.html</code></a></dd></div>
-    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/suites.mjs</code></dd></div>
+    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/workspaces.mjs</code></dd></div>
     <div class="ju-kv"><dt>hosted runtime</dt><dd><code>false</code></dd></div>
     <div class="ju-kv"><dt>harness execution</dt><dd><code>false</code></dd></div>
   </dl>
@@ -1040,11 +1040,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   <header class="ju-card-head">
     <h4>business-ops</h4>
     <span class="ju-badge" data-status="ready">mounted React route</span>
-    <span class="ju-chip">2026-06-12.mounted-react-suite-routes</span>
+    <span class="ju-chip">2026-06-12.mounted-react-workspace-routes</span>
   </header>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>app route</dt><dd><a href="suites/business-ops/index.html"><code>suites/business-ops/index.html</code></a></dd></div>
-    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/suites.mjs</code></dd></div>
+    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/workspaces.mjs</code></dd></div>
     <div class="ju-kv"><dt>hosted runtime</dt><dd><code>false</code></dd></div>
     <div class="ju-kv"><dt>harness execution</dt><dd><code>false</code></dd></div>
   </dl>
@@ -1054,11 +1054,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   <header class="ju-card-head">
     <h4>mixed-media</h4>
     <span class="ju-badge" data-status="ready">mounted React route</span>
-    <span class="ju-chip">2026-06-12.mounted-react-suite-routes</span>
+    <span class="ju-chip">2026-06-12.mounted-react-workspace-routes</span>
   </header>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>app route</dt><dd><a href="suites/mixed-media/index.html"><code>suites/mixed-media/index.html</code></a></dd></div>
-    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/suites.mjs</code></dd></div>
+    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/workspaces.mjs</code></dd></div>
     <div class="ju-kv"><dt>hosted runtime</dt><dd><code>false</code></dd></div>
     <div class="ju-kv"><dt>harness execution</dt><dd><code>false</code></dd></div>
   </dl>
@@ -1068,11 +1068,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   <header class="ju-card-head">
     <h4>research-writing</h4>
     <span class="ju-badge" data-status="ready">mounted React route</span>
-    <span class="ju-chip">2026-06-12.mounted-react-suite-routes</span>
+    <span class="ju-chip">2026-06-12.mounted-react-workspace-routes</span>
   </header>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>app route</dt><dd><a href="suites/research-writing/index.html"><code>suites/research-writing/index.html</code></a></dd></div>
-    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/suites.mjs</code></dd></div>
+    <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/workspaces.mjs</code></dd></div>
     <div class="ju-kv"><dt>hosted runtime</dt><dd><code>false</code></dd></div>
     <div class="ju-kv"><dt>harness execution</dt><dd><code>false</code></dd></div>
   </dl>
@@ -1090,11 +1090,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     <h4>Command Grid</h4>
     <span class="ju-badge" data-status="ready">selectable</span>
   </header>
-  <p class="ju-muted">Sharper suite-shell direction for mixed-media and business operations: blue command accents, tighter radius, and registry-first install cards.</p>
+  <p class="ju-muted">Sharper workspace-shell direction for mixed-media and business operations: blue command accents, tighter radius, and registry-first install cards.</p>
   <div class="ju-swatch-row" aria-label="Command Grid token delta swatches"><div class="ju-large-swatch" style="background:#315C8E"><span>light.accent</span></div><div class="ju-large-swatch" style="background:#9BB7E3"><span>dark.accent</span></div><div class="ju-large-swatch" style="background:#A64B72"><span>focusRing</span></div></div>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>registry item</dt><dd><code>command-grid-brand</code></dd></div>
-    <div class="ju-kv"><dt>default kit role</dt><dd>suite shell stress-test candidate</dd></div>
+    <div class="ju-kv"><dt>default kit role</dt><dd>workspace shell stress-test candidate</dd></div>
     <div class="ju-kv"><dt>brand canon</dt><dd>not final canon</dd></div>
     <div class="ju-kv"><dt>seed use</dt><dd>Exploratory cue reference only; no logo source or final mark is redistributed by this descriptor.</dd></div>
   </dl>
@@ -1103,7 +1103,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     <span class="ju-chip">CLI inspectable</span>
   </div>
   <details class="ju-reasons"><summary>Token deltas</summary><ul><li><code>semantic.light.accent</code> -> <code>#315C8E</code></li><li><code>semantic.dark.accent</code> -> <code>#9BB7E3</code></li><li><code>componentState.focusRing</code> -> <code>#A64B72</code></li><li><code>radius.control</code> -> <code>4px</code></li><li><code>spacing.control</code> -> <code>7px</code></li><li><code>shell.dockWidth</code> -> <code>280px</code></li></ul></details>
-  <details class="ju-reasons"><summary>Best fit</summary><div class="ju-chips"><span class="ju-chip">mixed-media suite</span><span class="ju-chip">business operations suite</span><span class="ju-chip">registry item choice and install inspection</span></div></details>
+  <details class="ju-reasons"><summary>Best fit</summary><div class="ju-chips"><span class="ju-chip">mixed-media workspace</span><span class="ju-chip">business operations workspace</span><span class="ju-chip">registry item choice and install inspection</span></div></details>
   <details class="ju-reasons"><summary>Open risks</summary><ul><li>can feel too cold unless paired with the soft character cue</li><li>requires careful contrast checks for blue accent on dark surfaces</li></ul></details>
 </article>
 <article class="ju-card ju-brand-card">
@@ -1111,11 +1111,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     <h4>Editorial Studio</h4>
     <span class="ju-badge" data-status="ready">selectable</span>
   </header>
-  <p class="ju-muted">A restrained creator-workbench option with richer plum accent, quieter spacing, and wordmark-first presentation for docs and writing suites.</p>
+  <p class="ju-muted">A restrained creator-workbench option with richer plum accent, quieter spacing, and wordmark-first presentation for docs and writing workspaces.</p>
   <div class="ju-swatch-row" aria-label="Editorial Studio token delta swatches"><div class="ju-large-swatch" style="background:#6F3D5F"><span>light.accent</span></div><div class="ju-large-swatch" style="background:#D8A5C8"><span>dark.accent</span></div><div class="ju-large-swatch" style="background:#237C7A"><span>focusRing</span></div></div>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>registry item</dt><dd><code>editorial-studio-brand</code></dd></div>
-    <div class="ju-kv"><dt>default kit role</dt><dd>editorial suite candidate</dd></div>
+    <div class="ju-kv"><dt>default kit role</dt><dd>editorial workspace candidate</dd></div>
     <div class="ju-kv"><dt>brand canon</dt><dd>not final canon</dd></div>
     <div class="ju-kv"><dt>seed use</dt><dd>Exploratory cue reference only; no logo source or final mark is redistributed by this descriptor.</dd></div>
   </dl>
@@ -1124,7 +1124,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     <span class="ju-chip">CLI inspectable</span>
   </div>
   <details class="ju-reasons"><summary>Token deltas</summary><ul><li><code>semantic.light.accent</code> -> <code>#6F3D5F</code></li><li><code>semantic.dark.accent</code> -> <code>#D8A5C8</code></li><li><code>componentState.focusRing</code> -> <code>#237C7A</code></li><li><code>radius.control</code> -> <code>8px</code></li><li><code>spacing.control</code> -> <code>10px</code></li><li><code>shell.dockWidth</code> -> <code>340px</code></li></ul></details>
-  <details class="ju-reasons"><summary>Best fit</summary><div class="ju-chips"><span class="ju-chip">research-writing suite</span><span class="ju-chip">docs and source panels</span><span class="ju-chip">brand book and documentation previews</span></div></details>
+  <details class="ju-reasons"><summary>Best fit</summary><div class="ju-chips"><span class="ju-chip">research-writing workspace</span><span class="ju-chip">docs and source panels</span><span class="ju-chip">brand book and documentation previews</span></div></details>
   <details class="ju-reasons"><summary>Open risks</summary><ul><li>must avoid drifting into a cream-only editorial page</li><li>needs sharper app-chrome treatment for dense operations screens</li></ul></details>
 </article>
 <article class="ju-card ju-brand-card">
@@ -1302,7 +1302,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     <span class="ju-badge" data-status="ready">button</span>
     <span class="ju-chip">implemented-radix-react-wrapper-slice</span>
   </header>
-  <div class="ju-wrapper-preview" aria-label="button-as-child wrapper preview"><a href="#suite-solo" class="jami-button" data-variant="secondary" data-size="regular">Open solo suite</a></div>
+  <div class="ju-wrapper-preview" aria-label="button-as-child wrapper preview"><a href="#workspace-solo" class="jami-button" data-variant="secondary" data-size="regular">Open solo workspace</a></div>
   <dl class="ju-kv-grid">
     <div class="ju-kv"><dt>example</dt><dd><code>button-as-child</code></dd></div>
     <div class="ju-kv"><dt>source</dt><dd><code>packages/ui/src/radix-react-wrappers.mjs</code></dd></div>
@@ -1310,7 +1310,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     <div class="ju-kv"><dt>renderer execution</dt><dd><code>false</code></dd></div>
   </dl>
   <div class="ju-chips" aria-label="button-as-child packages"><span class="ju-chip"><code>@radix-ui/react-slot@1.2.5</code></span></div>
-  <details class="ju-reasons"><summary>Rendered HTML</summary><code class="ju-wrapper-source">&lt;a href=&quot;#suite-solo&quot; class=&quot;jami-button&quot; data-variant=&quot;secondary&quot; data-size=&quot;regular&quot;&gt;Open solo suite&lt;/a&gt;</code></details>
+  <details class="ju-reasons"><summary>Rendered HTML</summary><code class="ju-wrapper-source">&lt;a href=&quot;#workspace-solo&quot; class=&quot;jami-button&quot; data-variant=&quot;secondary&quot; data-size=&quot;regular&quot;&gt;Open solo workspace&lt;/a&gt;</code></details>
 </article>
 <article class="ju-card">
   <header class="ju-card-head">
@@ -1414,7 +1414,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   <h2 id="ju-renderer-h">Resident renderer</h2>
   <p class="ju-lead" id="ju-display-only-note">Each card is a real renderer-produced render tree for a checked compatibility fixture. Valid payloads render resident components; action references render display-only (executable: false); unknown, unsafe, or malformed payloads fail closed to an inert fallback.</p>
   <div class="ju-grid">
-    <section class="ju-fixture" aria-label="uiPayload.basic.button"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.basic.button</code><span class="ju-badge" data-state="renderable">Renderable</span></header><div class="ju-fixture-body"><button type="button" class="ju-btn" data-variant="primary" aria-describedby="ju-display-only-note">Save</button></div></section><section class="ju-fixture" aria-label="actionRef.pending-approval.publish-release"><header class="ju-fixture-head"><code class="ju-fixture-id">actionRef.pending-approval.publish-release</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card ju-action" aria-label="Action slot (display only)"><header class="ju-card-head"><h4>Publish release</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>state</dt><dd><span class="ju-value">pending_approval</span></dd></div><div class="ju-kv"><dt>risk</dt><dd><span class="ju-value">external</span></dd></div><div class="ju-kv"><dt>policyScope</dt><dd><span class="ju-value">release.publish</span></dd></div><div class="ju-kv"><dt>confirmationMode</dt><dd><span class="ju-value">approval_required</span></dd></div><div class="ju-kv"><dt>executable</dt><dd><span class="ju-value">false</span></dd></div></dl></article></div></section><section class="ju-fixture" aria-label="artifactView.basic.document"><header class="ju-fixture-head"><code class="ju-fixture-id">artifactView.basic.document</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card" aria-label="Artifact view"><header class="ju-card-head"><span class="ju-chip ju-chip-kind">document</span><h4>Theme report</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>artifactViewId</dt><dd><span class="ju-value">artv_theme_report</span></dd></div><div class="ju-kv"><dt>artifactId</dt><dd><span class="ju-value">art_theme_report_001</span></dd></div><div class="ju-kv"><dt>promotionState</dt><dd><span class="ju-value">accepted</span></dd></div></dl><div class="ju-chips" aria-label="Available renderer modes"><span class="ju-chip">studio_ui</span><span class="ju-chip">text</span></div></article></div></section><section class="ju-fixture" aria-label="suiteRef.solo.minimum"><header class="ju-fixture-head"><code class="ju-fixture-id">suiteRef.solo.minimum</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card ju-reference" aria-label="Suite reference"><header class="ju-card-head"><span class="ju-chip">suiteRef</span><h4>suite_solo</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>lane</dt><dd><span class="ju-value">custom</span></dd></div><div class="ju-kv"><dt>appShellId</dt><dd><span class="ju-value">@jami-studio/solo-suite</span></dd></div><div class="ju-kv"><dt>installedItems</dt><dd><ul class="ju-kv-list"><li><span class="ju-value">@jami-studio/button</span></li></ul></dd></div><div class="ju-kv"><dt>routeMap</dt><dd><ul class="ju-kv-list"><li><dl class="ju-kv-grid"><div class="ju-kv"><dt>routeId</dt><dd><span class="ju-value">home</span></dd></div><div class="ju-kv"><dt>path</dt><dd><span class="ju-value">/</span></dd></div></dl></li><li><dl class="ju-kv-grid"><div class="ju-kv"><dt>routeId</dt><dd><span class="ju-value">tasks</span></dd></div><div class="ju-kv"><dt>path</dt><dd><span class="ju-value">/tasks</span></dd></div></dl></li></ul></dd></div></dl><p class="ju-muted">Display-only reference · executable: false</p></article></div></section><section class="ju-fixture" aria-label="themeRef.factory.jami-warm"><header class="ju-fixture-head"><code class="ju-fixture-id">themeRef.factory.jami-warm</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card ju-reference" aria-label="Theme reference"><header class="ju-card-head"><span class="ju-chip">themeRef</span><h4>theme_jami_warm</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>tokenSchemaVersion</dt><dd><span class="ju-value">2026-06-09.token-foundation</span></dd></div><div class="ju-kv"><dt>sourceKind</dt><dd><span class="ju-value">factory</span></dd></div><div class="ju-kv"><dt>registryItemId</dt><dd><span class="ju-value">@jami-studio/jami-warm-theme</span></dd></div><div class="ju-kv"><dt>restorePackage</dt><dd><span class="ju-value">@jami-studio/ui</span></dd></div></dl><p class="ju-muted">Display-only reference · executable: false</p></article></div></section><section class="ju-fixture" aria-label="actionRef.denied.delete-artifact"><header class="ju-fixture-head"><code class="ju-fixture-id">actionRef.denied.delete-artifact</code><span class="ju-badge" data-state="denied">Denied</span></header><div class="ju-fixture-body"><article class="ju-card ju-action" aria-label="Action slot (display only)"><header class="ju-card-head"><h4>Delete artifact</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>state</dt><dd><span class="ju-value">denied</span></dd></div><div class="ju-kv"><dt>risk</dt><dd><span class="ju-value">destructive</span></dd></div><div class="ju-kv"><dt>policyScope</dt><dd><span class="ju-value">artifact.lifecycle</span></dd></div><div class="ju-kv"><dt>confirmationMode</dt><dd><span class="ju-value">approval_required</span></dd></div><div class="ju-kv"><dt>executable</dt><dd><span class="ju-value">false</span></dd></div></dl><div class="ju-notice" data-tone="danger" role="alert">Denied by harness policy: missing_approval</div></article></div></section><section class="ju-fixture" aria-label="actionRef.invalid.denied-executable"><header class="ju-fixture-head"><code class="ju-fixture-id">actionRef.invalid.denied-executable</code><span class="ju-badge" data-state="denied">Denied</span></header><div class="ju-fixture-body"><article class="ju-card ju-action" aria-label="Action slot (display only)"><header class="ju-card-head"><h4>Delete artifact</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>state</dt><dd><span class="ju-value">denied</span></dd></div><div class="ju-kv"><dt>risk</dt><dd><span class="ju-value">destructive</span></dd></div><div class="ju-kv"><dt>policyScope</dt><dd><span class="ju-value">artifact.lifecycle</span></dd></div><div class="ju-kv"><dt>confirmationMode</dt><dd><span class="ju-value">approval_required</span></dd></div><div class="ju-kv"><dt>executable</dt><dd><span class="ju-value">false</span></dd></div></dl><div class="ju-notice" data-tone="danger" role="alert">Denied by harness policy</div></article></div></section><section class="ju-fixture" aria-label="uiPayload.unsupported.component"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.unsupported.component</code><span class="ju-badge" data-state="unsupported">Unsupported</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This component is not supported by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>component unknown-chart is not allowlisted</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.bad-prop-type"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.bad-prop-type</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>prop invalid must be boolean</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.bad-props"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.bad-props</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsupported prop href for button</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.bad-refs"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.bad-refs</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (3)</summary><ul><li>payloadId must use uip_ prefix</li><li>actionRef action.save-theme must use act_ prefix</li><li>artifactViewRef artifact.theme-report must use artv_ prefix</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.dangerous-html"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.dangerous-html</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (3)</summary><ul><li>unsafe prop dangerouslySetInnerHTML</li><li>unsafe prop __html</li><li>HTML-like string is not allowed</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.event-handler"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.event-handler</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop onClick</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.foreign-namespace"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.foreign-namespace</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>componentRef namespace must be @jami-studio/ui</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.html"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.html</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>HTML-like string is not allowed</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.inline-secret"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.inline-secret</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>secret-bearing prop authorization must be a harness secret reference</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.invalid-enum"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.invalid-enum</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>prop variant must be one of primary, secondary, ghost, danger</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.javascript-url"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.javascript-url</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>javascript: URL is not allowed</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.lowercase-event-handler"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.lowercase-event-handler</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop onclick</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.package-import"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.package-import</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop packageImport</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.radix-wrapper-import"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.radix-wrapper-import</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop packageImport</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.react-element"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.react-element</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop $$typeof</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.stale-vocabulary-handshake"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.stale-vocabulary-handshake</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsupported vocabularyHandshakeVersion</li></ul></details></section><section class="ju-fixture" aria-label="renderer.error.invalid-props"><header class="ju-fixture-head"><code class="ju-fixture-id">renderer.error.invalid-props</code><span class="ju-badge" data-state="error">Error</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="danger" role="alert">The resident renderer reported an error.<span class="ju-notice-code">invalid_props</span></div></div></section>
+    <section class="ju-fixture" aria-label="uiPayload.basic.button"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.basic.button</code><span class="ju-badge" data-state="renderable">Renderable</span></header><div class="ju-fixture-body"><button type="button" class="ju-btn" data-variant="primary" aria-describedby="ju-display-only-note">Save</button></div></section><section class="ju-fixture" aria-label="actionRef.pending-approval.publish-release"><header class="ju-fixture-head"><code class="ju-fixture-id">actionRef.pending-approval.publish-release</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card ju-action" aria-label="Action slot (display only)"><header class="ju-card-head"><h4>Publish release</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>state</dt><dd><span class="ju-value">pending_approval</span></dd></div><div class="ju-kv"><dt>risk</dt><dd><span class="ju-value">external</span></dd></div><div class="ju-kv"><dt>policyScope</dt><dd><span class="ju-value">release.publish</span></dd></div><div class="ju-kv"><dt>confirmationMode</dt><dd><span class="ju-value">approval_required</span></dd></div><div class="ju-kv"><dt>executable</dt><dd><span class="ju-value">false</span></dd></div></dl></article></div></section><section class="ju-fixture" aria-label="artifactView.basic.document"><header class="ju-fixture-head"><code class="ju-fixture-id">artifactView.basic.document</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card" aria-label="Artifact view"><header class="ju-card-head"><span class="ju-chip ju-chip-kind">document</span><h4>Theme report</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>artifactViewId</dt><dd><span class="ju-value">artv_theme_report</span></dd></div><div class="ju-kv"><dt>artifactId</dt><dd><span class="ju-value">art_theme_report_001</span></dd></div><div class="ju-kv"><dt>promotionState</dt><dd><span class="ju-value">accepted</span></dd></div></dl><div class="ju-chips" aria-label="Available renderer modes"><span class="ju-chip">studio_ui</span><span class="ju-chip">text</span></div></article></div></section><section class="ju-fixture" aria-label="themeRef.factory.jami-warm"><header class="ju-fixture-head"><code class="ju-fixture-id">themeRef.factory.jami-warm</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card ju-reference" aria-label="Theme reference"><header class="ju-card-head"><span class="ju-chip">themeRef</span><h4>theme_jami_warm</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>tokenSchemaVersion</dt><dd><span class="ju-value">2026-06-09.token-foundation</span></dd></div><div class="ju-kv"><dt>sourceKind</dt><dd><span class="ju-value">factory</span></dd></div><div class="ju-kv"><dt>registryItemId</dt><dd><span class="ju-value">@jami-studio/jami-warm-theme</span></dd></div><div class="ju-kv"><dt>restorePackage</dt><dd><span class="ju-value">@jami-studio/ui</span></dd></div></dl><p class="ju-muted">Display-only reference · executable: false</p></article></div></section><section class="ju-fixture" aria-label="workspaceRef.solo.minimum"><header class="ju-fixture-head"><code class="ju-fixture-id">workspaceRef.solo.minimum</code><span class="ju-badge" data-state="display-only">Display only</span></header><div class="ju-fixture-body"><article class="ju-card ju-reference" aria-label="Suite reference"><header class="ju-card-head"><span class="ju-chip">workspaceRef</span><h4>workspace_solo</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>audience</dt><dd><span class="ju-value">custom</span></dd></div><div class="ju-kv"><dt>appShellId</dt><dd><span class="ju-value">@jami-studio/solo-workspace</span></dd></div><div class="ju-kv"><dt>installedItems</dt><dd><ul class="ju-kv-list"><li><span class="ju-value">@jami-studio/button</span></li></ul></dd></div><div class="ju-kv"><dt>routeMap</dt><dd><ul class="ju-kv-list"><li><dl class="ju-kv-grid"><div class="ju-kv"><dt>routeId</dt><dd><span class="ju-value">home</span></dd></div><div class="ju-kv"><dt>path</dt><dd><span class="ju-value">/</span></dd></div></dl></li><li><dl class="ju-kv-grid"><div class="ju-kv"><dt>routeId</dt><dd><span class="ju-value">tasks</span></dd></div><div class="ju-kv"><dt>path</dt><dd><span class="ju-value">/tasks</span></dd></div></dl></li></ul></dd></div></dl><p class="ju-muted">Display-only reference · executable: false</p></article></div></section><section class="ju-fixture" aria-label="actionRef.denied.delete-artifact"><header class="ju-fixture-head"><code class="ju-fixture-id">actionRef.denied.delete-artifact</code><span class="ju-badge" data-state="denied">Denied</span></header><div class="ju-fixture-body"><article class="ju-card ju-action" aria-label="Action slot (display only)"><header class="ju-card-head"><h4>Delete artifact</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>state</dt><dd><span class="ju-value">denied</span></dd></div><div class="ju-kv"><dt>risk</dt><dd><span class="ju-value">destructive</span></dd></div><div class="ju-kv"><dt>policyScope</dt><dd><span class="ju-value">artifact.lifecycle</span></dd></div><div class="ju-kv"><dt>confirmationMode</dt><dd><span class="ju-value">approval_required</span></dd></div><div class="ju-kv"><dt>executable</dt><dd><span class="ju-value">false</span></dd></div></dl><div class="ju-notice" data-tone="danger" role="alert">Denied by harness policy: missing_approval</div></article></div></section><section class="ju-fixture" aria-label="actionRef.invalid.denied-executable"><header class="ju-fixture-head"><code class="ju-fixture-id">actionRef.invalid.denied-executable</code><span class="ju-badge" data-state="denied">Denied</span></header><div class="ju-fixture-body"><article class="ju-card ju-action" aria-label="Action slot (display only)"><header class="ju-card-head"><h4>Delete artifact</h4></header><dl class="ju-kv-grid"><div class="ju-kv"><dt>state</dt><dd><span class="ju-value">denied</span></dd></div><div class="ju-kv"><dt>risk</dt><dd><span class="ju-value">destructive</span></dd></div><div class="ju-kv"><dt>policyScope</dt><dd><span class="ju-value">artifact.lifecycle</span></dd></div><div class="ju-kv"><dt>confirmationMode</dt><dd><span class="ju-value">approval_required</span></dd></div><div class="ju-kv"><dt>executable</dt><dd><span class="ju-value">false</span></dd></div></dl><div class="ju-notice" data-tone="danger" role="alert">Denied by harness policy</div></article></div></section><section class="ju-fixture" aria-label="uiPayload.unsupported.component"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.unsupported.component</code><span class="ju-badge" data-state="unsupported">Unsupported</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This component is not supported by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>component unknown-chart is not allowlisted</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.bad-prop-type"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.bad-prop-type</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>prop invalid must be boolean</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.bad-props"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.bad-props</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsupported prop href for button</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.bad-refs"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.bad-refs</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (3)</summary><ul><li>payloadId must use uip_ prefix</li><li>actionRef action.save-theme must use act_ prefix</li><li>artifactViewRef artifact.theme-report must use artv_ prefix</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.dangerous-html"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.dangerous-html</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (3)</summary><ul><li>unsafe prop dangerouslySetInnerHTML</li><li>unsafe prop __html</li><li>HTML-like string is not allowed</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.event-handler"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.event-handler</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop onClick</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.foreign-namespace"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.foreign-namespace</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>componentRef namespace must be @jami-studio/ui</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.html"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.html</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>HTML-like string is not allowed</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.inline-secret"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.inline-secret</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>secret-bearing prop authorization must be a harness secret reference</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.invalid-enum"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.invalid-enum</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>prop variant must be one of primary, secondary, ghost, danger</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.javascript-url"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.javascript-url</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>javascript: URL is not allowed</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.lowercase-event-handler"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.lowercase-event-handler</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop onclick</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.package-import"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.package-import</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop packageImport</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.radix-wrapper-import"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.radix-wrapper-import</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop packageImport</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.react-element"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.react-element</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsafe prop $$typeof</li></ul></details></section><section class="ju-fixture" aria-label="uiPayload.invalid.stale-vocabulary-handshake"><header class="ju-fixture-head"><code class="ju-fixture-id">uiPayload.invalid.stale-vocabulary-handshake</code><span class="ju-badge" data-state="invalid">Invalid (failed closed)</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="warning" role="status">This payload was rejected by the resident renderer.</div></div><details class="ju-reasons"><summary>Why (1)</summary><ul><li>unsupported vocabularyHandshakeVersion</li></ul></details></section><section class="ju-fixture" aria-label="renderer.error.invalid-props"><header class="ju-fixture-head"><code class="ju-fixture-id">renderer.error.invalid-props</code><span class="ju-badge" data-state="error">Error</span></header><div class="ju-fixture-body"><div class="ju-notice" data-tone="danger" role="alert">The resident renderer reported an error.<span class="ju-notice-code">invalid_props</span></div></div></section>
   </div>
 </section>
 
@@ -1444,15 +1444,15 @@ footer.ju-footer code { overflow-wrap: anywhere; }
 
 <footer class="ju-footer">
   <p>Generated by <code>node apps/workbench/build.mjs</code> from generated artifacts and the checked fixture corpus. No remote registry fetch, package-manager install, provider runtime, or harness execution is performed.</p>
-  <p>Sources: <code>packages/tokens/generated/jami.css</code> · <code>packages/registry/generated/registry.json</code> · <code>packages/registry/generated/suites/*.suite.json</code> · <code>packages/renderer/fixtures/compatibility/*</code> · <code>packages/renderer/fixtures/presentation/*</code>.</p>
-  <p>Pending: external hosted runtime, hosted persistence, backend registration, and harness runtime — none are claimed here.</p>
+  <p>Sources: <code>packages/tokens/generated/jami.css</code> · <code>packages/registry/generated/registry.json</code> · <code>packages/registry/generated/workspaces/*.workspace.json</code> · <code>packages/renderer/fixtures/compatibility/*</code> · <code>packages/renderer/fixtures/presentation/*</code>.</p>
+  <p>Pending: external hosted runtime, hosted persistence, backend registration, and harness runtime — none are claimed here. Backend config evidence: <code>config-missing</code> / <code>STUDIO_UI_WORKBENCH_BACKEND_URL is not set</code>.</p>
 </footer>
 </div>
 
 <button type="button" class="ju-tool-btn ju-open-workbench" data-wb-action="open">Workbench</button>
 <aside class="ju-workbench" aria-label="Always-live workbench overlay">
   <div class="ju-statusbar">
-    <div class="ju-status-item"><span class="ju-status-label">Target</span><span class="ju-status-value" id="ju-wb-target">suite.solo</span></div>
+    <div class="ju-status-item"><span class="ju-status-label">Target</span><span class="ju-status-value" id="ju-wb-target">workspace.solo</span></div>
     <div class="ju-status-item"><span class="ju-status-label">Theme</span><span class="ju-status-value" id="ju-wb-theme">Jami factory / factory</span></div>
     <div class="ju-status-item"><span class="ju-status-label">State</span><span class="ju-status-value" id="ju-wb-dirty">saved</span></div>
     <div class="ju-status-item"><span class="ju-status-label">Store</span><span class="ju-status-value" id="ju-wb-storage">local draft</span></div>
@@ -1472,6 +1472,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
       <div class="ju-control"><label for="ju-wb-rename">Draft name</label><input id="ju-wb-rename" type="text" value="Jami factory" /></div>
       <div class="ju-control"><span>Last action</span><code id="ju-wb-last-action">ready</code></div>
       <div class="ju-control"><span>Conflict</span><code id="ju-wb-conflict">none</code></div>
+      <div class="ju-control"><span>Backend</span><code id="ju-wb-backend">config-missing / STUDIO_UI_WORKBENCH_BACKEND_URL is not set</code></div>
     </div></details>
     <details class="ju-dock-panel" open><summary>Color</summary><div class="ju-dock-body"><div class="ju-control"><label for="ju-wb-accent">Accent</label><input id="ju-wb-accent" data-wb-control="accent" type="color" value="#C14D84" /></div><div class="ju-control"><label for="ju-wb-focusRing">Focus</label><input id="ju-wb-focusRing" data-wb-control="focusRing" type="color" value="#237C7A" /></div></div></details>
     <details class="ju-dock-panel"><summary>Typography</summary><div class="ju-dock-body">
@@ -1484,22 +1485,44 @@ footer.ju-footer code { overflow-wrap: anywhere; }
       <div class="ju-control"><label for="ju-wb-dockWidth">Dock width</label><input id="ju-wb-dockWidth" data-wb-control="dockWidth" type="range" min="240" max="420" step="20" value="320" /></div>
     </div></details>
     <details class="ju-dock-panel"><summary>Surfaces</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li><code>solo</code> Solo / General Workflow</li><li><code>business-ops</code> Business Operations</li><li><code>mixed-media</code> Mixed Media</li><li><code>research-writing</code> Research / Writing</li></ul></div></details>
-    <details class="ju-dock-panel"><summary>Components</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li><code>agent-panel</code> Agent Panel</li><li><code>button</code> Button</li><li><code>data-list</code> Data List</li><li><code>docs-source-panel</code> Docs Source Panel</li><li><code>media-grid</code> Media Grid</li><li><code>panel</code> Panel</li><li><code>text-field</code> Text Field</li></ul><div class="ju-control"><span>Inspector</span><code id="ju-wb-inspector">none</code></div><div class="ju-chips"><button type="button" class="ju-theme-btn" data-inspector-target="registry:@jami-studio/button">Button</button><button type="button" class="ju-theme-btn" data-inspector-target="suite:solo">Solo suite</button></div></div></details>
+    <details class="ju-dock-panel"><summary>Components</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li><code>agent-panel</code> Agent Panel</li><li><code>button</code> Button</li><li><code>data-list</code> Data List</li><li><code>docs-source-panel</code> Docs Source Panel</li><li><code>media-grid</code> Media Grid</li><li><code>panel</code> Panel</li><li><code>text-field</code> Text Field</li></ul><div class="ju-control"><span>Inspector</span><code id="ju-wb-inspector">none</code></div><div class="ju-chips"><button type="button" class="ju-theme-btn" data-inspector-target="registry:@jami-studio/button">Button</button><button type="button" class="ju-theme-btn" data-inspector-target="workspace:solo">Solo workspace</button></div></div></details>
     <details class="ju-dock-panel"><summary>Charts</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li>no chart registry items in current generated registry</li></ul></div></details>
     <details class="ju-dock-panel"><summary>Motion</summary><div class="ju-dock-body">
       <div class="ju-control"><label for="ju-wb-motion">Fast motion</label><input id="ju-wb-motion" data-wb-control="motion" type="range" min="0" max="240" step="20" value="120" /></div>
       <div class="ju-control"><label for="ju-wb-density">Density</label><input id="ju-wb-density" data-wb-control="density" type="range" min="0.85" max="1.2" step="0.05" value="1" /></div>
     </div></details>
-    <details class="ju-dock-panel"><summary>Assets</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li>generated suite manifests: 4</li><li>suite implementation manifests: 30</li><li>presentation fixtures: 17</li></ul></div></details>
-    <details class="ju-dock-panel"><summary>Registry</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li><code>agent-panel</code> registry:component</li><li><code>business-ops-agent-review-block</code> registry:block</li><li><code>business-ops-app</code> registry:app</li><li><code>business-ops-dashboard-page</code> registry:page</li><li><code>business-ops-exceptions-block</code> registry:block</li><li><code>business-ops-kpis-block</code> registry:block</li><li><code>business-ops-staff-page</code> registry:page</li><li><code>business-ops-staff-table-block</code> registry:block</li><li><code>business-ops-suite</code> registry:suite</li></ul><ul class="ju-mini-list" id="ju-wb-registered"></ul><div class="ju-chips"><button type="button" class="ju-theme-btn" data-wb-action="offline">Offline</button><button type="button" class="ju-theme-btn" data-wb-action="online">Online</button><button type="button" class="ju-theme-btn" data-wb-action="import">Import</button></div><div class="ju-control"><label for="ju-wb-export">Export artifact</label><textarea id="ju-wb-export" readonly></textarea></div><div class="ju-control"><label for="ju-wb-import">Import artifact</label><textarea id="ju-wb-import"></textarea></div></div></details>
+    <details class="ju-dock-panel"><summary>Assets</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li>generated workspace manifests: 4</li><li>workspace implementation manifests: 30</li><li>presentation fixtures: 17</li></ul></div></details>
+    <details class="ju-dock-panel"><summary>Registry</summary><div class="ju-dock-body"><ul class="ju-mini-list"><li><code>agent-panel</code> registry:component</li><li><code>business-ops-agent-review-block</code> registry:block</li><li><code>business-ops-app</code> registry:app</li><li><code>business-ops-dashboard-page</code> registry:page</li><li><code>business-ops-exceptions-block</code> registry:block</li><li><code>business-ops-kpis-block</code> registry:block</li><li><code>business-ops-staff-page</code> registry:page</li><li><code>business-ops-staff-table-block</code> registry:block</li><li><code>business-ops-training-form-block</code> registry:block</li></ul><ul class="ju-mini-list" id="ju-wb-registered"></ul><div class="ju-chips"><button type="button" class="ju-theme-btn" data-wb-action="offline">Offline</button><button type="button" class="ju-theme-btn" data-wb-action="online">Online</button><button type="button" class="ju-theme-btn" data-wb-action="import">Import</button></div><div class="ju-control"><label for="ju-wb-export">Export artifact</label><textarea id="ju-wb-export" readonly></textarea></div><div class="ju-control"><label for="ju-wb-import">Import artifact</label><textarea id="ju-wb-import"></textarea></div></div></details>
   </div>
 </aside>
 <script>(function () {
   var STORAGE_KEY = "jami-studio.workbench.overlay.v1";
   var ARTIFACT_VERSION = "2026-06-09.workbench-local";
-  var factoryDraft = {"target":"suite.solo","themeName":"Jami factory","presetName":"factory","controls":{"accent":"var(--jami-semantic-light-accent)","focusRing":"var(--jami-componentState-focusRing)","radius":"8","spacing":"8","density":"1","motion":"120","dockWidth":"320","fontSize":"16"}};
+  var REGISTRATION_CONTRACT_VERSION = "2026-06-13.workbench-registration";
+  var factoryDraft = {"target":"workspace.solo","themeName":"Jami factory","presetName":"factory","controls":{"accent":"var(--jami-semantic-light-accent)","focusRing":"var(--jami-componentState-focusRing)","radius":"8","spacing":"8","density":"1","motion":"120","dockWidth":"320","fontSize":"16"}};
   var brandOptions = {"command-grid":{"title":"Command Grid","workbenchControls":{"accent":"#315C8E","focusRing":"#A64B72","radius":"4","spacing":"7","density":"0.9","motion":"80","dockWidth":"280","fontSize":"15"}},"editorial-studio":{"title":"Editorial Studio","workbenchControls":{"accent":"#6F3D5F","focusRing":"#237C7A","radius":"8","spacing":"10","density":"1.05","motion":"140","dockWidth":"340","fontSize":"16"}},"studio-console":{"title":"Studio Console","workbenchControls":{"accent":"#2F6F73","focusRing":"#C14D84","radius":"6","spacing":"8","density":"0.95","motion":"100","dockWidth":"300","fontSize":"15"}}};
+  var backendConfig = {"endpoint":null,"configured":false,"status":"config-missing","reason":"STUDIO_UI_WORKBENCH_BACKEND_URL is not set"};
+  var BACKEND_STATE = { CONFIG_MISSING: 'config-missing', HOSTED_UNAVAILABLE: 'hosted-unavailable', CONFLICT: 'conflict', AVAILABLE: 'available' };
   function clone(value) { return JSON.parse(JSON.stringify(value)); }
+  function makeBackendStatus(status, detail) {
+    detail = detail && typeof detail === 'object' ? detail : {};
+    return {
+      contractVersion: REGISTRATION_CONTRACT_VERSION,
+      status: status,
+      backendPersistence: status === BACKEND_STATE.AVAILABLE,
+      packageRegistration: status === BACKEND_STATE.AVAILABLE,
+      localFallback: status !== BACKEND_STATE.AVAILABLE,
+      reason: detail.reason || null,
+      endpointConfigured: detail.endpointConfigured === true,
+      operation: detail.operation || null,
+      remoteId: detail.remoteId || null,
+      revision: detail.revision || null,
+      conflict: detail.conflict || null
+    };
+  }
+  function defaultBackendStatus() {
+    return makeBackendStatus(BACKEND_STATE.CONFIG_MISSING, { reason: 'No workbench backend endpoint is configured in the static artifact.' });
+  }
   function normalizeDraft(input) {
     var draft = input && typeof input === 'object' ? input : {};
     return Object.assign({}, clone(factoryDraft), draft, {
@@ -1520,12 +1543,48 @@ footer.ju-footer code { overflow-wrap: anywhere; }
       importArtifact: seed.importArtifact || null,
       inspectorFocus: seed.inspectorFocus || null,
       online: seed.online !== false,
+      backend: seed.backend && typeof seed.backend === 'object' ? seed.backend : defaultBackendStatus(),
       conflict: seed.conflict || null,
       lastAction: seed.lastAction || 'ready'
     };
   }
   function isDirty(state) {
     return JSON.stringify(normalizeDraft(state.draft)) !== JSON.stringify(normalizeDraft(state.saved));
+  }
+  function sanitizeControls(controls) {
+    var out = {};
+    Object.keys(controls && typeof controls === 'object' ? controls : {}).forEach(function (key) {
+      if (/(secret|token|api[_-]?key|password|authorization|cookie|private[_-]?key|connection[_-]?string)/i.test(key)) return;
+      if (/^on[A-Z]|^on[a-z]|^(handler|callback|function|script|dangerouslySetInnerHTML)$/i.test(key)) return;
+      var value = controls[key];
+      if (['string', 'number', 'boolean'].indexOf(typeof value) !== -1) out[key] = String(value);
+    });
+    return out;
+  }
+  function makeRegistrationRequest(state, operation) {
+    var draft = normalizeDraft(state.draft);
+    return {
+      schemaVersion: REGISTRATION_CONTRACT_VERSION,
+      operation: operation,
+      idempotencyKey: draft.target + ':' + draft.presetName + ':' + operation,
+      workbench: {
+        target: draft.target,
+        themeName: draft.themeName,
+        presetName: draft.presetName,
+        controls: sanitizeControls(draft.controls)
+      },
+      artifact: operation === 'export' && state.exportArtifact ? clone(state.exportArtifact) : operation === 'import' && state.importArtifact ? clone(state.importArtifact) : null,
+      client: {
+        surface: 'apps/workbench',
+        storageFallback: 'localStorage',
+        hostedPersistenceClaimed: false,
+        backendRegistrationClaimed: false
+      },
+      safety: {
+        executableHandlersIncluded: false,
+        secretsIncluded: false
+      }
+    };
   }
   function makeArtifact(state, action) {
     var draft = normalizeDraft(state.draft);
@@ -1536,9 +1595,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
       themeName: draft.themeName,
       presetName: draft.presetName,
       dirty: isDirty(state),
-      controls: draft.controls,
+      controls: sanitizeControls(draft.controls),
       backendPersistence: false,
       localOnly: true,
+      registrationContract: makeRegistrationRequest(state, action),
+      backend: state.backend || defaultBackendStatus(),
       createdAt: 'static-runtime-local-state'
     };
   }
@@ -1611,7 +1672,56 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     }
     if (event.type === 'focus-inspector') return Object.assign({}, current, { inspectorFocus: event.target || null, lastAction: 'inspector-focused' });
     if (event.type === 'set-online') return Object.assign({}, current, { online: event.online !== false, lastAction: event.online === false ? 'offline-local' : 'online-local' });
+    if (event.type === 'backend-status') {
+      var backend = event.backend && typeof event.backend === 'object' ? event.backend : defaultBackendStatus();
+      return Object.assign({}, current, {
+        backend: backend,
+        conflict: backend.status === BACKEND_STATE.CONFLICT ? { kind: 'backend-conflict', detail: backend.conflict } : current.conflict,
+        lastAction: (backend.operation || 'backend') + '-' + backend.status
+      });
+    }
     return current;
+  }
+  function normalizeBackendConfig(config) {
+    var endpoint = config && typeof config.endpoint === 'string' ? config.endpoint.trim() : '';
+    if (!endpoint) return { status: BACKEND_STATE.CONFIG_MISSING, endpoint: null, reason: 'missing-endpoint' };
+    try {
+      var url = new URL(endpoint, window.location.origin);
+      if (url.protocol !== 'https:' && url.protocol !== 'http:') return { status: BACKEND_STATE.CONFIG_MISSING, endpoint: null, reason: 'unsupported-endpoint-protocol' };
+      return { status: BACKEND_STATE.AVAILABLE, endpoint: url.toString(), reason: null };
+    } catch (error) {
+      return { status: BACKEND_STATE.CONFIG_MISSING, endpoint: null, reason: 'invalid-endpoint-url' };
+    }
+  }
+  function reportBackend(operation) {
+    var normalized = normalizeBackendConfig(backendConfig);
+    if (normalized.status !== BACKEND_STATE.AVAILABLE) {
+      dispatch({ type: 'backend-status', backend: makeBackendStatus(BACKEND_STATE.CONFIG_MISSING, { reason: normalized.reason, operation: operation }) }, true);
+      return;
+    }
+    if (typeof window.fetch !== 'function') {
+      dispatch({ type: 'backend-status', backend: makeBackendStatus(BACKEND_STATE.HOSTED_UNAVAILABLE, { reason: 'fetch-unavailable', endpointConfigured: true, operation: operation }) }, true);
+      return;
+    }
+    window.fetch(normalized.endpoint, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify(makeRegistrationRequest(state, operation))
+    }).then(function (response) {
+      return response.text().then(function (text) {
+        var body = null;
+        try { body = text ? JSON.parse(text) : null; } catch (error) { body = null; }
+        if (response.status === 409) {
+          dispatch({ type: 'backend-status', backend: makeBackendStatus(BACKEND_STATE.CONFLICT, { reason: 'remote-conflict', endpointConfigured: true, operation: operation, conflict: body && body.conflict ? body.conflict : { status: 409 } }) }, true);
+        } else if (!response.ok) {
+          dispatch({ type: 'backend-status', backend: makeBackendStatus(BACKEND_STATE.HOSTED_UNAVAILABLE, { reason: 'http-' + response.status, endpointConfigured: true, operation: operation }) }, true);
+        } else {
+          dispatch({ type: 'backend-status', backend: makeBackendStatus(BACKEND_STATE.AVAILABLE, { endpointConfigured: true, operation: operation, remoteId: body && (body.id || body.remoteId) || null, revision: body && body.revision || null }) }, true);
+        }
+      });
+    }).catch(function (error) {
+      dispatch({ type: 'backend-status', backend: makeBackendStatus(BACKEND_STATE.HOSTED_UNAVAILABLE, { reason: error && error.name ? error.name : 'request-failed', endpointConfigured: true, operation: operation }) }, true);
+    });
   }
   function loadState() {
     try { return createInitialWorkbenchState(JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '{}')); }
@@ -1656,7 +1766,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
       list.innerHTML = '';
       state.registeredArtifacts.forEach(function (artifact) {
         var li = document.createElement('li');
-        li.textContent = artifact.themeName + ' / ' + artifact.schemaVersion + ' / local artifact';
+        li.textContent = artifact.themeName + ' / ' + artifact.schemaVersion + ' / ' + (artifact.backend && artifact.backend.status ? artifact.backend.status : 'local artifact');
         list.appendChild(li);
       });
     }
@@ -1667,7 +1777,8 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     setText('ju-wb-theme', state.draft.themeName + ' / ' + state.draft.presetName);
     setText('ju-wb-dirty', isDirty(state) ? 'dirty' : 'saved');
     setText('ju-wb-last-action', state.lastAction);
-    setText('ju-wb-storage', state.online ? 'local draft / online host unsupported' : 'local draft / offline');
+    setText('ju-wb-storage', state.online ? 'local draft / ' + state.backend.status : 'local draft / offline');
+    setText('ju-wb-backend', state.backend.status + (state.backend.reason ? ' / ' + state.backend.reason : ''));
     setText('ju-wb-inspector', state.inspectorFocus || 'none');
     setText('ju-wb-conflict', state.conflict ? state.conflict.kind : 'none');
     var renameNode = document.getElementById('ju-wb-rename');
@@ -1675,10 +1786,11 @@ footer.ju-footer code { overflow-wrap: anywhere; }
     applyDraft();
     renderArtifacts();
   }
-  function dispatch(event) {
+  function dispatch(event, skipBackend) {
     state = reduce(state, event);
     persist();
     renderState();
+    if (!skipBackend && ['save', 'restore', 'register', 'export', 'import'].indexOf(event.type) !== -1) reportBackend(event.type);
   }
   var state = loadState();
   document.querySelectorAll('[data-wb-action]').forEach(function (button) {

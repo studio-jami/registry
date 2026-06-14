@@ -8,6 +8,12 @@
   "publicSuiteRoutesClaimed": true,
   "hostedPersistenceClaimed": false,
   "backendRegistrationClaimed": false,
+  "workbenchBackend": {
+    "status": "config-missing",
+    "configured": false,
+    "reason": "STUDIO_UI_WORKBENCH_BACKEND_URL is not set",
+    "endpoint": null
+  },
   "targetHost": "registry.jami.studio",
   "sourceLocks": [
     {
