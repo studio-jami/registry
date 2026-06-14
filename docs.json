@@ -336,7 +336,9 @@
   },
   "api": {
     "examples": {
-      "defaults": "all"
-    }
+      "defaults": "all",
+      "autogenerate": true
+    },
+    "url": "full"
   }
 }
