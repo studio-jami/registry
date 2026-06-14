@@ -4,17 +4,21 @@ sidebarTitle: "Artifacts"
 description: "How Jami Harness models artifacts — evidence packets, reports, patches, diagrams, and release outputs an agent produces, with source bindings and verification metadata."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Concepts section. Authored in the Harness documentation
-  stream (WS4). The framing below reflects the real Harness responsibility model.
-</Note>
-
 **Artifacts** are the outputs an agent produces — evidence packets, generated reports,
 patches, screenshots, diagrams, and release outputs. Each artifact carries source bindings and
 verification metadata so a result can be traced back to the work that produced it.
 
-## On this page (planned)
+## Artifact Store
 
-- Artifact types and artifact views.
-- Source bindings and verification metadata.
-- How artifacts feed [evidence](/harness/concept-evidence) and release packets.
+The default SDK composition uses an in-memory artifact store. Replace it with
+`createHarness({ artifactStore })` when the deployment owns a durable store.
+
+## Artifact Views
+
+Artifact views are display-only references. They identify the artifact, source binding,
+availability state, evidence ref, and resident presentation metadata without executing code.
+
+## Evidence Link
+
+Artifacts feed [evidence](/harness/concept-evidence), release readiness, and local workbench
+views. Missing, stale, denied, and redacted artifact states are represented explicitly.

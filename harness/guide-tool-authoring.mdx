@@ -4,18 +4,42 @@ sidebarTitle: "Tool Authoring"
 description: "How to author a governed tool for Jami Harness — typed inputs and outputs, permissions, cancellation, and audit-aware invocation."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Guides section. The authoring walkthrough is written in
-  the Harness documentation stream (WS4) against the real tool wrapper API.
-</Note>
-
 This guide covers authoring a governed [tool](/harness/concept-tools) for Jami Harness — how
 to define typed inputs and outputs, declare permissions, support cancellation, and emit the
 audit records the runtime expects.
 
-## Planned contents
+## Define a Function Tool
 
-- The tool wrapper and typed tool definitions.
-- Declaring permissions and consent requirements for [policy](/harness/concept-policy).
-- Cancellation, replay awareness, and audit records.
-- Registering a tool and surfacing it to a [run](/harness/concept-runs).
+```ts
+import { createFunctionTool, createToolRegistry } from '@jami-studio/harness-tools'
+
+const registry = createToolRegistry()
+
+registry.register(createFunctionTool({
+  toolId: 'tool_collect_status',
+  label: 'Collect status',
+  risk: 'read',
+  requiredScopes: ['status:read'],
+  async handler(input) {
+    return { status: 'ok', input }
+  }
+}))
+```
+
+## Pick the Risk
+
+Use `read` for inspection-only work. Use `write`, `destructive`, `external`, or
+`secret_adjacent` for side effects; elevated risks require a current approval under the
+default policy engine.
+
+## Keep It Auditable
+
+Tool handlers should return structured output and avoid embedding secret values. Harness
+records policy decisions, tool execution state, traces, artifacts, and evidence around the
+handler.
+
+<Note>
+  First-party function tools and trusted in-process MCP fixture tools are supported today.
+  Remote MCP, shell, browser, OpenAPI, code execution, provider-as-tool, and A2A adapters fail
+  closed.
+</Note>

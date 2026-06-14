@@ -4,14 +4,9 @@ sidebarTitle: "Installation"
 description: "Install the Jami Harness packages from the @jami-studio npm namespace and prepare a local environment for evidence-oriented agent workflows."
 ---
 
-<Note>
-  **Scaffold page.** This page is part of the documentation skeleton. Full installation
-  prose is authored in the Harness documentation stream (WS4). The package names and
-  namespace below are accurate today.
-</Note>
-
 Jami Harness is published under the `@jami-studio` npm namespace. Most projects start from
-the CLI for local inspection, or the SDK for application integration.
+the batteries-included package, the CLI for local inspection, or the SDK for application
+integration.
 
 ## Prerequisites
 
@@ -19,7 +14,7 @@ the CLI for local inspection, or the SDK for application integration.
 - A package manager that can install scoped npm packages.
 - No hosted provider, store, or OTLP endpoint is required for local package inspection.
 
-## Install
+## Install the CLI
 
 <CodeGroup>
 
@@ -36,6 +31,39 @@ yarn add @jami-studio/harness-cli
 ```
 
 </CodeGroup>
+
+## Install the SDK
+
+```bash
+npm install @jami-studio/harness-sdk
+```
+
+## Install the Batteries-Included Package
+
+```bash
+npm install @jami-studio/harness
+```
+
+The batteries-included package composes the SDK with the default local runtime modules:
+policy, tools, memory, context, checkpoint store, provider router, artifacts, and
+observability.
+
+## Local Source Checkout
+
+When working from the source repo, run the local CLI directly:
+
+```powershell
+pnpm install --frozen-lockfile
+node apps/cli/src/cli.mjs init --json
+node apps/cli/src/cli.mjs run --json
+node apps/cli/src/cli.mjs inspect --json
+```
+
+<Note>
+  Hosted provider execution, hosted stores, hosted observability, hosted workbench, and hosted
+  docs publishing are not implied by installation. Those routes fail closed until explicitly
+  implemented and configured.
+</Note>
 
 ## Next steps
 

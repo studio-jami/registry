@@ -1,21 +1,26 @@
 ---
 title: "Tools"
 sidebarTitle: "Tools"
-description: "How Jami Harness governs tools — typed tool calls with permissions, cancellation, replay awareness, and audit records."
+description: "How Jami Harness governs tools — typed tool calls with permissions, policy gates, replay awareness, and audit records."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Concepts section. Authored in the Harness documentation
-  stream (WS4). The framing below reflects the real Harness responsibility model.
-</Note>
-
 **Tools** are how an agent acts on the world in Jami Harness. Every tool call is typed and
-runs through a wrapper that enforces permissions, supports cancellation, is replay-aware, and
+runs through a wrapper that enforces permissions, applies policy, records replay context, and
 writes an audit record — so side effects are governed, not implicit.
 
-## On this page (planned)
+## Supported Adapters
 
-- The tool wrapper and typed tool calls.
-- Permissions, cancellation, and replay awareness.
-- Audit records and how tools surface in [traces](/harness/concept-traces).
-- Authoring a tool — see the [tool authoring guide](/harness/guide-tool-authoring).
+The current tool registry supports first-party function tools and trusted in-process MCP
+fixture tools. Unsupported adapters fail closed: OpenAPI, shell, browser, code execution,
+provider-as-tool, A2A, remote MCP stdio, and remote MCP Streamable HTTP.
+
+## Tool Definitions
+
+Function tools use `tool_` ids, declare risk and required scopes, and execute through the
+policy-gated tool gateway. Tool results can create artifacts and traces, but the handler is
+not allowed to bypass policy.
+
+## Inspecting Tools
+
+Use `jami tools --json` or `harness.inspect()` to see supported adapters, unsupported
+adapters, and source-lock posture.

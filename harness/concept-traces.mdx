@@ -4,17 +4,23 @@ sidebarTitle: "Traces"
 description: "How Jami Harness emits traces — OpenTelemetry-compatible events, metrics, and replay evidence for observability over governed agent runs."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Concepts section. Authored in the Harness documentation
-  stream (WS4). The framing below reflects the real Harness responsibility model.
-</Note>
-
 **Traces** make a run observable. Harness emits OpenTelemetry-compatible events, metrics, and
 replay evidence through a stable observability contract, so agent work can be inspected,
 measured, and replayed after the fact.
 
-## On this page (planned)
+## Trace Sources
 
-- The observability event contract and OpenTelemetry compatibility.
-- Traces, metrics, evals, and replay evidence.
-- Replaceable trace, audit, and metric sinks.
+Runtime lifecycle events, policy decisions, tool gateway execution, artifact creation, and
+evidence assembly all emit observable records. The SDK exposes `readTraces()` and
+`readMetrics()` for local inspection.
+
+## Replaceable Observability
+
+Pass `createHarness({ observability })` or `createHarness({ telemetrySink })` to replace the
+default local sink. Optional PostHog telemetry is off by default and requires explicit
+environment opt-in.
+
+## Redaction
+
+Policy and telemetry paths redact secret-shaped values and do not send prompt/response
+content through the default telemetry path.

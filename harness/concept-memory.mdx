@@ -4,18 +4,24 @@ sidebarTitle: "Memory"
 description: "How Jami Harness handles memory and context — project and task memory, citations, freshness, redaction, and retention behind replaceable ports."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Concepts section. Authored in the Harness documentation
-  stream (WS4). The framing below reflects the real Harness responsibility model.
-</Note>
-
 **Memory and context** is how Harness gives an agent what it needs to know. It spans project
 and task memory with citations, freshness, redaction, and retention — and it sits behind
 replaceable memory and context ports so the default behavior can be swapped without changing
 the run model.
 
-## On this page (planned)
+## Memory Port
 
-- Project memory vs [task](/harness/concept-tasks) memory.
-- Citations, freshness, redaction, and retention.
-- The default memory/context assembler and the ports that replace it.
+The default memory module is local and permission-filtered. SDK callers can pass `memory`,
+`search`, and `context` options to replace memory storage, retrieval, or deterministic
+context assembly.
+
+## Context Packs
+
+Context packs preserve included items, citation ids, inclusion reasons, freshness, and
+deterministic hashes. That makes a run inspectable and replayable without relying on hidden
+prompt state.
+
+## Privacy Boundary
+
+Memory records are scoped by project, actor, and allowed scopes. Secret-shaped values are
+redacted from records and telemetry.

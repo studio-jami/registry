@@ -4,17 +4,23 @@ sidebarTitle: "Tasks"
 description: "How Jami Harness models tasks — the units of work inside a run, with their own context, memory, and lifecycle."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Concepts section. Authored in the Harness documentation
-  stream (WS4). The framing below reflects the real Harness responsibility model.
-</Note>
-
 A **task** is a unit of work inside a [run](/harness/concept-runs). Tasks carry their own
 context and memory and move through a defined lifecycle, so the work an agent does is broken
 into auditable, recoverable steps rather than one opaque operation.
 
-## On this page (planned)
+## Relationship to Runs
 
-- Tasks within a run and their lifecycle.
-- Task context and [task memory](/harness/concept-memory).
-- How tasks invoke [tools](/harness/concept-tools) under [policy](/harness/concept-policy).
+Run events may carry a `taskId`, and shared seam fixtures use task-scoped events for progress,
+tool-running, checkpoint, retrying, recovered, and completed states. A task is therefore the
+auditable work item inside the larger run record.
+
+## Context and Memory
+
+Task execution receives context from the configured context assembler and memory/search
+ports. Context packs preserve inclusion reasons and deterministic hashes so the task can be
+replayed and inspected.
+
+## Tool Calls
+
+Tasks invoke tools through [policy](/harness/concept-policy). Tool calls become traces,
+audit records, artifacts, and evidence instead of hidden side effects.
