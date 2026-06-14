@@ -1,183 +1,261 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Jami Studio",
-  "theme": "sequoia",
+  "name": "Jami Studio Registry",
+  "theme": "almond",
+  "description": "Jami Studio Registry — installable shadcn UI components, design tokens, and complete application Workspaces (Solo, Business, Mixed Media, Research & Writing), plus the Jami Harness agent runtime. Build AI-powered workspace apps from a public registry.",
   "colors": {
-    "primary": "#9f411e",
+    "primary": "#84381c",
     "light": "#FFF9F5",
     "dark": "#0f0b0d"
   },
+  "logo": {
+    "light": "/logo/jami-mark.svg",
+    "dark": "/logo/jami-mark.svg",
+    "href": "https://www.jami.studio/"
+  },
+  "favicon": "/favicon/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Jami Harness",
+        "tab": "Docs",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Overview",
             "pages": [
-              "harness/overview",
-              "harness/quickstart",
-              "harness/architecture.mdx",
-              "harness/packages"
+              "overview/index",
+              "overview/harness",
+              "overview/studio",
+              "overview/orchestra"
             ]
           },
           {
-            "group": "Concepts",
+            "group": "Harness",
             "pages": [
-              "harness/concepts/owned-core.mdx",
-              "harness/concepts/primitive-registry.mdx",
-              "harness/concepts/principled-edge.mdx"
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "pages": [
+                  "harness/overview",
+                  "harness/quickstart",
+                  "harness/architecture.mdx",
+                  "harness/installation"
+                ]
+              },
+              {
+                "group": "Concepts",
+                "expanded": false,
+                "pages": [
+                  "harness/concept-runs",
+                  "harness/concept-tasks",
+                  "harness/concept-tools",
+                  "harness/concept-policy",
+                  "harness/concept-approvals",
+                  "harness/concept-artifacts",
+                  "harness/concept-memory",
+                  "harness/concept-traces",
+                  "harness/concept-evidence",
+                  "harness/concept-checkpoints"
+                ]
+              },
+              {
+                "group": "Owned Core",
+                "expanded": false,
+                "pages": [
+                  "harness/concepts/owned-core.mdx",
+                  "harness/concepts/primitive-registry.mdx",
+                  "harness/concepts/principled-edge.mdx"
+                ]
+              },
+              {
+                "group": "Runtime",
+                "expanded": false,
+                "pages": [
+                  "harness/runtime/lifecycle.mdx",
+                  "harness/runtime/checkpoints-resumability.mdx",
+                  "harness/runtime/retries-cancellation.mdx"
+                ]
+              },
+              {
+                "group": "Contracts",
+                "expanded": false,
+                "pages": [
+                  "harness/contracts/overview.mdx",
+                  "harness/contracts/evidence-packets.mdx",
+                  "harness/contracts/capability-manifests.mdx"
+                ]
+              },
+              {
+                "group": "Policy & Identity",
+                "expanded": false,
+                "pages": [
+                  "harness/policy/model.mdx",
+                  "harness/policy/approvals.mdx",
+                  "harness/policy/identity.mdx"
+                ]
+              },
+              {
+                "group": "Tools",
+                "expanded": false,
+                "pages": [
+                  "harness/tools/gateway.mdx",
+                  "harness/tools/function-tools.mdx",
+                  "harness/tools/mcp.mdx",
+                  "harness/tools/adapters.mdx"
+                ]
+              },
+              {
+                "group": "Memory & Context",
+                "expanded": false,
+                "pages": [
+                  "harness/memory/overview.mdx",
+                  "harness/memory/context.mdx"
+                ]
+              },
+              {
+                "group": "Artifacts & Evidence",
+                "expanded": false,
+                "pages": [
+                  "harness/artifacts/overview.mdx",
+                  "harness/artifacts/evidence.mdx"
+                ]
+              },
+              {
+                "group": "Observability",
+                "expanded": false,
+                "pages": [
+                  "harness/observability/overview.mdx",
+                  "harness/observability/audit.mdx",
+                  "harness/observability/evals.mdx"
+                ]
+              },
+              {
+                "group": "Release & Hosted",
+                "expanded": false,
+                "pages": [
+                  "harness/release/readiness.mdx",
+                  "harness/release/sbom.mdx",
+                  "harness/release/hosted-routes.mdx",
+                  "harness/operations/hosted-limits.mdx",
+                  "harness/release/source-locks.mdx"
+                ]
+              },
+              {
+                "group": "Local Verification",
+                "expanded": false,
+                "pages": [
+                  "harness/local-verification/workflow.mdx",
+                  "harness/local-verification/ladder.mdx",
+                  "harness/local-verification/changelog.mdx"
+                ]
+              },
+              {
+                "group": "Guides",
+                "expanded": false,
+                "pages": [
+                  "harness/guide-first-agent",
+                  "harness/guide-tool-authoring",
+                  "harness/guide-release-packets"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": false,
+                "pages": [
+                  "harness/reference-sdk",
+                  "harness/reference-cli",
+                  "harness/cli-sdk/sdk.mdx",
+                  "harness/cli-sdk/cli.mdx",
+                  "harness/reference-configuration",
+                  "harness/packages"
+                ]
+              }
             ]
           },
           {
-            "group": "Runtime",
+            "group": "Studio",
             "pages": [
-              "harness/runtime/lifecycle.mdx",
-              "harness/runtime/checkpoints-resumability.mdx",
-              "harness/runtime/retries-cancellation.mdx"
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "pages": [
+                  "introduction",
+                  "quickstart"
+                ]
+              },
+              {
+                "group": "Registry",
+                "expanded": false,
+                "pages": [
+                  "registry/overview",
+                  "registry/installing-items"
+                ]
+              },
+              {
+                "group": "Components",
+                "expanded": false,
+                "pages": [
+                  "components/overview",
+                  "components/primitives",
+                  "components/agent-panel",
+                  "components/data-list",
+                  "components/media-grid",
+                  "components/docs-source-panel"
+                ]
+              },
+              {
+                "group": "Workspaces",
+                "expanded": false,
+                "pages": [
+                  "studio/workspaces",
+                  "suites/solo",
+                  "suites/business-ops",
+                  "suites/mixed-media",
+                  "suites/research-writing"
+                ]
+              },
+              {
+                "group": "Theming",
+                "expanded": false,
+                "pages": [
+                  "theming/tokens",
+                  "theming/brand-options"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": false,
+                "pages": [
+                  "studio/reference-cli",
+                  "studio/reference-renderer",
+                  "studio/reference-registry-item-schema"
+                ]
+              }
             ]
           },
           {
-            "group": "Contracts",
+            "group": "Orchestra",
             "pages": [
-              "harness/contracts/overview.mdx",
-              "harness/contracts/evidence-packets.mdx",
-              "harness/contracts/capability-manifests.mdx"
-            ]
-          },
-          {
-            "group": "Policy & Identity",
-            "pages": [
-              "harness/policy/model.mdx",
-              "harness/policy/approvals.mdx",
-              "harness/policy/identity.mdx"
-            ]
-          },
-          {
-            "group": "Tools",
-            "pages": [
-              "harness/tools/gateway.mdx",
-              "harness/tools/function-tools.mdx",
-              "harness/tools/mcp.mdx",
-              "harness/tools/adapters.mdx"
-            ]
-          },
-          {
-            "group": "Memory & Context",
-            "pages": [
-              "harness/memory/overview.mdx",
-              "harness/memory/context.mdx"
-            ]
-          },
-          {
-            "group": "Artifacts & Evidence",
-            "pages": [
-              "harness/artifacts/overview.mdx",
-              "harness/artifacts/evidence.mdx"
-            ]
-          },
-          {
-            "group": "Observability",
-            "pages": [
-              "harness/observability/overview.mdx",
-              "harness/observability/audit.mdx",
-              "harness/observability/evals.mdx"
-            ]
-          },
-          {
-            "group": "CLI & SDK",
-            "pages": [
-              "harness/cli-sdk/cli.mdx",
-              "harness/cli-sdk/sdk.mdx"
-            ]
-          },
-          {
-            "group": "Local Verification",
-            "pages": [
-              "harness/local-verification/workflow.mdx",
-              "harness/local-verification/ladder.mdx",
-              "harness/local-verification/changelog.mdx"
-            ]
-          },
-          {
-            "group": "Release & Hosted",
-            "pages": [
-              "harness/release/readiness.mdx",
-              "harness/release/sbom.mdx",
-              "harness/release/hosted-routes.mdx",
-              "harness/operations/hosted-limits.mdx",
-              "harness/release/source-locks.mdx"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Studio UI",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "studio-ui/overview.mdx"
-            ]
-          },
-          {
-            "group": "Components",
-            "pages": [
-              "components/overview",
-              "components/primitives",
-              "components/agent-panel",
-              "components/data-list",
-              "components/media-grid",
-              "components/docs-source-panel"
-            ]
-          },
-          {
-            "group": "Theming",
-            "pages": [
-              "theming/tokens",
-              "theming/brand-options"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Registry",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "Registry",
-            "pages": [
-              "registry/overview",
-              "registry/installing-items",
-              "registry/suites"
-            ]
-          },
-          {
-            "group": "Suites",
-            "pages": [
-              "suites/solo",
-              "suites/business-ops",
-              "suites/research-writing",
-              "suites/mixed-media"
+              "orchestra/overview"
             ]
           },
           {
             "group": "Operations",
             "pages": [
               "operations/hosting",
-              "operations/release"
+              "operations/release",
+              "operations/docs-site"
             ]
           }
         ]
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/registry/suites",
+      "destination": "/studio/workspaces"
+    }
+  ],
   "navbar": {
     "primary": {
       "type": "github",
@@ -190,30 +268,26 @@
       }
     ]
   },
+  "background": {
+    "decoration": "grid"
+  },
   "metadata": {
     "timestamp": true
   },
   "styling": {
-    "codeblocks": {
-      "theme": {
-        "light": "rose-pine",
-        "dark": "rose-pine-moon"
-      }
-    },
-    "eyebrows": "section",
-    "latex": false
+    "codeblocks": "system",
+    "eyebrows": "breadcrumbs"
   },
   "contextual": {
     "options": [
       "copy",
       "view",
-      "download-pdf",
-      "download-spec",
       "chatgpt",
       "claude",
       "grok",
       "perplexity",
       "aistudio",
+      "mcp",
       "cursor",
       "vscode"
     ],
@@ -223,7 +297,22 @@
     "schema": true
   },
   "seo": {
-    "indexing": "all"
+    "indexing": "all",
+    "metatags": {
+      "og:site_name": "Jami Studio Registry",
+      "og:type": "website",
+      "og:locale": "en_US",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@studio_jami",
+      "twitter:creator": "@studio_jami",
+      "theme-color": "#84381c",
+      "color-scheme": "light dark",
+      "application-name": "Jami Studio Registry",
+      "apple-mobile-web-app-title": "Jami Registry",
+      "apple-touch-icon": "/favicon/apple-touch-icon.png",
+      "msapplication-TileColor": "#84381c",
+      "msapplication-TileImage": "/favicon/android-chrome-192x192.png"
+    }
   },
   "footer": {
     "socials": {
@@ -237,23 +326,15 @@
     "strict": false
   },
   "interaction": {
-    "drilldown": false
+    "drilldown": true
   },
-  "api": {
-    "playground": {
-      "display": "interactive"
+  "integrations": {
+    "posthog": {
+      "apiKey": "phc_yXSPdUZwernahGPDF58U7MpFA4XBekzimoQU2fUBrn8E",
+      "sessionRecording": false
     },
-    "examples": {
-      "prefill": true,
-      "autogenerate": true
-    }
-  },
-  "icons": {
-    "library": "fontawesome"
-  },
-  "errors": {
-    "404": {
-      "redirect": true
+    "ga4": {
+      "measurementId": "G-R39QQTKF5F"
     }
   }
 }

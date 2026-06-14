@@ -1,36 +1,36 @@
 ---
-title: 'Research Writing Suite: Docs, Citations, and Sources'
+title: 'Research Writing Workspace: Docs, Citations, and Sources'
 sidebarTitle: 'Research Writing'
-description: 'Install the Research Writing suite for a document-workbench shell covering sources, citations, outline drafting, and writing-agent review.'
+description: 'Install the Research Writing workspace for a document-workbench shell covering sources, citations, outline drafting, and writing-agent review.'
 ---
 
-The Research Writing suite is a focused knowledge-work shell for researchers, analysts, and writers who need to manage sources, build citation lists, draft outlines, and track writing-agent review status in a single coherent interface. It targets the `research-writing` lane and ships a `document-workbench` layout with four navigation items: Sources, Notes, Brief, and Outline. One install command resolves 14 registry items — theme tokens, primitives, the app shell, two pages, and four blocks — giving you a fully structured base for document-driven workflows.
+The Research Writing workspace is a focused knowledge-work shell for researchers, analysts, and writers who need to manage sources, build citation lists, draft outlines, and track writing-agent review status in a single coherent interface. It uses the `research-writing` workspace key and ships a `document-workbench` layout with four navigation items: Sources, Notes, Brief, and Outline. One install command resolves 14 registry items — theme tokens, primitives, the app shell, two pages, and four blocks — giving you a fully structured base for document-driven workflows.
 
 ## Install
 
-Run the following command to pull the entire Research Writing suite install graph into your project:
+Run the following command to pull the entire Research Writing workspace install graph into your project:
 
 <CodeGroup>
 ```bash npm
-npx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+npx shadcn add https://registry.jami.studio/items/research-writing-workspace.registry-item.json
 ```
 
 ```bash pnpm
-pnpm dlx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+pnpm dlx shadcn add https://registry.jami.studio/items/research-writing-workspace.registry-item.json
 ```
 
 ```bash yarn
-yarn dlx shadcn add https://registry.jami.studio/items/research-writing-suite.registry-item.json
+yarn dlx shadcn add https://registry.jami.studio/items/research-writing-workspace.registry-item.json
 ```
 </CodeGroup>
 
 <Note>
-  The install graph resolves all 14 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+  The install graph resolves all 14 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the workspace.
 </Note>
 
 ## What's Included
 
-The `research-writing-suite` registry item installs the following items in dependency order:
+The `research-writing-workspace` registry item installs the following items in dependency order:
 
 <Steps>
   <Step title="Design foundation">
@@ -43,7 +43,7 @@ The `research-writing-suite` registry item installs the following items in depen
     `research-writing-app` — the `document-workbench` layout shell that mounts the navigation and route outlet.
   </Step>
   <Step title="Pages">
-    `research-writing-sources-page`, `research-writing-brief-page` — the two active route pages shipped with this suite version.
+    `research-writing-sources-page`, `research-writing-brief-page` — the two active route pages shipped with this workspace version.
   </Step>
   <Step title="Blocks">
     `research-writing-sources-block`, `research-writing-citations-block`, `research-writing-outline-block`, `research-writing-agent-review-block` — the four discrete content blocks that compose each page.
@@ -58,8 +58,8 @@ The Research Writing app shell uses the `document-workbench` layout. This layout
 |---|---|
 | Shell ID | `app.research-writing.shell` |
 | Layout | `document-workbench` |
-| Lane | `research-writing` |
-| Package name | `@jami-studio/research-writing-suite` |
+| Workspace key | `research-writing` |
+| Package name | `@jami-studio/research-writing-workspace` |
 
 ### Navigation
 
@@ -121,7 +121,7 @@ Each block ships with named state fixtures you can reference in tests and Storyb
 
 ## Planned Surfaces
 
-The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+The following surfaces are defined in the workspace manifest and will be added in future releases. Installing the workspace now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
 
 <CardGroup cols={4}>
   <Card title="Sources" icon="database" />
@@ -144,7 +144,7 @@ The following surfaces are defined in the suite manifest and will be added in fu
 
 ## Related Components
 
-The Research Writing suite is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+The Research Writing workspace is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
 
 <CardGroup cols={3}>
   <Card title="Docs Source Panel" icon="book-open" href="/components/docs-source-panel">

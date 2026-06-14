@@ -393,7 +393,7 @@ section.ju-section { margin: 36px 0; }
 
 .ju-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); min-width: 0; }
 
-.ju-card, .ju-fixture, .ju-panel, .ju-suite {
+.ju-card, .ju-fixture, .ju-panel, .ju-workspace {
   background: var(--ju-surface);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -462,33 +462,33 @@ section.ju-section { margin: 36px 0; }
   padding: 2px 4px;
 }
 
-.ju-suite[data-suite] { border-left: 4px solid var(--ju-accent); }
-.ju-suite-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; justify-content: flex-start; min-width: 0; }
-.ju-suite-head h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 1.1rem; }
-.jami-suite-app, .jami-suite-page, .jami-suite-block {
+.ju-workspace[data-workspace] { border-left: 4px solid var(--ju-accent); }
+.ju-workspace-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; justify-content: flex-start; min-width: 0; }
+.ju-workspace-head h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; font-size: 1.1rem; }
+.jami-workspace-app, .jami-workspace-page, .jami-workspace-block {
   min-width: 0;
 }
-.jami-suite-app {
+.jami-workspace-app {
   display: grid;
   gap: 18px;
 }
-.jami-suite-app-header, .jami-suite-page-header {
+.jami-workspace-app-header, .jami-workspace-page-header {
   border-bottom: 1px solid var(--ju-border);
   display: grid;
   gap: 4px;
   padding-bottom: 12px;
 }
-.jami-suite-eyebrow {
+.jami-workspace-eyebrow {
   color: var(--ju-muted);
   font-size: 0.72rem;
   font-weight: 800;
   margin: 0;
   text-transform: uppercase;
 }
-.jami-suite-app h1, .jami-suite-page h2 {
+.jami-workspace-app h1, .jami-workspace-page h2 {
   margin: 0;
 }
-.jami-suite-route-nav ul {
+.jami-workspace-route-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -496,7 +496,7 @@ section.ju-section { margin: 36px 0; }
   margin: 8px 0 0;
   padding: 0;
 }
-.jami-suite-route-nav a {
+.jami-workspace-route-nav a {
   background: var(--ju-surface);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -505,16 +505,16 @@ section.ju-section { margin: 36px 0; }
   padding: 6px 10px;
   text-decoration: none;
 }
-.jami-suite-pages {
+.jami-workspace-pages {
   display: grid;
   gap: 20px;
 }
-.jami-suite-block-grid {
+.jami-workspace-block-grid {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
-.jami-suite-block {
+.jami-workspace-block {
   background: var(--ju-bg);
   border: 1px solid var(--ju-border);
   border-radius: var(--ju-radius);
@@ -522,19 +522,19 @@ section.ju-section { margin: 36px 0; }
   gap: 10px;
   padding: 12px;
 }
-.jami-suite-block-label {
+.jami-workspace-block-label {
   color: var(--ju-muted);
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
-.jami-suite-state {
+.jami-workspace-state {
   border-top: 1px solid var(--ju-border);
   display: grid;
   gap: 8px;
   padding-top: 10px;
 }
-.jami-suite-state > span {
+.jami-workspace-state > span {
   color: var(--ju-muted);
   font-size: 0.74rem;
   font-weight: 700;
@@ -649,7 +649,7 @@ footer.ju-footer code { overflow-wrap: anywhere; }
   .ju-shell { padding: 12px; }
   .ju-grid { grid-template-columns: minmax(0, 1fr); }
   .ju-kv { grid-template-columns: 1fr; }
-  .ju-card, .ju-fixture, .ju-panel, .ju-suite { padding: 12px; }
+  .ju-card, .ju-fixture, .ju-panel, .ju-workspace { padding: 12px; }
   .ju-badge, .ju-chip, .ju-flag { max-width: 100%; white-space: normal; }
   nav.ju-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   nav.ju-nav a { display: block; max-width: 100%; text-align: center; white-space: normal; width: 100%; }

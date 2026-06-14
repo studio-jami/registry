@@ -64,13 +64,13 @@ if (!existsSync(registryPath)) {
     }
   }
 
-  const suiteDir = join(publicDir, "suites");
-  const suiteFiles = existsSync(suiteDir)
-    ? readdirSync(suiteDir).filter((file) => file.endsWith(".suite.json")).sort()
+  const workspaceDir = join(publicDir, "workspaces");
+  const workspaceFiles = existsSync(workspaceDir)
+    ? readdirSync(workspaceDir).filter((file) => file.endsWith(".workspace.json")).sort()
     : [];
 
   console.log(
-    `registry check passed: ${items.length} item(s), ${itemFiles.length} item file(s), ${suiteFiles.length} suite manifest(s)`
+    `registry check passed: ${items.length} item(s), ${itemFiles.length} item file(s), ${workspaceFiles.length} workspace manifest(s)`
   );
 }
 
@@ -81,7 +81,7 @@ if (workbenchManifestText) {
   if (manifest.publicRegistryClaimed !== true) fail("hosted route manifest must claim registry route");
   if (manifest.publicDocsClaimed !== true) fail("hosted route manifest must claim docs route");
   if (manifest.publicWorkbenchClaimed !== true) fail("hosted route manifest must claim workbench route");
-  if (manifest.publicSuiteRoutesClaimed !== true) fail("hosted route manifest must claim suite routes");
+  if (manifest.publicWorkspaceRoutesClaimed !== true) fail("hosted route manifest must claim workspace routes");
   if (manifest.hostedPersistenceClaimed !== false) fail("hosted route manifest must not claim persistence");
   if (manifest.backendRegistrationClaimed !== false) fail("hosted route manifest must not claim backend registration");
 }
@@ -102,6 +102,7 @@ for (const [relPath, routeId] of [
 for (const relPath of [
   "index.html",
   "harness/index.html",
+  "preview-docs/registry.html",
   "preview-docs/workbench.html",
   "preview-docs/suites.html",
   "suites/solo/index.html",
@@ -117,12 +118,33 @@ if (!existsSync(docsConfigPath)) {
 } else {
   const docsConfig = readJson(docsConfigPath);
   const pages = [];
+
+  // Recursively collect page references from a `pages` array. Entries may be a
+  // string (a page path), a nested group object (`{ group, pages }`) which is how
+  // the accordion sidebar nests Reference/Concepts/etc., or another nav container.
+  const collectPages = (entries) => {
+    for (const entry of entries ?? []) {
+      if (typeof entry === "string") {
+        pages.push(entry);
+      } else if (entry && typeof entry === "object") {
+        collectPages(entry.pages);
+        // `root` is an optional landing page on a directory group.
+        if (typeof entry.root === "string") pages.push(entry.root);
+      }
+    }
+  };
+
   for (const tab of docsConfig.navigation?.tabs ?? []) {
+    collectPages(tab.groups?.flatMap((group) => group.pages) ?? []);
     for (const group of tab.groups ?? []) {
-      for (const page of group.pages ?? []) pages.push(page);
+      if (typeof group.root === "string") pages.push(group.root);
     }
   }
+  // Also support a top-level `navigation.groups` shape (no tabs).
+  collectPages(docsConfig.navigation?.groups?.flatMap((group) => group.pages) ?? []);
+
   for (const page of pages) {
-    if (!existsSync(join(root, `${page}.mdx`))) fail(`docs.json references missing page ${page}.mdx`);
+    const pagePath = page.endsWith(".mdx") ? page : `${page}.mdx`;
+    if (!existsSync(join(root, pagePath))) fail(`docs.json references missing page ${pagePath}`);
   }
 }

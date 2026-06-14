@@ -8,7 +8,7 @@ description: 'How registry.jami.studio splits traffic between the Cloudflare Pag
 
 Jami Registry uses one public hostname with two backing services:
 
-- `registry.jami.studio/registry.json`, `/items/*`, `/suites/*`, and the generated workbench/suite preview routes are static files served by Cloudflare Pages.
+- `registry.jami.studio/registry.json`, `/items/*`, `/suites/*`, `/harness/*`, and the generated workbench/workspace preview routes are static files served by Cloudflare Pages.
 - `registry.jami.studio/docs/*` is the user-facing docs route and should proxy to Mintlify.
 
 Marketing stays at `jami.studio`.
@@ -19,7 +19,8 @@ Marketing stays at `jami.studio`.
 - The npm packages are published at `0.1.0`.
 - `https://registry.jami.studio/docs` is served by the Pages advanced-mode worker in `public/_worker.js`.
 - `https://registry.jami.studio/` serves the generated Studio UI workbench preview.
-- `https://registry.jami.studio/suites/solo/`, `/suites/business-ops/`, `/suites/mixed-media/`, and `/suites/research-writing/` serve generated suite previews.
+- `https://registry.jami.studio/suites/solo/`, `/suites/business-ops/`, `/suites/mixed-media/`, and `/suites/research-writing/` serve generated workspace previews.
+- `https://registry.jami.studio/harness/` serves the static Harness workbench plus status/control JSON routes generated from the Harness source repo.
 
 ## Mintlify Source
 
@@ -33,7 +34,7 @@ The docs source files are:
 - `registry/*.mdx`
 - `components/*.mdx`
 - `harness/*.mdx`
-- `suites/*.mdx`
+- `suites/*.mdx` (workspace docs; stable path retained)
 - `theming/*.mdx`
 - `operations/*.mdx`
 
@@ -80,4 +81,5 @@ curl -I https://registry.jami.studio/registry.json
 curl -I https://registry.jami.studio/items/button.registry-item.json
 curl -I https://registry.jami.studio/
 curl -I https://registry.jami.studio/suites/solo/
+curl -I https://registry.jami.studio/harness/status.json
 ```

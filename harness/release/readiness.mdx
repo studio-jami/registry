@@ -7,16 +7,16 @@ url: "harness/release/readiness"
 
 This is the release, supply-chain, hosted-readiness, and public-claims gate for Jami Harness. It records what can be claimed from current evidence and what must stay blocked until the repo has real command evidence or a human account intervention.
 
-No command in this repo deploys public docs, calls a hosted provider, writes a hosted store, or exports to a hosted OTLP sink. The public npm/GitHub release lane has been executed for `0.1.0`; the current provider path remains a first-party local deterministic adapter only.
+No command in this repo deploys public docs, calls a hosted provider, writes a hosted store, or exports to a hosted OTLP sink. The public npm/GitHub release track has been executed for `0.1.0`; the current provider path remains a first-party local deterministic adapter only.
 
 ## Current release posture
 
 - `pnpm verify` is the root local gate: docs, contract generation drift, docs generation drift, contract validation, package tests, CLI tests, SDK tests, the local evidence smoke, and both non-publishing release audit commands.
 - `pnpm release:readiness` and `pnpm release:dry-run` are audit commands. They do not publish. They report package, SBOM, provenance, attestation, claims, and account-action state.
-- `pnpm sbom:generate` and `pnpm sbom:check` emit and verify a local CycloneDX `1.7` workspace package-manifest inventory at `docs/generated/sbom.cdx.json`. See [SBOM](/harness/release/sbom).
+- `pnpm sbom:generate` and `pnpm sbom:check` emit and verify a local CycloneDX `1.7` workspace package-manifest inventory at `docs/generated/sbom.cdx.json`. See the [release packet guide](/harness/guide-release-packets).
 - `pnpm release:capabilities` and `pnpm release:capabilities:check` emit and verify `docs/generated/release-capability-manifest.json`.
-- `pnpm hosted:routes`, `pnpm hosted:routes:check`, and `pnpm hosted:smoke` emit, verify, and smoke the static status/control route bundle for `https://registry.jami.studio/harness/`. See [Hosted routes](/harness/release/hosted-routes).
-- Publishable package manifests are public-package ready. Public npm release executed for `@jami-studio/*@0.1.0` through the trusted GitHub Actions lane. A `0.1.1` patch is prepared for `@jami-studio/harness-core`, `@jami-studio/harness-sdk`, and `@jami-studio/harness-cli`. The root, docs, and workbench packages remain intentionally private.
+- `pnpm hosted:routes`, `pnpm hosted:routes:check`, and `pnpm hosted:smoke` emit, verify, and smoke the static status/control route bundle for `https://registry.jami.studio/harness/`. See [hosting operations](/operations/hosting).
+- Publishable package manifests are public-package ready. Public npm release executed for `@jami-studio/*@0.1.0` through the trusted GitHub Actions workflow. A `0.1.1` patch is prepared for `@jami-studio/harness-core`, `@jami-studio/harness-sdk`, and `@jami-studio/harness-cli`. The root, docs, and workbench packages remain intentionally private.
 
 ## Unavailable commands
 

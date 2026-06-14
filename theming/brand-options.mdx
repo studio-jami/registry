@@ -1,23 +1,23 @@
 ---
 title: 'Customize Jami UI with Selectable Brand Options'
 sidebarTitle: 'Brand Options'
-description: 'Three selectable token delta sets—Command Grid, Editorial Studio, and Studio Console—that steer Jami UI toward different suite personalities.'
+description: 'Three selectable token delta sets—Command Grid, Editorial Studio, and Studio Console—that steer Jami UI toward different workspace personalities.'
 ---
 
 Brand options are selectable token delta sets that let you shift Jami UI's personality without replacing the full Jami Factory Theme. Each option defines a small set of overrides — accent color, focus ring, control radius, spacing, and dock width — that you apply on top of the baseline token values. They are design directions to explore, not final brand canon: installing a brand option gives you the token override values; you decide what to do with them.
 
 <Note>
-  All three brand options carry `"status": "selectable-option"` and `"canonicalBrand": false` in their descriptors. They are exploratory starting points for suite customisation, not shipped product identities.
+  All three brand options carry `"status": "selectable-option"` and `"canonicalBrand": false` in their descriptors. They are exploratory starting points for workspace customisation, not shipped product identities.
 </Note>
 
 ## Available Brand Options
 
 <CardGroup cols={3}>
   <Card title="Command Grid" icon="grid-2">
-    Blue command accents, tighter radius, and narrower dock. Best for mixed-media and business operations suites.
+    Blue command accents, tighter radius, and narrower dock. Best for mixed-media and business operations workspaces.
   </Card>
   <Card title="Editorial Studio" icon="pen-nib">
-    Plum accent, softer spacing, and wider reading panels. Best for research-writing and documentation suites.
+    Plum accent, softer spacing, and wider reading panels. Best for research-writing and documentation workspaces.
   </Card>
   <Card title="Studio Console" icon="terminal">
     Teal command affordances and warm-magenta focus ring. Best for default kit previews and operator-heavy workbench sessions.
@@ -28,7 +28,7 @@ Brand options are selectable token delta sets that let you shift Jami UI's perso
 
 ## Command Grid
 
-**Command Grid** sharpens the suite shell with a steel-blue accent, tighter corner radius, and a narrower dock. It is optimised for mixed-media and business operations workbenches where dense tabular content and strong registry-install affordances take priority.
+**Command Grid** sharpens the workspace shell with a steel-blue accent, tighter corner radius, and a narrower dock. It is optimised for mixed-media and business operations workbenches where dense tabular content and strong registry-install affordances take priority.
 
 ```bash
 npx shadcn add https://registry.jami.studio/items/command-grid-brand.registry-item.json
@@ -45,13 +45,13 @@ This writes `studio-ui/branding/command-grid.brand-option.json` into your projec
 | `spacing.control` | `7px` |
 | `shell.dockWidth` | `280px` |
 
-**Best for:** mixed-media suite, business operations suite, registry item choice and install inspection.
+**Best for:** mixed-media workspace, business operations workspace, registry item choice and install inspection.
 
 ---
 
 ## Editorial Studio
 
-**Editorial Studio** slows the pace with a rich plum accent, generous spacing, and a wider dock for comfortable source review. It suits research-writing workflows and documentation suite previews where reading comfort and citation scanning matter more than density.
+**Editorial Studio** slows the pace with a rich plum accent, generous spacing, and a wider dock for comfortable source review. It suits research-writing workflows and documentation workspace previews where reading comfort and citation scanning matter more than density.
 
 ```bash
 npx shadcn add https://registry.jami.studio/items/editorial-studio-brand.registry-item.json
@@ -68,7 +68,7 @@ This writes `studio-ui/branding/editorial-studio.brand-option.json`. The file co
 | `spacing.control` | `10px` |
 | `shell.dockWidth` | `340px` |
 
-**Best for:** research-writing suite, docs and source panels, brand book and documentation previews.
+**Best for:** research-writing workspace, docs and source panels, brand book and documentation previews.
 
 ---
 

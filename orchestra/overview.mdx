@@ -1,0 +1,34 @@
+---
+title: "Jami Orchestra: Multi-Agent Orchestration (Vision)"
+sidebarTitle: "Overview"
+description: "The vision for Jami Orchestra — a multi-agent orchestration layer built on the Harness contracts. A forward-looking stub until a shipped surface exists."
+---
+
+<Note>
+  **Vision stub.** Orchestra has no shipped, installable surface yet. This section documents
+  the intended direction only; it makes no customer-facing capability claims today.
+</Note>
+
+**Jami Orchestra** is the planned orchestration layer that coordinates multiple
+[Harness](/overview/harness) runs toward a shared goal. Harness governs one agent's run end to
+end; Orchestra's role is to compose many runs — sequencing, sharing context and artifacts, and
+keeping the combined effort resumable and auditable under the same policy model.
+
+## Goals
+
+- **Compose runs, not reinvent them.** Build on the Harness contracts (runs, tasks, tools,
+  policy, artifacts, evidence) so multi-agent work inherits the same guarantees.
+- **Keep governance first-class.** Explicit policy, approvals, denials, and full provenance
+  across every coordinated run.
+- **Stay resumable.** A coordinated effort should checkpoint and resume the same way a single
+  run does.
+
+## Not yet documented
+
+The concrete API, CLI, and contracts for Orchestra are not published. When a real surface
+ships, this stub is promoted to a full section with getting-started, concepts, and a
+developer reference — mirroring the Harness and Studio sections.
+
+<Card title="Family overview" icon="house" href="/overview/index">
+  How Harness, Studio, and Orchestra relate.
+</Card>

@@ -1,0 +1,42 @@
+---
+title: "Release Packets"
+sidebarTitle: "Release Packets"
+description: "How to assemble a release packet with Jami Harness — bundling artifacts, evidence, and provenance into a verifiable release output."
+---
+
+This guide covers assembling a **release packet** — bundling a run's
+[artifacts](/harness/concept-artifacts) and [evidence](/harness/concept-evidence) with
+provenance into a verifiable release output.
+
+## Packet Inputs
+
+The Harness release packet is assembled from deterministic source outputs:
+
+- generated docs and source manifest
+- evidence index
+- package contents manifest
+- SBOM
+- package install smoke output
+- release capability manifest
+- hosted route manifest and fail-closed hosted smoke evidence
+
+## Verify Locally
+
+```powershell
+pnpm docs:generate -- --check
+pnpm sbom:generate -- --check
+pnpm package:dry-run:check
+pnpm package:smoke:check
+pnpm release:capabilities:check
+pnpm verify
+```
+
+## Boundary
+
+A release packet can prove the local package, docs, source, and capability evidence that was
+generated. It should not claim hosted routes, hosted docs, external providers, or hosted
+stores unless those routes are implemented and included in the packet evidence.
+
+<Card title="Release evidence" icon="shield-check" href="/operations/release">
+  See current release, provenance, and attestation evidence.
+</Card>

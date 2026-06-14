@@ -19,6 +19,16 @@ The Harness ships a static status/control route bundle for hosting at `https://r
 
 `_headers` applies `Content-Type: application/json`, `Cache-Control: no-store`, and `X-Content-Type-Options: nosniff` for `/harness/*.json`.
 
+## Route purposes
+
+| Route | Purpose |
+| --- | --- |
+| `/harness/status.json` | Top-level Harness status, evidence, and readiness for the hosted static route bundle. |
+| `/harness/healthz.json` | Static health signal proving the generated route bundle can be served and parsed. |
+| `/harness/release-readiness.json` | Release readiness posture from package publishing, attestation, SBOM, and hosted docs evidence. |
+| `/harness/provider-store-observability.json` | Fail-closed hosted provider, Neon store, and OTLP observability prerequisites. |
+| `/harness/` | Static Harness workbench generated from the same source evidence. |
+
 ## Commands
 
 ```bash

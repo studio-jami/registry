@@ -1,0 +1,95 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page-implementation.generated.json",
+  "schemaVersion": "2026-06-09.workspace-shell",
+  "workspace": "research-writing",
+  "implementationStatus": "mounted-react-workspace-page",
+  "source": "registry/workspaces/research-writing/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "page": {
+    "id": "page.research-writing.brief",
+    "title": "Brief drafting",
+    "description": "Outline, notes, document state, and display-only writing-agent review.",
+    "components": [
+      "docs-source-panel",
+      "text-field",
+      "agent-panel",
+      "button"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/research-writing/brief",
+      "page": "page.research-writing.brief",
+      "title": "Brief drafting",
+      "blocks": [
+        "block.research-writing.outline",
+        "block.research-writing.agent-review"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.research-writing.outline",
+      "title": "Outline",
+      "component": "text-field",
+      "implementationFile": "studio-ui/workspaces/research-writing/blocks/research-writing-outline-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "invalid"
+      ]
+    },
+    {
+      "id": "block.research-writing.agent-review",
+      "title": "Writing review",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/research-writing/blocks/research-writing-agent-review-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    "agent-panel",
+    "button",
+    "docs-source-panel",
+    "text-field"
+  ],
+  "evidence": {
+    "renderedBlockCount": 2,
+    "responsiveLayout": "single-column-safe mounted React composition",
+    "a11yStructure": "page routes compose labelled resident React block implementations",
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/research-writing/research-writing-brief.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/research-writing/workspace-shell.json",
+    "copiedSource": false
+  }
+}

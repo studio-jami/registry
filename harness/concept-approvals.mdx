@@ -1,0 +1,25 @@
+---
+title: "Approvals"
+sidebarTitle: "Approvals"
+description: "How Jami Harness handles approvals — pausing a run for a human decision, then resuming with the decision recorded as evidence."
+---
+
+**Approvals** are how a governed run pauses for a human decision. When [policy](/harness/concept-policy)
+requires consent, Harness holds the run at a checkpoint, surfaces the request, and resumes
+once the decision is made — recording the outcome as part of the run's [evidence](/harness/concept-evidence).
+
+## When Approvals Are Required
+
+The default policy engine requires current bound approvals for elevated-risk actions:
+`write`, `destructive`, `external`, and `secret_adjacent`. Read-only actions can proceed
+when identity, project, environment, and required scopes are satisfied.
+
+## Binding Rules
+
+An approval must match the run id, actor id, action id, required scopes, and approval window.
+Expired, replayed, mismatched, or denied approvals fail closed.
+
+## SDK and CLI
+
+Use `harness.approve(input)` / `harness.deny(input)` or `jami approve --json` /
+`jami deny --json` to record decisions in the configured checkpoint store.

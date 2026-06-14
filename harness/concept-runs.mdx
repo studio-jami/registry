@@ -1,0 +1,30 @@
+---
+title: "Runs"
+sidebarTitle: "Runs"
+description: "How Jami Harness models a run — the durable unit of governed agent work, with a stable identifier, actor/project/environment context, and retry and recovery state."
+---
+
+A **run** is the durable unit of governed agent work in Jami Harness. Every run has a stable
+identifier and carries actor, project, and environment context so its history, retries, and
+recovery state are auditable from start to finish.
+
+## Lifecycle
+
+The local runtime emits run events such as `run.started`, `run.progress`, `run.completed`,
+and `run.failed`. Tool requests, policy decisions, UI payloads, and artifact views are also
+recorded against the same run id.
+
+## Identity
+
+Run ids use the `run_` prefix. A run also carries an actor, project id, and environment so
+policy decisions and evidence can be traced back to the exact context that produced them.
+
+## Recovery Boundary
+
+The SDK exposes `resume(runId)` for checkpoint replay state. Manual cancellation and retry
+orchestration currently fail closed from the SDK/CLI instead of claiming unsupported runtime
+behavior.
+
+Runs are the parent record for [tasks](/harness/concept-tasks), [checkpoints](/harness/concept-checkpoints),
+[artifacts](/harness/concept-artifacts), [traces](/harness/concept-traces), and
+[evidence](/harness/concept-evidence).

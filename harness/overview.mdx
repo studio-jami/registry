@@ -6,7 +6,13 @@ description: "The contract-first agent runtime foundation that owns runs, tools,
 
 Jami Harness is the foundational product in the Jami Studio family. It is the contract-first agent runtime that owns the governed action loop — runs, tasks, tools, policy, approvals, memory, artifacts, traces, evidence, checkpoints, and release packets — published as the `@jami-studio/harness-*` packages.
 
-Harness is the root of the stack. Studio UI displays trusted state from the Harness. The public registry distributes UI items that can reference Harness payloads but never execute Harness actions directly.
+Studio UI owns the token system, primitive vocabulary, registry items, workbench controls, and resident rendering layer. Harness and Studio UI stay separate repos and packages, but they meet through typed payloads and references.
+
+<Note>
+  The Harness executes and governs agent work. Studio UI displays trusted state and
+  installable components. Registry items can show action refs and artifact refs,
+  but they do not execute actions directly.
+</Note>
 
 <CardGroup cols={2}>
   <Card title="Architecture" icon="diagram-project" href="/harness/architecture">
@@ -17,11 +23,11 @@ Harness is the root of the stack. Studio UI displays trusted state from the Harn
     Install the CLI and SDK and run a local evidence smoke.
   </Card>
 
-  <Card title="Runtime" icon="play" href="/harness/runtime/lifecycle">
+  <Card title="Runtime" icon="play" href="/harness/concept-runs">
     Run lifecycle, checkpoints, retries, cancellation, and resumability.
   </Card>
 
-  <Card title="Contracts" icon="file-shield" href="/harness/contracts/overview">
+  <Card title="Contracts" icon="file-shield" href="/harness/reference-configuration">
     Versioned schemas for runs, tools, artifacts, policy, memory, traces, and evidence.
   </Card>
 </CardGroup>
@@ -47,19 +53,19 @@ The owned core is the product grammar Jami Harness must control directly. Infras
 
 ## How Harness relates to Studio UI and the Registry
 
-- **Harness** executes and governs agent work. It emits typed payloads (`uiPayload`, `artifactView`, `actionRef`, `themeRef`, `suiteRef`).
+- **Harness** executes and governs agent work. It emits typed payloads (`uiPayload`, `artifactView`, `actionRef`, `themeRef`, `workspaceRef`).
 - **Studio UI** renders those payloads through resident, allowlisted components. UI never owns policy, tool execution, memory writes, or trace emission.
 - **The public registry** at `registry.jami.studio` distributes installable Studio UI items via the shadcn protocol. Registry items can display Harness refs but cannot execute Harness actions.
 
 <Note>
-  All three pillars ship under the `@jami-studio` npm scope and share Apache-2.0 licensing. They are separate repositories with separate release lanes.
+  All three pillars ship under the `@jami-studio` npm scope and share Apache-2.0 licensing. They are separate repositories with separate release tracks.
 </Note>
 
 ## Current release posture
 
-The first public package lane is published under the `@jami-studio` npm namespace at `0.1.0`, with inspection patch packages at `0.1.1` for `@jami-studio/harness-cli`, `@jami-studio/harness-core`, and `@jami-studio/harness-sdk`.
+The first public package track is published under the `@jami-studio` npm namespace at `0.1.0`, with inspection patch packages at `0.1.1` for `@jami-studio/harness-cli`, `@jami-studio/harness-core`, and `@jami-studio/harness-sdk`.
 
-The current provider path is a first-party local deterministic adapter only. **Hosted provider runtime, hosted durable stores, OTLP observability sinks, and a hosted Harness workbench are not implemented.** See [Hosted runtime limits](/harness/operations/hosted-limits) for the exact unsupported surfaces and the human interventions required before any hosted claim.
+The current provider path is a first-party local deterministic adapter only. **Hosted provider runtime, hosted durable stores, OTLP observability sinks, and a hosted Harness workbench are not implemented.** See [hosting operations](/operations/hosting) for the exact unsupported surfaces and the human interventions required before any hosted claim.
 
 ## The Principled Edge
 

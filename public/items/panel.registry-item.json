@@ -47,12 +47,12 @@
   ],
   "meta": {
     "packageName": "@jami-studio/panel",
-    "suite": "solo",
+    "workspace": "solo",
     "lifecycle": {
       "id": "primitive.panel",
       "version": "0.0.0-contract.20260609",
       "schemaVersion": "2026-06-09.registry-foundation",
-      "sourceHash": "sha256:d5b2c26626c1273251974dad6374ea7bdb7ee88c0010222f6bc5ad36ea35f1bd",
+      "sourceHash": "sha256:b16512ab454ce78d5494eb8d2e5be57b40081015829ce9116cbe9bd68e2d28cc",
       "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
     },
     "tokenRequirements": [

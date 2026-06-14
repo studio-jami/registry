@@ -1,0 +1,66 @@
+---
+title: "Studio Renderer Reference"
+sidebarTitle: "Renderer"
+description: "Developer reference for the Jami Studio renderer — inert structured payload rendering, display-only references, and safe-payload validation."
+---
+
+The `@jami-studio/renderer` package validates and renders harness-originated structured
+payloads into inert, JSON-serializable render trees. It does not execute actions, import
+React, run scripts, or own policy decisions.
+
+## Public Exports
+
+```ts
+import {
+  renderFixture,
+  renderUiPayload,
+  renderActionRef,
+  renderArtifactView,
+  renderThemeRef,
+  renderWorkspaceRef,
+  renderSuiteRef,
+  renderRendererError,
+  allowedComponents,
+  componentNameAllowed,
+  scanUnsafePayload,
+  presentArtifactView,
+  presentEvidencePacket,
+  presentTrace,
+  presentMemoryContext,
+  presentActionRef,
+  presentWorkbenchPanel
+} from '@jami-studio/renderer'
+```
+
+<Note>
+  `workspaceRef` is the canonical shared wire seam. `renderSuiteRef` remains a deprecated
+  compatibility alias for older fixtures and callers.
+</Note>
+
+## Rendering Behavior
+
+| Function | Purpose |
+| --- | --- |
+| `renderUiPayload(payload)` | Validates and renders resident UI payloads from the allowlisted vocabulary. |
+| `renderActionRef(ref)` | Renders denied or pending action references as display-only state. |
+| `renderArtifactView(view)` | Renders artifact references without executing or fetching hidden content. |
+| `renderThemeRef(ref)` | Renders theme references as inert metadata. |
+| `renderWorkspaceRef(ref)` | Renders the canonical harness shared-seam reference for workspace install graphs. |
+| `renderSuiteRef(ref)` | Deprecated compatibility alias for `renderWorkspaceRef(ref)`. |
+| `renderRendererError(error)` | Produces renderer-owned error state without echoing unsafe payload text. |
+| `renderFixture(fixture)` | Renders compatibility fixtures for contract tests. |
+
+## Safety Boundary
+
+The renderer fails closed on unsafe payloads:
+
+- Unknown components render as unsupported.
+- JavaScript URLs, event handlers, scripts, raw HTML execution, callbacks, and executable
+  capabilities are rejected or dropped.
+- Policy, approvals, side effects, and tool execution remain Harness responsibilities.
+- Render output is a serializable tree intended for inspection and resident rendering, not a
+  remote code execution path.
+
+<Card title="Component Vocabulary" icon="puzzle-piece" href="/components/overview">
+  Review the resident component set and prop contracts.
+</Card>

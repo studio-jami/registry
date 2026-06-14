@@ -130,16 +130,16 @@ npx shadcn add https://registry.jami.studio/items/jami-theme.registry-item.json
 
 This writes the full Jami factory token set as CSS variables, a Tailwind `@theme` block, TypeScript constants, and a shadcn `cssVars` descriptor. Install this first if you want the warm Jami colour palette (`--jami-semantic-light-accent: #C14D84`, teal focus ring, etc.).
 
-## Suite items
+## Workspace items
 
-Suite items use the same install pattern. Installing a suite entry-point (such as `solo-suite`) triggers the full install graph in one command:
+Workspace items use the same install pattern. Installing a workspace entry-point (such as `solo-workspace`) triggers the full install graph in one command:
 
 ```bash
-npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
-See [Suites](/registry/suites) for the complete breakdown of what each suite includes.
+See [Workspaces](/studio/workspaces) for the complete breakdown of what each workspace includes.
 
 ## Verifying what was installed
 
-After installing, check `components/ui/` for the vocabulary and component files, and `studio-ui/` for any theme or suite files. The registry item JSON includes a `hash` field per file — you can compare these to the written files to verify integrity.
+After installing, check `components/ui/` for the vocabulary and component files, and `studio-ui/` for any theme or workspace files. The registry item JSON includes a `hash` field per file — you can compare these to the written files to verify integrity.

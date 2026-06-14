@@ -1,36 +1,36 @@
 ---
-title: 'Business Ops Suite: Staff, Scheduling, and Dashboards'
+title: 'Business Ops Workspace: Staff, Scheduling, and Dashboards'
 sidebarTitle: 'Business Ops'
-description: 'Install the Business Ops suite to get a dense operations shell for staff records, schedule exceptions, training forms, compliance signals, and KPI dashboards.'
+description: 'Install the Business Ops workspace to get a dense operations shell for staff records, schedule exceptions, training forms, compliance signals, and KPI dashboards.'
 ---
 
-The Business Ops suite is a dense operations shell designed for teams managing staff, shift schedules, training workflows, compliance tracking, and day-to-day operational metrics. It targets the `business-ops` lane and ships an `ops-dashboard` layout with four navigation items: Dashboard, Staff, Scheduling, and Compliance. A single install command resolves 14 registry items — theme tokens, primitive components, the app shell, two pages, and five operational blocks — giving you a fully structured base to extend with your own data sources and business logic.
+The Business Ops workspace is a dense operations shell designed for teams managing staff, shift schedules, training workflows, compliance tracking, and day-to-day operational metrics. It uses the `business-ops` workspace key and ships an `ops-dashboard` layout with four navigation items: Dashboard, Staff, Scheduling, and Compliance. A single install command resolves 14 registry items — theme tokens, primitive components, the app shell, two pages, and five operational blocks — giving you a fully structured base to extend with your own data sources and business logic.
 
 ## Install
 
-Run the following command to pull the entire Business Ops suite install graph into your project:
+Run the following command to pull the entire Business Ops workspace install graph into your project:
 
 <CodeGroup>
 ```bash npm
-npx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+npx shadcn add https://registry.jami.studio/items/business-ops-workspace.registry-item.json
 ```
 
 ```bash pnpm
-pnpm dlx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+pnpm dlx shadcn add https://registry.jami.studio/items/business-ops-workspace.registry-item.json
 ```
 
 ```bash yarn
-yarn dlx shadcn add https://registry.jami.studio/items/business-ops-suite.registry-item.json
+yarn dlx shadcn add https://registry.jami.studio/items/business-ops-workspace.registry-item.json
 ```
 </CodeGroup>
 
 <Note>
-  The install graph resolves all 14 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+  The install graph resolves all 14 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the workspace.
 </Note>
 
 ## What's Included
 
-The `business-ops-suite` registry item installs the following items in dependency order:
+The `business-ops-workspace` registry item installs the following items in dependency order:
 
 <Steps>
   <Step title="Design foundation">
@@ -43,7 +43,7 @@ The `business-ops-suite` registry item installs the following items in dependenc
     `business-ops-app` — the `ops-dashboard` layout shell that mounts the navigation and route outlet.
   </Step>
   <Step title="Pages">
-    `business-ops-dashboard-page`, `business-ops-staff-page` — the two active route pages shipped with this suite version.
+    `business-ops-dashboard-page`, `business-ops-staff-page` — the two active route pages shipped with this workspace version.
   </Step>
   <Step title="Blocks">
     `business-ops-kpis-block`, `business-ops-exceptions-block`, `business-ops-agent-review-block`, `business-ops-staff-table-block`, `business-ops-training-form-block` — the five discrete content blocks that compose each page.
@@ -58,8 +58,8 @@ The Business Ops app shell uses the `ops-dashboard` layout. This layout is optim
 |---|---|
 | Shell ID | `app.business-ops.shell` |
 | Layout | `ops-dashboard` |
-| Lane | `business-ops` |
-| Package name | `@jami-studio/business-ops-suite` |
+| Workspace key | `business-ops` |
+| Package name | `@jami-studio/business-ops-workspace` |
 
 ### Navigation
 
@@ -124,7 +124,7 @@ Each block ships with named state fixtures you can reference in tests and Storyb
 
 ## Planned Surfaces
 
-The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+The following surfaces are defined in the workspace manifest and will be added in future releases. Installing the workspace now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
 
 <CardGroup cols={3}>
   <Card title="Staff" icon="users" />
@@ -146,7 +146,7 @@ The following surfaces are defined in the suite manifest and will be added in fu
 
 ## Related Components
 
-The Business Ops suite is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+The Business Ops workspace is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
 
 <CardGroup cols={2}>
   <Card title="Agent Panel" icon="robot" href="/components/agent-panel">

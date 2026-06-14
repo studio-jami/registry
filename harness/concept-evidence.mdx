@@ -1,0 +1,27 @@
+---
+title: "Evidence"
+sidebarTitle: "Evidence"
+description: "How Jami Harness models evidence — the verifiable record of what happened in a run, assembled from artifacts, decisions, and traces."
+---
+
+**Evidence** is the verifiable record of what happened in a run. Harness assembles it from
+[artifacts](/harness/concept-artifacts), policy and [approval](/harness/concept-approvals)
+decisions, and [traces](/harness/concept-traces) — so a result can be audited and trusted,
+not just asserted.
+
+## Evidence Packet
+
+The local SDK run result includes an `evidence` record alongside the artifact, provider
+result, tool executions, traces, audits, and metrics. The generated evidence index records
+the source repo, source ref, source input hash, command, result, and freshness class.
+
+## What Evidence Proves
+
+Evidence proves what the Harness observed and verified for a run. It does not claim hosted
+provider execution, hosted observability, or hosted stores unless those routes are explicitly
+implemented and included in the evidence.
+
+## Release Use
+
+Release packets bind evidence to generated docs, package manifests, SBOM output, package
+smoke checks, and capability manifests. See the [release packets guide](/harness/guide-release-packets).

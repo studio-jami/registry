@@ -1,0 +1,26 @@
+---
+title: "Checkpoints"
+sidebarTitle: "Checkpoints"
+description: "How Jami Harness uses checkpoints — durable save points that make a run resumable across retries, approvals, and recovery."
+---
+
+**Checkpoints** are durable save points in a [run](/harness/concept-runs). They make work
+resumable — across retries, around an [approval](/harness/concept-approvals) pause, and
+during recovery — so a long or interrupted run continues from where it left off instead of
+starting over.
+
+## What is Stored
+
+The default local checkpoint store tracks run state, approval records, and replay data. SDK
+callers can replace that store through `createHarness({ checkpointStore })`.
+
+## Resume Path
+
+Use `harness.resume(runId)` or `jami resume --json` to inspect replay state. A missing
+checkpoint is reported explicitly; Harness does not silently recreate history.
+
+## Boundaries
+
+The local store is enough for deterministic development and evidence inspection. Hosted
+checkpoint storage and distributed orchestration are separate implementation work and are
+not implied by the local checkpoint API.

@@ -1,0 +1,65 @@
+---
+title: "Studio CLI Reference"
+sidebarTitle: "CLI"
+description: "Developer reference for the @jami-studio/cli package and standard shadcn registry installs."
+---
+
+Studio UI supports two install paths:
+
+- `@jami-studio/cli`, exposed as the `studio-ui` command, for registry lifecycle workflows.
+- The standard `shadcn` CLI with direct registry item URLs.
+
+## Studio UI CLI
+
+```bash
+npm install @jami-studio/cli
+studio-ui doctor
+```
+
+```bash
+studio-ui <command> [name] [options]
+```
+
+| Command | Purpose |
+| --- | --- |
+| `init` | Writes `studio-ui.config.json` with `--title`, `--workspace`, `--theme`, `--package-manager`, `--registry`, and `--force`. |
+| `list` | Lists registry items. |
+| `inspect` | Shows an item lifecycle, provenance, dependency graph, and files. |
+| `add` | Installs an item and its dependency graph; supports `--dry-run` and `--force`. |
+| `remove` | Removes an installed item; supports `--force` and `--dry-run`. |
+| `update` | Updates installed items to the registry; supports `--dry-run`, `--force`, and an optional item name. |
+| `diff` | Shows planned install/update/file drift without writing. |
+| `migrate` | Reports or applies schema-version migrations with `--apply`, `--force`, and optional item name. |
+| `pin` / `unpin` | Pins or unpins an installed item version; `pin` accepts `--version`. |
+| `lock` | Shows lockfile status and on-disk drift. |
+| `doctor` | Diagnoses config, registry, provenance, and file drift. |
+| `provenance` | Verifies an item's source/content provenance. |
+
+Global options:
+
+```bash
+studio-ui --cwd <dir> --registry <dir-or-url>
+```
+
+`--registry-url` is accepted as an alias for `--registry`.
+
+## Direct shadcn Installs
+
+Any registry item can also be installed through a direct shadcn URL:
+
+```bash
+npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
+```
+
+Workspace items install the full graph through `registryDependencies`: theme, app, pages,
+blocks, components, and primitives.
+
+<CardGroup cols={2}>
+  <Card title="Installing Items" icon="download" href="/registry/installing-items">
+    Install individual items or full workspaces.
+  </Card>
+  <Card title="Workspaces" icon="cubes" href="/studio/workspaces">
+    See the four packaged Jami Studio workspaces.
+  </Card>
+</CardGroup>

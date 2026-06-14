@@ -1,49 +1,49 @@
 ---
-title: 'Mixed Media Suite: Asset Library and Pipeline Management'
+title: 'Mixed Media Workspace: Asset Library and Pipeline Management'
 sidebarTitle: 'Mixed Media'
-description: 'Install the Mixed Media suite for a media-production shell with an asset library, generation pipelines, review queue, and agent status panel.'
+description: 'Install the Mixed Media workspace for a media-production shell with an asset library, generation pipelines, review queue, and agent status panel.'
 ---
 
-The Mixed Media suite is a production shell for teams managing generated and edited media assets, multi-step generation pipelines, review queues, and publishing readiness. It targets the `mixed-media` lane and ships a `media-production` layout with four navigation items: Library, Pipeline, Review, and Publishing. A single install command resolves 13 registry items — theme tokens, primitive components including the dedicated `media-grid`, the app shell, two pages, and four blocks — giving you a structured starting point for any AI-powered media workflow.
+The Mixed Media workspace is a production shell for teams managing generated and edited media assets, multi-step generation pipelines, review queues, and publishing readiness. It uses the `mixed-media` workspace key and ships a `media-production` layout with four navigation items: Library, Pipeline, Review, and Publishing. A single install command resolves 13 registry items — theme tokens, primitive components including the dedicated `media-grid`, the app shell, two pages, and four blocks — giving you a structured starting point for any AI-powered media workflow.
 
 ## Install
 
-Run the following command to pull the entire Mixed Media suite install graph into your project:
+Run the following command to pull the entire Mixed Media workspace install graph into your project:
 
 <CodeGroup>
 ```bash npm
-npx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+npx shadcn add https://registry.jami.studio/items/mixed-media-workspace.registry-item.json
 ```
 
 ```bash pnpm
-pnpm dlx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+pnpm dlx shadcn add https://registry.jami.studio/items/mixed-media-workspace.registry-item.json
 ```
 
 ```bash yarn
-yarn dlx shadcn add https://registry.jami.studio/items/mixed-media-suite.registry-item.json
+yarn dlx shadcn add https://registry.jami.studio/items/mixed-media-workspace.registry-item.json
 ```
 </CodeGroup>
 
 <Note>
-  The install graph resolves all 13 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the suite.
+  The install graph resolves all 13 dependencies automatically. You do not need to install individual items separately unless you want to use them outside the workspace.
 </Note>
 
 ## What's Included
 
-The `mixed-media-suite` registry item installs the following items in dependency order:
+The `mixed-media-workspace` registry item installs the following items in dependency order:
 
 <Steps>
   <Step title="Design foundation">
     `jami-theme` — CSS variables, Tailwind tokens, and TypeScript types for the Jami design system.
   </Step>
   <Step title="Primitive components">
-    `button`, `panel`, `data-list`, `agent-panel`, `media-grid` — the five reusable UI building blocks consumed by Mixed Media pages and blocks. Note that `media-grid` is unique to this suite and is not included in the other suite install graphs.
+    `button`, `panel`, `data-list`, `agent-panel`, `media-grid` — the five reusable UI building blocks consumed by Mixed Media pages and blocks. Note that `media-grid` is unique to this workspace and is not included in the other workspace install graphs.
   </Step>
   <Step title="App shell">
     `mixed-media-app` — the `media-production` layout shell that mounts the navigation and route outlet.
   </Step>
   <Step title="Pages">
-    `mixed-media-library-page`, `mixed-media-pipeline-page` — the two active route pages shipped with this suite version.
+    `mixed-media-library-page`, `mixed-media-pipeline-page` — the two active route pages shipped with this workspace version.
   </Step>
   <Step title="Blocks">
     `mixed-media-assets-block`, `mixed-media-metadata-block`, `mixed-media-pipeline-block`, `mixed-media-review-agent-block` — the four discrete content blocks that compose each page.
@@ -58,8 +58,8 @@ The Mixed Media app shell uses the `media-production` layout. This layout is opt
 |---|---|
 | Shell ID | `app.mixed-media.shell` |
 | Layout | `media-production` |
-| Lane | `mixed-media` |
-| Package name | `@jami-studio/mixed-media-suite` |
+| Workspace key | `mixed-media` |
+| Package name | `@jami-studio/mixed-media-workspace` |
 
 ### Navigation
 
@@ -121,7 +121,7 @@ Each block ships with named state fixtures you can reference in tests and Storyb
 
 ## Planned Surfaces
 
-The following surfaces are defined in the suite manifest and will be added in future releases. Installing the suite now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
+The following surfaces are defined in the workspace manifest and will be added in future releases. Installing the workspace now gives you the shell contract — your routing layer and import paths will not change when these surfaces ship.
 
 <CardGroup cols={4}>
   <Card title="Assets" icon="images" />
@@ -144,7 +144,7 @@ The following surfaces are defined in the suite manifest and will be added in fu
 
 ## Related Components
 
-The Mixed Media suite is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
+The Mixed Media workspace is built from shared registry components. Refer to their individual pages for prop schemas, accessibility notes, and usage examples.
 
 <CardGroup cols={3}>
   <Card title="Media Grid" icon="images" href="/components/media-grid">

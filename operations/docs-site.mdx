@@ -1,0 +1,130 @@
+---
+title: 'Docs Site Settings: Branding, SEO, AIEO, Analytics, Variables'
+sidebarTitle: 'Docs Site'
+description: 'How the Jami Studio Registry docs site is configured — branding assets, SEO and Open Graph metadata, AIEO (llms.txt), the free-tier analytics stack (PostHog, GA4, Cloudflare Web Analytics), reusable variables, and the key-handling policy.'
+---
+
+# Docs Site Settings
+
+This page records every site-level setting for the Mintlify docs at
+`registry.jami.studio/docs`. It is the canonical reference for what is wired, where the
+values live, and why. All settings are in `docs.json`, the repo-root brand asset folders
+(`/logo`, `/favicon`), `public/` (the Cloudflare Pages static layer), and `snippets/`.
+
+## Branding
+
+| Asset | `docs.json` key | File (repo root, Mintlify-served) | Also in `public/` (Pages layer) |
+| --- | --- | --- | --- |
+| Navbar logo (light + dark) | `logo.light` / `logo.dark` | `/logo/jami-mark.svg` | `public/logo/jami-mark.svg` |
+| Logo click target | `logo.href` | `https://www.jami.studio/` | — |
+| Favicon | `favicon` | `/favicon/favicon.svg` | `public/favicon/favicon.svg` |
+| Favicon raster set | (via `seo.metatags` + manifest) | `/favicon/*.png`, `favicon.ico` | `public/favicon/*` |
+
+- The logo is the Jami "fold" mark (the green origami glyph), a transparent SVG that reads
+  cleanly on both the light (`#FFF9F5`) and dark (`#0f0b0d`) chrome, so one file serves both
+  modes. The site `name` ("Jami Studio Registry") renders as the wordmark beside it.
+- The favicon set (`favicon.ico`, `favicon-16x16`, `favicon-32x32`, `apple-touch-icon`,
+  `android-chrome-192x192`, `android-chrome-512x512`, `site.webmanifest`) is unpacked from the
+  brand `jami-favicon.zip`.
+- **Asset path note:** Mintlify serves static files from the repository at the path matching
+  their repo location (`/logo/...`, `/favicon/...` resolve to `<repo>/logo`, `<repo>/favicon`).
+  The same assets are mirrored under `public/` so the Cloudflare Pages bundle (apex static site
+  + release tarball) carries them too.
+- **Deliberately not used as the navbar logo:** the marketing brand portrait art
+  (`_ops/admin/marketing/brand/jami-logo/logo-*-bg.*`) — those are raster images on opaque
+  colored backgrounds, unsuitable for transparent docs chrome.
+
+## SEO
+
+- `description` (top level) — the site description used for search and as the default
+  meta description.
+- `seo.indexing: "all"` — every navigable page is indexed.
+- `seo.metatags` — global Open Graph + Twitter card defaults (`og:site_name`, `og:type`,
+  `og:locale`, `twitter:card: summary_large_image`, `twitter:site`/`twitter:creator`
+  `@studio_jami`), plus `theme-color`, `color-scheme`, and Apple/MS tile metadata pointing at
+  the favicon raster set.
+- **Open Graph images:** Mintlify auto-generates a per-page OG image from the page title and
+  theme. No static `og:image` override is set, so each page gets its own card. (Pass-2 gap: a
+  dedicated 1200x630 brand OG banner could replace the auto-generated cards if desired.)
+- Mintlify also auto-generates `sitemap.xml` and `robots.txt`.
+
+## AIEO (llms.txt)
+
+- `markdown.schema: true` — JSON-LD / schema output for machine consumers.
+- `contextual` — the AI agent action menu (`copy`, `view`, `chatgpt`, `claude`, `grok`,
+  `perplexity`, `aistudio`, `mcp`, `cursor`, `vscode`), displayed in the page header. These
+  enums were cleaned in WS3 and remain valid.
+- **`llms.txt` / `llms-full.txt`** — authored static files at `public/llms.txt` and
+  `public/llms-full.txt`, served at `https://registry.jami.studio/llms.txt` and
+  `/llms-full.txt` (with `text/plain` content-type via `public/_headers`). They mirror the
+  `jami.studio` marketing-site pattern: an H1 title, a blockquote summary, `##` sections with
+  link lists, and a source-policy footer. `llms.txt` is the concise index; `llms-full.txt`
+  expands the taxonomy, Harness, Studio, and Operations. (Mintlify additionally serves its own
+  auto-generated `/docs/llms.txt`; the static files give a stable, hand-curated copy at the
+  apex.)
+
+## Analytics
+
+Free-tier / credit-funded only. Posture per the analytics architecture decision:
+**rich, with session replay OFF and DOM autocapture OFF**, error tracking on.
+
+| Provider | Mechanism | ID / value | Notes |
+| --- | --- | --- | --- |
+| PostHog (`registry-docs` project) | `docs.json` `integrations.posthog` | `apiKey` `phc_…`; `apiHost` omitted so Mintlify uses its hosted PostHog proxy | `sessionRecording: false` (replay off). Autocapture is off at the **project** level (no Mintlify toggle exists); exception tracking on. |
+| Google Analytics 4 (docs stream) | `docs.json` `integrations.ga4` | `measurementId` `G-R39QQTKF5F` | Acquisition / SEO via Search Console linkage. |
+| Cloudflare Web Analytics | `public/_worker.js` (beacon injected into `<head>` via `HTMLRewriter`) | beacon token `83a3145e5d2a495491f28c50698fe5b1` | Cookieless, free, server-side baseline for `registry.jami.studio`. Mintlify has no custom-head-script field, so the beacon is injected at the Cloudflare Pages serving layer. |
+| Amplitude | disabled | — | Reserved for later product/hub funnels. |
+| Mixpanel | disabled | — | Dropped from the active stack. |
+| Intercom | disabled | — | Not used (no support widget). |
+
+### Replay / autocapture off — confirmation
+
+- **PostHog project `registry-docs` (id 469734):** session replay OFF and DOM autocapture OFF
+  at the project level, exception tracking ON — provisioned and read-back-verified in WS9.
+- **Mintlify SDK level:** `sessionRecording: false` is set explicitly in `integrations.posthog`
+  as defense-in-depth (Mintlify enables session recording by default otherwise). `apiHost` is
+  omitted for hosted PostHog so Mintlify uses its `https://ph.mintlify.com` proxy. Mintlify
+  exposes no autocapture flag, so autocapture suppression relies on the project-level setting.
+
+### Key handling
+
+Standard Mintlify reads a **literal** `docs.json` — there is no env-interpolation build step in
+this repo (no `package.json` / build pipeline; the site is the repo as-is). Per the roadmap's
+key-handling guidance, the **publishable client IDs** are placed directly in `docs.json`:
+
+- PostHog `phc_…` project API key — publishable (client-exposed) by design.
+- GA4 `G-…` measurement ID — public.
+- Cloudflare Web Analytics beacon token — public (it ships in the page).
+
+These are public client identifiers, **not secrets**. The gitignored
+`_ops/.agents/.env` remains the source-of-truth record (`POSTHOG_DOCS_KEY`, `POSTHOG_HOST`,
+`GA4_DOCS_MEASUREMENT_ID`, `CLOUDFLARE_WEB_ANALYTICS_DOCS_TOKEN`). **No private or secret token
+is committed** — the Cloudflare API token used to create the beacon lives only in the sibling
+repos' gitignored `.env` (`CLOUDFLARE_API_TOKEN`), never in this repo.
+
+### Privacy & consent
+
+With session replay and DOM autocapture off, the docs collect pageviews + explicit events
+only. Cloudflare Web Analytics is cookieless. No PII is captured and no form-field contents are
+recorded (the docs have no forms). A consent banner is not required for this cookieless /
+no-replay posture; revisit if richer cookie-based tracking is ever enabled.
+
+## Variables & Snippets
+
+Reusable Mintlify snippets live in `snippets/`:
+
+- `snippets/variables.mdx` — exported constants: brand (`Jami Studio`), dev foundation
+  (`Studio UI`), the four Workspaces (Solo, Business, Mixed Media, Research & Writing), the
+  npm scope, the registry version, and base URLs. Import with
+  `import { brand, registryUrl } from "/snippets/variables.mdx";`.
+- `snippets/registry-source.mdx` — a reusable `<RegistrySource item="…" />` component that
+  renders the canonical `shadcn add https://registry.jami.studio/registry.json` install line.
+
+## Reference / API playground
+
+There is **no REST API playground**. Harness and Studio UI expose a TypeScript SDK, a CLI, and
+JSON-schema contracts — not REST endpoints — so the developer reference is **SDK · CLI ·
+Contracts**, documented inline in each product's sidebar group. The inert `api{}` block (which
+had a `playground` with no backing OpenAPI spec) was removed from `docs.json`; it would only
+have rendered an empty playground. If a real endpoint spec ever exists, wire it via Mintlify's
+`openapi` integration (the `intercal.dev` pattern).

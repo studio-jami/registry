@@ -1,0 +1,25 @@
+{/*
+  Reusable "install from the Jami Studio Registry" snippet.
+
+  Usage (optionally override the item being installed):
+
+    import RegistrySource from "/snippets/registry-source.mdx";
+
+    <RegistrySource item="button" />
+
+  Defaults to the registry root URL when no item is given.
+*/}
+
+export const RegistrySource = ({ item }) => (
+  <>
+    The public registry is served from Cloudflare Pages at{" "}
+    <code>https://registry.jami.studio/registry.json</code>. Install items with the{" "}
+    <code>shadcn</code> CLI:
+
+    <pre>
+      <code>{`npx shadcn@latest add https://registry.jami.studio/registry.json${item ? ` ${item}` : ""}`}</code>
+    </pre>
+  </>
+);
+
+export default RegistrySource;

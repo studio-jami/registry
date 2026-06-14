@@ -1,0 +1,69 @@
+# Jami Studio Registry
+
+> Jami Studio Registry is the public documentation site for the Jami Studio family: a registry of installable shadcn UI components, design tokens, and complete application Workspaces (Solo, Business, Mixed Media, Research & Writing), plus the Jami Harness agent runtime. Components follow the shadcn registry protocol and install with the `shadcn` CLI from `https://registry.jami.studio/registry.json`. Hosted docs live at `https://registry.jami.studio/docs`.
+
+## Overview
+
+- [Overview](https://registry.jami.studio/docs/overview/index): What the Jami Studio family is — Harness, Studio, and the vision for Orchestra.
+- [Harness Overview](https://registry.jami.studio/docs/overview/harness): The Jami Harness agent runtime at a glance.
+- [Studio Overview](https://registry.jami.studio/docs/overview/studio): The Studio UI registry, components, and Workspaces at a glance.
+- [Orchestra (vision)](https://registry.jami.studio/docs/overview/orchestra): Forward-looking orchestration vision stub.
+
+## Harness
+
+- [Overview](https://registry.jami.studio/docs/harness/overview): What the Harness is and when to use it.
+- [Quickstart](https://registry.jami.studio/docs/harness/quickstart): Build a first agent fast.
+- [Installation](https://registry.jami.studio/docs/harness/installation): Install the Harness SDK and CLI.
+- [Concepts: Runs](https://registry.jami.studio/docs/harness/concept-runs): The unit of agent execution.
+- [Concepts: Tasks](https://registry.jami.studio/docs/harness/concept-tasks): Units of work inside a run.
+- [Concepts: Tools](https://registry.jami.studio/docs/harness/concept-tools): How agents call capabilities.
+- [Concepts: Policy](https://registry.jami.studio/docs/harness/concept-policy): Guardrails on what an agent may do.
+- [Concepts: Approvals](https://registry.jami.studio/docs/harness/concept-approvals): Human-in-the-loop gating.
+- [Concepts: Artifacts](https://registry.jami.studio/docs/harness/concept-artifacts): Outputs an agent produces.
+- [Concepts: Memory](https://registry.jami.studio/docs/harness/concept-memory): Durable agent state.
+- [Concepts: Traces](https://registry.jami.studio/docs/harness/concept-traces): Observability of agent runs.
+- [Concepts: Evidence](https://registry.jami.studio/docs/harness/concept-evidence): Verifiable run records.
+- [Concepts: Checkpoints](https://registry.jami.studio/docs/harness/concept-checkpoints): Resumable run state.
+- [Guide: First Agent](https://registry.jami.studio/docs/harness/guide-first-agent): End-to-end first-agent walkthrough.
+- [Guide: Tool Authoring](https://registry.jami.studio/docs/harness/guide-tool-authoring): Author and register tools.
+- [Guide: Release Packets](https://registry.jami.studio/docs/harness/guide-release-packets): Package agent releases.
+- [Reference: SDK](https://registry.jami.studio/docs/harness/reference-sdk): `createHarness` and the SDK surface.
+- [Reference: CLI](https://registry.jami.studio/docs/harness/reference-cli): Harness CLI commands.
+- [Reference: Configuration](https://registry.jami.studio/docs/harness/reference-configuration): Harness configuration options.
+- [Reference: Packages](https://registry.jami.studio/docs/harness/packages): The Harness package layout.
+
+## Studio
+
+- [Introduction](https://registry.jami.studio/docs/introduction): What the Studio registry offers.
+- [Quickstart](https://registry.jami.studio/docs/quickstart): Install your first registry item.
+- [Registry Overview](https://registry.jami.studio/docs/registry/overview): The catalog of registry items.
+- [Installing Items](https://registry.jami.studio/docs/registry/installing-items): Interactive install via the CLI.
+- [Components Overview](https://registry.jami.studio/docs/components/overview): The component catalog.
+- [Primitives](https://registry.jami.studio/docs/components/primitives): Atomic UI parts.
+- [Agent Panel](https://registry.jami.studio/docs/components/agent-panel): Agent status display component.
+- [Data List](https://registry.jami.studio/docs/components/data-list): Data list component.
+- [Media Grid](https://registry.jami.studio/docs/components/media-grid): Media grid component.
+- [Docs Source Panel](https://registry.jami.studio/docs/components/docs-source-panel): Docs source panel component.
+- [Workspaces](https://registry.jami.studio/docs/studio/workspaces): The four Workspaces and how they install.
+- [Workspace: Solo](https://registry.jami.studio/docs/suites/solo): The Solo Workspace.
+- [Workspace: Business](https://registry.jami.studio/docs/suites/business-ops): The Business Workspace.
+- [Workspace: Mixed Media](https://registry.jami.studio/docs/suites/mixed-media): The Mixed Media Workspace.
+- [Workspace: Research & Writing](https://registry.jami.studio/docs/suites/research-writing): The Research & Writing Workspace.
+- [Theming: Tokens](https://registry.jami.studio/docs/theming/tokens): The Jami Factory design tokens.
+- [Theming: Brand Options](https://registry.jami.studio/docs/theming/brand-options): Accent, radius, and spacing presets.
+- [Reference: CLI](https://registry.jami.studio/docs/studio/reference-cli): Studio CLI commands.
+- [Reference: Renderer](https://registry.jami.studio/docs/studio/reference-renderer): Renderer/library exports.
+- [Reference: Registry Item Schema](https://registry.jami.studio/docs/studio/reference-registry-item-schema): The registry-item JSON contract.
+
+## Operations
+
+- [Hosting](https://registry.jami.studio/docs/operations/hosting): How the site splits Cloudflare Pages and Mintlify.
+- [Release](https://registry.jami.studio/docs/operations/release): How registry bundles are released.
+
+## Source Policy
+
+This is the canonical documentation host for the Jami Studio family. Harness prose
+originates in the `jami-harness` repository and Studio concepts in `studio-ui`; both are
+published here. The marketing and OSS hub is `https://www.jami.studio/`. Intercal is a
+separate product with its own documentation site. The machine-readable registry is at
+`https://registry.jami.studio/registry.json`.

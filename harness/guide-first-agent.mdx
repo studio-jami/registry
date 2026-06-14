@@ -1,0 +1,49 @@
+---
+title: "Build Your First Agent"
+sidebarTitle: "First Agent"
+description: "An end-to-end walkthrough for building your first governed agent with Jami Harness — from install to a first run with evidence."
+---
+
+This guide will walk you through building your first governed agent with Jami Harness — from
+installing the packages to running a first agent and inspecting the [evidence](/harness/concept-evidence)
+it produces.
+
+## Install
+
+```bash
+npm install @jami-studio/harness-sdk
+```
+
+## Run Locally
+
+```ts
+import { createHarness } from '@jami-studio/harness-sdk'
+
+const harness = createHarness()
+const result = await harness.run({
+  runId: 'run_first_agent',
+  projectId: 'proj_first_agent',
+  instruction: 'produce first local evidence'
+})
+
+console.log(result.status, result.evidence.evidenceId, result.artifact.artifactId)
+await harness.shutdownTelemetry()
+```
+
+The default run uses local modules and returns evidence, artifact, provider, tool execution,
+trace, audit, metric, checkpoint, and context-pack data.
+
+## Inspect
+
+```bash
+npm install @jami-studio/harness-cli
+jami run --json
+jami inspect --json
+```
+
+Use [Approvals](/harness/concept-approvals) and [Tools](/harness/concept-tools) when the
+agent needs policy-gated side effects.
+
+<Card title="Quickstart" icon="terminal" href="/harness/quickstart">
+  Install the CLI and run a local smoke workflow now.
+</Card>

@@ -1,0 +1,77 @@
+---
+title: "Install Jami Harness"
+sidebarTitle: "Installation"
+description: "Install the Jami Harness packages from the @jami-studio npm namespace and prepare a local environment for evidence-oriented agent workflows."
+---
+
+Jami Harness is published under the `@jami-studio` npm namespace. Most projects start from
+the batteries-included package, the CLI for local inspection, or the SDK for application
+integration.
+
+## Prerequisites
+
+- Node.js 24 or later for the Harness source repo and local verification scripts.
+- A package manager that can install scoped npm packages.
+- No hosted provider, store, or OTLP endpoint is required for local package inspection.
+
+## Install the CLI
+
+<CodeGroup>
+
+```bash npm
+npm install @jami-studio/harness-cli
+```
+
+```bash pnpm
+pnpm add @jami-studio/harness-cli
+```
+
+```bash yarn
+yarn add @jami-studio/harness-cli
+```
+
+</CodeGroup>
+
+## Install the SDK
+
+```bash
+npm install @jami-studio/harness-sdk
+```
+
+## Install the Batteries-Included Package
+
+```bash
+npm install @jami-studio/harness
+```
+
+The batteries-included package composes the SDK with the default local runtime modules:
+policy, tools, memory, context, checkpoint store, provider router, artifacts, and
+observability.
+
+## Local Source Checkout
+
+When working from the source repo, run the local CLI directly:
+
+```powershell
+pnpm install --frozen-lockfile
+node apps/cli/src/cli.mjs init --json
+node apps/cli/src/cli.mjs run --json
+node apps/cli/src/cli.mjs inspect --json
+```
+
+<Note>
+  Hosted provider execution, hosted stores, hosted observability, hosted workbench, and hosted
+  docs publishing are not implied by installation. Those routes fail closed until explicitly
+  implemented and configured.
+</Note>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="terminal" href="/harness/quickstart">
+    Run a local, evidence-oriented smoke workflow.
+  </Card>
+  <Card title="Package map" icon="boxes" href="/harness/packages">
+    Every public Harness package and the role it plays.
+  </Card>
+</CardGroup>
