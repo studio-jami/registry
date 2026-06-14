@@ -29,9 +29,9 @@ The published bundle under `public/` is regenerated from `studio-ui`
 (`packages/registry/generated/*` plus the workbench preview build) and was
 refreshed for the **workspace taxonomy rename** (the locked `workspace` model):
 the four `*-suite` registry items became `*-workspace`, `type`/membership moved
-from `suite`/`lane` to `workspace`, and the JSON install-graph manifests moved
-from `public/suites/<lane>.suite.json` to `public/workspaces/<workspace>.workspace.json`.
-The diff against the prior bundle is a suite -> workspace rename only, with no
+to `workspace`, and the JSON install-graph manifests moved
+from the prior generated suite manifest path to `public/workspaces/<workspace>.workspace.json`.
+The diff against the prior bundle is a workspace taxonomy rename only, with no
 item loss (45 items before and after). The value-keyed preview-route HTML stays
 at `public/suites/<workspace>/` so hosting URLs are unchanged. Regenerate with
 `pnpm -C ../studio-ui contracts:generate` + the workbench build, then validate
