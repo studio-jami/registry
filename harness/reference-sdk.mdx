@@ -4,26 +4,88 @@ sidebarTitle: "SDK"
 description: "Developer reference for the Jami Harness TypeScript SDK — creating a harness, defining tools, and driving runs, approvals, and inspection. Not a REST API."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Reference. The full SDK reference is authored in the
-  developer-reference stream (WS6) directly from the `@jami-studio/harness-sdk` surface.
-</Note>
-
 The Jami Harness developer interface is a **TypeScript SDK**, a [CLI](/harness/reference-cli),
-and versioned [contracts](/harness/packages) — **not a REST API**. This page will document the
-SDK surface: creating a harness, defining and gating tools, and driving runs, approvals,
-resumption, and inspection.
+and versioned [contracts](/harness/packages). It is **not a REST API**.
 
-## Planned reference
-
-- `createHarness()` and the configuration it accepts.
-- Tool gateway construction and typed [tool](/harness/concept-tools) registration.
-- Starting, approving, resuming, and inspecting [runs](/harness/concept-runs).
+## Install
 
 ```bash
 npm install @jami-studio/harness-sdk
 ```
 
-<Card title="Package map" icon="boxes" href="/harness/packages">
-  Every public Harness package and the contract boundary it owns.
-</Card>
+The batteries-included package re-exports the SDK plus the default local modules:
+
+```bash
+npm install @jami-studio/harness
+```
+
+## Create a Harness
+
+```ts
+import { createHarness } from '@jami-studio/harness-sdk'
+
+const harness = createHarness()
+const result = await harness.run({
+  runId: 'run_local_docs',
+  projectId: 'proj_jami_harness',
+  instruction: 'produce local harness evidence'
+})
+
+await harness.shutdownTelemetry()
+```
+
+`createHarness(options)` composes the default local runtime: policy, artifacts,
+observability, memory, context, checkpoint store, provider router, and tool gateway. Each
+replaceable module can be supplied through `options` when you need a custom implementation.
+
+## Runtime Methods
+
+| Method | What it does |
+| --- | --- |
+| `createRun(input)` | Creates a local run object with a deterministic run id, actor/project context, policy engine, provider, tools, memory, checkpoints, and observability wired in. |
+| `run(input)` | Convenience wrapper around `createRun(input).execute(input)`. It returns run status, events, checkpoint, context pack, provider result, tool executions, artifact, evidence packet, traces, audits, and metrics. |
+| `resume(runId)` | Reads the local checkpoint replay state from the configured checkpoint store. |
+| `approve(input)` | Records an approval decision in the checkpoint store. |
+| `deny(input)` | Records a denial decision using the same approval record contract. |
+| `cancel(input)` | Fails closed with `runtime_cancellation_not_implemented`; cancellation orchestration is not implemented yet. |
+| `retry(input)` | Fails closed with `manual_retry_command_not_implemented`; manual retry orchestration is not implemented yet. |
+| `inspect()` | Reports modules, install paths, source locks, tool adapters, telemetry posture, and supported/unsupported control surfaces. |
+| `readArtifact(id)` / `readArtifacts()` | Reads artifacts from the configured artifact store. |
+| `readTraces()` / `readMetrics()` | Reads local observability traces and metrics. |
+| `shutdownTelemetry()` | Flushes and shuts down opt-in telemetry when it was enabled. |
+
+## Replaceable Modules
+
+`createHarness()` delegates composition to the core module graph. The default graph is local
+and fail-closed:
+
+| Option | Default |
+| --- | --- |
+| `artifactStore` | In-memory artifact store. |
+| `observability` | Local run observability; optional PostHog sink only when telemetry is explicitly enabled. |
+| `memory` / `search` / `context` | In-memory memory, permission-filtered search, and deterministic context assembly. |
+| `checkpointStore` | In-memory checkpoint and approval store. |
+| `policyEngine` | Default-deny policy engine with approval validation. |
+| `provider` | Hosted-provider router with local deterministic fallback and fail-closed hosted routes. |
+| `tools` / `toolGateway` | Local tool registry and policy-gated execution gateway. |
+| `env` | Environment source for optional provider and telemetry configuration. |
+
+<Note>
+  Hosted control plane, hosted workbench, durable hosted stores, streaming provider orchestration,
+  cancellation orchestration, and SDK docs-output injection are not claimed by this SDK surface.
+</Note>
+
+## Telemetry
+
+Telemetry is OSS-safe and off by default. It only initializes when the explicit opt-in gate is
+enabled, `DO_NOT_TRACK` is not set, CI is not active, and a PostHog project key is present.
+The default core composition passes run metadata only; prompt and response content are not sent.
+
+<CardGroup cols={2}>
+  <Card title="CLI Reference" icon="terminal" href="/harness/reference-cli">
+    Run the same local workflows from the `jami` command.
+  </Card>
+  <Card title="Configuration" icon="sliders" href="/harness/reference-configuration">
+    Configure modules, providers, telemetry, and local state.
+  </Card>
+</CardGroup>

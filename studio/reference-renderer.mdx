@@ -1,24 +1,65 @@
 ---
 title: "Studio Renderer Reference"
 sidebarTitle: "Renderer"
-description: "Developer reference for the Jami Studio renderer — the framework-neutral primitive factory and the React/Radix wrappers exported by the registry."
+description: "Developer reference for the Jami Studio renderer — inert structured payload rendering, display-only references, and safe-payload validation."
 ---
 
+The `@jami-studio/renderer` package validates and renders harness-originated structured
+payloads into inert, JSON-serializable render trees. It does not execute actions, import
+React, run scripts, or own policy decisions.
+
+## Public Exports
+
+```ts
+import {
+  renderFixture,
+  renderUiPayload,
+  renderActionRef,
+  renderArtifactView,
+  renderThemeRef,
+  renderSuiteRef,
+  renderRendererError,
+  allowedComponents,
+  componentNameAllowed,
+  scanUnsafePayload,
+  presentArtifactView,
+  presentEvidencePacket,
+  presentTrace,
+  presentMemoryContext,
+  presentActionRef,
+  presentWorkbenchPanel
+} from '@jami-studio/renderer'
+```
+
 <Note>
-  **Scaffold page** for the Studio Reference. The full reference is authored in the
-  developer-reference stream (WS6) from the renderer/library exports.
+  `renderSuiteRef` is the remaining harness-owned shared wire seam until WS2b completes.
+  Product docs use "workspace"; this export name is contract terminology, not the product
+  packaging word.
 </Note>
 
-Jami Studio components are available through two rendering layers: a framework-neutral
-factory that produces plain element descriptors, and pre-built React/Radix wrappers. This page
-will document both export surfaces.
+## Rendering Behavior
 
-## Planned reference
+| Function | Purpose |
+| --- | --- |
+| `renderUiPayload(payload)` | Validates and renders resident UI payloads from the allowlisted vocabulary. |
+| `renderActionRef(ref)` | Renders denied or pending action references as display-only state. |
+| `renderArtifactView(view)` | Renders artifact references without executing or fetching hidden content. |
+| `renderThemeRef(ref)` | Renders theme references as inert metadata. |
+| `renderSuiteRef(ref)` | Renders the current harness shared-seam reference for workspace install graphs. |
+| `renderRendererError(error)` | Produces renderer-owned error state without echoing unsafe payload text. |
+| `renderFixture(fixture)` | Renders compatibility fixtures for contract tests. |
 
-- `renderPrimitiveSpec(name, props)` and `createJamiPrimitiveComponents(createElement)`.
-- The React/Radix `forwardRef` wrappers (`JamiButton`, `JamiPanel`, and others).
-- The component vocabulary, prop schemas, token requirements, and ARIA contracts.
+## Safety Boundary
 
-<Card title="Components overview" icon="puzzle-piece" href="/components/overview">
-  The component vocabulary and rendering layers in detail.
+The renderer fails closed on unsafe payloads:
+
+- Unknown components render as unsupported.
+- JavaScript URLs, event handlers, scripts, raw HTML execution, callbacks, and executable
+  capabilities are rejected or dropped.
+- Policy, approvals, side effects, and tool execution remain Harness responsibilities.
+- Render output is a serializable tree intended for inspection and resident rendering, not a
+  remote code execution path.
+
+<Card title="Component Vocabulary" icon="puzzle-piece" href="/components/overview">
+  Review the resident component set and prop contracts.
 </Card>

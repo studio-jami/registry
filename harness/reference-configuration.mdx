@@ -1,21 +1,68 @@
 ---
 title: "Harness Configuration Reference"
 sidebarTitle: "Configuration"
-description: "Developer reference for configuring Jami Harness — the options, environment, and replaceable ports for storage, providers, memory, and policy."
+description: "Developer reference for configuring Jami Harness — the options, environment, and replaceable ports for storage, providers, memory, policy, tools, and telemetry."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Reference. The full configuration reference is authored in
-  the developer-reference stream (WS6) from the real configuration surface. Secrets are read
-  from the environment and are never committed.
-</Note>
+Harness configuration is code-first. You pass modules and environment into
+`createHarness(options)` or into the lower-level core composition APIs.
 
-This page will document how to configure Jami Harness — the options accepted when you create a
-harness, the environment it reads, and the replaceable ports for storage, providers,
-[memory](/harness/concept-memory), and [policy](/harness/concept-policy).
+## Configuration Shape
 
-## Planned reference
+| Option | Use |
+| --- | --- |
+| `artifactStore` | Replace artifact persistence and artifact-view projection. |
+| `observability` | Provide a custom trace/audit/metric/evidence sink. |
+| `memory` | Replace the readable memory port; set `disableMemory` to use the noop memory module. |
+| `search` | Replace the retrieval adapter used by context assembly. |
+| `context` | Replace deterministic context assembly. |
+| `checkpointStore` | Replace checkpoint, resume, and approval storage. |
+| `policyEngine` | Replace default-deny policy and approval evaluation. |
+| `provider` | Replace the default hosted-router/local-provider path. |
+| `tools` | Provide a custom tool registry. |
+| `toolGateway` | Replace policy-gated tool execution. |
+| `env` | Provide an environment object for provider and telemetry settings. |
+| `disableTelemetry` | Force telemetry off even if environment gates are enabled. |
+| `telemetrySink` | Provide a custom telemetry sink for explicit opt-in deployments. |
 
-- Configuration options and defaults.
-- Replaceable adapters (store, provider, memory, policy, trace sinks).
-- Environment-driven settings — keys and tokens read from the environment, never hardcoded.
+## Environment Variables
+
+Harness treats environment values as runtime configuration, not tracked source. The core
+telemetry gate reads:
+
+| Variable | Meaning |
+| --- | --- |
+| `JAMI_TELEMETRY` | Enables optional telemetry when truthy. |
+| `DO_NOT_TRACK` | Disables telemetry when set. |
+| `CI` | Disables telemetry in CI. |
+| `POSTHOG_KEY` / `POSTHOG_PROJECT_KEY` / `POSTHOG_HARNESS_KEY` | Publishable PostHog project key for the harness project. |
+| `POSTHOG_HOST` | PostHog host for the Node SDK sink. |
+| `JAMI_TELEMETRY_DISTINCT_ID` | Optional non-identifying telemetry distinct id. |
+
+Provider adapters may read their own provider-specific environment variables through the
+configured provider module. Do not commit provider secrets or service-account JSON.
+
+## Fail-Closed Defaults
+
+The default composition intentionally reports unsupported surfaces instead of pretending they
+exist:
+
+- Hosted workbench/control plane is not implemented.
+- Hosted stores are not implied by local checkpoint support.
+- SDK docs-output injection is unavailable; repo-level docs generation exists separately.
+- Runtime cancellation and manual retry orchestration fail closed.
+- Unsupported provider/tool routes return explicit unsupported results.
+
+## Local State
+
+The CLI uses `.jami-harness` for local state. SDK callers can keep the default in-memory
+modules or pass durable ports when they are ready to own persistence.
+
+<CardGroup cols={2}>
+  <Card title="SDK Reference" icon="code" href="/harness/reference-sdk">
+    See the SDK methods and replaceable module defaults.
+  </Card>
+  <Card title="Concept: Policy" icon="shield" href="/harness/concept-policy">
+    Understand fail-closed policy and approval behavior.
+  </Card>
+</CardGroup>

@@ -4,25 +4,61 @@ sidebarTitle: "CLI"
 description: "Developer reference for the Jami Harness CLI (@jami-studio/harness-cli) — local inspection, generated outputs, and developer operations."
 ---
 
-<Note>
-  **Scaffold page** for the Harness Reference. The full command reference is authored in the
-  developer-reference stream (WS6) from the `@jami-studio/harness-cli` surface.
-</Note>
-
-The `@jami-studio/harness-cli` package provides command-line workflows for local inspection,
-generated outputs, and developer operations. This page will document each command and its
-options.
+The `@jami-studio/harness-cli` package exposes the `jami` command for local Harness
+inspection and evidence-oriented workflows.
 
 ```bash
 npm install @jami-studio/harness-cli
+jami doctor --json
 ```
 
-## Planned reference
+Use `--json` for machine-readable output. The CLI writes local state under `.jami-harness`
+in the current workspace.
 
-- Installation and invocation.
-- Commands for local inspection and package discovery.
-- Generated-output and evidence-oriented workflows.
+## Commands
 
-<Card title="Quickstart" icon="terminal" href="/harness/quickstart">
-  Install the CLI and run a local smoke workflow.
+```bash
+jami <init|run|resume|approve|deny|cancel|retry|inspect|doctor|tools|memory|context|docs|map|workbench|release|verify|migration> [--json]
+```
+
+| Command | Purpose |
+| --- | --- |
+| `init` | Initializes local Harness state. |
+| `run` | Executes the local deterministic run path and produces evidence-oriented output. |
+| `resume` | Reads checkpoint replay state. |
+| `approve` / `deny` | Records approval decisions for policy-gated work. |
+| `cancel` / `retry` | Fail-closed control commands for surfaces not implemented as runtime orchestration yet. |
+| `inspect` | Reports modules, install paths, source locks, tool adapters, and unsupported surfaces. |
+| `doctor` | Diagnoses setup and returns exact next steps. |
+| `tools` | Lists local tool adapter capabilities and source locks. |
+| `memory` / `context` | Inspects memory and context assembly capabilities. |
+| `docs` | Reports repo-level docs generation status. |
+| `map` | Prints the local module map. |
+| `workbench` | Reports local static workbench support and hosted-workbench gaps. |
+| `release` | Reports public package/release evidence and unsupported hosted routes. |
+| `verify` | Checks local CLI state and core module availability. |
+| `migration` | Fail-closed migration placeholder; checkpoint/store migrations are not implemented. |
+
+## Common Checks
+
+```bash
+jami inspect --json
+jami doctor --json
+jami run --json
+jami release --json
+```
+
+<Note>
+  The CLI is local-first. Hosted provider/store/workbench/control-plane routes remain explicit
+  operational lanes and are not implied by a successful local CLI run.
+</Note>
+
+## Package Boundary
+
+The CLI depends on `@jami-studio/harness-sdk` and `@jami-studio/harness-store-local`.
+Application code that embeds Harness should usually start with the SDK; operators and release
+checks usually start with the CLI.
+
+<Card title="SDK Reference" icon="code" href="/harness/reference-sdk">
+  Embed the Harness runtime from TypeScript.
 </Card>

@@ -4,25 +4,71 @@ sidebarTitle: "Registry Item Schema"
 description: "Contract reference for the Jami Studio registry-item schema — the item types, fields, and the workspace composition model the registry validates against."
 ---
 
-<Note>
-  **Scaffold page** for the Studio Reference. The full contract reference is authored in the
-  developer-reference stream (WS6) from the registry-item JSON schema. This is a contract and
-  schema reference, not a REST API.
-</Note>
+Every Jami Studio item is validated against the registry-item schema:
 
-The Jami Studio registry validates every item against a JSON schema. This page will document
-that contract — the item `type` values along the composition ladder
-(`primitive → component → block → page → app → workspace`), the shared item fields, and the
-workspace install-graph manifest shape.
+```json
+{
+  "$schema": "https://jami.studio/schemas/registry/registry-item.schema.json",
+  "name": "@jami-studio/example",
+  "type": "component",
+  "title": "Example",
+  "lifecycle": {},
+  "provenance": {},
+  "compatibility": {},
+  "tokenRequirements": [],
+  "dependencies": [],
+  "files": []
+}
+```
 
-## Planned reference
+This is a **schema reference**, not a REST API.
 
-- The `type` enumeration and what each layer means.
-- Core item fields (`name`, `title`, `files`, `registryDependencies`, and more).
-- The `workspace` membership field and the workspace manifest (`*.workspace.json`).
+## Type Ladder
+
+The schema accepts the composition ladder used throughout the docs:
+
+```text
+primitive -> component -> block -> page -> app -> workspace
+```
+
+| Type | Meaning |
+| --- | --- |
+| `primitive` | Atomic UI part. |
+| `component` | Composed control or display component. |
+| `block` | Page section. |
+| `page` | Full page route surface. |
+| `theme` / `font` | Design-system assets. |
+| `app` | Application shell and route outlet. |
+| `workspace` | Top-level packaged product install graph. |
+
+## Required Fields
+
+| Field | Requirement |
+| --- | --- |
+| `$schema` | Must equal `https://jami.studio/schemas/registry/registry-item.schema.json`. |
+| `name` | Scoped package-like name matching `@jami-studio/<slug>`. |
+| `type` | One of the schema type values above. |
+| `title` | Human-readable item title. |
+| `workspace` | Required for workspace-member items; one of `solo`, `business-ops`, `mixed-media`, `research-writing`. |
+| `lifecycle` | Includes `id`, `version`, `schemaVersion`, `sourceHash`, and `migrationNotes`. |
+| `provenance` | Includes source, license, review timestamp, and copied-source marker. |
+| `compatibility` | Declares shadcn, Tailwind, and React compatibility. |
+| `tokenRequirements` | Token names required by the item. |
+| `dependencies` | Direct item dependencies. |
+| `files` | Files written by the item, each with `path`, `target`, and `kind`. |
+
+## Workspace Items
+
+Workspace registry items are the recommended entry point for a full application shell. A
+workspace item points at generated workspace manifests and depends on the app, pages, blocks,
+components, primitives, and theme needed to install the whole graph.
+
+```bash
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
+```
 
 <CardGroup cols={2}>
-  <Card title="Registry overview" icon="grid" href="/registry/overview">
+  <Card title="Registry Overview" icon="grid" href="/registry/overview">
     Item types and the registry protocol.
   </Card>
   <Card title="Workspaces" icon="cubes" href="/studio/workspaces">

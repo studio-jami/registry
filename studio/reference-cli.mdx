@@ -1,34 +1,65 @@
 ---
 title: "Studio CLI Reference"
 sidebarTitle: "CLI"
-description: "Developer reference for installing Jami Studio items — the standard shadcn CLI used with direct registry URLs. Not a Jami-specific CLI or REST API."
+description: "Developer reference for the @jami-studio/cli package and standard shadcn registry installs."
 ---
 
-<Note>
-  **Scaffold page** for the Studio Reference. The full reference is authored in the
-  developer-reference stream (WS6). Jami Studio installs through the standard `shadcn` CLI —
-  there is no Jami-specific CLI binary and no REST API.
-</Note>
+Studio UI supports two install paths:
 
-Jami Studio items install with the standard `shadcn` CLI using a direct registry URL. This
-page will document the install commands, the interactive selection levels (workspace down to
-individual item), and how files land in your project.
+- `@jami-studio/cli`, exposed as the `studio-ui` command, for registry lifecycle workflows.
+- The standard `shadcn` CLI with direct registry item URLs.
+
+## Studio UI CLI
+
+```bash
+npm install @jami-studio/cli
+studio-ui doctor
+```
+
+```bash
+studio-ui <command> [name] [options]
+```
+
+| Command | Purpose |
+| --- | --- |
+| `init` | Writes `studio-ui.config.json` with `--title`, `--workspace`, `--theme`, `--package-manager`, `--registry`, and `--force`. |
+| `list` | Lists registry items. |
+| `inspect` | Shows an item lifecycle, provenance, dependency graph, and files. |
+| `add` | Installs an item and its dependency graph; supports `--dry-run` and `--force`. |
+| `remove` | Removes an installed item; supports `--force` and `--dry-run`. |
+| `update` | Updates installed items to the registry; supports `--dry-run`, `--force`, and an optional item name. |
+| `diff` | Shows planned install/update/file drift without writing. |
+| `migrate` | Reports or applies schema-version migrations with `--apply`, `--force`, and optional item name. |
+| `pin` / `unpin` | Pins or unpins an installed item version; `pin` accepts `--version`. |
+| `lock` | Shows lockfile status and on-disk drift. |
+| `doctor` | Diagnoses config, registry, provenance, and file drift. |
+| `provenance` | Verifies an item's source/content provenance. |
+
+Global options:
+
+```bash
+studio-ui --cwd <dir> --registry <dir-or-url>
+```
+
+`--registry-url` is accepted as an alias for `--registry`.
+
+## Direct shadcn Installs
+
+Any registry item can also be installed through a direct shadcn URL:
 
 ```bash
 npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
-## Planned reference
-
-- `shadcn add` with a direct item URL.
-- Interactive install levels — workspace → app → page → block → component.
-- How `registryDependencies` resolve automatically.
+Workspace items install the full graph through `registryDependencies`: theme, app, pages,
+blocks, components, and primitives.
 
 <CardGroup cols={2}>
-  <Card title="Installing items" icon="download" href="/registry/installing-items">
-    Install individual items with the shadcn CLI.
+  <Card title="Installing Items" icon="download" href="/registry/installing-items">
+    Install individual items or full workspaces.
   </Card>
   <Card title="Workspaces" icon="cubes" href="/studio/workspaces">
-    Install a complete application shell in one command.
+    See the four packaged Jami Studio workspaces.
   </Card>
 </CardGroup>
