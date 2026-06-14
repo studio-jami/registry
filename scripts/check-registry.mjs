@@ -144,6 +144,7 @@ if (!existsSync(docsConfigPath)) {
   collectPages(docsConfig.navigation?.groups?.flatMap((group) => group.pages) ?? []);
 
   for (const page of pages) {
-    if (!existsSync(join(root, `${page}.mdx`))) fail(`docs.json references missing page ${page}.mdx`);
+    const pagePath = page.endsWith(".mdx") ? page : `${page}.mdx`;
+    if (!existsSync(join(root, pagePath))) fail(`docs.json references missing page ${pagePath}`);
   }
 }

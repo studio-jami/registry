@@ -1,0 +1,63 @@
+---
+title: "Harness CLI"
+sidebarTitle: "CLI"
+description: "Reference for the jami CLI: init, run, inspect, map, docs, and verify commands, plus the JSON output mode designed for AX agent discoverability and scripting."
+url: "harness/cli-sdk/cli"
+---
+
+The `@jami-studio/harness-cli` package exposes Harness as a command-line surface for local inspection, evidence runs, and generated outputs.
+
+## Install
+
+<CodeGroup>
+
+```bash npm
+npm install @jami-studio/harness-cli
+```
+
+```bash pnpm
+pnpm add @jami-studio/harness-cli
+```
+
+```bash yarn
+yarn add @jami-studio/harness-cli
+```
+
+</CodeGroup>
+
+## Commands
+
+```bash
+jami init --json
+jami run --json
+jami inspect --json
+jami map --json
+jami docs --json
+jami verify --json
+```
+
+- `init` — scaffold a local project layout for evidence runs.
+- `run` — execute the local deterministic evidence smoke.
+- `inspect` — report module readiness, adapter manifests, and source-lock state.
+- `map` — print the install/replacement module map.
+- `docs` — print the generated docs source manifest.
+- `verify` — run the local-first verification ladder.
+
+All commands emit JSON so coordinator agents can consume them directly.
+
+## Source-checkout entry point
+
+When working from the Harness repository directly:
+
+```bash
+git clone https://github.com/studio-jami/jami-harness.git
+cd jami-harness
+pnpm install --frozen-lockfile
+node apps/cli/src/cli.mjs init --json
+node apps/cli/src/cli.mjs run --json
+node apps/cli/src/cli.mjs inspect --json
+```
+
+## Patch version note
+
+Public CLI/SDK inspection is corrected in the `0.1.1` patch track for `@jami-studio/harness-cli`, `@jami-studio/harness-core`, and `@jami-studio/harness-sdk`. Use `npm view <pkg> version` to confirm the latest.

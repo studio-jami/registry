@@ -1,21 +1,26 @@
 ---
-title: "Jami Studio Registry: UI Components for AI Workspaces"
+title: "Jami Studio Registry"
 sidebarTitle: "Introduction"
 description: "A public library of installable UI components, design tokens, and pre-built workspace bundles for building AI-powered workspace applications with shadcn."
 ---
 
-Jami Studio Registry gives you a collection of ready-to-install UI components, design tokens, and full application workspaces through a standard registry protocol. Whether you need a single display component or an entire operational dashboard, you can pull exactly what you need — styled, accessible, and wired for AI agent status display out of the box.
+The Jami Studio Registry is the public distribution surface for [Studio UI](/overview/studio) items: primitives, components, tokens, brand options, blocks, pages, apps, and full application workspaces. It is hosted at [registry.jami.studio](https://registry.jami.studio) and follows the [shadcn registry protocol](https://ui.shadcn.com/docs/registry).
+
+The Registry is one of three pillars in the Jami Studio family. The other two are [Jami Harness](/harness/overview) (the contract-first agent runtime foundation) and [Studio UI](/overview/studio) (the resident rendering layer whose items this registry distributes).
 
 <CardGroup cols={2}>
   <Card title="Quick Start" icon="rocket" href="/quickstart">
     Install your first registry item in minutes
   </Card>
+
   <Card title="Browse the Registry" icon="grid" href="/registry/overview">
     Explore all 45 available items
   </Card>
+
   <Card title="Workspaces" icon="layer-group" href="/studio/workspaces">
     Install a complete application workspace
   </Card>
+
   <Card title="Design Tokens" icon="palette" href="/theming/tokens">
     Apply the Jami Factory theme
   </Card>
@@ -34,9 +39,9 @@ All items follow the [shadcn registry protocol](https://ui.shadcn.com/docs/regis
 
 ## Registry Endpoint
 
-The public registry is served from Cloudflare Pages:
+The public registry is available at a stable URL with no authentication required:
 
-```
+```text
 https://registry.jami.studio/registry.json
 ```
 
@@ -48,12 +53,15 @@ Use this URL as your registry source when running `shadcn add` commands.
   <Card title="Components" icon="puzzle-piece" href="/components/overview">
     Individual UI pieces with prop schemas and accessibility built in
   </Card>
+
   <Card title="Workspaces" icon="boxes-stacked" href="/studio/workspaces">
     Bundled apps with pages, blocks, and navigation ready to mount
   </Card>
+
   <Card title="Tokens" icon="droplet" href="/theming/tokens">
     CSS variables and TypeScript types for the Jami design system
   </Card>
+
   <Card title="Brand Options" icon="swatchbook" href="/theming/brand-options">
     Alternate accent and spacing presets for different use cases
   </Card>

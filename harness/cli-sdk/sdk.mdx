@@ -1,0 +1,43 @@
+---
+title: "Harness SDK"
+sidebarTitle: "SDK"
+description: "How the @jami-studio/harness-sdk package composes runtime, policy, artifacts, observability, and memory defaults to drive local evidence runs from your code."
+url: "harness/cli-sdk/sdk"
+---
+
+The `@jami-studio/harness-sdk` package is the application-facing entry point. It composes runtime, policy, artifacts, observability, and memory defaults for local evidence runs and module inspection.
+
+## Install
+
+```bash
+pnpm add @jami-studio/harness-sdk
+```
+
+## Minimal example
+
+```ts
+import { createHarness } from "@jami-studio/harness-sdk";
+
+const harness = await createHarness();
+
+const run = await harness.run({
+  actor: { id: "local-dev" },
+  project: { id: "hello-harness" },
+});
+
+console.log(run.evidencePacket);
+```
+
+## Inspection
+
+```ts
+const report = harness.inspect();
+console.log(report.installPaths);
+console.log(report.adapters);
+```
+
+`inspect()` returns the same JSON shape the CLI emits. It is the canonical way for AX agents to discover what the running Harness can and cannot do.
+
+## Replaceable modules
+
+The SDK accepts replacement modules for memory, context, providers, policy engine, artifact storage, trace/audit/metric sinks, secret resolver, store, and docs output, behind the ports documented in [Architecture](/harness/architecture).

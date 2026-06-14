@@ -1,0 +1,50 @@
+---
+title: "Jami Studio UI: Tokens, Components, and Suite Shells"
+sidebarTitle: "Overview"
+description: "How Jami Studio UI owns design tokens, primitive vocabulary, composed components, brand options, and pre-built workspace shells that render trusted Harness state."
+---
+
+Studio UI is the resident rendering layer of the Jami Studio family. It owns the token system, the primitive vocabulary, the composed components, and the pre-built application workspaces that ship through the public registry.
+
+Studio UI does not own agent execution. Policy decisions, tool side effects, memory writes, provenance, trace emission, and runtime state remain [Jami Harness](/harness/overview) responsibilities. Studio UI renders Harness-emitted payloads through allowlisted components.
+
+<CardGroup cols={2}>
+  <Card title="Components" icon="puzzle-piece" href="/components/overview">
+    The full component catalogue with prop schemas and accessibility specs.
+  </Card>
+
+  <Card title="Tokens" icon="palette" href="/theming/tokens">
+    CSS variables, Tailwind layer, and TypeScript types from one DTCG source.
+  </Card>
+
+  <Card title="Brand Options" icon="swatchbook" href="/theming/brand-options">
+    Selectable accent/radius/spacing presets for different workspace personalities.
+  </Card>
+
+  <Card title="Registry" icon="grid" href="/registry/overview">
+    Install Studio UI items via the public shadcn-compatible registry.
+  </Card>
+</CardGroup>
+
+## What Studio UI owns
+
+- Design tokens (DTCG source, CSS variables, Tailwind layer, TypeScript types).
+- Tokenized primitive components (Button, Panel, Text Field).
+- Composed display components (Agent Panel, Data List, Docs Source Panel, Media Grid).
+- Selectable brand options for workspace personalities.
+- Pre-built application workspaces (Solo, Business Ops, Research Writing, Mixed Media).
+- The workbench shell and preview surfaces.
+
+## What Studio UI does not own
+
+- Tool execution.
+- Policy and approval decisions.
+- Memory writes or retention.
+- Audit, trace, and metric emission.
+- Run lifecycle, checkpoints, or recovery.
+
+All of those belong to the Harness. Studio UI renders the typed payloads (`uiPayload`, `artifactView`, `actionRef`, `themeRef`, `workspaceRef`) the Harness emits.
+
+## How Studio UI relates to the Registry
+
+The public registry at `registry.jami.studio` distributes Studio UI items via the shadcn protocol. Every Studio UI primitive, component, theme, block, page, app, and workspace has a registry item. Installing an item drops source into your project; no runtime dependency on the registry remains.

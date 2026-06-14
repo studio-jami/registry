@@ -1,0 +1,48 @@
+---
+title: "Run Lifecycle"
+sidebarTitle: "Lifecycle"
+description: "Runs, sessions, tasks, turns, and handoffs: how Jami Harness moves an agent run from start to evidence-bearing completion under a contract-first run lifecycle."
+url: "harness/runtime/lifecycle"
+---
+
+The agent runtime owns the run lifecycle. Every run carries a durable id, an actor/project/environment context, and a contract-validated event stream from start to closeout.
+
+## Lifecycle stages
+
+```mermaid placement="top-left"
+stateDiagram-v2
+  [*] --> Created
+  Created --> Planning
+  Planning --> Executing
+  Executing --> ToolCall
+  ToolCall --> Executing
+  Executing --> Checkpoint
+  Checkpoint --> Executing
+  Executing --> Verifying
+  Verifying --> Closeout
+  Verifying --> Failed
+  Closeout --> [*]
+  Failed --> [*]
+```
+
+## Core concepts
+
+- **Run** — the top-level durable unit. Carries actor, project, environment, and policy context.
+- **Session** — a multi-run context binding for related work.
+- **Task** — a unit of work inside a run, with its own retry and recovery state.
+- **Turn** — a single provider/tool exchange inside a task.
+- **Handoff** — a transfer between coordinator and worker passes.
+
+## Contracts
+
+Run lifecycle events conform to the schemas in `@jami-studio/harness-contracts`:
+
+- `runEvent` — typed lifecycle events.
+- `actionRef` — stable reference to an executed action.
+- `toolExecution` — typed tool call records.
+- `policyDecision` — decisions emitted by the policy seam.
+- `artifactRecord` — outputs produced during the run.
+- `traceEvent` and `auditEvent` — observability and audit records.
+- `evidencePacket` — the final bundle the run produces.
+
+See [configuration reference](/harness/reference-configuration) for the full schema map.

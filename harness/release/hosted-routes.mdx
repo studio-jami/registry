@@ -1,0 +1,59 @@
+---
+title: "Hosted Status & Control Routes"
+sidebarTitle: "Hosted Routes"
+description: "Static status and control JSON routes served from registry.jami.studio/harness/, including healthz, status, and readiness payloads smoke-verified 2026-06-13."
+url: "harness/release/hosted-routes"
+---
+
+The Harness ships a static status/control route bundle for hosting at `https://registry.jami.studio/harness/`. The bundle is deployable static output, not a hosted runtime.
+
+## Generated bundle
+
+```text
+/harness/status.json
+/harness/release-readiness.json
+/harness/provider-store-observability.json
+/harness/healthz.json
+/harness/_headers
+```
+
+`_headers` applies `Content-Type: application/json`, `Cache-Control: no-store`, and `X-Content-Type-Options: nosniff` for `/harness/*.json`.
+
+## Commands
+
+```bash
+pnpm hosted:routes
+pnpm hosted:routes:check
+pnpm hosted:smoke
+```
+
+`pnpm hosted:routes:check` fails when generated route files drift from source-lock evidence, release capability evidence, generated docs evidence, install readiness evidence, SBOM evidence, or route-generator source. The check also scans for common secret-shaped markers.
+
+## Verified smoke
+
+```bash
+JAMI_HARNESS_HOSTED_BASE_URL=https://registry.jami.studio/harness/ \
+  pnpm hosted:smoke -- --require-hosted
+```
+
+Passed on **2026-06-13** for `/harness/status.json`, `/harness/release-readiness.json`, `/harness/provider-store-observability.json`, and `/harness/healthz.json`.
+
+## Source-lock evidence
+
+Verified on 2026-06-12:
+
+- Cloudflare Pages Direct Upload: `https://developers.cloudflare.com/pages/get-started/direct-upload/`
+- Cloudflare Pages custom headers: `https://developers.cloudflare.com/pages/configuration/headers/`
+- Neon connection strings: `https://neon.com/docs/connect/connect-from-any-app`
+- OpenTelemetry OTLP exporter configuration: `https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/`
+- OpenTelemetry env var specification: `https://opentelemetry.io/docs/specs/otel/configuration/sdk-environment-variables/`
+
+## Not claimed
+
+- No separate Cloudflare Pages project is required for the harness status/control bundle.
+- No new DNS target is required; `registry.jami.studio` is the accepted public host.
+- Hosted provider, hosted store, and hosted observability readiness **remain fail-closed** even though the static status/control route bundle is live and smoked.
+- No Neon project, branch, role, migration, or connection secret was provisioned.
+- No hosted provider credentials or provider account routes were used.
+- No OTLP endpoint, collector, or hosted observability sink was configured.
+- No hosted workbench/control plane is claimed. The route bundle is static preview output only.

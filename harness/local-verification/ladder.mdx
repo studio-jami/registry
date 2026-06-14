@@ -1,0 +1,55 @@
+---
+title: "Verification Ladder"
+sidebarTitle: "Verification Ladder"
+description: "The Jami Harness local-first verification ladder: narrowest checks per surface, package gates, and the full pnpm verify gate that blocks merges and releases."
+url: "harness/local-verification/ladder"
+---
+
+Run the narrowest complete checks for the touched surface, then climb the ladder as you go.
+
+## Ladder
+
+- **Docs and plans** — read back changed Markdown, `pnpm docs:check`, `git diff --check`.
+- **Generated docs/manual/system-map/changelog surfaces** — `pnpm docs:generate -- --check` plus `pnpm docs:check`.
+- **Package metadata, scripts, generated surfaces, or CI** — docs checks plus the touched command or generator, then `pnpm verify`.
+- **Contracts and schemas** — generation, drift check, schema validation, compatibility fixtures.
+- **Runtime / policy / tools / memory / artifacts / observability** — lint, typecheck, unit tests, targeted integration tests, recovery or policy regression fixtures as applicable.
+- **Current package gates** — `pnpm policy:test`, `pnpm runtime:test`, `pnpm tools:test`, `pnpm observability:test`.
+- **Current CLI/SDK package gates** — `pnpm sdk:test`, `pnpm cli:test`, `pnpm examples:smoke`.
+- **Current local regression eval smoke** — `pnpm eval:smoke`.
+- **CLI / SDK / workbench** — command smoke, idempotency checks, clean temporary-project checks, browser smoke when UI exists.
+- **Full gate** — `pnpm verify`, including the non-publishing release readiness and dry-run audits.
+
+Every agent final response must report the exact checks run, results, unavailable commands, commit SHA, and push result.
+
+## Full verification commands
+
+```bash
+pnpm docs:check
+pnpm docs:generate -- --check
+pnpm contracts:generate:check
+pnpm contracts:validate
+pnpm sbom:generate
+pnpm sbom:check
+pnpm release:capabilities
+pnpm release:capabilities:check
+pnpm hosted:routes
+pnpm hosted:routes:check
+pnpm hosted:smoke
+pnpm hosted:smoke:test
+pnpm policy:test
+pnpm runtime:test
+pnpm tools:test
+pnpm provider:test
+pnpm artifacts:test
+pnpm observability:test
+pnpm memory:test
+pnpm sdk:test
+pnpm cli:test
+pnpm examples:smoke
+pnpm eval:smoke
+pnpm release:readiness
+pnpm release:dry-run
+pnpm verify
+git diff --check
+```

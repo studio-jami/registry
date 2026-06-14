@@ -1,0 +1,41 @@
+---
+title: "Development Workflow"
+sidebarTitle: "Workflow"
+description: "Local-first development workflow: source registry, verification ladder, CI posture, free-tooling bias, and no-stub-completion rule."
+url: "harness/local-verification/workflow"
+---
+
+Jami Harness development is fast, uniform, and evidence-backed. Agents run checks in session before code reaches GitHub. GitHub Actions exist as a manual fallback, not as the primary development gate while minutes are limited.
+
+## Source registry
+
+The repo converges on a unified source registry rather than hand-maintained parallel docs.
+
+- Contracts, schemas, package manifests, policy manifests, adapter manifests, artifact metadata, and accepted evidence packets own executable truth.
+- Durable docs explain the source registry and generated outputs.
+- Public docs, legal/support pages, marketing claims, user manuals, changelogs, architecture diagrams, system maps, API references, and release notes must trace back to accepted source records.
+- A generated surface is not accepted unless it records source inputs, generator version, verification state, source commit reference, freshness class, command result, and generated output paths.
+- Current local docs generation runs through `pnpm docs:generate` and `pnpm docs:generate -- --check`; outputs live under `docs/generated/` with a Mintlify-ready draft under `apps/docs/`.
+
+When harness code depends on a drift-prone protocol, package, hosted service, registry format, guidance document, or release tool, add repo-local source-lock evidence for the exact surface used: official URL, version or spec id, license/NOTICE/provenance status, hash or tarball integrity when applicable, command evidence, unresolved risks, and the next refresh trigger.
+
+## CI posture
+
+- CI is manual fallback for now: use GitHub Actions only when a human or coordinator intentionally dispatches it.
+- Do not rely on CI to catch workstream failures. The worker must run the ladder before commit and push.
+- Automatic PR/push CI can be enabled later when development slows or GitHub minutes are no longer a constraint.
+
+## No stub completion
+
+Do not fake progress with placeholders, hidden demo data, disabled checks, broad compatibility shims, or weakened validation. If real user input or account action is needed, pause the stream, record the exact intervention needed, alert the human, then continue after it is resolved. Do not patch around it.
+
+## Diagrams and system maps
+
+- Architecture diagrams should be generated from source records where possible: package graph, port/adapters, contracts, state machines, event flows, and deployment manifests.
+- Mermaid is the default durable text format for docs.
+- Generated image exports are secondary artifacts and must name their source diagram.
+- System maps should update in the same workstream as the source contracts or topology they describe.
+
+## Free-tooling bias
+
+Prefer free/local tooling first: `pnpm`, TypeScript, Node scripts, `rg`, Mermaid, JSON Schema, OpenAPI, Vitest/Playwright when packages exist, `git diff --check`, and generated docs from local manifests. Paid or hosted services should be adapters, publishing targets, or fallback gates rather than the only way to validate correctness.

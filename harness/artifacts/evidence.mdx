@@ -1,0 +1,19 @@
+---
+title: "Evidence Trail"
+sidebarTitle: "Evidence Trail"
+description: "How Harness ties artifact records, run events, policy decisions, tool executions, and evidence packets into one auditable, reproducible trail per run."
+url: "harness/artifacts/evidence"
+---
+
+Every accepted artifact has an evidence trail. The trail combines:
+
+- the `artifactRecord` itself
+- the `runEvent` stream that produced it
+- the `policyDecision` records that gated it
+- the `toolExecution` records that built it
+- the `auditEvent` envelope tying them together
+- the `evidencePacket` emitted at closeout
+
+## Audit honesty
+
+The evidence trail is the gate between code-verifiable claims and human-publishable claims. See the [release packet guide](/harness/guide-release-packets) for the matrix of supported and unsupported public claims.

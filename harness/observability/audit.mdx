@@ -1,0 +1,26 @@
+---
+title: "Audit Events"
+sidebarTitle: "Audit"
+description: "Shape and scope of the immutable auditEvent entries that tie Harness runs, policy decisions, tool calls, approvals, and artifacts into one verifiable trail."
+url: "harness/observability/audit"
+---
+
+Audit events are immutable trail entries Harness emits at every governance-relevant decision point.
+
+## What gets audited
+
+- run lifecycle transitions
+- policy decisions (allow, deny, deferred, approval requested)
+- tool calls (start, success, failure, cancellation)
+- artifact promotions
+- memory writes
+- approval requests and responses
+- evidence packet emission
+
+## Redaction
+
+Audit events carry redacted dimensions only. Secret values, raw user content, and unredacted memory writes never appear in the audit trail.
+
+## Export
+
+Incident export and audit forwarding are owned-core concerns. Today they live in the local observability package; hosted forwarding is unimplemented.

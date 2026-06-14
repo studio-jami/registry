@@ -1,0 +1,20 @@
+---
+title: "Identity & Governance"
+sidebarTitle: "Identity"
+description: "The Jami Harness identity model: actors, tenants, projects, environments, roles, policies, approvals, and the secret references runs and tools resolve against."
+url: "harness/policy/identity"
+---
+
+Identity and governance are owned-core mechanism areas. Harness models actors, tenants, projects, environments, and roles directly; adapters resolve them but do not redefine them.
+
+## Identity model
+
+- **Actor** — the entity initiating an action (user, agent, system).
+- **Tenant** — the trust boundary the actor belongs to.
+- **Project** — a workstream context owned by a tenant.
+- **Environment** — dev/stage/prod-style context for policy scoping.
+- **Role** — a named set of scopes assigned to actors.
+
+## Secret resolution
+
+Secrets are never written into tracked output. They are referenced through `secretRef`, which names the secret without committing the value. Generated route bundles and release manifests list secret names and required human actions; they never include connection strings or tokens.

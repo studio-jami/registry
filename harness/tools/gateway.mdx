@@ -1,0 +1,33 @@
+---
+title: "Tool Gateway"
+sidebarTitle: "Gateway"
+description: "The Jami Harness tool gateway: policy-gated tool registry, typed execution, redaction, adapter manifests, and fail-closed dry runs for unsupported adapters."
+url: "harness/tools/gateway"
+---
+
+The tool gateway is a narrow, policy-gated entry point for every tool call. The current foundation supports:
+
+- registry inspection
+- policy-gated function tool execution
+- trusted MCP fixture execution
+- typed `toolExecution`, `traceEvent`, `auditEvent`, `artifactRecord`, and `evidencePacket` output
+- input/output redaction
+- adapter manifest reporting
+- fail-closed dry-run evidence for unsupported adapter classes (OpenAPI, shell, browser, code, provider-as-tool, A2A)
+
+## Verification
+
+```bash
+pnpm tools:test
+pnpm contracts:validate
+```
+
+## Inspection
+
+The CLI and SDK expose tool adapter manifests and source-lock states without executing unsupported adapters:
+
+```bash
+jami inspect --json
+```
+
+The inspection output names which adapter classes are supported and which are fail-closed unsupported.

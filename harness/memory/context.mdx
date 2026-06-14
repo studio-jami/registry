@@ -1,0 +1,18 @@
+---
+title: "Context Assembly"
+sidebarTitle: "Context"
+description: "How Harness assembles, filters, redacts, and binds a contextPack from project, task, and artifact memory before any turn reaches the provider boundary."
+url: "harness/memory/context"
+---
+
+Context assembly is the bridge between memory and the provider. Every turn receives a `contextPack` that has been:
+
+- assembled from project, task, and artifact memory;
+- filtered by the policy seam against the actor's scopes;
+- redacted according to the redaction policy;
+- bound to the run id, task id, and turn id;
+- tagged with freshness and source attribution metadata.
+
+## Why a contract here
+
+A typed `contextPack` keeps the provider boundary thin. Providers receive only what policy allows, and every context decision shows up in the audit trail.

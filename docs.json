@@ -37,6 +37,7 @@
                 "pages": [
                   "harness/overview",
                   "harness/quickstart",
+                  "harness/architecture.mdx",
                   "harness/installation"
                 ]
               },
@@ -57,6 +58,97 @@
                 ]
               },
               {
+                "group": "Owned Core",
+                "expanded": false,
+                "pages": [
+                  "harness/concepts/owned-core.mdx",
+                  "harness/concepts/primitive-registry.mdx",
+                  "harness/concepts/principled-edge.mdx"
+                ]
+              },
+              {
+                "group": "Runtime",
+                "expanded": false,
+                "pages": [
+                  "harness/runtime/lifecycle.mdx",
+                  "harness/runtime/checkpoints-resumability.mdx",
+                  "harness/runtime/retries-cancellation.mdx"
+                ]
+              },
+              {
+                "group": "Contracts",
+                "expanded": false,
+                "pages": [
+                  "harness/contracts/overview.mdx",
+                  "harness/contracts/evidence-packets.mdx",
+                  "harness/contracts/capability-manifests.mdx"
+                ]
+              },
+              {
+                "group": "Policy & Identity",
+                "expanded": false,
+                "pages": [
+                  "harness/policy/model.mdx",
+                  "harness/policy/approvals.mdx",
+                  "harness/policy/identity.mdx"
+                ]
+              },
+              {
+                "group": "Tools",
+                "expanded": false,
+                "pages": [
+                  "harness/tools/gateway.mdx",
+                  "harness/tools/function-tools.mdx",
+                  "harness/tools/mcp.mdx",
+                  "harness/tools/adapters.mdx"
+                ]
+              },
+              {
+                "group": "Memory & Context",
+                "expanded": false,
+                "pages": [
+                  "harness/memory/overview.mdx",
+                  "harness/memory/context.mdx"
+                ]
+              },
+              {
+                "group": "Artifacts & Evidence",
+                "expanded": false,
+                "pages": [
+                  "harness/artifacts/overview.mdx",
+                  "harness/artifacts/evidence.mdx"
+                ]
+              },
+              {
+                "group": "Observability",
+                "expanded": false,
+                "pages": [
+                  "harness/observability/overview.mdx",
+                  "harness/observability/audit.mdx",
+                  "harness/observability/evals.mdx"
+                ]
+              },
+              {
+                "group": "Release & Hosted",
+                "expanded": false,
+                "pages": [
+                  "harness/release/readiness.mdx",
+                  "harness/release/sbom.mdx",
+                  "harness/release/hosted-routes.mdx",
+                  "harness/operations/hosted-limits.mdx",
+                  "harness/release/source-locks.mdx"
+                ]
+              },
+              {
+                "group": "Local Verification",
+                "expanded": false,
+                "pages": [
+                  "harness/local-verification/workflow.mdx",
+                  "harness/local-verification/ladder.mdx",
+                  "harness/local-verification/changelog.mdx"
+                ]
+              },
+              {
                 "group": "Guides",
                 "expanded": false,
                 "pages": [
@@ -71,6 +163,8 @@
                 "pages": [
                   "harness/reference-sdk",
                   "harness/reference-cli",
+                  "harness/cli-sdk/sdk.mdx",
+                  "harness/cli-sdk/cli.mdx",
                   "harness/reference-configuration",
                   "harness/packages"
                 ]

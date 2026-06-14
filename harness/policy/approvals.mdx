@@ -1,0 +1,25 @@
+---
+title: "Approvals"
+sidebarTitle: "Approvals"
+description: "Implicit, explicit, and deferred approval modes in Jami Harness, plus the approvalRequest envelope that keeps a human in the loop for high-risk tool actions."
+url: "harness/policy/approvals"
+---
+
+Approvals are how Harness keeps a human in the loop for high-risk actions without breaking the run contract.
+
+## Approval envelope
+
+Every approval flows through `approvalRequest`, which carries:
+
+- the action ref being approved
+- the approver scope
+- the policy decision that surfaced the approval
+- the audit event ids tying the request to the run trail
+
+## Modes
+
+- **Implicit** — covered by scope and risk labels; no human prompt.
+- **Explicit** — a human approval is required before the tool call proceeds.
+- **Deferred** — the run pauses at a checkpoint until approval is recorded.
+
+Approval modes are declared per tool and per primitive in capability manifests.

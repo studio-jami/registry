@@ -1,0 +1,26 @@
+---
+title: "Retries, Cancellation & Recovery"
+sidebarTitle: "Retries & Cancellation"
+description: "Retry semantics, cancellation propagation, and recovery fixtures across the Jami Harness run lifecycle, and how failures surface in audit and evidence trails."
+url: "harness/runtime/retries-cancellation"
+---
+
+The runtime owns retry, cancellation, and recovery as first-class concerns. None of these can be outsourced to a provider adapter.
+
+## Retry
+
+- Retries are scoped to a task or a tool call.
+- Each retry emits an `auditEvent` so the trail is reconstructable.
+- Retry budgets are policy-controlled.
+
+## Cancellation
+
+- Cancellation propagates from coordinator to worker passes through the same event contract.
+- In-flight tool calls receive a cancellation signal; the tool gateway records the outcome.
+- Cancelled runs still close out with an evidence packet describing why.
+
+## Recovery fixtures
+
+The `packages/contracts/fixtures/` directory ships fail-closed recovery fixtures. The local provider, runtime, policy, tools, memory, artifacts, and observability packages all verify against these fixtures via `pnpm runtime:test`, `pnpm policy:test`, `pnpm tools:test`, and friends.
+
+See the [first-agent guide](/harness/guide-first-agent) for the full ladder.
