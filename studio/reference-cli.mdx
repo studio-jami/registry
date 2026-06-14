@@ -1,0 +1,34 @@
+---
+title: "Studio CLI Reference"
+sidebarTitle: "CLI"
+description: "Developer reference for installing Jami Studio items — the standard shadcn CLI used with direct registry URLs. Not a Jami-specific CLI or REST API."
+---
+
+<Note>
+  **Scaffold page** for the Studio Reference. The full reference is authored in the
+  developer-reference stream (WS6). Jami Studio installs through the standard `shadcn` CLI —
+  there is no Jami-specific CLI binary and no REST API.
+</Note>
+
+Jami Studio items install with the standard `shadcn` CLI using a direct registry URL. This
+page will document the install commands, the interactive selection levels (workspace down to
+individual item), and how files land in your project.
+
+```bash
+npx shadcn add https://registry.jami.studio/items/button.registry-item.json
+```
+
+## Planned reference
+
+- `shadcn add` with a direct item URL.
+- Interactive install levels — workspace → app → page → block → component.
+- How `registryDependencies` resolve automatically.
+
+<CardGroup cols={2}>
+  <Card title="Installing items" icon="download" href="/registry/installing-items">
+    Install individual items with the shadcn CLI.
+  </Card>
+  <Card title="Workspaces" icon="cubes" href="/studio/workspaces">
+    Install a complete application shell in one command.
+  </Card>
+</CardGroup>

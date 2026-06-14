@@ -1,0 +1,127 @@
+---
+title: "Install Complete Workspaces from the Jami Registry"
+sidebarTitle: "Workspaces"
+description: "Install a full application shell — theme, primitives, components, pages, blocks, and app implementation — in one command using a Jami workspace registry item."
+---
+
+A **workspace** is the top-level packaged product in Jami Studio: a bundled, opinionated
+application shell for a specific kind of work. Installing one workspace entry-point item
+triggers a complete install graph — the factory theme, every required primitive and component,
+all the pages and blocks, and the app implementation — so you get a working multi-route
+application scaffold without assembling items by hand.
+
+Each workspace bundles one or more **apps** (the application shell + routes) along with the
+pages, blocks, components, and theme they need.
+
+## The four workspaces
+
+Jami Studio ships four focused workspaces, each targeting a distinct kind of application. Each
+workspace documents its apps inline on its own page.
+
+<CardGroup cols={2}>
+  <Card title="Solo" icon="user" href="/suites/solo">
+    Personal operations — calendar, tasks, docs, forms, CRM, and display-only agent status.
+  </Card>
+  <Card title="Business" icon="chart-bar" href="/suites/business-ops">
+    Dense operations shell — staff, scheduling, forms, training, compliance, and dashboards.
+  </Card>
+  <Card title="Mixed Media" icon="photo-film" href="/suites/mixed-media">
+    Media production shell — assets, generation, editing, pipelines, review, and publishing.
+  </Card>
+  <Card title="Research & Writing" icon="book-open" href="/suites/research-writing">
+    Research and writing workbench — sources, citations, notes, briefs, outlines, and knowledge.
+  </Card>
+</CardGroup>
+
+## Workspace structure
+
+Each workspace is a `registry:workspace` item. Its `registryDependencies` field defines the
+complete install graph — the CLI walks this graph and installs every item in the correct
+order.
+
+A workspace manifest (`*.workspace.json`) describes:
+
+```json
+{
+  "name": "@jami-studio/solo-workspace",
+  "workspace": "solo",
+  "items": ["jami-theme", "button", "panel", "text-field", "data-list", "agent-panel",
+            "docs-source-panel", "solo-app", "solo-today-page", "solo-docs-page",
+            "solo-agenda-block", "solo-task-queue-block", "solo-agent-status-block",
+            "solo-docs-sources-block", "solo-forms-block"],
+  "installGraph": { "root": "solo-workspace", "dependencies": [ ] },
+  "plannedSurfaces": ["calendar", "forms", "docs", "agent", "tasks", "crm", "content", "admin"],
+  "shell": { },
+  "implementation": { }
+}
+```
+
+| Field | What it tells you |
+|---|---|
+| `name` | The scoped package name of the workspace |
+| `workspace` | The workspace key (`solo`, `business-ops`, `mixed-media`, `research-writing`) |
+| `items` | Ordered list of every item the workspace installs |
+| `installGraph` | Dependency graph rooted at the workspace entry-point |
+| `plannedSurfaces` | Application surfaces planned for the workspace (not all implemented yet) |
+| `shell` | Navigation routes, page definitions, block definitions, and component parts |
+| `implementation` | Implementation evidence — mounted React app, page, and block JSON file paths |
+
+## Install a workspace
+
+Installing a workspace entry-point item resolves the entire graph in one command. For example,
+the Solo workspace:
+
+<CodeGroup>
+
+```bash npm
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
+```
+
+```bash pnpm
+pnpm dlx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
+```
+
+```bash yarn
+yarn dlx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
+```
+
+</CodeGroup>
+
+The other workspaces follow the same pattern with their own item names:
+
+| Workspace | Item URL |
+|---|---|
+| Solo | `https://registry.jami.studio/items/solo-workspace.registry-item.json` |
+| Business | `https://registry.jami.studio/items/business-ops-workspace.registry-item.json` |
+| Mixed Media | `https://registry.jami.studio/items/mixed-media-workspace.registry-item.json` |
+| Research & Writing | `https://registry.jami.studio/items/research-writing-workspace.registry-item.json` |
+
+## The install graph
+
+When you install a workspace, the shadcn CLI resolves `registryDependencies` recursively. The
+graph is rooted at the workspace item and expands depth-first — theme first, then primitives
+and components, then blocks, pages, the app shell, and finally the workspace manifest itself.
+
+## Customize at install
+
+Workspaces are customizable at install time. The CLI lets you select which workspaces to
+install (one, some, or all four) or drill down to install any lower level — an app, page,
+block, or component — with its children offered as options. See
+[Installing Items](/registry/installing-items) for the item-level install pattern.
+
+<Tip>
+  Workspace items are display-only by design. Action execution, runtime, and capability truth
+  all stay in Jami Harness. Installed components show status and surface action references but
+  do not execute actions directly.
+</Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Installing Items" icon="download" href="/registry/installing-items">
+    Install individual primitives and components outside of a workspace.
+  </Card>
+  <Card title="Registry Overview" icon="grid" href="/registry/overview">
+    Browse the full item catalog by type.
+  </Card>
+</CardGroup>

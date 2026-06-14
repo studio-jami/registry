@@ -117,11 +117,31 @@ if (!existsSync(docsConfigPath)) {
 } else {
   const docsConfig = readJson(docsConfigPath);
   const pages = [];
+
+  // Recursively collect page references from a `pages` array. Entries may be a
+  // string (a page path), a nested group object (`{ group, pages }`) which is how
+  // the accordion sidebar nests Reference/Concepts/etc., or another nav container.
+  const collectPages = (entries) => {
+    for (const entry of entries ?? []) {
+      if (typeof entry === "string") {
+        pages.push(entry);
+      } else if (entry && typeof entry === "object") {
+        collectPages(entry.pages);
+        // `root` is an optional landing page on a directory group.
+        if (typeof entry.root === "string") pages.push(entry.root);
+      }
+    }
+  };
+
   for (const tab of docsConfig.navigation?.tabs ?? []) {
+    collectPages(tab.groups?.flatMap((group) => group.pages) ?? []);
     for (const group of tab.groups ?? []) {
-      for (const page of group.pages ?? []) pages.push(page);
+      if (typeof group.root === "string") pages.push(group.root);
     }
   }
+  // Also support a top-level `navigation.groups` shape (no tabs).
+  collectPages(docsConfig.navigation?.groups?.flatMap((group) => group.pages) ?? []);
+
   for (const page of pages) {
     if (!existsSync(join(root, `${page}.mdx`))) fail(`docs.json references missing page ${page}.mdx`);
   }

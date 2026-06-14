@@ -1,0 +1,44 @@
+---
+title: "Harness at a Glance"
+sidebarTitle: "Harness"
+description: "A one-page orientation to Jami Harness — the contract-first, governed agent runtime: what it owns, how it is packaged, and where to go next."
+---
+
+**Jami Harness** is the contract-first, governed agent runtime in the Jami Studio family. It
+owns the parts of agent work that have to be reliable and auditable: the run lifecycle, tool
+invocation, policy and approvals, memory and context, and the artifacts and traces an agent
+produces.
+
+## What Harness owns
+
+| Surface | Responsibility |
+|---|---|
+| Runs and tasks | Durable run identifiers, actor/project/environment context, retry and recovery |
+| Tools | Typed tool calls, permissions, cancellation, replay awareness, audit records |
+| Policy and approvals | Identity, scopes, consent boundaries, approvals, denials, escalation |
+| Memory and context | Project and task memory, citations, freshness, redaction, retention |
+| Artifacts and evidence | Evidence packets, reports, patches, diagrams, and release outputs |
+| Observability | OpenTelemetry-compatible events, traces, metrics, evals, replay evidence |
+
+## How it is packaged
+
+Harness is published under the `@jami-studio` npm namespace as a set of packages split by
+contract boundary — a CLI, an SDK, a core/runtime layer, versioned contracts, and replaceable
+adapters for storage, providers, memory, and policy.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Harness overview" icon="route" href="/harness/overview">
+    The full architecture and the sibling boundary with Studio UI.
+  </Card>
+  <Card title="Quickstart" icon="terminal" href="/harness/quickstart">
+    Install the CLI and run a local smoke workflow.
+  </Card>
+  <Card title="Concepts" icon="book" href="/harness/concept-runs">
+    Runs, tasks, tools, policy, approvals, artifacts, memory, traces, and evidence.
+  </Card>
+  <Card title="Reference" icon="code" href="/harness/reference-sdk">
+    The SDK, CLI, and configuration reference.
+  </Card>
+</CardGroup>

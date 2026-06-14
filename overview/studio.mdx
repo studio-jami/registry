@@ -1,0 +1,66 @@
+---
+title: "Studio at a Glance"
+sidebarTitle: "Studio"
+description: "A one-page orientation to Jami Studio — the shadcn-compatible UI registry, its composition ladder, and the four installable workspaces."
+---
+
+**Jami Studio** is the UI foundation of the family. It publishes a public,
+shadcn-compatible registry of UI items — from tokenized primitives up to complete,
+installable **workspaces** — that you add to any React project with the standard `shadcn`
+CLI.
+
+## The composition ladder
+
+Studio items compose from the smallest part up to the packaged product:
+
+```
+primitive → component → block → page → app → workspace
+```
+
+- **primitive** — an atomic UI part (Button, Panel, Text Field).
+- **component** — a composed control (Agent Panel, Data List, Media Grid, Docs Source Panel).
+- **block** — a page section.
+- **page** — a full page composed from blocks.
+- **app** — an application shell (routes + navigation); one or more per workspace.
+- **workspace** — the top-level packaged product, customizable at install.
+
+## The four workspaces
+
+Jami Studio offers four focused workspaces. Each documents its apps inline.
+
+<CardGroup cols={2}>
+  <Card title="Solo" icon="user" href="/suites/solo">
+    Personal operations — calendar, tasks, docs, forms, and display-only agent status.
+  </Card>
+  <Card title="Business" icon="chart-bar" href="/suites/business-ops">
+    Dense operations — staff, scheduling, training, compliance, and dashboards.
+  </Card>
+  <Card title="Mixed Media" icon="photo-film" href="/suites/mixed-media">
+    Media production — assets, generation, pipelines, review, and publishing.
+  </Card>
+  <Card title="Research & Writing" icon="book-open" href="/suites/research-writing">
+    Sources, citations, briefs, outlines, and knowledge workflows.
+  </Card>
+</CardGroup>
+
+<Note>
+  "Workspace" is the only product-level word. Studio items are display-only by design —
+  action execution and capability truth stay in [Jami Harness](/overview/harness).
+</Note>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Get started" icon="rocket" href="/introduction">
+    Install your first item with the shadcn CLI.
+  </Card>
+  <Card title="Browse the registry" icon="grid" href="/registry/overview">
+    Every item type and the registry protocol.
+  </Card>
+  <Card title="Workspaces" icon="cubes" href="/studio/workspaces">
+    Install a complete application shell in one command.
+  </Card>
+  <Card title="Reference" icon="code" href="/studio/reference-cli">
+    The Studio CLI, renderer, and registry-item schema.
+  </Card>
+</CardGroup>

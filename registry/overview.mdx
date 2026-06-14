@@ -4,7 +4,7 @@ sidebarTitle: 'Overview'
 description: 'Browse 45 authored UI items served at registry.jami.studio. Learn the item types, JSON structure, and how to navigate the full item catalog.'
 ---
 
-The Jami Studio Registry is a public, static shadcn-compatible registry served from [https://registry.jami.studio](https://registry.jami.studio). It contains 45 authored UI items — from low-level tokenized primitives to full application suite descriptors — each installable directly with the shadcn CLI. The registry follows the [shadcn registry protocol](https://ui.shadcn.com/docs/registry) so you can use standard tooling without any Jami-specific CLI.
+The Jami Studio Registry is a public, static shadcn-compatible registry served from [https://registry.jami.studio](https://registry.jami.studio). It contains 45 authored UI items — from low-level tokenized primitives to full application workspace descriptors — each installable directly with the shadcn CLI. The registry follows the [shadcn registry protocol](https://ui.shadcn.com/docs/registry) so you can use standard tooling without any Jami-specific CLI.
 
 ## Registry endpoint
 
@@ -74,104 +74,37 @@ The registry uses the following shadcn registry type values:
 | `registry:ui` | 3 | Low-level tokenized UI primitives (Button, Panel, Text Field) |
 | `registry:component` | 4 | Composed resident components (Agent Panel, Data List, Docs Source Panel, Media Grid) |
 | `registry:theme` | 4 | CSS variable token sets and selectable brand-option descriptors |
-| `registry:block` | 18 | Single-component blocks inside a suite (agenda, task queue, review agent, etc.) |
+| `registry:block` | 18 | Single-component blocks inside a workspace (agenda, task queue, review agent, etc.) |
 | `registry:page` | 8 | Page-level compositions composed from blocks |
-| `registry:app` | 4 | Full mounted React app implementation descriptors per suite |
-| `registry:suite` | 4 | Top-level install-graph entry points that pull in a full application suite |
+| `registry:app` | 4 | Full mounted React app implementation descriptors per workspace |
+| `registry:workspace` | 4 | Top-level install-graph entry points that pull in a full application workspace |
 
 <Note>
-  `registry:suite` items are the recommended entry point when you want a complete application shell. Installing a suite triggers the full install graph automatically — you do not need to install individual blocks and pages by hand. See the [Suites](/registry/suites) page for details.
+  `registry:workspace` items are the recommended entry point when you want a complete application shell. Installing a workspace triggers the full install graph automatically — you do not need to install individual blocks and pages by hand. See the [Workspaces](/studio/workspaces) page for details.
 </Note>
 
-## All 45 items
+## Browse the catalog
 
-### `registry:ui` — Tokenized primitives
-
-| Name | Title |
-|---|---|
-| `button` | Button |
-| `panel` | Panel |
-| `text-field` | Text Field |
-
-### `registry:component` — Composed components
-
-| Name | Title |
-|---|---|
-| `agent-panel` | Agent Panel |
-| `data-list` | Data List |
-| `docs-source-panel` | Docs Source Panel |
-| `media-grid` | Media Grid |
-
-### `registry:theme` — Token themes and brand options
-
-| Name | Title |
-|---|---|
-| `jami-theme` | Jami Factory Theme |
-| `studio-console-brand` | Studio Console Brand Option |
-| `command-grid-brand` | Command Grid Brand Option |
-| `editorial-studio-brand` | Editorial Studio Brand Option |
-
-### `registry:suite` — Full application suites
-
-| Name | Title |
-|---|---|
-| `solo-suite` | Solo Suite |
-| `business-ops-suite` | Business Ops Suite |
-| `research-writing-suite` | Research Writing Suite |
-| `mixed-media-suite` | Mixed Media Suite |
-
-### `registry:app` — App implementation descriptors
-
-| Name | Suite |
-|---|---|
-| `solo-app` | solo |
-| `business-ops-app` | business-ops |
-| `research-writing-app` | research-writing |
-| `mixed-media-app` | mixed-media |
-
-### `registry:page` — Page compositions
-
-| Name | Suite |
-|---|---|
-| `solo-today-page` | solo |
-| `solo-docs-page` | solo |
-| `business-ops-dashboard-page` | business-ops |
-| `business-ops-staff-page` | business-ops |
-| `research-writing-sources-page` | research-writing |
-| `research-writing-brief-page` | research-writing |
-| `mixed-media-library-page` | mixed-media |
-| `mixed-media-pipeline-page` | mixed-media |
-
-### `registry:block` — Individual blocks (18)
+The 45 items follow the composition ladder `primitive → component → block → page → app → workspace`. Rather than re-list every item here, browse them by area:
 
 <CardGroup cols={2}>
-  <Card title="Solo blocks">
-    - `solo-agenda-block`
-    - `solo-task-queue-block`
-    - `solo-agent-status-block`
-    - `solo-docs-sources-block`
-    - `solo-forms-block`
+  <Card title="Components" icon="puzzle-piece" href="/components/overview">
+    The primitives and composed components (`registry:ui` and `registry:component`) with prop schemas, token requirements, and accessibility specs.
   </Card>
-  <Card title="Business Ops blocks">
-    - `business-ops-kpis-block`
-    - `business-ops-exceptions-block`
-    - `business-ops-agent-review-block`
-    - `business-ops-staff-table-block`
-    - `business-ops-training-form-block`
+  <Card title="Workspaces" icon="cubes" href="/studio/workspaces">
+    The four workspaces and the blocks, pages, and apps each one installs (`registry:block`, `registry:page`, `registry:app`, `registry:workspace`).
   </Card>
-  <Card title="Research Writing blocks">
-    - `research-writing-sources-block`
-    - `research-writing-citations-block`
-    - `research-writing-outline-block`
-    - `research-writing-agent-review-block`
+  <Card title="Theming" icon="palette" href="/theming/tokens">
+    The factory theme and selectable brand options (`registry:theme`).
   </Card>
-  <Card title="Mixed Media blocks">
-    - `mixed-media-assets-block`
-    - `mixed-media-metadata-block`
-    - `mixed-media-pipeline-block`
-    - `mixed-media-review-agent-block`
+  <Card title="Registry item schema" icon="code" href="/studio/reference-registry-item-schema">
+    The contract every item validates against — item types and fields.
   </Card>
 </CardGroup>
+
+<Tip>
+  The live manifest at [registry.jami.studio/registry.json](https://registry.jami.studio/registry.json) is always the authoritative, complete list of items and versions.
+</Tip>
 
 ## Next steps
 
@@ -179,7 +112,7 @@ The registry uses the following shadcn registry type values:
   <Card title="Installing Items" href="/registry/installing-items">
     Learn how to install individual items using the shadcn CLI, and understand which files land in your project.
   </Card>
-  <Card title="Suites" href="/registry/suites">
-    Install a complete application suite — theme, primitives, pages, blocks, and app shell — in a single command.
+  <Card title="Workspaces" href="/studio/workspaces">
+    Install a complete application workspace — theme, primitives, pages, blocks, and app shell — in a single command.
   </Card>
 </CardGroup>

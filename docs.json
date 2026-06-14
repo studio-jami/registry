@@ -13,53 +13,128 @@
         "tab": "Docs",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Overview",
             "pages": [
-              "introduction",
-              "quickstart"
+              "overview/index",
+              "overview/harness",
+              "overview/studio",
+              "overview/orchestra"
             ]
           },
           {
-            "group": "Jami Harness",
+            "group": "Harness",
             "pages": [
-              "harness/overview",
-              "harness/quickstart",
-              "harness/packages"
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "pages": [
+                  "harness/overview",
+                  "harness/quickstart",
+                  "harness/installation"
+                ]
+              },
+              {
+                "group": "Concepts",
+                "expanded": false,
+                "pages": [
+                  "harness/concept-runs",
+                  "harness/concept-tasks",
+                  "harness/concept-tools",
+                  "harness/concept-policy",
+                  "harness/concept-approvals",
+                  "harness/concept-artifacts",
+                  "harness/concept-memory",
+                  "harness/concept-traces",
+                  "harness/concept-evidence",
+                  "harness/concept-checkpoints"
+                ]
+              },
+              {
+                "group": "Guides",
+                "expanded": false,
+                "pages": [
+                  "harness/guide-first-agent",
+                  "harness/guide-tool-authoring",
+                  "harness/guide-release-packets"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": false,
+                "pages": [
+                  "harness/reference-sdk",
+                  "harness/reference-cli",
+                  "harness/reference-configuration",
+                  "harness/packages"
+                ]
+              }
             ]
           },
           {
-            "group": "Registry",
+            "group": "Studio",
             "pages": [
-              "registry/overview",
-              "registry/installing-items",
-              "registry/suites"
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "pages": [
+                  "introduction",
+                  "quickstart"
+                ]
+              },
+              {
+                "group": "Registry",
+                "expanded": false,
+                "pages": [
+                  "registry/overview",
+                  "registry/installing-items"
+                ]
+              },
+              {
+                "group": "Components",
+                "expanded": false,
+                "pages": [
+                  "components/overview",
+                  "components/primitives",
+                  "components/agent-panel",
+                  "components/data-list",
+                  "components/media-grid",
+                  "components/docs-source-panel"
+                ]
+              },
+              {
+                "group": "Workspaces",
+                "expanded": false,
+                "pages": [
+                  "studio/workspaces",
+                  "suites/solo",
+                  "suites/business-ops",
+                  "suites/mixed-media",
+                  "suites/research-writing"
+                ]
+              },
+              {
+                "group": "Theming",
+                "expanded": false,
+                "pages": [
+                  "theming/tokens",
+                  "theming/brand-options"
+                ]
+              },
+              {
+                "group": "Reference",
+                "expanded": false,
+                "pages": [
+                  "studio/reference-cli",
+                  "studio/reference-renderer",
+                  "studio/reference-registry-item-schema"
+                ]
+              }
             ]
           },
           {
-            "group": "Components",
+            "group": "Orchestra",
             "pages": [
-              "components/overview",
-              "components/primitives",
-              "components/agent-panel",
-              "components/data-list",
-              "components/media-grid",
-              "components/docs-source-panel"
-            ]
-          },
-          {
-            "group": "Suites",
-            "pages": [
-              "suites/solo",
-              "suites/business-ops",
-              "suites/research-writing",
-              "suites/mixed-media"
-            ]
-          },
-          {
-            "group": "Theming",
-            "pages": [
-              "theming/tokens",
-              "theming/brand-options"
+              "orchestra/overview"
             ]
           },
           {
@@ -73,6 +148,12 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/registry/suites",
+      "destination": "/studio/workspaces"
+    }
+  ],
   "navbar": {
     "primary": {
       "type": "github",
@@ -99,13 +180,12 @@
     "options": [
       "copy",
       "view",
-      "download-pdf",
-      "download-spec",
       "chatgpt",
       "claude",
       "grok",
       "perplexity",
       "aistudio",
+      "mcp",
       "cursor",
       "vscode"
     ],

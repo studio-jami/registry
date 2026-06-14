@@ -1,0 +1,24 @@
+---
+title: "Studio Renderer Reference"
+sidebarTitle: "Renderer"
+description: "Developer reference for the Jami Studio renderer — the framework-neutral primitive factory and the React/Radix wrappers exported by the registry."
+---
+
+<Note>
+  **Scaffold page** for the Studio Reference. The full reference is authored in the
+  developer-reference stream (WS6) from the renderer/library exports.
+</Note>
+
+Jami Studio components are available through two rendering layers: a framework-neutral
+factory that produces plain element descriptors, and pre-built React/Radix wrappers. This page
+will document both export surfaces.
+
+## Planned reference
+
+- `renderPrimitiveSpec(name, props)` and `createJamiPrimitiveComponents(createElement)`.
+- The React/Radix `forwardRef` wrappers (`JamiButton`, `JamiPanel`, and others).
+- The component vocabulary, prop schemas, token requirements, and ARIA contracts.
+
+<Card title="Components overview" icon="puzzle-piece" href="/components/overview">
+  The component vocabulary and rendering layers in detail.
+</Card>

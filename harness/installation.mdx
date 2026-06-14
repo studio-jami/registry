@@ -1,0 +1,49 @@
+---
+title: "Install Jami Harness"
+sidebarTitle: "Installation"
+description: "Install the Jami Harness packages from the @jami-studio npm namespace and prepare a local environment for evidence-oriented agent workflows."
+---
+
+<Note>
+  **Scaffold page.** This page is part of the documentation skeleton. Full installation
+  prose is authored in the Harness documentation stream (WS4). The package names and
+  namespace below are accurate today.
+</Note>
+
+Jami Harness is published under the `@jami-studio` npm namespace. Most projects start from
+the CLI for local inspection, or the SDK for application integration.
+
+## Prerequisites
+
+- Node.js 24 or later for the Harness source repo and local verification scripts.
+- A package manager that can install scoped npm packages.
+- No hosted provider, store, or OTLP endpoint is required for local package inspection.
+
+## Install
+
+<CodeGroup>
+
+```bash npm
+npm install @jami-studio/harness-cli
+```
+
+```bash pnpm
+pnpm add @jami-studio/harness-cli
+```
+
+```bash yarn
+yarn add @jami-studio/harness-cli
+```
+
+</CodeGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="terminal" href="/harness/quickstart">
+    Run a local, evidence-oriented smoke workflow.
+  </Card>
+  <Card title="Package map" icon="boxes" href="/harness/packages">
+    Every public Harness package and the role it plays.
+  </Card>
+</CardGroup>

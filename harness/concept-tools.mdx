@@ -1,0 +1,21 @@
+---
+title: "Tools"
+sidebarTitle: "Tools"
+description: "How Jami Harness governs tools — typed tool calls with permissions, cancellation, replay awareness, and audit records."
+---
+
+<Note>
+  **Scaffold page** for the Harness Concepts section. Authored in the Harness documentation
+  stream (WS4). The framing below reflects the real Harness responsibility model.
+</Note>
+
+**Tools** are how an agent acts on the world in Jami Harness. Every tool call is typed and
+runs through a wrapper that enforces permissions, supports cancellation, is replay-aware, and
+writes an audit record — so side effects are governed, not implicit.
+
+## On this page (planned)
+
+- The tool wrapper and typed tool calls.
+- Permissions, cancellation, and replay awareness.
+- Audit records and how tools surface in [traces](/harness/concept-traces).
+- Authoring a tool — see the [tool authoring guide](/harness/guide-tool-authoring).

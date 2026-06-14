@@ -1,0 +1,55 @@
+---
+title: "Jami Studio Documentation"
+sidebarTitle: "Welcome"
+description: "The documentation home for the Jami Studio open-source family: Harness (governed agent runtime), Studio (UI registry and workspaces), and Orchestra (multi-agent vision)."
+---
+
+Welcome to the documentation for the **Jami Studio** open-source family. This is one
+documentation surface covering every product, with a developer reference (SDK · CLI ·
+contracts) inside each product's own section — there is no separate API tab.
+
+## Products
+
+<CardGroup cols={2}>
+  <Card title="Harness" icon="robot" href="/overview/harness">
+    The contract-first, governed agent runtime — runs, tasks, tools, policy, approvals,
+    artifacts, memory, traces, and evidence. Ships an SDK, a CLI, and versioned contracts.
+  </Card>
+  <Card title="Studio" icon="grid-2" href="/overview/studio">
+    The UI foundation — a shadcn-compatible registry of primitives, components, themes, and
+    four installable **workspaces** (Solo, Business, Mixed Media, Research & Writing).
+  </Card>
+  <Card title="Orchestra" icon="sitemap" href="/overview/orchestra">
+    The multi-agent orchestration vision. Documented here as a forward-looking stub until it
+    has a shipped surface.
+  </Card>
+  <Card title="Operations" icon="server" href="/operations/hosting">
+    How the registry and docs are hosted and released — hosting routes and release evidence.
+  </Card>
+</CardGroup>
+
+## How the family fits together
+
+- **Harness** executes and governs agent work. It owns the action loop and emits typed,
+  trustworthy references (run state, artifacts, action refs).
+- **Studio** renders trusted state through resident, allowlisted UI. Registry items can
+  *display* Harness-owned action and artifact references, but they never execute actions.
+- **Workspaces** are the packaged products you install — each bundles one or more apps plus
+  the pages, blocks, components, and a theme they need.
+
+<Note>
+  Harness and Studio UI have **no REST API**. Their developer interface is a TypeScript SDK,
+  a CLI, and JSON-schema contracts. Each product's **Reference** section documents that real
+  surface. (Intercal, a separate project, has its own REST API and its own docs site.)
+</Note>
+
+## Where to start
+
+<CardGroup cols={2}>
+  <Card title="Build your first agent" icon="rocket" href="/harness/quickstart">
+    Install the Harness CLI and run a local, evidence-oriented workflow.
+  </Card>
+  <Card title="Install a workspace" icon="cubes" href="/studio/workspaces">
+    Pull a complete application shell into your project with one command.
+  </Card>
+</CardGroup>

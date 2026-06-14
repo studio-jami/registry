@@ -1,0 +1,29 @@
+---
+title: "Harness SDK Reference"
+sidebarTitle: "SDK"
+description: "Developer reference for the Jami Harness TypeScript SDK — creating a harness, defining tools, and driving runs, approvals, and inspection. Not a REST API."
+---
+
+<Note>
+  **Scaffold page** for the Harness Reference. The full SDK reference is authored in the
+  developer-reference stream (WS6) directly from the `@jami-studio/harness-sdk` surface.
+</Note>
+
+The Jami Harness developer interface is a **TypeScript SDK**, a [CLI](/harness/reference-cli),
+and versioned [contracts](/harness/packages) — **not a REST API**. This page will document the
+SDK surface: creating a harness, defining and gating tools, and driving runs, approvals,
+resumption, and inspection.
+
+## Planned reference
+
+- `createHarness()` and the configuration it accepts.
+- Tool gateway construction and typed [tool](/harness/concept-tools) registration.
+- Starting, approving, resuming, and inspecting [runs](/harness/concept-runs).
+
+```bash
+npm install @jami-studio/harness-sdk
+```
+
+<Card title="Package map" icon="boxes" href="/harness/packages">
+  Every public Harness package and the contract boundary it owns.
+</Card>
