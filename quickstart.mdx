@@ -4,7 +4,7 @@ sidebarTitle: 'Quickstart'
 description: 'Install your first Jami Studio UI component into any shadcn-compatible React or Next.js project in under a minute using the shadcn CLI.'
 ---
 
-Jami Studio Registry is a public shadcn-compatible UI component registry hosted at [registry.jami.studio](https://registry.jami.studio). This page walks you through everything you need to pull your first component — or a complete suite — into your project using the `shadcn` CLI.
+Jami Studio Registry is a public shadcn-compatible UI component registry hosted at [registry.jami.studio](https://registry.jami.studio). This page walks you through everything you need to pull your first component — or a complete workspace — into your project using the `shadcn` CLI.
 
 ## Prerequisites
 
@@ -91,7 +91,7 @@ Every item in the registry is individually addressable at:
 https://registry.jami.studio/items/{name}.registry-item.json
 ```
 
-Fetch the full index to discover every component, primitive, theme, block, page, suite, and brand option currently in the registry:
+Fetch the full index to discover every component, primitive, theme, block, page, workspace, and brand option currently in the registry:
 
 ```bash
 curl https://registry.jami.studio/registry.json
@@ -114,33 +114,33 @@ Notable items available today:
 | `docs-source-panel` | `registry:component` | Citation and source reference panel |
 | `media-grid` | `registry:component` | Responsive media and artifact gallery |
 | `jami-theme` | `registry:theme` | Warm Jami factory token CSS variables |
-| `solo-suite` | `registry:suite` | Full solo/general-workflow suite |
+| `solo-workspace` | `registry:workspace` | Full Solo / General Workflow workspace |
 
-## Install a full suite
+## Install a full workspace
 
-Suites are curated install-graph descriptors that pull in every component, block, page, and theme needed for a complete application shell in a single command.
+Workspaces are curated install-graph descriptors that pull in every component, block, page, and theme needed for a complete application shell in a single command.
 
 <CodeGroup>
 
 ```bash npm
-npx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+npx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
 ```bash yarn
-yarn dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+yarn dlx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
 ```bash pnpm
-pnpm dlx shadcn add https://registry.jami.studio/items/solo-suite.registry-item.json
+pnpm dlx shadcn add https://registry.jami.studio/items/solo-workspace.registry-item.json
 ```
 
 </CodeGroup>
 
-The **Solo Suite** installs the full Solo / General Workflow shell — including the Jami factory theme, all primitive components (`button`, `panel`, `text-field`, `data-list`, `agent-panel`, `docs-source-panel`), and pre-composed page and block descriptors for a today command center, docs-and-sources view, and more.
+The **Solo workspace** installs the full Solo / General Workflow shell — including the Jami factory theme, all primitive components (`button`, `panel`, `text-field`, `data-list`, `agent-panel`, `docs-source-panel`), and pre-composed page and block descriptors for a today command center, docs-and-sources view, and more.
 
 <Note>
-  Suites resolve their entire dependency graph automatically. You do not need to
-  install individual components separately before running a suite install.
+  Workspaces resolve their entire dependency graph automatically. You do not need to
+  install individual components separately before running a workspace install.
 </Note>
 
 ## Next steps
