@@ -1,0 +1,113 @@
+# Jami Studio Registry — Full Agent Source
+
+> Jami Studio Registry is the public documentation host for the Jami Studio family: a
+> registry of installable shadcn UI components, design tokens, and complete application
+> Workspaces, plus the Jami Harness agent runtime. This file is an expanded, agent-friendly
+> companion to llms.txt.
+
+Canonical docs host: https://registry.jami.studio/docs
+Marketing / OSS hub: https://www.jami.studio/
+Machine-readable registry: https://registry.jami.studio/registry.json
+GitHub org: https://github.com/studio-jami
+NPM scope: @jami-studio
+
+## Composition & Packaging Taxonomy
+
+The Studio composition ladder (developer-facing, how parts combine):
+
+primitive -> component -> block -> page -> app -> workspace
+
+- primitive: an atomic UI part.
+- component: a composed control.
+- block: a page section (the shadcn-standard term).
+- page: a full page.
+- app: an application (shell + routes); one or more per workspace.
+- workspace: the top-level packaged product, customizable at install — the only
+  product-level word. A Workspace is made of apps plus pages, blocks, components, and a theme.
+
+Brand: Jami Studio. Developer foundation: Studio UI. Products: Workspaces.
+Jami Studio offers four focused Workspaces: Solo, Business, Mixed Media, and
+Research & Writing. Install is interactive: the CLI offers selecting one, some, or all four
+Workspaces, or drilling down to any lower level (app, page, block, component) with children
+offered as options.
+
+## Jami Harness
+
+Docs: https://registry.jami.studio/docs/harness/overview
+Repository: https://github.com/studio-jami/jami-harness
+
+Summary: Jami Harness is an agent runtime for building, running, and verifying AI agents. Its
+public interface is a TypeScript SDK (`createHarness()`), a CLI, and JSON-schema contracts —
+there is no REST API surface.
+
+Positioning: A contract-first agent runtime with first-class evidence, policy, approvals, and
+observability. Reference is Developer Reference (SDK, CLI, Contracts), not a REST API.
+
+Audience: Developers building agentic systems who need reproducible runs, human-in-the-loop
+approvals, and verifiable release evidence.
+
+Core concepts: runs, tasks, tools, policy, approvals, artifacts, memory, traces, evidence,
+checkpoints.
+
+Reference surface:
+- SDK: `createHarness` and the run/approve/resume/inspect surface.
+- CLI: the Harness command-line interface.
+- Configuration: environment and config options.
+- Packages: the package layout (`@jami-studio/*`).
+
+## Studio UI (the registry, components, and Workspaces)
+
+Docs: https://registry.jami.studio/docs/introduction
+Repository: https://github.com/studio-jami/studio-ui
+Registry endpoint: https://registry.jami.studio/registry.json
+
+Summary: Studio UI is a public registry of installable UI components, design tokens, and
+complete application Workspaces, distributed via the shadcn registry protocol. Pull a single
+component or an entire Workspace with the `shadcn` CLI.
+
+Positioning: shadcn-compatible building blocks for AI-powered workspace applications —
+styled, accessible, and wired for AI agent status display out of the box.
+
+Audience: Product and application developers who use shadcn and want a ready-made design
+system plus full Workspace bundles.
+
+Capabilities:
+- Install primitives, components, blocks, pages, apps, and full Workspaces.
+- Apply the Jami Factory design tokens (CSS variables, Tailwind integration, TypeScript types).
+- Select brand options (accent, radius, spacing presets).
+- Render Workspaces via the Studio UI renderer/library.
+
+Reference surface:
+- CLI: the Studio command-line interface.
+- Renderer: renderer/library exports.
+- Registry-item schema: the JSON contract for registry items and Workspaces.
+
+Workspaces:
+- Solo — https://registry.jami.studio/docs/suites/solo
+- Business — https://registry.jami.studio/docs/suites/business-ops
+- Mixed Media — https://registry.jami.studio/docs/suites/mixed-media
+- Research & Writing — https://registry.jami.studio/docs/suites/research-writing
+
+## Orchestra (vision)
+
+Docs: https://registry.jami.studio/docs/overview/orchestra
+
+Summary: Orchestra is a forward-looking orchestration vision for the family. It is documented
+as a vision stub and is not yet a shipping product surface.
+
+## Operations
+
+- Hosting: https://registry.jami.studio/docs/operations/hosting — registry.jami.studio splits
+  traffic between the Cloudflare Pages static registry and the Mintlify-hosted /docs route via
+  an advanced-mode Worker.
+- Release: https://registry.jami.studio/docs/operations/release — how static registry bundles
+  are packaged and released.
+
+## Source Policy
+
+This site is the canonical documentation host for the Jami Studio family. Harness prose
+originates in the `jami-harness` repository; Studio concepts originate in `studio-ui`; both are
+published here. Planning, research, and decisions are maintained in the `studio-jami/ops` hub.
+Intercal is a separate product with its own organization and documentation site — linked, not
+merged. Customer-visible claims match reality: Harness and Studio UI expose SDK, CLI, and
+contract/schema references, not REST endpoints.

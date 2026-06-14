@@ -1,0 +1,39 @@
+{/*
+  Reusable variables for the Jami Studio Registry docs.
+
+  Import into any page and interpolate:
+
+    import { brand, registryUrl, workspaceSolo } from "/snippets/variables.mdx";
+
+    The brand is {brand}. Install from {registryUrl}.
+
+  Keep these in sync with the locked composition + packaging taxonomy
+  (Jami Studio brand; Studio UI dev foundation; four Workspaces) and the
+  published registry bundle. These are the single source of truth for
+  product names, versions, and base URLs across the docs.
+*/}
+
+{/* --- Brand & product names (locked taxonomy) --- */}
+export const brand = "Jami Studio";
+export const devFoundation = "Studio UI";
+export const registryName = "Jami Studio Registry";
+export const harnessName = "Jami Harness";
+export const npmScope = "@jami-studio";
+export const registryPackage = "@jami-studio/registry";
+
+{/* --- The four Workspaces (the only product-level word) --- */}
+export const workspaceSolo = "Solo";
+export const workspaceBusiness = "Business";
+export const workspaceMixedMedia = "Mixed Media";
+export const workspaceResearchWriting = "Research & Writing";
+export const workspaces = ["Solo", "Business", "Mixed Media", "Research & Writing"];
+
+{/* --- Versions --- */}
+export const registryVersion = "0.1.0";
+
+{/* --- Base URLs --- */}
+export const siteUrl = "https://registry.jami.studio";
+export const docsUrl = "https://registry.jami.studio/docs";
+export const registryUrl = "https://registry.jami.studio/registry.json";
+export const marketingUrl = "https://www.jami.studio/";
+export const githubOrgUrl = "https://github.com/studio-jami";

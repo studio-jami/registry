@@ -2,11 +2,18 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "Jami Studio Registry",
   "theme": "almond",
+  "description": "Jami Studio Registry — installable shadcn UI components, design tokens, and complete application Workspaces (Solo, Business, Mixed Media, Research & Writing), plus the Jami Harness agent runtime. Build AI-powered workspace apps from a public registry.",
   "colors": {
     "primary": "#84381c",
     "light": "#FFF9F5",
     "dark": "#0f0b0d"
   },
+  "logo": {
+    "light": "/logo/jami-mark.svg",
+    "dark": "/logo/jami-mark.svg",
+    "href": "https://www.jami.studio/"
+  },
+  "favicon": "/favicon/favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -141,7 +148,8 @@
             "group": "Operations",
             "pages": [
               "operations/hosting",
-              "operations/release"
+              "operations/release",
+              "operations/docs-site"
             ]
           }
         ]
@@ -195,7 +203,22 @@
     "schema": true
   },
   "seo": {
-    "indexing": "all"
+    "indexing": "all",
+    "metatags": {
+      "og:site_name": "Jami Studio Registry",
+      "og:type": "website",
+      "og:locale": "en_US",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@studio_jami",
+      "twitter:creator": "@studio_jami",
+      "theme-color": "#84381c",
+      "color-scheme": "light dark",
+      "application-name": "Jami Studio Registry",
+      "apple-mobile-web-app-title": "Jami Registry",
+      "apple-touch-icon": "/favicon/apple-touch-icon.png",
+      "msapplication-TileColor": "#84381c",
+      "msapplication-TileImage": "/favicon/android-chrome-192x192.png"
+    }
   },
   "footer": {
     "socials": {
@@ -211,16 +234,14 @@
   "interaction": {
     "drilldown": true
   },
-  "api": {
-    "params": {
-      "expanded": "closed"
+  "integrations": {
+    "posthog": {
+      "apiKey": "phc_yXSPdUZwernahGPDF58U7MpFA4XBekzimoQU2fUBrn8E",
+      "apiHost": "https://us.posthog.com",
+      "sessionRecording": false
     },
-    "playground": {
-      "display": "interactive"
-    },
-    "examples": {
-      "prefill": true,
-      "autogenerate": true
+    "ga4": {
+      "measurementId": "G-R39QQTKF5F"
     }
   }
 }
