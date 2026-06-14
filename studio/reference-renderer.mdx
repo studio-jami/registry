@@ -17,6 +17,7 @@ import {
   renderActionRef,
   renderArtifactView,
   renderThemeRef,
+  renderWorkspaceRef,
   renderSuiteRef,
   renderRendererError,
   allowedComponents,
@@ -32,9 +33,8 @@ import {
 ```
 
 <Note>
-  `renderSuiteRef` is the remaining harness-owned shared wire seam until WS2b completes.
-  Product docs use "workspace"; this export name is contract terminology, not the product
-  packaging word.
+  `workspaceRef` is the canonical shared wire seam. `renderSuiteRef` remains a deprecated
+  compatibility alias for older fixtures and callers.
 </Note>
 
 ## Rendering Behavior
@@ -45,7 +45,8 @@ import {
 | `renderActionRef(ref)` | Renders denied or pending action references as display-only state. |
 | `renderArtifactView(view)` | Renders artifact references without executing or fetching hidden content. |
 | `renderThemeRef(ref)` | Renders theme references as inert metadata. |
-| `renderSuiteRef(ref)` | Renders the current harness shared-seam reference for workspace install graphs. |
+| `renderWorkspaceRef(ref)` | Renders the canonical harness shared-seam reference for workspace install graphs. |
+| `renderSuiteRef(ref)` | Deprecated compatibility alias for `renderWorkspaceRef(ref)`. |
 | `renderRendererError(error)` | Produces renderer-owned error state without echoing unsafe payload text. |
 | `renderFixture(fixture)` | Renders compatibility fixtures for contract tests. |
 

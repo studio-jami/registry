@@ -30,7 +30,7 @@ The Harness owns the product grammar that makes agent work reliable:
 
 ## How it fits with Studio UI
 
-Harness-to-UI integration is data-first. The Harness emits typed references such as `uiPayload`, `artifactView`, `actionRef`, `themeRef`, and `suiteRef`. Studio UI validates and renders those references through resident allowlisted components.
+Harness-to-UI integration is data-first. The Harness emits typed references such as `uiPayload`, `artifactView`, `actionRef`, `themeRef`, and `workspaceRef`. Studio UI validates and renders those references through resident allowlisted components.
 
 Policy decisions, tool side effects, memory writes, provenance, trace emission, and runtime state remain Harness responsibilities. UI packages render state and configuration without taking ownership of execution.
 
