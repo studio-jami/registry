@@ -323,7 +323,7 @@
     "strict": false
   },
   "interaction": {
-    "drilldown": true
+    "drilldown": false
   },
   "integrations": {
     "posthog": {
