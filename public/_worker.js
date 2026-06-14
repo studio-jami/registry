@@ -29,25 +29,16 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/docs" || url.pathname.startsWith("/docs/")) {
-      const localDocsPath = docsFallbackPath(url.pathname);
-      if (localDocsPath) {
-        const localDocsUrl = new URL(request.url);
-        localDocsUrl.pathname = localDocsPath;
-        localDocsUrl.search = "";
-        return withBeacon(await env.ASSETS.fetch(new Request(localDocsUrl, request)));
+      const redirectPath = docsRedirectPath(url.pathname);
+      if (redirectPath) {
+        const redirectUrl = new URL(request.url);
+        redirectUrl.pathname = redirectPath;
+        redirectUrl.search = "";
+        return Response.redirect(redirectUrl.toString(), 308);
       }
 
       const docsResponse = await proxyDocs(request, url);
       if (docsResponse.status !== 404) return withBeacon(docsResponse);
-
-      const fallbackPath = docsFallbackPath(url.pathname);
-      if (fallbackPath) {
-        const fallbackUrl = new URL(request.url);
-        fallbackUrl.pathname = fallbackPath;
-        fallbackUrl.search = "";
-        const fallbackRequest = new Request(fallbackUrl, request);
-        return withBeacon(await env.ASSETS.fetch(fallbackRequest));
-      }
 
       return withBeacon(docsResponse);
     }
@@ -56,11 +47,11 @@ export default {
   },
 };
 
-function docsFallbackPath(pathname) {
+function docsRedirectPath(pathname) {
   const normalizedPath = pathname.replace(/\/+$/, "");
-  if (normalizedPath === "/docs/registry") return "/preview-docs/registry.html";
-  if (normalizedPath === "/docs/workbench") return "/preview-docs/workbench.html";
-  if (normalizedPath === "/docs/suites") return "/preview-docs/suites.html";
+  if (normalizedPath === "/docs/registry") return "/docs/registry/overview";
+  if (normalizedPath === "/docs/workbench") return "/docs/operations/hosting";
+  if (normalizedPath === "/docs/suites") return "/docs/studio/workspaces";
   return null;
 }
 

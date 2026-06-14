@@ -41,9 +41,13 @@ The docs source files are:
 ## Cloudflare Subpath Proxy
 
 Route `registry.jami.studio/docs*` through the Pages advanced-mode Worker in `public/_worker.js`.
-The worker keeps Mintlify as the primary docs origin for general docs, while
-serving the generated preview docs for `/docs/registry`, `/docs/workbench`, and `/docs/suites`
-directly from `public/preview-docs/*.html`.
+The worker keeps Mintlify as the docs origin for general docs and normalizes legacy docs index
+routes to canonical pages:
+
+- `/docs/registry` and `/docs/registry/` redirect to `/docs/registry/overview`.
+- `/docs/workbench` and `/docs/workbench/` redirect to `/docs/operations/hosting`, which
+  records the hosted workbench route and unsupported persistence/backend claims.
+- `/docs/suites` and `/docs/suites/` redirect to `/docs/studio/workspaces`.
 
 Use the real Mintlify hostname from the project settings. The current origin is `jami.mintlify.dev`:
 
@@ -56,12 +60,12 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/docs" || url.pathname.startsWith("/docs/")) {
-      const localDocsPath = docsFallbackPath(url.pathname);
-      if (localDocsPath) {
-        const localDocsUrl = new URL(request.url);
-        localDocsUrl.pathname = localDocsPath;
-        localDocsUrl.search = "";
-        return env.ASSETS.fetch(new Request(localDocsUrl, request));
+      const redirectPath = docsRedirectPath(url.pathname);
+      if (redirectPath) {
+        const redirectUrl = new URL(request.url);
+        redirectUrl.pathname = redirectPath;
+        redirectUrl.search = "";
+        return Response.redirect(redirectUrl.toString(), 308);
       }
 
       const upstream = new URL(url);
@@ -79,11 +83,11 @@ export default {
   },
 };
 
-function docsFallbackPath(pathname) {
+function docsRedirectPath(pathname) {
   const normalizedPath = pathname.replace(/\/+$/, "");
-  if (normalizedPath === "/docs/registry") return "/preview-docs/registry.html";
-  if (normalizedPath === "/docs/workbench") return "/preview-docs/workbench.html";
-  if (normalizedPath === "/docs/suites") return "/preview-docs/suites.html";
+  if (normalizedPath === "/docs/registry") return "/docs/registry/overview";
+  if (normalizedPath === "/docs/workbench") return "/docs/operations/hosting";
+  if (normalizedPath === "/docs/suites") return "/docs/studio/workspaces";
   return null;
 }
 ```
