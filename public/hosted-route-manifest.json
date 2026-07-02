@@ -1,11 +1,11 @@
 {
   "$schema": "https://jami.studio/schemas/studio-ui/hosted-route-readiness.generated.json",
   "generatedBy": "apps/workbench/build.mjs",
-  "status": "public-registry-docs-workbench-workspaces-live",
-  "publicRegistryClaimed": true,
-  "publicDocsClaimed": true,
-  "publicWorkbenchClaimed": true,
-  "publicWorkspaceRoutesClaimed": true,
+  "status": "preview-artifacts-present",
+  "registryPreviewArtifactPresent": true,
+  "docsPreviewArtifactPresent": true,
+  "workbenchPreviewArtifactPresent": true,
+  "workspaceRoutePreviewArtifactsPresent": true,
   "hostedPersistenceClaimed": false,
   "backendRegistrationClaimed": false,
   "workbenchBackend": {
@@ -20,19 +20,19 @@
       "id": "cloudflare-pages-direct-upload",
       "title": "Cloudflare Pages Direct Upload",
       "url": "https://developers.cloudflare.com/pages/get-started/direct-upload/",
-      "checkedOn": "2026-06-12"
+      "checkedOn": "2026-06-14"
     },
     {
       "id": "cloudflare-pages-headers",
       "title": "Cloudflare Pages custom headers",
       "url": "https://developers.cloudflare.com/pages/configuration/headers/",
-      "checkedOn": "2026-06-12"
+      "checkedOn": "2026-06-14"
     },
     {
       "id": "cloudflare-pages-serving",
       "title": "Cloudflare Pages serving static assets",
       "url": "https://developers.cloudflare.com/pages/configuration/serving-pages/",
-      "checkedOn": "2026-06-12"
+      "checkedOn": "2026-06-14"
     },
     {
       "id": "cloudflare-pages-custom-domains",
@@ -47,55 +47,682 @@
       "kind": "registry",
       "targetUrl": "https://registry.jami.studio/registry.json",
       "localArtifact": "registry.json",
-      "deployed": true
+      "localArtifactPresent": true
     },
     {
       "id": "docs-registry",
       "kind": "docs",
       "targetUrl": "https://registry.jami.studio/docs/registry",
       "localArtifact": "docs/registry.html",
-      "deployed": true
+      "localArtifactPresent": true
     },
     {
       "id": "docs-workbench",
       "kind": "docs",
       "targetUrl": "https://registry.jami.studio/docs/workbench",
       "localArtifact": "docs/workbench.html",
-      "deployed": true
+      "localArtifactPresent": true
     },
     {
       "id": "workbench-showcase",
       "kind": "workbench-showcase",
       "targetUrl": "https://registry.jami.studio/",
       "localArtifact": "index.html",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedPersistence": false,
       "backendRegistration": false
     },
     {
-      "id": "solo-workspace-app",
+      "id": "agent-native-studio-workspace-app",
       "kind": "workspace-app",
-      "targetUrl": "https://registry.jami.studio/suites/solo/",
-      "localArtifact": "suites/solo/index.html",
-      "deployed": true,
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/",
+      "localArtifact": "suites/agent-native-studio/index.html",
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
-      "id": "solo-solo-today",
+      "id": "agent-native-studio-agent-native-studio-clips",
       "kind": "workspace-page",
-      "targetUrl": "https://registry.jami.studio/suites/solo/solo-today.html",
-      "localArtifact": "suites/solo/solo-today.html",
-      "sourceRoute": "/solo/today",
-      "deployed": true,
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-clips.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-clips.html",
+      "sourceRoute": "/agent-native-studio/clips",
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
-      "id": "solo-solo-docs",
+      "id": "agent-native-studio-agent-native-studio-plan",
       "kind": "workspace-page",
-      "targetUrl": "https://registry.jami.studio/suites/solo/solo-docs.html",
-      "localArtifact": "suites/solo/solo-docs.html",
-      "sourceRoute": "/solo/docs",
-      "deployed": true,
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-plan.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-plan.html",
+      "sourceRoute": "/agent-native-studio/plan",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-design",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-design.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-design.html",
+      "sourceRoute": "/agent-native-studio/design",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-content",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-content.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-content.html",
+      "sourceRoute": "/agent-native-studio/content",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-slides",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-slides.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-slides.html",
+      "sourceRoute": "/agent-native-studio/slides",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-analytics",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-analytics.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-analytics.html",
+      "sourceRoute": "/agent-native-studio/analytics",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-mail",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-mail.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-mail.html",
+      "sourceRoute": "/agent-native-studio/mail",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-forms",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-forms.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-forms.html",
+      "sourceRoute": "/agent-native-studio/forms",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-brain",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-brain.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-brain.html",
+      "sourceRoute": "/agent-native-studio/brain",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-assets",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-assets.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-assets.html",
+      "sourceRoute": "/agent-native-studio/assets",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-calendar",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-calendar.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-calendar.html",
+      "sourceRoute": "/agent-native-studio/calendar",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-dispatch",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-dispatch.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-dispatch.html",
+      "sourceRoute": "/agent-native-studio/dispatch",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "agent-native-studio-agent-native-studio-chat",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/agent-native-studio/agent-native-studio-chat.html",
+      "localArtifact": "suites/agent-native-studio/agent-native-studio-chat.html",
+      "sourceRoute": "/agent-native-studio/chat",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/",
+      "localArtifact": "suites/analytics/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics.html",
+      "localArtifact": "suites/analytics/analytics.html",
+      "sourceRoute": "/analytics/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics.html",
+      "localArtifact": "suites/analytics/analytics.html",
+      "sourceRoute": "/analytics",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-adhoc-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-adhoc-id.html",
+      "localArtifact": "suites/analytics/analytics-adhoc-id.html",
+      "sourceRoute": "/analytics/adhoc/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-analyses-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-analyses-id.html",
+      "localArtifact": "suites/analytics/analytics-analyses-id.html",
+      "sourceRoute": "/analytics/analyses/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-analyses",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-analyses.html",
+      "localArtifact": "suites/analytics/analytics-analyses.html",
+      "sourceRoute": "/analytics/analyses",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-ask",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-ask.html",
+      "localArtifact": "suites/analytics/analytics-ask.html",
+      "sourceRoute": "/analytics/ask",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-catalog",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-catalog.html",
+      "localArtifact": "suites/analytics/analytics-catalog.html",
+      "sourceRoute": "/analytics/catalog",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-chart",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-chart.html",
+      "localArtifact": "suites/analytics/analytics-chart.html",
+      "sourceRoute": "/analytics/chart",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-dashboard",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-dashboard.html",
+      "localArtifact": "suites/analytics/analytics-dashboard.html",
+      "sourceRoute": "/analytics/dashboard",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-dashboards-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-dashboards-id.html",
+      "localArtifact": "suites/analytics/analytics-dashboards-id.html",
+      "sourceRoute": "/analytics/dashboards/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-dashboards",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-dashboards.html",
+      "localArtifact": "suites/analytics/analytics-dashboards.html",
+      "sourceRoute": "/analytics/dashboards",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-data-dictionary",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-data-dictionary.html",
+      "localArtifact": "suites/analytics/analytics-data-dictionary.html",
+      "sourceRoute": "/analytics/data-dictionary",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-data-sources",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-data-sources.html",
+      "localArtifact": "suites/analytics/analytics-data-sources.html",
+      "sourceRoute": "/analytics/data-sources",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-extensions-id-slug.html",
+      "localArtifact": "suites/analytics/analytics-extensions-id-slug.html",
+      "sourceRoute": "/analytics/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-extensions-id.html",
+      "localArtifact": "suites/analytics/analytics-extensions-id.html",
+      "sourceRoute": "/analytics/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-extensions.html",
+      "localArtifact": "suites/analytics/analytics-extensions.html",
+      "sourceRoute": "/analytics/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-extensions.html",
+      "localArtifact": "suites/analytics/analytics-extensions.html",
+      "sourceRoute": "/analytics/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-overview",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-overview.html",
+      "localArtifact": "suites/analytics/analytics-overview.html",
+      "sourceRoute": "/analytics/overview",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-sessions-recording-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-sessions-recordingid.html",
+      "localArtifact": "suites/analytics/analytics-sessions-recordingid.html",
+      "sourceRoute": "/analytics/sessions/:recordingId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-sessions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-sessions.html",
+      "localArtifact": "suites/analytics/analytics-sessions.html",
+      "sourceRoute": "/analytics/sessions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-settings.html",
+      "localArtifact": "suites/analytics/analytics-settings.html",
+      "sourceRoute": "/analytics/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-team.html",
+      "localArtifact": "suites/analytics/analytics-team.html",
+      "sourceRoute": "/analytics/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-traffic-dashboard",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-traffic-dashboard.html",
+      "localArtifact": "suites/analytics/analytics-traffic-dashboard.html",
+      "sourceRoute": "/analytics/traffic-dashboard",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "analytics-analytics-traffic",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/analytics/analytics-traffic.html",
+      "localArtifact": "suites/analytics/analytics-traffic.html",
+      "sourceRoute": "/analytics/traffic",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/assets/",
+      "localArtifact": "suites/assets/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets.html",
+      "localArtifact": "suites/assets/assets.html",
+      "sourceRoute": "/assets",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-asset-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-asset-id.html",
+      "localArtifact": "suites/assets/assets-asset-id.html",
+      "sourceRoute": "/assets/asset/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-asset-id-embed",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-asset-id-embed.html",
+      "localArtifact": "suites/assets/assets-asset-id-embed.html",
+      "sourceRoute": "/assets/asset/:id/embed",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-audit",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-audit.html",
+      "localArtifact": "suites/assets/assets-audit.html",
+      "sourceRoute": "/assets/audit",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-brand-kits-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-brand-kits-id.html",
+      "localArtifact": "suites/assets/assets-brand-kits-id.html",
+      "sourceRoute": "/assets/brand-kits/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-brand-kits",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-brand-kits.html",
+      "localArtifact": "suites/assets/assets-brand-kits.html",
+      "sourceRoute": "/assets/brand-kits",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-brand-kits",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-brand-kits.html",
+      "localArtifact": "suites/assets/assets-brand-kits.html",
+      "sourceRoute": "/assets/brand-kits",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-chat-thread-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-chat-threadid.html",
+      "localArtifact": "suites/assets/assets-chat-threadid.html",
+      "sourceRoute": "/assets/chat/:threadId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-extensions-id-slug.html",
+      "localArtifact": "suites/assets/assets-extensions-id-slug.html",
+      "sourceRoute": "/assets/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-extensions-id.html",
+      "localArtifact": "suites/assets/assets-extensions-id.html",
+      "sourceRoute": "/assets/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-extensions.html",
+      "localArtifact": "suites/assets/assets-extensions.html",
+      "sourceRoute": "/assets/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-extensions.html",
+      "localArtifact": "suites/assets/assets-extensions.html",
+      "sourceRoute": "/assets/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-image-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-image-id.html",
+      "localArtifact": "suites/assets/assets-image-id.html",
+      "sourceRoute": "/assets/image/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-libraries",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-libraries.html",
+      "localArtifact": "suites/assets/assets-libraries.html",
+      "sourceRoute": "/assets/libraries",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-library-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-library-id.html",
+      "localArtifact": "suites/assets/assets-library-id.html",
+      "sourceRoute": "/assets/library/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-library",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-library.html",
+      "localArtifact": "suites/assets/assets-library.html",
+      "sourceRoute": "/assets/library",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-picker",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-picker.html",
+      "localArtifact": "suites/assets/assets-picker.html",
+      "sourceRoute": "/assets/picker",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-run-id-embed",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-run-id-embed.html",
+      "localArtifact": "suites/assets/assets-run-id-embed.html",
+      "sourceRoute": "/assets/run/:id/embed",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-settings.html",
+      "localArtifact": "suites/assets/assets-settings.html",
+      "sourceRoute": "/assets/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "assets-assets-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/assets/assets-team.html",
+      "localArtifact": "suites/assets/assets-team.html",
+      "sourceRoute": "/assets/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/brain/",
+      "localArtifact": "suites/brain/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain.html",
+      "localArtifact": "suites/brain/brain.html",
+      "sourceRoute": "/brain",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-extensions-id-slug.html",
+      "localArtifact": "suites/brain/brain-extensions-id-slug.html",
+      "sourceRoute": "/brain/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-extensions-id.html",
+      "localArtifact": "suites/brain/brain-extensions-id.html",
+      "sourceRoute": "/brain/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-extensions.html",
+      "localArtifact": "suites/brain/brain-extensions.html",
+      "sourceRoute": "/brain/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-extensions.html",
+      "localArtifact": "suites/brain/brain-extensions.html",
+      "sourceRoute": "/brain/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-knowledge",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-knowledge.html",
+      "localArtifact": "suites/brain/brain-knowledge.html",
+      "sourceRoute": "/brain/knowledge",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-ops",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-ops.html",
+      "localArtifact": "suites/brain/brain-ops.html",
+      "sourceRoute": "/brain/ops",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-review",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-review.html",
+      "localArtifact": "suites/brain/brain-review.html",
+      "sourceRoute": "/brain/review",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-search",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-search.html",
+      "localArtifact": "suites/brain/brain-search.html",
+      "sourceRoute": "/brain/search",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-settings.html",
+      "localArtifact": "suites/brain/brain-settings.html",
+      "sourceRoute": "/brain/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-sources",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-sources.html",
+      "localArtifact": "suites/brain/brain-sources.html",
+      "sourceRoute": "/brain/sources",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "brain-brain-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/brain/brain-team.html",
+      "localArtifact": "suites/brain/brain-team.html",
+      "sourceRoute": "/brain/team",
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -103,7 +730,7 @@
       "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/business-ops/",
       "localArtifact": "suites/business-ops/index.html",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -112,7 +739,7 @@
       "targetUrl": "https://registry.jami.studio/suites/business-ops/business-ops-dashboard.html",
       "localArtifact": "suites/business-ops/business-ops-dashboard.html",
       "sourceRoute": "/business-ops/dashboard",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -121,7 +748,1456 @@
       "targetUrl": "https://registry.jami.studio/suites/business-ops/business-ops-staff.html",
       "localArtifact": "suites/business-ops/business-ops-staff.html",
       "sourceRoute": "/business-ops/staff",
-      "deployed": true,
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/",
+      "localArtifact": "suites/calendar/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar.html",
+      "localArtifact": "suites/calendar/calendar.html",
+      "sourceRoute": "/calendar/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar.html",
+      "localArtifact": "suites/calendar/calendar.html",
+      "sourceRoute": "/calendar",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-availability",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-availability.html",
+      "localArtifact": "suites/calendar/calendar-availability.html",
+      "sourceRoute": "/calendar/availability",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-booking-links-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-booking-links-id.html",
+      "localArtifact": "suites/calendar/calendar-booking-links-id.html",
+      "sourceRoute": "/calendar/booking-links/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-booking-links",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-booking-links.html",
+      "localArtifact": "suites/calendar/calendar-booking-links.html",
+      "sourceRoute": "/calendar/booking-links",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-booking-links",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-booking-links.html",
+      "localArtifact": "suites/calendar/calendar-booking-links.html",
+      "sourceRoute": "/calendar/booking-links",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-bookings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-bookings.html",
+      "localArtifact": "suites/calendar/calendar-bookings.html",
+      "sourceRoute": "/calendar/bookings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-extensions-id-slug.html",
+      "localArtifact": "suites/calendar/calendar-extensions-id-slug.html",
+      "sourceRoute": "/calendar/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-extensions-id.html",
+      "localArtifact": "suites/calendar/calendar-extensions-id.html",
+      "sourceRoute": "/calendar/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-extensions.html",
+      "localArtifact": "suites/calendar/calendar-extensions.html",
+      "sourceRoute": "/calendar/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-extensions.html",
+      "localArtifact": "suites/calendar/calendar-extensions.html",
+      "sourceRoute": "/calendar/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-settings.html",
+      "localArtifact": "suites/calendar/calendar-settings.html",
+      "sourceRoute": "/calendar/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-team.html",
+      "localArtifact": "suites/calendar/calendar-team.html",
+      "sourceRoute": "/calendar/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar.html",
+      "localArtifact": "suites/calendar/calendar.html",
+      "sourceRoute": "/calendar",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-book-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-book-slug.html",
+      "localArtifact": "suites/calendar/calendar-book-slug.html",
+      "sourceRoute": "/calendar/book/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-book-username-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-book-username-slug.html",
+      "localArtifact": "suites/calendar/calendar-book-username-slug.html",
+      "sourceRoute": "/calendar/book/:username/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-booking-og-meta",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-booking-og-meta.html",
+      "localArtifact": "suites/calendar/calendar-booking-og-meta.html",
+      "sourceRoute": "/calendar/booking-og-meta",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-booking-manage-token",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-booking-manage-token.html",
+      "localArtifact": "suites/calendar/calendar-booking-manage-token.html",
+      "sourceRoute": "/calendar/booking/manage/:token",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-event",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-event.html",
+      "localArtifact": "suites/calendar/calendar-event.html",
+      "sourceRoute": "/calendar/event",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "calendar-calendar-meet-username-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/calendar/calendar-meet-username-slug.html",
+      "localArtifact": "suites/calendar/calendar-meet-username-slug.html",
+      "sourceRoute": "/calendar/meet/:username/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/chat/",
+      "localArtifact": "suites/chat/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat.html",
+      "localArtifact": "suites/chat/chat.html",
+      "sourceRoute": "/chat",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-chat-thread-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-chat-threadid.html",
+      "localArtifact": "suites/chat/chat-chat-threadid.html",
+      "sourceRoute": "/chat/chat/:threadId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-database",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-database.html",
+      "localArtifact": "suites/chat/chat-database.html",
+      "sourceRoute": "/chat/database",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-extensions-id-slug.html",
+      "localArtifact": "suites/chat/chat-extensions-id-slug.html",
+      "sourceRoute": "/chat/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-extensions-id.html",
+      "localArtifact": "suites/chat/chat-extensions-id.html",
+      "sourceRoute": "/chat/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-extensions.html",
+      "localArtifact": "suites/chat/chat-extensions.html",
+      "sourceRoute": "/chat/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-extensions.html",
+      "localArtifact": "suites/chat/chat-extensions.html",
+      "sourceRoute": "/chat/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-observability",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-observability.html",
+      "localArtifact": "suites/chat/chat-observability.html",
+      "sourceRoute": "/chat/observability",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-settings.html",
+      "localArtifact": "suites/chat/chat-settings.html",
+      "sourceRoute": "/chat/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "chat-chat-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/chat/chat-team.html",
+      "localArtifact": "suites/chat/chat-team.html",
+      "sourceRoute": "/chat/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/clips/",
+      "localArtifact": "suites/clips/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-archive",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-archive.html",
+      "localArtifact": "suites/clips/clips-archive.html",
+      "sourceRoute": "/clips/archive",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-dictate",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-dictate.html",
+      "localArtifact": "suites/clips/clips-dictate.html",
+      "sourceRoute": "/clips/dictate",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-extensions-id-slug.html",
+      "localArtifact": "suites/clips/clips-extensions-id-slug.html",
+      "sourceRoute": "/clips/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-extensions-id.html",
+      "localArtifact": "suites/clips/clips-extensions-id.html",
+      "sourceRoute": "/clips/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-extensions.html",
+      "localArtifact": "suites/clips/clips-extensions.html",
+      "sourceRoute": "/clips/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-extensions.html",
+      "localArtifact": "suites/clips/clips-extensions.html",
+      "sourceRoute": "/clips/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-insights",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-insights.html",
+      "localArtifact": "suites/clips/clips-insights.html",
+      "sourceRoute": "/clips/insights",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-library",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-library.html",
+      "localArtifact": "suites/clips/clips-library.html",
+      "sourceRoute": "/clips/library",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-library-folder-folder-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-library-folder-folderid.html",
+      "localArtifact": "suites/clips/clips-library-folder-folderid.html",
+      "sourceRoute": "/clips/library/folder/:folderId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-meetings-meeting-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-meetings-meetingid.html",
+      "localArtifact": "suites/clips/clips-meetings-meetingid.html",
+      "sourceRoute": "/clips/meetings/:meetingId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-meetings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-meetings.html",
+      "localArtifact": "suites/clips/clips-meetings.html",
+      "sourceRoute": "/clips/meetings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-notifications",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-notifications.html",
+      "localArtifact": "suites/clips/clips-notifications.html",
+      "sourceRoute": "/clips/notifications",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-settings.html",
+      "localArtifact": "suites/clips/clips-settings.html",
+      "sourceRoute": "/clips/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-settings-organization",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-settings-organization.html",
+      "localArtifact": "suites/clips/clips-settings-organization.html",
+      "sourceRoute": "/clips/settings/organization",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-spaces-space-d-folder-folder-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-spaces-spaceid-folder-folderid.html",
+      "localArtifact": "suites/clips/clips-spaces-spaceid-folder-folderid.html",
+      "sourceRoute": "/clips/spaces/:spaceId/folder/:folderId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-spaces-space-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-spaces-spaceid.html",
+      "localArtifact": "suites/clips/clips-spaces-spaceid.html",
+      "sourceRoute": "/clips/spaces/:spaceId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-spaces",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-spaces.html",
+      "localArtifact": "suites/clips/clips-spaces.html",
+      "sourceRoute": "/clips/spaces",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-trash",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-trash.html",
+      "localArtifact": "suites/clips/clips-trash.html",
+      "sourceRoute": "/clips/trash",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips.html",
+      "localArtifact": "suites/clips/clips.html",
+      "sourceRoute": "/clips",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-wispr",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-wispr.html",
+      "localArtifact": "suites/clips/clips-wispr.html",
+      "sourceRoute": "/clips/wispr",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips.html",
+      "localArtifact": "suites/clips/clips.html",
+      "sourceRoute": "/clips",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-bug-report-done",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-bug-report-done.html",
+      "localArtifact": "suites/clips/clips-bug-report-done.html",
+      "sourceRoute": "/clips/bug-report/done",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-bug-report",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-bug-report.html",
+      "localArtifact": "suites/clips/clips-bug-report.html",
+      "sourceRoute": "/clips/bug-report",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-download",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-download.html",
+      "localArtifact": "suites/clips/clips-download.html",
+      "sourceRoute": "/clips/download",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-embed-share-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-embed-shareid.html",
+      "localArtifact": "suites/clips/clips-embed-shareid.html",
+      "sourceRoute": "/clips/embed/:shareId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-invite-token",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-invite-token.html",
+      "localArtifact": "suites/clips/clips-invite-token.html",
+      "sourceRoute": "/clips/invite/:token",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-r-recording-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-r-recordingid.html",
+      "localArtifact": "suites/clips/clips-r-recordingid.html",
+      "sourceRoute": "/clips/r/:recordingId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-record",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-record.html",
+      "localArtifact": "suites/clips/clips-record.html",
+      "sourceRoute": "/clips/record",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-share-share-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-share-shareid.html",
+      "localArtifact": "suites/clips/clips-share-shareid.html",
+      "sourceRoute": "/clips/share/:shareId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "clips-clips-share-meeting-meeting-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/clips/clips-share-meeting-meetingid.html",
+      "localArtifact": "suites/clips/clips-share-meeting-meetingid.html",
+      "sourceRoute": "/clips/share/meeting/:meetingId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/content/",
+      "localArtifact": "suites/content/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-id.html",
+      "localArtifact": "suites/content/content-id.html",
+      "sourceRoute": "/content/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content.html",
+      "localArtifact": "suites/content/content.html",
+      "sourceRoute": "/content",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-extensions-id-slug.html",
+      "localArtifact": "suites/content/content-extensions-id-slug.html",
+      "sourceRoute": "/content/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-extensions-id.html",
+      "localArtifact": "suites/content/content-extensions-id.html",
+      "sourceRoute": "/content/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-extensions.html",
+      "localArtifact": "suites/content/content-extensions.html",
+      "sourceRoute": "/content/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-extensions.html",
+      "localArtifact": "suites/content/content-extensions.html",
+      "sourceRoute": "/content/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-local-files",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-local-files.html",
+      "localArtifact": "suites/content/content-local-files.html",
+      "sourceRoute": "/content/local-files",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-page-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-page-id.html",
+      "localArtifact": "suites/content/content-page-id.html",
+      "sourceRoute": "/content/page/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-page",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-page.html",
+      "localArtifact": "suites/content/content-page.html",
+      "sourceRoute": "/content/page",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-page",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-page.html",
+      "localArtifact": "suites/content/content-page.html",
+      "sourceRoute": "/content/page",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-settings.html",
+      "localArtifact": "suites/content/content-settings.html",
+      "sourceRoute": "/content/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-team.html",
+      "localArtifact": "suites/content/content-team.html",
+      "sourceRoute": "/content/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content.html",
+      "localArtifact": "suites/content/content.html",
+      "sourceRoute": "/content",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "content-content-p-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/content/content-p-id.html",
+      "localArtifact": "suites/content/content-p-id.html",
+      "sourceRoute": "/content/p/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/design/",
+      "localArtifact": "suites/design/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design.html",
+      "localArtifact": "suites/design/design.html",
+      "sourceRoute": "/design/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design.html",
+      "localArtifact": "suites/design/design.html",
+      "sourceRoute": "/design",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-design-systems",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-design-systems.html",
+      "localArtifact": "suites/design/design-design-systems.html",
+      "sourceRoute": "/design/design-systems",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-design-systems-setup",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-design-systems-setup.html",
+      "localArtifact": "suites/design/design-design-systems-setup.html",
+      "sourceRoute": "/design/design-systems/setup",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-design-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-design-id.html",
+      "localArtifact": "suites/design/design-design-id.html",
+      "sourceRoute": "/design/design/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-examples",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-examples.html",
+      "localArtifact": "suites/design/design-examples.html",
+      "sourceRoute": "/design/examples",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-extensions-id-slug.html",
+      "localArtifact": "suites/design/design-extensions-id-slug.html",
+      "sourceRoute": "/design/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-extensions-id.html",
+      "localArtifact": "suites/design/design-extensions-id.html",
+      "sourceRoute": "/design/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-extensions.html",
+      "localArtifact": "suites/design/design-extensions.html",
+      "sourceRoute": "/design/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-extensions.html",
+      "localArtifact": "suites/design/design-extensions.html",
+      "sourceRoute": "/design/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-observability",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-observability.html",
+      "localArtifact": "suites/design/design-observability.html",
+      "sourceRoute": "/design/observability",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-present-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-present-id.html",
+      "localArtifact": "suites/design/design-present-id.html",
+      "sourceRoute": "/design/present/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-settings.html",
+      "localArtifact": "suites/design/design-settings.html",
+      "sourceRoute": "/design/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-team.html",
+      "localArtifact": "suites/design/design-team.html",
+      "sourceRoute": "/design/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "design-design-templates",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/design/design-templates.html",
+      "localArtifact": "suites/design/design-templates.html",
+      "sourceRoute": "/design/templates",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/",
+      "localArtifact": "suites/dispatch/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-app-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-appid.html",
+      "localArtifact": "suites/dispatch/dispatch-appid.html",
+      "sourceRoute": "/dispatch/:appId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch.html",
+      "localArtifact": "suites/dispatch/dispatch.html",
+      "sourceRoute": "/dispatch",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-agents",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-agents.html",
+      "localArtifact": "suites/dispatch/dispatch-agents.html",
+      "sourceRoute": "/dispatch/agents",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-approval",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-approval.html",
+      "localArtifact": "suites/dispatch/dispatch-approval.html",
+      "sourceRoute": "/dispatch/approval",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-approvals",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-approvals.html",
+      "localArtifact": "suites/dispatch/dispatch-approvals.html",
+      "sourceRoute": "/dispatch/approvals",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-apps-app-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-apps-appid.html",
+      "localArtifact": "suites/dispatch/dispatch-apps-appid.html",
+      "sourceRoute": "/dispatch/apps/:appId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-apps",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-apps.html",
+      "localArtifact": "suites/dispatch/dispatch-apps.html",
+      "sourceRoute": "/dispatch/apps",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-audit",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-audit.html",
+      "localArtifact": "suites/dispatch/dispatch-audit.html",
+      "sourceRoute": "/dispatch/audit",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-chat-thread-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-chat-threadid.html",
+      "localArtifact": "suites/dispatch/dispatch-chat-threadid.html",
+      "sourceRoute": "/dispatch/chat/:threadId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-chat",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-chat.html",
+      "localArtifact": "suites/dispatch/dispatch-chat.html",
+      "sourceRoute": "/dispatch/chat",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-destinations",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-destinations.html",
+      "localArtifact": "suites/dispatch/dispatch-destinations.html",
+      "sourceRoute": "/dispatch/destinations",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-dreams",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-dreams.html",
+      "localArtifact": "suites/dispatch/dispatch-dreams.html",
+      "sourceRoute": "/dispatch/dreams",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-extensions-id-slug.html",
+      "localArtifact": "suites/dispatch/dispatch-extensions-id-slug.html",
+      "sourceRoute": "/dispatch/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-extensions-id.html",
+      "localArtifact": "suites/dispatch/dispatch-extensions-id.html",
+      "sourceRoute": "/dispatch/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-extensions.html",
+      "localArtifact": "suites/dispatch/dispatch-extensions.html",
+      "sourceRoute": "/dispatch/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-identities",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-identities.html",
+      "localArtifact": "suites/dispatch/dispatch-identities.html",
+      "sourceRoute": "/dispatch/identities",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-integrations",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-integrations.html",
+      "localArtifact": "suites/dispatch/dispatch-integrations.html",
+      "sourceRoute": "/dispatch/integrations",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-messaging",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-messaging.html",
+      "localArtifact": "suites/dispatch/dispatch-messaging.html",
+      "sourceRoute": "/dispatch/messaging",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-metrics",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-metrics.html",
+      "localArtifact": "suites/dispatch/dispatch-metrics.html",
+      "sourceRoute": "/dispatch/metrics",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-new-app",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-new-app.html",
+      "localArtifact": "suites/dispatch/dispatch-new-app.html",
+      "sourceRoute": "/dispatch/new-app",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-overview",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-overview.html",
+      "localArtifact": "suites/dispatch/dispatch-overview.html",
+      "sourceRoute": "/dispatch/overview",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-settings.html",
+      "localArtifact": "suites/dispatch/dispatch-settings.html",
+      "sourceRoute": "/dispatch/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-team.html",
+      "localArtifact": "suites/dispatch/dispatch-team.html",
+      "sourceRoute": "/dispatch/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-thread-debug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-thread-debug.html",
+      "localArtifact": "suites/dispatch/dispatch-thread-debug.html",
+      "sourceRoute": "/dispatch/thread-debug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-tools-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-tools-id.html",
+      "localArtifact": "suites/dispatch/dispatch-tools-id.html",
+      "sourceRoute": "/dispatch/tools/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-tools",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-tools.html",
+      "localArtifact": "suites/dispatch/dispatch-tools.html",
+      "sourceRoute": "/dispatch/tools",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-vault",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-vault.html",
+      "localArtifact": "suites/dispatch/dispatch-vault.html",
+      "sourceRoute": "/dispatch/vault",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "dispatch-dispatch-workspace",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/dispatch/dispatch-workspace.html",
+      "localArtifact": "suites/dispatch/dispatch-workspace.html",
+      "sourceRoute": "/dispatch/workspace",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/forms/",
+      "localArtifact": "suites/forms/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-ask",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-ask.html",
+      "localArtifact": "suites/forms/forms-ask.html",
+      "sourceRoute": "/forms/ask",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-extensions-id-slug.html",
+      "localArtifact": "suites/forms/forms-extensions-id-slug.html",
+      "sourceRoute": "/forms/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-extensions-id.html",
+      "localArtifact": "suites/forms/forms-extensions-id.html",
+      "sourceRoute": "/forms/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-extensions.html",
+      "localArtifact": "suites/forms/forms-extensions.html",
+      "sourceRoute": "/forms/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-extensions.html",
+      "localArtifact": "suites/forms/forms-extensions.html",
+      "sourceRoute": "/forms/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-forms-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-forms-id.html",
+      "localArtifact": "suites/forms/forms-forms-id.html",
+      "sourceRoute": "/forms/forms/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-forms-id-responses",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-forms-id-responses.html",
+      "localArtifact": "suites/forms/forms-forms-id-responses.html",
+      "sourceRoute": "/forms/forms/:id/responses",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-forms",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-forms.html",
+      "localArtifact": "suites/forms/forms-forms.html",
+      "sourceRoute": "/forms/forms",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-response-insights",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-response-insights.html",
+      "localArtifact": "suites/forms/forms-response-insights.html",
+      "sourceRoute": "/forms/response-insights",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-settings.html",
+      "localArtifact": "suites/forms/forms-settings.html",
+      "sourceRoute": "/forms/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-team.html",
+      "localArtifact": "suites/forms/forms-team.html",
+      "sourceRoute": "/forms/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms.html",
+      "localArtifact": "suites/forms/forms.html",
+      "sourceRoute": "/forms",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms.html",
+      "localArtifact": "suites/forms/forms.html",
+      "sourceRoute": "/forms",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-f-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-f.html",
+      "localArtifact": "suites/forms/forms-f.html",
+      "sourceRoute": "/forms/f/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "forms-forms-form-preview",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/forms/forms-form-preview.html",
+      "localArtifact": "suites/forms/forms-form-preview.html",
+      "sourceRoute": "/forms/form-preview",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/macros/",
+      "localArtifact": "suites/macros/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros.html",
+      "localArtifact": "suites/macros/macros.html",
+      "sourceRoute": "/macros",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-analytics",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-analytics.html",
+      "localArtifact": "suites/macros/macros-analytics.html",
+      "sourceRoute": "/macros/analytics",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-extensions-id-slug.html",
+      "localArtifact": "suites/macros/macros-extensions-id-slug.html",
+      "sourceRoute": "/macros/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-extensions-id.html",
+      "localArtifact": "suites/macros/macros-extensions-id.html",
+      "sourceRoute": "/macros/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-extensions.html",
+      "localArtifact": "suites/macros/macros-extensions.html",
+      "sourceRoute": "/macros/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-extensions.html",
+      "localArtifact": "suites/macros/macros-extensions.html",
+      "sourceRoute": "/macros/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-settings.html",
+      "localArtifact": "suites/macros/macros-settings.html",
+      "sourceRoute": "/macros/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "macros-macros-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/macros/macros-team.html",
+      "localArtifact": "suites/macros/macros-team.html",
+      "sourceRoute": "/macros/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/mail/",
+      "localArtifact": "suites/mail/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail.html",
+      "localArtifact": "suites/mail/mail.html",
+      "sourceRoute": "/mail/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-view-thread-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-view-threadid.html",
+      "localArtifact": "suites/mail/mail-view-threadid.html",
+      "sourceRoute": "/mail/:view/:threadId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-view",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-view.html",
+      "localArtifact": "suites/mail/mail-view.html",
+      "sourceRoute": "/mail/:view",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail.html",
+      "localArtifact": "suites/mail/mail.html",
+      "sourceRoute": "/mail",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-draft-queue-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-draft-queue-id.html",
+      "localArtifact": "suites/mail/mail-draft-queue-id.html",
+      "sourceRoute": "/mail/draft-queue/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-draft-queue",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-draft-queue.html",
+      "localArtifact": "suites/mail/mail-draft-queue.html",
+      "sourceRoute": "/mail/draft-queue",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-email",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-email.html",
+      "localArtifact": "suites/mail/mail-email.html",
+      "sourceRoute": "/mail/email",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-extensions-id-slug.html",
+      "localArtifact": "suites/mail/mail-extensions-id-slug.html",
+      "sourceRoute": "/mail/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-extensions-id.html",
+      "localArtifact": "suites/mail/mail-extensions-id.html",
+      "sourceRoute": "/mail/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-extensions.html",
+      "localArtifact": "suites/mail/mail-extensions.html",
+      "sourceRoute": "/mail/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-extensions.html",
+      "localArtifact": "suites/mail/mail-extensions.html",
+      "sourceRoute": "/mail/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-settings.html",
+      "localArtifact": "suites/mail/mail-settings.html",
+      "sourceRoute": "/mail/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "mail-mail-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/mail/mail-team.html",
+      "localArtifact": "suites/mail/mail-team.html",
+      "sourceRoute": "/mail/team",
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -129,7 +2205,7 @@
       "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/mixed-media/",
       "localArtifact": "suites/mixed-media/index.html",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -138,7 +2214,7 @@
       "targetUrl": "https://registry.jami.studio/suites/mixed-media/mixed-media-library.html",
       "localArtifact": "suites/mixed-media/mixed-media-library.html",
       "sourceRoute": "/mixed-media/library",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -147,7 +2223,123 @@
       "targetUrl": "https://registry.jami.studio/suites/mixed-media/mixed-media-pipeline.html",
       "localArtifact": "suites/mixed-media/mixed-media-pipeline.html",
       "sourceRoute": "/mixed-media/pipeline",
-      "deployed": true,
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/plan/",
+      "localArtifact": "suites/plan/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan.html",
+      "localArtifact": "suites/plan/plan.html",
+      "sourceRoute": "/plan",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-extensions-id-slug.html",
+      "localArtifact": "suites/plan/plan-extensions-id-slug.html",
+      "sourceRoute": "/plan/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-extensions-id.html",
+      "localArtifact": "suites/plan/plan-extensions-id.html",
+      "sourceRoute": "/plan/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-extensions.html",
+      "localArtifact": "suites/plan/plan-extensions.html",
+      "sourceRoute": "/plan/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-extensions.html",
+      "localArtifact": "suites/plan/plan-extensions.html",
+      "sourceRoute": "/plan/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-local-plans-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-local-plans-slug.html",
+      "localArtifact": "suites/plan/plan-local-plans-slug.html",
+      "sourceRoute": "/plan/local-plans/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-plans-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-plans-id.html",
+      "localArtifact": "suites/plan/plan-plans-id.html",
+      "sourceRoute": "/plan/plans/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-plans",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-plans.html",
+      "localArtifact": "suites/plan/plan-plans.html",
+      "sourceRoute": "/plan/plans",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-recaps-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-recaps-id.html",
+      "localArtifact": "suites/plan/plan-recaps-id.html",
+      "sourceRoute": "/plan/recaps/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-recaps",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-recaps.html",
+      "localArtifact": "suites/plan/plan-recaps.html",
+      "sourceRoute": "/plan/recaps",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-settings.html",
+      "localArtifact": "suites/plan/plan-settings.html",
+      "sourceRoute": "/plan/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "plan-plan-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/plan/plan-team.html",
+      "localArtifact": "suites/plan/plan-team.html",
+      "sourceRoute": "/plan/team",
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -155,7 +2347,7 @@
       "kind": "workspace-app",
       "targetUrl": "https://registry.jami.studio/suites/research-writing/",
       "localArtifact": "suites/research-writing/index.html",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -164,7 +2356,7 @@
       "targetUrl": "https://registry.jami.studio/suites/research-writing/research-writing-sources.html",
       "localArtifact": "suites/research-writing/research-writing-sources.html",
       "sourceRoute": "/research-writing/sources",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
     },
     {
@@ -173,8 +2365,295 @@
       "targetUrl": "https://registry.jami.studio/suites/research-writing/research-writing-brief.html",
       "localArtifact": "suites/research-writing/research-writing-brief.html",
       "sourceRoute": "/research-writing/brief",
-      "deployed": true,
+      "localArtifactPresent": true,
       "hostedRuntime": false
+    },
+    {
+      "id": "slides-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/slides/",
+      "localArtifact": "suites/slides/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides.html",
+      "localArtifact": "suites/slides/slides.html",
+      "sourceRoute": "/slides/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides.html",
+      "localArtifact": "suites/slides/slides.html",
+      "sourceRoute": "/slides",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-deck-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-deck-id.html",
+      "localArtifact": "suites/slides/slides-deck-id.html",
+      "sourceRoute": "/slides/deck/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-deck-id-present",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-deck-id-present.html",
+      "localArtifact": "suites/slides/slides-deck-id-present.html",
+      "sourceRoute": "/slides/deck/:id/present",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-design-systems",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-design-systems.html",
+      "localArtifact": "suites/slides/slides-design-systems.html",
+      "sourceRoute": "/slides/design-systems",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-extensions-id-slug.html",
+      "localArtifact": "suites/slides/slides-extensions-id-slug.html",
+      "sourceRoute": "/slides/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-extensions-id.html",
+      "localArtifact": "suites/slides/slides-extensions-id.html",
+      "sourceRoute": "/slides/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-extensions.html",
+      "localArtifact": "suites/slides/slides-extensions.html",
+      "sourceRoute": "/slides/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-extensions.html",
+      "localArtifact": "suites/slides/slides-extensions.html",
+      "sourceRoute": "/slides/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-p-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-p-id.html",
+      "localArtifact": "suites/slides/slides-p-id.html",
+      "sourceRoute": "/slides/p/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-settings.html",
+      "localArtifact": "suites/slides/slides-settings.html",
+      "sourceRoute": "/slides/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-share-token",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-share-token.html",
+      "localArtifact": "suites/slides/slides-share-token.html",
+      "sourceRoute": "/slides/share/:token",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-slide",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-slide.html",
+      "localArtifact": "suites/slides/slides-slide.html",
+      "sourceRoute": "/slides/slide",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "slides-slides-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/slides/slides-team.html",
+      "localArtifact": "suites/slides/slides-team.html",
+      "sourceRoute": "/slides/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "solo-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/solo/",
+      "localArtifact": "suites/solo/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "solo-solo-today",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/solo/solo-today.html",
+      "localArtifact": "suites/solo/solo-today.html",
+      "sourceRoute": "/solo/today",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "solo-solo-docs",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/solo/solo-docs.html",
+      "localArtifact": "suites/solo/solo-docs.html",
+      "sourceRoute": "/solo/docs",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-workspace-app",
+      "kind": "workspace-app",
+      "targetUrl": "https://registry.jami.studio/suites/videos/",
+      "localArtifact": "suites/videos/index.html",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos.html",
+      "localArtifact": "suites/videos/videos.html",
+      "sourceRoute": "/videos/:",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos.html",
+      "localArtifact": "suites/videos/videos.html",
+      "sourceRoute": "/videos",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-c-composition-d",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-c-compositionid.html",
+      "localArtifact": "suites/videos/videos-c-compositionid.html",
+      "sourceRoute": "/videos/c/:compositionId",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-components",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-components.html",
+      "localArtifact": "suites/videos/videos-components.html",
+      "sourceRoute": "/videos/components",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-design-systems",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-design-systems.html",
+      "localArtifact": "suites/videos/videos-design-systems.html",
+      "sourceRoute": "/videos/design-systems",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-extensions-id-slug",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-extensions-id-slug.html",
+      "localArtifact": "suites/videos/videos-extensions-id-slug.html",
+      "sourceRoute": "/videos/extensions/:id/:slug",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-extensions-id",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-extensions-id.html",
+      "localArtifact": "suites/videos/videos-extensions-id.html",
+      "sourceRoute": "/videos/extensions/:id",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-extensions.html",
+      "localArtifact": "suites/videos/videos-extensions.html",
+      "sourceRoute": "/videos/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-extensions",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-extensions.html",
+      "localArtifact": "suites/videos/videos-extensions.html",
+      "sourceRoute": "/videos/extensions",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-settings",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-settings.html",
+      "localArtifact": "suites/videos/videos-settings.html",
+      "sourceRoute": "/videos/settings",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    },
+    {
+      "id": "videos-videos-team",
+      "kind": "workspace-page",
+      "targetUrl": "https://registry.jami.studio/suites/videos/videos-team.html",
+      "localArtifact": "suites/videos/videos-team.html",
+      "sourceRoute": "/videos/team",
+      "localArtifactPresent": true,
+      "hostedRuntime": false
+    }
+  ],
+  "requiresLive": [
+    {
+      "capability": "hosted-serving",
+      "description": "Public URLs under registry.jami.studio actually serve these preview bytes with correct content-type and cache headers.",
+      "verifiedBy": "pnpm hosted:live:check -- --base-url https://registry.jami.studio",
+      "blocking": false
+    },
+    {
+      "capability": "remote-install",
+      "description": "studio-ui init/add/provenance succeed against the hosted registry URL (clean-project remote install smoke).",
+      "verifiedBy": "pnpm hosted:live:check -- --base-url https://registry.jami.studio",
+      "blocking": false
+    },
+    {
+      "capability": "hosted-docs-health",
+      "description": "Hosted docs routes (e.g. /docs/registry, /docs/workbench) return healthy responses, not HTTP 500.",
+      "verifiedBy": "pnpm hosted:live:check -- --base-url https://registry.jami.studio",
+      "blocking": false
     }
   ],
   "missingHumanActions": [

@@ -78,10 +78,13 @@ const workbenchManifestText = assertFile("hosted-route-manifest.json");
 if (workbenchManifestText) {
   const manifest = JSON.parse(workbenchManifestText);
   if (manifest.targetHost !== "registry.jami.studio") fail("hosted route manifest target host drifted");
-  if (manifest.publicRegistryClaimed !== true) fail("hosted route manifest must claim registry route");
-  if (manifest.publicDocsClaimed !== true) fail("hosted route manifest must claim docs route");
-  if (manifest.publicWorkbenchClaimed !== true) fail("hosted route manifest must claim workbench route");
-  if (manifest.publicWorkspaceRoutesClaimed !== true) fail("hosted route manifest must claim workspace routes");
+  // Honest schema: the build emits local PREVIEW artifacts; live serving is proven by
+  // `pnpm hosted:live:check`, not asserted here. Do not overclaim "live"/"claimed".
+  if (manifest.status !== "preview-artifacts-present") fail("hosted route manifest status must be preview-artifacts-present");
+  if (manifest.registryPreviewArtifactPresent !== true) fail("hosted route manifest must report registry preview artifact present");
+  if (manifest.docsPreviewArtifactPresent !== true) fail("hosted route manifest must report docs preview artifact present");
+  if (manifest.workbenchPreviewArtifactPresent !== true) fail("hosted route manifest must report workbench preview artifact present");
+  if (manifest.workspaceRoutePreviewArtifactsPresent !== true) fail("hosted route manifest must report workspace route preview artifacts present");
   if (manifest.hostedPersistenceClaimed !== false) fail("hosted route manifest must not claim persistence");
   if (manifest.backendRegistrationClaimed !== false) fail("hosted route manifest must not claim backend registration");
 }
