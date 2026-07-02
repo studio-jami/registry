@@ -1,0 +1,589 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-a11y.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "analytics",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "runner": "axe-core/jsdom",
+  "axeVersion": "4.12.1",
+  "target": "WCAG 2.2 AA tags in axe-core",
+  "componentsCovered": [
+    "agent-panel",
+    "button",
+    "chart",
+    "panel"
+  ],
+  "violationCount": 0,
+  "keyboardAriaScreenReader": "axe-core/jsdom asserts keyboard, focus-visible, ARIA, and screen-reader name/role/state across every fixture state; zero violations required, jsdom-only `incomplete` items are recorded verbatim.",
+  "fixtures": [
+    {
+      "component": "agent-panel",
+      "fixture": "agent-panel-display-only",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-action",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-as-child",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "chart",
+      "fixture": "chart-metric-bars",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "panel",
+      "fixture": "panel-region",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "dataStates": {
+    "requiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "coveredRequiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "perBlock": [
+      {
+        "block": "block.analytics.adhoc-detail",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.analyses-detail",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.analyses-index",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.ask",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.catalog",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.catchall",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.chart",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.dashboard",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.dashboards-detail",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.dashboards-index",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.data-dictionary",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.data-sources",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.extensions",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.extensions-detail",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.extensions-detail-detail",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.extensions-index",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.home",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.overview",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.sessions-detail",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.sessions-index",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.settings",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.team",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.traffic",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.analytics.traffic-dashboard",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      }
+    ]
+  }
+}

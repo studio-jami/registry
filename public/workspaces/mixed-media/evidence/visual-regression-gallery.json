@@ -1,0 +1,103 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "mixed-media",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/mixed-media/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-mixed-media.png"
+  },
+  "routeCount": 2,
+  "blockStateCount": 10,
+  "routes": [
+    {
+      "galleryKey": "mixed-media.route.mixed-media-library",
+      "path": "/mixed-media/library",
+      "page": "page.mixed-media.library",
+      "title": "Asset library",
+      "routeArtifact": "apps/workbench/dist/suites/mixed-media/mixed-media-library.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mixed-media-mixed-media-library.png",
+      "blocks": [
+        "block.mixed-media.assets",
+        "block.mixed-media.metadata"
+      ]
+    },
+    {
+      "galleryKey": "mixed-media.route.mixed-media-pipeline",
+      "path": "/mixed-media/pipeline",
+      "page": "page.mixed-media.pipeline",
+      "title": "Generation pipeline",
+      "routeArtifact": "apps/workbench/dist/suites/mixed-media/mixed-media-pipeline.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mixed-media-mixed-media-pipeline.png",
+      "blocks": [
+        "block.mixed-media.pipeline",
+        "block.mixed-media.review-agent"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.assets.empty",
+      "block": "block.mixed-media.assets",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.assets.long-content",
+      "block": "block.mixed-media.assets",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.assets.ready",
+      "block": "block.mixed-media.assets",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.metadata.loading",
+      "block": "block.mixed-media.metadata",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.metadata.long-content",
+      "block": "block.mixed-media.metadata",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.metadata.ready",
+      "block": "block.mixed-media.metadata",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.pipeline.error",
+      "block": "block.mixed-media.pipeline",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.pipeline.ready",
+      "block": "block.mixed-media.pipeline",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.review-agent.error",
+      "block": "block.mixed-media.review-agent",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mixed-media.block.block.mixed-media.review-agent.ready",
+      "block": "block.mixed-media.review-agent",
+      "component": "agent-panel",
+      "state": "ready"
+    }
+  ]
+}

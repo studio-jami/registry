@@ -1,0 +1,223 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "calendar",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/calendar/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.calendar.extensions-detail-detail",
+    "title": "Extensions Detail Detail",
+    "component": "calendar",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.$slug.tsx"
+  },
+  "component": "calendar",
+  "agentManifest": {
+    "component": "calendar",
+    "manifestId": "agm_calendar",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
+  "renderedStates": {
+    "ready": {
+      "props": {},
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-calendar",
+          "role": "region",
+          "aria-label": "Calendar",
+          "data-view": "agenda"
+        },
+        "children": [
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No events scheduled."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-calendar"
+      ]
+    },
+    "loading": {
+      "props": {},
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-calendar",
+          "role": "region",
+          "aria-label": "Calendar",
+          "data-view": "agenda"
+        },
+        "children": [
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No events scheduled."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-calendar"
+      ]
+    },
+    "empty": {
+      "props": {},
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-calendar",
+          "role": "region",
+          "aria-label": "Calendar",
+          "data-view": "agenda"
+        },
+        "children": [
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No events scheduled."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-calendar"
+      ]
+    },
+    "error": {
+      "props": {},
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-calendar",
+          "role": "region",
+          "aria-label": "Calendar",
+          "data-view": "agenda"
+        },
+        "children": [
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No events scheduled."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-calendar"
+      ]
+    },
+    "long-content": {
+      "props": {},
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-calendar",
+          "role": "region",
+          "aria-label": "Calendar",
+          "data-view": "agenda"
+        },
+        "children": [
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No events scheduled."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-calendar"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-calendar"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": true,
+    "emptyStateSafe": true,
+    "errorStateSafe": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/calendar/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/calendar/workspace-shell.json",
+    "copiedSource": false
+  }
+}

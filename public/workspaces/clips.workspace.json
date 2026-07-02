@@ -1,0 +1,1285 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/clips-workspace",
+  "workspace": "clips",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "media-grid",
+    "clips-app",
+    "clips-archive-page",
+    "clips-dictate-page",
+    "clips-extensions-detail-detail-page",
+    "clips-extensions-detail-page",
+    "clips-extensions-index-page",
+    "clips-extensions-page",
+    "clips-insights-index-page",
+    "clips-library-index-page",
+    "clips-library-folder-detail-page",
+    "clips-meetings-detail-page",
+    "clips-meetings-index-page",
+    "clips-notifications-page",
+    "clips-settings-index-page",
+    "clips-settings-organization-page",
+    "clips-spaces-detail-folder-detail-page",
+    "clips-spaces-detail-page",
+    "clips-spaces-index-page",
+    "clips-trash-page",
+    "clips-home-page",
+    "clips-wispr-page",
+    "clips-home-2-page",
+    "clips-bug-report-done-page",
+    "clips-bug-report-page",
+    "clips-download-page",
+    "clips-embed-detail-page",
+    "clips-invite-detail-page",
+    "clips-r-detail-page",
+    "clips-record-page",
+    "clips-share-detail-page",
+    "clips-share-meeting-detail-page",
+    "clips-archive-block",
+    "clips-dictate-block",
+    "clips-extensions-detail-detail-block",
+    "clips-extensions-detail-block",
+    "clips-extensions-index-block",
+    "clips-extensions-block",
+    "clips-insights-index-block",
+    "clips-library-index-block",
+    "clips-library-folder-detail-block",
+    "clips-meetings-detail-block",
+    "clips-meetings-index-block",
+    "clips-notifications-block",
+    "clips-settings-index-block",
+    "clips-settings-organization-block",
+    "clips-spaces-detail-folder-detail-block",
+    "clips-spaces-detail-block",
+    "clips-spaces-index-block",
+    "clips-trash-block",
+    "clips-home-block",
+    "clips-wispr-block",
+    "clips-home-2-block",
+    "clips-bug-report-done-block",
+    "clips-bug-report-block",
+    "clips-download-block",
+    "clips-embed-detail-block",
+    "clips-invite-detail-block",
+    "clips-r-detail-block",
+    "clips-record-block",
+    "clips-share-detail-block",
+    "clips-share-meeting-detail-block"
+  ],
+  "installGraph": {
+    "root": "clips-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "clips-app",
+      "clips-archive-page",
+      "clips-dictate-page",
+      "clips-extensions-detail-detail-page",
+      "clips-extensions-detail-page",
+      "clips-extensions-index-page",
+      "clips-extensions-page",
+      "clips-insights-index-page",
+      "clips-library-index-page",
+      "clips-library-folder-detail-page",
+      "clips-meetings-detail-page",
+      "clips-meetings-index-page",
+      "clips-notifications-page",
+      "clips-settings-index-page",
+      "clips-settings-organization-page",
+      "clips-spaces-detail-folder-detail-page",
+      "clips-spaces-detail-page",
+      "clips-spaces-index-page",
+      "clips-trash-page",
+      "clips-home-page",
+      "clips-wispr-page",
+      "clips-home-2-page",
+      "clips-bug-report-done-page",
+      "clips-bug-report-page",
+      "clips-download-page",
+      "clips-embed-detail-page",
+      "clips-invite-detail-page",
+      "clips-r-detail-page",
+      "clips-record-page",
+      "clips-share-detail-page",
+      "clips-share-meeting-detail-page",
+      "clips-archive-block",
+      "clips-dictate-block",
+      "clips-extensions-detail-detail-block",
+      "clips-extensions-detail-block",
+      "clips-extensions-index-block",
+      "clips-extensions-block",
+      "clips-insights-index-block",
+      "clips-library-index-block",
+      "clips-library-folder-detail-block",
+      "clips-meetings-detail-block",
+      "clips-meetings-index-block",
+      "clips-notifications-block",
+      "clips-settings-index-block",
+      "clips-settings-organization-block",
+      "clips-spaces-detail-folder-detail-block",
+      "clips-spaces-detail-block",
+      "clips-spaces-index-block",
+      "clips-trash-block",
+      "clips-home-block",
+      "clips-wispr-block",
+      "clips-home-2-block",
+      "clips-bug-report-done-block",
+      "clips-bug-report-block",
+      "clips-download-block",
+      "clips-embed-detail-block",
+      "clips-invite-detail-block",
+      "clips-r-detail-block",
+      "clips-record-block",
+      "clips-share-detail-block",
+      "clips-share-meeting-detail-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "archive",
+    "dictate",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "insights",
+    "library",
+    "library",
+    "meetings",
+    "meetings",
+    "notifications",
+    "settings",
+    "settings",
+    "spaces",
+    "spaces",
+    "spaces",
+    "trash",
+    "clips",
+    "wispr",
+    "clips",
+    "bug-report",
+    "bug-report",
+    "download",
+    "embed",
+    "invite",
+    "r",
+    "record",
+    "share",
+    "share"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Clips",
+    "summary": "Clips Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.clips.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Archive",
+          "route": "/clips/archive"
+        },
+        {
+          "label": "Dictate",
+          "route": "/clips/dictate"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/clips/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/clips/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/clips/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/clips/extensions"
+        },
+        {
+          "label": "Insights Index",
+          "route": "/clips/insights"
+        },
+        {
+          "label": "Library Index",
+          "route": "/clips/library"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/clips/archive",
+        "page": "page.clips.archive",
+        "title": "Archive",
+        "blocks": [
+          "block.clips.archive"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.archive.tsx"
+      },
+      {
+        "path": "/clips/dictate",
+        "page": "page.clips.dictate",
+        "title": "Dictate",
+        "blocks": [
+          "block.clips.dictate"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.dictate.tsx"
+      },
+      {
+        "path": "/clips/extensions/:id/:slug",
+        "page": "page.clips.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.clips.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/clips/extensions/:id",
+        "page": "page.clips.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.clips.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "path": "/clips/extensions",
+        "page": "page.clips.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.clips.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "path": "/clips/extensions",
+        "page": "page.clips.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.clips.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.tsx"
+      },
+      {
+        "path": "/clips/insights",
+        "page": "page.clips.insights-index",
+        "title": "Insights Index",
+        "blocks": [
+          "block.clips.insights-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.insights._index.tsx"
+      },
+      {
+        "path": "/clips/library",
+        "page": "page.clips.library-index",
+        "title": "Library Index",
+        "blocks": [
+          "block.clips.library-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library._index.tsx"
+      },
+      {
+        "path": "/clips/library/folder/:folderId",
+        "page": "page.clips.library-folder-detail",
+        "title": "Library Folder Detail",
+        "blocks": [
+          "block.clips.library-folder-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library.folder.$folderId.tsx"
+      },
+      {
+        "path": "/clips/meetings/:meetingId",
+        "page": "page.clips.meetings-detail",
+        "title": "Meetings Detail",
+        "blocks": [
+          "block.clips.meetings-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.meetings.$meetingId.tsx"
+      },
+      {
+        "path": "/clips/meetings",
+        "page": "page.clips.meetings-index",
+        "title": "Meetings Index",
+        "blocks": [
+          "block.clips.meetings-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.meetings._index.tsx"
+      },
+      {
+        "path": "/clips/notifications",
+        "page": "page.clips.notifications",
+        "title": "Notifications",
+        "blocks": [
+          "block.clips.notifications"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.notifications.tsx"
+      },
+      {
+        "path": "/clips/settings",
+        "page": "page.clips.settings-index",
+        "title": "Settings Index",
+        "blocks": [
+          "block.clips.settings-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.settings._index.tsx"
+      },
+      {
+        "path": "/clips/settings/organization",
+        "page": "page.clips.settings-organization",
+        "title": "Settings Organization",
+        "blocks": [
+          "block.clips.settings-organization"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.settings.organization.tsx"
+      },
+      {
+        "path": "/clips/spaces/:spaceId/folder/:folderId",
+        "page": "page.clips.spaces-detail-folder-detail",
+        "title": "Spaces Detail Folder Detail",
+        "blocks": [
+          "block.clips.spaces-detail-folder-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.folder.$folderId.tsx"
+      },
+      {
+        "path": "/clips/spaces/:spaceId",
+        "page": "page.clips.spaces-detail",
+        "title": "Spaces Detail",
+        "blocks": [
+          "block.clips.spaces-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.tsx"
+      },
+      {
+        "path": "/clips/spaces",
+        "page": "page.clips.spaces-index",
+        "title": "Spaces Index",
+        "blocks": [
+          "block.clips.spaces-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces._index.tsx"
+      },
+      {
+        "path": "/clips/trash",
+        "page": "page.clips.trash",
+        "title": "Trash",
+        "blocks": [
+          "block.clips.trash"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.trash.tsx"
+      },
+      {
+        "path": "/clips",
+        "page": "page.clips.home",
+        "title": "Clips Home",
+        "blocks": [
+          "block.clips.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.tsx"
+      },
+      {
+        "path": "/clips/wispr",
+        "page": "page.clips.wispr",
+        "title": "Wispr",
+        "blocks": [
+          "block.clips.wispr"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.wispr.tsx"
+      },
+      {
+        "path": "/clips",
+        "page": "page.clips.home-2",
+        "title": "Clips Home",
+        "blocks": [
+          "block.clips.home-2"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_index.tsx"
+      },
+      {
+        "path": "/clips/bug-report/done",
+        "page": "page.clips.bug-report-done",
+        "title": "Bug Report Done",
+        "blocks": [
+          "block.clips.bug-report-done"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/bug-report.done.tsx"
+      },
+      {
+        "path": "/clips/bug-report",
+        "page": "page.clips.bug-report",
+        "title": "Bug Report",
+        "blocks": [
+          "block.clips.bug-report"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/bug-report.tsx"
+      },
+      {
+        "path": "/clips/download",
+        "page": "page.clips.download",
+        "title": "Download",
+        "blocks": [
+          "block.clips.download"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/download.tsx"
+      },
+      {
+        "path": "/clips/embed/:shareId",
+        "page": "page.clips.embed-detail",
+        "title": "Embed Detail",
+        "blocks": [
+          "block.clips.embed-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/embed.$shareId.tsx"
+      },
+      {
+        "path": "/clips/invite/:token",
+        "page": "page.clips.invite-detail",
+        "title": "Invite Detail",
+        "blocks": [
+          "block.clips.invite-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/invite.$token.tsx"
+      },
+      {
+        "path": "/clips/r/:recordingId",
+        "page": "page.clips.r-detail",
+        "title": "R Detail",
+        "blocks": [
+          "block.clips.r-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/r.$recordingId.tsx"
+      },
+      {
+        "path": "/clips/record",
+        "page": "page.clips.record",
+        "title": "Record",
+        "blocks": [
+          "block.clips.record"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/record.tsx"
+      },
+      {
+        "path": "/clips/share/:shareId",
+        "page": "page.clips.share-detail",
+        "title": "Share Detail",
+        "blocks": [
+          "block.clips.share-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/share.$shareId.tsx"
+      },
+      {
+        "path": "/clips/share/meeting/:meetingId",
+        "page": "page.clips.share-meeting-detail",
+        "title": "Share Meeting Detail",
+        "blocks": [
+          "block.clips.share-meeting-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/share.meeting.$meetingId.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.clips.archive",
+        "title": "Archive",
+        "description": "Agent-Native clips route /archive derived from _app.archive.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.archive.tsx"
+      },
+      {
+        "id": "page.clips.dictate",
+        "title": "Dictate",
+        "description": "Agent-Native clips route /dictate derived from _app.dictate.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.dictate.tsx"
+      },
+      {
+        "id": "page.clips.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native clips route /extensions/:id/:slug derived from _app.extensions.$id.$slug.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.clips.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native clips route /extensions/:id derived from _app.extensions.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "page.clips.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native clips route /extensions derived from _app.extensions._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "page.clips.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native clips route /extensions derived from _app.extensions.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "page.clips.insights-index",
+        "title": "Insights Index",
+        "description": "Agent-Native clips route /insights derived from _app.insights._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.insights._index.tsx"
+      },
+      {
+        "id": "page.clips.library-index",
+        "title": "Library Index",
+        "description": "Agent-Native clips route /library derived from _app.library._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library._index.tsx"
+      },
+      {
+        "id": "page.clips.library-folder-detail",
+        "title": "Library Folder Detail",
+        "description": "Agent-Native clips route /library/folder/:folderId derived from _app.library.folder.$folderId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library.folder.$folderId.tsx"
+      },
+      {
+        "id": "page.clips.meetings-detail",
+        "title": "Meetings Detail",
+        "description": "Agent-Native clips route /meetings/:meetingId derived from _app.meetings.$meetingId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.meetings.$meetingId.tsx"
+      },
+      {
+        "id": "page.clips.meetings-index",
+        "title": "Meetings Index",
+        "description": "Agent-Native clips route /meetings derived from _app.meetings._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.meetings._index.tsx"
+      },
+      {
+        "id": "page.clips.notifications",
+        "title": "Notifications",
+        "description": "Agent-Native clips route /notifications derived from _app.notifications.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.notifications.tsx"
+      },
+      {
+        "id": "page.clips.settings-index",
+        "title": "Settings Index",
+        "description": "Agent-Native clips route /settings derived from _app.settings._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.settings._index.tsx"
+      },
+      {
+        "id": "page.clips.settings-organization",
+        "title": "Settings Organization",
+        "description": "Agent-Native clips route /settings/organization derived from _app.settings.organization.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.settings.organization.tsx"
+      },
+      {
+        "id": "page.clips.spaces-detail-folder-detail",
+        "title": "Spaces Detail Folder Detail",
+        "description": "Agent-Native clips route /spaces/:spaceId/folder/:folderId derived from _app.spaces.$spaceId.folder.$folderId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.folder.$folderId.tsx"
+      },
+      {
+        "id": "page.clips.spaces-detail",
+        "title": "Spaces Detail",
+        "description": "Agent-Native clips route /spaces/:spaceId derived from _app.spaces.$spaceId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.tsx"
+      },
+      {
+        "id": "page.clips.spaces-index",
+        "title": "Spaces Index",
+        "description": "Agent-Native clips route /spaces derived from _app.spaces._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces._index.tsx"
+      },
+      {
+        "id": "page.clips.trash",
+        "title": "Trash",
+        "description": "Agent-Native clips route /trash derived from _app.trash.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.trash.tsx"
+      },
+      {
+        "id": "page.clips.home",
+        "title": "Clips Home",
+        "description": "Agent-Native clips route / derived from _app.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.tsx"
+      },
+      {
+        "id": "page.clips.wispr",
+        "title": "Wispr",
+        "description": "Agent-Native clips route /wispr derived from _app.wispr.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.wispr.tsx"
+      },
+      {
+        "id": "page.clips.home-2",
+        "title": "Clips Home",
+        "description": "Agent-Native clips route / derived from _index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.clips.bug-report-done",
+        "title": "Bug Report Done",
+        "description": "Agent-Native clips route /bug-report/done derived from bug-report.done.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/bug-report.done.tsx"
+      },
+      {
+        "id": "page.clips.bug-report",
+        "title": "Bug Report",
+        "description": "Agent-Native clips route /bug-report derived from bug-report.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/bug-report.tsx"
+      },
+      {
+        "id": "page.clips.download",
+        "title": "Download",
+        "description": "Agent-Native clips route /download derived from download.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/download.tsx"
+      },
+      {
+        "id": "page.clips.embed-detail",
+        "title": "Embed Detail",
+        "description": "Agent-Native clips route /embed/:shareId derived from embed.$shareId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/embed.$shareId.tsx"
+      },
+      {
+        "id": "page.clips.invite-detail",
+        "title": "Invite Detail",
+        "description": "Agent-Native clips route /invite/:token derived from invite.$token.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/invite.$token.tsx"
+      },
+      {
+        "id": "page.clips.r-detail",
+        "title": "R Detail",
+        "description": "Agent-Native clips route /r/:recordingId derived from r.$recordingId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/r.$recordingId.tsx"
+      },
+      {
+        "id": "page.clips.record",
+        "title": "Record",
+        "description": "Agent-Native clips route /record derived from record.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/record.tsx"
+      },
+      {
+        "id": "page.clips.share-detail",
+        "title": "Share Detail",
+        "description": "Agent-Native clips route /share/:shareId derived from share.$shareId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/share.$shareId.tsx"
+      },
+      {
+        "id": "page.clips.share-meeting-detail",
+        "title": "Share Meeting Detail",
+        "description": "Agent-Native clips route /share/meeting/:meetingId derived from share.meeting.$meetingId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/share.meeting.$meetingId.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.clips.archive",
+        "title": "Archive",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.archive.tsx"
+      },
+      {
+        "id": "block.clips.dictate",
+        "title": "Dictate",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.dictate.tsx"
+      },
+      {
+        "id": "block.clips.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.clips.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "block.clips.extensions-index",
+        "title": "Extensions Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "block.clips.extensions",
+        "title": "Extensions",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "block.clips.insights-index",
+        "title": "Insights Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.insights._index.tsx"
+      },
+      {
+        "id": "block.clips.library-index",
+        "title": "Library Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library._index.tsx"
+      },
+      {
+        "id": "block.clips.library-folder-detail",
+        "title": "Library Folder Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library.folder.$folderId.tsx"
+      },
+      {
+        "id": "block.clips.meetings-detail",
+        "title": "Meetings Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.meetings.$meetingId.tsx"
+      },
+      {
+        "id": "block.clips.meetings-index",
+        "title": "Meetings Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.meetings._index.tsx"
+      },
+      {
+        "id": "block.clips.notifications",
+        "title": "Notifications",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.notifications.tsx"
+      },
+      {
+        "id": "block.clips.settings-index",
+        "title": "Settings Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.settings._index.tsx"
+      },
+      {
+        "id": "block.clips.settings-organization",
+        "title": "Settings Organization",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.settings.organization.tsx"
+      },
+      {
+        "id": "block.clips.spaces-detail-folder-detail",
+        "title": "Spaces Detail Folder Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.folder.$folderId.tsx"
+      },
+      {
+        "id": "block.clips.spaces-detail",
+        "title": "Spaces Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.tsx"
+      },
+      {
+        "id": "block.clips.spaces-index",
+        "title": "Spaces Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces._index.tsx"
+      },
+      {
+        "id": "block.clips.trash",
+        "title": "Trash",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.trash.tsx"
+      },
+      {
+        "id": "block.clips.home",
+        "title": "Home",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.tsx"
+      },
+      {
+        "id": "block.clips.wispr",
+        "title": "Wispr",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.wispr.tsx"
+      },
+      {
+        "id": "block.clips.home-2",
+        "title": "Home 2",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.clips.bug-report-done",
+        "title": "Bug Report Done",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/bug-report.done.tsx"
+      },
+      {
+        "id": "block.clips.bug-report",
+        "title": "Bug Report",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/bug-report.tsx"
+      },
+      {
+        "id": "block.clips.download",
+        "title": "Download",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/download.tsx"
+      },
+      {
+        "id": "block.clips.embed-detail",
+        "title": "Embed Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/embed.$shareId.tsx"
+      },
+      {
+        "id": "block.clips.invite-detail",
+        "title": "Invite Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/invite.$token.tsx"
+      },
+      {
+        "id": "block.clips.r-detail",
+        "title": "R Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/r.$recordingId.tsx"
+      },
+      {
+        "id": "block.clips.record",
+        "title": "Record",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/record.tsx"
+      },
+      {
+        "id": "block.clips.share-detail",
+        "title": "Share Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/share.$shareId.tsx"
+      },
+      {
+        "id": "block.clips.share-meeting-detail",
+        "title": "Share Meeting Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/clips/app/routes/share.meeting.$meetingId.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "media-grid",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Clips keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Clips in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Clips agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/clips",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/clips/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/clips/clips-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/clips/pages/clips-archive-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-dictate-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-insights-index-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-library-index-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-library-folder-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-meetings-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-meetings-index-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-notifications-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-settings-index-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-settings-organization-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-spaces-detail-folder-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-spaces-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-spaces-index-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-trash-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-home-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-wispr-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-home-2-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-bug-report-done-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-bug-report-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-download-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-embed-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-invite-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-r-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-record-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-share-detail-page.page.implementation.json",
+      "studio-ui/workspaces/clips/pages/clips-share-meeting-detail-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/clips/blocks/clips-archive-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-dictate-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-insights-index-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-library-index-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-library-folder-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-meetings-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-meetings-index-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-notifications-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-settings-index-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-settings-organization-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-spaces-detail-folder-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-spaces-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-spaces-index-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-trash-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-home-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-wispr-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-home-2-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-bug-report-done-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-bug-report-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-download-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-embed-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-invite-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-r-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-record-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-share-detail-block.block.implementation.json",
+      "studio-ui/workspaces/clips/blocks/clips-share-meeting-detail-block.block.implementation.json"
+    ]
+  }
+}

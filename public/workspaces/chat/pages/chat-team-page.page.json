@@ -1,0 +1,54 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "chat",
+  "page": {
+    "id": "page.chat.team",
+    "title": "Team",
+    "description": "Agent-Native chat route /team derived from team.tsx.",
+    "components": [
+      "agent-panel",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+  },
+  "routes": [
+    {
+      "path": "/chat/team",
+      "page": "page.chat.team",
+      "title": "Team",
+      "blocks": [
+        "block.chat.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.chat.team",
+      "title": "Team",
+      "component": "agent-panel",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+    }
+  ],
+  "components": [
+    "agent-panel",
+    "button",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Chat keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Chat in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Chat agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/chat/workspace-shell.json",
+    "copiedSource": false
+  }
+}

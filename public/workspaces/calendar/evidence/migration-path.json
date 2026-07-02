@@ -1,0 +1,386 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-migration-path.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "calendar",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "contract": "CLI `migrate` advances an installed part when the registry itemSchemaVersion moves; `update` advances version/sourceHash; `rollback` restores locked content. Every part below carries the schemaVersion it migrates to and its lifecycle version.",
+  "schemaVersionLadder": [
+    "2026-06-09.registry-foundation",
+    "2026-06-29.agent-native-template-workspace"
+  ],
+  "itemVersionLadder": [
+    "0.0.0-agent-native.20260629",
+    "0.0.0-contract.20260609",
+    "0.0.0-contract.20260625"
+  ],
+  "parts": [
+    {
+      "name": "button",
+      "kind": "primitive",
+      "id": "primitive.button",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "panel",
+      "kind": "primitive",
+      "id": "primitive.panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "calendar",
+      "kind": "component",
+      "id": "component.calendar",
+      "version": "0.0.0-contract.20260625",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Adds first-party calendar vocabulary and renderer coverage; no third-party calendar source copied."
+    },
+    {
+      "name": "calendar-availability-block",
+      "kind": "block",
+      "id": "block.calendar.availability",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-book-detail-block",
+      "kind": "block",
+      "id": "block.calendar.book-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-book-detail-detail-block",
+      "kind": "block",
+      "id": "block.calendar.book-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-links-block",
+      "kind": "block",
+      "id": "block.calendar.booking-links",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-links-detail-block",
+      "kind": "block",
+      "id": "block.calendar.booking-links-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-links-index-block",
+      "kind": "block",
+      "id": "block.calendar.booking-links-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-manage-detail-block",
+      "kind": "block",
+      "id": "block.calendar.booking-manage-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-og-meta-block",
+      "kind": "block",
+      "id": "block.calendar.booking-og-meta",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-bookings-block",
+      "kind": "block",
+      "id": "block.calendar.bookings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-catchall-block",
+      "kind": "block",
+      "id": "block.calendar.catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-event-block",
+      "kind": "block",
+      "id": "block.calendar.event",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-block",
+      "kind": "block",
+      "id": "block.calendar.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-detail-block",
+      "kind": "block",
+      "id": "block.calendar.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-detail-detail-block",
+      "kind": "block",
+      "id": "block.calendar.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-index-block",
+      "kind": "block",
+      "id": "block.calendar.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-home-2-block",
+      "kind": "block",
+      "id": "block.calendar.home-2",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-home-block",
+      "kind": "block",
+      "id": "block.calendar.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-meet-detail-detail-block",
+      "kind": "block",
+      "id": "block.calendar.meet-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-settings-block",
+      "kind": "block",
+      "id": "block.calendar.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-team-block",
+      "kind": "block",
+      "id": "block.calendar.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-availability-page",
+      "kind": "page",
+      "id": "page.calendar.availability",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-book-detail-detail-page",
+      "kind": "page",
+      "id": "page.calendar.book-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-book-detail-page",
+      "kind": "page",
+      "id": "page.calendar.book-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-links-detail-page",
+      "kind": "page",
+      "id": "page.calendar.booking-links-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-links-index-page",
+      "kind": "page",
+      "id": "page.calendar.booking-links-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-links-page",
+      "kind": "page",
+      "id": "page.calendar.booking-links",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-manage-detail-page",
+      "kind": "page",
+      "id": "page.calendar.booking-manage-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-booking-og-meta-page",
+      "kind": "page",
+      "id": "page.calendar.booking-og-meta",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-bookings-page",
+      "kind": "page",
+      "id": "page.calendar.bookings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-catchall-page",
+      "kind": "page",
+      "id": "page.calendar.catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-event-page",
+      "kind": "page",
+      "id": "page.calendar.event",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-detail-detail-page",
+      "kind": "page",
+      "id": "page.calendar.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-detail-page",
+      "kind": "page",
+      "id": "page.calendar.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-index-page",
+      "kind": "page",
+      "id": "page.calendar.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-extensions-page",
+      "kind": "page",
+      "id": "page.calendar.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-home-2-page",
+      "kind": "page",
+      "id": "page.calendar.home-2",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-home-page",
+      "kind": "page",
+      "id": "page.calendar.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-meet-detail-detail-page",
+      "kind": "page",
+      "id": "page.calendar.meet-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-settings-page",
+      "kind": "page",
+      "id": "page.calendar.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-team-page",
+      "kind": "page",
+      "id": "page.calendar.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "calendar-app",
+      "kind": "app",
+      "id": "app.calendar",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated workspace app implementation evidence from the authored workspace shell and mounted React workspace source; hosted runtime remains pending."
+    },
+    {
+      "name": "calendar-workspace",
+      "kind": null,
+      "id": "workspace.calendar",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Agent-Native Agent-Native Calendar template imported from yrka-io/agent-native as a complete Studio UI workspace shell over all discovered route files; execution remains display-only behind Jami Harness contracts."
+    },
+    {
+      "name": "jami-theme",
+      "kind": null,
+      "id": "theme.jami-factory",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial theme item. Files are the generated token outputs; regenerate with pnpm contracts:generate when the token source changes."
+    }
+  ]
+}

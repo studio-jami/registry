@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "assets",
+  "block": {
+    "id": "block.assets.extensions-index",
+    "title": "Extensions Index",
+    "component": "media-grid",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions._index.tsx"
+  },
+  "routes": [
+    {
+      "path": "/assets/extensions",
+      "page": "page.assets.extensions-index",
+      "title": "Extensions Index"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.assets.extensions-index",
+      "title": "Extensions Index"
+    }
+  ],
+  "component": "media-grid",
+  "stateFixtures": {
+    "loading": "Extensions Index includes the loading state.",
+    "empty": "No records are loaded for Assets in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Assets agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Assets keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/assets/workspace-shell.json",
+    "copiedSource": false
+  }
+}

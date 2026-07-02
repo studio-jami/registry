@@ -1,0 +1,897 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/assets-workspace",
+  "workspace": "assets",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "media-grid",
+    "agent-panel",
+    "assets-app",
+    "assets-home-page",
+    "assets-asset-detail-page",
+    "assets-asset-detail-embed-page",
+    "assets-audit-page",
+    "assets-brand-kits-detail-page",
+    "assets-brand-kits-index-page",
+    "assets-brand-kits-page",
+    "assets-chat-detail-page",
+    "assets-extensions-detail-detail-page",
+    "assets-extensions-detail-page",
+    "assets-extensions-index-page",
+    "assets-extensions-page",
+    "assets-image-detail-page",
+    "assets-libraries-page",
+    "assets-library-detail-page",
+    "assets-library-page",
+    "assets-picker-page",
+    "assets-run-detail-embed-page",
+    "assets-settings-page",
+    "assets-team-page",
+    "assets-home-block",
+    "assets-asset-detail-block",
+    "assets-asset-detail-embed-block",
+    "assets-audit-block",
+    "assets-brand-kits-detail-block",
+    "assets-brand-kits-index-block",
+    "assets-brand-kits-block",
+    "assets-chat-detail-block",
+    "assets-extensions-detail-detail-block",
+    "assets-extensions-detail-block",
+    "assets-extensions-index-block",
+    "assets-extensions-block",
+    "assets-image-detail-block",
+    "assets-libraries-block",
+    "assets-library-detail-block",
+    "assets-library-block",
+    "assets-picker-block",
+    "assets-run-detail-embed-block",
+    "assets-settings-block",
+    "assets-team-block"
+  ],
+  "installGraph": {
+    "root": "assets-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "agent-panel",
+      "assets-app",
+      "assets-home-page",
+      "assets-asset-detail-page",
+      "assets-asset-detail-embed-page",
+      "assets-audit-page",
+      "assets-brand-kits-detail-page",
+      "assets-brand-kits-index-page",
+      "assets-brand-kits-page",
+      "assets-chat-detail-page",
+      "assets-extensions-detail-detail-page",
+      "assets-extensions-detail-page",
+      "assets-extensions-index-page",
+      "assets-extensions-page",
+      "assets-image-detail-page",
+      "assets-libraries-page",
+      "assets-library-detail-page",
+      "assets-library-page",
+      "assets-picker-page",
+      "assets-run-detail-embed-page",
+      "assets-settings-page",
+      "assets-team-page",
+      "assets-home-block",
+      "assets-asset-detail-block",
+      "assets-asset-detail-embed-block",
+      "assets-audit-block",
+      "assets-brand-kits-detail-block",
+      "assets-brand-kits-index-block",
+      "assets-brand-kits-block",
+      "assets-chat-detail-block",
+      "assets-extensions-detail-detail-block",
+      "assets-extensions-detail-block",
+      "assets-extensions-index-block",
+      "assets-extensions-block",
+      "assets-image-detail-block",
+      "assets-libraries-block",
+      "assets-library-detail-block",
+      "assets-library-block",
+      "assets-picker-block",
+      "assets-run-detail-embed-block",
+      "assets-settings-block",
+      "assets-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "assets",
+    "asset",
+    "asset",
+    "audit",
+    "brand-kits",
+    "brand-kits",
+    "brand-kits",
+    "chat",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "image",
+    "libraries",
+    "library",
+    "library",
+    "picker",
+    "run",
+    "settings",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Assets",
+    "summary": "Assets Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.assets.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Home",
+          "route": "/assets"
+        },
+        {
+          "label": "Asset Detail",
+          "route": "/assets/asset/:id"
+        },
+        {
+          "label": "Asset Detail Embed",
+          "route": "/assets/asset/:id/embed"
+        },
+        {
+          "label": "Audit",
+          "route": "/assets/audit"
+        },
+        {
+          "label": "Brand Kits Detail",
+          "route": "/assets/brand-kits/:id"
+        },
+        {
+          "label": "Brand Kits Index",
+          "route": "/assets/brand-kits"
+        },
+        {
+          "label": "Brand Kits",
+          "route": "/assets/brand-kits"
+        },
+        {
+          "label": "Chat Detail",
+          "route": "/assets/chat/:threadId"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/assets",
+        "page": "page.assets.home",
+        "title": "Assets Home",
+        "blocks": [
+          "block.assets.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/_index.tsx"
+      },
+      {
+        "path": "/assets/asset/:id",
+        "page": "page.assets.asset-detail",
+        "title": "Asset Detail",
+        "blocks": [
+          "block.assets.asset-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id.tsx"
+      },
+      {
+        "path": "/assets/asset/:id/embed",
+        "page": "page.assets.asset-detail-embed",
+        "title": "Asset Detail Embed",
+        "blocks": [
+          "block.assets.asset-detail-embed"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id_.embed.tsx"
+      },
+      {
+        "path": "/assets/audit",
+        "page": "page.assets.audit",
+        "title": "Audit",
+        "blocks": [
+          "block.assets.audit"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/audit.tsx"
+      },
+      {
+        "path": "/assets/brand-kits/:id",
+        "page": "page.assets.brand-kits-detail",
+        "title": "Brand Kits Detail",
+        "blocks": [
+          "block.assets.brand-kits-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.$id.tsx"
+      },
+      {
+        "path": "/assets/brand-kits",
+        "page": "page.assets.brand-kits-index",
+        "title": "Brand Kits Index",
+        "blocks": [
+          "block.assets.brand-kits-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits._index.tsx"
+      },
+      {
+        "path": "/assets/brand-kits",
+        "page": "page.assets.brand-kits",
+        "title": "Brand Kits",
+        "blocks": [
+          "block.assets.brand-kits"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.tsx"
+      },
+      {
+        "path": "/assets/chat/:threadId",
+        "page": "page.assets.chat-detail",
+        "title": "Chat Detail",
+        "blocks": [
+          "block.assets.chat-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "path": "/assets/extensions/:id/:slug",
+        "page": "page.assets.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.assets.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/assets/extensions/:id",
+        "page": "page.assets.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.assets.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/assets/extensions",
+        "page": "page.assets.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.assets.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/assets/extensions",
+        "page": "page.assets.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.assets.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/assets/image/:id",
+        "page": "page.assets.image-detail",
+        "title": "Image Detail",
+        "blocks": [
+          "block.assets.image-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/image.$id.tsx"
+      },
+      {
+        "path": "/assets/libraries",
+        "page": "page.assets.libraries",
+        "title": "Libraries",
+        "blocks": [
+          "block.assets.libraries"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/libraries.tsx"
+      },
+      {
+        "path": "/assets/library/:id",
+        "page": "page.assets.library-detail",
+        "title": "Library Detail",
+        "blocks": [
+          "block.assets.library-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/library.$id.tsx"
+      },
+      {
+        "path": "/assets/library",
+        "page": "page.assets.library",
+        "title": "Library",
+        "blocks": [
+          "block.assets.library"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/library.tsx"
+      },
+      {
+        "path": "/assets/picker",
+        "page": "page.assets.picker",
+        "title": "Picker",
+        "blocks": [
+          "block.assets.picker"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/picker.tsx"
+      },
+      {
+        "path": "/assets/run/:id/embed",
+        "page": "page.assets.run-detail-embed",
+        "title": "Run Detail Embed",
+        "blocks": [
+          "block.assets.run-detail-embed"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/run.$id_.embed.tsx"
+      },
+      {
+        "path": "/assets/settings",
+        "page": "page.assets.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.assets.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/settings.tsx"
+      },
+      {
+        "path": "/assets/team",
+        "page": "page.assets.team",
+        "title": "Team",
+        "blocks": [
+          "block.assets.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.assets.home",
+        "title": "Assets Home",
+        "description": "Agent-Native assets route / derived from _index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.assets.asset-detail",
+        "title": "Asset Detail",
+        "description": "Agent-Native assets route /asset/:id derived from asset.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id.tsx"
+      },
+      {
+        "id": "page.assets.asset-detail-embed",
+        "title": "Asset Detail Embed",
+        "description": "Agent-Native assets route /asset/:id/embed derived from asset.$id_.embed.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id_.embed.tsx"
+      },
+      {
+        "id": "page.assets.audit",
+        "title": "Audit",
+        "description": "Agent-Native assets route /audit derived from audit.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/audit.tsx"
+      },
+      {
+        "id": "page.assets.brand-kits-detail",
+        "title": "Brand Kits Detail",
+        "description": "Agent-Native assets route /brand-kits/:id derived from brand-kits.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.$id.tsx"
+      },
+      {
+        "id": "page.assets.brand-kits-index",
+        "title": "Brand Kits Index",
+        "description": "Agent-Native assets route /brand-kits derived from brand-kits._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits._index.tsx"
+      },
+      {
+        "id": "page.assets.brand-kits",
+        "title": "Brand Kits",
+        "description": "Agent-Native assets route /brand-kits derived from brand-kits.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.tsx"
+      },
+      {
+        "id": "page.assets.chat-detail",
+        "title": "Chat Detail",
+        "description": "Agent-Native assets route /chat/:threadId derived from chat.$threadId.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "id": "page.assets.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native assets route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.assets.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native assets route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.assets.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native assets route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.assets.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native assets route /extensions derived from extensions.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.assets.image-detail",
+        "title": "Image Detail",
+        "description": "Agent-Native assets route /image/:id derived from image.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/image.$id.tsx"
+      },
+      {
+        "id": "page.assets.libraries",
+        "title": "Libraries",
+        "description": "Agent-Native assets route /libraries derived from libraries.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/libraries.tsx"
+      },
+      {
+        "id": "page.assets.library-detail",
+        "title": "Library Detail",
+        "description": "Agent-Native assets route /library/:id derived from library.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/library.$id.tsx"
+      },
+      {
+        "id": "page.assets.library",
+        "title": "Library",
+        "description": "Agent-Native assets route /library derived from library.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/library.tsx"
+      },
+      {
+        "id": "page.assets.picker",
+        "title": "Picker",
+        "description": "Agent-Native assets route /picker derived from picker.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/picker.tsx"
+      },
+      {
+        "id": "page.assets.run-detail-embed",
+        "title": "Run Detail Embed",
+        "description": "Agent-Native assets route /run/:id/embed derived from run.$id_.embed.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/run.$id_.embed.tsx"
+      },
+      {
+        "id": "page.assets.settings",
+        "title": "Settings",
+        "description": "Agent-Native assets route /settings derived from settings.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.assets.team",
+        "title": "Team",
+        "description": "Agent-Native assets route /team derived from team.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.assets.home",
+        "title": "Home",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.assets.asset-detail",
+        "title": "Asset Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id.tsx"
+      },
+      {
+        "id": "block.assets.asset-detail-embed",
+        "title": "Asset Detail Embed",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id_.embed.tsx"
+      },
+      {
+        "id": "block.assets.audit",
+        "title": "Audit",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/audit.tsx"
+      },
+      {
+        "id": "block.assets.brand-kits-detail",
+        "title": "Brand Kits Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.$id.tsx"
+      },
+      {
+        "id": "block.assets.brand-kits-index",
+        "title": "Brand Kits Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits._index.tsx"
+      },
+      {
+        "id": "block.assets.brand-kits",
+        "title": "Brand Kits",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.tsx"
+      },
+      {
+        "id": "block.assets.chat-detail",
+        "title": "Chat Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "id": "block.assets.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.assets.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.assets.extensions-index",
+        "title": "Extensions Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.assets.extensions",
+        "title": "Extensions",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.assets.image-detail",
+        "title": "Image Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/image.$id.tsx"
+      },
+      {
+        "id": "block.assets.libraries",
+        "title": "Libraries",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/libraries.tsx"
+      },
+      {
+        "id": "block.assets.library-detail",
+        "title": "Library Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/library.$id.tsx"
+      },
+      {
+        "id": "block.assets.library",
+        "title": "Library",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/library.tsx"
+      },
+      {
+        "id": "block.assets.picker",
+        "title": "Picker",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/picker.tsx"
+      },
+      {
+        "id": "block.assets.run-detail-embed",
+        "title": "Run Detail Embed",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/run.$id_.embed.tsx"
+      },
+      {
+        "id": "block.assets.settings",
+        "title": "Settings",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.assets.team",
+        "title": "Team",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/assets/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "agent-panel",
+      "button",
+      "media-grid",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Assets keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Assets in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Assets agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/assets",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/assets/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/assets/assets-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/assets/pages/assets-home-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-asset-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-asset-detail-embed-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-audit-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-brand-kits-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-brand-kits-index-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-brand-kits-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-chat-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-image-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-libraries-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-library-detail-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-library-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-picker-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-run-detail-embed-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-settings-page.page.implementation.json",
+      "studio-ui/workspaces/assets/pages/assets-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/assets/blocks/assets-home-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-asset-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-asset-detail-embed-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-audit-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-brand-kits-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-brand-kits-index-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-brand-kits-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-chat-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-image-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-libraries-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-library-detail-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-library-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-picker-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-run-detail-embed-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-settings-block.block.implementation.json",
+      "studio-ui/workspaces/assets/blocks/assets-team-block.block.implementation.json"
+    ]
+  }
+}

@@ -1,0 +1,999 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "dispatch",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/dispatch/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-dispatch.png"
+  },
+  "routeCount": 28,
+  "blockStateCount": 112,
+  "routes": [
+    {
+      "galleryKey": "dispatch.route.dispatch-appid",
+      "path": "/dispatch/:appId",
+      "page": "page.dispatch.detail",
+      "title": "Detail",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-appid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-appid.png",
+      "blocks": [
+        "block.dispatch.detail"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch",
+      "path": "/dispatch",
+      "page": "page.dispatch.home",
+      "title": "Dispatch Home",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch.png",
+      "blocks": [
+        "block.dispatch.home"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-agents",
+      "path": "/dispatch/agents",
+      "page": "page.dispatch.agents",
+      "title": "Agents",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-agents.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-agents.png",
+      "blocks": [
+        "block.dispatch.agents"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-approval",
+      "path": "/dispatch/approval",
+      "page": "page.dispatch.approval",
+      "title": "Approval",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-approval.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-approval.png",
+      "blocks": [
+        "block.dispatch.approval"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-approvals",
+      "path": "/dispatch/approvals",
+      "page": "page.dispatch.approvals",
+      "title": "Approvals",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-approvals.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-approvals.png",
+      "blocks": [
+        "block.dispatch.approvals"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-apps-appid",
+      "path": "/dispatch/apps/:appId",
+      "page": "page.dispatch.apps-detail",
+      "title": "Apps Detail",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-apps-appid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-apps-appid.png",
+      "blocks": [
+        "block.dispatch.apps-detail"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-apps",
+      "path": "/dispatch/apps",
+      "page": "page.dispatch.apps",
+      "title": "Apps",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-apps.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-apps.png",
+      "blocks": [
+        "block.dispatch.apps"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-audit",
+      "path": "/dispatch/audit",
+      "page": "page.dispatch.audit",
+      "title": "Audit",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-audit.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-audit.png",
+      "blocks": [
+        "block.dispatch.audit"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-chat-threadid",
+      "path": "/dispatch/chat/:threadId",
+      "page": "page.dispatch.chat-detail",
+      "title": "Chat Detail",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-chat-threadid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-chat-threadid.png",
+      "blocks": [
+        "block.dispatch.chat-detail"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-chat",
+      "path": "/dispatch/chat",
+      "page": "page.dispatch.chat",
+      "title": "Chat",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-chat.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-chat.png",
+      "blocks": [
+        "block.dispatch.chat"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-destinations",
+      "path": "/dispatch/destinations",
+      "page": "page.dispatch.destinations",
+      "title": "Destinations",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-destinations.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-destinations.png",
+      "blocks": [
+        "block.dispatch.destinations"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-dreams",
+      "path": "/dispatch/dreams",
+      "page": "page.dispatch.dreams",
+      "title": "Dreams",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-dreams.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-dreams.png",
+      "blocks": [
+        "block.dispatch.dreams"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-extensions-id-slug",
+      "path": "/dispatch/extensions/:id/:slug",
+      "page": "page.dispatch.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-extensions-id-slug.png",
+      "blocks": [
+        "block.dispatch.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-extensions-id",
+      "path": "/dispatch/extensions/:id",
+      "page": "page.dispatch.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-extensions-id.png",
+      "blocks": [
+        "block.dispatch.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-extensions",
+      "path": "/dispatch/extensions",
+      "page": "page.dispatch.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-extensions.png",
+      "blocks": [
+        "block.dispatch.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-identities",
+      "path": "/dispatch/identities",
+      "page": "page.dispatch.identities",
+      "title": "Identities",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-identities.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-identities.png",
+      "blocks": [
+        "block.dispatch.identities"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-integrations",
+      "path": "/dispatch/integrations",
+      "page": "page.dispatch.integrations",
+      "title": "Integrations",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-integrations.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-integrations.png",
+      "blocks": [
+        "block.dispatch.integrations"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-messaging",
+      "path": "/dispatch/messaging",
+      "page": "page.dispatch.messaging",
+      "title": "Messaging",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-messaging.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-messaging.png",
+      "blocks": [
+        "block.dispatch.messaging"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-metrics",
+      "path": "/dispatch/metrics",
+      "page": "page.dispatch.metrics",
+      "title": "Metrics",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-metrics.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-metrics.png",
+      "blocks": [
+        "block.dispatch.metrics"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-new-app",
+      "path": "/dispatch/new-app",
+      "page": "page.dispatch.new-app",
+      "title": "New App",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-new-app.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-new-app.png",
+      "blocks": [
+        "block.dispatch.new-app"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-overview",
+      "path": "/dispatch/overview",
+      "page": "page.dispatch.overview",
+      "title": "Overview",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-overview.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-overview.png",
+      "blocks": [
+        "block.dispatch.overview"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-settings",
+      "path": "/dispatch/settings",
+      "page": "page.dispatch.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-settings.png",
+      "blocks": [
+        "block.dispatch.settings"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-team",
+      "path": "/dispatch/team",
+      "page": "page.dispatch.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-team.png",
+      "blocks": [
+        "block.dispatch.team"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-thread-debug",
+      "path": "/dispatch/thread-debug",
+      "page": "page.dispatch.thread-debug",
+      "title": "Thread Debug",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-thread-debug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-thread-debug.png",
+      "blocks": [
+        "block.dispatch.thread-debug"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-tools-id",
+      "path": "/dispatch/tools/:id",
+      "page": "page.dispatch.tools-detail",
+      "title": "Tools Detail",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-tools-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-tools-id.png",
+      "blocks": [
+        "block.dispatch.tools-detail"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-tools",
+      "path": "/dispatch/tools",
+      "page": "page.dispatch.tools-index",
+      "title": "Tools Index",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-tools.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-tools.png",
+      "blocks": [
+        "block.dispatch.tools-index"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-vault",
+      "path": "/dispatch/vault",
+      "page": "page.dispatch.vault",
+      "title": "Vault",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-vault.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-vault.png",
+      "blocks": [
+        "block.dispatch.vault"
+      ]
+    },
+    {
+      "galleryKey": "dispatch.route.dispatch-workspace",
+      "path": "/dispatch/workspace",
+      "page": "page.dispatch.workspace",
+      "title": "Workspace",
+      "routeArtifact": "apps/workbench/dist/suites/dispatch/dispatch-workspace.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-dispatch-dispatch-workspace.png",
+      "blocks": [
+        "block.dispatch.workspace"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "dispatch.block.block.dispatch.agents.empty",
+      "block": "block.dispatch.agents",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.agents.error",
+      "block": "block.dispatch.agents",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.agents.loading",
+      "block": "block.dispatch.agents",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.agents.ready",
+      "block": "block.dispatch.agents",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approval.empty",
+      "block": "block.dispatch.approval",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approval.error",
+      "block": "block.dispatch.approval",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approval.loading",
+      "block": "block.dispatch.approval",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approval.ready",
+      "block": "block.dispatch.approval",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approvals.empty",
+      "block": "block.dispatch.approvals",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approvals.error",
+      "block": "block.dispatch.approvals",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approvals.loading",
+      "block": "block.dispatch.approvals",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.approvals.ready",
+      "block": "block.dispatch.approvals",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps-detail.empty",
+      "block": "block.dispatch.apps-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps-detail.error",
+      "block": "block.dispatch.apps-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps-detail.loading",
+      "block": "block.dispatch.apps-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps-detail.ready",
+      "block": "block.dispatch.apps-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps.empty",
+      "block": "block.dispatch.apps",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps.error",
+      "block": "block.dispatch.apps",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps.loading",
+      "block": "block.dispatch.apps",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.apps.ready",
+      "block": "block.dispatch.apps",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.audit.empty",
+      "block": "block.dispatch.audit",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.audit.error",
+      "block": "block.dispatch.audit",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.audit.loading",
+      "block": "block.dispatch.audit",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.audit.ready",
+      "block": "block.dispatch.audit",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat-detail.empty",
+      "block": "block.dispatch.chat-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat-detail.error",
+      "block": "block.dispatch.chat-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat-detail.loading",
+      "block": "block.dispatch.chat-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat-detail.ready",
+      "block": "block.dispatch.chat-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat.empty",
+      "block": "block.dispatch.chat",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat.error",
+      "block": "block.dispatch.chat",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat.loading",
+      "block": "block.dispatch.chat",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.chat.ready",
+      "block": "block.dispatch.chat",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.destinations.empty",
+      "block": "block.dispatch.destinations",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.destinations.error",
+      "block": "block.dispatch.destinations",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.destinations.loading",
+      "block": "block.dispatch.destinations",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.destinations.ready",
+      "block": "block.dispatch.destinations",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.detail.empty",
+      "block": "block.dispatch.detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.detail.error",
+      "block": "block.dispatch.detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.detail.loading",
+      "block": "block.dispatch.detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.detail.ready",
+      "block": "block.dispatch.detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.dreams.empty",
+      "block": "block.dispatch.dreams",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.dreams.error",
+      "block": "block.dispatch.dreams",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.dreams.loading",
+      "block": "block.dispatch.dreams",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.dreams.ready",
+      "block": "block.dispatch.dreams",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail-detail.empty",
+      "block": "block.dispatch.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail-detail.error",
+      "block": "block.dispatch.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail-detail.loading",
+      "block": "block.dispatch.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail-detail.ready",
+      "block": "block.dispatch.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail.empty",
+      "block": "block.dispatch.extensions-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail.error",
+      "block": "block.dispatch.extensions-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail.loading",
+      "block": "block.dispatch.extensions-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-detail.ready",
+      "block": "block.dispatch.extensions-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-index.empty",
+      "block": "block.dispatch.extensions-index",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-index.error",
+      "block": "block.dispatch.extensions-index",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-index.loading",
+      "block": "block.dispatch.extensions-index",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.extensions-index.ready",
+      "block": "block.dispatch.extensions-index",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.home.empty",
+      "block": "block.dispatch.home",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.home.error",
+      "block": "block.dispatch.home",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.home.loading",
+      "block": "block.dispatch.home",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.home.ready",
+      "block": "block.dispatch.home",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.identities.empty",
+      "block": "block.dispatch.identities",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.identities.error",
+      "block": "block.dispatch.identities",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.identities.loading",
+      "block": "block.dispatch.identities",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.identities.ready",
+      "block": "block.dispatch.identities",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.integrations.empty",
+      "block": "block.dispatch.integrations",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.integrations.error",
+      "block": "block.dispatch.integrations",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.integrations.loading",
+      "block": "block.dispatch.integrations",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.integrations.ready",
+      "block": "block.dispatch.integrations",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.messaging.empty",
+      "block": "block.dispatch.messaging",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.messaging.error",
+      "block": "block.dispatch.messaging",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.messaging.loading",
+      "block": "block.dispatch.messaging",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.messaging.ready",
+      "block": "block.dispatch.messaging",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.metrics.empty",
+      "block": "block.dispatch.metrics",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.metrics.error",
+      "block": "block.dispatch.metrics",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.metrics.loading",
+      "block": "block.dispatch.metrics",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.metrics.ready",
+      "block": "block.dispatch.metrics",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.new-app.empty",
+      "block": "block.dispatch.new-app",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.new-app.error",
+      "block": "block.dispatch.new-app",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.new-app.loading",
+      "block": "block.dispatch.new-app",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.new-app.ready",
+      "block": "block.dispatch.new-app",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.overview.empty",
+      "block": "block.dispatch.overview",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.overview.error",
+      "block": "block.dispatch.overview",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.overview.loading",
+      "block": "block.dispatch.overview",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.overview.ready",
+      "block": "block.dispatch.overview",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.settings.empty",
+      "block": "block.dispatch.settings",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.settings.error",
+      "block": "block.dispatch.settings",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.settings.loading",
+      "block": "block.dispatch.settings",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.settings.ready",
+      "block": "block.dispatch.settings",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.team.empty",
+      "block": "block.dispatch.team",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.team.error",
+      "block": "block.dispatch.team",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.team.loading",
+      "block": "block.dispatch.team",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.team.ready",
+      "block": "block.dispatch.team",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.thread-debug.empty",
+      "block": "block.dispatch.thread-debug",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.thread-debug.error",
+      "block": "block.dispatch.thread-debug",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.thread-debug.loading",
+      "block": "block.dispatch.thread-debug",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.thread-debug.ready",
+      "block": "block.dispatch.thread-debug",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-detail.empty",
+      "block": "block.dispatch.tools-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-detail.error",
+      "block": "block.dispatch.tools-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-detail.loading",
+      "block": "block.dispatch.tools-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-detail.ready",
+      "block": "block.dispatch.tools-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-index.empty",
+      "block": "block.dispatch.tools-index",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-index.error",
+      "block": "block.dispatch.tools-index",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-index.loading",
+      "block": "block.dispatch.tools-index",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.tools-index.ready",
+      "block": "block.dispatch.tools-index",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.vault.empty",
+      "block": "block.dispatch.vault",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.vault.error",
+      "block": "block.dispatch.vault",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.vault.loading",
+      "block": "block.dispatch.vault",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.vault.ready",
+      "block": "block.dispatch.vault",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.workspace.empty",
+      "block": "block.dispatch.workspace",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.workspace.error",
+      "block": "block.dispatch.workspace",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.workspace.loading",
+      "block": "block.dispatch.workspace",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "dispatch.block.block.dispatch.workspace.ready",
+      "block": "block.dispatch.workspace",
+      "component": "agent-panel",
+      "state": "ready"
+    }
+  ]
+}

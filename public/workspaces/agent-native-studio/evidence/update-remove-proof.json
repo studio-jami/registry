@@ -1,0 +1,12 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-update-remove.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "agent-native-studio",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "updateStatus": "up-to-date",
+  "removedItemCount": 518,
+  "removedFileCount": 1040,
+  "allRemoved": true,
+  "lockEmptyAfterRemove": true,
+  "doctorHealthyAfterRemove": true
+}

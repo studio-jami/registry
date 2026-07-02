@@ -1,0 +1,661 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/content-workspace",
+  "workspace": "content",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "media-grid",
+    "content-app",
+    "content-detail-page",
+    "content-home-page",
+    "content-extensions-detail-detail-page",
+    "content-extensions-detail-page",
+    "content-extensions-index-page",
+    "content-extensions-page",
+    "content-local-files-page",
+    "content-page-detail-page",
+    "content-page-index-page",
+    "content-page-page",
+    "content-settings-page",
+    "content-team-page",
+    "content-home-2-page",
+    "content-p-detail-page",
+    "content-detail-block",
+    "content-home-block",
+    "content-extensions-detail-detail-block",
+    "content-extensions-detail-block",
+    "content-extensions-index-block",
+    "content-extensions-block",
+    "content-local-files-block",
+    "content-page-detail-block",
+    "content-page-index-block",
+    "content-page-block",
+    "content-settings-block",
+    "content-team-block",
+    "content-home-2-block",
+    "content-p-detail-block"
+  ],
+  "installGraph": {
+    "root": "content-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "content-app",
+      "content-detail-page",
+      "content-home-page",
+      "content-extensions-detail-detail-page",
+      "content-extensions-detail-page",
+      "content-extensions-index-page",
+      "content-extensions-page",
+      "content-local-files-page",
+      "content-page-detail-page",
+      "content-page-index-page",
+      "content-page-page",
+      "content-settings-page",
+      "content-team-page",
+      "content-home-2-page",
+      "content-p-detail-page",
+      "content-detail-block",
+      "content-home-block",
+      "content-extensions-detail-detail-block",
+      "content-extensions-detail-block",
+      "content-extensions-index-block",
+      "content-extensions-block",
+      "content-local-files-block",
+      "content-page-detail-block",
+      "content-page-index-block",
+      "content-page-block",
+      "content-settings-block",
+      "content-team-block",
+      "content-home-2-block",
+      "content-p-detail-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":id",
+    "content",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "local-files",
+    "page",
+    "page",
+    "page",
+    "settings",
+    "team",
+    "content",
+    "p"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Content",
+    "summary": "Agent-Native Content Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.content.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Detail",
+          "route": "/content/:id"
+        },
+        {
+          "label": "Home",
+          "route": "/content"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/content/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/content/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/content/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/content/extensions"
+        },
+        {
+          "label": "Local Files",
+          "route": "/content/local-files"
+        },
+        {
+          "label": "Page Detail",
+          "route": "/content/page/:id"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/content/:id",
+        "page": "page.content.detail",
+        "title": "Detail",
+        "blocks": [
+          "block.content.detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/$id.tsx"
+      },
+      {
+        "path": "/content",
+        "page": "page.content.home",
+        "title": "Content Home",
+        "blocks": [
+          "block.content.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app._index.tsx"
+      },
+      {
+        "path": "/content/extensions/:id/:slug",
+        "page": "page.content.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.content.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/content/extensions/:id",
+        "page": "page.content.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.content.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "path": "/content/extensions",
+        "page": "page.content.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.content.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "path": "/content/extensions",
+        "page": "page.content.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.content.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.tsx"
+      },
+      {
+        "path": "/content/local-files",
+        "page": "page.content.local-files",
+        "title": "Local Files",
+        "blocks": [
+          "block.content.local-files"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.local-files.tsx"
+      },
+      {
+        "path": "/content/page/:id",
+        "page": "page.content.page-detail",
+        "title": "Page Detail",
+        "blocks": [
+          "block.content.page-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page.$id.tsx"
+      },
+      {
+        "path": "/content/page",
+        "page": "page.content.page-index",
+        "title": "Page Index",
+        "blocks": [
+          "block.content.page-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page._index.tsx"
+      },
+      {
+        "path": "/content/page",
+        "page": "page.content.page",
+        "title": "Page",
+        "blocks": [
+          "block.content.page"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page.tsx"
+      },
+      {
+        "path": "/content/settings",
+        "page": "page.content.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.content.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.settings.tsx"
+      },
+      {
+        "path": "/content/team",
+        "page": "page.content.team",
+        "title": "Team",
+        "blocks": [
+          "block.content.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.team.tsx"
+      },
+      {
+        "path": "/content",
+        "page": "page.content.home-2",
+        "title": "Content Home",
+        "blocks": [
+          "block.content.home-2"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.tsx"
+      },
+      {
+        "path": "/content/p/:id",
+        "page": "page.content.p-detail",
+        "title": "P Detail",
+        "blocks": [
+          "block.content.p-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/p.$id.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.content.detail",
+        "title": "Detail",
+        "description": "Agent-Native content route /:id derived from $id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/$id.tsx"
+      },
+      {
+        "id": "page.content.home",
+        "title": "Content Home",
+        "description": "Agent-Native content route / derived from _app._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app._index.tsx"
+      },
+      {
+        "id": "page.content.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native content route /extensions/:id/:slug derived from _app.extensions.$id.$slug.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.content.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native content route /extensions/:id derived from _app.extensions.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "page.content.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native content route /extensions derived from _app.extensions._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "page.content.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native content route /extensions derived from _app.extensions.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "page.content.local-files",
+        "title": "Local Files",
+        "description": "Agent-Native content route /local-files derived from _app.local-files.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.local-files.tsx"
+      },
+      {
+        "id": "page.content.page-detail",
+        "title": "Page Detail",
+        "description": "Agent-Native content route /page/:id derived from _app.page.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page.$id.tsx"
+      },
+      {
+        "id": "page.content.page-index",
+        "title": "Page Index",
+        "description": "Agent-Native content route /page derived from _app.page._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page._index.tsx"
+      },
+      {
+        "id": "page.content.page",
+        "title": "Page",
+        "description": "Agent-Native content route /page derived from _app.page.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page.tsx"
+      },
+      {
+        "id": "page.content.settings",
+        "title": "Settings",
+        "description": "Agent-Native content route /settings derived from _app.settings.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.settings.tsx"
+      },
+      {
+        "id": "page.content.team",
+        "title": "Team",
+        "description": "Agent-Native content route /team derived from _app.team.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.team.tsx"
+      },
+      {
+        "id": "page.content.home-2",
+        "title": "Content Home",
+        "description": "Agent-Native content route / derived from _app.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.tsx"
+      },
+      {
+        "id": "page.content.p-detail",
+        "title": "P Detail",
+        "description": "Agent-Native content route /p/:id derived from p.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/p.$id.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.content.detail",
+        "title": "Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/$id.tsx"
+      },
+      {
+        "id": "block.content.home",
+        "title": "Home",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app._index.tsx"
+      },
+      {
+        "id": "block.content.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.content.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "block.content.extensions-index",
+        "title": "Extensions Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "block.content.extensions",
+        "title": "Extensions",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "block.content.local-files",
+        "title": "Local Files",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.local-files.tsx"
+      },
+      {
+        "id": "block.content.page-detail",
+        "title": "Page Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page.$id.tsx"
+      },
+      {
+        "id": "block.content.page-index",
+        "title": "Page Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page._index.tsx"
+      },
+      {
+        "id": "block.content.page",
+        "title": "Page",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.page.tsx"
+      },
+      {
+        "id": "block.content.settings",
+        "title": "Settings",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.settings.tsx"
+      },
+      {
+        "id": "block.content.team",
+        "title": "Team",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.team.tsx"
+      },
+      {
+        "id": "block.content.home-2",
+        "title": "Home 2",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/_app.tsx"
+      },
+      {
+        "id": "block.content.p-detail",
+        "title": "P Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/content/app/routes/p.$id.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "media-grid",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Content keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Content in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Content agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/content",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/content/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/content/content-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/content/pages/content-detail-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-home-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-local-files-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-page-detail-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-page-index-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-page-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-settings-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-team-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-home-2-page.page.implementation.json",
+      "studio-ui/workspaces/content/pages/content-p-detail-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/content/blocks/content-detail-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-home-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-local-files-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-page-detail-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-page-index-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-page-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-settings-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-team-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-home-2-block.block.implementation.json",
+      "studio-ui/workspaces/content/blocks/content-p-detail-block.block.implementation.json"
+    ]
+  }
+}

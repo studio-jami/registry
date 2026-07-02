@@ -1,0 +1,89 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "brain",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 30,
+    "graph": [
+      "jami-theme",
+      "panel",
+      "button",
+      "docs-source-panel",
+      "brain-home-block",
+      "brain-home-page",
+      "brain-extensions-detail-detail-block",
+      "brain-extensions-detail-detail-page",
+      "brain-extensions-detail-block",
+      "brain-extensions-detail-page",
+      "brain-extensions-index-block",
+      "brain-extensions-index-page",
+      "brain-extensions-block",
+      "brain-extensions-page",
+      "brain-knowledge-block",
+      "brain-knowledge-page",
+      "brain-ops-block",
+      "brain-ops-page",
+      "brain-review-block",
+      "brain-review-page",
+      "brain-search-block",
+      "brain-search-page",
+      "brain-settings-block",
+      "brain-settings-page",
+      "brain-sources-block",
+      "brain-sources-page",
+      "brain-team-block",
+      "brain-team-page",
+      "brain-app",
+      "brain-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 72
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 30
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/brain/brain-extensions-id-slug.html",
+      "apps/workbench/dist/suites/brain/brain-extensions-id.html",
+      "apps/workbench/dist/suites/brain/brain-extensions.html",
+      "apps/workbench/dist/suites/brain/brain-extensions.html",
+      "apps/workbench/dist/suites/brain/brain-knowledge.html",
+      "apps/workbench/dist/suites/brain/brain-ops.html",
+      "apps/workbench/dist/suites/brain/brain-review.html",
+      "apps/workbench/dist/suites/brain/brain-search.html",
+      "apps/workbench/dist/suites/brain/brain-settings.html",
+      "apps/workbench/dist/suites/brain/brain-sources.html",
+      "apps/workbench/dist/suites/brain/brain-team.html",
+      "apps/workbench/dist/suites/brain/brain.html",
+      "apps/workbench/dist/suites/brain/index.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/brain/pages/brain-home-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-knowledge-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-ops-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-review-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-search-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-settings-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-sources-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-team-page.page.implementation.json"
+    ]
+  }
+}

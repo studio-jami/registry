@@ -1,0 +1,576 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "mail",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/mail/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-mail.png"
+  },
+  "routeCount": 13,
+  "blockStateCount": 69,
+  "routes": [
+    {
+      "galleryKey": "mail.route.mail",
+      "path": "/mail/:",
+      "page": "page.mail.catchall",
+      "title": "Catchall",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail.png",
+      "blocks": [
+        "block.mail.catchall"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-view-threadid",
+      "path": "/mail/:view/:threadId",
+      "page": "page.mail.detail-detail",
+      "title": "Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-view-threadid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-view-threadid.png",
+      "blocks": [
+        "block.mail.detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-view",
+      "path": "/mail/:view",
+      "page": "page.mail.detail",
+      "title": "Detail",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-view.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-view.png",
+      "blocks": [
+        "block.mail.detail"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail",
+      "path": "/mail",
+      "page": "page.mail.home",
+      "title": "Mail Home",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail.png",
+      "blocks": [
+        "block.mail.home"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-draft-queue-id",
+      "path": "/mail/draft-queue/:id",
+      "page": "page.mail.draft-queue-detail",
+      "title": "Draft Queue Detail",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-draft-queue-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-draft-queue-id.png",
+      "blocks": [
+        "block.mail.draft-queue-detail"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-draft-queue",
+      "path": "/mail/draft-queue",
+      "page": "page.mail.draft-queue",
+      "title": "Draft Queue",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-draft-queue.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-draft-queue.png",
+      "blocks": [
+        "block.mail.draft-queue"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-email",
+      "path": "/mail/email",
+      "page": "page.mail.email",
+      "title": "Email",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-email.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-email.png",
+      "blocks": [
+        "block.mail.email"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-extensions-id-slug",
+      "path": "/mail/extensions/:id/:slug",
+      "page": "page.mail.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-extensions-id-slug.png",
+      "blocks": [
+        "block.mail.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-extensions-id",
+      "path": "/mail/extensions/:id",
+      "page": "page.mail.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-extensions-id.png",
+      "blocks": [
+        "block.mail.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-extensions",
+      "path": "/mail/extensions",
+      "page": "page.mail.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-extensions.png",
+      "blocks": [
+        "block.mail.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-extensions",
+      "path": "/mail/extensions",
+      "page": "page.mail.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-extensions.png",
+      "blocks": [
+        "block.mail.extensions"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-settings",
+      "path": "/mail/settings",
+      "page": "page.mail.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-settings.png",
+      "blocks": [
+        "block.mail.settings"
+      ]
+    },
+    {
+      "galleryKey": "mail.route.mail-team",
+      "path": "/mail/team",
+      "page": "page.mail.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/mail/mail-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-mail-mail-team.png",
+      "blocks": [
+        "block.mail.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "mail.block.block.mail.catchall.empty",
+      "block": "block.mail.catchall",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.catchall.error",
+      "block": "block.mail.catchall",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.catchall.loading",
+      "block": "block.mail.catchall",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.catchall.long-content",
+      "block": "block.mail.catchall",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.catchall.ready",
+      "block": "block.mail.catchall",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail-detail.empty",
+      "block": "block.mail.detail-detail",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail-detail.error",
+      "block": "block.mail.detail-detail",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail-detail.loading",
+      "block": "block.mail.detail-detail",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail-detail.long-content",
+      "block": "block.mail.detail-detail",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail-detail.ready",
+      "block": "block.mail.detail-detail",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail.empty",
+      "block": "block.mail.detail",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail.error",
+      "block": "block.mail.detail",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail.loading",
+      "block": "block.mail.detail",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail.long-content",
+      "block": "block.mail.detail",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.detail.ready",
+      "block": "block.mail.detail",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue-detail.empty",
+      "block": "block.mail.draft-queue-detail",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue-detail.error",
+      "block": "block.mail.draft-queue-detail",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue-detail.invalid",
+      "block": "block.mail.draft-queue-detail",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue-detail.loading",
+      "block": "block.mail.draft-queue-detail",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue-detail.long-content",
+      "block": "block.mail.draft-queue-detail",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue-detail.ready",
+      "block": "block.mail.draft-queue-detail",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue.empty",
+      "block": "block.mail.draft-queue",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue.error",
+      "block": "block.mail.draft-queue",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue.invalid",
+      "block": "block.mail.draft-queue",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue.loading",
+      "block": "block.mail.draft-queue",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue.long-content",
+      "block": "block.mail.draft-queue",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.draft-queue.ready",
+      "block": "block.mail.draft-queue",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.email.empty",
+      "block": "block.mail.email",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.email.error",
+      "block": "block.mail.email",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.email.invalid",
+      "block": "block.mail.email",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.email.loading",
+      "block": "block.mail.email",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.email.long-content",
+      "block": "block.mail.email",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.email.ready",
+      "block": "block.mail.email",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail-detail.empty",
+      "block": "block.mail.extensions-detail-detail",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail-detail.error",
+      "block": "block.mail.extensions-detail-detail",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail-detail.loading",
+      "block": "block.mail.extensions-detail-detail",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail-detail.long-content",
+      "block": "block.mail.extensions-detail-detail",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail-detail.ready",
+      "block": "block.mail.extensions-detail-detail",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail.empty",
+      "block": "block.mail.extensions-detail",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail.error",
+      "block": "block.mail.extensions-detail",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail.loading",
+      "block": "block.mail.extensions-detail",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail.long-content",
+      "block": "block.mail.extensions-detail",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-detail.ready",
+      "block": "block.mail.extensions-detail",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-index.empty",
+      "block": "block.mail.extensions-index",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-index.error",
+      "block": "block.mail.extensions-index",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-index.loading",
+      "block": "block.mail.extensions-index",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-index.long-content",
+      "block": "block.mail.extensions-index",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions-index.ready",
+      "block": "block.mail.extensions-index",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions.empty",
+      "block": "block.mail.extensions",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions.error",
+      "block": "block.mail.extensions",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions.loading",
+      "block": "block.mail.extensions",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions.long-content",
+      "block": "block.mail.extensions",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.extensions.ready",
+      "block": "block.mail.extensions",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.home.empty",
+      "block": "block.mail.home",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.home.error",
+      "block": "block.mail.home",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.home.loading",
+      "block": "block.mail.home",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.home.long-content",
+      "block": "block.mail.home",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.home.ready",
+      "block": "block.mail.home",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.settings.empty",
+      "block": "block.mail.settings",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.settings.error",
+      "block": "block.mail.settings",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.settings.invalid",
+      "block": "block.mail.settings",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.settings.loading",
+      "block": "block.mail.settings",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.settings.long-content",
+      "block": "block.mail.settings",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.settings.ready",
+      "block": "block.mail.settings",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.team.empty",
+      "block": "block.mail.team",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.team.error",
+      "block": "block.mail.team",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.team.loading",
+      "block": "block.mail.team",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.team.long-content",
+      "block": "block.mail.team",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "mail.block.block.mail.team.ready",
+      "block": "block.mail.team",
+      "component": "data-list",
+      "state": "ready"
+    }
+  ]
+}

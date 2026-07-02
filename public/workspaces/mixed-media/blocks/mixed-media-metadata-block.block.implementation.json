@@ -19,10 +19,21 @@
     "title": "Asset metadata",
     "component": "data-list",
     "stateExamples": [
-      "long-content"
+      "long-content",
+      "loading"
     ]
   },
   "component": "data-list",
+  "agentManifest": {
+    "component": "data-list",
+    "manifestId": "agm_data_list",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
   "renderedStates": {
     "ready": {
       "props": {
@@ -43,6 +54,7 @@
             "state": "ready"
           }
         ],
+        "loading": false,
         "empty": false
       },
       "rendererState": "renderable",
@@ -155,6 +167,7 @@
             "state": "long-content"
           }
         ],
+        "loading": false,
         "empty": false
       },
       "rendererState": "renderable",
@@ -247,12 +260,66 @@
         "jami-data-list-table",
         "jami-data-list-title"
       ]
+    },
+    "loading": {
+      "props": {
+        "title": "Asset metadata",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [],
+        "loading": true,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Asset metadata",
+          "aria-busy": "true"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Asset metadata"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "Loading records."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-title"
+      ]
     }
   },
   "evidence": {
     "renderableStates": [
       "ready",
-      "long-content"
+      "long-content",
+      "loading"
     ],
     "failedStates": [],
     "tokenizedClasses": [

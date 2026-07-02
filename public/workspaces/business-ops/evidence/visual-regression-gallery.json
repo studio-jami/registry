@@ -1,0 +1,116 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "business-ops",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/business-ops/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-business-ops.png"
+  },
+  "routeCount": 2,
+  "blockStateCount": 12,
+  "routes": [
+    {
+      "galleryKey": "business-ops.route.business-ops-dashboard",
+      "path": "/business-ops/dashboard",
+      "page": "page.business-ops.dashboard",
+      "title": "Operations dashboard",
+      "routeArtifact": "apps/workbench/dist/suites/business-ops/business-ops-dashboard.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-business-ops-business-ops-dashboard.png",
+      "blocks": [
+        "block.business-ops.kpis",
+        "block.business-ops.exceptions",
+        "block.business-ops.agent-review"
+      ]
+    },
+    {
+      "galleryKey": "business-ops.route.business-ops-staff",
+      "path": "/business-ops/staff",
+      "page": "page.business-ops.staff",
+      "title": "Staff and training",
+      "routeArtifact": "apps/workbench/dist/suites/business-ops/business-ops-staff.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-business-ops-business-ops-staff.png",
+      "blocks": [
+        "block.business-ops.staff-table",
+        "block.business-ops.training-form"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "business-ops.block.block.business-ops.agent-review.error",
+      "block": "block.business-ops.agent-review",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.agent-review.ready",
+      "block": "block.business-ops.agent-review",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.exceptions.empty",
+      "block": "block.business-ops.exceptions",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.exceptions.error",
+      "block": "block.business-ops.exceptions",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.exceptions.ready",
+      "block": "block.business-ops.exceptions",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.kpis.loading",
+      "block": "block.business-ops.kpis",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.kpis.long-content",
+      "block": "block.business-ops.kpis",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.kpis.ready",
+      "block": "block.business-ops.kpis",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.staff-table.long-content",
+      "block": "block.business-ops.staff-table",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.staff-table.ready",
+      "block": "block.business-ops.staff-table",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.training-form.invalid",
+      "block": "block.business-ops.training-form",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "business-ops.block.block.business-ops.training-form.ready",
+      "block": "block.business-ops.training-form",
+      "component": "text-field",
+      "state": "ready"
+    }
+  ]
+}

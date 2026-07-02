@@ -1,0 +1,183 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "clips",
+  "implementationStatus": "mounted-react-workspace-page",
+  "source": "registry/workspaces/clips/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "page": {
+    "id": "page.clips.spaces-detail",
+    "title": "Spaces Detail",
+    "description": "Agent-Native clips route /spaces/:spaceId derived from _app.spaces.$spaceId.tsx.",
+    "components": [
+      "media-grid",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.tsx"
+  },
+  "routes": [
+    {
+      "path": "/clips/spaces/:spaceId",
+      "page": "page.clips.spaces-detail",
+      "title": "Spaces Detail",
+      "blocks": [
+        "block.clips.spaces-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.spaces.$spaceId.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.clips.spaces-detail",
+      "title": "Spaces Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/clips/blocks/clips-spaces-detail-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ]
+    }
+  ],
+  "components": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "media-grid",
+      "manifestId": "agm_media_grid",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedBlockCount": 1,
+    "responsiveLayout": "single-column-safe mounted React composition",
+    "a11yStructure": "page routes compose labelled resident React block implementations",
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/clips/clips-spaces-spaceid.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/clips/workspace-shell.json",
+    "copiedSource": false
+  }
+}

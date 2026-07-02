@@ -96,6 +96,206 @@
       "implementationFile": "studio-ui/workspaces/research-writing/blocks/research-writing-agent-review-block.block.implementation.json"
     }
   ],
+  "agentManifests": [
+    {
+      "component": "agent-panel",
+      "manifestId": "agm_agent_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_agent_panel_review",
+          "name": "review",
+          "label": "Review agent recommendation",
+          "harnessRoute": "harness://actions/agent-panel-review",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "recommendationId",
+              "decision"
+            ],
+            "properties": {
+              "recommendationId": {
+                "type": "string"
+              },
+              "decision": {
+                "type": "string",
+                "enum": [
+                  "approve",
+                  "deny"
+                ]
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "data-list",
+      "manifestId": "agm_data_list",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "docs-source-panel",
+      "manifestId": "agm_docs_source_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "text-field",
+      "manifestId": "agm_text_field",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
   "evidence": {
     "renderedPageCount": 2,
     "renderedBlockCount": 4,

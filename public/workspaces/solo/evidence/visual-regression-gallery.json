@@ -1,0 +1,110 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "solo",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/solo/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-solo.png"
+  },
+  "routeCount": 2,
+  "blockStateCount": 11,
+  "routes": [
+    {
+      "galleryKey": "solo.route.solo-today",
+      "path": "/solo/today",
+      "page": "page.solo.today",
+      "title": "Today command center",
+      "routeArtifact": "apps/workbench/dist/suites/solo/solo-today.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-solo-solo-today.png",
+      "blocks": [
+        "block.solo.agenda",
+        "block.solo.task-queue",
+        "block.solo.agent-status"
+      ]
+    },
+    {
+      "galleryKey": "solo.route.solo-docs",
+      "path": "/solo/docs",
+      "page": "page.solo.docs",
+      "title": "Docs and sources",
+      "routeArtifact": "apps/workbench/dist/suites/solo/solo-docs.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-solo-solo-docs.png",
+      "blocks": [
+        "block.solo.docs-sources",
+        "block.solo.forms"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "solo.block.block.solo.agenda.long-content",
+      "block": "block.solo.agenda",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.agenda.ready",
+      "block": "block.solo.agenda",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.agent-status.error",
+      "block": "block.solo.agent-status",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.agent-status.ready",
+      "block": "block.solo.agent-status",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.docs-sources.long-content",
+      "block": "block.solo.docs-sources",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.docs-sources.ready",
+      "block": "block.solo.docs-sources",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.forms.invalid",
+      "block": "block.solo.forms",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.forms.ready",
+      "block": "block.solo.forms",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.task-queue.empty",
+      "block": "block.solo.task-queue",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.task-queue.loading",
+      "block": "block.solo.task-queue",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "solo.block.block.solo.task-queue.ready",
+      "block": "block.solo.task-queue",
+      "component": "data-list",
+      "state": "ready"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "slides",
+  "page": {
+    "id": "page.slides.share-detail",
+    "title": "Share Detail",
+    "description": "Agent-Native slides route /share/:token derived from share.$token.tsx.",
+    "components": [
+      "media-grid",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/slides/app/routes/share.$token.tsx"
+  },
+  "routes": [
+    {
+      "path": "/slides/share/:token",
+      "page": "page.slides.share-detail",
+      "title": "Share Detail",
+      "blocks": [
+        "block.slides.share-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/slides/app/routes/share.$token.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.slides.share-detail",
+      "title": "Share Detail",
+      "component": "media-grid",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/slides/app/routes/share.$token.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Slides keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Slides in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Slides agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/slides/workspace-shell.json",
+    "copiedSource": false
+  }
+}

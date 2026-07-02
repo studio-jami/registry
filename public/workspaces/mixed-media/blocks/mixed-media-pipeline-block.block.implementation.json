@@ -23,6 +23,16 @@
     ]
   },
   "component": "data-list",
+  "agentManifest": {
+    "component": "data-list",
+    "manifestId": "agm_data_list",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
   "renderedStates": {
     "ready": {
       "props": {
@@ -43,6 +53,7 @@
             "state": "ready"
           }
         ],
+        "loading": false,
         "empty": false
       },
       "rendererState": "renderable",
@@ -150,6 +161,7 @@
           }
         ],
         "rows": [],
+        "loading": false,
         "empty": false,
         "error": "Pipeline errors render as status panels without invoking provider or harness actions."
       },

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "calendar",
+  "page": {
+    "id": "page.calendar.settings",
+    "title": "Settings",
+    "description": "Agent-Native calendar route /settings derived from _app.settings.tsx.",
+    "components": [
+      "calendar",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+  },
+  "routes": [
+    {
+      "path": "/calendar/settings",
+      "page": "page.calendar.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.calendar.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.calendar.settings",
+      "title": "Settings",
+      "component": "calendar",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "calendar",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Calendar keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Calendar in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Calendar agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/calendar/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-migration-path.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "chat",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "contract": "CLI `migrate` advances an installed part when the registry itemSchemaVersion moves; `update` advances version/sourceHash; `rollback` restores locked content. Every part below carries the schemaVersion it migrates to and its lifecycle version.",
+  "schemaVersionLadder": [
+    "2026-06-09.registry-foundation",
+    "2026-06-29.agent-native-template-workspace"
+  ],
+  "itemVersionLadder": [
+    "0.0.0-agent-native.20260629",
+    "0.0.0-contract.20260609"
+  ],
+  "parts": [
+    {
+      "name": "button",
+      "kind": "primitive",
+      "id": "primitive.button",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "panel",
+      "kind": "primitive",
+      "id": "primitive.panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "agent-panel",
+      "kind": "component",
+      "id": "component.agent-panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
+    },
+    {
+      "name": "chat-chat-detail-block",
+      "kind": "block",
+      "id": "block.chat.chat-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-database-block",
+      "kind": "block",
+      "id": "block.chat.database",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-block",
+      "kind": "block",
+      "id": "block.chat.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-detail-block",
+      "kind": "block",
+      "id": "block.chat.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-detail-detail-block",
+      "kind": "block",
+      "id": "block.chat.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-index-block",
+      "kind": "block",
+      "id": "block.chat.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-home-block",
+      "kind": "block",
+      "id": "block.chat.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-observability-block",
+      "kind": "block",
+      "id": "block.chat.observability",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-settings-block",
+      "kind": "block",
+      "id": "block.chat.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-team-block",
+      "kind": "block",
+      "id": "block.chat.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-chat-detail-page",
+      "kind": "page",
+      "id": "page.chat.chat-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-database-page",
+      "kind": "page",
+      "id": "page.chat.database",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-detail-detail-page",
+      "kind": "page",
+      "id": "page.chat.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-detail-page",
+      "kind": "page",
+      "id": "page.chat.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-index-page",
+      "kind": "page",
+      "id": "page.chat.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-extensions-page",
+      "kind": "page",
+      "id": "page.chat.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-home-page",
+      "kind": "page",
+      "id": "page.chat.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-observability-page",
+      "kind": "page",
+      "id": "page.chat.observability",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-settings-page",
+      "kind": "page",
+      "id": "page.chat.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-team-page",
+      "kind": "page",
+      "id": "page.chat.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "chat-app",
+      "kind": "app",
+      "id": "app.chat",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated workspace app implementation evidence from the authored workspace shell and mounted React workspace source; hosted runtime remains pending."
+    },
+    {
+      "name": "chat-workspace",
+      "kind": null,
+      "id": "workspace.chat",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Agent-Native Chat template imported from yrka-io/agent-native as a complete Studio UI workspace shell over all discovered route files; execution remains display-only behind Jami Harness contracts."
+    },
+    {
+      "name": "jami-theme",
+      "kind": null,
+      "id": "theme.jami-factory",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial theme item. Files are the generated token outputs; regenerate with pnpm contracts:generate when the token source changes."
+    }
+  ]
+}

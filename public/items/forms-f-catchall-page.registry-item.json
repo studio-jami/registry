@@ -1,0 +1,54 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "forms-f-catchall-page",
+  "type": "registry:page",
+  "title": "F Catchall",
+  "description": "Agent-Native forms route /f/: derived from f.$.tsx.",
+  "dependencies": [],
+  "registryDependencies": [
+    "forms-f-catchall-block",
+    "text-field",
+    "panel",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "packages/registry/generated/workspaces/forms/pages/forms-f-catchall-page.page.json",
+      "target": "studio-ui/workspaces/forms/pages/forms-f-catchall-page.page.json",
+      "type": "registry:page",
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/workspace-page.generated.json\",\n  \"schemaVersion\": \"2026-06-29.agent-native-template-workspace\",\n  \"workspace\": \"forms\",\n  \"page\": {\n    \"id\": \"page.forms.f-catchall\",\n    \"title\": \"F Catchall\",\n    \"description\": \"Agent-Native forms route /f/: derived from f.$.tsx.\",\n    \"components\": [\n      \"text-field\",\n      \"panel\",\n      \"button\"\n    ],\n    \"sourceRouteFile\": \"agent-native/templates/forms/app/routes/f.$.tsx\"\n  },\n  \"routes\": [\n    {\n      \"path\": \"/forms/f/:\",\n      \"page\": \"page.forms.f-catchall\",\n      \"title\": \"F Catchall\",\n      \"blocks\": [\n        \"block.forms.f-catchall\"\n      ],\n      \"sourceRouteFile\": \"agent-native/templates/forms/app/routes/f.$.tsx\"\n    }\n  ],\n  \"blocks\": [\n    {\n      \"id\": \"block.forms.f-catchall\",\n      \"title\": \"F Catchall\",\n      \"component\": \"text-field\",\n      \"stateExamples\": [\n        \"loading\",\n        \"empty\",\n        \"invalid\",\n        \"error\",\n        \"long-content\"\n      ],\n      \"sourceRouteFile\": \"agent-native/templates/forms/app/routes/f.$.tsx\"\n    }\n  ],\n  \"components\": [\n    \"button\",\n    \"panel\",\n    \"text-field\"\n  ],\n  \"stateFixtures\": {\n    \"longContent\": \"Agent-Native Forms keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.\",\n    \"empty\": \"No records are loaded for Agent-Native Forms in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.\",\n    \"error\": \"Agent-Native Forms agent or action state is display-only until Jami Harness owns the runtime execution path.\"\n  },\n  \"provenance\": {\n    \"source\": \"registry/workspaces/forms/workspace-shell.json\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:7e718818c42ade86c822f7f21d7e80b535223b25ae1121d61fcc92e06a656bec"
+    },
+    {
+      "path": "packages/registry/generated/workspaces/forms/pages/forms-f-catchall-page.page.implementation.json",
+      "target": "studio-ui/workspaces/forms/pages/forms-f-catchall-page.page.implementation.json",
+      "type": "registry:page",
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/workspace-page-implementation.generated.json\",\n  \"schemaVersion\": \"2026-06-29.agent-native-template-workspace\",\n  \"workspace\": \"forms\",\n  \"implementationStatus\": \"mounted-react-workspace-page\",\n  \"source\": \"registry/workspaces/forms/workspace-shell.json\",\n  \"primitiveFactory\": {\n    \"version\": \"2026-06-09.framework-neutral-component-factory\",\n    \"source\": \"packages/ui/src/primitive-components.mjs\",\n    \"implementationStatus\": \"framework-neutral-component-factory\",\n    \"runtimeReactRenderer\": false,\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"radixWrapper\": false\n  },\n  \"page\": {\n    \"id\": \"page.forms.f-catchall\",\n    \"title\": \"F Catchall\",\n    \"description\": \"Agent-Native forms route /f/: derived from f.$.tsx.\",\n    \"components\": [\n      \"text-field\",\n      \"panel\",\n      \"button\"\n    ],\n    \"sourceRouteFile\": \"agent-native/templates/forms/app/routes/f.$.tsx\"\n  },\n  \"routes\": [\n    {\n      \"path\": \"/forms/f/:\",\n      \"page\": \"page.forms.f-catchall\",\n      \"title\": \"F Catchall\",\n      \"blocks\": [\n        \"block.forms.f-catchall\"\n      ],\n      \"sourceRouteFile\": \"agent-native/templates/forms/app/routes/f.$.tsx\"\n    }\n  ],\n  \"blocks\": [\n    {\n      \"id\": \"block.forms.f-catchall\",\n      \"title\": \"F Catchall\",\n      \"component\": \"text-field\",\n      \"implementationFile\": \"studio-ui/workspaces/forms/blocks/forms-f-catchall-block.block.implementation.json\",\n      \"renderedStates\": [\n        \"ready\",\n        \"loading\",\n        \"empty\",\n        \"invalid\",\n        \"error\",\n        \"long-content\"\n      ]\n    }\n  ],\n  \"components\": [\n    \"button\",\n    \"panel\",\n    \"text-field\"\n  ],\n  \"agentManifests\": [\n    {\n      \"component\": \"button\",\n      \"manifestId\": \"agm_button\",\n      \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n      \"schemaVersion\": \"2026-06-23.agent-manifest\",\n      \"propContractVersion\": \"2026-06-09.ui-props\",\n      \"actionSlots\": [\n        {\n          \"slotId\": \"slot_button_on_press\",\n          \"name\": \"onPress\",\n          \"label\": \"Invoke button action\",\n          \"harnessRoute\": \"harness://actions/button-on-press\",\n          \"risk\": \"write\",\n          \"policyScope\": \"data:write\",\n          \"confirmationMode\": \"approval_required\",\n          \"inputSchema\": {\n            \"type\": \"object\",\n            \"additionalProperties\": false,\n            \"required\": [],\n            \"properties\": {\n              \"reason\": {\n                \"type\": \"string\"\n              }\n            }\n          },\n          \"outputSchema\": {\n            \"type\": \"object\",\n            \"additionalProperties\": false,\n            \"required\": [\n              \"status\",\n              \"actionId\",\n              \"policyDecision\"\n            ],\n            \"properties\": {\n              \"status\": {\n                \"type\": \"string\",\n                \"enum\": [\n                  \"accepted\",\n                  \"denied\"\n                ]\n              },\n              \"actionId\": {\n                \"type\": \"string\",\n                \"pattern\": \"^act_[a-z0-9][a-z0-9_-]*$\"\n              },\n              \"policyDecision\": {\n                \"type\": \"string\",\n                \"enum\": [\n                  \"allow\",\n                  \"deny\",\n                  \"needs_approval\",\n                  \"needs_owner\"\n                ]\n              },\n              \"evidenceRef\": {\n                \"type\": \"string\",\n                \"pattern\": \"^ev_[a-z0-9][a-z0-9_-]*$\"\n              }\n            }\n          },\n          \"safetyConstraints\": [\n            \"policy-required\",\n            \"audit-required\",\n            \"evidence-required\",\n            \"no-inline-secret-values\",\n            \"no-model-provided-code\",\n            \"schema-validated-input\",\n            \"schema-validated-output\"\n          ]\n        }\n      ],\n      \"bindingMode\": \"resident-component\",\n      \"execution\": \"display-only-data-never-code\"\n    },\n    {\n      \"component\": \"panel\",\n      \"manifestId\": \"agm_panel\",\n      \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n      \"schemaVersion\": \"2026-06-23.agent-manifest\",\n      \"propContractVersion\": \"2026-06-09.ui-props\",\n      \"actionSlots\": [],\n      \"bindingMode\": \"resident-component\",\n      \"execution\": \"display-only-data-never-code\"\n    },\n    {\n      \"component\": \"text-field\",\n      \"manifestId\": \"agm_text_field\",\n      \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n      \"schemaVersion\": \"2026-06-23.agent-manifest\",\n      \"propContractVersion\": \"2026-06-09.ui-props\",\n      \"actionSlots\": [],\n      \"bindingMode\": \"resident-component\",\n      \"execution\": \"display-only-data-never-code\"\n    }\n  ],\n  \"evidence\": {\n    \"renderedBlockCount\": 1,\n    \"responsiveLayout\": \"single-column-safe mounted React composition\",\n    \"a11yStructure\": \"page routes compose labelled resident React block implementations\",\n    \"displayOnly\": true\n  },\n  \"runtime\": {\n    \"runtimeReactRenderer\": true,\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"radixWrapper\": true\n  },\n  \"reactMount\": {\n    \"schemaVersion\": \"2026-06-12.mounted-react-workspace-routes\",\n    \"source\": \"packages/ui/src/workspaces.mjs\",\n    \"packageName\": \"@jami-studio/ui\",\n    \"rendererBoundary\": \"React workspace components are install-time/app code, not harness-originated renderer payload execution.\",\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"serverRenderedStaticRoutes\": true,\n    \"routeArtifact\": \"apps/workbench/dist/suites/forms/forms-f.html\"\n  },\n  \"provenance\": {\n    \"source\": \"registry/workspaces/forms/workspace-shell.json\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:9a2f517cb163d375cc3798b690bb368b1214c0f92e17ecd2e00531575b3e85da"
+    }
+  ],
+  "meta": {
+    "packageName": "@jami-studio/forms-f-catchall-page",
+    "workspace": "forms",
+    "lifecycle": {
+      "id": "page.forms.f-catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "sourceHash": "sha256:d0802aaa5b46058a97cb133c816c024d390e420d98e14a8bb4e6c2b14e4e656c",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    "tokenRequirements": [],
+    "provenance": {
+      "source": "registry/workspaces/forms/workspace-shell.json",
+      "license": "Apache-2.0",
+      "reviewedAt": "2026-06-09",
+      "copiedSource": false
+    },
+    "compatibility": {
+      "shadcn": "Studio UI registry metadata generated from Agent-Native template route inventory; source app remains upstream-owned until forked into Jami packages.",
+      "tailwind": "Consumes generated --jami-* CSS variables in the Studio UI workbench port.",
+      "react": "19.2.7"
+    },
+    "agentManifest": null
+  }
+}

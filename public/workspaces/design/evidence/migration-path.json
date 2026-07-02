@@ -1,0 +1,305 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-migration-path.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "design",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "contract": "CLI `migrate` advances an installed part when the registry itemSchemaVersion moves; `update` advances version/sourceHash; `rollback` restores locked content. Every part below carries the schemaVersion it migrates to and its lifecycle version.",
+  "schemaVersionLadder": [
+    "2026-06-09.registry-foundation",
+    "2026-06-29.agent-native-template-workspace"
+  ],
+  "itemVersionLadder": [
+    "0.0.0-agent-native.20260629",
+    "0.0.0-contract.20260609"
+  ],
+  "parts": [
+    {
+      "name": "button",
+      "kind": "primitive",
+      "id": "primitive.button",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "panel",
+      "kind": "primitive",
+      "id": "primitive.panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "media-grid",
+      "kind": "component",
+      "id": "component.media-grid",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
+    },
+    {
+      "name": "design-catchall-block",
+      "kind": "block",
+      "id": "block.design.catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-design-detail-block",
+      "kind": "block",
+      "id": "block.design.design-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-design-systems-block",
+      "kind": "block",
+      "id": "block.design.design-systems",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-design-systems-setup-block",
+      "kind": "block",
+      "id": "block.design.design-systems-setup",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-examples-block",
+      "kind": "block",
+      "id": "block.design.examples",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-block",
+      "kind": "block",
+      "id": "block.design.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-detail-block",
+      "kind": "block",
+      "id": "block.design.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-detail-detail-block",
+      "kind": "block",
+      "id": "block.design.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-index-block",
+      "kind": "block",
+      "id": "block.design.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-home-block",
+      "kind": "block",
+      "id": "block.design.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-observability-block",
+      "kind": "block",
+      "id": "block.design.observability",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-present-detail-block",
+      "kind": "block",
+      "id": "block.design.present-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-settings-block",
+      "kind": "block",
+      "id": "block.design.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-team-block",
+      "kind": "block",
+      "id": "block.design.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-templates-block",
+      "kind": "block",
+      "id": "block.design.templates",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-catchall-page",
+      "kind": "page",
+      "id": "page.design.catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-design-detail-page",
+      "kind": "page",
+      "id": "page.design.design-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-design-systems-page",
+      "kind": "page",
+      "id": "page.design.design-systems",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-design-systems-setup-page",
+      "kind": "page",
+      "id": "page.design.design-systems-setup",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-examples-page",
+      "kind": "page",
+      "id": "page.design.examples",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-detail-detail-page",
+      "kind": "page",
+      "id": "page.design.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-detail-page",
+      "kind": "page",
+      "id": "page.design.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-index-page",
+      "kind": "page",
+      "id": "page.design.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-extensions-page",
+      "kind": "page",
+      "id": "page.design.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-home-page",
+      "kind": "page",
+      "id": "page.design.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-observability-page",
+      "kind": "page",
+      "id": "page.design.observability",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-present-detail-page",
+      "kind": "page",
+      "id": "page.design.present-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-settings-page",
+      "kind": "page",
+      "id": "page.design.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-team-page",
+      "kind": "page",
+      "id": "page.design.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-templates-page",
+      "kind": "page",
+      "id": "page.design.templates",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "design-app",
+      "kind": "app",
+      "id": "app.design",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated workspace app implementation evidence from the authored workspace shell and mounted React workspace source; hosted runtime remains pending."
+    },
+    {
+      "name": "design-workspace",
+      "kind": null,
+      "id": "workspace.design",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Agent-Native Design template imported from yrka-io/agent-native as a complete Studio UI workspace shell over all discovered route files; execution remains display-only behind Jami Harness contracts."
+    },
+    {
+      "name": "jami-theme",
+      "kind": null,
+      "id": "theme.jami-factory",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial theme item. Files are the generated token outputs; regenerate with pnpm contracts:generate when the token source changes."
+    }
+  ]
+}

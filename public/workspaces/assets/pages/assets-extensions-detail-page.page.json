@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "assets",
+  "page": {
+    "id": "page.assets.extensions-detail",
+    "title": "Extensions Detail",
+    "description": "Agent-Native assets route /extensions/:id derived from extensions.$id.tsx.",
+    "components": [
+      "media-grid",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+  },
+  "routes": [
+    {
+      "path": "/assets/extensions/:id",
+      "page": "page.assets.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.assets.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.assets.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "media-grid",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Assets keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Assets in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Assets agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/assets/workspace-shell.json",
+    "copiedSource": false
+  }
+}

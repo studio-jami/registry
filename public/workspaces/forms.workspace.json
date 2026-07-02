@@ -1,0 +1,720 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/forms-workspace",
+  "workspace": "forms",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "agent-panel",
+    "text-field",
+    "chart",
+    "docs-source-panel",
+    "forms-app",
+    "forms-ask-page",
+    "forms-extensions-detail-detail-page",
+    "forms-extensions-detail-page",
+    "forms-extensions-index-page",
+    "forms-extensions-page",
+    "forms-forms-detail-page",
+    "forms-forms-detail-responses-page",
+    "forms-forms-index-page",
+    "forms-response-insights-page",
+    "forms-settings-page",
+    "forms-team-page",
+    "forms-home-page",
+    "forms-home-2-page",
+    "forms-f-catchall-page",
+    "forms-form-preview-page",
+    "forms-ask-block",
+    "forms-extensions-detail-detail-block",
+    "forms-extensions-detail-block",
+    "forms-extensions-index-block",
+    "forms-extensions-block",
+    "forms-forms-detail-block",
+    "forms-forms-detail-responses-block",
+    "forms-forms-index-block",
+    "forms-response-insights-block",
+    "forms-settings-block",
+    "forms-team-block",
+    "forms-home-block",
+    "forms-home-2-block",
+    "forms-f-catchall-block",
+    "forms-form-preview-block"
+  ],
+  "installGraph": {
+    "root": "forms-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "agent-panel",
+      "text-field",
+      "chart",
+      "docs-source-panel",
+      "forms-app",
+      "forms-ask-page",
+      "forms-extensions-detail-detail-page",
+      "forms-extensions-detail-page",
+      "forms-extensions-index-page",
+      "forms-extensions-page",
+      "forms-forms-detail-page",
+      "forms-forms-detail-responses-page",
+      "forms-forms-index-page",
+      "forms-response-insights-page",
+      "forms-settings-page",
+      "forms-team-page",
+      "forms-home-page",
+      "forms-home-2-page",
+      "forms-f-catchall-page",
+      "forms-form-preview-page",
+      "forms-ask-block",
+      "forms-extensions-detail-detail-block",
+      "forms-extensions-detail-block",
+      "forms-extensions-index-block",
+      "forms-extensions-block",
+      "forms-forms-detail-block",
+      "forms-forms-detail-responses-block",
+      "forms-forms-index-block",
+      "forms-response-insights-block",
+      "forms-settings-block",
+      "forms-team-block",
+      "forms-home-block",
+      "forms-home-2-block",
+      "forms-f-catchall-block",
+      "forms-form-preview-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "ask",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "forms",
+    "forms",
+    "forms",
+    "response-insights",
+    "settings",
+    "team",
+    "forms",
+    "forms",
+    "f",
+    "form-preview"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Forms",
+    "summary": "Agent-Native Forms Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.forms.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Ask",
+          "route": "/forms/ask"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/forms/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/forms/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/forms/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/forms/extensions"
+        },
+        {
+          "label": "Forms Detail",
+          "route": "/forms/forms/:id"
+        },
+        {
+          "label": "Forms Detail Responses",
+          "route": "/forms/forms/:id/responses"
+        },
+        {
+          "label": "Forms Index",
+          "route": "/forms/forms"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/forms/ask",
+        "page": "page.forms.ask",
+        "title": "Ask",
+        "blocks": [
+          "block.forms.ask"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.ask.tsx"
+      },
+      {
+        "path": "/forms/extensions/:id/:slug",
+        "page": "page.forms.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.forms.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/forms/extensions/:id",
+        "page": "page.forms.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.forms.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "path": "/forms/extensions",
+        "page": "page.forms.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.forms.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "path": "/forms/extensions",
+        "page": "page.forms.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.forms.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.tsx"
+      },
+      {
+        "path": "/forms/forms/:id",
+        "page": "page.forms.forms-detail",
+        "title": "Forms Detail",
+        "blocks": [
+          "block.forms.forms-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms.$id.tsx"
+      },
+      {
+        "path": "/forms/forms/:id/responses",
+        "page": "page.forms.forms-detail-responses",
+        "title": "Forms Detail Responses",
+        "blocks": [
+          "block.forms.forms-detail-responses"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms.$id_.responses.tsx"
+      },
+      {
+        "path": "/forms/forms",
+        "page": "page.forms.forms-index",
+        "title": "Forms Index",
+        "blocks": [
+          "block.forms.forms-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms._index.tsx"
+      },
+      {
+        "path": "/forms/response-insights",
+        "page": "page.forms.response-insights",
+        "title": "Response Insights",
+        "blocks": [
+          "block.forms.response-insights"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.response-insights.tsx"
+      },
+      {
+        "path": "/forms/settings",
+        "page": "page.forms.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.forms.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.settings.tsx"
+      },
+      {
+        "path": "/forms/team",
+        "page": "page.forms.team",
+        "title": "Team",
+        "blocks": [
+          "block.forms.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.team.tsx"
+      },
+      {
+        "path": "/forms",
+        "page": "page.forms.home",
+        "title": "Forms Home",
+        "blocks": [
+          "block.forms.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.tsx"
+      },
+      {
+        "path": "/forms",
+        "page": "page.forms.home-2",
+        "title": "Forms Home",
+        "blocks": [
+          "block.forms.home-2"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_index.tsx"
+      },
+      {
+        "path": "/forms/f/:",
+        "page": "page.forms.f-catchall",
+        "title": "F Catchall",
+        "blocks": [
+          "block.forms.f-catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/f.$.tsx"
+      },
+      {
+        "path": "/forms/form-preview",
+        "page": "page.forms.form-preview",
+        "title": "Form Preview",
+        "blocks": [
+          "block.forms.form-preview"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/form-preview.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.forms.ask",
+        "title": "Ask",
+        "description": "Agent-Native forms route /ask derived from _app.ask.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.ask.tsx"
+      },
+      {
+        "id": "page.forms.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native forms route /extensions/:id/:slug derived from _app.extensions.$id.$slug.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.forms.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native forms route /extensions/:id derived from _app.extensions.$id.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "page.forms.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native forms route /extensions derived from _app.extensions._index.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "page.forms.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native forms route /extensions derived from _app.extensions.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "page.forms.forms-detail",
+        "title": "Forms Detail",
+        "description": "Agent-Native forms route /forms/:id derived from _app.forms.$id.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms.$id.tsx"
+      },
+      {
+        "id": "page.forms.forms-detail-responses",
+        "title": "Forms Detail Responses",
+        "description": "Agent-Native forms route /forms/:id/responses derived from _app.forms.$id_.responses.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms.$id_.responses.tsx"
+      },
+      {
+        "id": "page.forms.forms-index",
+        "title": "Forms Index",
+        "description": "Agent-Native forms route /forms derived from _app.forms._index.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms._index.tsx"
+      },
+      {
+        "id": "page.forms.response-insights",
+        "title": "Response Insights",
+        "description": "Agent-Native forms route /response-insights derived from _app.response-insights.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.response-insights.tsx"
+      },
+      {
+        "id": "page.forms.settings",
+        "title": "Settings",
+        "description": "Agent-Native forms route /settings derived from _app.settings.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.settings.tsx"
+      },
+      {
+        "id": "page.forms.team",
+        "title": "Team",
+        "description": "Agent-Native forms route /team derived from _app.team.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.team.tsx"
+      },
+      {
+        "id": "page.forms.home",
+        "title": "Forms Home",
+        "description": "Agent-Native forms route / derived from _app.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.tsx"
+      },
+      {
+        "id": "page.forms.home-2",
+        "title": "Forms Home",
+        "description": "Agent-Native forms route / derived from _index.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.forms.f-catchall",
+        "title": "F Catchall",
+        "description": "Agent-Native forms route /f/: derived from f.$.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/f.$.tsx"
+      },
+      {
+        "id": "page.forms.form-preview",
+        "title": "Form Preview",
+        "description": "Agent-Native forms route /form-preview derived from form-preview.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/form-preview.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.forms.ask",
+        "title": "Ask",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.ask.tsx"
+      },
+      {
+        "id": "block.forms.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.forms.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "block.forms.extensions-index",
+        "title": "Extensions Index",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "block.forms.extensions",
+        "title": "Extensions",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "block.forms.forms-detail",
+        "title": "Forms Detail",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms.$id.tsx"
+      },
+      {
+        "id": "block.forms.forms-detail-responses",
+        "title": "Forms Detail Responses",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms.$id_.responses.tsx"
+      },
+      {
+        "id": "block.forms.forms-index",
+        "title": "Forms Index",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.forms._index.tsx"
+      },
+      {
+        "id": "block.forms.response-insights",
+        "title": "Response Insights",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.response-insights.tsx"
+      },
+      {
+        "id": "block.forms.settings",
+        "title": "Settings",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.settings.tsx"
+      },
+      {
+        "id": "block.forms.team",
+        "title": "Team",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.team.tsx"
+      },
+      {
+        "id": "block.forms.home",
+        "title": "Home",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.tsx"
+      },
+      {
+        "id": "block.forms.home-2",
+        "title": "Home 2",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.forms.f-catchall",
+        "title": "F Catchall",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/f.$.tsx"
+      },
+      {
+        "id": "block.forms.form-preview",
+        "title": "Form Preview",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/forms/app/routes/form-preview.tsx"
+      }
+    ],
+    "componentParts": [
+      "agent-panel",
+      "button",
+      "chart",
+      "docs-source-panel",
+      "panel",
+      "text-field"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Forms keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Forms in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Forms agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/forms",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/forms/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/forms/forms-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/forms/pages/forms-ask-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-forms-detail-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-forms-detail-responses-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-forms-index-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-response-insights-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-settings-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-team-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-home-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-home-2-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-f-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/forms/pages/forms-form-preview-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/forms/blocks/forms-ask-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-forms-detail-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-forms-detail-responses-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-forms-index-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-response-insights-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-settings-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-team-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-home-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-home-2-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-f-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/forms/blocks/forms-form-preview-block.block.implementation.json"
+    ]
+  }
+}

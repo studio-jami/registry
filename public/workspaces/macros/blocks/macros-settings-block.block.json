@@ -1,0 +1,39 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "macros",
+  "block": {
+    "id": "block.macros.settings",
+    "title": "Settings",
+    "component": "agent-panel",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error"
+    ],
+    "sourceRouteFile": "agent-native/templates/macros/app/routes/settings.tsx"
+  },
+  "routes": [
+    {
+      "path": "/macros/settings",
+      "page": "page.macros.settings",
+      "title": "Settings"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.macros.settings",
+      "title": "Settings"
+    }
+  ],
+  "component": "agent-panel",
+  "stateFixtures": {
+    "loading": "Settings includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Macros in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Macros agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/macros/workspace-shell.json",
+    "copiedSource": false
+  }
+}

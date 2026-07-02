@@ -1,0 +1,183 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-provenance.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "mixed-media",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "source": {
+    "path": "registry/workspaces/mixed-media/workspace-shell.json",
+    "sha256": "sha256:3e6699d8b9ecbb74e57095de96b0d320a7513c16503dbdc7fd9e0d4654c1956d"
+  },
+  "firstParty": true,
+  "copiedSourceParts": [],
+  "partCount": 14,
+  "parts": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "kind": "primitive",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:e9755cc2733c56392c8830603c4b6d8c3e546907820bd9992adec09d87120ea6"
+    },
+    {
+      "name": "panel",
+      "type": "registry:ui",
+      "kind": "primitive",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:f7ec248324dbfbf4093de924c91d9f3396672e8f82349b450fdc82a61f3279a3"
+    },
+    {
+      "name": "agent-panel",
+      "type": "registry:component",
+      "kind": "component",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:f011b3f916d4d4897f88a2b702bb28e38083a1018be87c7b51a24d43e247a50c"
+    },
+    {
+      "name": "data-list",
+      "type": "registry:component",
+      "kind": "component",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:43bacc3db4a2b0212ac3e62df8a15ae5f521354523a2cca6c24050188eed5ee1"
+    },
+    {
+      "name": "media-grid",
+      "type": "registry:component",
+      "kind": "component",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:3d5bac9ad0431f0c994cf6460144413e079acbdcc268b5e4c4fe4227df413612"
+    },
+    {
+      "name": "mixed-media-assets-block",
+      "type": "registry:block",
+      "kind": "block",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:b84d3b22ff8708b9b191456738c9ab404d0c0309890a8c262edc205af125b013"
+    },
+    {
+      "name": "mixed-media-metadata-block",
+      "type": "registry:block",
+      "kind": "block",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:e27b91b5aa9a1291fac6927c40144d914e05aff281df7ddaa643b8021bdef42b"
+    },
+    {
+      "name": "mixed-media-pipeline-block",
+      "type": "registry:block",
+      "kind": "block",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:ddf279c6d0d4ac6491d7ec72b63dc4d96528ba9216ab962a87e642e9a53c9344"
+    },
+    {
+      "name": "mixed-media-review-agent-block",
+      "type": "registry:block",
+      "kind": "block",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:ee53ed39a25b6eb93b58815dc43b7fe6e76f0cacce19e34346a6e71359177096"
+    },
+    {
+      "name": "mixed-media-library-page",
+      "type": "registry:page",
+      "kind": "page",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:635fcf9b019caaf73cffe8c0d9280355d29004a4f3151be4171fe9fa6103249a"
+    },
+    {
+      "name": "mixed-media-pipeline-page",
+      "type": "registry:page",
+      "kind": "page",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:fabdb9b48f7713b07eb8043e6bff62c1ef1c6ea735504332ca0611f7dee33c67"
+    },
+    {
+      "name": "mixed-media-app",
+      "type": "registry:app",
+      "kind": "app",
+      "bucket": "part",
+      "license": "Apache-2.0",
+      "provenanceSource": "registry/workspaces/mixed-media/workspace-shell.json",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:5155dde88b43bc100b3d0793da8b4cf0ddc3062b42b3171e9313bd0c0b98aeca"
+    },
+    {
+      "name": "jami-theme",
+      "type": "registry:theme",
+      "kind": null,
+      "bucket": "dependency",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:ce17186671926828c8d1603c73e8852ab7837a3e3f9d001d6bebc102f4ceda1e"
+    },
+    {
+      "name": "mixed-media-workspace",
+      "type": "registry:workspace",
+      "kind": null,
+      "bucket": "pack",
+      "license": "Apache-2.0",
+      "provenanceSource": "authored",
+      "copiedSource": false,
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "sourceHash": "sha256:446f072f85886cbfc28af9f9a86abc2c99fa0ebc8ff4fa55dd88a96ed64994a7"
+    }
+  ]
+}

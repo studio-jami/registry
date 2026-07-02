@@ -1,0 +1,330 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-migration-path.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "forms",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "contract": "CLI `migrate` advances an installed part when the registry itemSchemaVersion moves; `update` advances version/sourceHash; `rollback` restores locked content. Every part below carries the schemaVersion it migrates to and its lifecycle version.",
+  "schemaVersionLadder": [
+    "2026-06-09.registry-foundation",
+    "2026-06-29.agent-native-template-workspace"
+  ],
+  "itemVersionLadder": [
+    "0.0.0-agent-native.20260629",
+    "0.0.0-contract.20260609",
+    "0.0.0-contract.20260625"
+  ],
+  "parts": [
+    {
+      "name": "button",
+      "kind": "primitive",
+      "id": "primitive.button",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "panel",
+      "kind": "primitive",
+      "id": "primitive.panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "text-field",
+      "kind": "primitive",
+      "id": "primitive.text-field",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "agent-panel",
+      "kind": "component",
+      "id": "component.agent-panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
+    },
+    {
+      "name": "chart",
+      "kind": "component",
+      "id": "component.chart",
+      "version": "0.0.0-contract.20260625",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Adds first-party chart vocabulary and renderer support; chart output is SVG/data-table display data, not third-party runtime execution."
+    },
+    {
+      "name": "docs-source-panel",
+      "kind": "component",
+      "id": "component.docs-source-panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
+    },
+    {
+      "name": "forms-ask-block",
+      "kind": "block",
+      "id": "block.forms.ask",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-block",
+      "kind": "block",
+      "id": "block.forms.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-detail-block",
+      "kind": "block",
+      "id": "block.forms.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-detail-detail-block",
+      "kind": "block",
+      "id": "block.forms.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-index-block",
+      "kind": "block",
+      "id": "block.forms.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-f-catchall-block",
+      "kind": "block",
+      "id": "block.forms.f-catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-form-preview-block",
+      "kind": "block",
+      "id": "block.forms.form-preview",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-forms-detail-block",
+      "kind": "block",
+      "id": "block.forms.forms-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-forms-detail-responses-block",
+      "kind": "block",
+      "id": "block.forms.forms-detail-responses",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-forms-index-block",
+      "kind": "block",
+      "id": "block.forms.forms-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-home-2-block",
+      "kind": "block",
+      "id": "block.forms.home-2",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-home-block",
+      "kind": "block",
+      "id": "block.forms.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-response-insights-block",
+      "kind": "block",
+      "id": "block.forms.response-insights",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-settings-block",
+      "kind": "block",
+      "id": "block.forms.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-team-block",
+      "kind": "block",
+      "id": "block.forms.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-ask-page",
+      "kind": "page",
+      "id": "page.forms.ask",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-detail-detail-page",
+      "kind": "page",
+      "id": "page.forms.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-detail-page",
+      "kind": "page",
+      "id": "page.forms.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-index-page",
+      "kind": "page",
+      "id": "page.forms.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-extensions-page",
+      "kind": "page",
+      "id": "page.forms.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-f-catchall-page",
+      "kind": "page",
+      "id": "page.forms.f-catchall",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-form-preview-page",
+      "kind": "page",
+      "id": "page.forms.form-preview",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-forms-detail-page",
+      "kind": "page",
+      "id": "page.forms.forms-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-forms-detail-responses-page",
+      "kind": "page",
+      "id": "page.forms.forms-detail-responses",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-forms-index-page",
+      "kind": "page",
+      "id": "page.forms.forms-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-home-2-page",
+      "kind": "page",
+      "id": "page.forms.home-2",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-home-page",
+      "kind": "page",
+      "id": "page.forms.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-response-insights-page",
+      "kind": "page",
+      "id": "page.forms.response-insights",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-settings-page",
+      "kind": "page",
+      "id": "page.forms.settings",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-team-page",
+      "kind": "page",
+      "id": "page.forms.team",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "forms-app",
+      "kind": "app",
+      "id": "app.forms",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated workspace app implementation evidence from the authored workspace shell and mounted React workspace source; hosted runtime remains pending."
+    },
+    {
+      "name": "forms-workspace",
+      "kind": null,
+      "id": "workspace.forms",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Agent-Native Agent-Native Forms template imported from yrka-io/agent-native as a complete Studio UI workspace shell over all discovered route files; execution remains display-only behind Jami Harness contracts."
+    },
+    {
+      "name": "jami-theme",
+      "kind": null,
+      "id": "theme.jami-factory",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial theme item. Files are the generated token outputs; regenerate with pnpm contracts:generate when the token source changes."
+    }
+  ]
+}

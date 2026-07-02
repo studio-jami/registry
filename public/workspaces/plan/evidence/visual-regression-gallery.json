@@ -1,0 +1,511 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "plan",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/plan/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-plan.png"
+  },
+  "routeCount": 12,
+  "blockStateCount": 60,
+  "routes": [
+    {
+      "galleryKey": "plan.route.plan",
+      "path": "/plan",
+      "page": "page.plan.home",
+      "title": "Plan Home",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan.png",
+      "blocks": [
+        "block.plan.home"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-extensions-id-slug",
+      "path": "/plan/extensions/:id/:slug",
+      "page": "page.plan.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-extensions-id-slug.png",
+      "blocks": [
+        "block.plan.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-extensions-id",
+      "path": "/plan/extensions/:id",
+      "page": "page.plan.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-extensions-id.png",
+      "blocks": [
+        "block.plan.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-extensions",
+      "path": "/plan/extensions",
+      "page": "page.plan.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-extensions.png",
+      "blocks": [
+        "block.plan.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-extensions",
+      "path": "/plan/extensions",
+      "page": "page.plan.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-extensions.png",
+      "blocks": [
+        "block.plan.extensions"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-local-plans-slug",
+      "path": "/plan/local-plans/:slug",
+      "page": "page.plan.local-plans-detail",
+      "title": "Local Plans Detail",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-local-plans-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-local-plans-slug.png",
+      "blocks": [
+        "block.plan.local-plans-detail"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-plans-id",
+      "path": "/plan/plans/:id",
+      "page": "page.plan.plans-detail",
+      "title": "Plans Detail",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-plans-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-plans-id.png",
+      "blocks": [
+        "block.plan.plans-detail"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-plans",
+      "path": "/plan/plans",
+      "page": "page.plan.plans",
+      "title": "Plans",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-plans.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-plans.png",
+      "blocks": [
+        "block.plan.plans"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-recaps-id",
+      "path": "/plan/recaps/:id",
+      "page": "page.plan.recaps-detail",
+      "title": "Recaps Detail",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-recaps-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-recaps-id.png",
+      "blocks": [
+        "block.plan.recaps-detail"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-recaps",
+      "path": "/plan/recaps",
+      "page": "page.plan.recaps",
+      "title": "Recaps",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-recaps.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-recaps.png",
+      "blocks": [
+        "block.plan.recaps"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-settings",
+      "path": "/plan/settings",
+      "page": "page.plan.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-settings.png",
+      "blocks": [
+        "block.plan.settings"
+      ]
+    },
+    {
+      "galleryKey": "plan.route.plan-team",
+      "path": "/plan/team",
+      "page": "page.plan.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/plan/plan-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-plan-plan-team.png",
+      "blocks": [
+        "block.plan.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail-detail.empty",
+      "block": "block.plan.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail-detail.error",
+      "block": "block.plan.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail-detail.loading",
+      "block": "block.plan.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail-detail.long-content",
+      "block": "block.plan.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail-detail.ready",
+      "block": "block.plan.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail.empty",
+      "block": "block.plan.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail.error",
+      "block": "block.plan.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail.loading",
+      "block": "block.plan.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail.long-content",
+      "block": "block.plan.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-detail.ready",
+      "block": "block.plan.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-index.empty",
+      "block": "block.plan.extensions-index",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-index.error",
+      "block": "block.plan.extensions-index",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-index.loading",
+      "block": "block.plan.extensions-index",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-index.long-content",
+      "block": "block.plan.extensions-index",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions-index.ready",
+      "block": "block.plan.extensions-index",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions.empty",
+      "block": "block.plan.extensions",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions.error",
+      "block": "block.plan.extensions",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions.loading",
+      "block": "block.plan.extensions",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions.long-content",
+      "block": "block.plan.extensions",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.extensions.ready",
+      "block": "block.plan.extensions",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.home.empty",
+      "block": "block.plan.home",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.home.error",
+      "block": "block.plan.home",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.home.loading",
+      "block": "block.plan.home",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.home.long-content",
+      "block": "block.plan.home",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.home.ready",
+      "block": "block.plan.home",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.local-plans-detail.empty",
+      "block": "block.plan.local-plans-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.local-plans-detail.error",
+      "block": "block.plan.local-plans-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.local-plans-detail.loading",
+      "block": "block.plan.local-plans-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.local-plans-detail.long-content",
+      "block": "block.plan.local-plans-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.local-plans-detail.ready",
+      "block": "block.plan.local-plans-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans-detail.empty",
+      "block": "block.plan.plans-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans-detail.error",
+      "block": "block.plan.plans-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans-detail.loading",
+      "block": "block.plan.plans-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans-detail.long-content",
+      "block": "block.plan.plans-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans-detail.ready",
+      "block": "block.plan.plans-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans.empty",
+      "block": "block.plan.plans",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans.error",
+      "block": "block.plan.plans",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans.loading",
+      "block": "block.plan.plans",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans.long-content",
+      "block": "block.plan.plans",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.plans.ready",
+      "block": "block.plan.plans",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps-detail.empty",
+      "block": "block.plan.recaps-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps-detail.error",
+      "block": "block.plan.recaps-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps-detail.loading",
+      "block": "block.plan.recaps-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps-detail.long-content",
+      "block": "block.plan.recaps-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps-detail.ready",
+      "block": "block.plan.recaps-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps.empty",
+      "block": "block.plan.recaps",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps.error",
+      "block": "block.plan.recaps",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps.loading",
+      "block": "block.plan.recaps",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps.long-content",
+      "block": "block.plan.recaps",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.recaps.ready",
+      "block": "block.plan.recaps",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.settings.empty",
+      "block": "block.plan.settings",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.settings.error",
+      "block": "block.plan.settings",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.settings.loading",
+      "block": "block.plan.settings",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.settings.long-content",
+      "block": "block.plan.settings",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.settings.ready",
+      "block": "block.plan.settings",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.team.empty",
+      "block": "block.plan.team",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.team.error",
+      "block": "block.plan.team",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.team.loading",
+      "block": "block.plan.team",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.team.long-content",
+      "block": "block.plan.team",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "plan.block.block.plan.team.ready",
+      "block": "block.plan.team",
+      "component": "docs-source-panel",
+      "state": "ready"
+    }
+  ]
+}

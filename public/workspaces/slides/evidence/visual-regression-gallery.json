@@ -1,0 +1,593 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "slides",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/slides/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-slides.png"
+  },
+  "routeCount": 14,
+  "blockStateCount": 70,
+  "routes": [
+    {
+      "galleryKey": "slides.route.slides",
+      "path": "/slides/:",
+      "page": "page.slides.catchall",
+      "title": "Catchall",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides.png",
+      "blocks": [
+        "block.slides.catchall"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides",
+      "path": "/slides",
+      "page": "page.slides.home",
+      "title": "Slides Home",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides.png",
+      "blocks": [
+        "block.slides.home"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-deck-id",
+      "path": "/slides/deck/:id",
+      "page": "page.slides.deck-detail",
+      "title": "Deck Detail",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-deck-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-deck-id.png",
+      "blocks": [
+        "block.slides.deck-detail"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-deck-id-present",
+      "path": "/slides/deck/:id/present",
+      "page": "page.slides.deck-detail-present",
+      "title": "Deck Detail Present",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-deck-id-present.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-deck-id-present.png",
+      "blocks": [
+        "block.slides.deck-detail-present"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-design-systems",
+      "path": "/slides/design-systems",
+      "page": "page.slides.design-systems",
+      "title": "Design Systems",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-design-systems.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-design-systems.png",
+      "blocks": [
+        "block.slides.design-systems"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-extensions-id-slug",
+      "path": "/slides/extensions/:id/:slug",
+      "page": "page.slides.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-extensions-id-slug.png",
+      "blocks": [
+        "block.slides.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-extensions-id",
+      "path": "/slides/extensions/:id",
+      "page": "page.slides.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-extensions-id.png",
+      "blocks": [
+        "block.slides.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-extensions",
+      "path": "/slides/extensions",
+      "page": "page.slides.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-extensions.png",
+      "blocks": [
+        "block.slides.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-extensions",
+      "path": "/slides/extensions",
+      "page": "page.slides.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-extensions.png",
+      "blocks": [
+        "block.slides.extensions"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-p-id",
+      "path": "/slides/p/:id",
+      "page": "page.slides.p-detail",
+      "title": "P Detail",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-p-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-p-id.png",
+      "blocks": [
+        "block.slides.p-detail"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-settings",
+      "path": "/slides/settings",
+      "page": "page.slides.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-settings.png",
+      "blocks": [
+        "block.slides.settings"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-share-token",
+      "path": "/slides/share/:token",
+      "page": "page.slides.share-detail",
+      "title": "Share Detail",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-share-token.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-share-token.png",
+      "blocks": [
+        "block.slides.share-detail"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-slide",
+      "path": "/slides/slide",
+      "page": "page.slides.slide",
+      "title": "Slide",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-slide.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-slide.png",
+      "blocks": [
+        "block.slides.slide"
+      ]
+    },
+    {
+      "galleryKey": "slides.route.slides-team",
+      "path": "/slides/team",
+      "page": "page.slides.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/slides/slides-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-slides-slides-team.png",
+      "blocks": [
+        "block.slides.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "slides.block.block.slides.catchall.empty",
+      "block": "block.slides.catchall",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.catchall.error",
+      "block": "block.slides.catchall",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.catchall.loading",
+      "block": "block.slides.catchall",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.catchall.long-content",
+      "block": "block.slides.catchall",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.catchall.ready",
+      "block": "block.slides.catchall",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail-present.empty",
+      "block": "block.slides.deck-detail-present",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail-present.error",
+      "block": "block.slides.deck-detail-present",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail-present.loading",
+      "block": "block.slides.deck-detail-present",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail-present.long-content",
+      "block": "block.slides.deck-detail-present",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail-present.ready",
+      "block": "block.slides.deck-detail-present",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail.empty",
+      "block": "block.slides.deck-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail.error",
+      "block": "block.slides.deck-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail.loading",
+      "block": "block.slides.deck-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail.long-content",
+      "block": "block.slides.deck-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.deck-detail.ready",
+      "block": "block.slides.deck-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.design-systems.empty",
+      "block": "block.slides.design-systems",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.design-systems.error",
+      "block": "block.slides.design-systems",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.design-systems.loading",
+      "block": "block.slides.design-systems",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.design-systems.long-content",
+      "block": "block.slides.design-systems",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.design-systems.ready",
+      "block": "block.slides.design-systems",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail-detail.empty",
+      "block": "block.slides.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail-detail.error",
+      "block": "block.slides.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail-detail.loading",
+      "block": "block.slides.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail-detail.long-content",
+      "block": "block.slides.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail-detail.ready",
+      "block": "block.slides.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail.empty",
+      "block": "block.slides.extensions-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail.error",
+      "block": "block.slides.extensions-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail.loading",
+      "block": "block.slides.extensions-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail.long-content",
+      "block": "block.slides.extensions-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-detail.ready",
+      "block": "block.slides.extensions-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-index.empty",
+      "block": "block.slides.extensions-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-index.error",
+      "block": "block.slides.extensions-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-index.loading",
+      "block": "block.slides.extensions-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-index.long-content",
+      "block": "block.slides.extensions-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions-index.ready",
+      "block": "block.slides.extensions-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions.empty",
+      "block": "block.slides.extensions",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions.error",
+      "block": "block.slides.extensions",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions.loading",
+      "block": "block.slides.extensions",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions.long-content",
+      "block": "block.slides.extensions",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.extensions.ready",
+      "block": "block.slides.extensions",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.home.empty",
+      "block": "block.slides.home",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.home.error",
+      "block": "block.slides.home",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.home.loading",
+      "block": "block.slides.home",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.home.long-content",
+      "block": "block.slides.home",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.home.ready",
+      "block": "block.slides.home",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.p-detail.empty",
+      "block": "block.slides.p-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.p-detail.error",
+      "block": "block.slides.p-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.p-detail.loading",
+      "block": "block.slides.p-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.p-detail.long-content",
+      "block": "block.slides.p-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.p-detail.ready",
+      "block": "block.slides.p-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.settings.empty",
+      "block": "block.slides.settings",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.settings.error",
+      "block": "block.slides.settings",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.settings.loading",
+      "block": "block.slides.settings",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.settings.long-content",
+      "block": "block.slides.settings",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.settings.ready",
+      "block": "block.slides.settings",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.share-detail.empty",
+      "block": "block.slides.share-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.share-detail.error",
+      "block": "block.slides.share-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.share-detail.loading",
+      "block": "block.slides.share-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.share-detail.long-content",
+      "block": "block.slides.share-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.share-detail.ready",
+      "block": "block.slides.share-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.slide.empty",
+      "block": "block.slides.slide",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.slide.error",
+      "block": "block.slides.slide",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.slide.loading",
+      "block": "block.slides.slide",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.slide.long-content",
+      "block": "block.slides.slide",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.slide.ready",
+      "block": "block.slides.slide",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.team.empty",
+      "block": "block.slides.team",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.team.error",
+      "block": "block.slides.team",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.team.loading",
+      "block": "block.slides.team",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.team.long-content",
+      "block": "block.slides.team",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "slides.block.block.slides.team.ready",
+      "block": "block.slides.team",
+      "component": "media-grid",
+      "state": "ready"
+    }
+  ]
+}

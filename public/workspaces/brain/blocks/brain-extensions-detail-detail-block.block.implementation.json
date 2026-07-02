@@ -1,0 +1,353 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "brain",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/brain/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.brain.extensions-detail-detail",
+    "title": "Extensions Detail Detail",
+    "component": "docs-source-panel",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.$slug.tsx"
+  },
+  "component": "docs-source-panel",
+  "agentManifest": {
+    "component": "docs-source-panel",
+    "manifestId": "agm_docs_source_panel",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
+  "renderedStates": {
+    "ready": {
+      "props": {
+        "title": "Extensions Detail Detail",
+        "sources": [
+          {
+            "id": "src_brain_block_brain_extensions_detail_detail",
+            "title": "Extensions Detail Detail source"
+          }
+        ],
+        "selectedSourceId": "src_brain_block_brain_extensions_detail_detail",
+        "redacted": false,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "aside",
+        "props": {
+          "className": "jami-docs-source-panel",
+          "role": "complementary",
+          "aria-label": "Extensions Detail Detail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Extensions Detail Detail"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-source-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-source-id": "src_brain_block_brain_extensions_detail_detail",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Extensions Detail Detail source"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-docs-source-panel",
+        "jami-source-list"
+      ]
+    },
+    "loading": {
+      "props": {
+        "title": "Extensions Detail Detail",
+        "sources": [
+          {
+            "id": "src_brain_block_brain_extensions_detail_detail",
+            "title": "Extensions Detail Detail source"
+          }
+        ],
+        "selectedSourceId": "src_brain_block_brain_extensions_detail_detail",
+        "redacted": false,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "aside",
+        "props": {
+          "className": "jami-docs-source-panel",
+          "role": "complementary",
+          "aria-label": "Extensions Detail Detail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Extensions Detail Detail"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-source-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-source-id": "src_brain_block_brain_extensions_detail_detail",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Extensions Detail Detail source"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-docs-source-panel",
+        "jami-source-list"
+      ]
+    },
+    "empty": {
+      "props": {
+        "title": "Extensions Detail Detail",
+        "sources": [],
+        "redacted": false,
+        "empty": true
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "aside",
+        "props": {
+          "className": "jami-docs-source-panel",
+          "role": "complementary",
+          "aria-label": "Extensions Detail Detail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Extensions Detail Detail"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No sources attached."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-docs-source-panel"
+      ]
+    },
+    "error": {
+      "props": {
+        "title": "Extensions Detail Detail",
+        "sources": [
+          {
+            "id": "src_brain_block_brain_extensions_detail_detail",
+            "title": "Extensions Detail Detail source"
+          }
+        ],
+        "selectedSourceId": "src_brain_block_brain_extensions_detail_detail",
+        "redacted": true,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "aside",
+        "props": {
+          "className": "jami-docs-source-panel",
+          "role": "complementary",
+          "aria-label": "Extensions Detail Detail",
+          "data-redacted": "true"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Extensions Detail Detail"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "Source details are redacted."
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-source-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-source-id": "src_brain_block_brain_extensions_detail_detail",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Extensions Detail Detail source"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-docs-source-panel",
+        "jami-source-list"
+      ]
+    },
+    "long-content": {
+      "props": {
+        "title": "Extensions Detail Detail",
+        "sources": [
+          {
+            "id": "src_brain_block_brain_extensions_detail_detail",
+            "title": "Agent-Native Brain keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+          }
+        ],
+        "selectedSourceId": "src_brain_block_brain_extensions_detail_detail",
+        "redacted": false,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "aside",
+        "props": {
+          "className": "jami-docs-source-panel",
+          "role": "complementary",
+          "aria-label": "Extensions Detail Detail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Extensions Detail Detail"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-source-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-source-id": "src_brain_block_brain_extensions_detail_detail",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Agent-Native Brain keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-docs-source-panel",
+        "jami-source-list"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-docs-source-panel",
+      "jami-source-list"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": true,
+    "emptyStateSafe": true,
+    "errorStateSafe": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/brain/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/brain/workspace-shell.json",
+    "copiedSource": false
+  }
+}

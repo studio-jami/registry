@@ -1,0 +1,503 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "design",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/design/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.design.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Catchall",
+        "route": "/design/:"
+      },
+      {
+        "label": "Home",
+        "route": "/design"
+      },
+      {
+        "label": "Design Systems",
+        "route": "/design/design-systems"
+      },
+      {
+        "label": "Design Systems Setup",
+        "route": "/design/design-systems/setup"
+      },
+      {
+        "label": "Design Detail",
+        "route": "/design/design/:id"
+      },
+      {
+        "label": "Examples",
+        "route": "/design/examples"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/design/extensions/:id/:slug"
+      },
+      {
+        "label": "Extensions Detail",
+        "route": "/design/extensions/:id"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/design/:",
+      "page": "page.design.catchall",
+      "title": "Catchall",
+      "blocks": [
+        "block.design.catchall"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/$.tsx"
+    },
+    {
+      "path": "/design",
+      "page": "page.design.home",
+      "title": "Design Home",
+      "blocks": [
+        "block.design.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/_index.tsx"
+    },
+    {
+      "path": "/design/design-systems",
+      "page": "page.design.design-systems",
+      "title": "Design Systems",
+      "blocks": [
+        "block.design.design-systems"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems.tsx"
+    },
+    {
+      "path": "/design/design-systems/setup",
+      "page": "page.design.design-systems-setup",
+      "title": "Design Systems Setup",
+      "blocks": [
+        "block.design.design-systems-setup"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems_.setup.tsx"
+    },
+    {
+      "path": "/design/design/:id",
+      "page": "page.design.design-detail",
+      "title": "Design Detail",
+      "blocks": [
+        "block.design.design-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/design.$id.tsx"
+    },
+    {
+      "path": "/design/examples",
+      "page": "page.design.examples",
+      "title": "Examples",
+      "blocks": [
+        "block.design.examples"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/examples.tsx"
+    },
+    {
+      "path": "/design/extensions/:id/:slug",
+      "page": "page.design.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.design.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/design/extensions/:id",
+      "page": "page.design.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.design.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/design/extensions",
+      "page": "page.design.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.design.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/design/extensions",
+      "page": "page.design.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.design.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/design/observability",
+      "page": "page.design.observability",
+      "title": "Observability",
+      "blocks": [
+        "block.design.observability"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/observability.tsx"
+    },
+    {
+      "path": "/design/present/:id",
+      "page": "page.design.present-detail",
+      "title": "Present Detail",
+      "blocks": [
+        "block.design.present-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/present.$id.tsx"
+    },
+    {
+      "path": "/design/settings",
+      "page": "page.design.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.design.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/settings.tsx"
+    },
+    {
+      "path": "/design/team",
+      "page": "page.design.team",
+      "title": "Team",
+      "blocks": [
+        "block.design.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/team.tsx"
+    },
+    {
+      "path": "/design/templates",
+      "page": "page.design.templates",
+      "title": "Templates",
+      "blocks": [
+        "block.design.templates"
+      ],
+      "sourceRouteFile": "agent-native/templates/design/app/routes/templates.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.design.catchall",
+      "title": "Catchall",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-catchall-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.home",
+      "title": "Design Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.design-systems",
+      "title": "Design Systems",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-design-systems-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.design-systems-setup",
+      "title": "Design Systems Setup",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-design-systems-setup-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.design-detail",
+      "title": "Design Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-design-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.examples",
+      "title": "Examples",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-examples-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.observability",
+      "title": "Observability",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-observability-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.present-detail",
+      "title": "Present Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-present-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-team-page.page.implementation.json"
+    },
+    {
+      "id": "page.design.templates",
+      "title": "Templates",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/design/pages/design-templates-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.design.catchall",
+      "title": "Catchall",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-catchall-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.home",
+      "title": "Home",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.design-systems",
+      "title": "Design Systems",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-design-systems-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.design-systems-setup",
+      "title": "Design Systems Setup",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-design-systems-setup-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.design-detail",
+      "title": "Design Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-design-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.examples",
+      "title": "Examples",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-examples-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.extensions-index",
+      "title": "Extensions Index",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.extensions",
+      "title": "Extensions",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.observability",
+      "title": "Observability",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-observability-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.present-detail",
+      "title": "Present Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-present-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.settings",
+      "title": "Settings",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.team",
+      "title": "Team",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-team-block.block.implementation.json"
+    },
+    {
+      "id": "block.design.templates",
+      "title": "Templates",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/design/blocks/design-templates-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "media-grid",
+      "manifestId": "agm_media_grid",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 15,
+    "renderedBlockCount": 15,
+    "routeCount": 15,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/design/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/design/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "mail",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/mail/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.mail.draft-queue",
+    "title": "Draft Queue",
+    "component": "text-field",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "invalid",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.tsx"
+  },
+  "component": "text-field",
+  "agentManifest": {
+    "component": "text-field",
+    "manifestId": "agm_text_field",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
+  "renderedStates": {
+    "ready": {
+      "props": {
+        "label": "Draft Queue",
+        "value": "",
+        "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+        "invalid": false,
+        "helperText": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-draft-queue"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Draft Queue"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-draft-queue",
+              "name": "jami-field-draft-queue",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+              "aria-describedby": "jami-field-draft-queue-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-draft-queue-help"
+            },
+            "children": [
+              "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    },
+    "loading": {
+      "props": {
+        "label": "Draft Queue",
+        "value": "",
+        "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+        "invalid": false,
+        "helperText": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-draft-queue"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Draft Queue"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-draft-queue",
+              "name": "jami-field-draft-queue",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+              "aria-describedby": "jami-field-draft-queue-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-draft-queue-help"
+            },
+            "children": [
+              "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    },
+    "empty": {
+      "props": {
+        "label": "Draft Queue",
+        "value": "",
+        "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+        "invalid": false,
+        "helperText": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-draft-queue"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Draft Queue"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-draft-queue",
+              "name": "jami-field-draft-queue",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+              "aria-describedby": "jami-field-draft-queue-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-draft-queue-help"
+            },
+            "children": [
+              "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    },
+    "invalid": {
+      "props": {
+        "label": "Draft Queue",
+        "value": "",
+        "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+        "invalid": true,
+        "errorText": "Agent-Native Mail agent or action state is display-only until Jami Harness owns the runtime execution path."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-draft-queue"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Draft Queue"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-draft-queue",
+              "name": "jami-field-draft-queue",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+              "aria-invalid": "true",
+              "aria-describedby": "jami-field-draft-queue-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-draft-queue-help",
+              "role": "alert"
+            },
+            "children": [
+              "Agent-Native Mail agent or action state is display-only until Jami Harness owns the runtime execution path."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    },
+    "error": {
+      "props": {
+        "label": "Draft Queue",
+        "value": "",
+        "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+        "invalid": true,
+        "errorText": "Agent-Native Mail agent or action state is display-only until Jami Harness owns the runtime execution path."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-draft-queue"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Draft Queue"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-draft-queue",
+              "name": "jami-field-draft-queue",
+              "type": "text",
+              "defaultValue": "",
+              "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+              "aria-invalid": "true",
+              "aria-describedby": "jami-field-draft-queue-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-draft-queue-help",
+              "role": "alert"
+            },
+            "children": [
+              "Agent-Native Mail agent or action state is display-only until Jami Harness owns the runtime execution path."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    },
+    "long-content": {
+      "props": {
+        "label": "Draft Queue",
+        "value": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+        "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+        "invalid": false,
+        "helperText": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "label",
+        "props": {
+          "className": "jami-field",
+          "htmlFor": "jami-field-draft-queue"
+        },
+        "children": [
+          {
+            "type": "span",
+            "props": {
+              "className": "jami-field-label"
+            },
+            "children": [
+              "Draft Queue"
+            ]
+          },
+          {
+            "type": "input",
+            "props": {
+              "id": "jami-field-draft-queue",
+              "name": "jami-field-draft-queue",
+              "type": "text",
+              "defaultValue": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+              "placeholder": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+              "aria-describedby": "jami-field-draft-queue-help"
+            },
+            "children": []
+          },
+          {
+            "type": "span",
+            "props": {
+              "id": "jami-field-draft-queue-help"
+            },
+            "children": [
+              "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-field",
+        "jami-field-label"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "loading",
+      "empty",
+      "invalid",
+      "error",
+      "long-content"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-field",
+      "jami-field-label"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": true,
+    "emptyStateSafe": true,
+    "errorStateSafe": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/mail/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/mail/workspace-shell.json",
+    "copiedSource": false
+  }
+}

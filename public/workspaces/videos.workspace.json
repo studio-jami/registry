@@ -1,0 +1,544 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/videos-workspace",
+  "workspace": "videos",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "media-grid",
+    "videos-app",
+    "videos-catchall-page",
+    "videos-home-page",
+    "videos-c-detail-page",
+    "videos-components-page",
+    "videos-design-systems-page",
+    "videos-extensions-detail-detail-page",
+    "videos-extensions-detail-page",
+    "videos-extensions-index-page",
+    "videos-extensions-page",
+    "videos-settings-page",
+    "videos-team-page",
+    "videos-catchall-block",
+    "videos-home-block",
+    "videos-c-detail-block",
+    "videos-components-block",
+    "videos-design-systems-block",
+    "videos-extensions-detail-detail-block",
+    "videos-extensions-detail-block",
+    "videos-extensions-index-block",
+    "videos-extensions-block",
+    "videos-settings-block",
+    "videos-team-block"
+  ],
+  "installGraph": {
+    "root": "videos-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "videos-app",
+      "videos-catchall-page",
+      "videos-home-page",
+      "videos-c-detail-page",
+      "videos-components-page",
+      "videos-design-systems-page",
+      "videos-extensions-detail-detail-page",
+      "videos-extensions-detail-page",
+      "videos-extensions-index-page",
+      "videos-extensions-page",
+      "videos-settings-page",
+      "videos-team-page",
+      "videos-catchall-block",
+      "videos-home-block",
+      "videos-c-detail-block",
+      "videos-components-block",
+      "videos-design-systems-block",
+      "videos-extensions-detail-detail-block",
+      "videos-extensions-detail-block",
+      "videos-extensions-index-block",
+      "videos-extensions-block",
+      "videos-settings-block",
+      "videos-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":",
+    "videos",
+    "c",
+    "components",
+    "design-systems",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "settings",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Videos",
+    "summary": "Agent-Native Videos Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.videos.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Catchall",
+          "route": "/videos/:"
+        },
+        {
+          "label": "Home",
+          "route": "/videos"
+        },
+        {
+          "label": "C Detail",
+          "route": "/videos/c/:compositionId"
+        },
+        {
+          "label": "Components",
+          "route": "/videos/components"
+        },
+        {
+          "label": "Design Systems",
+          "route": "/videos/design-systems"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/videos/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/videos/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/videos/extensions"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/videos/:",
+        "page": "page.videos.catchall",
+        "title": "Catchall",
+        "blocks": [
+          "block.videos.catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/$.tsx"
+      },
+      {
+        "path": "/videos",
+        "page": "page.videos.home",
+        "title": "Videos Home",
+        "blocks": [
+          "block.videos.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/_index.tsx"
+      },
+      {
+        "path": "/videos/c/:compositionId",
+        "page": "page.videos.c-detail",
+        "title": "C Detail",
+        "blocks": [
+          "block.videos.c-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+      },
+      {
+        "path": "/videos/components",
+        "page": "page.videos.components",
+        "title": "Components",
+        "blocks": [
+          "block.videos.components"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/components.tsx"
+      },
+      {
+        "path": "/videos/design-systems",
+        "page": "page.videos.design-systems",
+        "title": "Design Systems",
+        "blocks": [
+          "block.videos.design-systems"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/design-systems.tsx"
+      },
+      {
+        "path": "/videos/extensions/:id/:slug",
+        "page": "page.videos.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.videos.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/videos/extensions/:id",
+        "page": "page.videos.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.videos.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/videos/extensions",
+        "page": "page.videos.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.videos.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/videos/extensions",
+        "page": "page.videos.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.videos.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/videos/settings",
+        "page": "page.videos.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.videos.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/settings.tsx"
+      },
+      {
+        "path": "/videos/team",
+        "page": "page.videos.team",
+        "title": "Team",
+        "blocks": [
+          "block.videos.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.videos.catchall",
+        "title": "Catchall",
+        "description": "Agent-Native videos route /: derived from $.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/$.tsx"
+      },
+      {
+        "id": "page.videos.home",
+        "title": "Videos Home",
+        "description": "Agent-Native videos route / derived from _index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.videos.c-detail",
+        "title": "C Detail",
+        "description": "Agent-Native videos route /c/:compositionId derived from c.$compositionId.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+      },
+      {
+        "id": "page.videos.components",
+        "title": "Components",
+        "description": "Agent-Native videos route /components derived from components.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/components.tsx"
+      },
+      {
+        "id": "page.videos.design-systems",
+        "title": "Design Systems",
+        "description": "Agent-Native videos route /design-systems derived from design-systems.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/design-systems.tsx"
+      },
+      {
+        "id": "page.videos.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native videos route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.videos.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native videos route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.videos.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native videos route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.videos.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native videos route /extensions derived from extensions.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.videos.settings",
+        "title": "Settings",
+        "description": "Agent-Native videos route /settings derived from settings.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.videos.team",
+        "title": "Team",
+        "description": "Agent-Native videos route /team derived from team.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.videos.catchall",
+        "title": "Catchall",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/$.tsx"
+      },
+      {
+        "id": "block.videos.home",
+        "title": "Home",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.videos.c-detail",
+        "title": "C Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+      },
+      {
+        "id": "block.videos.components",
+        "title": "Components",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/components.tsx"
+      },
+      {
+        "id": "block.videos.design-systems",
+        "title": "Design Systems",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/design-systems.tsx"
+      },
+      {
+        "id": "block.videos.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.videos.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.videos.extensions-index",
+        "title": "Extensions Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.videos.extensions",
+        "title": "Extensions",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.videos.settings",
+        "title": "Settings",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.videos.team",
+        "title": "Team",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/videos/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "media-grid",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Videos keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Videos in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Videos agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/videos",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/videos/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/videos/videos-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/videos/pages/videos-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-home-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-c-detail-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-components-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-design-systems-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-settings-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/videos/blocks/videos-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-home-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-c-detail-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-components-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-design-systems-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-settings-block.block.implementation.json",
+      "studio-ui/workspaces/videos/blocks/videos-team-block.block.implementation.json"
+    ]
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "agent-native-studio",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/agent-native-studio/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio.png"
+  },
+  "routeCount": 13,
+  "blockStateCount": 65,
+  "routes": [
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-clips",
+      "path": "/agent-native-studio/clips",
+      "page": "page.agent-native-studio.clips",
+      "title": "Clips",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-clips.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-clips.png",
+      "blocks": [
+        "block.agent-native-studio.clips"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-plan",
+      "path": "/agent-native-studio/plan",
+      "page": "page.agent-native-studio.plan",
+      "title": "Agent-Native Plan",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-plan.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-plan.png",
+      "blocks": [
+        "block.agent-native-studio.plan"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-design",
+      "path": "/agent-native-studio/design",
+      "page": "page.agent-native-studio.design",
+      "title": "Design",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-design.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-design.png",
+      "blocks": [
+        "block.agent-native-studio.design"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-content",
+      "path": "/agent-native-studio/content",
+      "page": "page.agent-native-studio.content",
+      "title": "Agent-Native Content",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-content.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-content.png",
+      "blocks": [
+        "block.agent-native-studio.content"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-slides",
+      "path": "/agent-native-studio/slides",
+      "page": "page.agent-native-studio.slides",
+      "title": "Agent-Native Slides",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-slides.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-slides.png",
+      "blocks": [
+        "block.agent-native-studio.slides"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-analytics",
+      "path": "/agent-native-studio/analytics",
+      "page": "page.agent-native-studio.analytics",
+      "title": "Agent-Native Analytics",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-analytics.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-analytics.png",
+      "blocks": [
+        "block.agent-native-studio.analytics"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-mail",
+      "path": "/agent-native-studio/mail",
+      "page": "page.agent-native-studio.mail",
+      "title": "Agent-Native Mail",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-mail.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-mail.png",
+      "blocks": [
+        "block.agent-native-studio.mail"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-forms",
+      "path": "/agent-native-studio/forms",
+      "page": "page.agent-native-studio.forms",
+      "title": "Agent-Native Forms",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-forms.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-forms.png",
+      "blocks": [
+        "block.agent-native-studio.forms"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-brain",
+      "path": "/agent-native-studio/brain",
+      "page": "page.agent-native-studio.brain",
+      "title": "Agent-Native Brain",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-brain.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-brain.png",
+      "blocks": [
+        "block.agent-native-studio.brain"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-assets",
+      "path": "/agent-native-studio/assets",
+      "page": "page.agent-native-studio.assets",
+      "title": "Assets",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-assets.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-assets.png",
+      "blocks": [
+        "block.agent-native-studio.assets"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-calendar",
+      "path": "/agent-native-studio/calendar",
+      "page": "page.agent-native-studio.calendar",
+      "title": "Agent-Native Calendar",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-calendar.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-calendar.png",
+      "blocks": [
+        "block.agent-native-studio.calendar"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-dispatch",
+      "path": "/agent-native-studio/dispatch",
+      "page": "page.agent-native-studio.dispatch",
+      "title": "Agent-Native Dispatch",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-dispatch.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-dispatch.png",
+      "blocks": [
+        "block.agent-native-studio.dispatch"
+      ]
+    },
+    {
+      "galleryKey": "agent-native-studio.route.agent-native-studio-chat",
+      "path": "/agent-native-studio/chat",
+      "page": "page.agent-native-studio.chat",
+      "title": "Chat",
+      "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/agent-native-studio-chat.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-agent-native-studio-agent-native-studio-chat.png",
+      "blocks": [
+        "block.agent-native-studio.chat"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.analytics.empty",
+      "block": "block.agent-native-studio.analytics",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.analytics.error",
+      "block": "block.agent-native-studio.analytics",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.analytics.loading",
+      "block": "block.agent-native-studio.analytics",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.analytics.long-content",
+      "block": "block.agent-native-studio.analytics",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.analytics.ready",
+      "block": "block.agent-native-studio.analytics",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.assets.empty",
+      "block": "block.agent-native-studio.assets",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.assets.error",
+      "block": "block.agent-native-studio.assets",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.assets.loading",
+      "block": "block.agent-native-studio.assets",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.assets.long-content",
+      "block": "block.agent-native-studio.assets",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.assets.ready",
+      "block": "block.agent-native-studio.assets",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.brain.empty",
+      "block": "block.agent-native-studio.brain",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.brain.error",
+      "block": "block.agent-native-studio.brain",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.brain.loading",
+      "block": "block.agent-native-studio.brain",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.brain.long-content",
+      "block": "block.agent-native-studio.brain",
+      "component": "agent-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.brain.ready",
+      "block": "block.agent-native-studio.brain",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.calendar.empty",
+      "block": "block.agent-native-studio.calendar",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.calendar.error",
+      "block": "block.agent-native-studio.calendar",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.calendar.loading",
+      "block": "block.agent-native-studio.calendar",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.calendar.long-content",
+      "block": "block.agent-native-studio.calendar",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.calendar.ready",
+      "block": "block.agent-native-studio.calendar",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.chat.empty",
+      "block": "block.agent-native-studio.chat",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.chat.error",
+      "block": "block.agent-native-studio.chat",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.chat.loading",
+      "block": "block.agent-native-studio.chat",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.chat.long-content",
+      "block": "block.agent-native-studio.chat",
+      "component": "agent-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.chat.ready",
+      "block": "block.agent-native-studio.chat",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.clips.empty",
+      "block": "block.agent-native-studio.clips",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.clips.error",
+      "block": "block.agent-native-studio.clips",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.clips.loading",
+      "block": "block.agent-native-studio.clips",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.clips.long-content",
+      "block": "block.agent-native-studio.clips",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.clips.ready",
+      "block": "block.agent-native-studio.clips",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.content.empty",
+      "block": "block.agent-native-studio.content",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.content.error",
+      "block": "block.agent-native-studio.content",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.content.loading",
+      "block": "block.agent-native-studio.content",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.content.long-content",
+      "block": "block.agent-native-studio.content",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.content.ready",
+      "block": "block.agent-native-studio.content",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.design.empty",
+      "block": "block.agent-native-studio.design",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.design.error",
+      "block": "block.agent-native-studio.design",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.design.loading",
+      "block": "block.agent-native-studio.design",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.design.long-content",
+      "block": "block.agent-native-studio.design",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.design.ready",
+      "block": "block.agent-native-studio.design",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.dispatch.empty",
+      "block": "block.agent-native-studio.dispatch",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.dispatch.error",
+      "block": "block.agent-native-studio.dispatch",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.dispatch.loading",
+      "block": "block.agent-native-studio.dispatch",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.dispatch.long-content",
+      "block": "block.agent-native-studio.dispatch",
+      "component": "agent-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.dispatch.ready",
+      "block": "block.agent-native-studio.dispatch",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.forms.empty",
+      "block": "block.agent-native-studio.forms",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.forms.error",
+      "block": "block.agent-native-studio.forms",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.forms.loading",
+      "block": "block.agent-native-studio.forms",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.forms.long-content",
+      "block": "block.agent-native-studio.forms",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.forms.ready",
+      "block": "block.agent-native-studio.forms",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.mail.empty",
+      "block": "block.agent-native-studio.mail",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.mail.error",
+      "block": "block.agent-native-studio.mail",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.mail.loading",
+      "block": "block.agent-native-studio.mail",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.mail.long-content",
+      "block": "block.agent-native-studio.mail",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.mail.ready",
+      "block": "block.agent-native-studio.mail",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.plan.empty",
+      "block": "block.agent-native-studio.plan",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.plan.error",
+      "block": "block.agent-native-studio.plan",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.plan.loading",
+      "block": "block.agent-native-studio.plan",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.plan.long-content",
+      "block": "block.agent-native-studio.plan",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.plan.ready",
+      "block": "block.agent-native-studio.plan",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.slides.empty",
+      "block": "block.agent-native-studio.slides",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.slides.error",
+      "block": "block.agent-native-studio.slides",
+      "component": "data-list",
+      "state": "error"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.slides.loading",
+      "block": "block.agent-native-studio.slides",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.slides.long-content",
+      "block": "block.agent-native-studio.slides",
+      "component": "data-list",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "agent-native-studio.block.block.agent-native-studio.slides.ready",
+      "block": "block.agent-native-studio.slides",
+      "component": "data-list",
+      "state": "ready"
+    }
+  ]
+}

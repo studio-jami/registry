@@ -1,0 +1,776 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "analytics",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/analytics/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.analytics.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Catchall",
+        "route": "/analytics/:"
+      },
+      {
+        "label": "Home",
+        "route": "/analytics"
+      },
+      {
+        "label": "Adhoc Detail",
+        "route": "/analytics/adhoc/:id"
+      },
+      {
+        "label": "Analyses Detail",
+        "route": "/analytics/analyses/:id"
+      },
+      {
+        "label": "Analyses Index",
+        "route": "/analytics/analyses"
+      },
+      {
+        "label": "Ask",
+        "route": "/analytics/ask"
+      },
+      {
+        "label": "Catalog",
+        "route": "/analytics/catalog"
+      },
+      {
+        "label": "Chart",
+        "route": "/analytics/chart"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/analytics/:",
+      "page": "page.analytics.catchall",
+      "title": "Catchall",
+      "blocks": [
+        "block.analytics.catchall"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/$.tsx"
+    },
+    {
+      "path": "/analytics",
+      "page": "page.analytics.home",
+      "title": "Analytics Home",
+      "blocks": [
+        "block.analytics.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/_index.tsx"
+    },
+    {
+      "path": "/analytics/adhoc/:id",
+      "page": "page.analytics.adhoc-detail",
+      "title": "Adhoc Detail",
+      "blocks": [
+        "block.analytics.adhoc-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/adhoc.$id.tsx"
+    },
+    {
+      "path": "/analytics/analyses/:id",
+      "page": "page.analytics.analyses-detail",
+      "title": "Analyses Detail",
+      "blocks": [
+        "block.analytics.analyses-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses.$id.tsx"
+    },
+    {
+      "path": "/analytics/analyses",
+      "page": "page.analytics.analyses-index",
+      "title": "Analyses Index",
+      "blocks": [
+        "block.analytics.analyses-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses._index.tsx"
+    },
+    {
+      "path": "/analytics/ask",
+      "page": "page.analytics.ask",
+      "title": "Ask",
+      "blocks": [
+        "block.analytics.ask"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/ask.tsx"
+    },
+    {
+      "path": "/analytics/catalog",
+      "page": "page.analytics.catalog",
+      "title": "Catalog",
+      "blocks": [
+        "block.analytics.catalog"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/catalog.tsx"
+    },
+    {
+      "path": "/analytics/chart",
+      "page": "page.analytics.chart",
+      "title": "Chart",
+      "blocks": [
+        "block.analytics.chart"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/chart.tsx"
+    },
+    {
+      "path": "/analytics/dashboard",
+      "page": "page.analytics.dashboard",
+      "title": "Dashboard",
+      "blocks": [
+        "block.analytics.dashboard"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboard.tsx"
+    },
+    {
+      "path": "/analytics/dashboards/:id",
+      "page": "page.analytics.dashboards-detail",
+      "title": "Dashboards Detail",
+      "blocks": [
+        "block.analytics.dashboards-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards.$id.tsx"
+    },
+    {
+      "path": "/analytics/dashboards",
+      "page": "page.analytics.dashboards-index",
+      "title": "Dashboards Index",
+      "blocks": [
+        "block.analytics.dashboards-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards._index.tsx"
+    },
+    {
+      "path": "/analytics/data-dictionary",
+      "page": "page.analytics.data-dictionary",
+      "title": "Data Dictionary",
+      "blocks": [
+        "block.analytics.data-dictionary"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+    },
+    {
+      "path": "/analytics/data-sources",
+      "page": "page.analytics.data-sources",
+      "title": "Data Sources",
+      "blocks": [
+        "block.analytics.data-sources"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-sources.tsx"
+    },
+    {
+      "path": "/analytics/extensions/:id/:slug",
+      "page": "page.analytics.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.analytics.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/analytics/extensions/:id",
+      "page": "page.analytics.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.analytics.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/analytics/extensions",
+      "page": "page.analytics.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.analytics.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/analytics/extensions",
+      "page": "page.analytics.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.analytics.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/analytics/overview",
+      "page": "page.analytics.overview",
+      "title": "Overview",
+      "blocks": [
+        "block.analytics.overview"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/overview.tsx"
+    },
+    {
+      "path": "/analytics/sessions/:recordingId",
+      "page": "page.analytics.sessions-detail",
+      "title": "Sessions Detail",
+      "blocks": [
+        "block.analytics.sessions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions.$recordingId.tsx"
+    },
+    {
+      "path": "/analytics/sessions",
+      "page": "page.analytics.sessions-index",
+      "title": "Sessions Index",
+      "blocks": [
+        "block.analytics.sessions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions._index.tsx"
+    },
+    {
+      "path": "/analytics/settings",
+      "page": "page.analytics.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.analytics.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/settings.tsx"
+    },
+    {
+      "path": "/analytics/team",
+      "page": "page.analytics.team",
+      "title": "Team",
+      "blocks": [
+        "block.analytics.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/team.tsx"
+    },
+    {
+      "path": "/analytics/traffic-dashboard",
+      "page": "page.analytics.traffic-dashboard",
+      "title": "Traffic Dashboard",
+      "blocks": [
+        "block.analytics.traffic-dashboard"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic-dashboard.tsx"
+    },
+    {
+      "path": "/analytics/traffic",
+      "page": "page.analytics.traffic",
+      "title": "Traffic",
+      "blocks": [
+        "block.analytics.traffic"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.analytics.catchall",
+      "title": "Catchall",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-catchall-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.home",
+      "title": "Analytics Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.adhoc-detail",
+      "title": "Adhoc Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-adhoc-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.analyses-detail",
+      "title": "Analyses Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-analyses-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.analyses-index",
+      "title": "Analyses Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-analyses-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.ask",
+      "title": "Ask",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-ask-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.catalog",
+      "title": "Catalog",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-catalog-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.chart",
+      "title": "Chart",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-chart-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.dashboard",
+      "title": "Dashboard",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-dashboard-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.dashboards-detail",
+      "title": "Dashboards Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-dashboards-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.dashboards-index",
+      "title": "Dashboards Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-dashboards-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.data-dictionary",
+      "title": "Data Dictionary",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-data-dictionary-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.data-sources",
+      "title": "Data Sources",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-data-sources-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.overview",
+      "title": "Overview",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-overview-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.sessions-detail",
+      "title": "Sessions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-sessions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.sessions-index",
+      "title": "Sessions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-sessions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-team-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.traffic-dashboard",
+      "title": "Traffic Dashboard",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-traffic-dashboard-page.page.implementation.json"
+    },
+    {
+      "id": "page.analytics.traffic",
+      "title": "Traffic",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/analytics/pages/analytics-traffic-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.analytics.catchall",
+      "title": "Catchall",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-catchall-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.home",
+      "title": "Home",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.adhoc-detail",
+      "title": "Adhoc Detail",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-adhoc-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.analyses-detail",
+      "title": "Analyses Detail",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-analyses-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.analyses-index",
+      "title": "Analyses Index",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-analyses-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.ask",
+      "title": "Ask",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-ask-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.catalog",
+      "title": "Catalog",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-catalog-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.chart",
+      "title": "Chart",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-chart-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.dashboard",
+      "title": "Dashboard",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-dashboard-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.dashboards-detail",
+      "title": "Dashboards Detail",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-dashboards-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.dashboards-index",
+      "title": "Dashboards Index",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-dashboards-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.data-dictionary",
+      "title": "Data Dictionary",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-data-dictionary-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.data-sources",
+      "title": "Data Sources",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-data-sources-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.extensions-index",
+      "title": "Extensions Index",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.extensions",
+      "title": "Extensions",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.overview",
+      "title": "Overview",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-overview-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.sessions-detail",
+      "title": "Sessions Detail",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-sessions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.sessions-index",
+      "title": "Sessions Index",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-sessions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.settings",
+      "title": "Settings",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.team",
+      "title": "Team",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-team-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.traffic-dashboard",
+      "title": "Traffic Dashboard",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-traffic-dashboard-block.block.implementation.json"
+    },
+    {
+      "id": "block.analytics.traffic",
+      "title": "Traffic",
+      "component": "chart",
+      "implementationFile": "studio-ui/workspaces/analytics/blocks/analytics-traffic-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "agent-panel",
+      "manifestId": "agm_agent_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_agent_panel_review",
+          "name": "review",
+          "label": "Review agent recommendation",
+          "harnessRoute": "harness://actions/agent-panel-review",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "recommendationId",
+              "decision"
+            ],
+            "properties": {
+              "recommendationId": {
+                "type": "string"
+              },
+              "decision": {
+                "type": "string",
+                "enum": [
+                  "approve",
+                  "deny"
+                ]
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "chart",
+      "manifestId": "agm_chart",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 24,
+    "renderedBlockCount": 24,
+    "routeCount": 24,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/analytics/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/analytics/workspace-shell.json",
+    "copiedSource": false
+  }
+}

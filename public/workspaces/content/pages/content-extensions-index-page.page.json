@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "content",
+  "page": {
+    "id": "page.content.extensions-index",
+    "title": "Extensions Index",
+    "description": "Agent-Native content route /extensions derived from _app.extensions._index.tsx.",
+    "components": [
+      "media-grid",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions._index.tsx"
+  },
+  "routes": [
+    {
+      "path": "/content/extensions",
+      "page": "page.content.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.content.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions._index.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.content.extensions-index",
+      "title": "Extensions Index",
+      "component": "media-grid",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/content/app/routes/_app.extensions._index.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Content keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Content in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Content agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/content/workspace-shell.json",
+    "copiedSource": false
+  }
+}

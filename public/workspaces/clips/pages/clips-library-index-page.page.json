@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "clips",
+  "page": {
+    "id": "page.clips.library-index",
+    "title": "Library Index",
+    "description": "Agent-Native clips route /library derived from _app.library._index.tsx.",
+    "components": [
+      "media-grid",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library._index.tsx"
+  },
+  "routes": [
+    {
+      "path": "/clips/library",
+      "page": "page.clips.library-index",
+      "title": "Library Index",
+      "blocks": [
+        "block.clips.library-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library._index.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.clips.library-index",
+      "title": "Library Index",
+      "component": "media-grid",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/clips/app/routes/_app.library._index.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Clips keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Clips in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Clips agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/clips/workspace-shell.json",
+    "copiedSource": false
+  }
+}

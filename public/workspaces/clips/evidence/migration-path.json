@@ -1,0 +1,545 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-migration-path.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "clips",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "contract": "CLI `migrate` advances an installed part when the registry itemSchemaVersion moves; `update` advances version/sourceHash; `rollback` restores locked content. Every part below carries the schemaVersion it migrates to and its lifecycle version.",
+  "schemaVersionLadder": [
+    "2026-06-09.registry-foundation",
+    "2026-06-29.agent-native-template-workspace"
+  ],
+  "itemVersionLadder": [
+    "0.0.0-agent-native.20260629",
+    "0.0.0-contract.20260609"
+  ],
+  "parts": [
+    {
+      "name": "button",
+      "kind": "primitive",
+      "id": "primitive.button",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "panel",
+      "kind": "primitive",
+      "id": "primitive.panel",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident primitive; no installed API migration exists yet."
+    },
+    {
+      "name": "media-grid",
+      "kind": "component",
+      "id": "component.media-grid",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial authored resident component; no installed API migration exists yet."
+    },
+    {
+      "name": "clips-archive-block",
+      "kind": "block",
+      "id": "block.clips.archive",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-bug-report-block",
+      "kind": "block",
+      "id": "block.clips.bug-report",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-bug-report-done-block",
+      "kind": "block",
+      "id": "block.clips.bug-report-done",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-dictate-block",
+      "kind": "block",
+      "id": "block.clips.dictate",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-download-block",
+      "kind": "block",
+      "id": "block.clips.download",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-embed-detail-block",
+      "kind": "block",
+      "id": "block.clips.embed-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-block",
+      "kind": "block",
+      "id": "block.clips.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-detail-block",
+      "kind": "block",
+      "id": "block.clips.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-detail-detail-block",
+      "kind": "block",
+      "id": "block.clips.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-index-block",
+      "kind": "block",
+      "id": "block.clips.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-home-2-block",
+      "kind": "block",
+      "id": "block.clips.home-2",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-home-block",
+      "kind": "block",
+      "id": "block.clips.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-insights-index-block",
+      "kind": "block",
+      "id": "block.clips.insights-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-invite-detail-block",
+      "kind": "block",
+      "id": "block.clips.invite-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-library-folder-detail-block",
+      "kind": "block",
+      "id": "block.clips.library-folder-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-library-index-block",
+      "kind": "block",
+      "id": "block.clips.library-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-meetings-detail-block",
+      "kind": "block",
+      "id": "block.clips.meetings-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-meetings-index-block",
+      "kind": "block",
+      "id": "block.clips.meetings-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-notifications-block",
+      "kind": "block",
+      "id": "block.clips.notifications",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-r-detail-block",
+      "kind": "block",
+      "id": "block.clips.r-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-record-block",
+      "kind": "block",
+      "id": "block.clips.record",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-settings-index-block",
+      "kind": "block",
+      "id": "block.clips.settings-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-settings-organization-block",
+      "kind": "block",
+      "id": "block.clips.settings-organization",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-share-detail-block",
+      "kind": "block",
+      "id": "block.clips.share-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-share-meeting-detail-block",
+      "kind": "block",
+      "id": "block.clips.share-meeting-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-spaces-detail-block",
+      "kind": "block",
+      "id": "block.clips.spaces-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-spaces-detail-folder-detail-block",
+      "kind": "block",
+      "id": "block.clips.spaces-detail-folder-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-spaces-index-block",
+      "kind": "block",
+      "id": "block.clips.spaces-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-trash-block",
+      "kind": "block",
+      "id": "block.clips.trash",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-wispr-block",
+      "kind": "block",
+      "id": "block.clips.wispr",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-archive-page",
+      "kind": "page",
+      "id": "page.clips.archive",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-bug-report-done-page",
+      "kind": "page",
+      "id": "page.clips.bug-report-done",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-bug-report-page",
+      "kind": "page",
+      "id": "page.clips.bug-report",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-dictate-page",
+      "kind": "page",
+      "id": "page.clips.dictate",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-download-page",
+      "kind": "page",
+      "id": "page.clips.download",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-embed-detail-page",
+      "kind": "page",
+      "id": "page.clips.embed-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-detail-detail-page",
+      "kind": "page",
+      "id": "page.clips.extensions-detail-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-detail-page",
+      "kind": "page",
+      "id": "page.clips.extensions-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-index-page",
+      "kind": "page",
+      "id": "page.clips.extensions-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-extensions-page",
+      "kind": "page",
+      "id": "page.clips.extensions",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-home-2-page",
+      "kind": "page",
+      "id": "page.clips.home-2",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-home-page",
+      "kind": "page",
+      "id": "page.clips.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-insights-index-page",
+      "kind": "page",
+      "id": "page.clips.insights-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-invite-detail-page",
+      "kind": "page",
+      "id": "page.clips.invite-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-library-folder-detail-page",
+      "kind": "page",
+      "id": "page.clips.library-folder-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-library-index-page",
+      "kind": "page",
+      "id": "page.clips.library-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-meetings-detail-page",
+      "kind": "page",
+      "id": "page.clips.meetings-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-meetings-index-page",
+      "kind": "page",
+      "id": "page.clips.meetings-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-notifications-page",
+      "kind": "page",
+      "id": "page.clips.notifications",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-r-detail-page",
+      "kind": "page",
+      "id": "page.clips.r-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-record-page",
+      "kind": "page",
+      "id": "page.clips.record",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-settings-index-page",
+      "kind": "page",
+      "id": "page.clips.settings-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-settings-organization-page",
+      "kind": "page",
+      "id": "page.clips.settings-organization",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-share-detail-page",
+      "kind": "page",
+      "id": "page.clips.share-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-share-meeting-detail-page",
+      "kind": "page",
+      "id": "page.clips.share-meeting-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-spaces-detail-folder-detail-page",
+      "kind": "page",
+      "id": "page.clips.spaces-detail-folder-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-spaces-detail-page",
+      "kind": "page",
+      "id": "page.clips.spaces-detail",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-spaces-index-page",
+      "kind": "page",
+      "id": "page.clips.spaces-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-trash-page",
+      "kind": "page",
+      "id": "page.clips.trash",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-wispr-page",
+      "kind": "page",
+      "id": "page.clips.wispr",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    {
+      "name": "clips-app",
+      "kind": "app",
+      "id": "app.clips",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Generated workspace app implementation evidence from the authored workspace shell and mounted React workspace source; hosted runtime remains pending."
+    },
+    {
+      "name": "clips-workspace",
+      "kind": null,
+      "id": "workspace.clips",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "migrationNotes": "Agent-Native Clips template imported from yrka-io/agent-native as a complete Studio UI workspace shell over all discovered route files; execution remains display-only behind Jami Harness contracts."
+    },
+    {
+      "name": "jami-theme",
+      "kind": null,
+      "id": "theme.jami-factory",
+      "version": "0.0.0-contract.20260609",
+      "schemaVersion": "2026-06-09.registry-foundation",
+      "migrationNotes": "Initial theme item. Files are the generated token outputs; regenerate with pnpm contracts:generate when the token source changes."
+    }
+  ]
+}

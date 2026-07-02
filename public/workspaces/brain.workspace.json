@@ -1,0 +1,583 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/brain-workspace",
+  "workspace": "brain",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "docs-source-panel",
+    "brain-app",
+    "brain-home-page",
+    "brain-extensions-detail-detail-page",
+    "brain-extensions-detail-page",
+    "brain-extensions-index-page",
+    "brain-extensions-page",
+    "brain-knowledge-page",
+    "brain-ops-page",
+    "brain-review-page",
+    "brain-search-page",
+    "brain-settings-page",
+    "brain-sources-page",
+    "brain-team-page",
+    "brain-home-block",
+    "brain-extensions-detail-detail-block",
+    "brain-extensions-detail-block",
+    "brain-extensions-index-block",
+    "brain-extensions-block",
+    "brain-knowledge-block",
+    "brain-ops-block",
+    "brain-review-block",
+    "brain-search-block",
+    "brain-settings-block",
+    "brain-sources-block",
+    "brain-team-block"
+  ],
+  "installGraph": {
+    "root": "brain-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "docs-source-panel",
+      "brain-app",
+      "brain-home-page",
+      "brain-extensions-detail-detail-page",
+      "brain-extensions-detail-page",
+      "brain-extensions-index-page",
+      "brain-extensions-page",
+      "brain-knowledge-page",
+      "brain-ops-page",
+      "brain-review-page",
+      "brain-search-page",
+      "brain-settings-page",
+      "brain-sources-page",
+      "brain-team-page",
+      "brain-home-block",
+      "brain-extensions-detail-detail-block",
+      "brain-extensions-detail-block",
+      "brain-extensions-index-block",
+      "brain-extensions-block",
+      "brain-knowledge-block",
+      "brain-ops-block",
+      "brain-review-block",
+      "brain-search-block",
+      "brain-settings-block",
+      "brain-sources-block",
+      "brain-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "brain",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "knowledge",
+    "ops",
+    "review",
+    "search",
+    "settings",
+    "sources",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Brain",
+    "summary": "Agent-Native Brain Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.brain.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Home",
+          "route": "/brain"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/brain/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/brain/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/brain/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/brain/extensions"
+        },
+        {
+          "label": "Knowledge",
+          "route": "/brain/knowledge"
+        },
+        {
+          "label": "Ops",
+          "route": "/brain/ops"
+        },
+        {
+          "label": "Review",
+          "route": "/brain/review"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/brain",
+        "page": "page.brain.home",
+        "title": "Brain Home",
+        "blocks": [
+          "block.brain.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/_index.tsx"
+      },
+      {
+        "path": "/brain/extensions/:id/:slug",
+        "page": "page.brain.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.brain.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/brain/extensions/:id",
+        "page": "page.brain.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.brain.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/brain/extensions",
+        "page": "page.brain.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.brain.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/brain/extensions",
+        "page": "page.brain.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.brain.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/brain/knowledge",
+        "page": "page.brain.knowledge",
+        "title": "Knowledge",
+        "blocks": [
+          "block.brain.knowledge"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/knowledge.tsx"
+      },
+      {
+        "path": "/brain/ops",
+        "page": "page.brain.ops",
+        "title": "Ops",
+        "blocks": [
+          "block.brain.ops"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/ops.tsx"
+      },
+      {
+        "path": "/brain/review",
+        "page": "page.brain.review",
+        "title": "Review",
+        "blocks": [
+          "block.brain.review"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/review.tsx"
+      },
+      {
+        "path": "/brain/search",
+        "page": "page.brain.search",
+        "title": "Search",
+        "blocks": [
+          "block.brain.search"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/search.tsx"
+      },
+      {
+        "path": "/brain/settings",
+        "page": "page.brain.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.brain.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/settings.tsx"
+      },
+      {
+        "path": "/brain/sources",
+        "page": "page.brain.sources",
+        "title": "Sources",
+        "blocks": [
+          "block.brain.sources"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/sources.tsx"
+      },
+      {
+        "path": "/brain/team",
+        "page": "page.brain.team",
+        "title": "Team",
+        "blocks": [
+          "block.brain.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.brain.home",
+        "title": "Brain Home",
+        "description": "Agent-Native brain route / derived from _index.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.brain.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native brain route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.brain.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native brain route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.brain.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native brain route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.brain.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native brain route /extensions derived from extensions.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.brain.knowledge",
+        "title": "Knowledge",
+        "description": "Agent-Native brain route /knowledge derived from knowledge.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/knowledge.tsx"
+      },
+      {
+        "id": "page.brain.ops",
+        "title": "Ops",
+        "description": "Agent-Native brain route /ops derived from ops.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/ops.tsx"
+      },
+      {
+        "id": "page.brain.review",
+        "title": "Review",
+        "description": "Agent-Native brain route /review derived from review.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/review.tsx"
+      },
+      {
+        "id": "page.brain.search",
+        "title": "Search",
+        "description": "Agent-Native brain route /search derived from search.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/search.tsx"
+      },
+      {
+        "id": "page.brain.settings",
+        "title": "Settings",
+        "description": "Agent-Native brain route /settings derived from settings.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.brain.sources",
+        "title": "Sources",
+        "description": "Agent-Native brain route /sources derived from sources.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/sources.tsx"
+      },
+      {
+        "id": "page.brain.team",
+        "title": "Team",
+        "description": "Agent-Native brain route /team derived from team.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.brain.home",
+        "title": "Home",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.brain.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.brain.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.brain.extensions-index",
+        "title": "Extensions Index",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.brain.extensions",
+        "title": "Extensions",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.brain.knowledge",
+        "title": "Knowledge",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/knowledge.tsx"
+      },
+      {
+        "id": "block.brain.ops",
+        "title": "Ops",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/ops.tsx"
+      },
+      {
+        "id": "block.brain.review",
+        "title": "Review",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/review.tsx"
+      },
+      {
+        "id": "block.brain.search",
+        "title": "Search",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/search.tsx"
+      },
+      {
+        "id": "block.brain.settings",
+        "title": "Settings",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.brain.sources",
+        "title": "Sources",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/sources.tsx"
+      },
+      {
+        "id": "block.brain.team",
+        "title": "Team",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/brain/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "docs-source-panel",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Brain keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Brain in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Brain agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/brain",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/brain/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/brain/brain-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/brain/pages/brain-home-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-knowledge-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-ops-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-review-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-search-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-settings-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-sources-page.page.implementation.json",
+      "studio-ui/workspaces/brain/pages/brain-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/brain/blocks/brain-home-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-knowledge-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-ops-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-review-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-search-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-settings-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-sources-block.block.implementation.json",
+      "studio-ui/workspaces/brain/blocks/brain-team-block.block.implementation.json"
+    ]
+  }
+}

@@ -1,0 +1,897 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-harness-capability.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "chat",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "boundary": {
+    "displayOnly": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false
+  },
+  "boundaryDoc": "docs/architecture/foundation-alignment.md",
+  "note": "Workspace agent surfaces display Harness-originated capability as typed action/artifact references only. Studio UI publishes action slot input/output schemas and safety constraints for Harness discovery by registryRef; policy execution, tool invocation, and runtime state stay in Jami Harness; this pack never executes them.",
+  "agentSurfaceCount": 10,
+  "agentSurfaces": [
+    {
+      "block": "block.chat.chat-detail",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_chat_detail_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_chat_detail_trace"
+      ]
+    },
+    {
+      "block": "block.chat.database",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_database_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_database_trace"
+      ]
+    },
+    {
+      "block": "block.chat.extensions",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_extensions_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_extensions_trace"
+      ]
+    },
+    {
+      "block": "block.chat.extensions-detail",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_extensions_detail_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_extensions_detail_trace"
+      ]
+    },
+    {
+      "block": "block.chat.extensions-detail-detail",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_extensions_detail_detail_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_extensions_detail_detail_trace"
+      ]
+    },
+    {
+      "block": "block.chat.extensions-index",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_extensions_index_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_extensions_index_trace"
+      ]
+    },
+    {
+      "block": "block.chat.home",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_home_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_home_trace"
+      ]
+    },
+    {
+      "block": "block.chat.observability",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_observability_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_observability_trace"
+      ]
+    },
+    {
+      "block": "block.chat.settings",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_settings_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_settings_trace"
+      ]
+    },
+    {
+      "block": "block.chat.team",
+      "agentManifest": {
+        "component": "agent-panel",
+        "manifestId": "agm_agent_panel",
+        "actionSlots": [
+          {
+            "slotId": "slot_agent_panel_review",
+            "name": "review",
+            "label": "Review agent recommendation",
+            "harnessRoute": "harness://actions/agent-panel-review",
+            "risk": "write",
+            "policyScope": "data:write",
+            "confirmationMode": "approval_required",
+            "inputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recommendationId",
+                "decision"
+              ],
+              "properties": {
+                "recommendationId": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "approve",
+                    "deny"
+                  ]
+                }
+              }
+            },
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "actionId",
+                "policyDecision"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "accepted",
+                    "denied"
+                  ]
+                },
+                "actionId": {
+                  "type": "string",
+                  "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+                },
+                "policyDecision": {
+                  "type": "string",
+                  "enum": [
+                    "allow",
+                    "deny",
+                    "needs_approval",
+                    "needs_owner"
+                  ]
+                },
+                "evidenceRef": {
+                  "type": "string",
+                  "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+                }
+              }
+            },
+            "safetyConstraints": [
+              "policy-required",
+              "audit-required",
+              "evidence-required",
+              "no-inline-secret-values",
+              "no-model-provided-code",
+              "schema-validated-input",
+              "schema-validated-output"
+            ]
+          }
+        ]
+      },
+      "actionRefs": [
+        "act_chat_block_chat_team_review"
+      ],
+      "artifactViewRefs": [
+        "artv_chat_block_chat_team_trace"
+      ]
+    }
+  ]
+}

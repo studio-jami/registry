@@ -1,0 +1,1053 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/analytics-workspace",
+  "workspace": "analytics",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "chart",
+    "agent-panel",
+    "analytics-app",
+    "analytics-catchall-page",
+    "analytics-home-page",
+    "analytics-adhoc-detail-page",
+    "analytics-analyses-detail-page",
+    "analytics-analyses-index-page",
+    "analytics-ask-page",
+    "analytics-catalog-page",
+    "analytics-chart-page",
+    "analytics-dashboard-page",
+    "analytics-dashboards-detail-page",
+    "analytics-dashboards-index-page",
+    "analytics-data-dictionary-page",
+    "analytics-data-sources-page",
+    "analytics-extensions-detail-detail-page",
+    "analytics-extensions-detail-page",
+    "analytics-extensions-index-page",
+    "analytics-extensions-page",
+    "analytics-overview-page",
+    "analytics-sessions-detail-page",
+    "analytics-sessions-index-page",
+    "analytics-settings-page",
+    "analytics-team-page",
+    "analytics-traffic-dashboard-page",
+    "analytics-traffic-page",
+    "analytics-catchall-block",
+    "analytics-home-block",
+    "analytics-adhoc-detail-block",
+    "analytics-analyses-detail-block",
+    "analytics-analyses-index-block",
+    "analytics-ask-block",
+    "analytics-catalog-block",
+    "analytics-chart-block",
+    "analytics-dashboard-block",
+    "analytics-dashboards-detail-block",
+    "analytics-dashboards-index-block",
+    "analytics-data-dictionary-block",
+    "analytics-data-sources-block",
+    "analytics-extensions-detail-detail-block",
+    "analytics-extensions-detail-block",
+    "analytics-extensions-index-block",
+    "analytics-extensions-block",
+    "analytics-overview-block",
+    "analytics-sessions-detail-block",
+    "analytics-sessions-index-block",
+    "analytics-settings-block",
+    "analytics-team-block",
+    "analytics-traffic-dashboard-block",
+    "analytics-traffic-block"
+  ],
+  "installGraph": {
+    "root": "analytics-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "chart",
+      "agent-panel",
+      "analytics-app",
+      "analytics-catchall-page",
+      "analytics-home-page",
+      "analytics-adhoc-detail-page",
+      "analytics-analyses-detail-page",
+      "analytics-analyses-index-page",
+      "analytics-ask-page",
+      "analytics-catalog-page",
+      "analytics-chart-page",
+      "analytics-dashboard-page",
+      "analytics-dashboards-detail-page",
+      "analytics-dashboards-index-page",
+      "analytics-data-dictionary-page",
+      "analytics-data-sources-page",
+      "analytics-extensions-detail-detail-page",
+      "analytics-extensions-detail-page",
+      "analytics-extensions-index-page",
+      "analytics-extensions-page",
+      "analytics-overview-page",
+      "analytics-sessions-detail-page",
+      "analytics-sessions-index-page",
+      "analytics-settings-page",
+      "analytics-team-page",
+      "analytics-traffic-dashboard-page",
+      "analytics-traffic-page",
+      "analytics-catchall-block",
+      "analytics-home-block",
+      "analytics-adhoc-detail-block",
+      "analytics-analyses-detail-block",
+      "analytics-analyses-index-block",
+      "analytics-ask-block",
+      "analytics-catalog-block",
+      "analytics-chart-block",
+      "analytics-dashboard-block",
+      "analytics-dashboards-detail-block",
+      "analytics-dashboards-index-block",
+      "analytics-data-dictionary-block",
+      "analytics-data-sources-block",
+      "analytics-extensions-detail-detail-block",
+      "analytics-extensions-detail-block",
+      "analytics-extensions-index-block",
+      "analytics-extensions-block",
+      "analytics-overview-block",
+      "analytics-sessions-detail-block",
+      "analytics-sessions-index-block",
+      "analytics-settings-block",
+      "analytics-team-block",
+      "analytics-traffic-dashboard-block",
+      "analytics-traffic-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":",
+    "analytics",
+    "adhoc",
+    "analyses",
+    "analyses",
+    "ask",
+    "catalog",
+    "chart",
+    "dashboard",
+    "dashboards",
+    "dashboards",
+    "data-dictionary",
+    "data-sources",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "overview",
+    "sessions",
+    "sessions",
+    "settings",
+    "team",
+    "traffic-dashboard",
+    "traffic"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Analytics",
+    "summary": "Agent-Native Analytics Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.analytics.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Catchall",
+          "route": "/analytics/:"
+        },
+        {
+          "label": "Home",
+          "route": "/analytics"
+        },
+        {
+          "label": "Adhoc Detail",
+          "route": "/analytics/adhoc/:id"
+        },
+        {
+          "label": "Analyses Detail",
+          "route": "/analytics/analyses/:id"
+        },
+        {
+          "label": "Analyses Index",
+          "route": "/analytics/analyses"
+        },
+        {
+          "label": "Ask",
+          "route": "/analytics/ask"
+        },
+        {
+          "label": "Catalog",
+          "route": "/analytics/catalog"
+        },
+        {
+          "label": "Chart",
+          "route": "/analytics/chart"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/analytics/:",
+        "page": "page.analytics.catchall",
+        "title": "Catchall",
+        "blocks": [
+          "block.analytics.catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/$.tsx"
+      },
+      {
+        "path": "/analytics",
+        "page": "page.analytics.home",
+        "title": "Analytics Home",
+        "blocks": [
+          "block.analytics.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/_index.tsx"
+      },
+      {
+        "path": "/analytics/adhoc/:id",
+        "page": "page.analytics.adhoc-detail",
+        "title": "Adhoc Detail",
+        "blocks": [
+          "block.analytics.adhoc-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/adhoc.$id.tsx"
+      },
+      {
+        "path": "/analytics/analyses/:id",
+        "page": "page.analytics.analyses-detail",
+        "title": "Analyses Detail",
+        "blocks": [
+          "block.analytics.analyses-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses.$id.tsx"
+      },
+      {
+        "path": "/analytics/analyses",
+        "page": "page.analytics.analyses-index",
+        "title": "Analyses Index",
+        "blocks": [
+          "block.analytics.analyses-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses._index.tsx"
+      },
+      {
+        "path": "/analytics/ask",
+        "page": "page.analytics.ask",
+        "title": "Ask",
+        "blocks": [
+          "block.analytics.ask"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/ask.tsx"
+      },
+      {
+        "path": "/analytics/catalog",
+        "page": "page.analytics.catalog",
+        "title": "Catalog",
+        "blocks": [
+          "block.analytics.catalog"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/catalog.tsx"
+      },
+      {
+        "path": "/analytics/chart",
+        "page": "page.analytics.chart",
+        "title": "Chart",
+        "blocks": [
+          "block.analytics.chart"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/chart.tsx"
+      },
+      {
+        "path": "/analytics/dashboard",
+        "page": "page.analytics.dashboard",
+        "title": "Dashboard",
+        "blocks": [
+          "block.analytics.dashboard"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboard.tsx"
+      },
+      {
+        "path": "/analytics/dashboards/:id",
+        "page": "page.analytics.dashboards-detail",
+        "title": "Dashboards Detail",
+        "blocks": [
+          "block.analytics.dashboards-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards.$id.tsx"
+      },
+      {
+        "path": "/analytics/dashboards",
+        "page": "page.analytics.dashboards-index",
+        "title": "Dashboards Index",
+        "blocks": [
+          "block.analytics.dashboards-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards._index.tsx"
+      },
+      {
+        "path": "/analytics/data-dictionary",
+        "page": "page.analytics.data-dictionary",
+        "title": "Data Dictionary",
+        "blocks": [
+          "block.analytics.data-dictionary"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+      },
+      {
+        "path": "/analytics/data-sources",
+        "page": "page.analytics.data-sources",
+        "title": "Data Sources",
+        "blocks": [
+          "block.analytics.data-sources"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-sources.tsx"
+      },
+      {
+        "path": "/analytics/extensions/:id/:slug",
+        "page": "page.analytics.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.analytics.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/analytics/extensions/:id",
+        "page": "page.analytics.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.analytics.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/analytics/extensions",
+        "page": "page.analytics.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.analytics.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/analytics/extensions",
+        "page": "page.analytics.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.analytics.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/analytics/overview",
+        "page": "page.analytics.overview",
+        "title": "Overview",
+        "blocks": [
+          "block.analytics.overview"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/overview.tsx"
+      },
+      {
+        "path": "/analytics/sessions/:recordingId",
+        "page": "page.analytics.sessions-detail",
+        "title": "Sessions Detail",
+        "blocks": [
+          "block.analytics.sessions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions.$recordingId.tsx"
+      },
+      {
+        "path": "/analytics/sessions",
+        "page": "page.analytics.sessions-index",
+        "title": "Sessions Index",
+        "blocks": [
+          "block.analytics.sessions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions._index.tsx"
+      },
+      {
+        "path": "/analytics/settings",
+        "page": "page.analytics.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.analytics.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/settings.tsx"
+      },
+      {
+        "path": "/analytics/team",
+        "page": "page.analytics.team",
+        "title": "Team",
+        "blocks": [
+          "block.analytics.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/team.tsx"
+      },
+      {
+        "path": "/analytics/traffic-dashboard",
+        "page": "page.analytics.traffic-dashboard",
+        "title": "Traffic Dashboard",
+        "blocks": [
+          "block.analytics.traffic-dashboard"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic-dashboard.tsx"
+      },
+      {
+        "path": "/analytics/traffic",
+        "page": "page.analytics.traffic",
+        "title": "Traffic",
+        "blocks": [
+          "block.analytics.traffic"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.analytics.catchall",
+        "title": "Catchall",
+        "description": "Agent-Native analytics route /: derived from $.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/$.tsx"
+      },
+      {
+        "id": "page.analytics.home",
+        "title": "Analytics Home",
+        "description": "Agent-Native analytics route / derived from _index.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.analytics.adhoc-detail",
+        "title": "Adhoc Detail",
+        "description": "Agent-Native analytics route /adhoc/:id derived from adhoc.$id.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/adhoc.$id.tsx"
+      },
+      {
+        "id": "page.analytics.analyses-detail",
+        "title": "Analyses Detail",
+        "description": "Agent-Native analytics route /analyses/:id derived from analyses.$id.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses.$id.tsx"
+      },
+      {
+        "id": "page.analytics.analyses-index",
+        "title": "Analyses Index",
+        "description": "Agent-Native analytics route /analyses derived from analyses._index.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses._index.tsx"
+      },
+      {
+        "id": "page.analytics.ask",
+        "title": "Ask",
+        "description": "Agent-Native analytics route /ask derived from ask.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/ask.tsx"
+      },
+      {
+        "id": "page.analytics.catalog",
+        "title": "Catalog",
+        "description": "Agent-Native analytics route /catalog derived from catalog.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/catalog.tsx"
+      },
+      {
+        "id": "page.analytics.chart",
+        "title": "Chart",
+        "description": "Agent-Native analytics route /chart derived from chart.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/chart.tsx"
+      },
+      {
+        "id": "page.analytics.dashboard",
+        "title": "Dashboard",
+        "description": "Agent-Native analytics route /dashboard derived from dashboard.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboard.tsx"
+      },
+      {
+        "id": "page.analytics.dashboards-detail",
+        "title": "Dashboards Detail",
+        "description": "Agent-Native analytics route /dashboards/:id derived from dashboards.$id.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards.$id.tsx"
+      },
+      {
+        "id": "page.analytics.dashboards-index",
+        "title": "Dashboards Index",
+        "description": "Agent-Native analytics route /dashboards derived from dashboards._index.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards._index.tsx"
+      },
+      {
+        "id": "page.analytics.data-dictionary",
+        "title": "Data Dictionary",
+        "description": "Agent-Native analytics route /data-dictionary derived from data-dictionary.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+      },
+      {
+        "id": "page.analytics.data-sources",
+        "title": "Data Sources",
+        "description": "Agent-Native analytics route /data-sources derived from data-sources.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-sources.tsx"
+      },
+      {
+        "id": "page.analytics.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native analytics route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.analytics.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native analytics route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.analytics.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native analytics route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.analytics.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native analytics route /extensions derived from extensions.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.analytics.overview",
+        "title": "Overview",
+        "description": "Agent-Native analytics route /overview derived from overview.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/overview.tsx"
+      },
+      {
+        "id": "page.analytics.sessions-detail",
+        "title": "Sessions Detail",
+        "description": "Agent-Native analytics route /sessions/:recordingId derived from sessions.$recordingId.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions.$recordingId.tsx"
+      },
+      {
+        "id": "page.analytics.sessions-index",
+        "title": "Sessions Index",
+        "description": "Agent-Native analytics route /sessions derived from sessions._index.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions._index.tsx"
+      },
+      {
+        "id": "page.analytics.settings",
+        "title": "Settings",
+        "description": "Agent-Native analytics route /settings derived from settings.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.analytics.team",
+        "title": "Team",
+        "description": "Agent-Native analytics route /team derived from team.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/team.tsx"
+      },
+      {
+        "id": "page.analytics.traffic-dashboard",
+        "title": "Traffic Dashboard",
+        "description": "Agent-Native analytics route /traffic-dashboard derived from traffic-dashboard.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic-dashboard.tsx"
+      },
+      {
+        "id": "page.analytics.traffic",
+        "title": "Traffic",
+        "description": "Agent-Native analytics route /traffic derived from traffic.tsx.",
+        "components": [
+          "chart",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.analytics.catchall",
+        "title": "Catchall",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/$.tsx"
+      },
+      {
+        "id": "block.analytics.home",
+        "title": "Home",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.analytics.adhoc-detail",
+        "title": "Adhoc Detail",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/adhoc.$id.tsx"
+      },
+      {
+        "id": "block.analytics.analyses-detail",
+        "title": "Analyses Detail",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses.$id.tsx"
+      },
+      {
+        "id": "block.analytics.analyses-index",
+        "title": "Analyses Index",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/analyses._index.tsx"
+      },
+      {
+        "id": "block.analytics.ask",
+        "title": "Ask",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/ask.tsx"
+      },
+      {
+        "id": "block.analytics.catalog",
+        "title": "Catalog",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/catalog.tsx"
+      },
+      {
+        "id": "block.analytics.chart",
+        "title": "Chart",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/chart.tsx"
+      },
+      {
+        "id": "block.analytics.dashboard",
+        "title": "Dashboard",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboard.tsx"
+      },
+      {
+        "id": "block.analytics.dashboards-detail",
+        "title": "Dashboards Detail",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards.$id.tsx"
+      },
+      {
+        "id": "block.analytics.dashboards-index",
+        "title": "Dashboards Index",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/dashboards._index.tsx"
+      },
+      {
+        "id": "block.analytics.data-dictionary",
+        "title": "Data Dictionary",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+      },
+      {
+        "id": "block.analytics.data-sources",
+        "title": "Data Sources",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-sources.tsx"
+      },
+      {
+        "id": "block.analytics.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.analytics.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.analytics.extensions-index",
+        "title": "Extensions Index",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.analytics.extensions",
+        "title": "Extensions",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.analytics.overview",
+        "title": "Overview",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/overview.tsx"
+      },
+      {
+        "id": "block.analytics.sessions-detail",
+        "title": "Sessions Detail",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions.$recordingId.tsx"
+      },
+      {
+        "id": "block.analytics.sessions-index",
+        "title": "Sessions Index",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/sessions._index.tsx"
+      },
+      {
+        "id": "block.analytics.settings",
+        "title": "Settings",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.analytics.team",
+        "title": "Team",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/team.tsx"
+      },
+      {
+        "id": "block.analytics.traffic-dashboard",
+        "title": "Traffic Dashboard",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic-dashboard.tsx"
+      },
+      {
+        "id": "block.analytics.traffic",
+        "title": "Traffic",
+        "component": "chart",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/analytics/app/routes/traffic.tsx"
+      }
+    ],
+    "componentParts": [
+      "agent-panel",
+      "button",
+      "chart",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Analytics keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Analytics in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Analytics agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/analytics",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/analytics/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/analytics/analytics-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/analytics/pages/analytics-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-home-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-adhoc-detail-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-analyses-detail-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-analyses-index-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-ask-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-catalog-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-chart-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-dashboard-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-dashboards-detail-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-dashboards-index-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-data-dictionary-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-data-sources-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-overview-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-sessions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-sessions-index-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-settings-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-team-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-traffic-dashboard-page.page.implementation.json",
+      "studio-ui/workspaces/analytics/pages/analytics-traffic-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/analytics/blocks/analytics-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-home-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-adhoc-detail-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-analyses-detail-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-analyses-index-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-ask-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-catalog-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-chart-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-dashboard-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-dashboards-detail-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-dashboards-index-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-data-dictionary-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-data-sources-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-overview-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-sessions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-sessions-index-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-settings-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-team-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-traffic-dashboard-block.block.implementation.json",
+      "studio-ui/workspaces/analytics/blocks/analytics-traffic-block.block.implementation.json"
+    ]
+  }
+}

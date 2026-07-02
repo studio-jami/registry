@@ -1,0 +1,323 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "content",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/content/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.content.team",
+    "title": "Team",
+    "component": "media-grid",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/content/app/routes/_app.team.tsx"
+  },
+  "component": "media-grid",
+  "agentManifest": {
+    "component": "media-grid",
+    "manifestId": "agm_media_grid",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
+  "renderedStates": {
+    "ready": {
+      "props": {
+        "title": "Team",
+        "items": [
+          {
+            "id": "art_content_block_content_team",
+            "title": "Team item"
+          }
+        ],
+        "selectedItemId": "art_content_block_content_team",
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-media-grid",
+          "role": "region",
+          "aria-label": "Team"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Team"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-media-grid-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-media-id": "art_content_block_content_team",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Team item"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-media-grid",
+        "jami-media-grid-list"
+      ]
+    },
+    "loading": {
+      "props": {
+        "title": "Team",
+        "items": [
+          {
+            "id": "art_content_block_content_team",
+            "title": "Team item"
+          }
+        ],
+        "selectedItemId": "art_content_block_content_team",
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-media-grid",
+          "role": "region",
+          "aria-label": "Team"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Team"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-media-grid-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-media-id": "art_content_block_content_team",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Team item"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-media-grid",
+        "jami-media-grid-list"
+      ]
+    },
+    "empty": {
+      "props": {
+        "title": "Team",
+        "items": [],
+        "empty": true
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-media-grid",
+          "role": "region",
+          "aria-label": "Team"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Team"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No media items."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-media-grid"
+      ]
+    },
+    "error": {
+      "props": {
+        "title": "Team",
+        "items": [],
+        "empty": false,
+        "error": "Agent-Native Content agent or action state is display-only until Jami Harness owns the runtime execution path."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-media-grid",
+          "role": "region",
+          "aria-label": "Team"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Team"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "alert"
+            },
+            "children": [
+              "Agent-Native Content agent or action state is display-only until Jami Harness owns the runtime execution path."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-media-grid"
+      ]
+    },
+    "long-content": {
+      "props": {
+        "title": "Team",
+        "items": [
+          {
+            "id": "art_content_block_content_team",
+            "title": "Agent-Native Content keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+          }
+        ],
+        "selectedItemId": "art_content_block_content_team",
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-media-grid",
+          "role": "region",
+          "aria-label": "Team"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Team"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-media-grid-list"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-media-id": "art_content_block_content_team",
+                  "aria-current": "true"
+                },
+                "children": [
+                  "Agent-Native Content keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-media-grid",
+        "jami-media-grid-list"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-media-grid",
+      "jami-media-grid-list"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": true,
+    "emptyStateSafe": true,
+    "errorStateSafe": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/content/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/content/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,1249 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "clips",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/clips/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-clips.png"
+  },
+  "routeCount": 30,
+  "blockStateCount": 150,
+  "routes": [
+    {
+      "galleryKey": "clips.route.clips-archive",
+      "path": "/clips/archive",
+      "page": "page.clips.archive",
+      "title": "Archive",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-archive.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-archive.png",
+      "blocks": [
+        "block.clips.archive"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-dictate",
+      "path": "/clips/dictate",
+      "page": "page.clips.dictate",
+      "title": "Dictate",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-dictate.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-dictate.png",
+      "blocks": [
+        "block.clips.dictate"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-extensions-id-slug",
+      "path": "/clips/extensions/:id/:slug",
+      "page": "page.clips.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-extensions-id-slug.png",
+      "blocks": [
+        "block.clips.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-extensions-id",
+      "path": "/clips/extensions/:id",
+      "page": "page.clips.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-extensions-id.png",
+      "blocks": [
+        "block.clips.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-extensions",
+      "path": "/clips/extensions",
+      "page": "page.clips.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-extensions.png",
+      "blocks": [
+        "block.clips.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-extensions",
+      "path": "/clips/extensions",
+      "page": "page.clips.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-extensions.png",
+      "blocks": [
+        "block.clips.extensions"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-insights",
+      "path": "/clips/insights",
+      "page": "page.clips.insights-index",
+      "title": "Insights Index",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-insights.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-insights.png",
+      "blocks": [
+        "block.clips.insights-index"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-library",
+      "path": "/clips/library",
+      "page": "page.clips.library-index",
+      "title": "Library Index",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-library.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-library.png",
+      "blocks": [
+        "block.clips.library-index"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-library-folder-folderid",
+      "path": "/clips/library/folder/:folderId",
+      "page": "page.clips.library-folder-detail",
+      "title": "Library Folder Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-library-folder-folderid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-library-folder-folderid.png",
+      "blocks": [
+        "block.clips.library-folder-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-meetings-meetingid",
+      "path": "/clips/meetings/:meetingId",
+      "page": "page.clips.meetings-detail",
+      "title": "Meetings Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-meetings-meetingid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-meetings-meetingid.png",
+      "blocks": [
+        "block.clips.meetings-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-meetings",
+      "path": "/clips/meetings",
+      "page": "page.clips.meetings-index",
+      "title": "Meetings Index",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-meetings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-meetings.png",
+      "blocks": [
+        "block.clips.meetings-index"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-notifications",
+      "path": "/clips/notifications",
+      "page": "page.clips.notifications",
+      "title": "Notifications",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-notifications.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-notifications.png",
+      "blocks": [
+        "block.clips.notifications"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-settings",
+      "path": "/clips/settings",
+      "page": "page.clips.settings-index",
+      "title": "Settings Index",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-settings.png",
+      "blocks": [
+        "block.clips.settings-index"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-settings-organization",
+      "path": "/clips/settings/organization",
+      "page": "page.clips.settings-organization",
+      "title": "Settings Organization",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-settings-organization.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-settings-organization.png",
+      "blocks": [
+        "block.clips.settings-organization"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-spaces-spaceid-folder-folderid",
+      "path": "/clips/spaces/:spaceId/folder/:folderId",
+      "page": "page.clips.spaces-detail-folder-detail",
+      "title": "Spaces Detail Folder Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-spaces-spaceid-folder-folderid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-spaces-spaceid-folder-folderid.png",
+      "blocks": [
+        "block.clips.spaces-detail-folder-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-spaces-spaceid",
+      "path": "/clips/spaces/:spaceId",
+      "page": "page.clips.spaces-detail",
+      "title": "Spaces Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-spaces-spaceid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-spaces-spaceid.png",
+      "blocks": [
+        "block.clips.spaces-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-spaces",
+      "path": "/clips/spaces",
+      "page": "page.clips.spaces-index",
+      "title": "Spaces Index",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-spaces.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-spaces.png",
+      "blocks": [
+        "block.clips.spaces-index"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-trash",
+      "path": "/clips/trash",
+      "page": "page.clips.trash",
+      "title": "Trash",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-trash.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-trash.png",
+      "blocks": [
+        "block.clips.trash"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips",
+      "path": "/clips",
+      "page": "page.clips.home",
+      "title": "Clips Home",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips.png",
+      "blocks": [
+        "block.clips.home"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-wispr",
+      "path": "/clips/wispr",
+      "page": "page.clips.wispr",
+      "title": "Wispr",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-wispr.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-wispr.png",
+      "blocks": [
+        "block.clips.wispr"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips",
+      "path": "/clips",
+      "page": "page.clips.home-2",
+      "title": "Clips Home",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips.png",
+      "blocks": [
+        "block.clips.home-2"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-bug-report-done",
+      "path": "/clips/bug-report/done",
+      "page": "page.clips.bug-report-done",
+      "title": "Bug Report Done",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-bug-report-done.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-bug-report-done.png",
+      "blocks": [
+        "block.clips.bug-report-done"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-bug-report",
+      "path": "/clips/bug-report",
+      "page": "page.clips.bug-report",
+      "title": "Bug Report",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-bug-report.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-bug-report.png",
+      "blocks": [
+        "block.clips.bug-report"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-download",
+      "path": "/clips/download",
+      "page": "page.clips.download",
+      "title": "Download",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-download.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-download.png",
+      "blocks": [
+        "block.clips.download"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-embed-shareid",
+      "path": "/clips/embed/:shareId",
+      "page": "page.clips.embed-detail",
+      "title": "Embed Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-embed-shareid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-embed-shareid.png",
+      "blocks": [
+        "block.clips.embed-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-invite-token",
+      "path": "/clips/invite/:token",
+      "page": "page.clips.invite-detail",
+      "title": "Invite Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-invite-token.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-invite-token.png",
+      "blocks": [
+        "block.clips.invite-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-r-recordingid",
+      "path": "/clips/r/:recordingId",
+      "page": "page.clips.r-detail",
+      "title": "R Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-r-recordingid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-r-recordingid.png",
+      "blocks": [
+        "block.clips.r-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-record",
+      "path": "/clips/record",
+      "page": "page.clips.record",
+      "title": "Record",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-record.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-record.png",
+      "blocks": [
+        "block.clips.record"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-share-shareid",
+      "path": "/clips/share/:shareId",
+      "page": "page.clips.share-detail",
+      "title": "Share Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-share-shareid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-share-shareid.png",
+      "blocks": [
+        "block.clips.share-detail"
+      ]
+    },
+    {
+      "galleryKey": "clips.route.clips-share-meeting-meetingid",
+      "path": "/clips/share/meeting/:meetingId",
+      "page": "page.clips.share-meeting-detail",
+      "title": "Share Meeting Detail",
+      "routeArtifact": "apps/workbench/dist/suites/clips/clips-share-meeting-meetingid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-clips-clips-share-meeting-meetingid.png",
+      "blocks": [
+        "block.clips.share-meeting-detail"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "clips.block.block.clips.archive.empty",
+      "block": "block.clips.archive",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.archive.error",
+      "block": "block.clips.archive",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.archive.loading",
+      "block": "block.clips.archive",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.archive.long-content",
+      "block": "block.clips.archive",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.archive.ready",
+      "block": "block.clips.archive",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report-done.empty",
+      "block": "block.clips.bug-report-done",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report-done.error",
+      "block": "block.clips.bug-report-done",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report-done.loading",
+      "block": "block.clips.bug-report-done",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report-done.long-content",
+      "block": "block.clips.bug-report-done",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report-done.ready",
+      "block": "block.clips.bug-report-done",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report.empty",
+      "block": "block.clips.bug-report",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report.error",
+      "block": "block.clips.bug-report",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report.loading",
+      "block": "block.clips.bug-report",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report.long-content",
+      "block": "block.clips.bug-report",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.bug-report.ready",
+      "block": "block.clips.bug-report",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.dictate.empty",
+      "block": "block.clips.dictate",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.dictate.error",
+      "block": "block.clips.dictate",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.dictate.loading",
+      "block": "block.clips.dictate",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.dictate.long-content",
+      "block": "block.clips.dictate",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.dictate.ready",
+      "block": "block.clips.dictate",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.download.empty",
+      "block": "block.clips.download",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.download.error",
+      "block": "block.clips.download",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.download.loading",
+      "block": "block.clips.download",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.download.long-content",
+      "block": "block.clips.download",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.download.ready",
+      "block": "block.clips.download",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.embed-detail.empty",
+      "block": "block.clips.embed-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.embed-detail.error",
+      "block": "block.clips.embed-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.embed-detail.loading",
+      "block": "block.clips.embed-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.embed-detail.long-content",
+      "block": "block.clips.embed-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.embed-detail.ready",
+      "block": "block.clips.embed-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail-detail.empty",
+      "block": "block.clips.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail-detail.error",
+      "block": "block.clips.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail-detail.loading",
+      "block": "block.clips.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail-detail.long-content",
+      "block": "block.clips.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail-detail.ready",
+      "block": "block.clips.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail.empty",
+      "block": "block.clips.extensions-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail.error",
+      "block": "block.clips.extensions-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail.loading",
+      "block": "block.clips.extensions-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail.long-content",
+      "block": "block.clips.extensions-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-detail.ready",
+      "block": "block.clips.extensions-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-index.empty",
+      "block": "block.clips.extensions-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-index.error",
+      "block": "block.clips.extensions-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-index.loading",
+      "block": "block.clips.extensions-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-index.long-content",
+      "block": "block.clips.extensions-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions-index.ready",
+      "block": "block.clips.extensions-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions.empty",
+      "block": "block.clips.extensions",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions.error",
+      "block": "block.clips.extensions",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions.loading",
+      "block": "block.clips.extensions",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions.long-content",
+      "block": "block.clips.extensions",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.extensions.ready",
+      "block": "block.clips.extensions",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home-2.empty",
+      "block": "block.clips.home-2",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home-2.error",
+      "block": "block.clips.home-2",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home-2.loading",
+      "block": "block.clips.home-2",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home-2.long-content",
+      "block": "block.clips.home-2",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home-2.ready",
+      "block": "block.clips.home-2",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home.empty",
+      "block": "block.clips.home",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home.error",
+      "block": "block.clips.home",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home.loading",
+      "block": "block.clips.home",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home.long-content",
+      "block": "block.clips.home",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.home.ready",
+      "block": "block.clips.home",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.insights-index.empty",
+      "block": "block.clips.insights-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.insights-index.error",
+      "block": "block.clips.insights-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.insights-index.loading",
+      "block": "block.clips.insights-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.insights-index.long-content",
+      "block": "block.clips.insights-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.insights-index.ready",
+      "block": "block.clips.insights-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.invite-detail.empty",
+      "block": "block.clips.invite-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.invite-detail.error",
+      "block": "block.clips.invite-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.invite-detail.loading",
+      "block": "block.clips.invite-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.invite-detail.long-content",
+      "block": "block.clips.invite-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.invite-detail.ready",
+      "block": "block.clips.invite-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-folder-detail.empty",
+      "block": "block.clips.library-folder-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-folder-detail.error",
+      "block": "block.clips.library-folder-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-folder-detail.loading",
+      "block": "block.clips.library-folder-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-folder-detail.long-content",
+      "block": "block.clips.library-folder-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-folder-detail.ready",
+      "block": "block.clips.library-folder-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-index.empty",
+      "block": "block.clips.library-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-index.error",
+      "block": "block.clips.library-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-index.loading",
+      "block": "block.clips.library-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-index.long-content",
+      "block": "block.clips.library-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.library-index.ready",
+      "block": "block.clips.library-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-detail.empty",
+      "block": "block.clips.meetings-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-detail.error",
+      "block": "block.clips.meetings-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-detail.loading",
+      "block": "block.clips.meetings-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-detail.long-content",
+      "block": "block.clips.meetings-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-detail.ready",
+      "block": "block.clips.meetings-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-index.empty",
+      "block": "block.clips.meetings-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-index.error",
+      "block": "block.clips.meetings-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-index.loading",
+      "block": "block.clips.meetings-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-index.long-content",
+      "block": "block.clips.meetings-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.meetings-index.ready",
+      "block": "block.clips.meetings-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.notifications.empty",
+      "block": "block.clips.notifications",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.notifications.error",
+      "block": "block.clips.notifications",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.notifications.loading",
+      "block": "block.clips.notifications",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.notifications.long-content",
+      "block": "block.clips.notifications",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.notifications.ready",
+      "block": "block.clips.notifications",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.r-detail.empty",
+      "block": "block.clips.r-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.r-detail.error",
+      "block": "block.clips.r-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.r-detail.loading",
+      "block": "block.clips.r-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.r-detail.long-content",
+      "block": "block.clips.r-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.r-detail.ready",
+      "block": "block.clips.r-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.record.empty",
+      "block": "block.clips.record",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.record.error",
+      "block": "block.clips.record",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.record.loading",
+      "block": "block.clips.record",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.record.long-content",
+      "block": "block.clips.record",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.record.ready",
+      "block": "block.clips.record",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-index.empty",
+      "block": "block.clips.settings-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-index.error",
+      "block": "block.clips.settings-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-index.loading",
+      "block": "block.clips.settings-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-index.long-content",
+      "block": "block.clips.settings-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-index.ready",
+      "block": "block.clips.settings-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-organization.empty",
+      "block": "block.clips.settings-organization",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-organization.error",
+      "block": "block.clips.settings-organization",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-organization.loading",
+      "block": "block.clips.settings-organization",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-organization.long-content",
+      "block": "block.clips.settings-organization",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.settings-organization.ready",
+      "block": "block.clips.settings-organization",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-detail.empty",
+      "block": "block.clips.share-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-detail.error",
+      "block": "block.clips.share-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-detail.loading",
+      "block": "block.clips.share-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-detail.long-content",
+      "block": "block.clips.share-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-detail.ready",
+      "block": "block.clips.share-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-meeting-detail.empty",
+      "block": "block.clips.share-meeting-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-meeting-detail.error",
+      "block": "block.clips.share-meeting-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-meeting-detail.loading",
+      "block": "block.clips.share-meeting-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-meeting-detail.long-content",
+      "block": "block.clips.share-meeting-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.share-meeting-detail.ready",
+      "block": "block.clips.share-meeting-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail-folder-detail.empty",
+      "block": "block.clips.spaces-detail-folder-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail-folder-detail.error",
+      "block": "block.clips.spaces-detail-folder-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail-folder-detail.loading",
+      "block": "block.clips.spaces-detail-folder-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail-folder-detail.long-content",
+      "block": "block.clips.spaces-detail-folder-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail-folder-detail.ready",
+      "block": "block.clips.spaces-detail-folder-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail.empty",
+      "block": "block.clips.spaces-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail.error",
+      "block": "block.clips.spaces-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail.loading",
+      "block": "block.clips.spaces-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail.long-content",
+      "block": "block.clips.spaces-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-detail.ready",
+      "block": "block.clips.spaces-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-index.empty",
+      "block": "block.clips.spaces-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-index.error",
+      "block": "block.clips.spaces-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-index.loading",
+      "block": "block.clips.spaces-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-index.long-content",
+      "block": "block.clips.spaces-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.spaces-index.ready",
+      "block": "block.clips.spaces-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.trash.empty",
+      "block": "block.clips.trash",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.trash.error",
+      "block": "block.clips.trash",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.trash.loading",
+      "block": "block.clips.trash",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.trash.long-content",
+      "block": "block.clips.trash",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.trash.ready",
+      "block": "block.clips.trash",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.wispr.empty",
+      "block": "block.clips.wispr",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.wispr.error",
+      "block": "block.clips.wispr",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.wispr.loading",
+      "block": "block.clips.wispr",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.wispr.long-content",
+      "block": "block.clips.wispr",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "clips.block.block.clips.wispr.ready",
+      "block": "block.clips.wispr",
+      "component": "media-grid",
+      "state": "ready"
+    }
+  ]
+}

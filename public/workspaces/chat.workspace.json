@@ -1,0 +1,494 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/chat-workspace",
+  "workspace": "chat",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "agent-panel",
+    "chat-app",
+    "chat-home-page",
+    "chat-chat-detail-page",
+    "chat-database-page",
+    "chat-extensions-detail-detail-page",
+    "chat-extensions-detail-page",
+    "chat-extensions-index-page",
+    "chat-extensions-page",
+    "chat-observability-page",
+    "chat-settings-page",
+    "chat-team-page",
+    "chat-home-block",
+    "chat-chat-detail-block",
+    "chat-database-block",
+    "chat-extensions-detail-detail-block",
+    "chat-extensions-detail-block",
+    "chat-extensions-index-block",
+    "chat-extensions-block",
+    "chat-observability-block",
+    "chat-settings-block",
+    "chat-team-block"
+  ],
+  "installGraph": {
+    "root": "chat-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "agent-panel",
+      "chat-app",
+      "chat-home-page",
+      "chat-chat-detail-page",
+      "chat-database-page",
+      "chat-extensions-detail-detail-page",
+      "chat-extensions-detail-page",
+      "chat-extensions-index-page",
+      "chat-extensions-page",
+      "chat-observability-page",
+      "chat-settings-page",
+      "chat-team-page",
+      "chat-home-block",
+      "chat-chat-detail-block",
+      "chat-database-block",
+      "chat-extensions-detail-detail-block",
+      "chat-extensions-detail-block",
+      "chat-extensions-index-block",
+      "chat-extensions-block",
+      "chat-observability-block",
+      "chat-settings-block",
+      "chat-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "chat",
+    "chat",
+    "database",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "observability",
+    "settings",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Chat",
+    "summary": "Chat Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.chat.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Home",
+          "route": "/chat"
+        },
+        {
+          "label": "Chat Detail",
+          "route": "/chat/chat/:threadId"
+        },
+        {
+          "label": "Database",
+          "route": "/chat/database"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/chat/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/chat/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/chat/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/chat/extensions"
+        },
+        {
+          "label": "Observability",
+          "route": "/chat/observability"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/chat",
+        "page": "page.chat.home",
+        "title": "Chat Home",
+        "blocks": [
+          "block.chat.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/_index.tsx"
+      },
+      {
+        "path": "/chat/chat/:threadId",
+        "page": "page.chat.chat-detail",
+        "title": "Chat Detail",
+        "blocks": [
+          "block.chat.chat-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "path": "/chat/database",
+        "page": "page.chat.database",
+        "title": "Database",
+        "blocks": [
+          "block.chat.database"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/database.tsx"
+      },
+      {
+        "path": "/chat/extensions/:id/:slug",
+        "page": "page.chat.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.chat.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/chat/extensions/:id",
+        "page": "page.chat.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.chat.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/chat/extensions",
+        "page": "page.chat.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.chat.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/chat/extensions",
+        "page": "page.chat.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.chat.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/chat/observability",
+        "page": "page.chat.observability",
+        "title": "Observability",
+        "blocks": [
+          "block.chat.observability"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/observability.tsx"
+      },
+      {
+        "path": "/chat/settings",
+        "page": "page.chat.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.chat.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/settings.tsx"
+      },
+      {
+        "path": "/chat/team",
+        "page": "page.chat.team",
+        "title": "Team",
+        "blocks": [
+          "block.chat.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.chat.home",
+        "title": "Chat Home",
+        "description": "Agent-Native chat route / derived from _index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.chat.chat-detail",
+        "title": "Chat Detail",
+        "description": "Agent-Native chat route /chat/:threadId derived from chat.$threadId.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "id": "page.chat.database",
+        "title": "Database",
+        "description": "Agent-Native chat route /database derived from database.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/database.tsx"
+      },
+      {
+        "id": "page.chat.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native chat route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.chat.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native chat route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.chat.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native chat route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.chat.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native chat route /extensions derived from extensions.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.chat.observability",
+        "title": "Observability",
+        "description": "Agent-Native chat route /observability derived from observability.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/observability.tsx"
+      },
+      {
+        "id": "page.chat.settings",
+        "title": "Settings",
+        "description": "Agent-Native chat route /settings derived from settings.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.chat.team",
+        "title": "Team",
+        "description": "Agent-Native chat route /team derived from team.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.chat.home",
+        "title": "Home",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.chat.chat-detail",
+        "title": "Chat Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "id": "block.chat.database",
+        "title": "Database",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/database.tsx"
+      },
+      {
+        "id": "block.chat.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.chat.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.chat.extensions-index",
+        "title": "Extensions Index",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.chat.extensions",
+        "title": "Extensions",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.chat.observability",
+        "title": "Observability",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/observability.tsx"
+      },
+      {
+        "id": "block.chat.settings",
+        "title": "Settings",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.chat.team",
+        "title": "Team",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "agent-panel",
+      "button",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Chat keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Chat in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Chat agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/chat",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/chat/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/chat/chat-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/chat/pages/chat-home-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-chat-detail-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-database-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-observability-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-settings-page.page.implementation.json",
+      "studio-ui/workspaces/chat/pages/chat-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/chat/blocks/chat-home-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-chat-detail-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-database-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-observability-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-settings-block.block.implementation.json",
+      "studio-ui/workspaces/chat/blocks/chat-team-block.block.implementation.json"
+    ]
+  }
+}

@@ -1,0 +1,839 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "calendar",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/calendar/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-calendar.png"
+  },
+  "routeCount": 20,
+  "blockStateCount": 100,
+  "routes": [
+    {
+      "galleryKey": "calendar.route.calendar",
+      "path": "/calendar/:",
+      "page": "page.calendar.catchall",
+      "title": "Catchall",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar.png",
+      "blocks": [
+        "block.calendar.catchall"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar",
+      "path": "/calendar",
+      "page": "page.calendar.home",
+      "title": "Calendar Home",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar.png",
+      "blocks": [
+        "block.calendar.home"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-availability",
+      "path": "/calendar/availability",
+      "page": "page.calendar.availability",
+      "title": "Availability",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-availability.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-availability.png",
+      "blocks": [
+        "block.calendar.availability"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-booking-links-id",
+      "path": "/calendar/booking-links/:id",
+      "page": "page.calendar.booking-links-detail",
+      "title": "Booking Links Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-booking-links-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-booking-links-id.png",
+      "blocks": [
+        "block.calendar.booking-links-detail"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-booking-links",
+      "path": "/calendar/booking-links",
+      "page": "page.calendar.booking-links-index",
+      "title": "Booking Links Index",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-booking-links.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-booking-links.png",
+      "blocks": [
+        "block.calendar.booking-links-index"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-booking-links",
+      "path": "/calendar/booking-links",
+      "page": "page.calendar.booking-links",
+      "title": "Booking Links",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-booking-links.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-booking-links.png",
+      "blocks": [
+        "block.calendar.booking-links"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-bookings",
+      "path": "/calendar/bookings",
+      "page": "page.calendar.bookings",
+      "title": "Bookings",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-bookings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-bookings.png",
+      "blocks": [
+        "block.calendar.bookings"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-extensions-id-slug",
+      "path": "/calendar/extensions/:id/:slug",
+      "page": "page.calendar.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-extensions-id-slug.png",
+      "blocks": [
+        "block.calendar.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-extensions-id",
+      "path": "/calendar/extensions/:id",
+      "page": "page.calendar.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-extensions-id.png",
+      "blocks": [
+        "block.calendar.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-extensions",
+      "path": "/calendar/extensions",
+      "page": "page.calendar.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-extensions.png",
+      "blocks": [
+        "block.calendar.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-extensions",
+      "path": "/calendar/extensions",
+      "page": "page.calendar.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-extensions.png",
+      "blocks": [
+        "block.calendar.extensions"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-settings",
+      "path": "/calendar/settings",
+      "page": "page.calendar.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-settings.png",
+      "blocks": [
+        "block.calendar.settings"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-team",
+      "path": "/calendar/team",
+      "page": "page.calendar.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-team.png",
+      "blocks": [
+        "block.calendar.team"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar",
+      "path": "/calendar",
+      "page": "page.calendar.home-2",
+      "title": "Calendar Home",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar.png",
+      "blocks": [
+        "block.calendar.home-2"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-book-slug",
+      "path": "/calendar/book/:slug",
+      "page": "page.calendar.book-detail",
+      "title": "Book Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-book-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-book-slug.png",
+      "blocks": [
+        "block.calendar.book-detail"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-book-username-slug",
+      "path": "/calendar/book/:username/:slug",
+      "page": "page.calendar.book-detail-detail",
+      "title": "Book Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-book-username-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-book-username-slug.png",
+      "blocks": [
+        "block.calendar.book-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-booking-og-meta",
+      "path": "/calendar/booking-og-meta",
+      "page": "page.calendar.booking-og-meta",
+      "title": "Booking Og Meta",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-booking-og-meta.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-booking-og-meta.png",
+      "blocks": [
+        "block.calendar.booking-og-meta"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-booking-manage-token",
+      "path": "/calendar/booking/manage/:token",
+      "page": "page.calendar.booking-manage-detail",
+      "title": "Booking Manage Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-booking-manage-token.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-booking-manage-token.png",
+      "blocks": [
+        "block.calendar.booking-manage-detail"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-event",
+      "path": "/calendar/event",
+      "page": "page.calendar.event",
+      "title": "Event",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-event.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-event.png",
+      "blocks": [
+        "block.calendar.event"
+      ]
+    },
+    {
+      "galleryKey": "calendar.route.calendar-meet-username-slug",
+      "path": "/calendar/meet/:username/:slug",
+      "page": "page.calendar.meet-detail-detail",
+      "title": "Meet Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-meet-username-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-calendar-calendar-meet-username-slug.png",
+      "blocks": [
+        "block.calendar.meet-detail-detail"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "calendar.block.block.calendar.availability.empty",
+      "block": "block.calendar.availability",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.availability.error",
+      "block": "block.calendar.availability",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.availability.loading",
+      "block": "block.calendar.availability",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.availability.long-content",
+      "block": "block.calendar.availability",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.availability.ready",
+      "block": "block.calendar.availability",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail-detail.empty",
+      "block": "block.calendar.book-detail-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail-detail.error",
+      "block": "block.calendar.book-detail-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail-detail.loading",
+      "block": "block.calendar.book-detail-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail-detail.long-content",
+      "block": "block.calendar.book-detail-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail-detail.ready",
+      "block": "block.calendar.book-detail-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail.empty",
+      "block": "block.calendar.book-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail.error",
+      "block": "block.calendar.book-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail.loading",
+      "block": "block.calendar.book-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail.long-content",
+      "block": "block.calendar.book-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.book-detail.ready",
+      "block": "block.calendar.book-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-detail.empty",
+      "block": "block.calendar.booking-links-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-detail.error",
+      "block": "block.calendar.booking-links-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-detail.loading",
+      "block": "block.calendar.booking-links-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-detail.long-content",
+      "block": "block.calendar.booking-links-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-detail.ready",
+      "block": "block.calendar.booking-links-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-index.empty",
+      "block": "block.calendar.booking-links-index",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-index.error",
+      "block": "block.calendar.booking-links-index",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-index.loading",
+      "block": "block.calendar.booking-links-index",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-index.long-content",
+      "block": "block.calendar.booking-links-index",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links-index.ready",
+      "block": "block.calendar.booking-links-index",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links.empty",
+      "block": "block.calendar.booking-links",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links.error",
+      "block": "block.calendar.booking-links",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links.loading",
+      "block": "block.calendar.booking-links",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links.long-content",
+      "block": "block.calendar.booking-links",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-links.ready",
+      "block": "block.calendar.booking-links",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-manage-detail.empty",
+      "block": "block.calendar.booking-manage-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-manage-detail.error",
+      "block": "block.calendar.booking-manage-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-manage-detail.loading",
+      "block": "block.calendar.booking-manage-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-manage-detail.long-content",
+      "block": "block.calendar.booking-manage-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-manage-detail.ready",
+      "block": "block.calendar.booking-manage-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-og-meta.empty",
+      "block": "block.calendar.booking-og-meta",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-og-meta.error",
+      "block": "block.calendar.booking-og-meta",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-og-meta.loading",
+      "block": "block.calendar.booking-og-meta",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-og-meta.long-content",
+      "block": "block.calendar.booking-og-meta",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.booking-og-meta.ready",
+      "block": "block.calendar.booking-og-meta",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.bookings.empty",
+      "block": "block.calendar.bookings",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.bookings.error",
+      "block": "block.calendar.bookings",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.bookings.loading",
+      "block": "block.calendar.bookings",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.bookings.long-content",
+      "block": "block.calendar.bookings",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.bookings.ready",
+      "block": "block.calendar.bookings",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.catchall.empty",
+      "block": "block.calendar.catchall",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.catchall.error",
+      "block": "block.calendar.catchall",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.catchall.loading",
+      "block": "block.calendar.catchall",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.catchall.long-content",
+      "block": "block.calendar.catchall",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.catchall.ready",
+      "block": "block.calendar.catchall",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.event.empty",
+      "block": "block.calendar.event",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.event.error",
+      "block": "block.calendar.event",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.event.loading",
+      "block": "block.calendar.event",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.event.long-content",
+      "block": "block.calendar.event",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.event.ready",
+      "block": "block.calendar.event",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail-detail.empty",
+      "block": "block.calendar.extensions-detail-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail-detail.error",
+      "block": "block.calendar.extensions-detail-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail-detail.loading",
+      "block": "block.calendar.extensions-detail-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail-detail.long-content",
+      "block": "block.calendar.extensions-detail-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail-detail.ready",
+      "block": "block.calendar.extensions-detail-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail.empty",
+      "block": "block.calendar.extensions-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail.error",
+      "block": "block.calendar.extensions-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail.loading",
+      "block": "block.calendar.extensions-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail.long-content",
+      "block": "block.calendar.extensions-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-detail.ready",
+      "block": "block.calendar.extensions-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-index.empty",
+      "block": "block.calendar.extensions-index",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-index.error",
+      "block": "block.calendar.extensions-index",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-index.loading",
+      "block": "block.calendar.extensions-index",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-index.long-content",
+      "block": "block.calendar.extensions-index",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions-index.ready",
+      "block": "block.calendar.extensions-index",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions.empty",
+      "block": "block.calendar.extensions",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions.error",
+      "block": "block.calendar.extensions",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions.loading",
+      "block": "block.calendar.extensions",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions.long-content",
+      "block": "block.calendar.extensions",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.extensions.ready",
+      "block": "block.calendar.extensions",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home-2.empty",
+      "block": "block.calendar.home-2",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home-2.error",
+      "block": "block.calendar.home-2",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home-2.loading",
+      "block": "block.calendar.home-2",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home-2.long-content",
+      "block": "block.calendar.home-2",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home-2.ready",
+      "block": "block.calendar.home-2",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home.empty",
+      "block": "block.calendar.home",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home.error",
+      "block": "block.calendar.home",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home.loading",
+      "block": "block.calendar.home",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home.long-content",
+      "block": "block.calendar.home",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.home.ready",
+      "block": "block.calendar.home",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.meet-detail-detail.empty",
+      "block": "block.calendar.meet-detail-detail",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.meet-detail-detail.error",
+      "block": "block.calendar.meet-detail-detail",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.meet-detail-detail.loading",
+      "block": "block.calendar.meet-detail-detail",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.meet-detail-detail.long-content",
+      "block": "block.calendar.meet-detail-detail",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.meet-detail-detail.ready",
+      "block": "block.calendar.meet-detail-detail",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.settings.empty",
+      "block": "block.calendar.settings",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.settings.error",
+      "block": "block.calendar.settings",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.settings.loading",
+      "block": "block.calendar.settings",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.settings.long-content",
+      "block": "block.calendar.settings",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.settings.ready",
+      "block": "block.calendar.settings",
+      "component": "calendar",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.team.empty",
+      "block": "block.calendar.team",
+      "component": "calendar",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.team.error",
+      "block": "block.calendar.team",
+      "component": "calendar",
+      "state": "error"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.team.loading",
+      "block": "block.calendar.team",
+      "component": "calendar",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.team.long-content",
+      "block": "block.calendar.team",
+      "component": "calendar",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "calendar.block.block.calendar.team.ready",
+      "block": "block.calendar.team",
+      "component": "calendar",
+      "state": "ready"
+    }
+  ]
+}

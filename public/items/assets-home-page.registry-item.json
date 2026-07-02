@@ -1,0 +1,54 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "assets-home-page",
+  "type": "registry:page",
+  "title": "Assets Home",
+  "description": "Agent-Native assets route / derived from _index.tsx.",
+  "dependencies": [],
+  "registryDependencies": [
+    "assets-home-block",
+    "media-grid",
+    "panel",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "packages/registry/generated/workspaces/assets/pages/assets-home-page.page.json",
+      "target": "studio-ui/workspaces/assets/pages/assets-home-page.page.json",
+      "type": "registry:page",
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/workspace-page.generated.json\",\n  \"schemaVersion\": \"2026-06-29.agent-native-template-workspace\",\n  \"workspace\": \"assets\",\n  \"page\": {\n    \"id\": \"page.assets.home\",\n    \"title\": \"Assets Home\",\n    \"description\": \"Agent-Native assets route / derived from _index.tsx.\",\n    \"components\": [\n      \"media-grid\",\n      \"panel\",\n      \"button\"\n    ],\n    \"sourceRouteFile\": \"agent-native/templates/assets/app/routes/_index.tsx\"\n  },\n  \"routes\": [\n    {\n      \"path\": \"/assets\",\n      \"page\": \"page.assets.home\",\n      \"title\": \"Assets Home\",\n      \"blocks\": [\n        \"block.assets.home\"\n      ],\n      \"sourceRouteFile\": \"agent-native/templates/assets/app/routes/_index.tsx\"\n    }\n  ],\n  \"blocks\": [\n    {\n      \"id\": \"block.assets.home\",\n      \"title\": \"Home\",\n      \"component\": \"media-grid\",\n      \"stateExamples\": [\n        \"loading\",\n        \"empty\",\n        \"error\",\n        \"long-content\"\n      ],\n      \"sourceRouteFile\": \"agent-native/templates/assets/app/routes/_index.tsx\"\n    }\n  ],\n  \"components\": [\n    \"button\",\n    \"media-grid\",\n    \"panel\"\n  ],\n  \"stateFixtures\": {\n    \"longContent\": \"Assets keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.\",\n    \"empty\": \"No records are loaded for Assets in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.\",\n    \"error\": \"Assets agent or action state is display-only until Jami Harness owns the runtime execution path.\"\n  },\n  \"provenance\": {\n    \"source\": \"registry/workspaces/assets/workspace-shell.json\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:6fe7c3fd21f3d2bcd37fa6ee9f735f6d443e9054df884207a027234e19ab9873"
+    },
+    {
+      "path": "packages/registry/generated/workspaces/assets/pages/assets-home-page.page.implementation.json",
+      "target": "studio-ui/workspaces/assets/pages/assets-home-page.page.implementation.json",
+      "type": "registry:page",
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/workspace-page-implementation.generated.json\",\n  \"schemaVersion\": \"2026-06-29.agent-native-template-workspace\",\n  \"workspace\": \"assets\",\n  \"implementationStatus\": \"mounted-react-workspace-page\",\n  \"source\": \"registry/workspaces/assets/workspace-shell.json\",\n  \"primitiveFactory\": {\n    \"version\": \"2026-06-09.framework-neutral-component-factory\",\n    \"source\": \"packages/ui/src/primitive-components.mjs\",\n    \"implementationStatus\": \"framework-neutral-component-factory\",\n    \"runtimeReactRenderer\": false,\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"radixWrapper\": false\n  },\n  \"page\": {\n    \"id\": \"page.assets.home\",\n    \"title\": \"Assets Home\",\n    \"description\": \"Agent-Native assets route / derived from _index.tsx.\",\n    \"components\": [\n      \"media-grid\",\n      \"panel\",\n      \"button\"\n    ],\n    \"sourceRouteFile\": \"agent-native/templates/assets/app/routes/_index.tsx\"\n  },\n  \"routes\": [\n    {\n      \"path\": \"/assets\",\n      \"page\": \"page.assets.home\",\n      \"title\": \"Assets Home\",\n      \"blocks\": [\n        \"block.assets.home\"\n      ],\n      \"sourceRouteFile\": \"agent-native/templates/assets/app/routes/_index.tsx\"\n    }\n  ],\n  \"blocks\": [\n    {\n      \"id\": \"block.assets.home\",\n      \"title\": \"Home\",\n      \"component\": \"media-grid\",\n      \"implementationFile\": \"studio-ui/workspaces/assets/blocks/assets-home-block.block.implementation.json\",\n      \"renderedStates\": [\n        \"ready\",\n        \"loading\",\n        \"empty\",\n        \"error\",\n        \"long-content\"\n      ]\n    }\n  ],\n  \"components\": [\n    \"button\",\n    \"media-grid\",\n    \"panel\"\n  ],\n  \"agentManifests\": [\n    {\n      \"component\": \"button\",\n      \"manifestId\": \"agm_button\",\n      \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n      \"schemaVersion\": \"2026-06-23.agent-manifest\",\n      \"propContractVersion\": \"2026-06-09.ui-props\",\n      \"actionSlots\": [\n        {\n          \"slotId\": \"slot_button_on_press\",\n          \"name\": \"onPress\",\n          \"label\": \"Invoke button action\",\n          \"harnessRoute\": \"harness://actions/button-on-press\",\n          \"risk\": \"write\",\n          \"policyScope\": \"data:write\",\n          \"confirmationMode\": \"approval_required\",\n          \"inputSchema\": {\n            \"type\": \"object\",\n            \"additionalProperties\": false,\n            \"required\": [],\n            \"properties\": {\n              \"reason\": {\n                \"type\": \"string\"\n              }\n            }\n          },\n          \"outputSchema\": {\n            \"type\": \"object\",\n            \"additionalProperties\": false,\n            \"required\": [\n              \"status\",\n              \"actionId\",\n              \"policyDecision\"\n            ],\n            \"properties\": {\n              \"status\": {\n                \"type\": \"string\",\n                \"enum\": [\n                  \"accepted\",\n                  \"denied\"\n                ]\n              },\n              \"actionId\": {\n                \"type\": \"string\",\n                \"pattern\": \"^act_[a-z0-9][a-z0-9_-]*$\"\n              },\n              \"policyDecision\": {\n                \"type\": \"string\",\n                \"enum\": [\n                  \"allow\",\n                  \"deny\",\n                  \"needs_approval\",\n                  \"needs_owner\"\n                ]\n              },\n              \"evidenceRef\": {\n                \"type\": \"string\",\n                \"pattern\": \"^ev_[a-z0-9][a-z0-9_-]*$\"\n              }\n            }\n          },\n          \"safetyConstraints\": [\n            \"policy-required\",\n            \"audit-required\",\n            \"evidence-required\",\n            \"no-inline-secret-values\",\n            \"no-model-provided-code\",\n            \"schema-validated-input\",\n            \"schema-validated-output\"\n          ]\n        }\n      ],\n      \"bindingMode\": \"resident-component\",\n      \"execution\": \"display-only-data-never-code\"\n    },\n    {\n      \"component\": \"media-grid\",\n      \"manifestId\": \"agm_media_grid\",\n      \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n      \"schemaVersion\": \"2026-06-23.agent-manifest\",\n      \"propContractVersion\": \"2026-06-09.ui-props\",\n      \"actionSlots\": [],\n      \"bindingMode\": \"resident-component\",\n      \"execution\": \"display-only-data-never-code\"\n    },\n    {\n      \"component\": \"panel\",\n      \"manifestId\": \"agm_panel\",\n      \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n      \"schemaVersion\": \"2026-06-23.agent-manifest\",\n      \"propContractVersion\": \"2026-06-09.ui-props\",\n      \"actionSlots\": [],\n      \"bindingMode\": \"resident-component\",\n      \"execution\": \"display-only-data-never-code\"\n    }\n  ],\n  \"evidence\": {\n    \"renderedBlockCount\": 1,\n    \"responsiveLayout\": \"single-column-safe mounted React composition\",\n    \"a11yStructure\": \"page routes compose labelled resident React block implementations\",\n    \"displayOnly\": true\n  },\n  \"runtime\": {\n    \"runtimeReactRenderer\": true,\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"radixWrapper\": true\n  },\n  \"reactMount\": {\n    \"schemaVersion\": \"2026-06-12.mounted-react-workspace-routes\",\n    \"source\": \"packages/ui/src/workspaces.mjs\",\n    \"packageName\": \"@jami-studio/ui\",\n    \"rendererBoundary\": \"React workspace components are install-time/app code, not harness-originated renderer payload execution.\",\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"serverRenderedStaticRoutes\": true,\n    \"routeArtifact\": \"apps/workbench/dist/suites/assets/assets.html\"\n  },\n  \"provenance\": {\n    \"source\": \"registry/workspaces/assets/workspace-shell.json\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:6ee53dd37f18cbdf9cb7d0cfea5742955b753678f88bbb8f99f540ce5e6052fb"
+    }
+  ],
+  "meta": {
+    "packageName": "@jami-studio/assets-home-page",
+    "workspace": "assets",
+    "lifecycle": {
+      "id": "page.assets.home",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "sourceHash": "sha256:f8bbb28d4464a214261d439c4f6efc0c451e73e8e639db668f0cffd66fa78b2d",
+      "migrationNotes": "Generated standalone page descriptor plus mounted React page route evidence from the authored workspace shell."
+    },
+    "tokenRequirements": [],
+    "provenance": {
+      "source": "registry/workspaces/assets/workspace-shell.json",
+      "license": "Apache-2.0",
+      "reviewedAt": "2026-06-09",
+      "copiedSource": false
+    },
+    "compatibility": {
+      "shadcn": "Studio UI registry metadata generated from Agent-Native template route inventory; source app remains upstream-owned until forked into Jami packages.",
+      "tailwind": "Consumes generated --jami-* CSS variables in the Studio UI workbench port.",
+      "react": "19.2.7"
+    },
+    "agentManifest": null
+  }
+}

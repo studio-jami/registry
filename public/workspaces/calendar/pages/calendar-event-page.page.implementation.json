@@ -1,0 +1,183 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "calendar",
+  "implementationStatus": "mounted-react-workspace-page",
+  "source": "registry/workspaces/calendar/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "page": {
+    "id": "page.calendar.event",
+    "title": "Event",
+    "description": "Agent-Native calendar route /event derived from event.tsx.",
+    "components": [
+      "calendar",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/calendar/app/routes/event.tsx"
+  },
+  "routes": [
+    {
+      "path": "/calendar/event",
+      "page": "page.calendar.event",
+      "title": "Event",
+      "blocks": [
+        "block.calendar.event"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/event.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.calendar.event",
+      "title": "Event",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-event-block.block.implementation.json",
+      "renderedStates": [
+        "ready",
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ]
+    }
+  ],
+  "components": [
+    "button",
+    "calendar",
+    "panel"
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "calendar",
+      "manifestId": "agm_calendar",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedBlockCount": 1,
+    "responsiveLayout": "single-column-safe mounted React composition",
+    "a11yStructure": "page routes compose labelled resident React block implementations",
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/calendar/calendar-event.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/calendar/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "brain",
+  "block": {
+    "id": "block.brain.extensions",
+    "title": "Extensions",
+    "component": "docs-source-panel",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.tsx"
+  },
+  "routes": [
+    {
+      "path": "/brain/extensions",
+      "page": "page.brain.extensions",
+      "title": "Extensions"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.brain.extensions",
+      "title": "Extensions"
+    }
+  ],
+  "component": "docs-source-panel",
+  "stateFixtures": {
+    "loading": "Extensions includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Brain in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Brain agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Agent-Native Brain keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/brain/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "dispatch",
+  "page": {
+    "id": "page.dispatch.metrics",
+    "title": "Metrics",
+    "description": "Agent-Native dispatch route /metrics derived from metrics.tsx.",
+    "components": [
+      "agent-panel",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/dispatch/app/routes/metrics.tsx"
+  },
+  "routes": [
+    {
+      "path": "/dispatch/metrics",
+      "page": "page.dispatch.metrics",
+      "title": "Metrics",
+      "blocks": [
+        "block.dispatch.metrics"
+      ],
+      "sourceRouteFile": "agent-native/templates/dispatch/app/routes/metrics.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.dispatch.metrics",
+      "title": "Metrics",
+      "component": "agent-panel",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error"
+      ],
+      "sourceRouteFile": "agent-native/templates/dispatch/app/routes/metrics.tsx"
+    }
+  ],
+  "components": [
+    "agent-panel",
+    "button",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Dispatch keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Dispatch in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Dispatch agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/dispatch/workspace-shell.json",
+    "copiedSource": false
+  }
+}

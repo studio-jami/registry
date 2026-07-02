@@ -1,0 +1,440 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "plan",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/plan/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.plan.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Home",
+        "route": "/plan"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/plan/extensions/:id/:slug"
+      },
+      {
+        "label": "Extensions Detail",
+        "route": "/plan/extensions/:id"
+      },
+      {
+        "label": "Extensions Index",
+        "route": "/plan/extensions"
+      },
+      {
+        "label": "Extensions",
+        "route": "/plan/extensions"
+      },
+      {
+        "label": "Local Plans Detail",
+        "route": "/plan/local-plans/:slug"
+      },
+      {
+        "label": "Plans Detail",
+        "route": "/plan/plans/:id"
+      },
+      {
+        "label": "Plans",
+        "route": "/plan/plans"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/plan",
+      "page": "page.plan.home",
+      "title": "Plan Home",
+      "blocks": [
+        "block.plan.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/_index.tsx"
+    },
+    {
+      "path": "/plan/extensions/:id/:slug",
+      "page": "page.plan.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.plan.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/plan/extensions/:id",
+      "page": "page.plan.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.plan.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/plan/extensions",
+      "page": "page.plan.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.plan.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/plan/extensions",
+      "page": "page.plan.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.plan.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/plan/local-plans/:slug",
+      "page": "page.plan.local-plans-detail",
+      "title": "Local Plans Detail",
+      "blocks": [
+        "block.plan.local-plans-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/local-plans.$slug.tsx"
+    },
+    {
+      "path": "/plan/plans/:id",
+      "page": "page.plan.plans-detail",
+      "title": "Plans Detail",
+      "blocks": [
+        "block.plan.plans-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.$id.tsx"
+    },
+    {
+      "path": "/plan/plans",
+      "page": "page.plan.plans",
+      "title": "Plans",
+      "blocks": [
+        "block.plan.plans"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.tsx"
+    },
+    {
+      "path": "/plan/recaps/:id",
+      "page": "page.plan.recaps-detail",
+      "title": "Recaps Detail",
+      "blocks": [
+        "block.plan.recaps-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.$id.tsx"
+    },
+    {
+      "path": "/plan/recaps",
+      "page": "page.plan.recaps",
+      "title": "Recaps",
+      "blocks": [
+        "block.plan.recaps"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.tsx"
+    },
+    {
+      "path": "/plan/settings",
+      "page": "page.plan.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.plan.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/settings.tsx"
+    },
+    {
+      "path": "/plan/team",
+      "page": "page.plan.team",
+      "title": "Team",
+      "blocks": [
+        "block.plan.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/plan/app/routes/team.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.plan.home",
+      "title": "Plan Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.local-plans-detail",
+      "title": "Local Plans Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-local-plans-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.plans-detail",
+      "title": "Plans Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-plans-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.plans",
+      "title": "Plans",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-plans-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.recaps-detail",
+      "title": "Recaps Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-recaps-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.recaps",
+      "title": "Recaps",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-recaps-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.plan.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/plan/pages/plan-team-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.plan.home",
+      "title": "Home",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.extensions-index",
+      "title": "Extensions Index",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.extensions",
+      "title": "Extensions",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.local-plans-detail",
+      "title": "Local Plans Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-local-plans-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.plans-detail",
+      "title": "Plans Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-plans-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.plans",
+      "title": "Plans",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-plans-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.recaps-detail",
+      "title": "Recaps Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-recaps-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.recaps",
+      "title": "Recaps",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-recaps-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.settings",
+      "title": "Settings",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.plan.team",
+      "title": "Team",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/plan/blocks/plan-team-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "docs-source-panel",
+      "manifestId": "agm_docs_source_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 12,
+    "renderedBlockCount": 12,
+    "routeCount": 12,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/plan/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/plan/workspace-shell.json",
+    "copiedSource": false
+  }
+}

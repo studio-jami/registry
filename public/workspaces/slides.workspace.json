@@ -1,0 +1,661 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/slides-workspace",
+  "workspace": "slides",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "media-grid",
+    "slides-app",
+    "slides-catchall-page",
+    "slides-home-page",
+    "slides-deck-detail-page",
+    "slides-deck-detail-present-page",
+    "slides-design-systems-page",
+    "slides-extensions-detail-detail-page",
+    "slides-extensions-detail-page",
+    "slides-extensions-index-page",
+    "slides-extensions-page",
+    "slides-p-detail-page",
+    "slides-settings-page",
+    "slides-share-detail-page",
+    "slides-slide-page",
+    "slides-team-page",
+    "slides-catchall-block",
+    "slides-home-block",
+    "slides-deck-detail-block",
+    "slides-deck-detail-present-block",
+    "slides-design-systems-block",
+    "slides-extensions-detail-detail-block",
+    "slides-extensions-detail-block",
+    "slides-extensions-index-block",
+    "slides-extensions-block",
+    "slides-p-detail-block",
+    "slides-settings-block",
+    "slides-share-detail-block",
+    "slides-slide-block",
+    "slides-team-block"
+  ],
+  "installGraph": {
+    "root": "slides-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "slides-app",
+      "slides-catchall-page",
+      "slides-home-page",
+      "slides-deck-detail-page",
+      "slides-deck-detail-present-page",
+      "slides-design-systems-page",
+      "slides-extensions-detail-detail-page",
+      "slides-extensions-detail-page",
+      "slides-extensions-index-page",
+      "slides-extensions-page",
+      "slides-p-detail-page",
+      "slides-settings-page",
+      "slides-share-detail-page",
+      "slides-slide-page",
+      "slides-team-page",
+      "slides-catchall-block",
+      "slides-home-block",
+      "slides-deck-detail-block",
+      "slides-deck-detail-present-block",
+      "slides-design-systems-block",
+      "slides-extensions-detail-detail-block",
+      "slides-extensions-detail-block",
+      "slides-extensions-index-block",
+      "slides-extensions-block",
+      "slides-p-detail-block",
+      "slides-settings-block",
+      "slides-share-detail-block",
+      "slides-slide-block",
+      "slides-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":",
+    "slides",
+    "deck",
+    "deck",
+    "design-systems",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "p",
+    "settings",
+    "share",
+    "slide",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Slides",
+    "summary": "Agent-Native Slides Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.slides.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Catchall",
+          "route": "/slides/:"
+        },
+        {
+          "label": "Home",
+          "route": "/slides"
+        },
+        {
+          "label": "Deck Detail",
+          "route": "/slides/deck/:id"
+        },
+        {
+          "label": "Deck Detail Present",
+          "route": "/slides/deck/:id/present"
+        },
+        {
+          "label": "Design Systems",
+          "route": "/slides/design-systems"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/slides/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/slides/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/slides/extensions"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/slides/:",
+        "page": "page.slides.catchall",
+        "title": "Catchall",
+        "blocks": [
+          "block.slides.catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/$.tsx"
+      },
+      {
+        "path": "/slides",
+        "page": "page.slides.home",
+        "title": "Slides Home",
+        "blocks": [
+          "block.slides.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/_index.tsx"
+      },
+      {
+        "path": "/slides/deck/:id",
+        "page": "page.slides.deck-detail",
+        "title": "Deck Detail",
+        "blocks": [
+          "block.slides.deck-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/deck.$id.tsx"
+      },
+      {
+        "path": "/slides/deck/:id/present",
+        "page": "page.slides.deck-detail-present",
+        "title": "Deck Detail Present",
+        "blocks": [
+          "block.slides.deck-detail-present"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/deck.$id_.present.tsx"
+      },
+      {
+        "path": "/slides/design-systems",
+        "page": "page.slides.design-systems",
+        "title": "Design Systems",
+        "blocks": [
+          "block.slides.design-systems"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/design-systems.tsx"
+      },
+      {
+        "path": "/slides/extensions/:id/:slug",
+        "page": "page.slides.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.slides.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/slides/extensions/:id",
+        "page": "page.slides.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.slides.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/slides/extensions",
+        "page": "page.slides.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.slides.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/slides/extensions",
+        "page": "page.slides.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.slides.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/slides/p/:id",
+        "page": "page.slides.p-detail",
+        "title": "P Detail",
+        "blocks": [
+          "block.slides.p-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/p.$id.tsx"
+      },
+      {
+        "path": "/slides/settings",
+        "page": "page.slides.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.slides.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/settings.tsx"
+      },
+      {
+        "path": "/slides/share/:token",
+        "page": "page.slides.share-detail",
+        "title": "Share Detail",
+        "blocks": [
+          "block.slides.share-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/share.$token.tsx"
+      },
+      {
+        "path": "/slides/slide",
+        "page": "page.slides.slide",
+        "title": "Slide",
+        "blocks": [
+          "block.slides.slide"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/slide.tsx"
+      },
+      {
+        "path": "/slides/team",
+        "page": "page.slides.team",
+        "title": "Team",
+        "blocks": [
+          "block.slides.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.slides.catchall",
+        "title": "Catchall",
+        "description": "Agent-Native slides route /: derived from $.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/$.tsx"
+      },
+      {
+        "id": "page.slides.home",
+        "title": "Slides Home",
+        "description": "Agent-Native slides route / derived from _index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.slides.deck-detail",
+        "title": "Deck Detail",
+        "description": "Agent-Native slides route /deck/:id derived from deck.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/deck.$id.tsx"
+      },
+      {
+        "id": "page.slides.deck-detail-present",
+        "title": "Deck Detail Present",
+        "description": "Agent-Native slides route /deck/:id/present derived from deck.$id_.present.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/deck.$id_.present.tsx"
+      },
+      {
+        "id": "page.slides.design-systems",
+        "title": "Design Systems",
+        "description": "Agent-Native slides route /design-systems derived from design-systems.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/design-systems.tsx"
+      },
+      {
+        "id": "page.slides.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native slides route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.slides.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native slides route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.slides.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native slides route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.slides.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native slides route /extensions derived from extensions.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.slides.p-detail",
+        "title": "P Detail",
+        "description": "Agent-Native slides route /p/:id derived from p.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/p.$id.tsx"
+      },
+      {
+        "id": "page.slides.settings",
+        "title": "Settings",
+        "description": "Agent-Native slides route /settings derived from settings.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.slides.share-detail",
+        "title": "Share Detail",
+        "description": "Agent-Native slides route /share/:token derived from share.$token.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/share.$token.tsx"
+      },
+      {
+        "id": "page.slides.slide",
+        "title": "Slide",
+        "description": "Agent-Native slides route /slide derived from slide.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/slide.tsx"
+      },
+      {
+        "id": "page.slides.team",
+        "title": "Team",
+        "description": "Agent-Native slides route /team derived from team.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.slides.catchall",
+        "title": "Catchall",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/$.tsx"
+      },
+      {
+        "id": "block.slides.home",
+        "title": "Home",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.slides.deck-detail",
+        "title": "Deck Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/deck.$id.tsx"
+      },
+      {
+        "id": "block.slides.deck-detail-present",
+        "title": "Deck Detail Present",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/deck.$id_.present.tsx"
+      },
+      {
+        "id": "block.slides.design-systems",
+        "title": "Design Systems",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/design-systems.tsx"
+      },
+      {
+        "id": "block.slides.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.slides.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.slides.extensions-index",
+        "title": "Extensions Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.slides.extensions",
+        "title": "Extensions",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.slides.p-detail",
+        "title": "P Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/p.$id.tsx"
+      },
+      {
+        "id": "block.slides.settings",
+        "title": "Settings",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.slides.share-detail",
+        "title": "Share Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/share.$token.tsx"
+      },
+      {
+        "id": "block.slides.slide",
+        "title": "Slide",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/slide.tsx"
+      },
+      {
+        "id": "block.slides.team",
+        "title": "Team",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/slides/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "media-grid",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Slides keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Slides in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Slides agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/slides",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/slides/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/slides/slides-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/slides/pages/slides-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-home-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-deck-detail-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-deck-detail-present-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-design-systems-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-p-detail-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-settings-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-share-detail-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-slide-page.page.implementation.json",
+      "studio-ui/workspaces/slides/pages/slides-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/slides/blocks/slides-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-home-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-deck-detail-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-deck-detail-present-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-design-systems-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-p-detail-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-settings-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-share-detail-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-slide-block.block.implementation.json",
+      "studio-ui/workspaces/slides/blocks/slides-team-block.block.implementation.json"
+    ]
+  }
+}

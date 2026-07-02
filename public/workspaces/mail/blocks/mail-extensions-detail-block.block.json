@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "mail",
+  "block": {
+    "id": "block.mail.extensions-detail",
+    "title": "Extensions Detail",
+    "component": "data-list",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.tsx"
+  },
+  "routes": [
+    {
+      "path": "/mail/extensions/:id",
+      "page": "page.mail.extensions-detail",
+      "title": "Extensions Detail"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.mail.extensions-detail",
+      "title": "Extensions Detail"
+    }
+  ],
+  "component": "data-list",
+  "stateFixtures": {
+    "loading": "Extensions Detail includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Mail agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/mail/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-index.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "agent-native-studio",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "partTaxonomy": {
+    "schemaVersion": "2026-06-24.workspace-part-taxonomy",
+    "packKind": "workspace",
+    "partKinds": [
+      "primitive",
+      "component",
+      "block",
+      "page",
+      "app"
+    ],
+    "nonPartDependencyKinds": [
+      "theme",
+      "font"
+    ],
+    "parts": [
+      {
+        "kind": "primitive",
+        "order": 0,
+        "role": "Radix-first resident shadcn primitive; the smallest installable accessible building block.",
+        "composesFrom": null,
+        "foundation": "design tokens"
+      },
+      {
+        "kind": "component",
+        "order": 1,
+        "role": "Resident component composed from primitives with a stable display contract.",
+        "composesFrom": "primitive",
+        "foundation": null
+      },
+      {
+        "kind": "block",
+        "order": 2,
+        "role": "Titled binding of one component to a workspace state surface (ready/loading/error/empty).",
+        "composesFrom": "component",
+        "foundation": null
+      },
+      {
+        "kind": "page",
+        "order": 3,
+        "role": "Route surface composing blocks into a labelled, landmarked page.",
+        "composesFrom": "block",
+        "foundation": null
+      },
+      {
+        "kind": "app",
+        "order": 4,
+        "role": "Full workspace app shell composing pages behind navigation; the installable pack surface.",
+        "composesFrom": "page",
+        "foundation": null
+      }
+    ]
+  },
+  "inventory": {
+    "packItem": "agent-native-studio-workspace",
+    "partCounts": {
+      "primitive": 3,
+      "component": 6,
+      "block": 240,
+      "page": 240,
+      "app": 14
+    },
+    "dependencyCount": 1,
+    "totalGraphItems": 518
+  },
+  "evidenceFiles": [
+    {
+      "id": "a11y-report",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/a11y-report.json",
+      "sha256": "sha256:e6379cb742090407f96ad28cbb230d5c4341f3e52725ed26e83304e89ea9da3e"
+    },
+    {
+      "id": "harness-capability-display",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/harness-capability-display.json",
+      "sha256": "sha256:09caa3c641d7f757f7d861072fee64304bca18947792eadd4620ced5db741762"
+    },
+    {
+      "id": "install-proof",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/install-proof.json",
+      "sha256": "sha256:ab617a658f72a9469ee632aaa20e0650636194c97ad29257ad5fd747d85acc9d"
+    },
+    {
+      "id": "migration-path",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/migration-path.json",
+      "sha256": "sha256:1bfd9d1f2e4f1d6d9b70427c4e7ae4c512634449dc0fd11f896e6e08ec2612c5"
+    },
+    {
+      "id": "provenance",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/provenance.json",
+      "sha256": "sha256:15035f3279ee59cc2b848f769af3ed08f36928add144ce266c364af1f3a8950f"
+    },
+    {
+      "id": "rollback-test",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/rollback-test.json",
+      "sha256": "sha256:4f68839d1fcc41dd389bcb57801883d8ce566f1558ea8cb25ed8a845b6da3621"
+    },
+    {
+      "id": "update-remove-proof",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/update-remove-proof.json",
+      "sha256": "sha256:fcd907a4c0f9419a1e4d99cbd7e617f9c897fa4fb785b3fd9de5220b8272d75a"
+    },
+    {
+      "id": "visual-regression-gallery",
+      "path": "studio-ui/workspaces/agent-native-studio/evidence/visual-regression-gallery.json",
+      "sha256": "sha256:4d986858abf1d5a99e5ca2b0346715ef1c92850d2fdcf2f8e3e93ef9de955bc7"
+    }
+  ]
+}

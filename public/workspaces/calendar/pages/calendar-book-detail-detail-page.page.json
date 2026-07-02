@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "calendar",
+  "page": {
+    "id": "page.calendar.book-detail-detail",
+    "title": "Book Detail Detail",
+    "description": "Agent-Native calendar route /book/:username/:slug derived from book.$username.$slug.tsx.",
+    "components": [
+      "calendar",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+  },
+  "routes": [
+    {
+      "path": "/calendar/book/:username/:slug",
+      "page": "page.calendar.book-detail-detail",
+      "title": "Book Detail Detail",
+      "blocks": [
+        "block.calendar.book-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.calendar.book-detail-detail",
+      "title": "Book Detail Detail",
+      "component": "calendar",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "calendar",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Calendar keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Calendar in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Calendar agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/calendar/workspace-shell.json",
+    "copiedSource": false
+  }
+}

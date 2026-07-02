@@ -1,0 +1,692 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "assets",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/assets/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.assets.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Home",
+        "route": "/assets"
+      },
+      {
+        "label": "Asset Detail",
+        "route": "/assets/asset/:id"
+      },
+      {
+        "label": "Asset Detail Embed",
+        "route": "/assets/asset/:id/embed"
+      },
+      {
+        "label": "Audit",
+        "route": "/assets/audit"
+      },
+      {
+        "label": "Brand Kits Detail",
+        "route": "/assets/brand-kits/:id"
+      },
+      {
+        "label": "Brand Kits Index",
+        "route": "/assets/brand-kits"
+      },
+      {
+        "label": "Brand Kits",
+        "route": "/assets/brand-kits"
+      },
+      {
+        "label": "Chat Detail",
+        "route": "/assets/chat/:threadId"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/assets",
+      "page": "page.assets.home",
+      "title": "Assets Home",
+      "blocks": [
+        "block.assets.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/_index.tsx"
+    },
+    {
+      "path": "/assets/asset/:id",
+      "page": "page.assets.asset-detail",
+      "title": "Asset Detail",
+      "blocks": [
+        "block.assets.asset-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id.tsx"
+    },
+    {
+      "path": "/assets/asset/:id/embed",
+      "page": "page.assets.asset-detail-embed",
+      "title": "Asset Detail Embed",
+      "blocks": [
+        "block.assets.asset-detail-embed"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/asset.$id_.embed.tsx"
+    },
+    {
+      "path": "/assets/audit",
+      "page": "page.assets.audit",
+      "title": "Audit",
+      "blocks": [
+        "block.assets.audit"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/audit.tsx"
+    },
+    {
+      "path": "/assets/brand-kits/:id",
+      "page": "page.assets.brand-kits-detail",
+      "title": "Brand Kits Detail",
+      "blocks": [
+        "block.assets.brand-kits-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.$id.tsx"
+    },
+    {
+      "path": "/assets/brand-kits",
+      "page": "page.assets.brand-kits-index",
+      "title": "Brand Kits Index",
+      "blocks": [
+        "block.assets.brand-kits-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits._index.tsx"
+    },
+    {
+      "path": "/assets/brand-kits",
+      "page": "page.assets.brand-kits",
+      "title": "Brand Kits",
+      "blocks": [
+        "block.assets.brand-kits"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/brand-kits.tsx"
+    },
+    {
+      "path": "/assets/chat/:threadId",
+      "page": "page.assets.chat-detail",
+      "title": "Chat Detail",
+      "blocks": [
+        "block.assets.chat-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/chat.$threadId.tsx"
+    },
+    {
+      "path": "/assets/extensions/:id/:slug",
+      "page": "page.assets.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.assets.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/assets/extensions/:id",
+      "page": "page.assets.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.assets.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/assets/extensions",
+      "page": "page.assets.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.assets.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/assets/extensions",
+      "page": "page.assets.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.assets.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/assets/image/:id",
+      "page": "page.assets.image-detail",
+      "title": "Image Detail",
+      "blocks": [
+        "block.assets.image-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/image.$id.tsx"
+    },
+    {
+      "path": "/assets/libraries",
+      "page": "page.assets.libraries",
+      "title": "Libraries",
+      "blocks": [
+        "block.assets.libraries"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/libraries.tsx"
+    },
+    {
+      "path": "/assets/library/:id",
+      "page": "page.assets.library-detail",
+      "title": "Library Detail",
+      "blocks": [
+        "block.assets.library-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/library.$id.tsx"
+    },
+    {
+      "path": "/assets/library",
+      "page": "page.assets.library",
+      "title": "Library",
+      "blocks": [
+        "block.assets.library"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/library.tsx"
+    },
+    {
+      "path": "/assets/picker",
+      "page": "page.assets.picker",
+      "title": "Picker",
+      "blocks": [
+        "block.assets.picker"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/picker.tsx"
+    },
+    {
+      "path": "/assets/run/:id/embed",
+      "page": "page.assets.run-detail-embed",
+      "title": "Run Detail Embed",
+      "blocks": [
+        "block.assets.run-detail-embed"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/run.$id_.embed.tsx"
+    },
+    {
+      "path": "/assets/settings",
+      "page": "page.assets.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.assets.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/settings.tsx"
+    },
+    {
+      "path": "/assets/team",
+      "page": "page.assets.team",
+      "title": "Team",
+      "blocks": [
+        "block.assets.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/assets/app/routes/team.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.assets.home",
+      "title": "Assets Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.asset-detail",
+      "title": "Asset Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-asset-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.asset-detail-embed",
+      "title": "Asset Detail Embed",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-asset-detail-embed-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.audit",
+      "title": "Audit",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-audit-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.brand-kits-detail",
+      "title": "Brand Kits Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-brand-kits-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.brand-kits-index",
+      "title": "Brand Kits Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-brand-kits-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.brand-kits",
+      "title": "Brand Kits",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-brand-kits-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.chat-detail",
+      "title": "Chat Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-chat-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.image-detail",
+      "title": "Image Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-image-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.libraries",
+      "title": "Libraries",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-libraries-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.library-detail",
+      "title": "Library Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-library-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.library",
+      "title": "Library",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-library-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.picker",
+      "title": "Picker",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-picker-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.run-detail-embed",
+      "title": "Run Detail Embed",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-run-detail-embed-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.assets.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/assets/pages/assets-team-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.assets.home",
+      "title": "Home",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.asset-detail",
+      "title": "Asset Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-asset-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.asset-detail-embed",
+      "title": "Asset Detail Embed",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-asset-detail-embed-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.audit",
+      "title": "Audit",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-audit-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.brand-kits-detail",
+      "title": "Brand Kits Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-brand-kits-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.brand-kits-index",
+      "title": "Brand Kits Index",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-brand-kits-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.brand-kits",
+      "title": "Brand Kits",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-brand-kits-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.chat-detail",
+      "title": "Chat Detail",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-chat-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.extensions-index",
+      "title": "Extensions Index",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.extensions",
+      "title": "Extensions",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.image-detail",
+      "title": "Image Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-image-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.libraries",
+      "title": "Libraries",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-libraries-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.library-detail",
+      "title": "Library Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-library-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.library",
+      "title": "Library",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-library-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.picker",
+      "title": "Picker",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-picker-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.run-detail-embed",
+      "title": "Run Detail Embed",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-run-detail-embed-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.settings",
+      "title": "Settings",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.assets.team",
+      "title": "Team",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/assets/blocks/assets-team-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "agent-panel",
+      "manifestId": "agm_agent_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_agent_panel_review",
+          "name": "review",
+          "label": "Review agent recommendation",
+          "harnessRoute": "harness://actions/agent-panel-review",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "recommendationId",
+              "decision"
+            ],
+            "properties": {
+              "recommendationId": {
+                "type": "string"
+              },
+              "decision": {
+                "type": "string",
+                "enum": [
+                  "approve",
+                  "deny"
+                ]
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "media-grid",
+      "manifestId": "agm_media_grid",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 20,
+    "renderedBlockCount": 20,
+    "routeCount": 20,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/assets/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/assets/workspace-shell.json",
+    "copiedSource": false
+  }
+}

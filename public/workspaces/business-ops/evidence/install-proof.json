@@ -1,0 +1,54 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "business-ops",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 15,
+    "graph": [
+      "jami-theme",
+      "button",
+      "panel",
+      "text-field",
+      "data-list",
+      "agent-panel",
+      "business-ops-kpis-block",
+      "business-ops-exceptions-block",
+      "business-ops-agent-review-block",
+      "business-ops-dashboard-page",
+      "business-ops-staff-table-block",
+      "business-ops-training-form-block",
+      "business-ops-staff-page",
+      "business-ops-app",
+      "business-ops-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 48
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 15
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/business-ops/business-ops-dashboard.html",
+      "apps/workbench/dist/suites/business-ops/business-ops-staff.html",
+      "apps/workbench/dist/suites/business-ops/index.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/business-ops/pages/business-ops-dashboard-page.page.implementation.json",
+      "studio-ui/workspaces/business-ops/pages/business-ops-staff-page.page.implementation.json"
+    ]
+  }
+}

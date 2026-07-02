@@ -1,0 +1,895 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/calendar-workspace",
+  "workspace": "calendar",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "calendar",
+    "calendar-app",
+    "calendar-catchall-page",
+    "calendar-home-page",
+    "calendar-availability-page",
+    "calendar-booking-links-detail-page",
+    "calendar-booking-links-index-page",
+    "calendar-booking-links-page",
+    "calendar-bookings-page",
+    "calendar-extensions-detail-detail-page",
+    "calendar-extensions-detail-page",
+    "calendar-extensions-index-page",
+    "calendar-extensions-page",
+    "calendar-settings-page",
+    "calendar-team-page",
+    "calendar-home-2-page",
+    "calendar-book-detail-page",
+    "calendar-book-detail-detail-page",
+    "calendar-booking-og-meta-page",
+    "calendar-booking-manage-detail-page",
+    "calendar-event-page",
+    "calendar-meet-detail-detail-page",
+    "calendar-catchall-block",
+    "calendar-home-block",
+    "calendar-availability-block",
+    "calendar-booking-links-detail-block",
+    "calendar-booking-links-index-block",
+    "calendar-booking-links-block",
+    "calendar-bookings-block",
+    "calendar-extensions-detail-detail-block",
+    "calendar-extensions-detail-block",
+    "calendar-extensions-index-block",
+    "calendar-extensions-block",
+    "calendar-settings-block",
+    "calendar-team-block",
+    "calendar-home-2-block",
+    "calendar-book-detail-block",
+    "calendar-book-detail-detail-block",
+    "calendar-booking-og-meta-block",
+    "calendar-booking-manage-detail-block",
+    "calendar-event-block",
+    "calendar-meet-detail-detail-block"
+  ],
+  "installGraph": {
+    "root": "calendar-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "calendar",
+      "calendar-app",
+      "calendar-catchall-page",
+      "calendar-home-page",
+      "calendar-availability-page",
+      "calendar-booking-links-detail-page",
+      "calendar-booking-links-index-page",
+      "calendar-booking-links-page",
+      "calendar-bookings-page",
+      "calendar-extensions-detail-detail-page",
+      "calendar-extensions-detail-page",
+      "calendar-extensions-index-page",
+      "calendar-extensions-page",
+      "calendar-settings-page",
+      "calendar-team-page",
+      "calendar-home-2-page",
+      "calendar-book-detail-page",
+      "calendar-book-detail-detail-page",
+      "calendar-booking-og-meta-page",
+      "calendar-booking-manage-detail-page",
+      "calendar-event-page",
+      "calendar-meet-detail-detail-page",
+      "calendar-catchall-block",
+      "calendar-home-block",
+      "calendar-availability-block",
+      "calendar-booking-links-detail-block",
+      "calendar-booking-links-index-block",
+      "calendar-booking-links-block",
+      "calendar-bookings-block",
+      "calendar-extensions-detail-detail-block",
+      "calendar-extensions-detail-block",
+      "calendar-extensions-index-block",
+      "calendar-extensions-block",
+      "calendar-settings-block",
+      "calendar-team-block",
+      "calendar-home-2-block",
+      "calendar-book-detail-block",
+      "calendar-book-detail-detail-block",
+      "calendar-booking-og-meta-block",
+      "calendar-booking-manage-detail-block",
+      "calendar-event-block",
+      "calendar-meet-detail-detail-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":",
+    "calendar",
+    "availability",
+    "booking-links",
+    "booking-links",
+    "booking-links",
+    "bookings",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "settings",
+    "team",
+    "calendar",
+    "book",
+    "book",
+    "booking-og-meta",
+    "booking",
+    "event",
+    "meet"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Calendar",
+    "summary": "Agent-Native Calendar Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.calendar.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Catchall",
+          "route": "/calendar/:"
+        },
+        {
+          "label": "Home",
+          "route": "/calendar"
+        },
+        {
+          "label": "Availability",
+          "route": "/calendar/availability"
+        },
+        {
+          "label": "Booking Links Detail",
+          "route": "/calendar/booking-links/:id"
+        },
+        {
+          "label": "Booking Links Index",
+          "route": "/calendar/booking-links"
+        },
+        {
+          "label": "Booking Links",
+          "route": "/calendar/booking-links"
+        },
+        {
+          "label": "Bookings",
+          "route": "/calendar/bookings"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/calendar/extensions/:id/:slug"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/calendar/:",
+        "page": "page.calendar.catchall",
+        "title": "Catchall",
+        "blocks": [
+          "block.calendar.catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.$.tsx"
+      },
+      {
+        "path": "/calendar",
+        "page": "page.calendar.home",
+        "title": "Calendar Home",
+        "blocks": [
+          "block.calendar.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app._index.tsx"
+      },
+      {
+        "path": "/calendar/availability",
+        "page": "page.calendar.availability",
+        "title": "Availability",
+        "blocks": [
+          "block.calendar.availability"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.availability.tsx"
+      },
+      {
+        "path": "/calendar/booking-links/:id",
+        "page": "page.calendar.booking-links-detail",
+        "title": "Booking Links Detail",
+        "blocks": [
+          "block.calendar.booking-links-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.$id.tsx"
+      },
+      {
+        "path": "/calendar/booking-links",
+        "page": "page.calendar.booking-links-index",
+        "title": "Booking Links Index",
+        "blocks": [
+          "block.calendar.booking-links-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links._index.tsx"
+      },
+      {
+        "path": "/calendar/booking-links",
+        "page": "page.calendar.booking-links",
+        "title": "Booking Links",
+        "blocks": [
+          "block.calendar.booking-links"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.tsx"
+      },
+      {
+        "path": "/calendar/bookings",
+        "page": "page.calendar.bookings",
+        "title": "Bookings",
+        "blocks": [
+          "block.calendar.bookings"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.bookings.tsx"
+      },
+      {
+        "path": "/calendar/extensions/:id/:slug",
+        "page": "page.calendar.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.calendar.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/calendar/extensions/:id",
+        "page": "page.calendar.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.calendar.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "path": "/calendar/extensions",
+        "page": "page.calendar.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.calendar.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "path": "/calendar/extensions",
+        "page": "page.calendar.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.calendar.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.tsx"
+      },
+      {
+        "path": "/calendar/settings",
+        "page": "page.calendar.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.calendar.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+      },
+      {
+        "path": "/calendar/team",
+        "page": "page.calendar.team",
+        "title": "Team",
+        "blocks": [
+          "block.calendar.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.team.tsx"
+      },
+      {
+        "path": "/calendar",
+        "page": "page.calendar.home-2",
+        "title": "Calendar Home",
+        "blocks": [
+          "block.calendar.home-2"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.tsx"
+      },
+      {
+        "path": "/calendar/book/:slug",
+        "page": "page.calendar.book-detail",
+        "title": "Book Detail",
+        "blocks": [
+          "block.calendar.book-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$slug.tsx"
+      },
+      {
+        "path": "/calendar/book/:username/:slug",
+        "page": "page.calendar.book-detail-detail",
+        "title": "Book Detail Detail",
+        "blocks": [
+          "block.calendar.book-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+      },
+      {
+        "path": "/calendar/booking-og-meta",
+        "page": "page.calendar.booking-og-meta",
+        "title": "Booking Og Meta",
+        "blocks": [
+          "block.calendar.booking-og-meta"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking-og-meta.ts"
+      },
+      {
+        "path": "/calendar/booking/manage/:token",
+        "page": "page.calendar.booking-manage-detail",
+        "title": "Booking Manage Detail",
+        "blocks": [
+          "block.calendar.booking-manage-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking.manage.$token.tsx"
+      },
+      {
+        "path": "/calendar/event",
+        "page": "page.calendar.event",
+        "title": "Event",
+        "blocks": [
+          "block.calendar.event"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/event.tsx"
+      },
+      {
+        "path": "/calendar/meet/:username/:slug",
+        "page": "page.calendar.meet-detail-detail",
+        "title": "Meet Detail Detail",
+        "blocks": [
+          "block.calendar.meet-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/meet.$username.$slug.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.calendar.catchall",
+        "title": "Catchall",
+        "description": "Agent-Native calendar route /: derived from _app.$.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.$.tsx"
+      },
+      {
+        "id": "page.calendar.home",
+        "title": "Calendar Home",
+        "description": "Agent-Native calendar route / derived from _app._index.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app._index.tsx"
+      },
+      {
+        "id": "page.calendar.availability",
+        "title": "Availability",
+        "description": "Agent-Native calendar route /availability derived from _app.availability.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.availability.tsx"
+      },
+      {
+        "id": "page.calendar.booking-links-detail",
+        "title": "Booking Links Detail",
+        "description": "Agent-Native calendar route /booking-links/:id derived from _app.booking-links.$id.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.$id.tsx"
+      },
+      {
+        "id": "page.calendar.booking-links-index",
+        "title": "Booking Links Index",
+        "description": "Agent-Native calendar route /booking-links derived from _app.booking-links._index.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links._index.tsx"
+      },
+      {
+        "id": "page.calendar.booking-links",
+        "title": "Booking Links",
+        "description": "Agent-Native calendar route /booking-links derived from _app.booking-links.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.tsx"
+      },
+      {
+        "id": "page.calendar.bookings",
+        "title": "Bookings",
+        "description": "Agent-Native calendar route /bookings derived from _app.bookings.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.bookings.tsx"
+      },
+      {
+        "id": "page.calendar.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native calendar route /extensions/:id/:slug derived from _app.extensions.$id.$slug.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.calendar.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native calendar route /extensions/:id derived from _app.extensions.$id.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "page.calendar.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native calendar route /extensions derived from _app.extensions._index.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "page.calendar.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native calendar route /extensions derived from _app.extensions.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "page.calendar.settings",
+        "title": "Settings",
+        "description": "Agent-Native calendar route /settings derived from _app.settings.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+      },
+      {
+        "id": "page.calendar.team",
+        "title": "Team",
+        "description": "Agent-Native calendar route /team derived from _app.team.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.team.tsx"
+      },
+      {
+        "id": "page.calendar.home-2",
+        "title": "Calendar Home",
+        "description": "Agent-Native calendar route / derived from _app.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.tsx"
+      },
+      {
+        "id": "page.calendar.book-detail",
+        "title": "Book Detail",
+        "description": "Agent-Native calendar route /book/:slug derived from book.$slug.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$slug.tsx"
+      },
+      {
+        "id": "page.calendar.book-detail-detail",
+        "title": "Book Detail Detail",
+        "description": "Agent-Native calendar route /book/:username/:slug derived from book.$username.$slug.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+      },
+      {
+        "id": "page.calendar.booking-og-meta",
+        "title": "Booking Og Meta",
+        "description": "Agent-Native calendar route /booking-og-meta derived from booking-og-meta.ts.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking-og-meta.ts"
+      },
+      {
+        "id": "page.calendar.booking-manage-detail",
+        "title": "Booking Manage Detail",
+        "description": "Agent-Native calendar route /booking/manage/:token derived from booking.manage.$token.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking.manage.$token.tsx"
+      },
+      {
+        "id": "page.calendar.event",
+        "title": "Event",
+        "description": "Agent-Native calendar route /event derived from event.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/event.tsx"
+      },
+      {
+        "id": "page.calendar.meet-detail-detail",
+        "title": "Meet Detail Detail",
+        "description": "Agent-Native calendar route /meet/:username/:slug derived from meet.$username.$slug.tsx.",
+        "components": [
+          "calendar",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/meet.$username.$slug.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.calendar.catchall",
+        "title": "Catchall",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.$.tsx"
+      },
+      {
+        "id": "block.calendar.home",
+        "title": "Home",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app._index.tsx"
+      },
+      {
+        "id": "block.calendar.availability",
+        "title": "Availability",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.availability.tsx"
+      },
+      {
+        "id": "block.calendar.booking-links-detail",
+        "title": "Booking Links Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.$id.tsx"
+      },
+      {
+        "id": "block.calendar.booking-links-index",
+        "title": "Booking Links Index",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links._index.tsx"
+      },
+      {
+        "id": "block.calendar.booking-links",
+        "title": "Booking Links",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.tsx"
+      },
+      {
+        "id": "block.calendar.bookings",
+        "title": "Bookings",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.bookings.tsx"
+      },
+      {
+        "id": "block.calendar.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.calendar.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.tsx"
+      },
+      {
+        "id": "block.calendar.extensions-index",
+        "title": "Extensions Index",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions._index.tsx"
+      },
+      {
+        "id": "block.calendar.extensions",
+        "title": "Extensions",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.tsx"
+      },
+      {
+        "id": "block.calendar.settings",
+        "title": "Settings",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+      },
+      {
+        "id": "block.calendar.team",
+        "title": "Team",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.team.tsx"
+      },
+      {
+        "id": "block.calendar.home-2",
+        "title": "Home 2",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.tsx"
+      },
+      {
+        "id": "block.calendar.book-detail",
+        "title": "Book Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$slug.tsx"
+      },
+      {
+        "id": "block.calendar.book-detail-detail",
+        "title": "Book Detail Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+      },
+      {
+        "id": "block.calendar.booking-og-meta",
+        "title": "Booking Og Meta",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking-og-meta.ts"
+      },
+      {
+        "id": "block.calendar.booking-manage-detail",
+        "title": "Booking Manage Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking.manage.$token.tsx"
+      },
+      {
+        "id": "block.calendar.event",
+        "title": "Event",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/event.tsx"
+      },
+      {
+        "id": "block.calendar.meet-detail-detail",
+        "title": "Meet Detail Detail",
+        "component": "calendar",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/calendar/app/routes/meet.$username.$slug.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "calendar",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Calendar keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Calendar in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Calendar agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/calendar",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/calendar/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/calendar/calendar-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/calendar/pages/calendar-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-home-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-availability-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-booking-links-detail-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-booking-links-index-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-booking-links-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-bookings-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-settings-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-team-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-home-2-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-book-detail-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-book-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-booking-og-meta-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-booking-manage-detail-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-event-page.page.implementation.json",
+      "studio-ui/workspaces/calendar/pages/calendar-meet-detail-detail-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/calendar/blocks/calendar-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-home-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-availability-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-booking-links-detail-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-booking-links-index-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-booking-links-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-bookings-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-settings-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-team-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-home-2-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-book-detail-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-book-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-booking-og-meta-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-booking-manage-detail-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-event-block.block.implementation.json",
+      "studio-ui/workspaces/calendar/blocks/calendar-meet-detail-detail-block.block.implementation.json"
+    ]
+  }
+}

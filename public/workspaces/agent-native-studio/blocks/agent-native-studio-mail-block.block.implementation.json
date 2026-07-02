@@ -1,0 +1,471 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "agent-native-studio",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/agent-native-studio/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.agent-native-studio.mail",
+    "title": "Agent-Native Mail",
+    "component": "data-list",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "targetWorkspace": "mail",
+    "targetUrl": "https://mail.agent-native.com",
+    "summary": "Agent-Native Mail Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances."
+  },
+  "component": "data-list",
+  "agentManifest": {
+    "component": "data-list",
+    "manifestId": "agm_data_list",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
+  "renderedStates": {
+    "ready": {
+      "props": {
+        "title": "Agent-Native Mail",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [
+          {
+            "item": "Agent-Native Mail record",
+            "state": "ready"
+          }
+        ],
+        "loading": false,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Agent-Native Mail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Agent-Native Mail"
+            ]
+          },
+          {
+            "type": "table",
+            "props": {
+              "className": "jami-data-list-table"
+            },
+            "children": [
+              {
+                "type": "thead",
+                "props": {},
+                "children": [
+                  {
+                    "type": "tr",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "th",
+                        "props": {
+                          "scope": "col"
+                        },
+                        "children": [
+                          "Item"
+                        ]
+                      },
+                      {
+                        "type": "th",
+                        "props": {
+                          "scope": "col"
+                        },
+                        "children": [
+                          "State"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tbody",
+                "props": {},
+                "children": [
+                  {
+                    "type": "tr",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "td",
+                        "props": {},
+                        "children": [
+                          "Agent-Native Mail record"
+                        ]
+                      },
+                      {
+                        "type": "td",
+                        "props": {},
+                        "children": [
+                          "ready"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-table",
+        "jami-data-list-title"
+      ]
+    },
+    "loading": {
+      "props": {
+        "title": "Agent-Native Mail",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [],
+        "loading": true,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Agent-Native Mail",
+          "aria-busy": "true"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Agent-Native Mail"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "Loading records."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-title"
+      ]
+    },
+    "empty": {
+      "props": {
+        "title": "Agent-Native Mail",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [],
+        "loading": false,
+        "empty": true
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Agent-Native Mail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Agent-Native Mail"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "No records to display."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-title"
+      ]
+    },
+    "error": {
+      "props": {
+        "title": "Agent-Native Mail",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [],
+        "loading": false,
+        "empty": false,
+        "error": "A template app reports display-only status here until its live Agent-Native route or Harness-governed action is opened."
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Agent-Native Mail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Agent-Native Mail"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "alert"
+            },
+            "children": [
+              "A template app reports display-only status here until its live Agent-Native route or Harness-governed action is opened."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-title"
+      ]
+    },
+    "long-content": {
+      "props": {
+        "title": "Agent-Native Mail",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [
+          {
+            "item": "The Agent-Native Studio pack keeps every public template app installable as one graph while the actual React apps run through the Agent-Native gateway and Harness owns governance.",
+            "state": "long-content"
+          }
+        ],
+        "loading": false,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Agent-Native Mail"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Agent-Native Mail"
+            ]
+          },
+          {
+            "type": "table",
+            "props": {
+              "className": "jami-data-list-table"
+            },
+            "children": [
+              {
+                "type": "thead",
+                "props": {},
+                "children": [
+                  {
+                    "type": "tr",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "th",
+                        "props": {
+                          "scope": "col"
+                        },
+                        "children": [
+                          "Item"
+                        ]
+                      },
+                      {
+                        "type": "th",
+                        "props": {
+                          "scope": "col"
+                        },
+                        "children": [
+                          "State"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tbody",
+                "props": {},
+                "children": [
+                  {
+                    "type": "tr",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "td",
+                        "props": {},
+                        "children": [
+                          "The Agent-Native Studio pack keeps every public template app installable as one graph while the actual React apps run through the Agent-Native gateway and Harness owns governance."
+                        ]
+                      },
+                      {
+                        "type": "td",
+                        "props": {},
+                        "children": [
+                          "long-content"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-table",
+        "jami-data-list-title"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-data-list",
+      "jami-data-list-table",
+      "jami-data-list-title"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": true,
+    "emptyStateSafe": true,
+    "errorStateSafe": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/agent-native-studio/workspace-shell.json",
+    "copiedSource": false
+  }
+}

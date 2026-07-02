@@ -1,0 +1,97 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "research-writing",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/research-writing/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-research-writing.png"
+  },
+  "routeCount": 2,
+  "blockStateCount": 9,
+  "routes": [
+    {
+      "galleryKey": "research-writing.route.research-writing-sources",
+      "path": "/research-writing/sources",
+      "page": "page.research-writing.sources",
+      "title": "Sources and citations",
+      "routeArtifact": "apps/workbench/dist/suites/research-writing/research-writing-sources.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-research-writing-research-writing-sources.png",
+      "blocks": [
+        "block.research-writing.sources",
+        "block.research-writing.citations"
+      ]
+    },
+    {
+      "galleryKey": "research-writing.route.research-writing-brief",
+      "path": "/research-writing/brief",
+      "page": "page.research-writing.brief",
+      "title": "Brief drafting",
+      "routeArtifact": "apps/workbench/dist/suites/research-writing/research-writing-brief.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-research-writing-research-writing-brief.png",
+      "blocks": [
+        "block.research-writing.outline",
+        "block.research-writing.agent-review"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "research-writing.block.block.research-writing.agent-review.error",
+      "block": "block.research-writing.agent-review",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.agent-review.ready",
+      "block": "block.research-writing.agent-review",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.citations.empty",
+      "block": "block.research-writing.citations",
+      "component": "data-list",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.citations.loading",
+      "block": "block.research-writing.citations",
+      "component": "data-list",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.citations.ready",
+      "block": "block.research-writing.citations",
+      "component": "data-list",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.outline.invalid",
+      "block": "block.research-writing.outline",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.outline.ready",
+      "block": "block.research-writing.outline",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.sources.long-content",
+      "block": "block.research-writing.sources",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "research-writing.block.block.research-writing.sources.ready",
+      "block": "block.research-writing.sources",
+      "component": "docs-source-panel",
+      "state": "ready"
+    }
+  ]
+}

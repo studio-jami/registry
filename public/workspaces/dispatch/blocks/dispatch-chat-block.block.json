@@ -1,0 +1,39 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "dispatch",
+  "block": {
+    "id": "block.dispatch.chat",
+    "title": "Chat",
+    "component": "agent-panel",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error"
+    ],
+    "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.tsx"
+  },
+  "routes": [
+    {
+      "path": "/dispatch/chat",
+      "page": "page.dispatch.chat",
+      "title": "Chat"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.dispatch.chat",
+      "title": "Chat"
+    }
+  ],
+  "component": "agent-panel",
+  "stateFixtures": {
+    "loading": "Chat includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Dispatch in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Dispatch agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/dispatch/workspace-shell.json",
+    "copiedSource": false
+  }
+}

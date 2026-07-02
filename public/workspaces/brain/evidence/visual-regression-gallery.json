@@ -1,0 +1,511 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "brain",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/brain/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-brain.png"
+  },
+  "routeCount": 12,
+  "blockStateCount": 60,
+  "routes": [
+    {
+      "galleryKey": "brain.route.brain",
+      "path": "/brain",
+      "page": "page.brain.home",
+      "title": "Brain Home",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain.png",
+      "blocks": [
+        "block.brain.home"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-extensions-id-slug",
+      "path": "/brain/extensions/:id/:slug",
+      "page": "page.brain.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-extensions-id-slug.png",
+      "blocks": [
+        "block.brain.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-extensions-id",
+      "path": "/brain/extensions/:id",
+      "page": "page.brain.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-extensions-id.png",
+      "blocks": [
+        "block.brain.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-extensions",
+      "path": "/brain/extensions",
+      "page": "page.brain.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-extensions.png",
+      "blocks": [
+        "block.brain.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-extensions",
+      "path": "/brain/extensions",
+      "page": "page.brain.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-extensions.png",
+      "blocks": [
+        "block.brain.extensions"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-knowledge",
+      "path": "/brain/knowledge",
+      "page": "page.brain.knowledge",
+      "title": "Knowledge",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-knowledge.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-knowledge.png",
+      "blocks": [
+        "block.brain.knowledge"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-ops",
+      "path": "/brain/ops",
+      "page": "page.brain.ops",
+      "title": "Ops",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-ops.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-ops.png",
+      "blocks": [
+        "block.brain.ops"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-review",
+      "path": "/brain/review",
+      "page": "page.brain.review",
+      "title": "Review",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-review.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-review.png",
+      "blocks": [
+        "block.brain.review"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-search",
+      "path": "/brain/search",
+      "page": "page.brain.search",
+      "title": "Search",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-search.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-search.png",
+      "blocks": [
+        "block.brain.search"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-settings",
+      "path": "/brain/settings",
+      "page": "page.brain.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-settings.png",
+      "blocks": [
+        "block.brain.settings"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-sources",
+      "path": "/brain/sources",
+      "page": "page.brain.sources",
+      "title": "Sources",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-sources.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-sources.png",
+      "blocks": [
+        "block.brain.sources"
+      ]
+    },
+    {
+      "galleryKey": "brain.route.brain-team",
+      "path": "/brain/team",
+      "page": "page.brain.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/brain/brain-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-brain-brain-team.png",
+      "blocks": [
+        "block.brain.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail-detail.empty",
+      "block": "block.brain.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail-detail.error",
+      "block": "block.brain.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail-detail.loading",
+      "block": "block.brain.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail-detail.long-content",
+      "block": "block.brain.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail-detail.ready",
+      "block": "block.brain.extensions-detail-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail.empty",
+      "block": "block.brain.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail.error",
+      "block": "block.brain.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail.loading",
+      "block": "block.brain.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail.long-content",
+      "block": "block.brain.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-detail.ready",
+      "block": "block.brain.extensions-detail",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-index.empty",
+      "block": "block.brain.extensions-index",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-index.error",
+      "block": "block.brain.extensions-index",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-index.loading",
+      "block": "block.brain.extensions-index",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-index.long-content",
+      "block": "block.brain.extensions-index",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions-index.ready",
+      "block": "block.brain.extensions-index",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions.empty",
+      "block": "block.brain.extensions",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions.error",
+      "block": "block.brain.extensions",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions.loading",
+      "block": "block.brain.extensions",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions.long-content",
+      "block": "block.brain.extensions",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.extensions.ready",
+      "block": "block.brain.extensions",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.home.empty",
+      "block": "block.brain.home",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.home.error",
+      "block": "block.brain.home",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.home.loading",
+      "block": "block.brain.home",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.home.long-content",
+      "block": "block.brain.home",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.home.ready",
+      "block": "block.brain.home",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.knowledge.empty",
+      "block": "block.brain.knowledge",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.knowledge.error",
+      "block": "block.brain.knowledge",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.knowledge.loading",
+      "block": "block.brain.knowledge",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.knowledge.long-content",
+      "block": "block.brain.knowledge",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.knowledge.ready",
+      "block": "block.brain.knowledge",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.ops.empty",
+      "block": "block.brain.ops",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.ops.error",
+      "block": "block.brain.ops",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.ops.loading",
+      "block": "block.brain.ops",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.ops.long-content",
+      "block": "block.brain.ops",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.ops.ready",
+      "block": "block.brain.ops",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.review.empty",
+      "block": "block.brain.review",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.review.error",
+      "block": "block.brain.review",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.review.loading",
+      "block": "block.brain.review",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.review.long-content",
+      "block": "block.brain.review",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.review.ready",
+      "block": "block.brain.review",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.search.empty",
+      "block": "block.brain.search",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.search.error",
+      "block": "block.brain.search",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.search.loading",
+      "block": "block.brain.search",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.search.long-content",
+      "block": "block.brain.search",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.search.ready",
+      "block": "block.brain.search",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.settings.empty",
+      "block": "block.brain.settings",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.settings.error",
+      "block": "block.brain.settings",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.settings.loading",
+      "block": "block.brain.settings",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.settings.long-content",
+      "block": "block.brain.settings",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.settings.ready",
+      "block": "block.brain.settings",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.sources.empty",
+      "block": "block.brain.sources",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.sources.error",
+      "block": "block.brain.sources",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.sources.loading",
+      "block": "block.brain.sources",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.sources.long-content",
+      "block": "block.brain.sources",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.sources.ready",
+      "block": "block.brain.sources",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.team.empty",
+      "block": "block.brain.team",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.team.error",
+      "block": "block.brain.team",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.team.loading",
+      "block": "block.brain.team",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.team.long-content",
+      "block": "block.brain.team",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "brain.block.block.brain.team.ready",
+      "block": "block.brain.team",
+      "component": "docs-source-panel",
+      "state": "ready"
+    }
+  ]
+}

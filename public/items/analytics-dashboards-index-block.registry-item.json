@@ -1,0 +1,51 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "analytics-dashboards-index-block",
+  "type": "registry:block",
+  "title": "Dashboards Index",
+  "description": "Dashboards Index block for the Agent-Native Analytics workspace shell.",
+  "dependencies": [],
+  "registryDependencies": [
+    "chart"
+  ],
+  "files": [
+    {
+      "path": "packages/registry/generated/workspaces/analytics/blocks/analytics-dashboards-index-block.block.json",
+      "target": "studio-ui/workspaces/analytics/blocks/analytics-dashboards-index-block.block.json",
+      "type": "registry:block",
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/workspace-block.generated.json\",\n  \"schemaVersion\": \"2026-06-29.agent-native-template-workspace\",\n  \"workspace\": \"analytics\",\n  \"block\": {\n    \"id\": \"block.analytics.dashboards-index\",\n    \"title\": \"Dashboards Index\",\n    \"component\": \"chart\",\n    \"stateExamples\": [\n      \"loading\",\n      \"empty\",\n      \"error\",\n      \"long-content\"\n    ],\n    \"sourceRouteFile\": \"agent-native/templates/analytics/app/routes/dashboards._index.tsx\"\n  },\n  \"routes\": [\n    {\n      \"path\": \"/analytics/dashboards\",\n      \"page\": \"page.analytics.dashboards-index\",\n      \"title\": \"Dashboards Index\"\n    }\n  ],\n  \"pages\": [\n    {\n      \"id\": \"page.analytics.dashboards-index\",\n      \"title\": \"Dashboards Index\"\n    }\n  ],\n  \"component\": \"chart\",\n  \"stateFixtures\": {\n    \"loading\": \"Dashboards Index includes the loading state.\",\n    \"empty\": \"No records are loaded for Agent-Native Analytics in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.\",\n    \"error\": \"Agent-Native Analytics agent or action state is display-only until Jami Harness owns the runtime execution path.\",\n    \"long-content\": \"Agent-Native Analytics keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.\"\n  },\n  \"provenance\": {\n    \"source\": \"registry/workspaces/analytics/workspace-shell.json\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:ddaf31270cf606a71a6ff65055e8f8cec6f32960eed28462e9545cc4cf824edb"
+    },
+    {
+      "path": "packages/registry/generated/workspaces/analytics/blocks/analytics-dashboards-index-block.block.implementation.json",
+      "target": "studio-ui/workspaces/analytics/blocks/analytics-dashboards-index-block.block.implementation.json",
+      "type": "registry:block",
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/workspace-block-implementation.generated.json\",\n  \"schemaVersion\": \"2026-06-29.agent-native-template-workspace\",\n  \"workspace\": \"analytics\",\n  \"implementationStatus\": \"mounted-react-workspace-block\",\n  \"source\": \"registry/workspaces/analytics/workspace-shell.json\",\n  \"primitiveFactory\": {\n    \"version\": \"2026-06-09.framework-neutral-component-factory\",\n    \"source\": \"packages/ui/src/primitive-components.mjs\",\n    \"implementationStatus\": \"framework-neutral-component-factory\",\n    \"runtimeReactRenderer\": false,\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"radixWrapper\": false\n  },\n  \"block\": {\n    \"id\": \"block.analytics.dashboards-index\",\n    \"title\": \"Dashboards Index\",\n    \"component\": \"chart\",\n    \"stateExamples\": [\n      \"loading\",\n      \"empty\",\n      \"error\",\n      \"long-content\"\n    ],\n    \"sourceRouteFile\": \"agent-native/templates/analytics/app/routes/dashboards._index.tsx\"\n  },\n  \"component\": \"chart\",\n  \"agentManifest\": {\n    \"component\": \"chart\",\n    \"manifestId\": \"agm_chart\",\n    \"manifestSchema\": \"https://jami.studio/schemas/registry/agent-manifest.schema.json\",\n    \"schemaVersion\": \"2026-06-23.agent-manifest\",\n    \"propContractVersion\": \"2026-06-09.ui-props\",\n    \"actionSlots\": [],\n    \"bindingMode\": \"resident-component\",\n    \"execution\": \"display-only-data-never-code\"\n  },\n  \"renderedStates\": {\n    \"ready\": {\n      \"props\": {},\n      \"rendererState\": \"renderable\",\n      \"reasons\": [],\n      \"node\": {\n        \"type\": \"figure\",\n        \"props\": {\n          \"className\": \"jami-chart\",\n          \"role\": \"group\",\n          \"aria-label\": \"Chart\",\n          \"data-chart-type\": \"bar\"\n        },\n        \"children\": [\n          {\n            \"type\": \"p\",\n            \"props\": {\n              \"role\": \"status\"\n            },\n            \"children\": [\n              \"No chart data.\"\n            ]\n          }\n        ]\n      },\n      \"tokenizedClasses\": [\n        \"jami-chart\"\n      ]\n    },\n    \"loading\": {\n      \"props\": {},\n      \"rendererState\": \"renderable\",\n      \"reasons\": [],\n      \"node\": {\n        \"type\": \"figure\",\n        \"props\": {\n          \"className\": \"jami-chart\",\n          \"role\": \"group\",\n          \"aria-label\": \"Chart\",\n          \"data-chart-type\": \"bar\"\n        },\n        \"children\": [\n          {\n            \"type\": \"p\",\n            \"props\": {\n              \"role\": \"status\"\n            },\n            \"children\": [\n              \"No chart data.\"\n            ]\n          }\n        ]\n      },\n      \"tokenizedClasses\": [\n        \"jami-chart\"\n      ]\n    },\n    \"empty\": {\n      \"props\": {},\n      \"rendererState\": \"renderable\",\n      \"reasons\": [],\n      \"node\": {\n        \"type\": \"figure\",\n        \"props\": {\n          \"className\": \"jami-chart\",\n          \"role\": \"group\",\n          \"aria-label\": \"Chart\",\n          \"data-chart-type\": \"bar\"\n        },\n        \"children\": [\n          {\n            \"type\": \"p\",\n            \"props\": {\n              \"role\": \"status\"\n            },\n            \"children\": [\n              \"No chart data.\"\n            ]\n          }\n        ]\n      },\n      \"tokenizedClasses\": [\n        \"jami-chart\"\n      ]\n    },\n    \"error\": {\n      \"props\": {},\n      \"rendererState\": \"renderable\",\n      \"reasons\": [],\n      \"node\": {\n        \"type\": \"figure\",\n        \"props\": {\n          \"className\": \"jami-chart\",\n          \"role\": \"group\",\n          \"aria-label\": \"Chart\",\n          \"data-chart-type\": \"bar\"\n        },\n        \"children\": [\n          {\n            \"type\": \"p\",\n            \"props\": {\n              \"role\": \"status\"\n            },\n            \"children\": [\n              \"No chart data.\"\n            ]\n          }\n        ]\n      },\n      \"tokenizedClasses\": [\n        \"jami-chart\"\n      ]\n    },\n    \"long-content\": {\n      \"props\": {},\n      \"rendererState\": \"renderable\",\n      \"reasons\": [],\n      \"node\": {\n        \"type\": \"figure\",\n        \"props\": {\n          \"className\": \"jami-chart\",\n          \"role\": \"group\",\n          \"aria-label\": \"Chart\",\n          \"data-chart-type\": \"bar\"\n        },\n        \"children\": [\n          {\n            \"type\": \"p\",\n            \"props\": {\n              \"role\": \"status\"\n            },\n            \"children\": [\n              \"No chart data.\"\n            ]\n          }\n        ]\n      },\n      \"tokenizedClasses\": [\n        \"jami-chart\"\n      ]\n    }\n  },\n  \"evidence\": {\n    \"renderableStates\": [\n      \"ready\",\n      \"loading\",\n      \"empty\",\n      \"error\",\n      \"long-content\"\n    ],\n    \"failedStates\": [],\n    \"tokenizedClasses\": [\n      \"jami-chart\"\n    ],\n    \"responsive\": true,\n    \"reducedMotion\": true,\n    \"longContentSafe\": true,\n    \"emptyStateSafe\": true,\n    \"errorStateSafe\": true,\n    \"displayOnly\": true\n  },\n  \"runtime\": {\n    \"runtimeReactRenderer\": true,\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"radixWrapper\": true\n  },\n  \"reactMount\": {\n    \"schemaVersion\": \"2026-06-12.mounted-react-workspace-routes\",\n    \"source\": \"packages/ui/src/workspaces.mjs\",\n    \"packageName\": \"@jami-studio/ui\",\n    \"rendererBoundary\": \"React workspace components are install-time/app code, not harness-originated renderer payload execution.\",\n    \"hostedRuntime\": false,\n    \"harnessRuntimeExecution\": false,\n    \"executableActions\": false,\n    \"serverRenderedStaticRoutes\": true,\n    \"routeArtifact\": \"apps/workbench/dist/suites/analytics/index.html\"\n  },\n  \"provenance\": {\n    \"source\": \"registry/workspaces/analytics/workspace-shell.json\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:f9ec2bc378ef1f766144759ccc93bd64039b77a6874f44609561c409cbab0b1c"
+    }
+  ],
+  "meta": {
+    "packageName": "@jami-studio/analytics-dashboards-index-block",
+    "workspace": "analytics",
+    "lifecycle": {
+      "id": "block.analytics.dashboards-index",
+      "version": "0.0.0-agent-native.20260629",
+      "schemaVersion": "2026-06-29.agent-native-template-workspace",
+      "sourceHash": "sha256:c39c2462edbe1486b38bc5c5b0015e2f0880f8d3bf38aabc78bf14de753c1236",
+      "migrationNotes": "Generated standalone block descriptor plus mounted React block route evidence from the authored workspace shell."
+    },
+    "tokenRequirements": [],
+    "provenance": {
+      "source": "registry/workspaces/analytics/workspace-shell.json",
+      "license": "Apache-2.0",
+      "reviewedAt": "2026-06-09",
+      "copiedSource": false
+    },
+    "compatibility": {
+      "shadcn": "Studio UI registry metadata generated from Agent-Native template route inventory; source app remains upstream-owned until forked into Jami packages.",
+      "tailwind": "Consumes generated --jami-* CSS variables in the Studio UI workbench port.",
+      "react": "19.2.7"
+    },
+    "agentManifest": null
+  }
+}

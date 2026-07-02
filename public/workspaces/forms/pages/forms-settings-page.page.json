@@ -1,0 +1,56 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "forms",
+  "page": {
+    "id": "page.forms.settings",
+    "title": "Settings",
+    "description": "Agent-Native forms route /settings derived from _app.settings.tsx.",
+    "components": [
+      "text-field",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.settings.tsx"
+  },
+  "routes": [
+    {
+      "path": "/forms/settings",
+      "page": "page.forms.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.forms.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.settings.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.forms.settings",
+      "title": "Settings",
+      "component": "text-field",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "invalid",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.settings.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "panel",
+    "text-field"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Forms keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Forms in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Forms agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/forms/workspace-shell.json",
+    "copiedSource": false
+  }
+}

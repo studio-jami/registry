@@ -1,0 +1,1179 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/dispatch-workspace",
+  "workspace": "dispatch",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "agent-panel",
+    "dispatch-app",
+    "dispatch-detail-page",
+    "dispatch-home-page",
+    "dispatch-agents-page",
+    "dispatch-approval-page",
+    "dispatch-approvals-page",
+    "dispatch-apps-detail-page",
+    "dispatch-apps-page",
+    "dispatch-audit-page",
+    "dispatch-chat-detail-page",
+    "dispatch-chat-page",
+    "dispatch-destinations-page",
+    "dispatch-dreams-page",
+    "dispatch-extensions-detail-detail-page",
+    "dispatch-extensions-detail-page",
+    "dispatch-extensions-index-page",
+    "dispatch-identities-page",
+    "dispatch-integrations-page",
+    "dispatch-messaging-page",
+    "dispatch-metrics-page",
+    "dispatch-new-app-page",
+    "dispatch-overview-page",
+    "dispatch-settings-page",
+    "dispatch-team-page",
+    "dispatch-thread-debug-page",
+    "dispatch-tools-detail-page",
+    "dispatch-tools-index-page",
+    "dispatch-vault-page",
+    "dispatch-workspace-page",
+    "dispatch-detail-block",
+    "dispatch-home-block",
+    "dispatch-agents-block",
+    "dispatch-approval-block",
+    "dispatch-approvals-block",
+    "dispatch-apps-detail-block",
+    "dispatch-apps-block",
+    "dispatch-audit-block",
+    "dispatch-chat-detail-block",
+    "dispatch-chat-block",
+    "dispatch-destinations-block",
+    "dispatch-dreams-block",
+    "dispatch-extensions-detail-detail-block",
+    "dispatch-extensions-detail-block",
+    "dispatch-extensions-index-block",
+    "dispatch-identities-block",
+    "dispatch-integrations-block",
+    "dispatch-messaging-block",
+    "dispatch-metrics-block",
+    "dispatch-new-app-block",
+    "dispatch-overview-block",
+    "dispatch-settings-block",
+    "dispatch-team-block",
+    "dispatch-thread-debug-block",
+    "dispatch-tools-detail-block",
+    "dispatch-tools-index-block",
+    "dispatch-vault-block",
+    "dispatch-workspace-block"
+  ],
+  "installGraph": {
+    "root": "dispatch-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "agent-panel",
+      "dispatch-app",
+      "dispatch-detail-page",
+      "dispatch-home-page",
+      "dispatch-agents-page",
+      "dispatch-approval-page",
+      "dispatch-approvals-page",
+      "dispatch-apps-detail-page",
+      "dispatch-apps-page",
+      "dispatch-audit-page",
+      "dispatch-chat-detail-page",
+      "dispatch-chat-page",
+      "dispatch-destinations-page",
+      "dispatch-dreams-page",
+      "dispatch-extensions-detail-detail-page",
+      "dispatch-extensions-detail-page",
+      "dispatch-extensions-index-page",
+      "dispatch-identities-page",
+      "dispatch-integrations-page",
+      "dispatch-messaging-page",
+      "dispatch-metrics-page",
+      "dispatch-new-app-page",
+      "dispatch-overview-page",
+      "dispatch-settings-page",
+      "dispatch-team-page",
+      "dispatch-thread-debug-page",
+      "dispatch-tools-detail-page",
+      "dispatch-tools-index-page",
+      "dispatch-vault-page",
+      "dispatch-workspace-page",
+      "dispatch-detail-block",
+      "dispatch-home-block",
+      "dispatch-agents-block",
+      "dispatch-approval-block",
+      "dispatch-approvals-block",
+      "dispatch-apps-detail-block",
+      "dispatch-apps-block",
+      "dispatch-audit-block",
+      "dispatch-chat-detail-block",
+      "dispatch-chat-block",
+      "dispatch-destinations-block",
+      "dispatch-dreams-block",
+      "dispatch-extensions-detail-detail-block",
+      "dispatch-extensions-detail-block",
+      "dispatch-extensions-index-block",
+      "dispatch-identities-block",
+      "dispatch-integrations-block",
+      "dispatch-messaging-block",
+      "dispatch-metrics-block",
+      "dispatch-new-app-block",
+      "dispatch-overview-block",
+      "dispatch-settings-block",
+      "dispatch-team-block",
+      "dispatch-thread-debug-block",
+      "dispatch-tools-detail-block",
+      "dispatch-tools-index-block",
+      "dispatch-vault-block",
+      "dispatch-workspace-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":appId",
+    "dispatch",
+    "agents",
+    "approval",
+    "approvals",
+    "apps",
+    "apps",
+    "audit",
+    "chat",
+    "chat",
+    "destinations",
+    "dreams",
+    "extensions",
+    "extensions",
+    "extensions",
+    "identities",
+    "integrations",
+    "messaging",
+    "metrics",
+    "new-app",
+    "overview",
+    "settings",
+    "team",
+    "thread-debug",
+    "tools",
+    "tools",
+    "vault",
+    "workspace"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Dispatch",
+    "summary": "Agent-Native Dispatch Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.dispatch.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Detail",
+          "route": "/dispatch/:appId"
+        },
+        {
+          "label": "Home",
+          "route": "/dispatch"
+        },
+        {
+          "label": "Agents",
+          "route": "/dispatch/agents"
+        },
+        {
+          "label": "Approval",
+          "route": "/dispatch/approval"
+        },
+        {
+          "label": "Approvals",
+          "route": "/dispatch/approvals"
+        },
+        {
+          "label": "Apps Detail",
+          "route": "/dispatch/apps/:appId"
+        },
+        {
+          "label": "Apps",
+          "route": "/dispatch/apps"
+        },
+        {
+          "label": "Audit",
+          "route": "/dispatch/audit"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/dispatch/:appId",
+        "page": "page.dispatch.detail",
+        "title": "Detail",
+        "blocks": [
+          "block.dispatch.detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/$appId.tsx"
+      },
+      {
+        "path": "/dispatch",
+        "page": "page.dispatch.home",
+        "title": "Dispatch Home",
+        "blocks": [
+          "block.dispatch.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/_index.tsx"
+      },
+      {
+        "path": "/dispatch/agents",
+        "page": "page.dispatch.agents",
+        "title": "Agents",
+        "blocks": [
+          "block.dispatch.agents"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/agents.tsx"
+      },
+      {
+        "path": "/dispatch/approval",
+        "page": "page.dispatch.approval",
+        "title": "Approval",
+        "blocks": [
+          "block.dispatch.approval"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/approval.tsx"
+      },
+      {
+        "path": "/dispatch/approvals",
+        "page": "page.dispatch.approvals",
+        "title": "Approvals",
+        "blocks": [
+          "block.dispatch.approvals"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/approvals.tsx"
+      },
+      {
+        "path": "/dispatch/apps/:appId",
+        "page": "page.dispatch.apps-detail",
+        "title": "Apps Detail",
+        "blocks": [
+          "block.dispatch.apps-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/apps.$appId.tsx"
+      },
+      {
+        "path": "/dispatch/apps",
+        "page": "page.dispatch.apps",
+        "title": "Apps",
+        "blocks": [
+          "block.dispatch.apps"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/apps.tsx"
+      },
+      {
+        "path": "/dispatch/audit",
+        "page": "page.dispatch.audit",
+        "title": "Audit",
+        "blocks": [
+          "block.dispatch.audit"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/audit.tsx"
+      },
+      {
+        "path": "/dispatch/chat/:threadId",
+        "page": "page.dispatch.chat-detail",
+        "title": "Chat Detail",
+        "blocks": [
+          "block.dispatch.chat-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "path": "/dispatch/chat",
+        "page": "page.dispatch.chat",
+        "title": "Chat",
+        "blocks": [
+          "block.dispatch.chat"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.tsx"
+      },
+      {
+        "path": "/dispatch/destinations",
+        "page": "page.dispatch.destinations",
+        "title": "Destinations",
+        "blocks": [
+          "block.dispatch.destinations"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/destinations.tsx"
+      },
+      {
+        "path": "/dispatch/dreams",
+        "page": "page.dispatch.dreams",
+        "title": "Dreams",
+        "blocks": [
+          "block.dispatch.dreams"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/dreams.tsx"
+      },
+      {
+        "path": "/dispatch/extensions/:id/:slug",
+        "page": "page.dispatch.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.dispatch.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/dispatch/extensions/:id",
+        "page": "page.dispatch.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.dispatch.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/dispatch/extensions",
+        "page": "page.dispatch.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.dispatch.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/dispatch/identities",
+        "page": "page.dispatch.identities",
+        "title": "Identities",
+        "blocks": [
+          "block.dispatch.identities"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/identities.tsx"
+      },
+      {
+        "path": "/dispatch/integrations",
+        "page": "page.dispatch.integrations",
+        "title": "Integrations",
+        "blocks": [
+          "block.dispatch.integrations"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/integrations.tsx"
+      },
+      {
+        "path": "/dispatch/messaging",
+        "page": "page.dispatch.messaging",
+        "title": "Messaging",
+        "blocks": [
+          "block.dispatch.messaging"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/messaging.tsx"
+      },
+      {
+        "path": "/dispatch/metrics",
+        "page": "page.dispatch.metrics",
+        "title": "Metrics",
+        "blocks": [
+          "block.dispatch.metrics"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/metrics.tsx"
+      },
+      {
+        "path": "/dispatch/new-app",
+        "page": "page.dispatch.new-app",
+        "title": "New App",
+        "blocks": [
+          "block.dispatch.new-app"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/new-app.tsx"
+      },
+      {
+        "path": "/dispatch/overview",
+        "page": "page.dispatch.overview",
+        "title": "Overview",
+        "blocks": [
+          "block.dispatch.overview"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/overview.tsx"
+      },
+      {
+        "path": "/dispatch/settings",
+        "page": "page.dispatch.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.dispatch.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/settings.tsx"
+      },
+      {
+        "path": "/dispatch/team",
+        "page": "page.dispatch.team",
+        "title": "Team",
+        "blocks": [
+          "block.dispatch.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/team.tsx"
+      },
+      {
+        "path": "/dispatch/thread-debug",
+        "page": "page.dispatch.thread-debug",
+        "title": "Thread Debug",
+        "blocks": [
+          "block.dispatch.thread-debug"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/thread-debug.tsx"
+      },
+      {
+        "path": "/dispatch/tools/:id",
+        "page": "page.dispatch.tools-detail",
+        "title": "Tools Detail",
+        "blocks": [
+          "block.dispatch.tools-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/tools.$id.tsx"
+      },
+      {
+        "path": "/dispatch/tools",
+        "page": "page.dispatch.tools-index",
+        "title": "Tools Index",
+        "blocks": [
+          "block.dispatch.tools-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/tools._index.tsx"
+      },
+      {
+        "path": "/dispatch/vault",
+        "page": "page.dispatch.vault",
+        "title": "Vault",
+        "blocks": [
+          "block.dispatch.vault"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/vault.tsx"
+      },
+      {
+        "path": "/dispatch/workspace",
+        "page": "page.dispatch.workspace",
+        "title": "Workspace",
+        "blocks": [
+          "block.dispatch.workspace"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/workspace.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.dispatch.detail",
+        "title": "Detail",
+        "description": "Agent-Native dispatch route /:appId derived from $appId.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/$appId.tsx"
+      },
+      {
+        "id": "page.dispatch.home",
+        "title": "Dispatch Home",
+        "description": "Agent-Native dispatch route / derived from _index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.dispatch.agents",
+        "title": "Agents",
+        "description": "Agent-Native dispatch route /agents derived from agents.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/agents.tsx"
+      },
+      {
+        "id": "page.dispatch.approval",
+        "title": "Approval",
+        "description": "Agent-Native dispatch route /approval derived from approval.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/approval.tsx"
+      },
+      {
+        "id": "page.dispatch.approvals",
+        "title": "Approvals",
+        "description": "Agent-Native dispatch route /approvals derived from approvals.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/approvals.tsx"
+      },
+      {
+        "id": "page.dispatch.apps-detail",
+        "title": "Apps Detail",
+        "description": "Agent-Native dispatch route /apps/:appId derived from apps.$appId.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/apps.$appId.tsx"
+      },
+      {
+        "id": "page.dispatch.apps",
+        "title": "Apps",
+        "description": "Agent-Native dispatch route /apps derived from apps.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/apps.tsx"
+      },
+      {
+        "id": "page.dispatch.audit",
+        "title": "Audit",
+        "description": "Agent-Native dispatch route /audit derived from audit.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/audit.tsx"
+      },
+      {
+        "id": "page.dispatch.chat-detail",
+        "title": "Chat Detail",
+        "description": "Agent-Native dispatch route /chat/:threadId derived from chat.$threadId.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "id": "page.dispatch.chat",
+        "title": "Chat",
+        "description": "Agent-Native dispatch route /chat derived from chat.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.tsx"
+      },
+      {
+        "id": "page.dispatch.destinations",
+        "title": "Destinations",
+        "description": "Agent-Native dispatch route /destinations derived from destinations.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/destinations.tsx"
+      },
+      {
+        "id": "page.dispatch.dreams",
+        "title": "Dreams",
+        "description": "Agent-Native dispatch route /dreams derived from dreams.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/dreams.tsx"
+      },
+      {
+        "id": "page.dispatch.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native dispatch route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.dispatch.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native dispatch route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.dispatch.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native dispatch route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.dispatch.identities",
+        "title": "Identities",
+        "description": "Agent-Native dispatch route /identities derived from identities.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/identities.tsx"
+      },
+      {
+        "id": "page.dispatch.integrations",
+        "title": "Integrations",
+        "description": "Agent-Native dispatch route /integrations derived from integrations.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/integrations.tsx"
+      },
+      {
+        "id": "page.dispatch.messaging",
+        "title": "Messaging",
+        "description": "Agent-Native dispatch route /messaging derived from messaging.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/messaging.tsx"
+      },
+      {
+        "id": "page.dispatch.metrics",
+        "title": "Metrics",
+        "description": "Agent-Native dispatch route /metrics derived from metrics.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/metrics.tsx"
+      },
+      {
+        "id": "page.dispatch.new-app",
+        "title": "New App",
+        "description": "Agent-Native dispatch route /new-app derived from new-app.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/new-app.tsx"
+      },
+      {
+        "id": "page.dispatch.overview",
+        "title": "Overview",
+        "description": "Agent-Native dispatch route /overview derived from overview.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/overview.tsx"
+      },
+      {
+        "id": "page.dispatch.settings",
+        "title": "Settings",
+        "description": "Agent-Native dispatch route /settings derived from settings.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.dispatch.team",
+        "title": "Team",
+        "description": "Agent-Native dispatch route /team derived from team.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/team.tsx"
+      },
+      {
+        "id": "page.dispatch.thread-debug",
+        "title": "Thread Debug",
+        "description": "Agent-Native dispatch route /thread-debug derived from thread-debug.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/thread-debug.tsx"
+      },
+      {
+        "id": "page.dispatch.tools-detail",
+        "title": "Tools Detail",
+        "description": "Agent-Native dispatch route /tools/:id derived from tools.$id.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/tools.$id.tsx"
+      },
+      {
+        "id": "page.dispatch.tools-index",
+        "title": "Tools Index",
+        "description": "Agent-Native dispatch route /tools derived from tools._index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/tools._index.tsx"
+      },
+      {
+        "id": "page.dispatch.vault",
+        "title": "Vault",
+        "description": "Agent-Native dispatch route /vault derived from vault.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/vault.tsx"
+      },
+      {
+        "id": "page.dispatch.workspace",
+        "title": "Workspace",
+        "description": "Agent-Native dispatch route /workspace derived from workspace.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/workspace.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.dispatch.detail",
+        "title": "Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/$appId.tsx"
+      },
+      {
+        "id": "block.dispatch.home",
+        "title": "Home",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.dispatch.agents",
+        "title": "Agents",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/agents.tsx"
+      },
+      {
+        "id": "block.dispatch.approval",
+        "title": "Approval",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/approval.tsx"
+      },
+      {
+        "id": "block.dispatch.approvals",
+        "title": "Approvals",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/approvals.tsx"
+      },
+      {
+        "id": "block.dispatch.apps-detail",
+        "title": "Apps Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/apps.$appId.tsx"
+      },
+      {
+        "id": "block.dispatch.apps",
+        "title": "Apps",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/apps.tsx"
+      },
+      {
+        "id": "block.dispatch.audit",
+        "title": "Audit",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/audit.tsx"
+      },
+      {
+        "id": "block.dispatch.chat-detail",
+        "title": "Chat Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.$threadId.tsx"
+      },
+      {
+        "id": "block.dispatch.chat",
+        "title": "Chat",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/chat.tsx"
+      },
+      {
+        "id": "block.dispatch.destinations",
+        "title": "Destinations",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/destinations.tsx"
+      },
+      {
+        "id": "block.dispatch.dreams",
+        "title": "Dreams",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/dreams.tsx"
+      },
+      {
+        "id": "block.dispatch.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.dispatch.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.dispatch.extensions-index",
+        "title": "Extensions Index",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.dispatch.identities",
+        "title": "Identities",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/identities.tsx"
+      },
+      {
+        "id": "block.dispatch.integrations",
+        "title": "Integrations",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/integrations.tsx"
+      },
+      {
+        "id": "block.dispatch.messaging",
+        "title": "Messaging",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/messaging.tsx"
+      },
+      {
+        "id": "block.dispatch.metrics",
+        "title": "Metrics",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/metrics.tsx"
+      },
+      {
+        "id": "block.dispatch.new-app",
+        "title": "New App",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/new-app.tsx"
+      },
+      {
+        "id": "block.dispatch.overview",
+        "title": "Overview",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/overview.tsx"
+      },
+      {
+        "id": "block.dispatch.settings",
+        "title": "Settings",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.dispatch.team",
+        "title": "Team",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/team.tsx"
+      },
+      {
+        "id": "block.dispatch.thread-debug",
+        "title": "Thread Debug",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/thread-debug.tsx"
+      },
+      {
+        "id": "block.dispatch.tools-detail",
+        "title": "Tools Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/tools.$id.tsx"
+      },
+      {
+        "id": "block.dispatch.tools-index",
+        "title": "Tools Index",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/tools._index.tsx"
+      },
+      {
+        "id": "block.dispatch.vault",
+        "title": "Vault",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/vault.tsx"
+      },
+      {
+        "id": "block.dispatch.workspace",
+        "title": "Workspace",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/dispatch/app/routes/workspace.tsx"
+      }
+    ],
+    "componentParts": [
+      "agent-panel",
+      "button",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Dispatch keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Dispatch in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Dispatch agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/dispatch",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/dispatch/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/dispatch/dispatch-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/dispatch/pages/dispatch-detail-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-home-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-agents-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-approval-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-approvals-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-apps-detail-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-apps-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-audit-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-chat-detail-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-chat-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-destinations-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-dreams-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-identities-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-integrations-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-messaging-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-metrics-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-new-app-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-overview-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-settings-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-team-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-thread-debug-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-tools-detail-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-tools-index-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-vault-page.page.implementation.json",
+      "studio-ui/workspaces/dispatch/pages/dispatch-workspace-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/dispatch/blocks/dispatch-detail-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-home-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-agents-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-approval-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-approvals-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-apps-detail-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-apps-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-audit-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-chat-detail-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-chat-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-destinations-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-dreams-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-identities-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-integrations-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-messaging-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-metrics-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-new-app-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-overview-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-settings-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-team-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-thread-debug-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-tools-detail-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-tools-index-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-vault-block.block.implementation.json",
+      "studio-ui/workspaces/dispatch/blocks/dispatch-workspace-block.block.implementation.json"
+    ]
+  }
+}

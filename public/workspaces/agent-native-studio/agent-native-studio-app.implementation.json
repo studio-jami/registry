@@ -1,0 +1,578 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "agent-native-studio",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/agent-native-studio/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.agent-native-studio.shell",
+    "layout": "agent-native-studio-workspace",
+    "navigation": [
+      {
+        "label": "Clips",
+        "route": "/agent-native-studio/clips"
+      },
+      {
+        "label": "Agent-Native Plan",
+        "route": "/agent-native-studio/plan"
+      },
+      {
+        "label": "Design",
+        "route": "/agent-native-studio/design"
+      },
+      {
+        "label": "Agent-Native Content",
+        "route": "/agent-native-studio/content"
+      },
+      {
+        "label": "Agent-Native Slides",
+        "route": "/agent-native-studio/slides"
+      },
+      {
+        "label": "Agent-Native Analytics",
+        "route": "/agent-native-studio/analytics"
+      },
+      {
+        "label": "Agent-Native Mail",
+        "route": "/agent-native-studio/mail"
+      },
+      {
+        "label": "Agent-Native Forms",
+        "route": "/agent-native-studio/forms"
+      },
+      {
+        "label": "Agent-Native Brain",
+        "route": "/agent-native-studio/brain"
+      },
+      {
+        "label": "Assets",
+        "route": "/agent-native-studio/assets"
+      },
+      {
+        "label": "Agent-Native Calendar",
+        "route": "/agent-native-studio/calendar"
+      },
+      {
+        "label": "Agent-Native Dispatch",
+        "route": "/agent-native-studio/dispatch"
+      },
+      {
+        "label": "Chat",
+        "route": "/agent-native-studio/chat"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/agent-native-studio/clips",
+      "page": "page.agent-native-studio.clips",
+      "title": "Clips",
+      "blocks": [
+        "block.agent-native-studio.clips"
+      ],
+      "targetWorkspace": "clips",
+      "targetRoute": "/clips"
+    },
+    {
+      "path": "/agent-native-studio/plan",
+      "page": "page.agent-native-studio.plan",
+      "title": "Agent-Native Plan",
+      "blocks": [
+        "block.agent-native-studio.plan"
+      ],
+      "targetWorkspace": "plan",
+      "targetRoute": "/plan"
+    },
+    {
+      "path": "/agent-native-studio/design",
+      "page": "page.agent-native-studio.design",
+      "title": "Design",
+      "blocks": [
+        "block.agent-native-studio.design"
+      ],
+      "targetWorkspace": "design",
+      "targetRoute": "/design"
+    },
+    {
+      "path": "/agent-native-studio/content",
+      "page": "page.agent-native-studio.content",
+      "title": "Agent-Native Content",
+      "blocks": [
+        "block.agent-native-studio.content"
+      ],
+      "targetWorkspace": "content",
+      "targetRoute": "/content"
+    },
+    {
+      "path": "/agent-native-studio/slides",
+      "page": "page.agent-native-studio.slides",
+      "title": "Agent-Native Slides",
+      "blocks": [
+        "block.agent-native-studio.slides"
+      ],
+      "targetWorkspace": "slides",
+      "targetRoute": "/slides"
+    },
+    {
+      "path": "/agent-native-studio/analytics",
+      "page": "page.agent-native-studio.analytics",
+      "title": "Agent-Native Analytics",
+      "blocks": [
+        "block.agent-native-studio.analytics"
+      ],
+      "targetWorkspace": "analytics",
+      "targetRoute": "/analytics"
+    },
+    {
+      "path": "/agent-native-studio/mail",
+      "page": "page.agent-native-studio.mail",
+      "title": "Agent-Native Mail",
+      "blocks": [
+        "block.agent-native-studio.mail"
+      ],
+      "targetWorkspace": "mail",
+      "targetRoute": "/mail"
+    },
+    {
+      "path": "/agent-native-studio/forms",
+      "page": "page.agent-native-studio.forms",
+      "title": "Agent-Native Forms",
+      "blocks": [
+        "block.agent-native-studio.forms"
+      ],
+      "targetWorkspace": "forms",
+      "targetRoute": "/forms"
+    },
+    {
+      "path": "/agent-native-studio/brain",
+      "page": "page.agent-native-studio.brain",
+      "title": "Agent-Native Brain",
+      "blocks": [
+        "block.agent-native-studio.brain"
+      ],
+      "targetWorkspace": "brain",
+      "targetRoute": "/brain"
+    },
+    {
+      "path": "/agent-native-studio/assets",
+      "page": "page.agent-native-studio.assets",
+      "title": "Assets",
+      "blocks": [
+        "block.agent-native-studio.assets"
+      ],
+      "targetWorkspace": "assets",
+      "targetRoute": "/assets"
+    },
+    {
+      "path": "/agent-native-studio/calendar",
+      "page": "page.agent-native-studio.calendar",
+      "title": "Agent-Native Calendar",
+      "blocks": [
+        "block.agent-native-studio.calendar"
+      ],
+      "targetWorkspace": "calendar",
+      "targetRoute": "/calendar"
+    },
+    {
+      "path": "/agent-native-studio/dispatch",
+      "page": "page.agent-native-studio.dispatch",
+      "title": "Agent-Native Dispatch",
+      "blocks": [
+        "block.agent-native-studio.dispatch"
+      ],
+      "targetWorkspace": "dispatch",
+      "targetRoute": "/dispatch"
+    },
+    {
+      "path": "/agent-native-studio/chat",
+      "page": "page.agent-native-studio.chat",
+      "title": "Chat",
+      "blocks": [
+        "block.agent-native-studio.chat"
+      ],
+      "targetWorkspace": "chat",
+      "targetRoute": "/chat"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.agent-native-studio.clips",
+      "title": "Clips",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-clips-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.plan",
+      "title": "Agent-Native Plan",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-plan-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.design",
+      "title": "Design",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-design-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.content",
+      "title": "Agent-Native Content",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-content-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.slides",
+      "title": "Agent-Native Slides",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-slides-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.analytics",
+      "title": "Agent-Native Analytics",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-analytics-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.mail",
+      "title": "Agent-Native Mail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-mail-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.forms",
+      "title": "Agent-Native Forms",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-forms-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.brain",
+      "title": "Agent-Native Brain",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-brain-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.assets",
+      "title": "Assets",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-assets-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.calendar",
+      "title": "Agent-Native Calendar",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-calendar-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.dispatch",
+      "title": "Agent-Native Dispatch",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-dispatch-page.page.implementation.json"
+    },
+    {
+      "id": "page.agent-native-studio.chat",
+      "title": "Chat",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/pages/agent-native-studio-chat-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.agent-native-studio.clips",
+      "title": "Clips",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-clips-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.plan",
+      "title": "Agent-Native Plan",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-plan-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.design",
+      "title": "Design",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-design-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.content",
+      "title": "Agent-Native Content",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-content-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.slides",
+      "title": "Agent-Native Slides",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-slides-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.analytics",
+      "title": "Agent-Native Analytics",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-analytics-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.mail",
+      "title": "Agent-Native Mail",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-mail-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.forms",
+      "title": "Agent-Native Forms",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-forms-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.brain",
+      "title": "Agent-Native Brain",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-brain-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.assets",
+      "title": "Assets",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-assets-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.calendar",
+      "title": "Agent-Native Calendar",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-calendar-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.dispatch",
+      "title": "Agent-Native Dispatch",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-dispatch-block.block.implementation.json"
+    },
+    {
+      "id": "block.agent-native-studio.chat",
+      "title": "Chat",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/agent-native-studio/blocks/agent-native-studio-chat-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "agent-panel",
+      "manifestId": "agm_agent_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_agent_panel_review",
+          "name": "review",
+          "label": "Review agent recommendation",
+          "harnessRoute": "harness://actions/agent-panel-review",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "recommendationId",
+              "decision"
+            ],
+            "properties": {
+              "recommendationId": {
+                "type": "string"
+              },
+              "decision": {
+                "type": "string",
+                "enum": [
+                  "approve",
+                  "deny"
+                ]
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "data-list",
+      "manifestId": "agm_data_list",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 13,
+    "renderedBlockCount": 13,
+    "routeCount": 13,
+    "navigationCount": 13,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/agent-native-studio/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/agent-native-studio/workspace-shell.json",
+    "copiedSource": false
+  }
+}

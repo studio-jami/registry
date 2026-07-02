@@ -1,0 +1,484 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-a11y.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "forms",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "runner": "axe-core/jsdom",
+  "axeVersion": "4.12.1",
+  "target": "WCAG 2.2 AA tags in axe-core",
+  "componentsCovered": [
+    "agent-panel",
+    "button",
+    "chart",
+    "docs-source-panel",
+    "panel",
+    "text-field"
+  ],
+  "violationCount": 0,
+  "keyboardAriaScreenReader": "axe-core/jsdom asserts keyboard, focus-visible, ARIA, and screen-reader name/role/state across every fixture state; zero violations required, jsdom-only `incomplete` items are recorded verbatim.",
+  "fixtures": [
+    {
+      "component": "agent-panel",
+      "fixture": "agent-panel-display-only",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-action",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-as-child",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "chart",
+      "fixture": "chart-metric-bars",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "docs-source-panel",
+      "fixture": "docs-source-panel-redacted",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "panel",
+      "fixture": "panel-region",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "text-field",
+      "fixture": "text-field-labelled",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "dataStates": {
+    "requiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "coveredRequiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "perBlock": [
+      {
+        "block": "block.forms.ask",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.extensions",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.extensions-detail",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.extensions-detail-detail",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.extensions-index",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.f-catchall",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.form-preview",
+        "component": "docs-source-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.forms-detail",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.forms-detail-responses",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.forms-index",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.home",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.home-2",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.response-insights",
+        "component": "chart",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.settings",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.forms.team",
+        "component": "text-field",
+        "states": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "invalid",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      }
+    ]
+  }
+}

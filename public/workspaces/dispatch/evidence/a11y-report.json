@@ -1,0 +1,590 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-a11y.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "dispatch",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "runner": "axe-core/jsdom",
+  "axeVersion": "4.12.1",
+  "target": "WCAG 2.2 AA tags in axe-core",
+  "componentsCovered": [
+    "agent-panel",
+    "button",
+    "panel"
+  ],
+  "violationCount": 0,
+  "keyboardAriaScreenReader": "axe-core/jsdom asserts keyboard, focus-visible, ARIA, and screen-reader name/role/state across every fixture state; zero violations required, jsdom-only `incomplete` items are recorded verbatim.",
+  "fixtures": [
+    {
+      "component": "agent-panel",
+      "fixture": "agent-panel-display-only",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-action",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-as-child",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "panel",
+      "fixture": "panel-region",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "dataStates": {
+    "requiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "coveredRequiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "perBlock": [
+      {
+        "block": "block.dispatch.agents",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.approval",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.approvals",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.apps",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.apps-detail",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.audit",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.chat",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.chat-detail",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.destinations",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.detail",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.dreams",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.extensions-detail",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.extensions-detail-detail",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.extensions-index",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.home",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.identities",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.integrations",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.messaging",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.metrics",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.new-app",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.overview",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.settings",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.team",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.thread-debug",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.tools-detail",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.tools-index",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.vault",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.dispatch.workspace",
+        "component": "agent-panel",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "ready"
+        ],
+        "failedStates": []
+      }
+    ]
+  }
+}

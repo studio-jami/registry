@@ -1,0 +1,112 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-index.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "clips",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "partTaxonomy": {
+    "schemaVersion": "2026-06-24.workspace-part-taxonomy",
+    "packKind": "workspace",
+    "partKinds": [
+      "primitive",
+      "component",
+      "block",
+      "page",
+      "app"
+    ],
+    "nonPartDependencyKinds": [
+      "theme",
+      "font"
+    ],
+    "parts": [
+      {
+        "kind": "primitive",
+        "order": 0,
+        "role": "Radix-first resident shadcn primitive; the smallest installable accessible building block.",
+        "composesFrom": null,
+        "foundation": "design tokens"
+      },
+      {
+        "kind": "component",
+        "order": 1,
+        "role": "Resident component composed from primitives with a stable display contract.",
+        "composesFrom": "primitive",
+        "foundation": null
+      },
+      {
+        "kind": "block",
+        "order": 2,
+        "role": "Titled binding of one component to a workspace state surface (ready/loading/error/empty).",
+        "composesFrom": "component",
+        "foundation": null
+      },
+      {
+        "kind": "page",
+        "order": 3,
+        "role": "Route surface composing blocks into a labelled, landmarked page.",
+        "composesFrom": "block",
+        "foundation": null
+      },
+      {
+        "kind": "app",
+        "order": 4,
+        "role": "Full workspace app shell composing pages behind navigation; the installable pack surface.",
+        "composesFrom": "page",
+        "foundation": null
+      }
+    ]
+  },
+  "inventory": {
+    "packItem": "clips-workspace",
+    "partCounts": {
+      "primitive": 2,
+      "component": 1,
+      "block": 30,
+      "page": 30,
+      "app": 1
+    },
+    "dependencyCount": 1,
+    "totalGraphItems": 66
+  },
+  "evidenceFiles": [
+    {
+      "id": "a11y-report",
+      "path": "studio-ui/workspaces/clips/evidence/a11y-report.json",
+      "sha256": "sha256:b2f1d1f38c3d7508568aeacc96757ebccb93a2e4221d604004cc7e66ed05c406"
+    },
+    {
+      "id": "harness-capability-display",
+      "path": "studio-ui/workspaces/clips/evidence/harness-capability-display.json",
+      "sha256": "sha256:641aac2da1d00742048778f85febfffd5867a769c719fff9ff102439c45626c3"
+    },
+    {
+      "id": "install-proof",
+      "path": "studio-ui/workspaces/clips/evidence/install-proof.json",
+      "sha256": "sha256:fc425fc8b4e5592849b16e40a2f82589aba18c47d18ede2d5b44d09408abb00d"
+    },
+    {
+      "id": "migration-path",
+      "path": "studio-ui/workspaces/clips/evidence/migration-path.json",
+      "sha256": "sha256:9296219417eb10708ca8df49e8ca0a384938ca85bb12255d2c8fed296a9f24fd"
+    },
+    {
+      "id": "provenance",
+      "path": "studio-ui/workspaces/clips/evidence/provenance.json",
+      "sha256": "sha256:7cffb942f0e157c9c584bbf32e2ec3f7d382b72dab40cde023f8509169b227fb"
+    },
+    {
+      "id": "rollback-test",
+      "path": "studio-ui/workspaces/clips/evidence/rollback-test.json",
+      "sha256": "sha256:0ad821372a75bd8e5785c6829190c9473ce882024aff5ace3c30c25d192bd7e1"
+    },
+    {
+      "id": "update-remove-proof",
+      "path": "studio-ui/workspaces/clips/evidence/update-remove-proof.json",
+      "sha256": "sha256:133fff84bddbee0141380ba814bd00096d75e23ffaf291471017691087120867"
+    },
+    {
+      "id": "visual-regression-gallery",
+      "path": "studio-ui/workspaces/clips/evidence/visual-regression-gallery.json",
+      "sha256": "sha256:4e0f0abf640437428b9ecc76bf4b97815978b6f2dedf5aeb2ad4c7c5fd1e7057"
+    }
+  ]
+}

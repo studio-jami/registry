@@ -7,7 +7,8 @@
     "title": "Task queue",
     "component": "data-list",
     "stateExamples": [
-      "empty"
+      "empty",
+      "loading"
     ]
   },
   "routes": [
@@ -25,7 +26,8 @@
   ],
   "component": "data-list",
   "stateFixtures": {
-    "empty": "No tasks are due; the data-list announces an empty status instead of hiding the section."
+    "empty": "No tasks are due; the data-list announces an empty status instead of hiding the section.",
+    "loading": "Task queue includes the loading state."
   },
   "provenance": {
     "source": "registry/workspaces/solo/workspace-shell.json",

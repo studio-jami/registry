@@ -1,0 +1,299 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "macros",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/macros/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-macros.png"
+  },
+  "routeCount": 8,
+  "blockStateCount": 32,
+  "routes": [
+    {
+      "galleryKey": "macros.route.macros",
+      "path": "/macros",
+      "page": "page.macros.home",
+      "title": "Macros Home",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros.png",
+      "blocks": [
+        "block.macros.home"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-analytics",
+      "path": "/macros/analytics",
+      "page": "page.macros.analytics",
+      "title": "Analytics",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-analytics.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-analytics.png",
+      "blocks": [
+        "block.macros.analytics"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-extensions-id-slug",
+      "path": "/macros/extensions/:id/:slug",
+      "page": "page.macros.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-extensions-id-slug.png",
+      "blocks": [
+        "block.macros.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-extensions-id",
+      "path": "/macros/extensions/:id",
+      "page": "page.macros.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-extensions-id.png",
+      "blocks": [
+        "block.macros.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-extensions",
+      "path": "/macros/extensions",
+      "page": "page.macros.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-extensions.png",
+      "blocks": [
+        "block.macros.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-extensions",
+      "path": "/macros/extensions",
+      "page": "page.macros.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-extensions.png",
+      "blocks": [
+        "block.macros.extensions"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-settings",
+      "path": "/macros/settings",
+      "page": "page.macros.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-settings.png",
+      "blocks": [
+        "block.macros.settings"
+      ]
+    },
+    {
+      "galleryKey": "macros.route.macros-team",
+      "path": "/macros/team",
+      "page": "page.macros.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/macros/macros-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-macros-macros-team.png",
+      "blocks": [
+        "block.macros.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "macros.block.block.macros.analytics.empty",
+      "block": "block.macros.analytics",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.analytics.error",
+      "block": "block.macros.analytics",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.analytics.loading",
+      "block": "block.macros.analytics",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.analytics.ready",
+      "block": "block.macros.analytics",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail-detail.empty",
+      "block": "block.macros.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail-detail.error",
+      "block": "block.macros.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail-detail.loading",
+      "block": "block.macros.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail-detail.ready",
+      "block": "block.macros.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail.empty",
+      "block": "block.macros.extensions-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail.error",
+      "block": "block.macros.extensions-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail.loading",
+      "block": "block.macros.extensions-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-detail.ready",
+      "block": "block.macros.extensions-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-index.empty",
+      "block": "block.macros.extensions-index",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-index.error",
+      "block": "block.macros.extensions-index",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-index.loading",
+      "block": "block.macros.extensions-index",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions-index.ready",
+      "block": "block.macros.extensions-index",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions.empty",
+      "block": "block.macros.extensions",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions.error",
+      "block": "block.macros.extensions",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions.loading",
+      "block": "block.macros.extensions",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.extensions.ready",
+      "block": "block.macros.extensions",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.home.empty",
+      "block": "block.macros.home",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.home.error",
+      "block": "block.macros.home",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.home.loading",
+      "block": "block.macros.home",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.home.ready",
+      "block": "block.macros.home",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.settings.empty",
+      "block": "block.macros.settings",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.settings.error",
+      "block": "block.macros.settings",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.settings.loading",
+      "block": "block.macros.settings",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.settings.ready",
+      "block": "block.macros.settings",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.team.empty",
+      "block": "block.macros.team",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.team.error",
+      "block": "block.macros.team",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.team.loading",
+      "block": "block.macros.team",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "macros.block.block.macros.team.ready",
+      "block": "block.macros.team",
+      "component": "agent-panel",
+      "state": "ready"
+    }
+  ]
+}

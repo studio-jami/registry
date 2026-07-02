@@ -1,0 +1,472 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "chat",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/chat/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.chat.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Home",
+        "route": "/chat"
+      },
+      {
+        "label": "Chat Detail",
+        "route": "/chat/chat/:threadId"
+      },
+      {
+        "label": "Database",
+        "route": "/chat/database"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/chat/extensions/:id/:slug"
+      },
+      {
+        "label": "Extensions Detail",
+        "route": "/chat/extensions/:id"
+      },
+      {
+        "label": "Extensions Index",
+        "route": "/chat/extensions"
+      },
+      {
+        "label": "Extensions",
+        "route": "/chat/extensions"
+      },
+      {
+        "label": "Observability",
+        "route": "/chat/observability"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/chat",
+      "page": "page.chat.home",
+      "title": "Chat Home",
+      "blocks": [
+        "block.chat.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/_index.tsx"
+    },
+    {
+      "path": "/chat/chat/:threadId",
+      "page": "page.chat.chat-detail",
+      "title": "Chat Detail",
+      "blocks": [
+        "block.chat.chat-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/chat.$threadId.tsx"
+    },
+    {
+      "path": "/chat/database",
+      "page": "page.chat.database",
+      "title": "Database",
+      "blocks": [
+        "block.chat.database"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/database.tsx"
+    },
+    {
+      "path": "/chat/extensions/:id/:slug",
+      "page": "page.chat.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.chat.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/chat/extensions/:id",
+      "page": "page.chat.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.chat.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/chat/extensions",
+      "page": "page.chat.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.chat.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/chat/extensions",
+      "page": "page.chat.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.chat.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/chat/observability",
+      "page": "page.chat.observability",
+      "title": "Observability",
+      "blocks": [
+        "block.chat.observability"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/observability.tsx"
+    },
+    {
+      "path": "/chat/settings",
+      "page": "page.chat.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.chat.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/settings.tsx"
+    },
+    {
+      "path": "/chat/team",
+      "page": "page.chat.team",
+      "title": "Team",
+      "blocks": [
+        "block.chat.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/chat/app/routes/team.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.chat.home",
+      "title": "Chat Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.chat-detail",
+      "title": "Chat Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-chat-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.database",
+      "title": "Database",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-database-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.observability",
+      "title": "Observability",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-observability-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.chat.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/chat/pages/chat-team-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.chat.home",
+      "title": "Home",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.chat-detail",
+      "title": "Chat Detail",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-chat-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.database",
+      "title": "Database",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-database-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.extensions-index",
+      "title": "Extensions Index",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.extensions",
+      "title": "Extensions",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.observability",
+      "title": "Observability",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-observability-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.settings",
+      "title": "Settings",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.chat.team",
+      "title": "Team",
+      "component": "agent-panel",
+      "implementationFile": "studio-ui/workspaces/chat/blocks/chat-team-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "agent-panel",
+      "manifestId": "agm_agent_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_agent_panel_review",
+          "name": "review",
+          "label": "Review agent recommendation",
+          "harnessRoute": "harness://actions/agent-panel-review",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "recommendationId",
+              "decision"
+            ],
+            "properties": {
+              "recommendationId": {
+                "type": "string"
+              },
+              "decision": {
+                "type": "string",
+                "enum": [
+                  "approve",
+                  "deny"
+                ]
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 10,
+    "renderedBlockCount": 10,
+    "routeCount": 10,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/chat/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/chat/workspace-shell.json",
+    "copiedSource": false
+  }
+}

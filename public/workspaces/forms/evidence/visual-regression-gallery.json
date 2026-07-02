@@ -1,0 +1,700 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "forms",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/forms/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-forms.png"
+  },
+  "routeCount": 15,
+  "blockStateCount": 86,
+  "routes": [
+    {
+      "galleryKey": "forms.route.forms-ask",
+      "path": "/forms/ask",
+      "page": "page.forms.ask",
+      "title": "Ask",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-ask.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-ask.png",
+      "blocks": [
+        "block.forms.ask"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-extensions-id-slug",
+      "path": "/forms/extensions/:id/:slug",
+      "page": "page.forms.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-extensions-id-slug.png",
+      "blocks": [
+        "block.forms.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-extensions-id",
+      "path": "/forms/extensions/:id",
+      "page": "page.forms.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-extensions-id.png",
+      "blocks": [
+        "block.forms.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-extensions",
+      "path": "/forms/extensions",
+      "page": "page.forms.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-extensions.png",
+      "blocks": [
+        "block.forms.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-extensions",
+      "path": "/forms/extensions",
+      "page": "page.forms.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-extensions.png",
+      "blocks": [
+        "block.forms.extensions"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-forms-id",
+      "path": "/forms/forms/:id",
+      "page": "page.forms.forms-detail",
+      "title": "Forms Detail",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-forms-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-forms-id.png",
+      "blocks": [
+        "block.forms.forms-detail"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-forms-id-responses",
+      "path": "/forms/forms/:id/responses",
+      "page": "page.forms.forms-detail-responses",
+      "title": "Forms Detail Responses",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-forms-id-responses.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-forms-id-responses.png",
+      "blocks": [
+        "block.forms.forms-detail-responses"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-forms",
+      "path": "/forms/forms",
+      "page": "page.forms.forms-index",
+      "title": "Forms Index",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-forms.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-forms.png",
+      "blocks": [
+        "block.forms.forms-index"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-response-insights",
+      "path": "/forms/response-insights",
+      "page": "page.forms.response-insights",
+      "title": "Response Insights",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-response-insights.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-response-insights.png",
+      "blocks": [
+        "block.forms.response-insights"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-settings",
+      "path": "/forms/settings",
+      "page": "page.forms.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-settings.png",
+      "blocks": [
+        "block.forms.settings"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-team",
+      "path": "/forms/team",
+      "page": "page.forms.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-team.png",
+      "blocks": [
+        "block.forms.team"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms",
+      "path": "/forms",
+      "page": "page.forms.home",
+      "title": "Forms Home",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms.png",
+      "blocks": [
+        "block.forms.home"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms",
+      "path": "/forms",
+      "page": "page.forms.home-2",
+      "title": "Forms Home",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms.png",
+      "blocks": [
+        "block.forms.home-2"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-f",
+      "path": "/forms/f/:",
+      "page": "page.forms.f-catchall",
+      "title": "F Catchall",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-f.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-f.png",
+      "blocks": [
+        "block.forms.f-catchall"
+      ]
+    },
+    {
+      "galleryKey": "forms.route.forms-form-preview",
+      "path": "/forms/form-preview",
+      "page": "page.forms.form-preview",
+      "title": "Form Preview",
+      "routeArtifact": "apps/workbench/dist/suites/forms/forms-form-preview.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-forms-forms-form-preview.png",
+      "blocks": [
+        "block.forms.form-preview"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "forms.block.block.forms.ask.empty",
+      "block": "block.forms.ask",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.ask.error",
+      "block": "block.forms.ask",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.ask.loading",
+      "block": "block.forms.ask",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.ask.ready",
+      "block": "block.forms.ask",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail-detail.empty",
+      "block": "block.forms.extensions-detail-detail",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail-detail.error",
+      "block": "block.forms.extensions-detail-detail",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail-detail.invalid",
+      "block": "block.forms.extensions-detail-detail",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail-detail.loading",
+      "block": "block.forms.extensions-detail-detail",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail-detail.long-content",
+      "block": "block.forms.extensions-detail-detail",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail-detail.ready",
+      "block": "block.forms.extensions-detail-detail",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail.empty",
+      "block": "block.forms.extensions-detail",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail.error",
+      "block": "block.forms.extensions-detail",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail.invalid",
+      "block": "block.forms.extensions-detail",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail.loading",
+      "block": "block.forms.extensions-detail",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail.long-content",
+      "block": "block.forms.extensions-detail",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-detail.ready",
+      "block": "block.forms.extensions-detail",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-index.empty",
+      "block": "block.forms.extensions-index",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-index.error",
+      "block": "block.forms.extensions-index",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-index.invalid",
+      "block": "block.forms.extensions-index",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-index.loading",
+      "block": "block.forms.extensions-index",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-index.long-content",
+      "block": "block.forms.extensions-index",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions-index.ready",
+      "block": "block.forms.extensions-index",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions.empty",
+      "block": "block.forms.extensions",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions.error",
+      "block": "block.forms.extensions",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions.invalid",
+      "block": "block.forms.extensions",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions.loading",
+      "block": "block.forms.extensions",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions.long-content",
+      "block": "block.forms.extensions",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.extensions.ready",
+      "block": "block.forms.extensions",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.f-catchall.empty",
+      "block": "block.forms.f-catchall",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.f-catchall.error",
+      "block": "block.forms.f-catchall",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.f-catchall.invalid",
+      "block": "block.forms.f-catchall",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.f-catchall.loading",
+      "block": "block.forms.f-catchall",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.f-catchall.long-content",
+      "block": "block.forms.f-catchall",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.f-catchall.ready",
+      "block": "block.forms.f-catchall",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.form-preview.empty",
+      "block": "block.forms.form-preview",
+      "component": "docs-source-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.form-preview.error",
+      "block": "block.forms.form-preview",
+      "component": "docs-source-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.form-preview.loading",
+      "block": "block.forms.form-preview",
+      "component": "docs-source-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.form-preview.long-content",
+      "block": "block.forms.form-preview",
+      "component": "docs-source-panel",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.form-preview.ready",
+      "block": "block.forms.form-preview",
+      "component": "docs-source-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail-responses.empty",
+      "block": "block.forms.forms-detail-responses",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail-responses.error",
+      "block": "block.forms.forms-detail-responses",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail-responses.invalid",
+      "block": "block.forms.forms-detail-responses",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail-responses.loading",
+      "block": "block.forms.forms-detail-responses",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail-responses.long-content",
+      "block": "block.forms.forms-detail-responses",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail-responses.ready",
+      "block": "block.forms.forms-detail-responses",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail.empty",
+      "block": "block.forms.forms-detail",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail.error",
+      "block": "block.forms.forms-detail",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail.invalid",
+      "block": "block.forms.forms-detail",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail.loading",
+      "block": "block.forms.forms-detail",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail.long-content",
+      "block": "block.forms.forms-detail",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-detail.ready",
+      "block": "block.forms.forms-detail",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-index.empty",
+      "block": "block.forms.forms-index",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-index.error",
+      "block": "block.forms.forms-index",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-index.invalid",
+      "block": "block.forms.forms-index",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-index.loading",
+      "block": "block.forms.forms-index",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-index.long-content",
+      "block": "block.forms.forms-index",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.forms-index.ready",
+      "block": "block.forms.forms-index",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home-2.empty",
+      "block": "block.forms.home-2",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home-2.error",
+      "block": "block.forms.home-2",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home-2.invalid",
+      "block": "block.forms.home-2",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home-2.loading",
+      "block": "block.forms.home-2",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home-2.long-content",
+      "block": "block.forms.home-2",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home-2.ready",
+      "block": "block.forms.home-2",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home.empty",
+      "block": "block.forms.home",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home.error",
+      "block": "block.forms.home",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home.invalid",
+      "block": "block.forms.home",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home.loading",
+      "block": "block.forms.home",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home.long-content",
+      "block": "block.forms.home",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.home.ready",
+      "block": "block.forms.home",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.response-insights.empty",
+      "block": "block.forms.response-insights",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.response-insights.error",
+      "block": "block.forms.response-insights",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.response-insights.loading",
+      "block": "block.forms.response-insights",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.response-insights.long-content",
+      "block": "block.forms.response-insights",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.response-insights.ready",
+      "block": "block.forms.response-insights",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.settings.empty",
+      "block": "block.forms.settings",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.settings.error",
+      "block": "block.forms.settings",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.settings.invalid",
+      "block": "block.forms.settings",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.settings.loading",
+      "block": "block.forms.settings",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.settings.long-content",
+      "block": "block.forms.settings",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.settings.ready",
+      "block": "block.forms.settings",
+      "component": "text-field",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.team.empty",
+      "block": "block.forms.team",
+      "component": "text-field",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.team.error",
+      "block": "block.forms.team",
+      "component": "text-field",
+      "state": "error"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.team.invalid",
+      "block": "block.forms.team",
+      "component": "text-field",
+      "state": "invalid"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.team.loading",
+      "block": "block.forms.team",
+      "component": "text-field",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.team.long-content",
+      "block": "block.forms.team",
+      "component": "text-field",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "forms.block.block.forms.team.ready",
+      "block": "block.forms.team",
+      "component": "text-field",
+      "state": "ready"
+    }
+  ]
+}

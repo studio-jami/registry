@@ -1,0 +1,481 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "dispatch",
+  "implementationStatus": "mounted-react-workspace-block",
+  "source": "registry/workspaces/dispatch/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "block": {
+    "id": "block.dispatch.vault",
+    "title": "Vault",
+    "component": "agent-panel",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error"
+    ],
+    "sourceRouteFile": "agent-native/templates/dispatch/app/routes/vault.tsx"
+  },
+  "component": "agent-panel",
+  "agentManifest": {
+    "component": "agent-panel",
+    "manifestId": "agm_agent_panel",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [
+      {
+        "slotId": "slot_agent_panel_review",
+        "name": "review",
+        "label": "Review agent recommendation",
+        "harnessRoute": "harness://actions/agent-panel-review",
+        "risk": "write",
+        "policyScope": "data:write",
+        "confirmationMode": "approval_required",
+        "inputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "recommendationId",
+            "decision"
+          ],
+          "properties": {
+            "recommendationId": {
+              "type": "string"
+            },
+            "decision": {
+              "type": "string",
+              "enum": [
+                "approve",
+                "deny"
+              ]
+            }
+          }
+        },
+        "outputSchema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "actionId",
+            "policyDecision"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "accepted",
+                "denied"
+              ]
+            },
+            "actionId": {
+              "type": "string",
+              "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+            },
+            "policyDecision": {
+              "type": "string",
+              "enum": [
+                "allow",
+                "deny",
+                "needs_approval",
+                "needs_owner"
+              ]
+            },
+            "evidenceRef": {
+              "type": "string",
+              "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+            }
+          }
+        },
+        "safetyConstraints": [
+          "policy-required",
+          "audit-required",
+          "evidence-required",
+          "no-inline-secret-values",
+          "no-model-provided-code",
+          "schema-validated-input",
+          "schema-validated-output"
+        ]
+      }
+    ],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
+  "renderedStates": {
+    "ready": {
+      "props": {
+        "title": "Vault",
+        "status": "running",
+        "actionRefs": [
+          "act_dispatch_block_dispatch_vault_review"
+        ],
+        "artifactViewRefs": [
+          "artv_dispatch_block_dispatch_vault_trace"
+        ]
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-agent-panel",
+          "role": "status",
+          "aria-live": "polite",
+          "aria-label": "Vault",
+          "data-status": "running"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Vault"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {},
+            "children": [
+              "running"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-action-ref-list",
+              "aria-label": "Action references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-action-ref": "act_dispatch_block_dispatch_vault_review"
+                },
+                "children": [
+                  "act_dispatch_block_dispatch_vault_review"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-artifact-ref-list",
+              "aria-label": "Artifact view references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-artifact-view-ref": "artv_dispatch_block_dispatch_vault_trace"
+                },
+                "children": [
+                  "artv_dispatch_block_dispatch_vault_trace"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-action-ref-list",
+        "jami-agent-panel",
+        "jami-artifact-ref-list"
+      ]
+    },
+    "loading": {
+      "props": {
+        "title": "Vault",
+        "status": "running",
+        "actionRefs": [
+          "act_dispatch_block_dispatch_vault_review"
+        ],
+        "artifactViewRefs": [
+          "artv_dispatch_block_dispatch_vault_trace"
+        ]
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-agent-panel",
+          "role": "status",
+          "aria-live": "polite",
+          "aria-label": "Vault",
+          "data-status": "running"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Vault"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {},
+            "children": [
+              "running"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-action-ref-list",
+              "aria-label": "Action references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-action-ref": "act_dispatch_block_dispatch_vault_review"
+                },
+                "children": [
+                  "act_dispatch_block_dispatch_vault_review"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-artifact-ref-list",
+              "aria-label": "Artifact view references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-artifact-view-ref": "artv_dispatch_block_dispatch_vault_trace"
+                },
+                "children": [
+                  "artv_dispatch_block_dispatch_vault_trace"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-action-ref-list",
+        "jami-agent-panel",
+        "jami-artifact-ref-list"
+      ]
+    },
+    "empty": {
+      "props": {
+        "title": "Vault",
+        "status": "idle",
+        "actionRefs": [
+          "act_dispatch_block_dispatch_vault_review"
+        ],
+        "artifactViewRefs": [
+          "artv_dispatch_block_dispatch_vault_trace"
+        ]
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-agent-panel",
+          "role": "status",
+          "aria-live": "polite",
+          "aria-label": "Vault",
+          "data-status": "idle"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Vault"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {},
+            "children": [
+              "idle"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-action-ref-list",
+              "aria-label": "Action references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-action-ref": "act_dispatch_block_dispatch_vault_review"
+                },
+                "children": [
+                  "act_dispatch_block_dispatch_vault_review"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-artifact-ref-list",
+              "aria-label": "Artifact view references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-artifact-view-ref": "artv_dispatch_block_dispatch_vault_trace"
+                },
+                "children": [
+                  "artv_dispatch_block_dispatch_vault_trace"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-action-ref-list",
+        "jami-agent-panel",
+        "jami-artifact-ref-list"
+      ]
+    },
+    "error": {
+      "props": {
+        "title": "Vault",
+        "status": "error",
+        "actionRefs": [
+          "act_dispatch_block_dispatch_vault_review"
+        ],
+        "artifactViewRefs": [
+          "artv_dispatch_block_dispatch_vault_trace"
+        ]
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-agent-panel",
+          "role": "status",
+          "aria-live": "polite",
+          "aria-label": "Vault",
+          "data-status": "error"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {},
+            "children": [
+              "Vault"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {},
+            "children": [
+              "error"
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-action-ref-list",
+              "aria-label": "Action references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-action-ref": "act_dispatch_block_dispatch_vault_review"
+                },
+                "children": [
+                  "act_dispatch_block_dispatch_vault_review"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "props": {
+              "className": "jami-artifact-ref-list",
+              "aria-label": "Artifact view references"
+            },
+            "children": [
+              {
+                "type": "li",
+                "props": {
+                  "data-artifact-view-ref": "artv_dispatch_block_dispatch_vault_trace"
+                },
+                "children": [
+                  "artv_dispatch_block_dispatch_vault_trace"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-action-ref-list",
+        "jami-agent-panel",
+        "jami-artifact-ref-list"
+      ]
+    }
+  },
+  "evidence": {
+    "renderableStates": [
+      "ready",
+      "loading",
+      "empty",
+      "error"
+    ],
+    "failedStates": [],
+    "tokenizedClasses": [
+      "jami-action-ref-list",
+      "jami-agent-panel",
+      "jami-artifact-ref-list"
+    ],
+    "responsive": true,
+    "reducedMotion": true,
+    "longContentSafe": false,
+    "emptyStateSafe": true,
+    "errorStateSafe": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/dispatch/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/dispatch/workspace-shell.json",
+    "copiedSource": false
+  }
+}

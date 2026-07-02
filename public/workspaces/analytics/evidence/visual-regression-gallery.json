@@ -1,0 +1,997 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "analytics",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/analytics/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-analytics.png"
+  },
+  "routeCount": 24,
+  "blockStateCount": 119,
+  "routes": [
+    {
+      "galleryKey": "analytics.route.analytics",
+      "path": "/analytics/:",
+      "page": "page.analytics.catchall",
+      "title": "Catchall",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics.png",
+      "blocks": [
+        "block.analytics.catchall"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics",
+      "path": "/analytics",
+      "page": "page.analytics.home",
+      "title": "Analytics Home",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics.png",
+      "blocks": [
+        "block.analytics.home"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-adhoc-id",
+      "path": "/analytics/adhoc/:id",
+      "page": "page.analytics.adhoc-detail",
+      "title": "Adhoc Detail",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-adhoc-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-adhoc-id.png",
+      "blocks": [
+        "block.analytics.adhoc-detail"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-analyses-id",
+      "path": "/analytics/analyses/:id",
+      "page": "page.analytics.analyses-detail",
+      "title": "Analyses Detail",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-analyses-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-analyses-id.png",
+      "blocks": [
+        "block.analytics.analyses-detail"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-analyses",
+      "path": "/analytics/analyses",
+      "page": "page.analytics.analyses-index",
+      "title": "Analyses Index",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-analyses.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-analyses.png",
+      "blocks": [
+        "block.analytics.analyses-index"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-ask",
+      "path": "/analytics/ask",
+      "page": "page.analytics.ask",
+      "title": "Ask",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-ask.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-ask.png",
+      "blocks": [
+        "block.analytics.ask"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-catalog",
+      "path": "/analytics/catalog",
+      "page": "page.analytics.catalog",
+      "title": "Catalog",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-catalog.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-catalog.png",
+      "blocks": [
+        "block.analytics.catalog"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-chart",
+      "path": "/analytics/chart",
+      "page": "page.analytics.chart",
+      "title": "Chart",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-chart.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-chart.png",
+      "blocks": [
+        "block.analytics.chart"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-dashboard",
+      "path": "/analytics/dashboard",
+      "page": "page.analytics.dashboard",
+      "title": "Dashboard",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-dashboard.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-dashboard.png",
+      "blocks": [
+        "block.analytics.dashboard"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-dashboards-id",
+      "path": "/analytics/dashboards/:id",
+      "page": "page.analytics.dashboards-detail",
+      "title": "Dashboards Detail",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-dashboards-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-dashboards-id.png",
+      "blocks": [
+        "block.analytics.dashboards-detail"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-dashboards",
+      "path": "/analytics/dashboards",
+      "page": "page.analytics.dashboards-index",
+      "title": "Dashboards Index",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-dashboards.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-dashboards.png",
+      "blocks": [
+        "block.analytics.dashboards-index"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-data-dictionary",
+      "path": "/analytics/data-dictionary",
+      "page": "page.analytics.data-dictionary",
+      "title": "Data Dictionary",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-data-dictionary.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-data-dictionary.png",
+      "blocks": [
+        "block.analytics.data-dictionary"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-data-sources",
+      "path": "/analytics/data-sources",
+      "page": "page.analytics.data-sources",
+      "title": "Data Sources",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-data-sources.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-data-sources.png",
+      "blocks": [
+        "block.analytics.data-sources"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-extensions-id-slug",
+      "path": "/analytics/extensions/:id/:slug",
+      "page": "page.analytics.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-extensions-id-slug.png",
+      "blocks": [
+        "block.analytics.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-extensions-id",
+      "path": "/analytics/extensions/:id",
+      "page": "page.analytics.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-extensions-id.png",
+      "blocks": [
+        "block.analytics.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-extensions",
+      "path": "/analytics/extensions",
+      "page": "page.analytics.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-extensions.png",
+      "blocks": [
+        "block.analytics.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-extensions",
+      "path": "/analytics/extensions",
+      "page": "page.analytics.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-extensions.png",
+      "blocks": [
+        "block.analytics.extensions"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-overview",
+      "path": "/analytics/overview",
+      "page": "page.analytics.overview",
+      "title": "Overview",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-overview.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-overview.png",
+      "blocks": [
+        "block.analytics.overview"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-sessions-recordingid",
+      "path": "/analytics/sessions/:recordingId",
+      "page": "page.analytics.sessions-detail",
+      "title": "Sessions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-sessions-recordingid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-sessions-recordingid.png",
+      "blocks": [
+        "block.analytics.sessions-detail"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-sessions",
+      "path": "/analytics/sessions",
+      "page": "page.analytics.sessions-index",
+      "title": "Sessions Index",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-sessions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-sessions.png",
+      "blocks": [
+        "block.analytics.sessions-index"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-settings",
+      "path": "/analytics/settings",
+      "page": "page.analytics.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-settings.png",
+      "blocks": [
+        "block.analytics.settings"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-team",
+      "path": "/analytics/team",
+      "page": "page.analytics.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-team.png",
+      "blocks": [
+        "block.analytics.team"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-traffic-dashboard",
+      "path": "/analytics/traffic-dashboard",
+      "page": "page.analytics.traffic-dashboard",
+      "title": "Traffic Dashboard",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-traffic-dashboard.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-traffic-dashboard.png",
+      "blocks": [
+        "block.analytics.traffic-dashboard"
+      ]
+    },
+    {
+      "galleryKey": "analytics.route.analytics-traffic",
+      "path": "/analytics/traffic",
+      "page": "page.analytics.traffic",
+      "title": "Traffic",
+      "routeArtifact": "apps/workbench/dist/suites/analytics/analytics-traffic.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-analytics-analytics-traffic.png",
+      "blocks": [
+        "block.analytics.traffic"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "analytics.block.block.analytics.adhoc-detail.empty",
+      "block": "block.analytics.adhoc-detail",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.adhoc-detail.error",
+      "block": "block.analytics.adhoc-detail",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.adhoc-detail.loading",
+      "block": "block.analytics.adhoc-detail",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.adhoc-detail.long-content",
+      "block": "block.analytics.adhoc-detail",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.adhoc-detail.ready",
+      "block": "block.analytics.adhoc-detail",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-detail.empty",
+      "block": "block.analytics.analyses-detail",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-detail.error",
+      "block": "block.analytics.analyses-detail",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-detail.loading",
+      "block": "block.analytics.analyses-detail",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-detail.long-content",
+      "block": "block.analytics.analyses-detail",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-detail.ready",
+      "block": "block.analytics.analyses-detail",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-index.empty",
+      "block": "block.analytics.analyses-index",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-index.error",
+      "block": "block.analytics.analyses-index",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-index.loading",
+      "block": "block.analytics.analyses-index",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-index.long-content",
+      "block": "block.analytics.analyses-index",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.analyses-index.ready",
+      "block": "block.analytics.analyses-index",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.ask.empty",
+      "block": "block.analytics.ask",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.ask.error",
+      "block": "block.analytics.ask",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.ask.loading",
+      "block": "block.analytics.ask",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.ask.ready",
+      "block": "block.analytics.ask",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catalog.empty",
+      "block": "block.analytics.catalog",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catalog.error",
+      "block": "block.analytics.catalog",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catalog.loading",
+      "block": "block.analytics.catalog",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catalog.long-content",
+      "block": "block.analytics.catalog",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catalog.ready",
+      "block": "block.analytics.catalog",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catchall.empty",
+      "block": "block.analytics.catchall",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catchall.error",
+      "block": "block.analytics.catchall",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catchall.loading",
+      "block": "block.analytics.catchall",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catchall.long-content",
+      "block": "block.analytics.catchall",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.catchall.ready",
+      "block": "block.analytics.catchall",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.chart.empty",
+      "block": "block.analytics.chart",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.chart.error",
+      "block": "block.analytics.chart",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.chart.loading",
+      "block": "block.analytics.chart",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.chart.long-content",
+      "block": "block.analytics.chart",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.chart.ready",
+      "block": "block.analytics.chart",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboard.empty",
+      "block": "block.analytics.dashboard",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboard.error",
+      "block": "block.analytics.dashboard",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboard.loading",
+      "block": "block.analytics.dashboard",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboard.long-content",
+      "block": "block.analytics.dashboard",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboard.ready",
+      "block": "block.analytics.dashboard",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-detail.empty",
+      "block": "block.analytics.dashboards-detail",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-detail.error",
+      "block": "block.analytics.dashboards-detail",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-detail.loading",
+      "block": "block.analytics.dashboards-detail",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-detail.long-content",
+      "block": "block.analytics.dashboards-detail",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-detail.ready",
+      "block": "block.analytics.dashboards-detail",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-index.empty",
+      "block": "block.analytics.dashboards-index",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-index.error",
+      "block": "block.analytics.dashboards-index",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-index.loading",
+      "block": "block.analytics.dashboards-index",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-index.long-content",
+      "block": "block.analytics.dashboards-index",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.dashboards-index.ready",
+      "block": "block.analytics.dashboards-index",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-dictionary.empty",
+      "block": "block.analytics.data-dictionary",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-dictionary.error",
+      "block": "block.analytics.data-dictionary",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-dictionary.loading",
+      "block": "block.analytics.data-dictionary",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-dictionary.long-content",
+      "block": "block.analytics.data-dictionary",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-dictionary.ready",
+      "block": "block.analytics.data-dictionary",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-sources.empty",
+      "block": "block.analytics.data-sources",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-sources.error",
+      "block": "block.analytics.data-sources",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-sources.loading",
+      "block": "block.analytics.data-sources",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-sources.long-content",
+      "block": "block.analytics.data-sources",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.data-sources.ready",
+      "block": "block.analytics.data-sources",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail-detail.empty",
+      "block": "block.analytics.extensions-detail-detail",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail-detail.error",
+      "block": "block.analytics.extensions-detail-detail",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail-detail.loading",
+      "block": "block.analytics.extensions-detail-detail",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail-detail.long-content",
+      "block": "block.analytics.extensions-detail-detail",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail-detail.ready",
+      "block": "block.analytics.extensions-detail-detail",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail.empty",
+      "block": "block.analytics.extensions-detail",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail.error",
+      "block": "block.analytics.extensions-detail",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail.loading",
+      "block": "block.analytics.extensions-detail",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail.long-content",
+      "block": "block.analytics.extensions-detail",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-detail.ready",
+      "block": "block.analytics.extensions-detail",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-index.empty",
+      "block": "block.analytics.extensions-index",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-index.error",
+      "block": "block.analytics.extensions-index",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-index.loading",
+      "block": "block.analytics.extensions-index",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-index.long-content",
+      "block": "block.analytics.extensions-index",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions-index.ready",
+      "block": "block.analytics.extensions-index",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions.empty",
+      "block": "block.analytics.extensions",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions.error",
+      "block": "block.analytics.extensions",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions.loading",
+      "block": "block.analytics.extensions",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions.long-content",
+      "block": "block.analytics.extensions",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.extensions.ready",
+      "block": "block.analytics.extensions",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.home.empty",
+      "block": "block.analytics.home",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.home.error",
+      "block": "block.analytics.home",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.home.loading",
+      "block": "block.analytics.home",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.home.long-content",
+      "block": "block.analytics.home",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.home.ready",
+      "block": "block.analytics.home",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.overview.empty",
+      "block": "block.analytics.overview",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.overview.error",
+      "block": "block.analytics.overview",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.overview.loading",
+      "block": "block.analytics.overview",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.overview.long-content",
+      "block": "block.analytics.overview",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.overview.ready",
+      "block": "block.analytics.overview",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-detail.empty",
+      "block": "block.analytics.sessions-detail",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-detail.error",
+      "block": "block.analytics.sessions-detail",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-detail.loading",
+      "block": "block.analytics.sessions-detail",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-detail.long-content",
+      "block": "block.analytics.sessions-detail",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-detail.ready",
+      "block": "block.analytics.sessions-detail",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-index.empty",
+      "block": "block.analytics.sessions-index",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-index.error",
+      "block": "block.analytics.sessions-index",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-index.loading",
+      "block": "block.analytics.sessions-index",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-index.long-content",
+      "block": "block.analytics.sessions-index",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.sessions-index.ready",
+      "block": "block.analytics.sessions-index",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.settings.empty",
+      "block": "block.analytics.settings",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.settings.error",
+      "block": "block.analytics.settings",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.settings.loading",
+      "block": "block.analytics.settings",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.settings.long-content",
+      "block": "block.analytics.settings",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.settings.ready",
+      "block": "block.analytics.settings",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.team.empty",
+      "block": "block.analytics.team",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.team.error",
+      "block": "block.analytics.team",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.team.loading",
+      "block": "block.analytics.team",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.team.long-content",
+      "block": "block.analytics.team",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.team.ready",
+      "block": "block.analytics.team",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic-dashboard.empty",
+      "block": "block.analytics.traffic-dashboard",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic-dashboard.error",
+      "block": "block.analytics.traffic-dashboard",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic-dashboard.loading",
+      "block": "block.analytics.traffic-dashboard",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic-dashboard.long-content",
+      "block": "block.analytics.traffic-dashboard",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic-dashboard.ready",
+      "block": "block.analytics.traffic-dashboard",
+      "component": "chart",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic.empty",
+      "block": "block.analytics.traffic",
+      "component": "chart",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic.error",
+      "block": "block.analytics.traffic",
+      "component": "chart",
+      "state": "error"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic.loading",
+      "block": "block.analytics.traffic",
+      "component": "chart",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic.long-content",
+      "block": "block.analytics.traffic",
+      "component": "chart",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "analytics.block.block.analytics.traffic.ready",
+      "block": "block.analytics.traffic",
+      "component": "chart",
+      "state": "ready"
+    }
+  ]
+}

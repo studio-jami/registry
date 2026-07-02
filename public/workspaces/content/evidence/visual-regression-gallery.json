@@ -1,0 +1,593 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "content",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/content/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-content.png"
+  },
+  "routeCount": 14,
+  "blockStateCount": 70,
+  "routes": [
+    {
+      "galleryKey": "content.route.content-id",
+      "path": "/content/:id",
+      "page": "page.content.detail",
+      "title": "Detail",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-id.png",
+      "blocks": [
+        "block.content.detail"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content",
+      "path": "/content",
+      "page": "page.content.home",
+      "title": "Content Home",
+      "routeArtifact": "apps/workbench/dist/suites/content/content.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content.png",
+      "blocks": [
+        "block.content.home"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-extensions-id-slug",
+      "path": "/content/extensions/:id/:slug",
+      "page": "page.content.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-extensions-id-slug.png",
+      "blocks": [
+        "block.content.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-extensions-id",
+      "path": "/content/extensions/:id",
+      "page": "page.content.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-extensions-id.png",
+      "blocks": [
+        "block.content.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-extensions",
+      "path": "/content/extensions",
+      "page": "page.content.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-extensions.png",
+      "blocks": [
+        "block.content.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-extensions",
+      "path": "/content/extensions",
+      "page": "page.content.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-extensions.png",
+      "blocks": [
+        "block.content.extensions"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-local-files",
+      "path": "/content/local-files",
+      "page": "page.content.local-files",
+      "title": "Local Files",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-local-files.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-local-files.png",
+      "blocks": [
+        "block.content.local-files"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-page-id",
+      "path": "/content/page/:id",
+      "page": "page.content.page-detail",
+      "title": "Page Detail",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-page-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-page-id.png",
+      "blocks": [
+        "block.content.page-detail"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-page",
+      "path": "/content/page",
+      "page": "page.content.page-index",
+      "title": "Page Index",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-page.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-page.png",
+      "blocks": [
+        "block.content.page-index"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-page",
+      "path": "/content/page",
+      "page": "page.content.page",
+      "title": "Page",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-page.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-page.png",
+      "blocks": [
+        "block.content.page"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-settings",
+      "path": "/content/settings",
+      "page": "page.content.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-settings.png",
+      "blocks": [
+        "block.content.settings"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-team",
+      "path": "/content/team",
+      "page": "page.content.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-team.png",
+      "blocks": [
+        "block.content.team"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content",
+      "path": "/content",
+      "page": "page.content.home-2",
+      "title": "Content Home",
+      "routeArtifact": "apps/workbench/dist/suites/content/content.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content.png",
+      "blocks": [
+        "block.content.home-2"
+      ]
+    },
+    {
+      "galleryKey": "content.route.content-p-id",
+      "path": "/content/p/:id",
+      "page": "page.content.p-detail",
+      "title": "P Detail",
+      "routeArtifact": "apps/workbench/dist/suites/content/content-p-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-content-content-p-id.png",
+      "blocks": [
+        "block.content.p-detail"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "content.block.block.content.detail.empty",
+      "block": "block.content.detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.detail.error",
+      "block": "block.content.detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.detail.loading",
+      "block": "block.content.detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.detail.long-content",
+      "block": "block.content.detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.detail.ready",
+      "block": "block.content.detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail-detail.empty",
+      "block": "block.content.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail-detail.error",
+      "block": "block.content.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail-detail.loading",
+      "block": "block.content.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail-detail.long-content",
+      "block": "block.content.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail-detail.ready",
+      "block": "block.content.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail.empty",
+      "block": "block.content.extensions-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail.error",
+      "block": "block.content.extensions-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail.loading",
+      "block": "block.content.extensions-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail.long-content",
+      "block": "block.content.extensions-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-detail.ready",
+      "block": "block.content.extensions-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-index.empty",
+      "block": "block.content.extensions-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-index.error",
+      "block": "block.content.extensions-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-index.loading",
+      "block": "block.content.extensions-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-index.long-content",
+      "block": "block.content.extensions-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions-index.ready",
+      "block": "block.content.extensions-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions.empty",
+      "block": "block.content.extensions",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions.error",
+      "block": "block.content.extensions",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions.loading",
+      "block": "block.content.extensions",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions.long-content",
+      "block": "block.content.extensions",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.extensions.ready",
+      "block": "block.content.extensions",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.home-2.empty",
+      "block": "block.content.home-2",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.home-2.error",
+      "block": "block.content.home-2",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.home-2.loading",
+      "block": "block.content.home-2",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.home-2.long-content",
+      "block": "block.content.home-2",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.home-2.ready",
+      "block": "block.content.home-2",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.home.empty",
+      "block": "block.content.home",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.home.error",
+      "block": "block.content.home",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.home.loading",
+      "block": "block.content.home",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.home.long-content",
+      "block": "block.content.home",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.home.ready",
+      "block": "block.content.home",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.local-files.empty",
+      "block": "block.content.local-files",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.local-files.error",
+      "block": "block.content.local-files",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.local-files.loading",
+      "block": "block.content.local-files",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.local-files.long-content",
+      "block": "block.content.local-files",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.local-files.ready",
+      "block": "block.content.local-files",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.p-detail.empty",
+      "block": "block.content.p-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.p-detail.error",
+      "block": "block.content.p-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.p-detail.loading",
+      "block": "block.content.p-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.p-detail.long-content",
+      "block": "block.content.p-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.p-detail.ready",
+      "block": "block.content.p-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-detail.empty",
+      "block": "block.content.page-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-detail.error",
+      "block": "block.content.page-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-detail.loading",
+      "block": "block.content.page-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-detail.long-content",
+      "block": "block.content.page-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-detail.ready",
+      "block": "block.content.page-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-index.empty",
+      "block": "block.content.page-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-index.error",
+      "block": "block.content.page-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-index.loading",
+      "block": "block.content.page-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-index.long-content",
+      "block": "block.content.page-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.page-index.ready",
+      "block": "block.content.page-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.page.empty",
+      "block": "block.content.page",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.page.error",
+      "block": "block.content.page",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.page.loading",
+      "block": "block.content.page",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.page.long-content",
+      "block": "block.content.page",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.page.ready",
+      "block": "block.content.page",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.settings.empty",
+      "block": "block.content.settings",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.settings.error",
+      "block": "block.content.settings",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.settings.loading",
+      "block": "block.content.settings",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.settings.long-content",
+      "block": "block.content.settings",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.settings.ready",
+      "block": "block.content.settings",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "content.block.block.content.team.empty",
+      "block": "block.content.team",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "content.block.block.content.team.error",
+      "block": "block.content.team",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "content.block.block.content.team.loading",
+      "block": "block.content.team",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "content.block.block.content.team.long-content",
+      "block": "block.content.team",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "content.block.block.content.team.ready",
+      "block": "block.content.team",
+      "component": "media-grid",
+      "state": "ready"
+    }
+  ]
+}

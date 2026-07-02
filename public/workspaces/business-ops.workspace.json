@@ -122,7 +122,8 @@
         "title": "Operational KPIs",
         "component": "data-list",
         "stateExamples": [
-          "long-content"
+          "long-content",
+          "loading"
         ]
       },
       {

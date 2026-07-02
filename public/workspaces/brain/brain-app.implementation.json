@@ -1,0 +1,440 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "brain",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/brain/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.brain.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Home",
+        "route": "/brain"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/brain/extensions/:id/:slug"
+      },
+      {
+        "label": "Extensions Detail",
+        "route": "/brain/extensions/:id"
+      },
+      {
+        "label": "Extensions Index",
+        "route": "/brain/extensions"
+      },
+      {
+        "label": "Extensions",
+        "route": "/brain/extensions"
+      },
+      {
+        "label": "Knowledge",
+        "route": "/brain/knowledge"
+      },
+      {
+        "label": "Ops",
+        "route": "/brain/ops"
+      },
+      {
+        "label": "Review",
+        "route": "/brain/review"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/brain",
+      "page": "page.brain.home",
+      "title": "Brain Home",
+      "blocks": [
+        "block.brain.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/_index.tsx"
+    },
+    {
+      "path": "/brain/extensions/:id/:slug",
+      "page": "page.brain.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.brain.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/brain/extensions/:id",
+      "page": "page.brain.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.brain.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/brain/extensions",
+      "page": "page.brain.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.brain.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/brain/extensions",
+      "page": "page.brain.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.brain.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/brain/knowledge",
+      "page": "page.brain.knowledge",
+      "title": "Knowledge",
+      "blocks": [
+        "block.brain.knowledge"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/knowledge.tsx"
+    },
+    {
+      "path": "/brain/ops",
+      "page": "page.brain.ops",
+      "title": "Ops",
+      "blocks": [
+        "block.brain.ops"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/ops.tsx"
+    },
+    {
+      "path": "/brain/review",
+      "page": "page.brain.review",
+      "title": "Review",
+      "blocks": [
+        "block.brain.review"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/review.tsx"
+    },
+    {
+      "path": "/brain/search",
+      "page": "page.brain.search",
+      "title": "Search",
+      "blocks": [
+        "block.brain.search"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/search.tsx"
+    },
+    {
+      "path": "/brain/settings",
+      "page": "page.brain.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.brain.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/settings.tsx"
+    },
+    {
+      "path": "/brain/sources",
+      "page": "page.brain.sources",
+      "title": "Sources",
+      "blocks": [
+        "block.brain.sources"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/sources.tsx"
+    },
+    {
+      "path": "/brain/team",
+      "page": "page.brain.team",
+      "title": "Team",
+      "blocks": [
+        "block.brain.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/brain/app/routes/team.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.brain.home",
+      "title": "Brain Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.knowledge",
+      "title": "Knowledge",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-knowledge-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.ops",
+      "title": "Ops",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-ops-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.review",
+      "title": "Review",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-review-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.search",
+      "title": "Search",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-search-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.sources",
+      "title": "Sources",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-sources-page.page.implementation.json"
+    },
+    {
+      "id": "page.brain.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/brain/pages/brain-team-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.brain.home",
+      "title": "Home",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.extensions-index",
+      "title": "Extensions Index",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.extensions",
+      "title": "Extensions",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.knowledge",
+      "title": "Knowledge",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-knowledge-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.ops",
+      "title": "Ops",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-ops-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.review",
+      "title": "Review",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-review-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.search",
+      "title": "Search",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-search-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.settings",
+      "title": "Settings",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.sources",
+      "title": "Sources",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-sources-block.block.implementation.json"
+    },
+    {
+      "id": "block.brain.team",
+      "title": "Team",
+      "component": "docs-source-panel",
+      "implementationFile": "studio-ui/workspaces/brain/blocks/brain-team-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "docs-source-panel",
+      "manifestId": "agm_docs_source_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 12,
+    "renderedBlockCount": 12,
+    "routeCount": 12,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/brain/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/brain/workspace-shell.json",
+    "copiedSource": false
+  }
+}

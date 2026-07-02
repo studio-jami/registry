@@ -1,0 +1,89 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "plan",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 30,
+    "graph": [
+      "jami-theme",
+      "panel",
+      "button",
+      "docs-source-panel",
+      "plan-home-block",
+      "plan-home-page",
+      "plan-extensions-detail-detail-block",
+      "plan-extensions-detail-detail-page",
+      "plan-extensions-detail-block",
+      "plan-extensions-detail-page",
+      "plan-extensions-index-block",
+      "plan-extensions-index-page",
+      "plan-extensions-block",
+      "plan-extensions-page",
+      "plan-local-plans-detail-block",
+      "plan-local-plans-detail-page",
+      "plan-plans-detail-block",
+      "plan-plans-detail-page",
+      "plan-plans-block",
+      "plan-plans-page",
+      "plan-recaps-detail-block",
+      "plan-recaps-detail-page",
+      "plan-recaps-block",
+      "plan-recaps-page",
+      "plan-settings-block",
+      "plan-settings-page",
+      "plan-team-block",
+      "plan-team-page",
+      "plan-app",
+      "plan-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 72
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 30
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/plan/index.html",
+      "apps/workbench/dist/suites/plan/plan-extensions-id-slug.html",
+      "apps/workbench/dist/suites/plan/plan-extensions-id.html",
+      "apps/workbench/dist/suites/plan/plan-extensions.html",
+      "apps/workbench/dist/suites/plan/plan-extensions.html",
+      "apps/workbench/dist/suites/plan/plan-local-plans-slug.html",
+      "apps/workbench/dist/suites/plan/plan-plans-id.html",
+      "apps/workbench/dist/suites/plan/plan-plans.html",
+      "apps/workbench/dist/suites/plan/plan-recaps-id.html",
+      "apps/workbench/dist/suites/plan/plan-recaps.html",
+      "apps/workbench/dist/suites/plan/plan-settings.html",
+      "apps/workbench/dist/suites/plan/plan-team.html",
+      "apps/workbench/dist/suites/plan/plan.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/plan/pages/plan-home-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-local-plans-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-plans-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-plans-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-recaps-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-recaps-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-settings-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-team-page.page.implementation.json"
+    ]
+  }
+}

@@ -1,0 +1,833 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "assets",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/assets/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-assets.png"
+  },
+  "routeCount": 20,
+  "blockStateCount": 99,
+  "routes": [
+    {
+      "galleryKey": "assets.route.assets",
+      "path": "/assets",
+      "page": "page.assets.home",
+      "title": "Assets Home",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets.png",
+      "blocks": [
+        "block.assets.home"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-asset-id",
+      "path": "/assets/asset/:id",
+      "page": "page.assets.asset-detail",
+      "title": "Asset Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-asset-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-asset-id.png",
+      "blocks": [
+        "block.assets.asset-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-asset-id-embed",
+      "path": "/assets/asset/:id/embed",
+      "page": "page.assets.asset-detail-embed",
+      "title": "Asset Detail Embed",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-asset-id-embed.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-asset-id-embed.png",
+      "blocks": [
+        "block.assets.asset-detail-embed"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-audit",
+      "path": "/assets/audit",
+      "page": "page.assets.audit",
+      "title": "Audit",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-audit.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-audit.png",
+      "blocks": [
+        "block.assets.audit"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-brand-kits-id",
+      "path": "/assets/brand-kits/:id",
+      "page": "page.assets.brand-kits-detail",
+      "title": "Brand Kits Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-brand-kits-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-brand-kits-id.png",
+      "blocks": [
+        "block.assets.brand-kits-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-brand-kits",
+      "path": "/assets/brand-kits",
+      "page": "page.assets.brand-kits-index",
+      "title": "Brand Kits Index",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-brand-kits.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-brand-kits.png",
+      "blocks": [
+        "block.assets.brand-kits-index"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-brand-kits",
+      "path": "/assets/brand-kits",
+      "page": "page.assets.brand-kits",
+      "title": "Brand Kits",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-brand-kits.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-brand-kits.png",
+      "blocks": [
+        "block.assets.brand-kits"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-chat-threadid",
+      "path": "/assets/chat/:threadId",
+      "page": "page.assets.chat-detail",
+      "title": "Chat Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-chat-threadid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-chat-threadid.png",
+      "blocks": [
+        "block.assets.chat-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-extensions-id-slug",
+      "path": "/assets/extensions/:id/:slug",
+      "page": "page.assets.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-extensions-id-slug.png",
+      "blocks": [
+        "block.assets.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-extensions-id",
+      "path": "/assets/extensions/:id",
+      "page": "page.assets.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-extensions-id.png",
+      "blocks": [
+        "block.assets.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-extensions",
+      "path": "/assets/extensions",
+      "page": "page.assets.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-extensions.png",
+      "blocks": [
+        "block.assets.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-extensions",
+      "path": "/assets/extensions",
+      "page": "page.assets.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-extensions.png",
+      "blocks": [
+        "block.assets.extensions"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-image-id",
+      "path": "/assets/image/:id",
+      "page": "page.assets.image-detail",
+      "title": "Image Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-image-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-image-id.png",
+      "blocks": [
+        "block.assets.image-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-libraries",
+      "path": "/assets/libraries",
+      "page": "page.assets.libraries",
+      "title": "Libraries",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-libraries.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-libraries.png",
+      "blocks": [
+        "block.assets.libraries"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-library-id",
+      "path": "/assets/library/:id",
+      "page": "page.assets.library-detail",
+      "title": "Library Detail",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-library-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-library-id.png",
+      "blocks": [
+        "block.assets.library-detail"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-library",
+      "path": "/assets/library",
+      "page": "page.assets.library",
+      "title": "Library",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-library.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-library.png",
+      "blocks": [
+        "block.assets.library"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-picker",
+      "path": "/assets/picker",
+      "page": "page.assets.picker",
+      "title": "Picker",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-picker.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-picker.png",
+      "blocks": [
+        "block.assets.picker"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-run-id-embed",
+      "path": "/assets/run/:id/embed",
+      "page": "page.assets.run-detail-embed",
+      "title": "Run Detail Embed",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-run-id-embed.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-run-id-embed.png",
+      "blocks": [
+        "block.assets.run-detail-embed"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-settings",
+      "path": "/assets/settings",
+      "page": "page.assets.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-settings.png",
+      "blocks": [
+        "block.assets.settings"
+      ]
+    },
+    {
+      "galleryKey": "assets.route.assets-team",
+      "path": "/assets/team",
+      "page": "page.assets.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/assets/assets-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-assets-assets-team.png",
+      "blocks": [
+        "block.assets.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail-embed.empty",
+      "block": "block.assets.asset-detail-embed",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail-embed.error",
+      "block": "block.assets.asset-detail-embed",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail-embed.loading",
+      "block": "block.assets.asset-detail-embed",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail-embed.long-content",
+      "block": "block.assets.asset-detail-embed",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail-embed.ready",
+      "block": "block.assets.asset-detail-embed",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail.empty",
+      "block": "block.assets.asset-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail.error",
+      "block": "block.assets.asset-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail.loading",
+      "block": "block.assets.asset-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail.long-content",
+      "block": "block.assets.asset-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.asset-detail.ready",
+      "block": "block.assets.asset-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.audit.empty",
+      "block": "block.assets.audit",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.audit.error",
+      "block": "block.assets.audit",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.audit.loading",
+      "block": "block.assets.audit",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.audit.long-content",
+      "block": "block.assets.audit",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.audit.ready",
+      "block": "block.assets.audit",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-detail.empty",
+      "block": "block.assets.brand-kits-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-detail.error",
+      "block": "block.assets.brand-kits-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-detail.loading",
+      "block": "block.assets.brand-kits-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-detail.long-content",
+      "block": "block.assets.brand-kits-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-detail.ready",
+      "block": "block.assets.brand-kits-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-index.empty",
+      "block": "block.assets.brand-kits-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-index.error",
+      "block": "block.assets.brand-kits-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-index.loading",
+      "block": "block.assets.brand-kits-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-index.long-content",
+      "block": "block.assets.brand-kits-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits-index.ready",
+      "block": "block.assets.brand-kits-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits.empty",
+      "block": "block.assets.brand-kits",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits.error",
+      "block": "block.assets.brand-kits",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits.loading",
+      "block": "block.assets.brand-kits",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits.long-content",
+      "block": "block.assets.brand-kits",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.brand-kits.ready",
+      "block": "block.assets.brand-kits",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.chat-detail.empty",
+      "block": "block.assets.chat-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.chat-detail.error",
+      "block": "block.assets.chat-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.chat-detail.loading",
+      "block": "block.assets.chat-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.chat-detail.ready",
+      "block": "block.assets.chat-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail-detail.empty",
+      "block": "block.assets.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail-detail.error",
+      "block": "block.assets.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail-detail.loading",
+      "block": "block.assets.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail-detail.long-content",
+      "block": "block.assets.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail-detail.ready",
+      "block": "block.assets.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail.empty",
+      "block": "block.assets.extensions-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail.error",
+      "block": "block.assets.extensions-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail.loading",
+      "block": "block.assets.extensions-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail.long-content",
+      "block": "block.assets.extensions-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-detail.ready",
+      "block": "block.assets.extensions-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-index.empty",
+      "block": "block.assets.extensions-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-index.error",
+      "block": "block.assets.extensions-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-index.loading",
+      "block": "block.assets.extensions-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-index.long-content",
+      "block": "block.assets.extensions-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions-index.ready",
+      "block": "block.assets.extensions-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions.empty",
+      "block": "block.assets.extensions",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions.error",
+      "block": "block.assets.extensions",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions.loading",
+      "block": "block.assets.extensions",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions.long-content",
+      "block": "block.assets.extensions",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.extensions.ready",
+      "block": "block.assets.extensions",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.home.empty",
+      "block": "block.assets.home",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.home.error",
+      "block": "block.assets.home",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.home.loading",
+      "block": "block.assets.home",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.home.long-content",
+      "block": "block.assets.home",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.home.ready",
+      "block": "block.assets.home",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.image-detail.empty",
+      "block": "block.assets.image-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.image-detail.error",
+      "block": "block.assets.image-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.image-detail.loading",
+      "block": "block.assets.image-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.image-detail.long-content",
+      "block": "block.assets.image-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.image-detail.ready",
+      "block": "block.assets.image-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.libraries.empty",
+      "block": "block.assets.libraries",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.libraries.error",
+      "block": "block.assets.libraries",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.libraries.loading",
+      "block": "block.assets.libraries",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.libraries.long-content",
+      "block": "block.assets.libraries",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.libraries.ready",
+      "block": "block.assets.libraries",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library-detail.empty",
+      "block": "block.assets.library-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library-detail.error",
+      "block": "block.assets.library-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library-detail.loading",
+      "block": "block.assets.library-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library-detail.long-content",
+      "block": "block.assets.library-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library-detail.ready",
+      "block": "block.assets.library-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library.empty",
+      "block": "block.assets.library",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library.error",
+      "block": "block.assets.library",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library.loading",
+      "block": "block.assets.library",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library.long-content",
+      "block": "block.assets.library",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.library.ready",
+      "block": "block.assets.library",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.picker.empty",
+      "block": "block.assets.picker",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.picker.error",
+      "block": "block.assets.picker",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.picker.loading",
+      "block": "block.assets.picker",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.picker.long-content",
+      "block": "block.assets.picker",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.picker.ready",
+      "block": "block.assets.picker",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.run-detail-embed.empty",
+      "block": "block.assets.run-detail-embed",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.run-detail-embed.error",
+      "block": "block.assets.run-detail-embed",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.run-detail-embed.loading",
+      "block": "block.assets.run-detail-embed",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.run-detail-embed.long-content",
+      "block": "block.assets.run-detail-embed",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.run-detail-embed.ready",
+      "block": "block.assets.run-detail-embed",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.settings.empty",
+      "block": "block.assets.settings",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.settings.error",
+      "block": "block.assets.settings",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.settings.loading",
+      "block": "block.assets.settings",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.settings.long-content",
+      "block": "block.assets.settings",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.settings.ready",
+      "block": "block.assets.settings",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.team.empty",
+      "block": "block.assets.team",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.team.error",
+      "block": "block.assets.team",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.team.loading",
+      "block": "block.assets.team",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.team.long-content",
+      "block": "block.assets.team",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "assets.block.block.assets.team.ready",
+      "block": "block.assets.team",
+      "component": "media-grid",
+      "state": "ready"
+    }
+  ]
+}

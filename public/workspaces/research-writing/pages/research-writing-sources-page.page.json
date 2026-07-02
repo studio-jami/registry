@@ -37,7 +37,8 @@
       "title": "Citations",
       "component": "data-list",
       "stateExamples": [
-        "empty"
+        "empty",
+        "loading"
       ]
     }
   ],

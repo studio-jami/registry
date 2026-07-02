@@ -1,0 +1,53 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "mixed-media",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 14,
+    "graph": [
+      "jami-theme",
+      "button",
+      "panel",
+      "data-list",
+      "agent-panel",
+      "media-grid",
+      "mixed-media-assets-block",
+      "mixed-media-metadata-block",
+      "mixed-media-library-page",
+      "mixed-media-pipeline-block",
+      "mixed-media-review-agent-block",
+      "mixed-media-pipeline-page",
+      "mixed-media-app",
+      "mixed-media-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 46
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 14
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/mixed-media/index.html",
+      "apps/workbench/dist/suites/mixed-media/mixed-media-library.html",
+      "apps/workbench/dist/suites/mixed-media/mixed-media-pipeline.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/mixed-media/pages/mixed-media-library-page.page.implementation.json",
+      "studio-ui/workspaces/mixed-media/pages/mixed-media-pipeline-page.page.implementation.json"
+    ]
+  }
+}

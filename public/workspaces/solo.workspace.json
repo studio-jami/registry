@@ -135,7 +135,8 @@
         "title": "Task queue",
         "component": "data-list",
         "stateExamples": [
-          "empty"
+          "empty",
+          "loading"
         ]
       },
       {

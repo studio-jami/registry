@@ -7,7 +7,8 @@
     "title": "Asset metadata",
     "component": "data-list",
     "stateExamples": [
-      "long-content"
+      "long-content",
+      "loading"
     ]
   },
   "routes": [
@@ -25,7 +26,8 @@
   ],
   "component": "data-list",
   "stateFixtures": {
-    "long-content": "Generated asset filenames, prompt excerpts, and publishing notes wrap inside the media shell."
+    "long-content": "Generated asset filenames, prompt excerpts, and publishing notes wrap inside the media shell.",
+    "loading": "Asset metadata includes the loading state."
   },
   "provenance": {
     "source": "registry/workspaces/mixed-media/workspace-shell.json",

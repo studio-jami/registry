@@ -1,0 +1,700 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/design-workspace",
+  "workspace": "design",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "media-grid",
+    "design-app",
+    "design-catchall-page",
+    "design-home-page",
+    "design-design-systems-page",
+    "design-design-systems-setup-page",
+    "design-design-detail-page",
+    "design-examples-page",
+    "design-extensions-detail-detail-page",
+    "design-extensions-detail-page",
+    "design-extensions-index-page",
+    "design-extensions-page",
+    "design-observability-page",
+    "design-present-detail-page",
+    "design-settings-page",
+    "design-team-page",
+    "design-templates-page",
+    "design-catchall-block",
+    "design-home-block",
+    "design-design-systems-block",
+    "design-design-systems-setup-block",
+    "design-design-detail-block",
+    "design-examples-block",
+    "design-extensions-detail-detail-block",
+    "design-extensions-detail-block",
+    "design-extensions-index-block",
+    "design-extensions-block",
+    "design-observability-block",
+    "design-present-detail-block",
+    "design-settings-block",
+    "design-team-block",
+    "design-templates-block"
+  ],
+  "installGraph": {
+    "root": "design-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "design-app",
+      "design-catchall-page",
+      "design-home-page",
+      "design-design-systems-page",
+      "design-design-systems-setup-page",
+      "design-design-detail-page",
+      "design-examples-page",
+      "design-extensions-detail-detail-page",
+      "design-extensions-detail-page",
+      "design-extensions-index-page",
+      "design-extensions-page",
+      "design-observability-page",
+      "design-present-detail-page",
+      "design-settings-page",
+      "design-team-page",
+      "design-templates-page",
+      "design-catchall-block",
+      "design-home-block",
+      "design-design-systems-block",
+      "design-design-systems-setup-block",
+      "design-design-detail-block",
+      "design-examples-block",
+      "design-extensions-detail-detail-block",
+      "design-extensions-detail-block",
+      "design-extensions-index-block",
+      "design-extensions-block",
+      "design-observability-block",
+      "design-present-detail-block",
+      "design-settings-block",
+      "design-team-block",
+      "design-templates-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":",
+    "design",
+    "design-systems",
+    "design-systems",
+    "design",
+    "examples",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "observability",
+    "present",
+    "settings",
+    "team",
+    "templates"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Design",
+    "summary": "Design Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.design.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Catchall",
+          "route": "/design/:"
+        },
+        {
+          "label": "Home",
+          "route": "/design"
+        },
+        {
+          "label": "Design Systems",
+          "route": "/design/design-systems"
+        },
+        {
+          "label": "Design Systems Setup",
+          "route": "/design/design-systems/setup"
+        },
+        {
+          "label": "Design Detail",
+          "route": "/design/design/:id"
+        },
+        {
+          "label": "Examples",
+          "route": "/design/examples"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/design/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/design/extensions/:id"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/design/:",
+        "page": "page.design.catchall",
+        "title": "Catchall",
+        "blocks": [
+          "block.design.catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/$.tsx"
+      },
+      {
+        "path": "/design",
+        "page": "page.design.home",
+        "title": "Design Home",
+        "blocks": [
+          "block.design.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/_index.tsx"
+      },
+      {
+        "path": "/design/design-systems",
+        "page": "page.design.design-systems",
+        "title": "Design Systems",
+        "blocks": [
+          "block.design.design-systems"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems.tsx"
+      },
+      {
+        "path": "/design/design-systems/setup",
+        "page": "page.design.design-systems-setup",
+        "title": "Design Systems Setup",
+        "blocks": [
+          "block.design.design-systems-setup"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems_.setup.tsx"
+      },
+      {
+        "path": "/design/design/:id",
+        "page": "page.design.design-detail",
+        "title": "Design Detail",
+        "blocks": [
+          "block.design.design-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design.$id.tsx"
+      },
+      {
+        "path": "/design/examples",
+        "page": "page.design.examples",
+        "title": "Examples",
+        "blocks": [
+          "block.design.examples"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/examples.tsx"
+      },
+      {
+        "path": "/design/extensions/:id/:slug",
+        "page": "page.design.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.design.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/design/extensions/:id",
+        "page": "page.design.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.design.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/design/extensions",
+        "page": "page.design.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.design.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/design/extensions",
+        "page": "page.design.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.design.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/design/observability",
+        "page": "page.design.observability",
+        "title": "Observability",
+        "blocks": [
+          "block.design.observability"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/observability.tsx"
+      },
+      {
+        "path": "/design/present/:id",
+        "page": "page.design.present-detail",
+        "title": "Present Detail",
+        "blocks": [
+          "block.design.present-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/present.$id.tsx"
+      },
+      {
+        "path": "/design/settings",
+        "page": "page.design.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.design.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/settings.tsx"
+      },
+      {
+        "path": "/design/team",
+        "page": "page.design.team",
+        "title": "Team",
+        "blocks": [
+          "block.design.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/team.tsx"
+      },
+      {
+        "path": "/design/templates",
+        "page": "page.design.templates",
+        "title": "Templates",
+        "blocks": [
+          "block.design.templates"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/templates.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.design.catchall",
+        "title": "Catchall",
+        "description": "Agent-Native design route /: derived from $.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/$.tsx"
+      },
+      {
+        "id": "page.design.home",
+        "title": "Design Home",
+        "description": "Agent-Native design route / derived from _index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.design.design-systems",
+        "title": "Design Systems",
+        "description": "Agent-Native design route /design-systems derived from design-systems.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems.tsx"
+      },
+      {
+        "id": "page.design.design-systems-setup",
+        "title": "Design Systems Setup",
+        "description": "Agent-Native design route /design-systems/setup derived from design-systems_.setup.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems_.setup.tsx"
+      },
+      {
+        "id": "page.design.design-detail",
+        "title": "Design Detail",
+        "description": "Agent-Native design route /design/:id derived from design.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design.$id.tsx"
+      },
+      {
+        "id": "page.design.examples",
+        "title": "Examples",
+        "description": "Agent-Native design route /examples derived from examples.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/examples.tsx"
+      },
+      {
+        "id": "page.design.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native design route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.design.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native design route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.design.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native design route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.design.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native design route /extensions derived from extensions.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.design.observability",
+        "title": "Observability",
+        "description": "Agent-Native design route /observability derived from observability.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/observability.tsx"
+      },
+      {
+        "id": "page.design.present-detail",
+        "title": "Present Detail",
+        "description": "Agent-Native design route /present/:id derived from present.$id.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/present.$id.tsx"
+      },
+      {
+        "id": "page.design.settings",
+        "title": "Settings",
+        "description": "Agent-Native design route /settings derived from settings.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.design.team",
+        "title": "Team",
+        "description": "Agent-Native design route /team derived from team.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/team.tsx"
+      },
+      {
+        "id": "page.design.templates",
+        "title": "Templates",
+        "description": "Agent-Native design route /templates derived from templates.tsx.",
+        "components": [
+          "media-grid",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/templates.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.design.catchall",
+        "title": "Catchall",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/$.tsx"
+      },
+      {
+        "id": "block.design.home",
+        "title": "Home",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.design.design-systems",
+        "title": "Design Systems",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems.tsx"
+      },
+      {
+        "id": "block.design.design-systems-setup",
+        "title": "Design Systems Setup",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design-systems_.setup.tsx"
+      },
+      {
+        "id": "block.design.design-detail",
+        "title": "Design Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/design.$id.tsx"
+      },
+      {
+        "id": "block.design.examples",
+        "title": "Examples",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/examples.tsx"
+      },
+      {
+        "id": "block.design.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.design.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.design.extensions-index",
+        "title": "Extensions Index",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.design.extensions",
+        "title": "Extensions",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.design.observability",
+        "title": "Observability",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/observability.tsx"
+      },
+      {
+        "id": "block.design.present-detail",
+        "title": "Present Detail",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/present.$id.tsx"
+      },
+      {
+        "id": "block.design.settings",
+        "title": "Settings",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.design.team",
+        "title": "Team",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/team.tsx"
+      },
+      {
+        "id": "block.design.templates",
+        "title": "Templates",
+        "component": "media-grid",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/design/app/routes/templates.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "media-grid",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Design keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Design in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Design agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/design",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/design/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/design/design-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/design/pages/design-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-home-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-design-systems-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-design-systems-setup-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-design-detail-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-examples-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-observability-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-present-detail-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-settings-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-team-page.page.implementation.json",
+      "studio-ui/workspaces/design/pages/design-templates-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/design/blocks/design-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-home-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-design-systems-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-design-systems-setup-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-design-detail-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-examples-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-observability-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-present-detail-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-settings-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-team-block.block.implementation.json",
+      "studio-ui/workspaces/design/blocks/design-templates-block.block.implementation.json"
+    ]
+  }
+}

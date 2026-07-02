@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "forms",
+  "page": {
+    "id": "page.forms.response-insights",
+    "title": "Response Insights",
+    "description": "Agent-Native forms route /response-insights derived from _app.response-insights.tsx.",
+    "components": [
+      "chart",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.response-insights.tsx"
+  },
+  "routes": [
+    {
+      "path": "/forms/response-insights",
+      "page": "page.forms.response-insights",
+      "title": "Response Insights",
+      "blocks": [
+        "block.forms.response-insights"
+      ],
+      "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.response-insights.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.forms.response-insights",
+      "title": "Response Insights",
+      "component": "chart",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/forms/app/routes/_app.response-insights.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "chart",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Forms keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Forms in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Forms agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/forms/workspace-shell.json",
+    "copiedSource": false
+  }
+}

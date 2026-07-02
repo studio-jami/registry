@@ -19,10 +19,21 @@
     "title": "Citations",
     "component": "data-list",
     "stateExamples": [
-      "empty"
+      "empty",
+      "loading"
     ]
   },
   "component": "data-list",
+  "agentManifest": {
+    "component": "data-list",
+    "manifestId": "agm_data_list",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
   "renderedStates": {
     "ready": {
       "props": {
@@ -43,6 +54,7 @@
             "state": "ready"
           }
         ],
+        "loading": false,
         "empty": false
       },
       "rendererState": "renderable",
@@ -150,6 +162,7 @@
           }
         ],
         "rows": [],
+        "loading": false,
         "empty": true
       },
       "rendererState": "renderable",
@@ -186,12 +199,66 @@
         "jami-data-list",
         "jami-data-list-title"
       ]
+    },
+    "loading": {
+      "props": {
+        "title": "Citations",
+        "columns": [
+          {
+            "key": "item",
+            "label": "Item"
+          },
+          {
+            "key": "state",
+            "label": "State"
+          }
+        ],
+        "rows": [],
+        "loading": true,
+        "empty": false
+      },
+      "rendererState": "renderable",
+      "reasons": [],
+      "node": {
+        "type": "section",
+        "props": {
+          "className": "jami-data-list",
+          "role": "region",
+          "aria-label": "Citations",
+          "aria-busy": "true"
+        },
+        "children": [
+          {
+            "type": "h3",
+            "props": {
+              "className": "jami-data-list-title"
+            },
+            "children": [
+              "Citations"
+            ]
+          },
+          {
+            "type": "p",
+            "props": {
+              "role": "status"
+            },
+            "children": [
+              "Loading records."
+            ]
+          }
+        ]
+      },
+      "tokenizedClasses": [
+        "jami-data-list",
+        "jami-data-list-title"
+      ]
     }
   },
   "evidence": {
     "renderableStates": [
       "ready",
-      "empty"
+      "empty",
+      "loading"
     ],
     "failedStates": [],
     "tokenizedClasses": [

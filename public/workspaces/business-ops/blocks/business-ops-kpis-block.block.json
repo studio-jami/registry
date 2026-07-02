@@ -7,7 +7,8 @@
     "title": "Operational KPIs",
     "component": "data-list",
     "stateExamples": [
-      "long-content"
+      "long-content",
+      "loading"
     ]
   },
   "routes": [
@@ -25,7 +26,8 @@
   ],
   "component": "data-list",
   "stateFixtures": {
-    "long-content": "A compliance exception with a long policy name wraps inside row cells and cards."
+    "long-content": "A compliance exception with a long policy name wraps inside row cells and cards.",
+    "loading": "Operational KPIs includes the loading state."
   },
   "provenance": {
     "source": "registry/workspaces/business-ops/workspace-shell.json",

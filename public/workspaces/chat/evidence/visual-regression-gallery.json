@@ -1,0 +1,369 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "chat",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/chat/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-chat.png"
+  },
+  "routeCount": 10,
+  "blockStateCount": 40,
+  "routes": [
+    {
+      "galleryKey": "chat.route.chat",
+      "path": "/chat",
+      "page": "page.chat.home",
+      "title": "Chat Home",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat.png",
+      "blocks": [
+        "block.chat.home"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-chat-threadid",
+      "path": "/chat/chat/:threadId",
+      "page": "page.chat.chat-detail",
+      "title": "Chat Detail",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-chat-threadid.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-chat-threadid.png",
+      "blocks": [
+        "block.chat.chat-detail"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-database",
+      "path": "/chat/database",
+      "page": "page.chat.database",
+      "title": "Database",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-database.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-database.png",
+      "blocks": [
+        "block.chat.database"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-extensions-id-slug",
+      "path": "/chat/extensions/:id/:slug",
+      "page": "page.chat.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-extensions-id-slug.png",
+      "blocks": [
+        "block.chat.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-extensions-id",
+      "path": "/chat/extensions/:id",
+      "page": "page.chat.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-extensions-id.png",
+      "blocks": [
+        "block.chat.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-extensions",
+      "path": "/chat/extensions",
+      "page": "page.chat.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-extensions.png",
+      "blocks": [
+        "block.chat.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-extensions",
+      "path": "/chat/extensions",
+      "page": "page.chat.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-extensions.png",
+      "blocks": [
+        "block.chat.extensions"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-observability",
+      "path": "/chat/observability",
+      "page": "page.chat.observability",
+      "title": "Observability",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-observability.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-observability.png",
+      "blocks": [
+        "block.chat.observability"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-settings",
+      "path": "/chat/settings",
+      "page": "page.chat.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-settings.png",
+      "blocks": [
+        "block.chat.settings"
+      ]
+    },
+    {
+      "galleryKey": "chat.route.chat-team",
+      "path": "/chat/team",
+      "page": "page.chat.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/chat/chat-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-chat-chat-team.png",
+      "blocks": [
+        "block.chat.team"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "chat.block.block.chat.chat-detail.empty",
+      "block": "block.chat.chat-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.chat-detail.error",
+      "block": "block.chat.chat-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.chat-detail.loading",
+      "block": "block.chat.chat-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.chat-detail.ready",
+      "block": "block.chat.chat-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.database.empty",
+      "block": "block.chat.database",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.database.error",
+      "block": "block.chat.database",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.database.loading",
+      "block": "block.chat.database",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.database.ready",
+      "block": "block.chat.database",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail-detail.empty",
+      "block": "block.chat.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail-detail.error",
+      "block": "block.chat.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail-detail.loading",
+      "block": "block.chat.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail-detail.ready",
+      "block": "block.chat.extensions-detail-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail.empty",
+      "block": "block.chat.extensions-detail",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail.error",
+      "block": "block.chat.extensions-detail",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail.loading",
+      "block": "block.chat.extensions-detail",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-detail.ready",
+      "block": "block.chat.extensions-detail",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-index.empty",
+      "block": "block.chat.extensions-index",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-index.error",
+      "block": "block.chat.extensions-index",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-index.loading",
+      "block": "block.chat.extensions-index",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions-index.ready",
+      "block": "block.chat.extensions-index",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions.empty",
+      "block": "block.chat.extensions",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions.error",
+      "block": "block.chat.extensions",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions.loading",
+      "block": "block.chat.extensions",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.extensions.ready",
+      "block": "block.chat.extensions",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.home.empty",
+      "block": "block.chat.home",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.home.error",
+      "block": "block.chat.home",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.home.loading",
+      "block": "block.chat.home",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.home.ready",
+      "block": "block.chat.home",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.observability.empty",
+      "block": "block.chat.observability",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.observability.error",
+      "block": "block.chat.observability",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.observability.loading",
+      "block": "block.chat.observability",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.observability.ready",
+      "block": "block.chat.observability",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.settings.empty",
+      "block": "block.chat.settings",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.settings.error",
+      "block": "block.chat.settings",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.settings.loading",
+      "block": "block.chat.settings",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.settings.ready",
+      "block": "block.chat.settings",
+      "component": "agent-panel",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.team.empty",
+      "block": "block.chat.team",
+      "component": "agent-panel",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.team.error",
+      "block": "block.chat.team",
+      "component": "agent-panel",
+      "state": "error"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.team.loading",
+      "block": "block.chat.team",
+      "component": "agent-panel",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "chat.block.block.chat.team.ready",
+      "block": "block.chat.team",
+      "component": "agent-panel",
+      "state": "ready"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "videos",
+  "page": {
+    "id": "page.videos.c-detail",
+    "title": "C Detail",
+    "description": "Agent-Native videos route /c/:compositionId derived from c.$compositionId.tsx.",
+    "components": [
+      "media-grid",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+  },
+  "routes": [
+    {
+      "path": "/videos/c/:compositionId",
+      "page": "page.videos.c-detail",
+      "title": "C Detail",
+      "blocks": [
+        "block.videos.c-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.videos.c-detail",
+      "title": "C Detail",
+      "component": "media-grid",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Videos keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Videos in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Videos agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/videos/workspace-shell.json",
+    "copiedSource": false
+  }
+}

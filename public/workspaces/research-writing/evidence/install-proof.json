@@ -1,0 +1,54 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "research-writing",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 15,
+    "graph": [
+      "jami-theme",
+      "button",
+      "panel",
+      "text-field",
+      "data-list",
+      "agent-panel",
+      "docs-source-panel",
+      "research-writing-sources-block",
+      "research-writing-citations-block",
+      "research-writing-sources-page",
+      "research-writing-outline-block",
+      "research-writing-agent-review-block",
+      "research-writing-brief-page",
+      "research-writing-app",
+      "research-writing-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 51
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 15
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/research-writing/index.html",
+      "apps/workbench/dist/suites/research-writing/research-writing-brief.html",
+      "apps/workbench/dist/suites/research-writing/research-writing-sources.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/research-writing/pages/research-writing-sources-page.page.implementation.json",
+      "studio-ui/workspaces/research-writing/pages/research-writing-brief-page.page.implementation.json"
+    ]
+  }
+}

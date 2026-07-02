@@ -1,0 +1,494 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-a11y.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "calendar",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "runner": "axe-core/jsdom",
+  "axeVersion": "4.12.1",
+  "target": "WCAG 2.2 AA tags in axe-core",
+  "componentsCovered": [
+    "button",
+    "calendar",
+    "panel"
+  ],
+  "violationCount": 0,
+  "keyboardAriaScreenReader": "axe-core/jsdom asserts keyboard, focus-visible, ARIA, and screen-reader name/role/state across every fixture state; zero violations required, jsdom-only `incomplete` items are recorded verbatim.",
+  "fixtures": [
+    {
+      "component": "button",
+      "fixture": "button-action",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-as-child",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "calendar",
+      "fixture": "calendar-agenda-events",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "panel",
+      "fixture": "panel-region",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "dataStates": {
+    "requiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "coveredRequiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "perBlock": [
+      {
+        "block": "block.calendar.availability",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.book-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.book-detail-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.booking-links",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.booking-links-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.booking-links-index",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.booking-manage-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.booking-og-meta",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.bookings",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.catchall",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.event",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.extensions",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.extensions-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.extensions-detail-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.extensions-index",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.home",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.home-2",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.meet-detail-detail",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.settings",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.calendar.team",
+        "component": "calendar",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "videos",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 28,
+    "graph": [
+      "jami-theme",
+      "panel",
+      "button",
+      "media-grid",
+      "videos-catchall-block",
+      "videos-catchall-page",
+      "videos-home-block",
+      "videos-home-page",
+      "videos-c-detail-block",
+      "videos-c-detail-page",
+      "videos-components-block",
+      "videos-components-page",
+      "videos-design-systems-block",
+      "videos-design-systems-page",
+      "videos-extensions-detail-detail-block",
+      "videos-extensions-detail-detail-page",
+      "videos-extensions-detail-block",
+      "videos-extensions-detail-page",
+      "videos-extensions-index-block",
+      "videos-extensions-index-page",
+      "videos-extensions-block",
+      "videos-extensions-page",
+      "videos-settings-block",
+      "videos-settings-page",
+      "videos-team-block",
+      "videos-team-page",
+      "videos-app",
+      "videos-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 68
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 28
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/videos/index.html",
+      "apps/workbench/dist/suites/videos/videos-c-compositionid.html",
+      "apps/workbench/dist/suites/videos/videos-components.html",
+      "apps/workbench/dist/suites/videos/videos-design-systems.html",
+      "apps/workbench/dist/suites/videos/videos-extensions-id-slug.html",
+      "apps/workbench/dist/suites/videos/videos-extensions-id.html",
+      "apps/workbench/dist/suites/videos/videos-extensions.html",
+      "apps/workbench/dist/suites/videos/videos-extensions.html",
+      "apps/workbench/dist/suites/videos/videos-settings.html",
+      "apps/workbench/dist/suites/videos/videos-team.html",
+      "apps/workbench/dist/suites/videos/videos.html",
+      "apps/workbench/dist/suites/videos/videos.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/videos/pages/videos-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-home-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-c-detail-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-components-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-design-systems-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-settings-page.page.implementation.json",
+      "studio-ui/workspaces/videos/pages/videos-team-page.page.implementation.json"
+    ]
+  }
+}

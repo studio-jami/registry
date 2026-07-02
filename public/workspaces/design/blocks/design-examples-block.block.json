@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "design",
+  "block": {
+    "id": "block.design.examples",
+    "title": "Examples",
+    "component": "media-grid",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/design/app/routes/examples.tsx"
+  },
+  "routes": [
+    {
+      "path": "/design/examples",
+      "page": "page.design.examples",
+      "title": "Examples"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.design.examples",
+      "title": "Examples"
+    }
+  ],
+  "component": "media-grid",
+  "stateFixtures": {
+    "loading": "Examples includes the loading state.",
+    "empty": "No records are loaded for Design in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Design agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Design keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/design/workspace-shell.json",
+    "copiedSource": false
+  }
+}

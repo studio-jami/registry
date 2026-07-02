@@ -1,0 +1,73 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "macros",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 22,
+    "graph": [
+      "jami-theme",
+      "panel",
+      "button",
+      "agent-panel",
+      "macros-home-block",
+      "macros-home-page",
+      "macros-analytics-block",
+      "macros-analytics-page",
+      "macros-extensions-detail-detail-block",
+      "macros-extensions-detail-detail-page",
+      "macros-extensions-detail-block",
+      "macros-extensions-detail-page",
+      "macros-extensions-index-block",
+      "macros-extensions-index-page",
+      "macros-extensions-block",
+      "macros-extensions-page",
+      "macros-settings-block",
+      "macros-settings-page",
+      "macros-team-block",
+      "macros-team-page",
+      "macros-app",
+      "macros-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 56
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 22
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/macros/index.html",
+      "apps/workbench/dist/suites/macros/macros-analytics.html",
+      "apps/workbench/dist/suites/macros/macros-extensions-id-slug.html",
+      "apps/workbench/dist/suites/macros/macros-extensions-id.html",
+      "apps/workbench/dist/suites/macros/macros-extensions.html",
+      "apps/workbench/dist/suites/macros/macros-extensions.html",
+      "apps/workbench/dist/suites/macros/macros-settings.html",
+      "apps/workbench/dist/suites/macros/macros-team.html",
+      "apps/workbench/dist/suites/macros/macros.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/macros/pages/macros-home-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-analytics-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-settings-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-team-page.page.implementation.json"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-install-proof.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "solo",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "packageInstall": {
+    "registrySource": "local-generated",
+    "registryPath": "packages/registry/generated",
+    "status": "installed",
+    "ok": true,
+    "installedItemCount": 16,
+    "graph": [
+      "jami-theme",
+      "button",
+      "panel",
+      "text-field",
+      "data-list",
+      "agent-panel",
+      "docs-source-panel",
+      "solo-agenda-block",
+      "solo-task-queue-block",
+      "solo-agent-status-block",
+      "solo-today-page",
+      "solo-docs-sources-block",
+      "solo-forms-block",
+      "solo-docs-page",
+      "solo-app",
+      "solo-workspace"
+    ],
+    "fileActionCounts": {
+      "create": 53
+    },
+    "conflictCount": 0,
+    "sourceStateCounts": {
+      "installable": 16
+    },
+    "doctorHealthy": true,
+    "doctorProblems": 0,
+    "graphMissing": []
+  },
+  "hostedInstall": {
+    "registrySource": "https://registry.jami.studio",
+    "liveProbe": "operator-deferred",
+    "reason": "Live hosted install runs through `pnpm hosted:live:check` against the published registry; this evidence pins the hosted registry source and the route artifacts a hosted install must serve.",
+    "routeArtifacts": [
+      "apps/workbench/dist/suites/solo/index.html",
+      "apps/workbench/dist/suites/solo/solo-docs.html",
+      "apps/workbench/dist/suites/solo/solo-today.html"
+    ],
+    "pageImplementationArtifacts": [
+      "studio-ui/workspaces/solo/pages/solo-today-page.page.implementation.json",
+      "studio-ui/workspaces/solo/pages/solo-docs-page.page.implementation.json"
+    ]
+  }
+}

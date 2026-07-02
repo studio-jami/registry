@@ -1,0 +1,60 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "agent-native-studio",
+  "page": {
+    "id": "page.agent-native-studio.slides",
+    "title": "Agent-Native Slides",
+    "description": "Agent-Native Slides Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "components": [
+      "agent-panel",
+      "data-list",
+      "panel",
+      "button"
+    ],
+    "targetWorkspace": "slides"
+  },
+  "routes": [
+    {
+      "path": "/agent-native-studio/slides",
+      "page": "page.agent-native-studio.slides",
+      "title": "Agent-Native Slides",
+      "blocks": [
+        "block.agent-native-studio.slides"
+      ],
+      "targetWorkspace": "slides",
+      "targetRoute": "/slides"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.agent-native-studio.slides",
+      "title": "Agent-Native Slides",
+      "component": "data-list",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "targetWorkspace": "slides",
+      "targetUrl": "https://slides.agent-native.com",
+      "summary": "Agent-Native Slides Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances."
+    }
+  ],
+  "components": [
+    "agent-panel",
+    "button",
+    "data-list",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "The Agent-Native Studio pack keeps every public template app installable as one graph while the actual React apps run through the Agent-Native gateway and Harness owns governance.",
+    "empty": "No records are loaded in the local aggregate Studio pack; install the workspace graph or open the Agent-Native gateway to run the actual apps.",
+    "error": "A template app reports display-only status here until its live Agent-Native route or Harness-governed action is opened."
+  },
+  "provenance": {
+    "source": "registry/workspaces/agent-native-studio/workspace-shell.json",
+    "copiedSource": false
+  }
+}

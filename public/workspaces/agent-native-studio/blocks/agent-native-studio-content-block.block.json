@@ -1,0 +1,43 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "agent-native-studio",
+  "block": {
+    "id": "block.agent-native-studio.content",
+    "title": "Agent-Native Content",
+    "component": "data-list",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "targetWorkspace": "content",
+    "targetUrl": "https://content.agent-native.com",
+    "summary": "Agent-Native Content Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances."
+  },
+  "routes": [
+    {
+      "path": "/agent-native-studio/content",
+      "page": "page.agent-native-studio.content",
+      "title": "Agent-Native Content"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.agent-native-studio.content",
+      "title": "Agent-Native Content"
+    }
+  ],
+  "component": "data-list",
+  "stateFixtures": {
+    "loading": "Agent-Native Content includes the loading state.",
+    "empty": "No records are loaded in the local aggregate Studio pack; install the workspace graph or open the Agent-Native gateway to run the actual apps.",
+    "error": "A template app reports display-only status here until its live Agent-Native route or Harness-governed action is opened.",
+    "long-content": "The Agent-Native Studio pack keeps every public template app installable as one graph while the actual React apps run through the Agent-Native gateway and Harness owns governance."
+  },
+  "provenance": {
+    "source": "registry/workspaces/agent-native-studio/workspace-shell.json",
+    "copiedSource": false
+  }
+}

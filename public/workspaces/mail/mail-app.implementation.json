@@ -1,0 +1,471 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "mail",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/mail/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.mail.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Catchall",
+        "route": "/mail/:"
+      },
+      {
+        "label": "Detail Detail",
+        "route": "/mail/:view/:threadId"
+      },
+      {
+        "label": "Detail",
+        "route": "/mail/:view"
+      },
+      {
+        "label": "Home",
+        "route": "/mail"
+      },
+      {
+        "label": "Draft Queue Detail",
+        "route": "/mail/draft-queue/:id"
+      },
+      {
+        "label": "Draft Queue",
+        "route": "/mail/draft-queue"
+      },
+      {
+        "label": "Email",
+        "route": "/mail/email"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/mail/extensions/:id/:slug"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/mail/:",
+      "page": "page.mail.catchall",
+      "title": "Catchall",
+      "blocks": [
+        "block.mail.catchall"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/$.tsx"
+    },
+    {
+      "path": "/mail/:view/:threadId",
+      "page": "page.mail.detail-detail",
+      "title": "Detail Detail",
+      "blocks": [
+        "block.mail.detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.$threadId.tsx"
+    },
+    {
+      "path": "/mail/:view",
+      "page": "page.mail.detail",
+      "title": "Detail",
+      "blocks": [
+        "block.mail.detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.tsx"
+    },
+    {
+      "path": "/mail",
+      "page": "page.mail.home",
+      "title": "Mail Home",
+      "blocks": [
+        "block.mail.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/_index.tsx"
+    },
+    {
+      "path": "/mail/draft-queue/:id",
+      "page": "page.mail.draft-queue-detail",
+      "title": "Draft Queue Detail",
+      "blocks": [
+        "block.mail.draft-queue-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.$id.tsx"
+    },
+    {
+      "path": "/mail/draft-queue",
+      "page": "page.mail.draft-queue",
+      "title": "Draft Queue",
+      "blocks": [
+        "block.mail.draft-queue"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.tsx"
+    },
+    {
+      "path": "/mail/email",
+      "page": "page.mail.email",
+      "title": "Email",
+      "blocks": [
+        "block.mail.email"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/email.tsx"
+    },
+    {
+      "path": "/mail/extensions/:id/:slug",
+      "page": "page.mail.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.mail.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/mail/extensions/:id",
+      "page": "page.mail.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.mail.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/mail/extensions",
+      "page": "page.mail.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.mail.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/mail/extensions",
+      "page": "page.mail.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.mail.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/mail/settings",
+      "page": "page.mail.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.mail.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/settings.tsx"
+    },
+    {
+      "path": "/mail/team",
+      "page": "page.mail.team",
+      "title": "Team",
+      "blocks": [
+        "block.mail.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/mail/app/routes/team.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.mail.catchall",
+      "title": "Catchall",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-catchall-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.detail-detail",
+      "title": "Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.detail",
+      "title": "Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.home",
+      "title": "Mail Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.draft-queue-detail",
+      "title": "Draft Queue Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-draft-queue-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.draft-queue",
+      "title": "Draft Queue",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-draft-queue-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.email",
+      "title": "Email",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-email-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.mail.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/mail/pages/mail-team-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.mail.catchall",
+      "title": "Catchall",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-catchall-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.detail-detail",
+      "title": "Detail Detail",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.detail",
+      "title": "Detail",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.home",
+      "title": "Home",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.draft-queue-detail",
+      "title": "Draft Queue Detail",
+      "component": "text-field",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-draft-queue-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.draft-queue",
+      "title": "Draft Queue",
+      "component": "text-field",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-draft-queue-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.email",
+      "title": "Email",
+      "component": "text-field",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-email-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.extensions-index",
+      "title": "Extensions Index",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.extensions",
+      "title": "Extensions",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.settings",
+      "title": "Settings",
+      "component": "text-field",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.mail.team",
+      "title": "Team",
+      "component": "data-list",
+      "implementationFile": "studio-ui/workspaces/mail/blocks/mail-team-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "data-list",
+      "manifestId": "agm_data_list",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "text-field",
+      "manifestId": "agm_text_field",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 13,
+    "renderedBlockCount": 13,
+    "routeCount": 13,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/mail/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/mail/workspace-shell.json",
+    "copiedSource": false
+  }
+}

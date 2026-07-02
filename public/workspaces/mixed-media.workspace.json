@@ -130,7 +130,8 @@
         "title": "Asset metadata",
         "component": "data-list",
         "stateExamples": [
-          "long-content"
+          "long-content",
+          "loading"
         ]
       },
       {

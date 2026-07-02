@@ -1,0 +1,634 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-visual-regression.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "design",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "appArtifact": "apps/workbench/dist/suites/design/index.html",
+  "capture": {
+    "runner": "pnpm --filter @jami-studio/workbench smoke",
+    "reason": "The deterministic gate is Node/jsdom; the explicit workbench smoke captures browser screenshots for every mounted workspace app/page artifact plus theme, focus, and responsive states.",
+    "outputDirectory": "apps/workbench/output/screenshots",
+    "appScreenshot": "apps/workbench/output/screenshots/workspace-design.png"
+  },
+  "routeCount": 15,
+  "blockStateCount": 75,
+  "routes": [
+    {
+      "galleryKey": "design.route.design",
+      "path": "/design/:",
+      "page": "page.design.catchall",
+      "title": "Catchall",
+      "routeArtifact": "apps/workbench/dist/suites/design/design.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design.png",
+      "blocks": [
+        "block.design.catchall"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design",
+      "path": "/design",
+      "page": "page.design.home",
+      "title": "Design Home",
+      "routeArtifact": "apps/workbench/dist/suites/design/design.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design.png",
+      "blocks": [
+        "block.design.home"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-design-systems",
+      "path": "/design/design-systems",
+      "page": "page.design.design-systems",
+      "title": "Design Systems",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-design-systems.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-design-systems.png",
+      "blocks": [
+        "block.design.design-systems"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-design-systems-setup",
+      "path": "/design/design-systems/setup",
+      "page": "page.design.design-systems-setup",
+      "title": "Design Systems Setup",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-design-systems-setup.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-design-systems-setup.png",
+      "blocks": [
+        "block.design.design-systems-setup"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-design-id",
+      "path": "/design/design/:id",
+      "page": "page.design.design-detail",
+      "title": "Design Detail",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-design-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-design-id.png",
+      "blocks": [
+        "block.design.design-detail"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-examples",
+      "path": "/design/examples",
+      "page": "page.design.examples",
+      "title": "Examples",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-examples.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-examples.png",
+      "blocks": [
+        "block.design.examples"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-extensions-id-slug",
+      "path": "/design/extensions/:id/:slug",
+      "page": "page.design.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-extensions-id-slug.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-extensions-id-slug.png",
+      "blocks": [
+        "block.design.extensions-detail-detail"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-extensions-id",
+      "path": "/design/extensions/:id",
+      "page": "page.design.extensions-detail",
+      "title": "Extensions Detail",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-extensions-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-extensions-id.png",
+      "blocks": [
+        "block.design.extensions-detail"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-extensions",
+      "path": "/design/extensions",
+      "page": "page.design.extensions-index",
+      "title": "Extensions Index",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-extensions.png",
+      "blocks": [
+        "block.design.extensions-index"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-extensions",
+      "path": "/design/extensions",
+      "page": "page.design.extensions",
+      "title": "Extensions",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-extensions.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-extensions.png",
+      "blocks": [
+        "block.design.extensions"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-observability",
+      "path": "/design/observability",
+      "page": "page.design.observability",
+      "title": "Observability",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-observability.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-observability.png",
+      "blocks": [
+        "block.design.observability"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-present-id",
+      "path": "/design/present/:id",
+      "page": "page.design.present-detail",
+      "title": "Present Detail",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-present-id.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-present-id.png",
+      "blocks": [
+        "block.design.present-detail"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-settings",
+      "path": "/design/settings",
+      "page": "page.design.settings",
+      "title": "Settings",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-settings.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-settings.png",
+      "blocks": [
+        "block.design.settings"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-team",
+      "path": "/design/team",
+      "page": "page.design.team",
+      "title": "Team",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-team.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-team.png",
+      "blocks": [
+        "block.design.team"
+      ]
+    },
+    {
+      "galleryKey": "design.route.design-templates",
+      "path": "/design/templates",
+      "page": "page.design.templates",
+      "title": "Templates",
+      "routeArtifact": "apps/workbench/dist/suites/design/design-templates.html",
+      "screenshot": "apps/workbench/output/screenshots/workspace-design-design-templates.png",
+      "blocks": [
+        "block.design.templates"
+      ]
+    }
+  ],
+  "blockStates": [
+    {
+      "galleryKey": "design.block.block.design.catchall.empty",
+      "block": "block.design.catchall",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.catchall.error",
+      "block": "block.design.catchall",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.catchall.loading",
+      "block": "block.design.catchall",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.catchall.long-content",
+      "block": "block.design.catchall",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.catchall.ready",
+      "block": "block.design.catchall",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-detail.empty",
+      "block": "block.design.design-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-detail.error",
+      "block": "block.design.design-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-detail.loading",
+      "block": "block.design.design-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-detail.long-content",
+      "block": "block.design.design-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-detail.ready",
+      "block": "block.design.design-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems-setup.empty",
+      "block": "block.design.design-systems-setup",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems-setup.error",
+      "block": "block.design.design-systems-setup",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems-setup.loading",
+      "block": "block.design.design-systems-setup",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems-setup.long-content",
+      "block": "block.design.design-systems-setup",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems-setup.ready",
+      "block": "block.design.design-systems-setup",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems.empty",
+      "block": "block.design.design-systems",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems.error",
+      "block": "block.design.design-systems",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems.loading",
+      "block": "block.design.design-systems",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems.long-content",
+      "block": "block.design.design-systems",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.design-systems.ready",
+      "block": "block.design.design-systems",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.examples.empty",
+      "block": "block.design.examples",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.examples.error",
+      "block": "block.design.examples",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.examples.loading",
+      "block": "block.design.examples",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.examples.long-content",
+      "block": "block.design.examples",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.examples.ready",
+      "block": "block.design.examples",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail-detail.empty",
+      "block": "block.design.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail-detail.error",
+      "block": "block.design.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail-detail.loading",
+      "block": "block.design.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail-detail.long-content",
+      "block": "block.design.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail-detail.ready",
+      "block": "block.design.extensions-detail-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail.empty",
+      "block": "block.design.extensions-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail.error",
+      "block": "block.design.extensions-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail.loading",
+      "block": "block.design.extensions-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail.long-content",
+      "block": "block.design.extensions-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-detail.ready",
+      "block": "block.design.extensions-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-index.empty",
+      "block": "block.design.extensions-index",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-index.error",
+      "block": "block.design.extensions-index",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-index.loading",
+      "block": "block.design.extensions-index",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-index.long-content",
+      "block": "block.design.extensions-index",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions-index.ready",
+      "block": "block.design.extensions-index",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions.empty",
+      "block": "block.design.extensions",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions.error",
+      "block": "block.design.extensions",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions.loading",
+      "block": "block.design.extensions",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions.long-content",
+      "block": "block.design.extensions",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.extensions.ready",
+      "block": "block.design.extensions",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.home.empty",
+      "block": "block.design.home",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.home.error",
+      "block": "block.design.home",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.home.loading",
+      "block": "block.design.home",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.home.long-content",
+      "block": "block.design.home",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.home.ready",
+      "block": "block.design.home",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.observability.empty",
+      "block": "block.design.observability",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.observability.error",
+      "block": "block.design.observability",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.observability.loading",
+      "block": "block.design.observability",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.observability.long-content",
+      "block": "block.design.observability",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.observability.ready",
+      "block": "block.design.observability",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.present-detail.empty",
+      "block": "block.design.present-detail",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.present-detail.error",
+      "block": "block.design.present-detail",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.present-detail.loading",
+      "block": "block.design.present-detail",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.present-detail.long-content",
+      "block": "block.design.present-detail",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.present-detail.ready",
+      "block": "block.design.present-detail",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.settings.empty",
+      "block": "block.design.settings",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.settings.error",
+      "block": "block.design.settings",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.settings.loading",
+      "block": "block.design.settings",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.settings.long-content",
+      "block": "block.design.settings",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.settings.ready",
+      "block": "block.design.settings",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.team.empty",
+      "block": "block.design.team",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.team.error",
+      "block": "block.design.team",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.team.loading",
+      "block": "block.design.team",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.team.long-content",
+      "block": "block.design.team",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.team.ready",
+      "block": "block.design.team",
+      "component": "media-grid",
+      "state": "ready"
+    },
+    {
+      "galleryKey": "design.block.block.design.templates.empty",
+      "block": "block.design.templates",
+      "component": "media-grid",
+      "state": "empty"
+    },
+    {
+      "galleryKey": "design.block.block.design.templates.error",
+      "block": "block.design.templates",
+      "component": "media-grid",
+      "state": "error"
+    },
+    {
+      "galleryKey": "design.block.block.design.templates.loading",
+      "block": "block.design.templates",
+      "component": "media-grid",
+      "state": "loading"
+    },
+    {
+      "galleryKey": "design.block.block.design.templates.long-content",
+      "block": "block.design.templates",
+      "component": "media-grid",
+      "state": "long-content"
+    },
+    {
+      "galleryKey": "design.block.block.design.templates.ready",
+      "block": "block.design.templates",
+      "component": "media-grid",
+      "state": "ready"
+    }
+  ]
+}

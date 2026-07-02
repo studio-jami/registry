@@ -1,0 +1,16 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-harness-capability.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "slides",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "boundary": {
+    "displayOnly": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false
+  },
+  "boundaryDoc": "docs/architecture/foundation-alignment.md",
+  "note": "Workspace agent surfaces display Harness-originated capability as typed action/artifact references only. Studio UI publishes action slot input/output schemas and safety constraints for Harness discovery by registryRef; policy execution, tool invocation, and runtime state stay in Jami Harness; this pack never executes them.",
+  "agentSurfaceCount": 0,
+  "agentSurfaces": []
+}

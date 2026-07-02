@@ -1,0 +1,582 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/plan-workspace",
+  "workspace": "plan",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "docs-source-panel",
+    "plan-app",
+    "plan-home-page",
+    "plan-extensions-detail-detail-page",
+    "plan-extensions-detail-page",
+    "plan-extensions-index-page",
+    "plan-extensions-page",
+    "plan-local-plans-detail-page",
+    "plan-plans-detail-page",
+    "plan-plans-page",
+    "plan-recaps-detail-page",
+    "plan-recaps-page",
+    "plan-settings-page",
+    "plan-team-page",
+    "plan-home-block",
+    "plan-extensions-detail-detail-block",
+    "plan-extensions-detail-block",
+    "plan-extensions-index-block",
+    "plan-extensions-block",
+    "plan-local-plans-detail-block",
+    "plan-plans-detail-block",
+    "plan-plans-block",
+    "plan-recaps-detail-block",
+    "plan-recaps-block",
+    "plan-settings-block",
+    "plan-team-block"
+  ],
+  "installGraph": {
+    "root": "plan-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "docs-source-panel",
+      "plan-app",
+      "plan-home-page",
+      "plan-extensions-detail-detail-page",
+      "plan-extensions-detail-page",
+      "plan-extensions-index-page",
+      "plan-extensions-page",
+      "plan-local-plans-detail-page",
+      "plan-plans-detail-page",
+      "plan-plans-page",
+      "plan-recaps-detail-page",
+      "plan-recaps-page",
+      "plan-settings-page",
+      "plan-team-page",
+      "plan-home-block",
+      "plan-extensions-detail-detail-block",
+      "plan-extensions-detail-block",
+      "plan-extensions-index-block",
+      "plan-extensions-block",
+      "plan-local-plans-detail-block",
+      "plan-plans-detail-block",
+      "plan-plans-block",
+      "plan-recaps-detail-block",
+      "plan-recaps-block",
+      "plan-settings-block",
+      "plan-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "plan",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "local-plans",
+    "plans",
+    "plans",
+    "recaps",
+    "recaps",
+    "settings",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Plan",
+    "summary": "Agent-Native Plan Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.plan.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Home",
+          "route": "/plan"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/plan/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/plan/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/plan/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/plan/extensions"
+        },
+        {
+          "label": "Local Plans Detail",
+          "route": "/plan/local-plans/:slug"
+        },
+        {
+          "label": "Plans Detail",
+          "route": "/plan/plans/:id"
+        },
+        {
+          "label": "Plans",
+          "route": "/plan/plans"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/plan",
+        "page": "page.plan.home",
+        "title": "Plan Home",
+        "blocks": [
+          "block.plan.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/_index.tsx"
+      },
+      {
+        "path": "/plan/extensions/:id/:slug",
+        "page": "page.plan.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.plan.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/plan/extensions/:id",
+        "page": "page.plan.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.plan.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/plan/extensions",
+        "page": "page.plan.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.plan.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/plan/extensions",
+        "page": "page.plan.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.plan.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/plan/local-plans/:slug",
+        "page": "page.plan.local-plans-detail",
+        "title": "Local Plans Detail",
+        "blocks": [
+          "block.plan.local-plans-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/local-plans.$slug.tsx"
+      },
+      {
+        "path": "/plan/plans/:id",
+        "page": "page.plan.plans-detail",
+        "title": "Plans Detail",
+        "blocks": [
+          "block.plan.plans-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.$id.tsx"
+      },
+      {
+        "path": "/plan/plans",
+        "page": "page.plan.plans",
+        "title": "Plans",
+        "blocks": [
+          "block.plan.plans"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.tsx"
+      },
+      {
+        "path": "/plan/recaps/:id",
+        "page": "page.plan.recaps-detail",
+        "title": "Recaps Detail",
+        "blocks": [
+          "block.plan.recaps-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.$id.tsx"
+      },
+      {
+        "path": "/plan/recaps",
+        "page": "page.plan.recaps",
+        "title": "Recaps",
+        "blocks": [
+          "block.plan.recaps"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.tsx"
+      },
+      {
+        "path": "/plan/settings",
+        "page": "page.plan.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.plan.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/settings.tsx"
+      },
+      {
+        "path": "/plan/team",
+        "page": "page.plan.team",
+        "title": "Team",
+        "blocks": [
+          "block.plan.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.plan.home",
+        "title": "Plan Home",
+        "description": "Agent-Native plan route / derived from _index.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.plan.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native plan route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.plan.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native plan route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.plan.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native plan route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.plan.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native plan route /extensions derived from extensions.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.plan.local-plans-detail",
+        "title": "Local Plans Detail",
+        "description": "Agent-Native plan route /local-plans/:slug derived from local-plans.$slug.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/local-plans.$slug.tsx"
+      },
+      {
+        "id": "page.plan.plans-detail",
+        "title": "Plans Detail",
+        "description": "Agent-Native plan route /plans/:id derived from plans.$id.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.$id.tsx"
+      },
+      {
+        "id": "page.plan.plans",
+        "title": "Plans",
+        "description": "Agent-Native plan route /plans derived from plans.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.tsx"
+      },
+      {
+        "id": "page.plan.recaps-detail",
+        "title": "Recaps Detail",
+        "description": "Agent-Native plan route /recaps/:id derived from recaps.$id.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.$id.tsx"
+      },
+      {
+        "id": "page.plan.recaps",
+        "title": "Recaps",
+        "description": "Agent-Native plan route /recaps derived from recaps.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.tsx"
+      },
+      {
+        "id": "page.plan.settings",
+        "title": "Settings",
+        "description": "Agent-Native plan route /settings derived from settings.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.plan.team",
+        "title": "Team",
+        "description": "Agent-Native plan route /team derived from team.tsx.",
+        "components": [
+          "docs-source-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.plan.home",
+        "title": "Home",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.plan.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.plan.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.plan.extensions-index",
+        "title": "Extensions Index",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.plan.extensions",
+        "title": "Extensions",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.plan.local-plans-detail",
+        "title": "Local Plans Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/local-plans.$slug.tsx"
+      },
+      {
+        "id": "block.plan.plans-detail",
+        "title": "Plans Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.$id.tsx"
+      },
+      {
+        "id": "block.plan.plans",
+        "title": "Plans",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/plans.tsx"
+      },
+      {
+        "id": "block.plan.recaps-detail",
+        "title": "Recaps Detail",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.$id.tsx"
+      },
+      {
+        "id": "block.plan.recaps",
+        "title": "Recaps",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.tsx"
+      },
+      {
+        "id": "block.plan.settings",
+        "title": "Settings",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.plan.team",
+        "title": "Team",
+        "component": "docs-source-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/plan/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "docs-source-panel",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Plan keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Plan in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Plan agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/plan",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/plan/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/plan/plan-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/plan/pages/plan-home-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-local-plans-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-plans-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-plans-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-recaps-detail-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-recaps-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-settings-page.page.implementation.json",
+      "studio-ui/workspaces/plan/pages/plan-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/plan/blocks/plan-home-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-local-plans-detail-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-plans-detail-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-plans-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-recaps-detail-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-recaps-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-settings-block.block.implementation.json",
+      "studio-ui/workspaces/plan/blocks/plan-team-block.block.implementation.json"
+    ]
+  }
+}

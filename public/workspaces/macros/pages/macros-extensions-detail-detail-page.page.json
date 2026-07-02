@@ -1,0 +1,54 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "macros",
+  "page": {
+    "id": "page.macros.extensions-detail-detail",
+    "title": "Extensions Detail Detail",
+    "description": "Agent-Native macros route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+    "components": [
+      "agent-panel",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.$slug.tsx"
+  },
+  "routes": [
+    {
+      "path": "/macros/extensions/:id/:slug",
+      "page": "page.macros.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.macros.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.$slug.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.macros.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "agent-panel",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error"
+      ],
+      "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.$slug.tsx"
+    }
+  ],
+  "components": [
+    "agent-panel",
+    "button",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Macros keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Macros in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Macros agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/macros/workspace-shell.json",
+    "copiedSource": false
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-a11y.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "slides",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "runner": "axe-core/jsdom",
+  "axeVersion": "4.12.1",
+  "target": "WCAG 2.2 AA tags in axe-core",
+  "componentsCovered": [
+    "button",
+    "media-grid",
+    "panel"
+  ],
+  "violationCount": 0,
+  "keyboardAriaScreenReader": "axe-core/jsdom asserts keyboard, focus-visible, ARIA, and screen-reader name/role/state across every fixture state; zero violations required, jsdom-only `incomplete` items are recorded verbatim.",
+  "fixtures": [
+    {
+      "component": "button",
+      "fixture": "button-action",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "button",
+      "fixture": "button-as-child",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "media-grid",
+      "fixture": "media-grid-artifacts",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    },
+    {
+      "component": "panel",
+      "fixture": "panel-region",
+      "statesCovered": [
+        "keyboard",
+        "focus-visible",
+        "aria",
+        "contrast",
+        "reduced-motion",
+        "responsive",
+        "disabled",
+        "loading",
+        "invalid",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "violations": [],
+      "incomplete": []
+    }
+  ],
+  "dataStates": {
+    "requiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "coveredRequiredStates": [
+      "ready",
+      "loading",
+      "error",
+      "empty"
+    ],
+    "perBlock": [
+      {
+        "block": "block.slides.catchall",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.deck-detail",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.deck-detail-present",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.design-systems",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.extensions",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.extensions-detail",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.extensions-detail-detail",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.extensions-index",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.home",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.p-detail",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.settings",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.share-detail",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.slide",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      },
+      {
+        "block": "block.slides.team",
+        "component": "media-grid",
+        "states": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "renderableStates": [
+          "empty",
+          "error",
+          "loading",
+          "long-content",
+          "ready"
+        ],
+        "failedStates": []
+      }
+    ]
+  }
+}

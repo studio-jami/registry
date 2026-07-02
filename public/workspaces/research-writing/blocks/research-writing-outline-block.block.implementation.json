@@ -23,6 +23,16 @@
     ]
   },
   "component": "text-field",
+  "agentManifest": {
+    "component": "text-field",
+    "manifestId": "agm_text_field",
+    "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+    "schemaVersion": "2026-06-23.agent-manifest",
+    "propContractVersion": "2026-06-09.ui-props",
+    "actionSlots": [],
+    "bindingMode": "resident-component",
+    "execution": "display-only-data-never-code"
+  },
   "renderedStates": {
     "ready": {
       "props": {

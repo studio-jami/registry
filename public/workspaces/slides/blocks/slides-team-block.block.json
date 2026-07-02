@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "slides",
+  "block": {
+    "id": "block.slides.team",
+    "title": "Team",
+    "component": "media-grid",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/slides/app/routes/team.tsx"
+  },
+  "routes": [
+    {
+      "path": "/slides/team",
+      "page": "page.slides.team",
+      "title": "Team"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.slides.team",
+      "title": "Team"
+    }
+  ],
+  "component": "media-grid",
+  "stateFixtures": {
+    "loading": "Team includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Slides in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Slides agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Agent-Native Slides keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/slides/workspace-shell.json",
+    "copiedSource": false
+  }
+}

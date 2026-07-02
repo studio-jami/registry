@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "calendar",
+  "block": {
+    "id": "block.calendar.extensions",
+    "title": "Extensions",
+    "component": "calendar",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.tsx"
+  },
+  "routes": [
+    {
+      "path": "/calendar/extensions",
+      "page": "page.calendar.extensions",
+      "title": "Extensions"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.calendar.extensions",
+      "title": "Extensions"
+    }
+  ],
+  "component": "calendar",
+  "stateFixtures": {
+    "loading": "Extensions includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Calendar in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Calendar agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Agent-Native Calendar keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/calendar/workspace-shell.json",
+    "copiedSource": false
+  }
+}

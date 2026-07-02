@@ -1,0 +1,16 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-evidence-rollback-test.generated.json",
+  "schemaVersion": "2026-06-24.workspace-evidence-directory",
+  "workspace": "brain",
+  "generatedBy": "scripts/contracts/generate-workspace-evidence.mjs",
+  "method": "Install the pack into a clean project, overwrite a managed app file, confirm `doctor` reports drift, run `rollback`, and confirm `doctor` is healthy again.",
+  "tamperedTarget": "studio-ui/workspaces/brain/brain-app.implementation.json",
+  "driftDetected": true,
+  "driftProblems": 1,
+  "rollbackStatus": "rolled-back",
+  "restoredFiles": [
+    "studio-ui/workspaces/brain/brain-app.implementation.json"
+  ],
+  "healthyAfterRollback": true,
+  "problemsAfterRollback": 0
+}

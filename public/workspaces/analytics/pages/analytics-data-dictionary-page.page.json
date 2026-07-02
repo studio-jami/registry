@@ -1,0 +1,55 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-page.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "analytics",
+  "page": {
+    "id": "page.analytics.data-dictionary",
+    "title": "Data Dictionary",
+    "description": "Agent-Native analytics route /data-dictionary derived from data-dictionary.tsx.",
+    "components": [
+      "chart",
+      "panel",
+      "button"
+    ],
+    "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+  },
+  "routes": [
+    {
+      "path": "/analytics/data-dictionary",
+      "page": "page.analytics.data-dictionary",
+      "title": "Data Dictionary",
+      "blocks": [
+        "block.analytics.data-dictionary"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.analytics.data-dictionary",
+      "title": "Data Dictionary",
+      "component": "chart",
+      "stateExamples": [
+        "loading",
+        "empty",
+        "error",
+        "long-content"
+      ],
+      "sourceRouteFile": "agent-native/templates/analytics/app/routes/data-dictionary.tsx"
+    }
+  ],
+  "components": [
+    "button",
+    "chart",
+    "panel"
+  ],
+  "stateFixtures": {
+    "longContent": "Agent-Native Analytics keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+    "empty": "No records are loaded for Agent-Native Analytics in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Analytics agent or action state is display-only until Jami Harness owns the runtime execution path."
+  },
+  "provenance": {
+    "source": "registry/workspaces/analytics/workspace-shell.json",
+    "copiedSource": false
+  }
+}

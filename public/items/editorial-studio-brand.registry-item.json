@@ -16,8 +16,8 @@
       "path": "registry/branding/editorial-studio.brand-option.json",
       "target": "studio-ui/branding/editorial-studio.brand-option.json",
       "type": "registry:theme",
-      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/brand-option.source.json\",\n  \"schemaVersion\": \"2026-06-09.brand-option\",\n  \"optionId\": \"editorial-studio\",\n  \"title\": \"Editorial Studio\",\n  \"summary\": \"A restrained creator-workbench option with richer plum accent, quieter spacing, and wordmark-first presentation for docs and writing workspaces.\",\n  \"status\": \"selectable-option\",\n  \"canonicalBrand\": false,\n  \"defaultKitRole\": \"editorial workspace candidate\",\n  \"seedMaterial\": {\n    \"source\": \"registry-root exploratory branding intake\",\n    \"paths\": [\n      \"docs/branding/logo-cream-bg.jpg\",\n      \"docs/branding/logo-peach-bg.jpg\"\n    ],\n    \"usage\": \"Exploratory cue reference only; no logo source or final mark is redistributed by this descriptor.\"\n  },\n  \"tokenDeltas\": {\n    \"semantic.light.accent\": \"#6F3D5F\",\n    \"semantic.dark.accent\": \"#D8A5C8\",\n    \"componentState.focusRing\": \"#237C7A\",\n    \"radius.control\": \"8px\",\n    \"spacing.control\": \"10px\",\n    \"shell.dockWidth\": \"340px\"\n  },\n  \"workbenchControls\": {\n    \"accent\": \"#6F3D5F\",\n    \"focusRing\": \"#237C7A\",\n    \"radius\": \"8\",\n    \"spacing\": \"10\",\n    \"density\": \"1.05\",\n    \"motion\": \"140\",\n    \"dockWidth\": \"340\",\n    \"fontSize\": \"16\"\n  },\n  \"presentation\": {\n    \"layout\": \"quiet document and source review shell\",\n    \"chrome\": \"measured panels, larger reading rows, strong citation/status scanning\",\n    \"markTreatment\": \"wordmark or serif title lockup with a simplified bow/glasses companion mark\",\n    \"bestFor\": [\n      \"research-writing workspace\",\n      \"docs and source panels\",\n      \"brand book and documentation previews\"\n    ],\n    \"risks\": [\n      \"must avoid drifting into a cream-only editorial page\",\n      \"needs sharper app-chrome treatment for dense operations screens\"\n    ]\n  },\n  \"accessibilityEvidence\": {\n    \"contrastTargets\": [\n      \"foreground/background remains inherited from the factory semantic pairs\",\n      \"plum accent is intended for labelled controls, active tabs, and large UI emphasis\"\n    ],\n    \"states\": [\n      \"source citations\",\n      \"redacted panels\",\n      \"long reading content\",\n      \"light and dark modes\"\n    ]\n  },\n  \"provenance\": {\n    \"source\": \"authored\",\n    \"license\": \"MIT\",\n    \"copiedSource\": false\n  }\n}\n",
-      "hash": "sha256:59b2750bb90fcecff4b982442a344e2c87dec3abc48954f50be37713c5d91653"
+      "content": "{\n  \"$schema\": \"https://jami.studio/schemas/registry/brand-option.source.json\",\n  \"schemaVersion\": \"2026-06-09.brand-option\",\n  \"optionId\": \"editorial-studio\",\n  \"title\": \"Editorial Studio\",\n  \"summary\": \"A restrained creator-workbench option with richer plum accent, quieter spacing, and wordmark-first presentation for docs and writing workspaces.\",\n  \"status\": \"selectable-option\",\n  \"canonicalBrand\": false,\n  \"defaultKitRole\": \"editorial workspace candidate\",\n  \"seedMaterial\": {\n    \"source\": \"registry-root exploratory branding intake\",\n    \"paths\": [\n      \"docs/branding/logo-cream-bg.jpg\",\n      \"docs/branding/logo-peach-bg.jpg\"\n    ],\n    \"usage\": \"Exploratory cue reference only; no logo source or final mark is redistributed by this descriptor.\"\n  },\n  \"tokenDeltas\": {\n    \"semantic.light.accent\": \"#6F3D5F\",\n    \"semantic.dark.accent\": \"#D8A5C8\",\n    \"componentState.focusRing\": \"#237C7A\",\n    \"radius.control\": \"8px\",\n    \"spacing.control\": \"10px\",\n    \"density.workspace\": \"1.05\",\n    \"motion.fast\": \"140ms\",\n    \"shell.dockWidth\": \"340px\"\n  },\n  \"workbenchControls\": {\n    \"accent\": \"#6F3D5F\",\n    \"focusRing\": \"#237C7A\",\n    \"radius\": \"8\",\n    \"spacing\": \"10\",\n    \"density\": \"1.05\",\n    \"motion\": \"140\",\n    \"dockWidth\": \"340\",\n    \"fontSize\": \"16\"\n  },\n  \"presentation\": {\n    \"layout\": \"quiet document and source review shell\",\n    \"chrome\": \"measured panels, larger reading rows, strong citation/status scanning\",\n    \"markTreatment\": \"wordmark or serif title lockup with a simplified bow/glasses companion mark\",\n    \"bestFor\": [\n      \"research-writing workspace\",\n      \"docs and source panels\",\n      \"brand book and documentation previews\"\n    ],\n    \"risks\": [\n      \"must avoid drifting into a cream-only editorial page\",\n      \"needs sharper app-chrome treatment for dense operations screens\"\n    ]\n  },\n  \"accessibilityEvidence\": {\n    \"contrastTargets\": [\n      \"foreground/background remains inherited from the factory semantic pairs\",\n      \"plum accent is intended for labelled controls, active tabs, and large UI emphasis\"\n    ],\n    \"states\": [\n      \"source citations\",\n      \"redacted panels\",\n      \"long reading content\",\n      \"light and dark modes\"\n    ]\n  },\n  \"provenance\": {\n    \"source\": \"authored\",\n    \"license\": \"Apache-2.0\",\n    \"copiedSource\": false\n  }\n}\n",
+      "hash": "sha256:fb99b2ee29002f99d19011e24c1723b46bfdb9eb903ea9523113f1d7702e56b7"
     }
   ],
   "meta": {
@@ -27,7 +27,7 @@
       "id": "theme.brand-option.editorial-studio",
       "version": "0.0.0-contract.20260609",
       "schemaVersion": "2026-06-09.registry-foundation",
-      "sourceHash": "sha256:1f9a415777014ee0aaa409749cd4c569555d3f375affc3463d8aa8b6c11af643",
+      "sourceHash": "sha256:ef7cdd61ee753b6dcc69f2d200ed06c55a6fee53320c2dfe650a67097aa33f8d",
       "migrationNotes": "Authored selectable brand/template descriptor. It expresses token deltas against the accepted token model and does not redistribute logo source or claim final brand canon."
     },
     "tokenRequirements": [
@@ -36,11 +36,13 @@
       "componentState.focusRing",
       "radius.control",
       "spacing.control",
+      "density.workspace",
+      "motion.fast",
       "shell.dockWidth"
     ],
     "provenance": {
       "source": "authored",
-      "license": "MIT",
+      "license": "Apache-2.0",
       "reviewedAt": "2026-06-09",
       "copiedSource": false
     },

@@ -1,0 +1,608 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "calendar",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/calendar/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.calendar.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Catchall",
+        "route": "/calendar/:"
+      },
+      {
+        "label": "Home",
+        "route": "/calendar"
+      },
+      {
+        "label": "Availability",
+        "route": "/calendar/availability"
+      },
+      {
+        "label": "Booking Links Detail",
+        "route": "/calendar/booking-links/:id"
+      },
+      {
+        "label": "Booking Links Index",
+        "route": "/calendar/booking-links"
+      },
+      {
+        "label": "Booking Links",
+        "route": "/calendar/booking-links"
+      },
+      {
+        "label": "Bookings",
+        "route": "/calendar/bookings"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/calendar/extensions/:id/:slug"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/calendar/:",
+      "page": "page.calendar.catchall",
+      "title": "Catchall",
+      "blocks": [
+        "block.calendar.catchall"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.$.tsx"
+    },
+    {
+      "path": "/calendar",
+      "page": "page.calendar.home",
+      "title": "Calendar Home",
+      "blocks": [
+        "block.calendar.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app._index.tsx"
+    },
+    {
+      "path": "/calendar/availability",
+      "page": "page.calendar.availability",
+      "title": "Availability",
+      "blocks": [
+        "block.calendar.availability"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.availability.tsx"
+    },
+    {
+      "path": "/calendar/booking-links/:id",
+      "page": "page.calendar.booking-links-detail",
+      "title": "Booking Links Detail",
+      "blocks": [
+        "block.calendar.booking-links-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.$id.tsx"
+    },
+    {
+      "path": "/calendar/booking-links",
+      "page": "page.calendar.booking-links-index",
+      "title": "Booking Links Index",
+      "blocks": [
+        "block.calendar.booking-links-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links._index.tsx"
+    },
+    {
+      "path": "/calendar/booking-links",
+      "page": "page.calendar.booking-links",
+      "title": "Booking Links",
+      "blocks": [
+        "block.calendar.booking-links"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.booking-links.tsx"
+    },
+    {
+      "path": "/calendar/bookings",
+      "page": "page.calendar.bookings",
+      "title": "Bookings",
+      "blocks": [
+        "block.calendar.bookings"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.bookings.tsx"
+    },
+    {
+      "path": "/calendar/extensions/:id/:slug",
+      "page": "page.calendar.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.calendar.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/calendar/extensions/:id",
+      "page": "page.calendar.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.calendar.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.$id.tsx"
+    },
+    {
+      "path": "/calendar/extensions",
+      "page": "page.calendar.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.calendar.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions._index.tsx"
+    },
+    {
+      "path": "/calendar/extensions",
+      "page": "page.calendar.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.calendar.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.extensions.tsx"
+    },
+    {
+      "path": "/calendar/settings",
+      "page": "page.calendar.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.calendar.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.settings.tsx"
+    },
+    {
+      "path": "/calendar/team",
+      "page": "page.calendar.team",
+      "title": "Team",
+      "blocks": [
+        "block.calendar.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.team.tsx"
+    },
+    {
+      "path": "/calendar",
+      "page": "page.calendar.home-2",
+      "title": "Calendar Home",
+      "blocks": [
+        "block.calendar.home-2"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/_app.tsx"
+    },
+    {
+      "path": "/calendar/book/:slug",
+      "page": "page.calendar.book-detail",
+      "title": "Book Detail",
+      "blocks": [
+        "block.calendar.book-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$slug.tsx"
+    },
+    {
+      "path": "/calendar/book/:username/:slug",
+      "page": "page.calendar.book-detail-detail",
+      "title": "Book Detail Detail",
+      "blocks": [
+        "block.calendar.book-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/book.$username.$slug.tsx"
+    },
+    {
+      "path": "/calendar/booking-og-meta",
+      "page": "page.calendar.booking-og-meta",
+      "title": "Booking Og Meta",
+      "blocks": [
+        "block.calendar.booking-og-meta"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking-og-meta.ts"
+    },
+    {
+      "path": "/calendar/booking/manage/:token",
+      "page": "page.calendar.booking-manage-detail",
+      "title": "Booking Manage Detail",
+      "blocks": [
+        "block.calendar.booking-manage-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/booking.manage.$token.tsx"
+    },
+    {
+      "path": "/calendar/event",
+      "page": "page.calendar.event",
+      "title": "Event",
+      "blocks": [
+        "block.calendar.event"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/event.tsx"
+    },
+    {
+      "path": "/calendar/meet/:username/:slug",
+      "page": "page.calendar.meet-detail-detail",
+      "title": "Meet Detail Detail",
+      "blocks": [
+        "block.calendar.meet-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/calendar/app/routes/meet.$username.$slug.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.calendar.catchall",
+      "title": "Catchall",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-catchall-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.home",
+      "title": "Calendar Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.availability",
+      "title": "Availability",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-availability-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.booking-links-detail",
+      "title": "Booking Links Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-booking-links-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.booking-links-index",
+      "title": "Booking Links Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-booking-links-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.booking-links",
+      "title": "Booking Links",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-booking-links-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.bookings",
+      "title": "Bookings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-bookings-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-team-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.home-2",
+      "title": "Calendar Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-home-2-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.book-detail",
+      "title": "Book Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-book-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.book-detail-detail",
+      "title": "Book Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-book-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.booking-og-meta",
+      "title": "Booking Og Meta",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-booking-og-meta-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.booking-manage-detail",
+      "title": "Booking Manage Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-booking-manage-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.event",
+      "title": "Event",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-event-page.page.implementation.json"
+    },
+    {
+      "id": "page.calendar.meet-detail-detail",
+      "title": "Meet Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/calendar/pages/calendar-meet-detail-detail-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.calendar.catchall",
+      "title": "Catchall",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-catchall-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.home",
+      "title": "Home",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.availability",
+      "title": "Availability",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-availability-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.booking-links-detail",
+      "title": "Booking Links Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-booking-links-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.booking-links-index",
+      "title": "Booking Links Index",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-booking-links-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.booking-links",
+      "title": "Booking Links",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-booking-links-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.bookings",
+      "title": "Bookings",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-bookings-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.extensions-index",
+      "title": "Extensions Index",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.extensions",
+      "title": "Extensions",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.settings",
+      "title": "Settings",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.team",
+      "title": "Team",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-team-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.home-2",
+      "title": "Home 2",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-home-2-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.book-detail",
+      "title": "Book Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-book-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.book-detail-detail",
+      "title": "Book Detail Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-book-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.booking-og-meta",
+      "title": "Booking Og Meta",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-booking-og-meta-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.booking-manage-detail",
+      "title": "Booking Manage Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-booking-manage-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.event",
+      "title": "Event",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-event-block.block.implementation.json"
+    },
+    {
+      "id": "block.calendar.meet-detail-detail",
+      "title": "Meet Detail Detail",
+      "component": "calendar",
+      "implementationFile": "studio-ui/workspaces/calendar/blocks/calendar-meet-detail-detail-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "calendar",
+      "manifestId": "agm_calendar",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 20,
+    "renderedBlockCount": 20,
+    "routeCount": 20,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/calendar/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/calendar/workspace-shell.json",
+    "copiedSource": false
+  }
+}

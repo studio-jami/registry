@@ -1,0 +1,41 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-block.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "plan",
+  "block": {
+    "id": "block.plan.recaps",
+    "title": "Recaps",
+    "component": "docs-source-panel",
+    "stateExamples": [
+      "loading",
+      "empty",
+      "error",
+      "long-content"
+    ],
+    "sourceRouteFile": "agent-native/templates/plan/app/routes/recaps.tsx"
+  },
+  "routes": [
+    {
+      "path": "/plan/recaps",
+      "page": "page.plan.recaps",
+      "title": "Recaps"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.plan.recaps",
+      "title": "Recaps"
+    }
+  ],
+  "component": "docs-source-panel",
+  "stateFixtures": {
+    "loading": "Recaps includes the loading state.",
+    "empty": "No records are loaded for Agent-Native Plan in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+    "error": "Agent-Native Plan agent or action state is display-only until Jami Harness owns the runtime execution path.",
+    "long-content": "Agent-Native Plan keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection."
+  },
+  "provenance": {
+    "source": "registry/workspaces/plan/workspace-shell.json",
+    "copiedSource": false
+  }
+}

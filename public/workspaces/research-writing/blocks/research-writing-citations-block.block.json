@@ -7,7 +7,8 @@
     "title": "Citations",
     "component": "data-list",
     "stateExamples": [
-      "empty"
+      "empty",
+      "loading"
     ]
   },
   "routes": [
@@ -25,7 +26,8 @@
   ],
   "component": "data-list",
   "stateFixtures": {
-    "empty": "No citations selected is displayed as an empty table/list state."
+    "empty": "No citations selected is displayed as an empty table/list state.",
+    "loading": "Citations includes the loading state."
   },
   "provenance": {
     "source": "registry/workspaces/research-writing/workspace-shell.json",

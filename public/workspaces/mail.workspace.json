@@ -1,0 +1,629 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/mail-workspace",
+  "workspace": "mail",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "data-list",
+    "text-field",
+    "mail-app",
+    "mail-catchall-page",
+    "mail-detail-detail-page",
+    "mail-detail-page",
+    "mail-home-page",
+    "mail-draft-queue-detail-page",
+    "mail-draft-queue-page",
+    "mail-email-page",
+    "mail-extensions-detail-detail-page",
+    "mail-extensions-detail-page",
+    "mail-extensions-index-page",
+    "mail-extensions-page",
+    "mail-settings-page",
+    "mail-team-page",
+    "mail-catchall-block",
+    "mail-detail-detail-block",
+    "mail-detail-block",
+    "mail-home-block",
+    "mail-draft-queue-detail-block",
+    "mail-draft-queue-block",
+    "mail-email-block",
+    "mail-extensions-detail-detail-block",
+    "mail-extensions-detail-block",
+    "mail-extensions-index-block",
+    "mail-extensions-block",
+    "mail-settings-block",
+    "mail-team-block"
+  ],
+  "installGraph": {
+    "root": "mail-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "data-list",
+      "text-field",
+      "mail-app",
+      "mail-catchall-page",
+      "mail-detail-detail-page",
+      "mail-detail-page",
+      "mail-home-page",
+      "mail-draft-queue-detail-page",
+      "mail-draft-queue-page",
+      "mail-email-page",
+      "mail-extensions-detail-detail-page",
+      "mail-extensions-detail-page",
+      "mail-extensions-index-page",
+      "mail-extensions-page",
+      "mail-settings-page",
+      "mail-team-page",
+      "mail-catchall-block",
+      "mail-detail-detail-block",
+      "mail-detail-block",
+      "mail-home-block",
+      "mail-draft-queue-detail-block",
+      "mail-draft-queue-block",
+      "mail-email-block",
+      "mail-extensions-detail-detail-block",
+      "mail-extensions-detail-block",
+      "mail-extensions-index-block",
+      "mail-extensions-block",
+      "mail-settings-block",
+      "mail-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    ":",
+    ":view",
+    ":view",
+    "mail",
+    "draft-queue",
+    "draft-queue",
+    "email",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "settings",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Mail",
+    "summary": "Agent-Native Mail Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.mail.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Catchall",
+          "route": "/mail/:"
+        },
+        {
+          "label": "Detail Detail",
+          "route": "/mail/:view/:threadId"
+        },
+        {
+          "label": "Detail",
+          "route": "/mail/:view"
+        },
+        {
+          "label": "Home",
+          "route": "/mail"
+        },
+        {
+          "label": "Draft Queue Detail",
+          "route": "/mail/draft-queue/:id"
+        },
+        {
+          "label": "Draft Queue",
+          "route": "/mail/draft-queue"
+        },
+        {
+          "label": "Email",
+          "route": "/mail/email"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/mail/extensions/:id/:slug"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/mail/:",
+        "page": "page.mail.catchall",
+        "title": "Catchall",
+        "blocks": [
+          "block.mail.catchall"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$.tsx"
+      },
+      {
+        "path": "/mail/:view/:threadId",
+        "page": "page.mail.detail-detail",
+        "title": "Detail Detail",
+        "blocks": [
+          "block.mail.detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.$threadId.tsx"
+      },
+      {
+        "path": "/mail/:view",
+        "page": "page.mail.detail",
+        "title": "Detail",
+        "blocks": [
+          "block.mail.detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.tsx"
+      },
+      {
+        "path": "/mail",
+        "page": "page.mail.home",
+        "title": "Mail Home",
+        "blocks": [
+          "block.mail.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/_index.tsx"
+      },
+      {
+        "path": "/mail/draft-queue/:id",
+        "page": "page.mail.draft-queue-detail",
+        "title": "Draft Queue Detail",
+        "blocks": [
+          "block.mail.draft-queue-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.$id.tsx"
+      },
+      {
+        "path": "/mail/draft-queue",
+        "page": "page.mail.draft-queue",
+        "title": "Draft Queue",
+        "blocks": [
+          "block.mail.draft-queue"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.tsx"
+      },
+      {
+        "path": "/mail/email",
+        "page": "page.mail.email",
+        "title": "Email",
+        "blocks": [
+          "block.mail.email"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/email.tsx"
+      },
+      {
+        "path": "/mail/extensions/:id/:slug",
+        "page": "page.mail.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.mail.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/mail/extensions/:id",
+        "page": "page.mail.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.mail.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/mail/extensions",
+        "page": "page.mail.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.mail.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/mail/extensions",
+        "page": "page.mail.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.mail.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/mail/settings",
+        "page": "page.mail.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.mail.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/settings.tsx"
+      },
+      {
+        "path": "/mail/team",
+        "page": "page.mail.team",
+        "title": "Team",
+        "blocks": [
+          "block.mail.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.mail.catchall",
+        "title": "Catchall",
+        "description": "Agent-Native mail route /: derived from $.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$.tsx"
+      },
+      {
+        "id": "page.mail.detail-detail",
+        "title": "Detail Detail",
+        "description": "Agent-Native mail route /:view/:threadId derived from $view.$threadId.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.$threadId.tsx"
+      },
+      {
+        "id": "page.mail.detail",
+        "title": "Detail",
+        "description": "Agent-Native mail route /:view derived from $view.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.tsx"
+      },
+      {
+        "id": "page.mail.home",
+        "title": "Mail Home",
+        "description": "Agent-Native mail route / derived from _index.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.mail.draft-queue-detail",
+        "title": "Draft Queue Detail",
+        "description": "Agent-Native mail route /draft-queue/:id derived from draft-queue.$id.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.$id.tsx"
+      },
+      {
+        "id": "page.mail.draft-queue",
+        "title": "Draft Queue",
+        "description": "Agent-Native mail route /draft-queue derived from draft-queue.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.tsx"
+      },
+      {
+        "id": "page.mail.email",
+        "title": "Email",
+        "description": "Agent-Native mail route /email derived from email.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/email.tsx"
+      },
+      {
+        "id": "page.mail.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native mail route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.mail.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native mail route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.mail.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native mail route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.mail.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native mail route /extensions derived from extensions.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.mail.settings",
+        "title": "Settings",
+        "description": "Agent-Native mail route /settings derived from settings.tsx.",
+        "components": [
+          "text-field",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.mail.team",
+        "title": "Team",
+        "description": "Agent-Native mail route /team derived from team.tsx.",
+        "components": [
+          "data-list",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.mail.catchall",
+        "title": "Catchall",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$.tsx"
+      },
+      {
+        "id": "block.mail.detail-detail",
+        "title": "Detail Detail",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.$threadId.tsx"
+      },
+      {
+        "id": "block.mail.detail",
+        "title": "Detail",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/$view.tsx"
+      },
+      {
+        "id": "block.mail.home",
+        "title": "Home",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.mail.draft-queue-detail",
+        "title": "Draft Queue Detail",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.$id.tsx"
+      },
+      {
+        "id": "block.mail.draft-queue",
+        "title": "Draft Queue",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/draft-queue.tsx"
+      },
+      {
+        "id": "block.mail.email",
+        "title": "Email",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/email.tsx"
+      },
+      {
+        "id": "block.mail.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.mail.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.mail.extensions-index",
+        "title": "Extensions Index",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.mail.extensions",
+        "title": "Extensions",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.mail.settings",
+        "title": "Settings",
+        "component": "text-field",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "invalid",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.mail.team",
+        "title": "Team",
+        "component": "data-list",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error",
+          "long-content"
+        ],
+        "sourceRouteFile": "agent-native/templates/mail/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "button",
+      "data-list",
+      "panel",
+      "text-field"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Mail keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Mail in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Mail agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/mail",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/mail/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/mail/mail-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/mail/pages/mail-catchall-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-home-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-draft-queue-detail-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-draft-queue-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-email-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-settings-page.page.implementation.json",
+      "studio-ui/workspaces/mail/pages/mail-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/mail/blocks/mail-catchall-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-home-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-draft-queue-detail-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-draft-queue-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-email-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-settings-block.block.implementation.json",
+      "studio-ui/workspaces/mail/blocks/mail-team-block.block.implementation.json"
+    ]
+  }
+}

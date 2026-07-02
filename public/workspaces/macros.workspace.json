@@ -1,0 +1,419 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-manifest.generated.json",
+  "name": "@jami-studio/macros-workspace",
+  "workspace": "macros",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "items": [
+    "jami-theme",
+    "panel",
+    "button",
+    "agent-panel",
+    "macros-app",
+    "macros-home-page",
+    "macros-analytics-page",
+    "macros-extensions-detail-detail-page",
+    "macros-extensions-detail-page",
+    "macros-extensions-index-page",
+    "macros-extensions-page",
+    "macros-settings-page",
+    "macros-team-page",
+    "macros-home-block",
+    "macros-analytics-block",
+    "macros-extensions-detail-detail-block",
+    "macros-extensions-detail-block",
+    "macros-extensions-index-block",
+    "macros-extensions-block",
+    "macros-settings-block",
+    "macros-team-block"
+  ],
+  "installGraph": {
+    "root": "macros-workspace",
+    "dependencies": [
+      "jami-theme",
+      "panel",
+      "button",
+      "agent-panel",
+      "macros-app",
+      "macros-home-page",
+      "macros-analytics-page",
+      "macros-extensions-detail-detail-page",
+      "macros-extensions-detail-page",
+      "macros-extensions-index-page",
+      "macros-extensions-page",
+      "macros-settings-page",
+      "macros-team-page",
+      "macros-home-block",
+      "macros-analytics-block",
+      "macros-extensions-detail-detail-block",
+      "macros-extensions-detail-block",
+      "macros-extensions-index-block",
+      "macros-extensions-block",
+      "macros-settings-block",
+      "macros-team-block"
+    ]
+  },
+  "plannedSurfaces": [
+    "macros",
+    "analytics",
+    "extensions",
+    "extensions",
+    "extensions",
+    "extensions",
+    "settings",
+    "team"
+  ],
+  "shell": {
+    "sourceSchemaVersion": "2026-06-29.agent-native-template-workspace",
+    "title": "Agent-Native Macros",
+    "summary": "Agent-Native Macros Agent-Native template ported into Studio UI as a Harness-safe workspace surface with route inventory, provenance, resident-renderer blocks, and display-only agent/action affordances.",
+    "appShell": {
+      "id": "app.macros.shell",
+      "layout": "agent-native-template-workspace",
+      "navigation": [
+        {
+          "label": "Home",
+          "route": "/macros"
+        },
+        {
+          "label": "Analytics",
+          "route": "/macros/analytics"
+        },
+        {
+          "label": "Extensions Detail Detail",
+          "route": "/macros/extensions/:id/:slug"
+        },
+        {
+          "label": "Extensions Detail",
+          "route": "/macros/extensions/:id"
+        },
+        {
+          "label": "Extensions Index",
+          "route": "/macros/extensions"
+        },
+        {
+          "label": "Extensions",
+          "route": "/macros/extensions"
+        },
+        {
+          "label": "Settings",
+          "route": "/macros/settings"
+        },
+        {
+          "label": "Team",
+          "route": "/macros/team"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "path": "/macros",
+        "page": "page.macros.home",
+        "title": "Macros Home",
+        "blocks": [
+          "block.macros.home"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/_index.tsx"
+      },
+      {
+        "path": "/macros/analytics",
+        "page": "page.macros.analytics",
+        "title": "Analytics",
+        "blocks": [
+          "block.macros.analytics"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/analytics.tsx"
+      },
+      {
+        "path": "/macros/extensions/:id/:slug",
+        "page": "page.macros.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "blocks": [
+          "block.macros.extensions-detail-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "path": "/macros/extensions/:id",
+        "page": "page.macros.extensions-detail",
+        "title": "Extensions Detail",
+        "blocks": [
+          "block.macros.extensions-detail"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.tsx"
+      },
+      {
+        "path": "/macros/extensions",
+        "page": "page.macros.extensions-index",
+        "title": "Extensions Index",
+        "blocks": [
+          "block.macros.extensions-index"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions._index.tsx"
+      },
+      {
+        "path": "/macros/extensions",
+        "page": "page.macros.extensions",
+        "title": "Extensions",
+        "blocks": [
+          "block.macros.extensions"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.tsx"
+      },
+      {
+        "path": "/macros/settings",
+        "page": "page.macros.settings",
+        "title": "Settings",
+        "blocks": [
+          "block.macros.settings"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/settings.tsx"
+      },
+      {
+        "path": "/macros/team",
+        "page": "page.macros.team",
+        "title": "Team",
+        "blocks": [
+          "block.macros.team"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/team.tsx"
+      }
+    ],
+    "pages": [
+      {
+        "id": "page.macros.home",
+        "title": "Macros Home",
+        "description": "Agent-Native macros route / derived from _index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/_index.tsx"
+      },
+      {
+        "id": "page.macros.analytics",
+        "title": "Analytics",
+        "description": "Agent-Native macros route /analytics derived from analytics.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/analytics.tsx"
+      },
+      {
+        "id": "page.macros.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "description": "Agent-Native macros route /extensions/:id/:slug derived from extensions.$id.$slug.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "page.macros.extensions-detail",
+        "title": "Extensions Detail",
+        "description": "Agent-Native macros route /extensions/:id derived from extensions.$id.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "page.macros.extensions-index",
+        "title": "Extensions Index",
+        "description": "Agent-Native macros route /extensions derived from extensions._index.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "page.macros.extensions",
+        "title": "Extensions",
+        "description": "Agent-Native macros route /extensions derived from extensions.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.tsx"
+      },
+      {
+        "id": "page.macros.settings",
+        "title": "Settings",
+        "description": "Agent-Native macros route /settings derived from settings.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/settings.tsx"
+      },
+      {
+        "id": "page.macros.team",
+        "title": "Team",
+        "description": "Agent-Native macros route /team derived from team.tsx.",
+        "components": [
+          "agent-panel",
+          "panel",
+          "button"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/team.tsx"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block.macros.home",
+        "title": "Home",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/_index.tsx"
+      },
+      {
+        "id": "block.macros.analytics",
+        "title": "Analytics",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/analytics.tsx"
+      },
+      {
+        "id": "block.macros.extensions-detail-detail",
+        "title": "Extensions Detail Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.$slug.tsx"
+      },
+      {
+        "id": "block.macros.extensions-detail",
+        "title": "Extensions Detail",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.$id.tsx"
+      },
+      {
+        "id": "block.macros.extensions-index",
+        "title": "Extensions Index",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions._index.tsx"
+      },
+      {
+        "id": "block.macros.extensions",
+        "title": "Extensions",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/extensions.tsx"
+      },
+      {
+        "id": "block.macros.settings",
+        "title": "Settings",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/settings.tsx"
+      },
+      {
+        "id": "block.macros.team",
+        "title": "Team",
+        "component": "agent-panel",
+        "stateExamples": [
+          "loading",
+          "empty",
+          "error"
+        ],
+        "sourceRouteFile": "agent-native/templates/macros/app/routes/team.tsx"
+      }
+    ],
+    "componentParts": [
+      "agent-panel",
+      "button",
+      "panel"
+    ],
+    "stateFixtures": {
+      "longContent": "Agent-Native Macros keeps the original Agent-Native route inventory visible while Studio UI renders safe resident components for Harness inspection.",
+      "empty": "No records are loaded for Agent-Native Macros in the local Studio UI port; the original Agent-Native data/runtime remains referenced by source path.",
+      "error": "Agent-Native Macros agent or action state is display-only until Jami Harness owns the runtime execution path."
+    },
+    "agentNativeTemplate": {
+      "sourceRepo": "https://github.com/yrka-io/agent-native.git",
+      "upstreamRepo": "https://github.com/BuilderIO/agent-native.git",
+      "sourcePath": "agent-native/templates/macros",
+      "copiedSource": false,
+      "license": "ISC",
+      "importedAs": "jami-authored workspace shell and registry metadata derived from Agent-Native template structure",
+      "sourceDirectories": [
+        "actions",
+        "app",
+        "server",
+        "shared",
+        "data",
+        "public"
+      ]
+    },
+    "provenance": {
+      "source": "registry/workspaces/macros/workspace-shell.json",
+      "copiedSource": false
+    }
+  },
+  "implementation": {
+    "status": "mounted-react-workspace-implementation",
+    "runtimeReactApp": true,
+    "hostedRuntime": false,
+    "source": "packages/ui/src/workspaces.mjs",
+    "app": "studio-ui/workspaces/macros/macros-app.implementation.json",
+    "pages": [
+      "studio-ui/workspaces/macros/pages/macros-home-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-analytics-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-detail-detail-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-detail-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-index-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-extensions-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-settings-page.page.implementation.json",
+      "studio-ui/workspaces/macros/pages/macros-team-page.page.implementation.json"
+    ],
+    "blocks": [
+      "studio-ui/workspaces/macros/blocks/macros-home-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-analytics-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-extensions-detail-detail-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-extensions-detail-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-extensions-index-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-extensions-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-settings-block.block.implementation.json",
+      "studio-ui/workspaces/macros/blocks/macros-team-block.block.implementation.json"
+    ]
+  }
+}

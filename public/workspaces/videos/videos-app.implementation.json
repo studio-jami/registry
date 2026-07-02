@@ -1,0 +1,419 @@
+{
+  "$schema": "https://jami.studio/schemas/registry/workspace-app-implementation.generated.json",
+  "schemaVersion": "2026-06-29.agent-native-template-workspace",
+  "workspace": "videos",
+  "implementationStatus": "mounted-react-workspace-app",
+  "source": "registry/workspaces/videos/workspace-shell.json",
+  "primitiveFactory": {
+    "version": "2026-06-09.framework-neutral-component-factory",
+    "source": "packages/ui/src/primitive-components.mjs",
+    "implementationStatus": "framework-neutral-component-factory",
+    "runtimeReactRenderer": false,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": false
+  },
+  "appShell": {
+    "id": "app.videos.shell",
+    "layout": "agent-native-template-workspace",
+    "navigation": [
+      {
+        "label": "Catchall",
+        "route": "/videos/:"
+      },
+      {
+        "label": "Home",
+        "route": "/videos"
+      },
+      {
+        "label": "C Detail",
+        "route": "/videos/c/:compositionId"
+      },
+      {
+        "label": "Components",
+        "route": "/videos/components"
+      },
+      {
+        "label": "Design Systems",
+        "route": "/videos/design-systems"
+      },
+      {
+        "label": "Extensions Detail Detail",
+        "route": "/videos/extensions/:id/:slug"
+      },
+      {
+        "label": "Extensions Detail",
+        "route": "/videos/extensions/:id"
+      },
+      {
+        "label": "Extensions Index",
+        "route": "/videos/extensions"
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/videos/:",
+      "page": "page.videos.catchall",
+      "title": "Catchall",
+      "blocks": [
+        "block.videos.catchall"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/$.tsx"
+    },
+    {
+      "path": "/videos",
+      "page": "page.videos.home",
+      "title": "Videos Home",
+      "blocks": [
+        "block.videos.home"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/_index.tsx"
+    },
+    {
+      "path": "/videos/c/:compositionId",
+      "page": "page.videos.c-detail",
+      "title": "C Detail",
+      "blocks": [
+        "block.videos.c-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/c.$compositionId.tsx"
+    },
+    {
+      "path": "/videos/components",
+      "page": "page.videos.components",
+      "title": "Components",
+      "blocks": [
+        "block.videos.components"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/components.tsx"
+    },
+    {
+      "path": "/videos/design-systems",
+      "page": "page.videos.design-systems",
+      "title": "Design Systems",
+      "blocks": [
+        "block.videos.design-systems"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/design-systems.tsx"
+    },
+    {
+      "path": "/videos/extensions/:id/:slug",
+      "page": "page.videos.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "blocks": [
+        "block.videos.extensions-detail-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.$slug.tsx"
+    },
+    {
+      "path": "/videos/extensions/:id",
+      "page": "page.videos.extensions-detail",
+      "title": "Extensions Detail",
+      "blocks": [
+        "block.videos.extensions-detail"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.$id.tsx"
+    },
+    {
+      "path": "/videos/extensions",
+      "page": "page.videos.extensions-index",
+      "title": "Extensions Index",
+      "blocks": [
+        "block.videos.extensions-index"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions._index.tsx"
+    },
+    {
+      "path": "/videos/extensions",
+      "page": "page.videos.extensions",
+      "title": "Extensions",
+      "blocks": [
+        "block.videos.extensions"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/extensions.tsx"
+    },
+    {
+      "path": "/videos/settings",
+      "page": "page.videos.settings",
+      "title": "Settings",
+      "blocks": [
+        "block.videos.settings"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/settings.tsx"
+    },
+    {
+      "path": "/videos/team",
+      "page": "page.videos.team",
+      "title": "Team",
+      "blocks": [
+        "block.videos.team"
+      ],
+      "sourceRouteFile": "agent-native/templates/videos/app/routes/team.tsx"
+    }
+  ],
+  "pages": [
+    {
+      "id": "page.videos.catchall",
+      "title": "Catchall",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-catchall-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.home",
+      "title": "Videos Home",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-home-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.c-detail",
+      "title": "C Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-c-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.components",
+      "title": "Components",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-components-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.design-systems",
+      "title": "Design Systems",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-design-systems-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-extensions-detail-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.extensions-detail",
+      "title": "Extensions Detail",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-extensions-detail-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.extensions-index",
+      "title": "Extensions Index",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-extensions-index-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.extensions",
+      "title": "Extensions",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-extensions-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.settings",
+      "title": "Settings",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-settings-page.page.implementation.json"
+    },
+    {
+      "id": "page.videos.team",
+      "title": "Team",
+      "routeCount": 1,
+      "implementationFile": "studio-ui/workspaces/videos/pages/videos-team-page.page.implementation.json"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block.videos.catchall",
+      "title": "Catchall",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-catchall-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.home",
+      "title": "Home",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-home-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.c-detail",
+      "title": "C Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-c-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.components",
+      "title": "Components",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-components-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.design-systems",
+      "title": "Design Systems",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-design-systems-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.extensions-detail-detail",
+      "title": "Extensions Detail Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-extensions-detail-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.extensions-detail",
+      "title": "Extensions Detail",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-extensions-detail-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.extensions-index",
+      "title": "Extensions Index",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-extensions-index-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.extensions",
+      "title": "Extensions",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-extensions-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.settings",
+      "title": "Settings",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-settings-block.block.implementation.json"
+    },
+    {
+      "id": "block.videos.team",
+      "title": "Team",
+      "component": "media-grid",
+      "implementationFile": "studio-ui/workspaces/videos/blocks/videos-team-block.block.implementation.json"
+    }
+  ],
+  "agentManifests": [
+    {
+      "component": "button",
+      "manifestId": "agm_button",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [
+        {
+          "slotId": "slot_button_on_press",
+          "name": "onPress",
+          "label": "Invoke button action",
+          "harnessRoute": "harness://actions/button-on-press",
+          "risk": "write",
+          "policyScope": "data:write",
+          "confirmationMode": "approval_required",
+          "inputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "reason": {
+                "type": "string"
+              }
+            }
+          },
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "actionId",
+              "policyDecision"
+            ],
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "accepted",
+                  "denied"
+                ]
+              },
+              "actionId": {
+                "type": "string",
+                "pattern": "^act_[a-z0-9][a-z0-9_-]*$"
+              },
+              "policyDecision": {
+                "type": "string",
+                "enum": [
+                  "allow",
+                  "deny",
+                  "needs_approval",
+                  "needs_owner"
+                ]
+              },
+              "evidenceRef": {
+                "type": "string",
+                "pattern": "^ev_[a-z0-9][a-z0-9_-]*$"
+              }
+            }
+          },
+          "safetyConstraints": [
+            "policy-required",
+            "audit-required",
+            "evidence-required",
+            "no-inline-secret-values",
+            "no-model-provided-code",
+            "schema-validated-input",
+            "schema-validated-output"
+          ]
+        }
+      ],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "media-grid",
+      "manifestId": "agm_media_grid",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    },
+    {
+      "component": "panel",
+      "manifestId": "agm_panel",
+      "manifestSchema": "https://jami.studio/schemas/registry/agent-manifest.schema.json",
+      "schemaVersion": "2026-06-23.agent-manifest",
+      "propContractVersion": "2026-06-09.ui-props",
+      "actionSlots": [],
+      "bindingMode": "resident-component",
+      "execution": "display-only-data-never-code"
+    }
+  ],
+  "evidence": {
+    "renderedPageCount": 11,
+    "renderedBlockCount": 11,
+    "routeCount": 11,
+    "navigationCount": 8,
+    "responsive": true,
+    "reducedMotion": true,
+    "displayOnly": true
+  },
+  "runtime": {
+    "runtimeReactRenderer": true,
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "radixWrapper": true
+  },
+  "reactMount": {
+    "schemaVersion": "2026-06-12.mounted-react-workspace-routes",
+    "source": "packages/ui/src/workspaces.mjs",
+    "packageName": "@jami-studio/ui",
+    "rendererBoundary": "React workspace components are install-time/app code, not harness-originated renderer payload execution.",
+    "hostedRuntime": false,
+    "harnessRuntimeExecution": false,
+    "executableActions": false,
+    "serverRenderedStaticRoutes": true,
+    "routeArtifact": "apps/workbench/dist/suites/videos/index.html"
+  },
+  "provenance": {
+    "source": "registry/workspaces/videos/workspace-shell.json",
+    "copiedSource": false
+  }
+}
